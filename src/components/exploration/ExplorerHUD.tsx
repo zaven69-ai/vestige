@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { router } from "expo-router";
-import { Icon, colors } from "../ui";
+import { Icon, XPBar } from "../ui";
+import { colors, theme } from "../../theme";
 import { levelFor } from "../../lib/game";
 import { ExplorerAvatar } from "./ExplorerAvatar";
 export function MapButton({
@@ -27,7 +28,11 @@ export function MapButton({
         pressed && { opacity: 0.7 },
       ]}
     >
-      <Icon name={icon} color={active ? colors.gold : colors.ink} size={21} />
+      <Icon
+        name={icon}
+        color={active ? colors.turquoise : colors.ink}
+        size={21}
+      />
     </Pressable>
   );
 }
@@ -47,18 +52,7 @@ export function ExplorerProfile({ xp, count }: { xp: number; count: number }) {
           <Text style={styles.level}>NIV. {levelFor(xp)}</Text>
           <Text style={styles.count}>✦ {count}</Text>
         </View>
-        <View
-          style={styles.track}
-          accessibilityRole="progressbar"
-          accessibilityValue={{
-            min: 0,
-            max: 400,
-            now: xp % 400,
-            text: `${xp % 400} sur 400 XP avant le prochain niveau`,
-          }}
-        >
-          <View style={[styles.fill, { width: `${(xp % 400) / 4}%` }]} />
-        </View>
+        <XPBar xp={xp} compact />
         <Text style={styles.xp}>{xp % 400} / 400 XP</Text>
       </View>
     </Pressable>
@@ -68,53 +62,42 @@ const styles = StyleSheet.create({
   round: {
     width: 44,
     height: 44,
-    backgroundColor: "#101e20f5",
-    borderRadius: 15,
+    backgroundColor: theme.surfaces.overlay,
+    borderRadius: theme.radius.md,
     borderWidth: 1,
-    borderColor: "#54706866",
+    borderColor: colors.line,
     alignItems: "center",
     justifyContent: "center",
-    shadowColor: "#112626",
-    shadowOpacity: 0.18,
-    shadowRadius: 6,
-    shadowOffset: { width: 0, height: 2 },
-    elevation: 3,
+    ...theme.shadow,
   },
-  active: { borderColor: colors.gold },
+  active: { borderColor: colors.turquoise },
   profile: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 8,
-    padding: 8,
-    paddingRight: 12,
-    borderRadius: 19,
-    backgroundColor: "#101e20f5",
+    gap: theme.space.xs,
+    padding: theme.space.xs,
+    paddingRight: theme.space.sm,
+    borderRadius: theme.radius.lg,
+    backgroundColor: theme.surfaces.overlay,
     borderWidth: 1,
-    borderColor: "#54706866",
+    borderColor: colors.line,
   },
   portrait: {
     width: 38,
     height: 42,
-    backgroundColor: "#345044",
-    borderRadius: 13,
+    backgroundColor: colors.raised,
+    borderRadius: theme.radius.sm,
     alignItems: "center",
     justifyContent: "center",
   },
   stats: { width: 86, gap: 5 },
   levelLine: { flexDirection: "row", justifyContent: "space-between", gap: 4 },
   level: {
-    color: colors.gold,
+    color: colors.violet,
     fontWeight: "800",
     fontSize: 11,
     letterSpacing: 1,
   },
   count: { color: colors.muted, fontSize: 10 },
-  track: {
-    backgroundColor: colors.line,
-    height: 4,
-    borderRadius: 3,
-    overflow: "hidden",
-  },
-  fill: { backgroundColor: colors.gold, height: 4 },
   xp: { color: colors.muted, fontSize: 9 },
 });

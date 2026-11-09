@@ -4,6 +4,7 @@ import { Marker, type MapMarker } from "react-native-maps";
 import { ExplorerAvatar } from "./ExplorerAvatar";
 import type { Fix } from "../../lib/game";
 import { avatarMotion } from "../../lib/exploration";
+import { theme } from "../../theme";
 const AnimatedMarker = Animated.createAnimatedComponent(Marker);
 export function PlayerMarker({
   fix,
@@ -35,7 +36,7 @@ export function PlayerMarker({
     if (motion === "hold") return;
     previous.current = fix;
     const point = { latitude: fix.latitude, longitude: fix.longitude };
-    const duration = motion === "snap" ? 0 : 650;
+    const duration = motion === "snap" ? 0 : theme.motion.travel;
     if (Platform.OS === "android")
       marker.current?.animateMarkerToCoordinate(point, duration);
     else {

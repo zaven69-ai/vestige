@@ -1,6 +1,8 @@
 # VESTIGE
 
-**V2 — phases A/B :** exploration immersive et avatar GPS, sur la branche `codex/v2-immersive-explorer`. Consultez le [guide V2](docs/V2-EXPLORATION.md) pour les fonctionnalités livrées, les limites et la mise à jour Windows. Les phases C/D attendent la validation de cette tranche.
+**Charte officielle V1 :** branche `codex/official-brand-v1`, issue de la V2 complète. Palette bleu nuit, composants partagés, fiches en bottom sheet et récompenses après sauvegarde. Consultez le [design system](DESIGN_SYSTEM.md) et le [guide de test iPhone/Windows](docs/BRAND-VALIDATION.md).
+
+**Logo :** son image est visible dans la conversation mais aucun fichier source exploitable n’est disponible dans le Cloud. Son intégration exacte, les nouvelles icônes et le splash natif restent en attente ; aucun logo de remplacement n’a été dessiné.
 
 Application **native iOS et Android**, Expo SDK 58, React Native et TypeScript. Le projet initial est conservé ; la navigation utilise maintenant Expo Router (`src/app`). Aucun backend ni abonnement requis pour cette version.
 
