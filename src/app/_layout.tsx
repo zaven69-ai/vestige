@@ -1,11 +1,14 @@
 import React from "react";
+import { View, StyleSheet } from "react-native";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { GameProvider } from "../lib/store";
-import { colors } from "../components/ui";
-export default function RootLayout() {
+import { GameProvider, useGame } from "../lib/store";
+import { BrandLaunch } from "../components/brand/BrandSignature";
+import { colors } from "../theme";
+function AppShell() {
+  const { ready, storageError } = useGame();
   return (
-    <GameProvider>
+    <>
       <StatusBar style="light" />
       <Stack
         screenOptions={{
@@ -21,6 +24,18 @@ export default function RootLayout() {
           options={{ title: "Archives du lieu", presentation: "modal" }}
         />
       </Stack>
+      {!ready && !storageError && (
+        <View style={StyleSheet.absoluteFill}>
+          <BrandLaunch />
+        </View>
+      )}
+    </>
+  );
+}
+export default function RootLayout() {
+  return (
+    <GameProvider>
+      <AppShell />
     </GameProvider>
   );
 }

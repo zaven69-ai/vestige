@@ -4,8 +4,8 @@
     "slug": "vestige",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/brand/app-icon-1024.png",
+    "userInterfaceStyle": "dark",
     "ios": {
       "supportsTablet": true,
       "infoPlist": {
@@ -14,15 +14,13 @@
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/brand/android-adaptive-foreground.png"
       },
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/brand/favicon-64.png"
     },
     "plugins": [
       "expo-router",
@@ -31,9 +29,23 @@
         {
           "locationWhenInUsePermission": "VESTIGE utilise votre position pour afficher les lieux proches et valider vos d\u00e9couvertes historiques."
         }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/brand/vestige-logo.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#FFFFFF",
+          "dark": {
+            "image": "./assets/brand/vestige-logo.png",
+            "backgroundColor": "#FFFFFF"
+          }
+        }
       ]
     ],
     "scheme": "vestige",
-    "platforms": ["ios", "android"]
+    "platforms": ["ios", "android"],
+    "backgroundColor": "#020D27"
   }
 }

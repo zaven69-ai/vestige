@@ -12,6 +12,8 @@ import {
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Button, Icon, colors, s } from "../ui";
+import { theme } from "../../theme";
+import { useReducedMotion } from "../../hooks/useExplorerSensors";
 import {
   historicalPeriods,
   type HistoricalPeriod,
@@ -48,11 +50,12 @@ export function MapOptions({
   storageError,
 }: Props) {
   const insets = useSafeAreaInsets();
+  const reduced = useReducedMotion();
   return (
     <Modal
       visible={panel !== null}
       transparent
-      animationType="slide"
+      animationType={reduced ? "none" : "slide"}
       onRequestClose={close}
     >
       <View style={styles.root}>
@@ -130,8 +133,8 @@ export function MapOptions({
                     accessibilityLabel="Perspective immersive"
                     value={immersive}
                     onValueChange={setImmersive}
-                    trackColor={{ true: "#60866a", false: colors.line }}
-                    thumbColor={colors.gold}
+                    trackColor={{ true: colors.turquoise, false: colors.line }}
+                    thumbColor={colors.violet}
                   />
                 </View>
                 <Button
@@ -147,7 +150,7 @@ export function MapOptions({
                   }}
                 />
                 <Text style={s.eyebrow}>Explorer une ville</Text>
-                <View style={{ flexDirection: "row", gap: 12 }}>
+                <View style={{ flexDirection: "row", gap: theme.space.sm }}>
                   {(["Vienne", "Lyon"] as City[]).map((city) => (
                     <View key={city} style={{ flex: 1 }}>
                       <Button
@@ -210,11 +213,11 @@ export function MapOptions({
   );
 }
 const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: "#07151477", justifyContent: "flex-end" },
+  root: { flex: 1, backgroundColor: colors.scrim, justifyContent: "flex-end" },
   sheet: {
-    borderTopLeftRadius: 26,
-    borderTopRightRadius: 26,
-    padding: 22,
+    borderTopLeftRadius: theme.radius.xl,
+    borderTopRightRadius: theme.radius.xl,
+    padding: theme.space.lg,
     backgroundColor: colors.bg,
     borderWidth: 1,
     borderColor: colors.line,
@@ -223,7 +226,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginBottom: 12,
+    marginBottom: theme.space.sm,
   },
   close: {
     width: 44,
@@ -235,7 +238,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    gap: 12,
+    gap: theme.space.sm,
     minHeight: 48,
   },
   option: { color: colors.ink, fontSize: 15, fontWeight: "600" },

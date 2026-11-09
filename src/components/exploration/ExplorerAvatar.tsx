@@ -1,4 +1,5 @@
 import React from "react";
+import { theme, colors } from "../../theme";
 import { StyleSheet, View } from "react-native";
 export type AvatarAppearance = {
   coat: string;
@@ -7,10 +8,10 @@ export type AvatarAppearance = {
   pack: string;
 };
 export const defaultAppearance: AvatarAppearance = {
-  coat: "#426c61",
-  hat: "#d6b783",
-  skin: "#c98d69",
-  pack: "#ad7046",
+  coat: theme.avatar.coat,
+  hat: theme.avatar.hat,
+  skin: theme.avatar.skin,
+  pack: theme.avatar.pack,
 };
 type Props = {
   size?: number;
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 6,
     borderLeftColor: "transparent",
     borderRightColor: "transparent",
-    borderBottomColor: "#e3bd76",
+    borderBottomColor: colors.blue,
   },
   shadow: {
     position: "absolute",
@@ -97,7 +98,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 13,
     borderRadius: 20,
-    backgroundColor: "#122b2c44",
+    backgroundColor: theme.avatar.shadow,
   },
   pack: {
     position: "absolute",
@@ -107,7 +108,7 @@ const styles = StyleSheet.create({
     left: 15,
     top: 27,
     borderWidth: 2,
-    borderColor: "#553d30",
+    borderColor: theme.avatar.outline,
   },
   coat: {
     position: "absolute",
@@ -117,7 +118,7 @@ const styles = StyleSheet.create({
     left: 18,
     borderRadius: 8,
     borderWidth: 1.5,
-    borderColor: "#213c35",
+    borderColor: theme.avatar.outline,
   },
   arm: {
     position: "absolute",
@@ -126,7 +127,7 @@ const styles = StyleSheet.create({
     top: 32,
     borderRadius: 6,
     borderWidth: 1,
-    borderColor: "#213c35",
+    borderColor: theme.avatar.outline,
   },
   shirt: {
     position: "absolute",
@@ -134,7 +135,7 @@ const styles = StyleSheet.create({
     height: 17,
     top: 33,
     left: 29,
-    backgroundColor: "#eee3c6",
+    backgroundColor: theme.avatar.shirt,
     borderBottomLeftRadius: 3,
     borderBottomRightRadius: 3,
   },
@@ -144,7 +145,7 @@ const styles = StyleSheet.create({
     height: 28,
     top: 28,
     left: 31,
-    backgroundColor: "#8a5b3d",
+    backgroundColor: theme.avatar.pack,
     transform: [{ rotate: "31deg" }],
   },
   bootLeft: {
@@ -153,7 +154,7 @@ const styles = StyleSheet.create({
     left: 21,
     width: 10,
     height: 12,
-    backgroundColor: "#37332c",
+    backgroundColor: theme.avatar.outline,
     borderRadius: 4,
   },
   bootRight: {
@@ -162,7 +163,7 @@ const styles = StyleSheet.create({
     right: 21,
     width: 10,
     height: 12,
-    backgroundColor: "#37332c",
+    backgroundColor: theme.avatar.outline,
     borderRadius: 4,
   },
   face: {
@@ -173,7 +174,7 @@ const styles = StyleSheet.create({
     height: 22,
     borderRadius: 9,
     borderWidth: 1,
-    borderColor: "#9a6249",
+    borderColor: theme.avatar.faceOutline,
   },
   eyeLeft: {
     position: "absolute",
@@ -182,7 +183,7 @@ const styles = StyleSheet.create({
     width: 2.5,
     height: 3,
     borderRadius: 2,
-    backgroundColor: "#352c27",
+    backgroundColor: theme.avatar.eyes,
   },
   eyeRight: {
     position: "absolute",
@@ -191,7 +192,7 @@ const styles = StyleSheet.create({
     width: 2.5,
     height: 3,
     borderRadius: 2,
-    backgroundColor: "#352c27",
+    backgroundColor: theme.avatar.eyes,
   },
   scarf: {
     position: "absolute",
@@ -200,7 +201,7 @@ const styles = StyleSheet.create({
     width: 20,
     height: 5,
     borderRadius: 3,
-    backgroundColor: "#bd773f",
+    backgroundColor: theme.avatar.scarf,
     transform: [{ rotate: "-8deg" }],
   },
   brim: {
@@ -211,7 +212,7 @@ const styles = StyleSheet.create({
     height: 11,
     borderRadius: 18,
     borderWidth: 1.5,
-    borderColor: "#876845",
+    borderColor: theme.avatar.outline,
   },
   hat: {
     position: "absolute",
@@ -222,7 +223,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 9,
     borderTopRightRadius: 9,
     borderWidth: 1.5,
-    borderColor: "#876845",
+    borderColor: theme.avatar.outline,
   },
   hatBand: {
     position: "absolute",
@@ -230,7 +231,7 @@ const styles = StyleSheet.create({
     top: 16,
     width: 23,
     height: 4,
-    backgroundColor: "#5c4a36",
+    backgroundColor: theme.avatar.pack,
   },
   compass: {
     position: "absolute",
@@ -239,16 +240,16 @@ const styles = StyleSheet.create({
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundColor: "#e7c883",
+    backgroundColor: theme.avatar.compass,
     borderWidth: 1,
-    borderColor: "#755b31",
+    borderColor: theme.avatar.outline,
     alignItems: "center",
     justifyContent: "center",
   },
   needle: {
     width: 2,
     height: 5,
-    backgroundColor: "#40695c",
+    backgroundColor: theme.avatar.coat,
     transform: [{ rotate: "30deg" }],
   },
 });

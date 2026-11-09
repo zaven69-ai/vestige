@@ -1,37 +1,89 @@
 import React from "react";
-import { Text, View, Linking } from "react-native";
+import { Text, View, Linking, Alert } from "react-native";
 import { useGame } from "../../lib/store";
 import { levelFor } from "../../lib/game";
-import { Page, Button, Icon, colors, s } from "../../components/ui";
+import { achievements } from "../../lib/achievements";
+import { monuments } from "../../data/monuments";
+import { ExplorerAvatar } from "../../components/exploration/ExplorerAvatar";
+import {
+  Page,
+  Card,
+  Button,
+  Badge,
+  XPBar,
+  StatTile,
+  Icon,
+  s,
+} from "../../components/ui";
+import { colors, theme } from "../../theme";
 export default function Profil() {
   const { xp, journal, gps, fix, requestGPS, storageError } = useGame();
+  const badges = achievements(journal, monuments);
+  const visited = monuments.filter((m) => journal[m.id]);
+  const cities = new Set(visited.map((m) => m.city)).size;
   return (
-    <Page eyebrow="Votre aventure" title="Passeur de mémoire">
-      <View style={[s.card, { alignItems: "center", paddingVertical: 30 }]}>
-        <Icon name="compass-outline" size={58} />
-        <Text style={s.eyebrow}>Explorateur · Niveau {levelFor(xp)}</Text>
-        <Text style={s.title}>{xp} XP</Text>
-        <Text style={s.body}>
-          {Object.keys(journal).length} monuments découverts
-        </Text>
-        <View style={[s.track, { width: "100%" }]}>
+    <Page eyebrow="Votre aventure VESTIGE" title="L’exploration vous ressemble">
+      <Card style={{ alignItems: "center" }}>
+        <View
+          style={{
+            width: 94,
+            height: 94,
+            borderRadius: theme.radius.xl,
+            backgroundColor: colors.raised,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <ExplorerAvatar size={82} />
+        </View>
+        <Badge>Niveau {levelFor(xp)} · Explorateur</Badge>
+        <Text style={s.heading}>Passeur de mémoire</Text>
+        <XPBar xp={xp} />
+        <View
+          style={{
+            flexDirection: "row",
+            alignSelf: "stretch",
+            paddingTop: theme.space.xs,
+            gap: theme.space.md,
+          }}
+        >
+          <StatTile value={xp} label="XP gagnés" />
+          <StatTile value={visited.length} label="Monuments" tone="turquoise" />
+          <StatTile value={cities} label="Villes" tone="blue" />
+        </View>
+      </Card>
+      <Text style={s.heading}>Vos badges historiques</Text>
+      {badges.map((b) => (
+        <Card key={b.id}>
           <View
             style={{
-              height: 5,
-              width: `${((xp % 400) / 400) * 100}%`,
-              backgroundColor: colors.gold,
+              flexDirection: "row",
+              gap: theme.space.sm,
+              alignItems: "center",
             }}
-          />
-        </View>
-        <Text style={s.body}>
-          {400 - (xp % 400)} XP avant le prochain niveau
-        </Text>
-      </View>
-      <View style={s.card}>
+          >
+            <Icon
+              name={b.value >= b.goal ? "ribbon" : "lock-closed-outline"}
+              color={b.value >= b.goal ? colors.turquoise : colors.muted}
+            />
+            <View style={{ flex: 1, gap: theme.space.xxs }}>
+              <Text style={s.rowTitle}>{b.title}</Text>
+              <Text style={s.caption}>
+                {b.value >= b.goal
+                  ? "Débloqué par vos découvertes"
+                  : `${b.value}/${b.goal} · ${b.description}`}
+              </Text>
+            </View>
+          </View>
+        </Card>
+      ))}
+      <Card>
         <Text style={s.heading}>Votre boussole</Text>
         <Text style={s.body}>
           {gps}
-          {fix ? ` · précision ±${Math.round(fix.accuracy ?? 0)} m` : ""}
+          {fix
+            ? ` · précision ${fix.accuracy === null ? "indisponible" : `±${Math.round(fix.accuracy)} m`}`
+            : ""}
         </Text>
         <Button
           title="Actualiser ma position"
@@ -39,28 +91,44 @@ export default function Profil() {
           onPress={() => void requestGPS()}
         />
         <Button
-          title="Ouvrir les réglages de localisation"
+          title="Réglages de localisation ↗"
           secondary
           onPress={() => {
-            void Linking.openSettings();
+            void Linking.openSettings().catch(() =>
+              Alert.alert(
+                "Réglages indisponibles",
+                "Ouvrez les réglages du téléphone.",
+              ),
+            );
           }}
         />
-      </View>
-      <View style={s.card}>
-        <Text style={s.heading}>Une aventure locale</Text>
+      </Card>
+      <Card>
+        <Badge tone="blue">Prochainement · non disponible</Badge>
+        <Text style={s.heading}>Explorer ensemble</Text>
         <Text style={s.body}>
-          Votre carnet et vos XP sont conservés sur ce téléphone. Aucun compte
-          ni serveur. Votre position n’est pas enregistrée par VESTIGE. Les
-          fonds de carte sont fournis par Apple ou Google ; leur chargement
-          nécessite Internet.
+          Classements et communauté ne sont pas encore implémentés. Vos
+          statistiques ci-dessus proviennent uniquement de votre carnet local.
         </Text>
+      </Card>
+      <Card>
+        <Text style={s.heading}>Votre aventure reste locale</Text>
         <Text style={s.body}>
-          La localisation fonctionne uniquement lorsque l’application est au
-          premier plan. Les photos et les fiches intégrées restent lisibles sans
-          connexion. Désinstaller l’application efface la progression locale.
+          Le carnet et les XP restent sur ce téléphone, sans compte ni
+          synchronisation. VESTIGE n’enregistre pas vos positions GPS. Les fonds
+          de carte dépendent d’Apple ou Google et nécessitent Internet.
         </Text>
-        {storageError && <Text style={s.body}>{storageError}</Text>}
-      </View>
+        <Text style={s.caption}>
+          Photos et fiches intégrées disponibles hors ligne. Localisation au
+          premier plan uniquement. Désinstaller l’application efface la
+          progression locale.
+        </Text>
+        {storageError && (
+          <Text accessibilityRole="alert" style={s.body}>
+            {storageError}
+          </Text>
+        )}
+      </Card>
     </Page>
   );
 }

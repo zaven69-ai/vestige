@@ -10,7 +10,7 @@ import {
 import MapView, { Circle } from "react-native-maps";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { router, useIsFocused } from "expo-router";
+import { useIsFocused } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import {
   cities,
@@ -43,19 +43,22 @@ import {
 } from "../../components/exploration/ExplorerHUD";
 import { MapOptions } from "../../components/exploration/MapOptions";
 import { colors, Icon } from "../../components/ui";
+import { theme } from "../../theme";
+import { monumentState } from "../../lib/markerState";
+import { MonumentBottomSheet } from "../../components/monuments/MonumentBottomSheet";
 const mapStyle = [
-  { elementType: "geometry", stylers: [{ color: "#dfe3d4" }] },
-  { elementType: "labels.text.fill", stylers: [{ color: "#526457" }] },
+  { elementType: "geometry", stylers: [{ color: theme.map.land }] },
+  { elementType: "labels.text.fill", stylers: [{ color: theme.map.label }] },
   {
     featureType: "water",
     elementType: "geometry",
-    stylers: [{ color: "#97b9b1" }],
+    stylers: [{ color: theme.map.water }],
   },
   { featureType: "poi", stylers: [{ visibility: "off" }] },
   {
     featureType: "road",
     elementType: "geometry",
-    stylers: [{ color: "#f3f0e3" }],
+    stylers: [{ color: theme.map.road }],
   },
 ];
 const initialCamera = {
@@ -81,6 +84,8 @@ export default function Explorer() {
     ...historicalPeriods,
   ]);
   const [selection, setSelection] = useState<Monument | null>(null);
+  const [sheetOpen, setSheetOpen] = useState(false);
+  const closeSheet = useCallback(() => setSheetOpen(false), []);
   const map = useRef<MapView>(null);
   const cameraRead = useRef({ busy: false, timestamp: 0 });
   const alive = useRef(true);
@@ -136,7 +141,8 @@ export default function Explorer() {
   const moveCamera = useCallback(
     (camera: Parameters<MapView["animateCamera"]>[0]) => {
       if (reducedMotion) map.current?.setCamera(camera);
-      else map.current?.animateCamera(camera, { duration: 650 });
+      else
+        map.current?.animateCamera(camera, { duration: theme.motion.travel });
     },
     [reducedMotion],
   );
@@ -272,7 +278,7 @@ export default function Explorer() {
           <HistoricalMarker
             key={monument.id}
             monument={monument}
-            discovered={!!journal[monument.id]}
+            state={monumentState(monument, !!journal[monument.id], fix, now)}
             selected={selected?.id === monument.id}
             onSelect={selectMonument}
           />
@@ -282,8 +288,12 @@ export default function Explorer() {
             <Circle
               center={fix}
               radius={DISCOVERY_RADIUS}
-              fillColor={goodGPS ? "#50776510" : "#b38a3e0c"}
-              strokeColor={goodGPS ? "#446b6577" : "#a9814666"}
+              fillColor={
+                goodGPS ? theme.map.proximityFill : theme.map.uncertainFill
+              }
+              strokeColor={
+                goodGPS ? theme.map.proximityStroke : theme.map.uncertainStroke
+              }
               strokeWidth={1}
             />
             {fix.accuracy !== null &&
@@ -292,8 +302,8 @@ export default function Explorer() {
                 <Circle
                   center={fix}
                   radius={fix.accuracy}
-                  fillColor="#647d8020"
-                  strokeColor="#647d8044"
+                  fillColor={theme.map.accuracyFill}
+                  strokeColor={theme.map.accuracyStroke}
                   strokeWidth={1}
                 />
               )}
@@ -392,7 +402,7 @@ export default function Explorer() {
             styles.dot,
             {
               backgroundColor:
-                storageError || !goodGPS ? colors.gold : colors.green,
+                storageError || !goodGPS ? colors.violet : colors.turquoise,
             },
           ]}
         />
@@ -415,12 +425,7 @@ export default function Explorer() {
           <Pressable
             accessibilityRole="button"
             accessibilityLabel={`Ouvrir la fiche de ${selected.name}`}
-            onPress={() =>
-              router.push({
-                pathname: "/monument/[id]",
-                params: { id: selected.id },
-              })
-            }
+            onPress={() => setSheetOpen(true)}
             style={styles.previewLink}
           >
             <Image source={selected.image} style={styles.photo} />
@@ -450,6 +455,10 @@ export default function Explorer() {
           </Pressable>
         </View>
       )}
+      <MonumentBottomSheet
+        monument={sheetOpen ? selected : null}
+        close={closeSheet}
+      />
       <MapOptions
         panel={panel}
         close={() => setPanel(null)}
@@ -471,7 +480,7 @@ export default function Explorer() {
   );
 }
 const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: "#dfe3d4" },
+  root: { flex: 1, backgroundColor: theme.map.land },
   top: {
     position: "absolute",
     flexDirection: "row",
@@ -487,39 +496,39 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 10,
     borderRadius: 14,
-    backgroundColor: "#101e20ed",
+    backgroundColor: theme.surfaces.overlay,
     flexDirection: "row",
     gap: 7,
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "#54706855",
+    borderColor: colors.line,
   },
   statusText: { color: colors.ink, fontSize: 11, flexShrink: 1 },
   dot: { width: 5, height: 5, borderRadius: 3 },
   filterHint: {
     position: "absolute",
     alignSelf: "center",
-    backgroundColor: "#101e20ed",
+    backgroundColor: theme.surfaces.overlay,
     padding: 10,
     borderRadius: 12,
   },
   hintText: { color: colors.ink, fontSize: 11 },
   preview: {
     position: "absolute",
-    backgroundColor: "#101e20f5",
+    backgroundColor: theme.surfaces.overlay,
     borderRadius: 21,
     borderWidth: 1,
-    borderColor: "#66775b88",
+    borderColor: colors.line,
     padding: 10,
     minHeight: 112,
   },
   previewLink: { flexDirection: "row", gap: 12, paddingRight: 30 },
   photo: { width: 64, height: 94, borderRadius: 13 },
   previewText: { flex: 1, justifyContent: "center", gap: 6 },
-  era: { color: colors.gold, fontSize: 9, letterSpacing: 0.6 },
+  era: { color: colors.violet, fontSize: 9, letterSpacing: 0.6 },
   name: { color: colors.ink, fontWeight: "700", fontSize: 17, lineHeight: 21 },
   distance: { color: colors.muted, fontSize: 11 },
-  read: { color: colors.gold, fontSize: 11, fontWeight: "600" },
+  read: { color: colors.violet, fontSize: 11, fontWeight: "600" },
   close: {
     position: "absolute",
     top: 0,
