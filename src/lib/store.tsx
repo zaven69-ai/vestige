@@ -75,7 +75,7 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
         {
           accuracy: Location.Accuracy.High,
           distanceInterval: 0,
-          timeInterval: 3000,
+          timeInterval: 5000,
         },
         (location) => {
           if (mounted.current && token === generation.current) {
@@ -83,6 +83,8 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
               latitude: location.coords.latitude,
               longitude: location.coords.longitude,
               accuracy: location.coords.accuracy,
+              heading: location.coords.heading,
+              speed: location.coords.speed,
               timestamp: location.timestamp,
             });
             setGPS("GPS actif");

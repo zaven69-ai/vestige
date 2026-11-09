@@ -1,5 +1,6 @@
 import React from "react";
 import { Tabs } from "expo-router";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Icon, colors } from "../../components/ui";
 const tabs = [
   { name: "index", title: "Explorer", icon: "compass-outline" },
@@ -9,6 +10,7 @@ const tabs = [
   { name: "profil", title: "Profil", icon: "person-circle-outline" },
 ] as const;
 export default function TabLayout() {
+  const insets = useSafeAreaInsets();
   return (
     <Tabs
       screenOptions={{
@@ -16,8 +18,19 @@ export default function TabLayout() {
         tabBarActiveTintColor: colors.gold,
         tabBarInactiveTintColor: colors.muted,
         tabBarStyle: {
-          backgroundColor: colors.bg,
+          position: "absolute",
+          bottom: insets.bottom + 8,
+          left: Math.max(insets.left, 12),
+          right: Math.max(insets.right, 12),
+          height: 64,
+          paddingTop: 7,
+          paddingBottom: 7,
+          backgroundColor: "#101e20fa",
+          borderRadius: 22,
+          borderWidth: 1,
+          borderColor: colors.line,
           borderTopColor: colors.line,
+          elevation: 6,
         },
         tabBarLabelStyle: { fontSize: 10, fontWeight: "600" },
       }}

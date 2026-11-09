@@ -7,7 +7,10 @@ import {
   ScrollView,
   Image,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from "react-native-safe-area-context";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { router } from "expo-router";
 import { Monument } from "../data/monuments";
@@ -70,9 +73,15 @@ export function Page({
   title: string;
   children: React.ReactNode;
 }) {
+  const insets = useSafeAreaInsets();
   return (
     <SafeAreaView edges={["top", "left", "right"]} style={s.page}>
-      <ScrollView contentContainerStyle={s.pageContent}>
+      <ScrollView
+        contentContainerStyle={[
+          s.pageContent,
+          { paddingBottom: insets.bottom + 108 },
+        ]}
+      >
         <Text style={s.eyebrow}>{eyebrow}</Text>
         <Text accessibilityRole="header" style={s.title}>
           {title}

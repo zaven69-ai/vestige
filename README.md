@@ -1,5 +1,7 @@
 # VESTIGE
 
+**V2 — phases A/B :** exploration immersive et avatar GPS, sur la branche `codex/v2-immersive-explorer`. Consultez le [guide V2](docs/V2-EXPLORATION.md) pour les fonctionnalités livrées, les limites et la mise à jour Windows. Les phases C/D attendent la validation de cette tranche.
+
 Application **native iOS et Android**, Expo SDK 58, React Native et TypeScript. Le projet initial est conservé ; la navigation utilise maintenant Expo Router (`src/app`). Aucun backend ni abonnement requis pour cette version.
 
 ## Lancer sur un iPhone avec Expo Go
@@ -56,7 +58,7 @@ Les tests Node vérifient les distances, la portée GPS, la fraîcheur/précisio
 
 - Validation visuelle et GPS sur de vrais iPhone et Android : aucun appareil mobile n’était connecté à cet environnement de développement.
 - Guidage piéton, itinéraires tenant compte des rues, accessibilité et horaires. Les parcours actuels sont des étapes suggérées, pas un calculateur d’itinéraire.
-- Carte artistique personnalisée identique sur les deux plateformes : le style natif Apple diffère de celui de Google. Pas de moteur 3D ni avatar animé.
+- Carte artistique personnalisée identique sur les deux plateformes : le style natif Apple diffère de celui de Google. Avatar 2D original avec déplacement GPS interpolé ; aucun moteur 3D ni animation de marche artificielle.
 - Comptes, synchronisation, sauvegarde distante/export utilisateur et anti-triche GPS avancée.
 - Notifications, détection automatique en arrière-plan, défis quotidiens et contenu supplémentaire.
 - Carte hors ligne, publication App Store / Play Store, clés et builds autonomes.
