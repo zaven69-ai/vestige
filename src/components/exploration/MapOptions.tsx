@@ -18,8 +18,11 @@ import {
   historicalPeriods,
   type HistoricalPeriod,
 } from "../../lib/exploration";
-import type { City } from "../../data/monuments";
+import { cities, type City } from "../../data/monuments";
 type Props = {
+  atlasEnabled: boolean;
+  setAtlasEnabled: (value: boolean) => void;
+  atlasStatus: string;
   panel: "settings" | "filters" | null;
   close: () => void;
   immersive: boolean;
@@ -35,6 +38,9 @@ type Props = {
   storageError: string | null;
 };
 export function MapOptions({
+  atlasEnabled,
+  setAtlasEnabled,
+  atlasStatus,
   panel,
   close,
   immersive,
@@ -137,6 +143,17 @@ export function MapOptions({
                     thumbColor={colors.violet}
                   />
                 </View>
+                <View style={styles.row}>
+                  <View style={{ flex: 1 }}>
+                    <Text style={styles.option}>Atlas VESTIGE · Vienne</Text>
+                    <Text style={s.body}>{atlasStatus}</Text>
+                  </View>
+                  <Switch
+                    accessibilityLabel="Atlas VESTIGE"
+                    value={atlasEnabled}
+                    onValueChange={setAtlasEnabled}
+                  />
+                </View>
                 <Button
                   title={
                     following
@@ -150,9 +167,18 @@ export function MapOptions({
                   }}
                 />
                 <Text style={s.eyebrow}>Explorer une ville</Text>
-                <View style={{ flexDirection: "row", gap: theme.space.sm }}>
-                  {(["Vienne", "Lyon"] as City[]).map((city) => (
-                    <View key={city} style={{ flex: 1 }}>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    gap: theme.space.sm,
+                  }}
+                >
+                  {(Object.keys(cities) as City[]).map((city) => (
+                    <View
+                      key={city}
+                      style={{ flexGrow: 1, minWidth: 140, width: "45%" }}
+                    >
                       <Button
                         title={city}
                         secondary

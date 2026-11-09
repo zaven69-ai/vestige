@@ -1,7 +1,7 @@
+import { MonumentPhoto } from "./MonumentPhoto";
 import React, { useEffect, useState } from "react";
 import {
   Animated,
-  Image,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -252,7 +252,7 @@ export function MonumentRow({
       }
       style={s.row}
     >
-      <Image source={monument.image} style={s.thumb} />
+      <MonumentPhoto monument={monument} style={s.thumb} />
       <View style={{ flex: 1, gap: theme.space.xxs }}>
         <Text style={s.eyebrow}>
           {monument.city} · {monument.era}

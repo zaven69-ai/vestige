@@ -1,5 +1,6 @@
+import { MonumentPhoto } from "../../components/MonumentPhoto";
 import React, { useState } from "react";
-import { Text, View, Image, StyleSheet } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import { trails, monuments } from "../../data/monuments";
 import { useGame } from "../../lib/store";
 import { distance, formatDistance } from "../../lib/game";
@@ -39,11 +40,7 @@ export default function Parcours() {
         );
         return (
           <View key={trail.id} style={styles.card}>
-            <Image
-              source={stops[0].image}
-              accessibilityLabel={`Aperçu du parcours ${trail.title}`}
-              style={styles.cover}
-            />
+            <MonumentPhoto monument={stops[0]} style={styles.cover} />
             <View style={styles.content}>
               <View style={styles.metadata}>
                 <Badge tone="blue">{trail.city}</Badge>

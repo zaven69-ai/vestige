@@ -10,6 +10,7 @@ const periods: Record<
   HistoricalPeriod,
   React.ComponentProps<typeof Icon>["name"]
 > = {
+  "Période non précisée": "help-outline",
   Antiquité: "library-outline",
   "Moyen Âge": "shield-outline",
   Renaissance: "color-palette-outline",
@@ -17,6 +18,7 @@ const periods: Record<
   "Époque contemporaine": "business-outline",
 };
 const states = {
+  unknown: { color: colors.blue, label: "Fiche à documenter", symbol: "?" },
   undiscovered: { color: colors.blue, label: "À explorer", symbol: "" },
   nearby: { color: colors.coral, label: "À portée", symbol: "•" },
   discovered: { color: colors.turquoise, label: "Découvert", symbol: "✓" },
@@ -42,7 +44,10 @@ export const HistoricalMarker = memo(function HistoricalMarker({
   return (
     <Marker
       ref={marker}
-      coordinate={monument}
+      coordinate={{
+        latitude: monument.latitude,
+        longitude: monument.longitude,
+      }}
       identifier={monument.id}
       stopPropagation
       anchor={{ x: 0.5, y: 0.85 }}

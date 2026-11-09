@@ -1,6 +1,29 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-import MapView, { Circle } from "react-native-maps";
+import { MonumentPhoto } from "../../components/MonumentPhoto";
+import { useLocalAtlas } from "../../hooks/useLocalAtlas";
+import { viewportGroups } from "../../lib/mapViewport";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+  Linking,
+  Modal,
+  ScrollView,
+  useWindowDimensions,
+} from "react-native";
+import MapView, {
+  Circle,
+  LocalTile,
+  Marker,
+  type Region,
+} from "react-native-maps";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { useIsFocused } from "expo-router";
@@ -68,6 +91,21 @@ export default function Explorer() {
   const heading = useExplorerHeading(focused && fresh);
   const reducedMotion = useReducedMotion();
   const direction = playerDirection(heading, fix, now);
+  const { width, height } = useWindowDimensions();
+  const [atlasEnabled, setAtlasEnabled] = useState(true);
+  const atlas = useLocalAtlas(atlasEnabled);
+  const [region, setRegion] = useState<Region>({
+    ...cities.Vienne,
+    latitudeDelta: 0.025,
+    longitudeDelta: 0.025,
+  });
+  const atlasActive =
+    atlasEnabled &&
+    !!atlas.path &&
+    region.latitude - region.latitudeDelta / 2 >= atlas.bounds.south &&
+    region.latitude + region.latitudeDelta / 2 <= atlas.bounds.north &&
+    region.longitude - region.longitudeDelta / 2 >= atlas.bounds.west &&
+    region.longitude + region.longitudeDelta / 2 <= atlas.bounds.east;
   const [following, setFollowing] = useState(true);
   const [mapReady, setMapReady] = useState(false);
   const [mapHeading, setMapHeading] = useState(0);
@@ -76,6 +114,7 @@ export default function Explorer() {
   const [periods, setPeriods] = useState<HistoricalPeriod[]>([
     ...historicalPeriods,
   ]);
+  const [clusterChoices, setClusterChoices] = useState<Monument[]>([]);
   const [selection, setSelection] = useState<Monument | null>(null);
   const [sheetOpen, setSheetOpen] = useState(false);
   const closeSheet = useCallback(() => setSheetOpen(false), []);
@@ -117,8 +156,13 @@ export default function Explorer() {
   const cameraFix = useRef<typeof fix>(null);
   const touchOrigin = useRef<{ x: number; y: number } | null>(null);
   const bottom = insets.bottom + 86;
-  const visibleMonuments = monuments.filter((m) =>
-    periods.includes(historicalPeriod(m.era)),
+  const visibleMonuments = useMemo(
+    () => monuments.filter((m) => periods.includes(historicalPeriod(m.era))),
+    [periods],
+  );
+  const groups = useMemo(
+    () => viewportGroups(visibleMonuments, region, width, height),
+    [visibleMonuments, region, width, height],
   );
   const selected =
     selection && periods.includes(historicalPeriod(selection.era))
@@ -219,6 +263,64 @@ export default function Explorer() {
   return (
     <View style={styles.root}>
       {focused && <StatusBar style="dark" />}
+      <Modal
+        visible={clusterChoices.length > 0}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setClusterChoices([])}
+      >
+        <View
+          style={{
+            flex: 1,
+            backgroundColor: "#0009",
+            justifyContent: "center",
+            padding: 24,
+          }}
+        >
+          <View
+            style={{
+              maxHeight: "75%",
+              backgroundColor: colors.bg,
+              padding: 20,
+              borderRadius: 24,
+            }}
+          >
+            <Text
+              style={{
+                color: colors.ink,
+                fontSize: 20,
+                fontWeight: "700",
+                marginBottom: 16,
+              }}
+            >
+              Lieux voisins
+            </Text>
+            <ScrollView>
+              {clusterChoices.map((m) => (
+                <Pressable
+                  accessibilityRole="button"
+                  key={m.id}
+                  onPress={() => {
+                    setClusterChoices([]);
+                    selectMonument(m);
+                  }}
+                  style={{ paddingVertical: 16 }}
+                >
+                  <Text style={{ color: colors.ink }}>{m.name}</Text>
+                </Pressable>
+              ))}
+            </ScrollView>
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Fermer les lieux voisins"
+              onPress={() => setClusterChoices([])}
+              style={{ padding: 16 }}
+            >
+              <Text style={{ color: colors.turquoise }}>Fermer</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
       <MapView
         ref={map}
         style={StyleSheet.absoluteFill}
@@ -229,7 +331,8 @@ export default function Explorer() {
         showsUserLocation={false}
         showsMyLocationButton={false}
         showsPointsOfInterests={false}
-        showsBuildings
+        maxZoomLevel={atlasActive ? 18 : 20}
+        showsBuildings={!atlasActive}
         showsIndoors={false}
         pitchEnabled
         rotateEnabled
@@ -237,7 +340,10 @@ export default function Explorer() {
         onMapReady={() => setMapReady(true)}
         onPanDrag={stopFollowing}
         onRegionChange={() => readCameraHeading()}
-        onRegionChangeComplete={() => readCameraHeading(true)}
+        onRegionChangeComplete={(next) => {
+          setRegion(next);
+          readCameraHeading(true);
+        }}
         onRegionChangeStart={(_region, details) => {
           if (details.isGesture) stopFollowing();
         }}
@@ -266,15 +372,68 @@ export default function Explorer() {
         }}
         onPress={() => setSelection(null)}
       >
-        {visibleMonuments.map((monument) => (
-          <HistoricalMarker
-            key={monument.id}
-            monument={monument}
-            state={monumentState(monument, !!journal[monument.id], fix, now)}
-            selected={selected?.id === monument.id}
-            onSelect={selectMonument}
-          />
-        ))}
+        {atlasActive && atlas.path && (
+          <LocalTile pathTemplate={atlas.path} tileSize={256} zIndex={0} />
+        )}
+        {groups.map((group) =>
+          group.members.length === 1 ? (
+            <HistoricalMarker
+              key={group.members[0].id}
+              monument={group.members[0]}
+              state={monumentState(
+                group.members[0],
+                !!journal[group.members[0].id],
+                fix,
+                now,
+              )}
+              selected={selected?.id === group.members[0].id}
+              onSelect={selectMonument}
+            />
+          ) : (
+            <Marker
+              key={group.key}
+              coordinate={{
+                latitude: group.latitude,
+                longitude: group.longitude,
+              }}
+              stopPropagation
+              accessibilityLabel={`${group.members.length} lieux historiques. Agrandir la carte.`}
+              onPress={(event) => {
+                event.stopPropagation();
+                stopFollowing();
+                if (region.latitudeDelta < 0.001)
+                  setClusterChoices(group.members);
+                else
+                  map.current?.animateToRegion(
+                    {
+                      latitude: group.latitude,
+                      longitude: group.longitude,
+                      latitudeDelta: region.latitudeDelta / 2,
+                      longitudeDelta: region.longitudeDelta / 2,
+                    },
+                    reducedMotion ? 0 : 350,
+                  );
+              }}
+            >
+              <View
+                style={{
+                  width: 44,
+                  height: 44,
+                  borderRadius: 22,
+                  backgroundColor: colors.violet,
+                  borderWidth: 3,
+                  borderColor: colors.turquoise,
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Text style={{ color: "white", fontWeight: "800" }}>
+                  {group.members.length}
+                </Text>
+              </View>
+            </Marker>
+          ),
+        )}
         {fresh && (
           <>
             <Circle
@@ -309,6 +468,25 @@ export default function Explorer() {
           </>
         )}
       </MapView>
+      <Pressable
+        onPress={() => {
+          void Linking.openURL("https://www.openstreetmap.org/copyright").catch(
+            () => {},
+          );
+        }}
+        style={{
+          position: "absolute",
+          bottom: bottom - 18,
+          left: 14,
+          backgroundColor: "#ffffffdd",
+          borderRadius: 6,
+          padding: 3,
+        }}
+      >
+        <Text style={{ fontSize: 10, color: "#26304a" }}>
+          {atlasActive ? "Atlas VESTIGE · " : ""}© OpenStreetMap · ODbL
+        </Text>
+      </Pressable>
       <View
         pointerEvents="box-none"
         style={[
@@ -421,7 +599,7 @@ export default function Explorer() {
             onPress={() => setSheetOpen(true)}
             style={styles.previewLink}
           >
-            <Image source={selected.image} style={styles.photo} />
+            <MonumentPhoto monument={selected} style={styles.photo} />
             <View style={styles.previewText}>
               <Text style={styles.era}>
                 {selected.city} · {selected.era}
@@ -453,6 +631,9 @@ export default function Explorer() {
         close={closeSheet}
       />
       <MapOptions
+        atlasEnabled={atlasEnabled}
+        setAtlasEnabled={setAtlasEnabled}
+        atlasStatus={atlas.status}
         panel={panel}
         close={() => setPanel(null)}
         immersive={immersive}

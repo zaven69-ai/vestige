@@ -15,8 +15,12 @@ export function achievements(
     {
       id: "vienne",
       title: "Mémoire de Vienna",
-      description: "Retrouvez les quatre lieux de Vienne.",
-      value: found.filter((m) => m.city === "Vienne").length,
+      description: "Retrouvez les quatre lieux du parcours de Vienne.",
+      value: found.filter((m) =>
+        ["auguste", "saint-andre", "theatre-vienne", "saint-maurice"].includes(
+          m.id,
+        ),
+      ).length,
       goal: 4,
     },
     {
@@ -30,7 +34,11 @@ export function achievements(
       id: "rome",
       title: "Les gardiens de Rome",
       description: "Découvrez les quatre monuments antiques.",
-      value: found.filter((m) => m.era === "Antiquité").length,
+      value: found.filter((m) =>
+        ["auguste", "theatre-vienne", "theatre-lyon", "amphitheatre"].includes(
+          m.id,
+        ),
+      ).length,
       goal: 4,
     },
   ];

@@ -1,0 +1,833 @@
+[
+  {
+    "key": "Q10149",
+    "name": "théâtre antique de Vienne",
+    "latitude": 45.5248,
+    "longitude": 4.87888,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117349"
+    ],
+    "wikipedia": "Théâtre antique de Vienne",
+    "status": "pending"
+  },
+  {
+    "key": "Q13518353",
+    "name": "palais du Miroir",
+    "latitude": 45.5296,
+    "longitude": 4.8663,
+    "precisionDegrees": 0.00027777777777778,
+    "popRefs": [
+      "PA00118059"
+    ],
+    "wikipedia": "Palais du Miroir",
+    "status": "pending"
+  },
+  {
+    "key": "Q1410336",
+    "name": "cathédrale Saint-Maurice de Vienne",
+    "latitude": 45.524166666667,
+    "longitude": 4.8730555555556,
+    "precisionDegrees": 0.00027777777777778,
+    "popRefs": [
+      "PA00117325"
+    ],
+    "wikipedia": "Cathédrale Saint-Maurice de Vienne",
+    "status": "pending"
+  },
+  {
+    "key": "Q15953471",
+    "name": "villa Vaganay",
+    "latitude": 45.5251,
+    "longitude": 4.87742,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA38000018"
+    ],
+    "wikipedia": "Villa Vaganay",
+    "status": "pending"
+  },
+  {
+    "key": "Q22967083",
+    "name": "abbaye Saint-Ferréol",
+    "latitude": 45.52541,
+    "longitude": 4.87274,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117317"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967084",
+    "name": "aqueduc romain de Vienne",
+    "latitude": 45.52586575,
+    "longitude": 4.87925782,
+    "precisionDegrees": 2.7777777777778e-06,
+    "popRefs": [
+      "PA00117319"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967087",
+    "name": "église Saint-André-le-Haut",
+    "latitude": 45.52622222,
+    "longitude": 4.877194444,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117324"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967088",
+    "name": "fontaine du Jeu de Paume",
+    "latitude": 45.527237,
+    "longitude": 4.873415,
+    "precisionDegrees": 2.7777777777778e-06,
+    "popRefs": [
+      "PA00117328"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967089",
+    "name": "fontaine, place de l'Hôtel-de-Ville",
+    "latitude": 45.52544,
+    "longitude": 4.87532,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117329"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967090",
+    "name": "fontaine place Jouvenet",
+    "latitude": 45.52574,
+    "longitude": 4.87848,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117330"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967104",
+    "name": "gisement archéologique",
+    "latitude": 45.52287223,
+    "longitude": 4.8714204,
+    "precisionDegrees": 2.7777777777778e-06,
+    "popRefs": [
+      "PA00117331"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967113",
+    "name": "maison, 13 Rue de Bourgogne, 2 Rue du Quatre-Septembre",
+    "latitude": 45.5264,
+    "longitude": 4.87338,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117332"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967114",
+    "name": "maisons, 12 à 18 Rue des Clercs",
+    "latitude": 45.52677778,
+    "longitude": 4.874194444,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117333"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967116",
+    "name": "maison, 32, 34 Rue des Clercs",
+    "latitude": 45.52625,
+    "longitude": 4.874277778,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117334"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967117",
+    "name": "maison, 45, 47 Rue Marchande",
+    "latitude": 45.52716667,
+    "longitude": 4.875277778,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117335"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967118",
+    "name": "maison, 32 Rue Marchande",
+    "latitude": 45.52713889,
+    "longitude": 4.875138889,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117336"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967119",
+    "name": "maison, 9, 11 Rue des Orfèvres",
+    "latitude": 45.52597222,
+    "longitude": 4.875916667,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117337"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967120",
+    "name": "maison, 19 Rue des Orfèvres",
+    "latitude": 45.5257079,
+    "longitude": 4.87604118,
+    "precisionDegrees": 2.7777777777778e-06,
+    "popRefs": [
+      "PA00117338"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967122",
+    "name": "maison du 15e",
+    "latitude": 45.5251,
+    "longitude": 4.87584,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117339"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967123",
+    "name": "maison, 1, 3 Rue de la Table-Ronde",
+    "latitude": 45.527,
+    "longitude": 4.873722222,
+    "precisionDegrees": 0.00027777777777778,
+    "popRefs": [
+      "PA00117340"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967127",
+    "name": "odéon de Vienne",
+    "latitude": 45.52387,
+    "longitude": 4.8777,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117343"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967129",
+    "name": "cour de l'Ambulance",
+    "latitude": 45.52616,
+    "longitude": 4.87838,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117346"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22967130",
+    "name": "portique romain du Forum",
+    "latitude": 45.52442,
+    "longitude": 4.87615,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117347",
+      "PA00117327"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22968220",
+    "name": "église Saint-Romain de Saint-Romain-en-Gal",
+    "latitude": 45.5359602,
+    "longitude": 4.858389,
+    "precisionDegrees": 2.7777777777778e-06,
+    "popRefs": [
+      "PA00118057"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q22975794",
+    "name": "château-fort de Seyssuel",
+    "latitude": 45.5606,
+    "longitude": 4.8253,
+    "precisionDegrees": 0.00027777777777778,
+    "popRefs": [
+      "PA00132950"
+    ],
+    "wikipedia": "Château-fort de Seyssuel",
+    "status": "pending"
+  },
+  {
+    "key": "Q22996664",
+    "name": "abbaye de Saint-André-le-Haut",
+    "latitude": 45.525876200063045,
+    "longitude": 4.87897891038334,
+    "precisionDegrees": 2.777777777777778e-06,
+    "popRefs": [
+      "PA38000008"
+    ],
+    "wikipedia": "Abbaye Saint-André-le-Haut de Vienne",
+    "status": "pending"
+  },
+  {
+    "key": "Q22996665",
+    "name": "château de Chonas",
+    "latitude": 45.460833333333,
+    "longitude": 4.8122222222222,
+    "precisionDegrees": 0.00027777777777778,
+    "popRefs": [
+      "PA38000009"
+    ],
+    "wikipedia": "Château de Chonas",
+    "status": "pending"
+  },
+  {
+    "key": "Q23305483",
+    "name": "jardins de Cybèle",
+    "latitude": 45.524166666667,
+    "longitude": 4.8761111111111,
+    "precisionDegrees": 0.00027777777777778,
+    "popRefs": [
+      "PA00117327"
+    ],
+    "wikipedia": "Jardin archéologique de Cybèle",
+    "status": "pending"
+  },
+  {
+    "key": "Q2957015",
+    "name": "chapelle Saint-Théodore de Vienne",
+    "latitude": 45.5246,
+    "longitude": 4.87337,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117320"
+    ],
+    "wikipedia": "Chapelle Saint-Théodore de Vienne",
+    "status": "pending"
+  },
+  {
+    "key": "Q2970677",
+    "name": "château de Septème",
+    "latitude": 45.5508,
+    "longitude": 5.01083,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117287",
+      "PA00117285",
+      "PJR38000440"
+    ],
+    "wikipedia": "Château de Septème",
+    "status": "pending"
+  },
+  {
+    "key": "Q2971171",
+    "name": "château de la Bâtie",
+    "latitude": 45.5308,
+    "longitude": 4.87642,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117321"
+    ],
+    "wikipedia": "Château de la Bâtie (Vienne)",
+    "status": "pending"
+  },
+  {
+    "key": "Q3053752",
+    "name": "enceinte romaine de Vienne",
+    "latitude": 45.5223,
+    "longitude": 4.87064,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00132973"
+    ],
+    "wikipedia": "Enceinte romaine de Vienne",
+    "status": "pending"
+  },
+  {
+    "key": "Q3330022",
+    "name": "musée de l'industrie textile",
+    "latitude": 45.52719,
+    "longitude": 4.88147,
+    "precisionDegrees": 1e-05,
+    "popRefs": [
+      "IA38000771"
+    ],
+    "wikipedia": "Musée de l'industrie textile",
+    "status": "pending"
+  },
+  {
+    "key": "Q3330233",
+    "name": "musée des Beaux-Arts et d'Archéologie de Vienne",
+    "latitude": 45.5238,
+    "longitude": 4.87487,
+    "precisionDegrees": 0.01,
+    "popRefs": [],
+    "wikipedia": "Musée des Beaux-Arts et d'Archéologie de Vienne",
+    "status": "pending"
+  },
+  {
+    "key": "Q3330574",
+    "name": "musée gallo-romain de Saint-Romain-en-Gal",
+    "latitude": 45.5295,
+    "longitude": 4.87093,
+    "precisionDegrees": 2.777777777777778e-05,
+    "popRefs": [],
+    "wikipedia": "Musée gallo-romain de Saint-Romain-en-Gal",
+    "status": "pending"
+  },
+  {
+    "key": "Q3389028",
+    "name": "Pipet",
+    "latitude": 45.5245,
+    "longitude": 4.88164,
+    "precisionDegrees": 0.1,
+    "popRefs": [],
+    "wikipedia": "Pipet (Vienne)",
+    "status": "pending"
+  },
+  {
+    "key": "Q3396730",
+    "name": "pont Saint-Martin",
+    "latitude": 45.528,
+    "longitude": 4.87828,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117345"
+    ],
+    "wikipedia": "Pont Saint-Martin (Vienne)",
+    "status": "pending"
+  },
+  {
+    "key": "Q3517516",
+    "name": "temple d'Auguste et de Livie",
+    "latitude": 45.5255,
+    "longitude": 4.8742,
+    "precisionDegrees": 0.00027777777777778,
+    "popRefs": [
+      "PA00117348"
+    ],
+    "wikipedia": "Temple d'Auguste et de Livie",
+    "status": "pending"
+  },
+  {
+    "key": "Q3527870",
+    "name": "théâtre municipal de Vienne",
+    "latitude": 45.525,
+    "longitude": 4.87652,
+    "precisionDegrees": 0.012822122036358,
+    "popRefs": [
+      "PA00117350"
+    ],
+    "wikipedia": "Théâtre de Vienne",
+    "status": "pending"
+  },
+  {
+    "key": "Q3533656",
+    "name": "tour des Valois",
+    "latitude": 45.5265,
+    "longitude": 4.86964,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00118027"
+    ],
+    "wikipedia": "Tour des Valois",
+    "status": "pending"
+  },
+  {
+    "key": "Q3584158",
+    "name": "église Saint-Pierre de Vienne",
+    "latitude": 45.523,
+    "longitude": 4.87072,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117326"
+    ],
+    "wikipedia": "Église Saint-Pierre de Vienne (Isère)",
+    "status": "pending"
+  },
+  {
+    "key": "Q38368481",
+    "name": "abbatiale Saint-André-le-Bas de Vienne",
+    "latitude": 45.527203,
+    "longitude": 4.874006,
+    "precisionDegrees": 2.77777777778e-06,
+    "popRefs": [
+      "PA00117323"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q60353086",
+    "name": "chapelle Notre-Dame-de-la-Salette de Pipet",
+    "latitude": 45.524658,
+    "longitude": 4.880188,
+    "precisionDegrees": 1e-06,
+    "popRefs": [],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q66759117",
+    "name": "monument aux morts de Vienne",
+    "latitude": 45.52152,
+    "longitude": 4.87368,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA38000039"
+    ],
+    "wikipedia": null,
+    "status": "pending"
+  },
+  {
+    "key": "Q767620",
+    "name": "cirque romain de Vienne",
+    "latitude": 45.5164,
+    "longitude": 4.86791,
+    "precisionDegrees": 2.7777777777778e-05,
+    "popRefs": [
+      "PA00117318"
+    ],
+    "wikipedia": "Cirque romain de Vienne",
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/338320394",
+    "name": "Stèle du génocide de Vienne",
+    "latitude": 45.5413869,
+    "longitude": 4.8621108,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/3028980128",
+    "name": "1870",
+    "latitude": 45.5253874,
+    "longitude": 4.882237,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/4406948964",
+    "name": "Goddard Daniel",
+    "latitude": 45.5216415,
+    "longitude": 4.8753279,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/4687259615",
+    "name": "Michel Servet",
+    "latitude": 45.5213701,
+    "longitude": 4.869873,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/7082745711",
+    "name": "Accident de la rafinerie de Feyzin (pompier)",
+    "latitude": 45.5263318,
+    "longitude": 4.8802307,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/7419064517",
+    "name": "Salle du Patrimoine",
+    "latitude": 45.5271468,
+    "longitude": 4.8737187,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/8812315941",
+    "name": "François Ponsard",
+    "latitude": 45.5188517,
+    "longitude": 4.8696617,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/8812315945",
+    "name": "Cessez-le-feu en Algerie",
+    "latitude": 45.5203333,
+    "longitude": 4.8709407,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/8815257207",
+    "name": "Aux Volontaires de la Résistante",
+    "latitude": 45.52031,
+    "longitude": 4.8714935,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/8852374233",
+    "name": "En Hommage aux Harkis",
+    "latitude": 45.5201756,
+    "longitude": 4.870864,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/8871391060",
+    "name": "André Rivoire",
+    "latitude": 45.5265607,
+    "longitude": 4.8734293,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/8871391061",
+    "name": "Thomas Jefferson",
+    "latitude": 45.525404,
+    "longitude": 4.8745637,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/8892531834",
+    "name": "Laurent Mourguet",
+    "latitude": 45.5260515,
+    "longitude": 4.8745068,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/8897354017",
+    "name": "Daniel Llacer",
+    "latitude": 45.5219528,
+    "longitude": 4.8693512,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/8904932466",
+    "name": "Laurent Florentin",
+    "latitude": 45.5206238,
+    "longitude": 4.8679474,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/8949653103",
+    "name": "Les Carmes",
+    "latitude": 45.5254163,
+    "longitude": 4.8769135,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/8990843184",
+    "name": "Khatchkar",
+    "latitude": 45.524601,
+    "longitude": 4.8800077,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/9502662529",
+    "name": "Gabriel Chapotat",
+    "latitude": 45.5274779,
+    "longitude": 4.874744,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/9611524365",
+    "name": "André Rivoire",
+    "latitude": 45.5216561,
+    "longitude": 4.8696611,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/10013758471",
+    "name": "Charles de Gaulle",
+    "latitude": 45.5258109,
+    "longitude": 4.8744765,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:node/11988059618",
+    "name": "Mizzak Manouchian",
+    "latitude": 45.5246297,
+    "longitude": 4.8716225,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/30804844",
+    "name": "Porte Estressin",
+    "latitude": 45.53236174,
+    "longitude": 4.87457914,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/135879076",
+    "name": "Notre-Dame de Pipet",
+    "latitude": 45.524579540000005,
+    "longitude": 4.880065740000001,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/135880268",
+    "name": "Ancienne usine Buisson / Teytu",
+    "latitude": 45.52901784444444,
+    "longitude": 4.879761033333334,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/279876078",
+    "name": "Poudrerie",
+    "latitude": 45.5294720625,
+    "longitude": 4.8757235875,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/377915978",
+    "name": "Maison de Sucellus",
+    "latitude": 45.530773016666664,
+    "longitude": 4.87030042,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/377915979",
+    "name": "Grands Entrepôts",
+    "latitude": 45.531012753125,
+    "longitude": 4.86896268125,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/377915984",
+    "name": "Maison au poissons",
+    "latitude": 45.53104802413794,
+    "longitude": 4.870183468965517,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/567559376",
+    "name": "Pressoirs",
+    "latitude": 45.53029264,
+    "longitude": 4.8707891199999995,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/567559385",
+    "name": "Maison au portique peint",
+    "latitude": 45.5308901,
+    "longitude": 4.869476383333333,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/567559386",
+    "name": "Maison aux Piliers",
+    "latitude": 45.53085639411764,
+    "longitude": 4.870781182352941,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/567559388",
+    "name": "Thermes des Lutteurs",
+    "latitude": 45.529713816666664,
+    "longitude": 4.870433566666667,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/567559390",
+    "name": "Latrines",
+    "latitude": 45.5297701,
+    "longitude": 4.870267316666667,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/711691524",
+    "name": "Square des Anciens Combattants et Résistants du Secteur 6",
+    "latitude": 45.5260065,
+    "longitude": 4.869306022222222,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/1013390903",
+    "name": "Maison aux Cinq Mosaïques",
+    "latitude": 45.530571370000004,
+    "longitude": 4.86914516,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/1013390904",
+    "name": "Maison des Dieux Océan",
+    "latitude": 45.53028844666667,
+    "longitude": 4.86875298,
+    "popRefs": [],
+    "status": "pending"
+  },
+  {
+    "key": "osm:way/1290602858",
+    "name": "Voie Romaine",
+    "latitude": 45.52129418333334,
+    "longitude": 4.869761483333334,
+    "popRefs": [],
+    "status": "pending"
+  }
+]

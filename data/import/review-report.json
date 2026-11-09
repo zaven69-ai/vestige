@@ -1,0 +1,301 @@
+[
+  {
+    "id": "cybele",
+    "source": "Q23305483",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q23305483",
+      "url": "https://www.wikidata.org/wiki/Q23305483",
+      "precisionDegrees": 0.00027777777777778
+    }
+  },
+  {
+    "id": "pyramide",
+    "source": "Q767620",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "OpenStreetMap",
+      "id": "way/116990669",
+      "url": "https://www.openstreetmap.org/way/116990669",
+      "method": "representative mean of verified building footprint; not an entrance",
+      "precisionDegrees": null
+    }
+  },
+  {
+    "id": "odeon",
+    "source": "Q22967127",
+    "quality": "minimal",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q22967127",
+      "url": "https://www.wikidata.org/wiki/Q22967127",
+      "precisionDegrees": 2.7777777777778e-05
+    }
+  },
+  {
+    "id": "saint-pierre",
+    "source": "Q3584158",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q3584158",
+      "url": "https://www.wikidata.org/wiki/Q3584158",
+      "precisionDegrees": 2.7777777777778e-05
+    }
+  },
+  {
+    "id": "pipet-chapelle",
+    "source": "Q60353086",
+    "quality": "minimal",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q60353086",
+      "url": "https://www.wikidata.org/wiki/Q60353086",
+      "precisionDegrees": 1e-06
+    }
+  },
+  {
+    "id": "batie",
+    "source": "Q2971171",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q2971171",
+      "url": "https://www.wikidata.org/wiki/Q2971171",
+      "precisionDegrees": 2.7777777777778e-05
+    }
+  },
+  {
+    "id": "srg-site",
+    "source": "Q3330574",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q3330574",
+      "url": "https://www.wikidata.org/wiki/Q3330574",
+      "precisionDegrees": 2.777777777777778e-05
+    }
+  },
+  {
+    "id": "miroir",
+    "source": "Q13518353",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q13518353",
+      "url": "https://www.wikidata.org/wiki/Q13518353",
+      "precisionDegrees": 0.00027777777777778
+    }
+  },
+  {
+    "id": "valois",
+    "source": "Q3533656",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q3533656",
+      "url": "https://www.wikidata.org/wiki/Q3533656",
+      "precisionDegrees": 2.7777777777778e-05
+    }
+  },
+  {
+    "id": "andre-haut-abbaye",
+    "source": "Q22996664",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q22996664",
+      "url": "https://www.wikidata.org/wiki/Q22996664",
+      "precisionDegrees": 2.777777777777778e-06
+    }
+  },
+  {
+    "id": "musee-beaux-arts",
+    "source": "Q3330233",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "Wikipedia",
+      "id": "Musée des Beaux-Arts et d'Archéologie de Vienne",
+      "url": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_des_Beaux-Arts_et_d%27Arch%C3%A9ologie_de_Vienne",
+      "precisionDegrees": null
+    }
+  },
+  {
+    "id": "musee-textile",
+    "source": "Q3330022",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q3330022",
+      "url": "https://www.wikidata.org/wiki/Q3330022",
+      "precisionDegrees": 1e-05
+    }
+  },
+  {
+    "id": "enceinte-romaine",
+    "source": "Q3053752",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q3053752",
+      "url": "https://www.wikidata.org/wiki/Q3053752",
+      "precisionDegrees": 2.7777777777778e-05
+    }
+  },
+  {
+    "id": "aqueduc",
+    "source": "Q22967084",
+    "quality": "minimal",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q22967084",
+      "url": "https://www.wikidata.org/wiki/Q22967084",
+      "precisionDegrees": 2.7777777777778e-06
+    }
+  },
+  {
+    "id": "pont-saint-martin",
+    "source": "Q3396730",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q3396730",
+      "url": "https://www.wikidata.org/wiki/Q3396730",
+      "precisionDegrees": 2.7777777777778e-05
+    }
+  },
+  {
+    "id": "saint-theodore",
+    "source": "Q2957015",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q2957015",
+      "url": "https://www.wikidata.org/wiki/Q2957015",
+      "precisionDegrees": 2.7777777777778e-05
+    }
+  },
+  {
+    "id": "villa-vaganay",
+    "source": "Q15953471",
+    "quality": "minimal",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q15953471",
+      "url": "https://www.wikidata.org/wiki/Q15953471",
+      "precisionDegrees": 2.7777777777778e-05
+    }
+  },
+  {
+    "id": "theatre-municipal",
+    "source": "Q3527870",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "OpenStreetMap",
+      "id": "way/116993147",
+      "url": "https://www.openstreetmap.org/way/116993147",
+      "method": "representative mean of source geometry; not an entrance",
+      "precisionDegrees": null
+    }
+  },
+  {
+    "id": "saint-romain-eglise",
+    "source": "Q22968220",
+    "quality": "minimal",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q22968220",
+      "url": "https://www.wikidata.org/wiki/Q22968220",
+      "precisionDegrees": 2.7777777777778e-06
+    }
+  },
+  {
+    "id": "fontaine-jeu-paume",
+    "source": "Q22967088",
+    "quality": "minimal",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q22967088",
+      "url": "https://www.wikidata.org/wiki/Q22967088",
+      "precisionDegrees": 2.7777777777778e-06
+    }
+  },
+  {
+    "id": "fontaine-hotel-ville",
+    "source": "Q22967089",
+    "quality": "minimal",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q22967089",
+      "url": "https://www.wikidata.org/wiki/Q22967089",
+      "precisionDegrees": 2.7777777777778e-05
+    }
+  },
+  {
+    "id": "fontaine-jouvenet",
+    "source": "Q22967090",
+    "quality": "minimal",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q22967090",
+      "url": "https://www.wikidata.org/wiki/Q22967090",
+      "precisionDegrees": 2.7777777777778e-05
+    }
+  },
+  {
+    "id": "porte-ambulance",
+    "source": "Q22967129",
+    "quality": "minimal",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q22967129",
+      "url": "https://www.wikidata.org/wiki/Q22967129",
+      "precisionDegrees": 2.7777777777778e-05
+    }
+  },
+  {
+    "id": "memorial-vienne",
+    "source": "Q66759117",
+    "quality": "minimal",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q66759117",
+      "url": "https://www.wikidata.org/wiki/Q66759117",
+      "precisionDegrees": 2.7777777777778e-05
+    }
+  },
+  {
+    "id": "seyssuel",
+    "source": "Q22975794",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q22975794",
+      "url": "https://www.wikidata.org/wiki/Q22975794",
+      "precisionDegrees": 0.00027777777777778
+    }
+  },
+  {
+    "id": "septeme",
+    "source": "Q2970677",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q2970677",
+      "url": "https://www.wikidata.org/wiki/Q2970677",
+      "precisionDegrees": 2.7777777777778e-05
+    }
+  },
+  {
+    "id": "chonas",
+    "source": "Q22996665",
+    "quality": "documented",
+    "coordinates": {
+      "provider": "Wikidata",
+      "id": "Q22996665",
+      "url": "https://www.wikidata.org/wiki/Q22996665",
+      "precisionDegrees": 0.00027777777777778
+    }
+  }
+]

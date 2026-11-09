@@ -1,0 +1,871 @@
+{
+  "continue": {
+    "excontinue": 20,
+    "continue": "||coordinates|pageimages|pageprops|info"
+  },
+  "query": {
+    "pages": {
+      "16008057": {
+        "pageid": 16008057,
+        "ns": 0,
+        "title": "Abbaye Saint-André-le-Haut de Vienne",
+        "extract": "L'abbaye Saint-André-le-Haut de Vienne, parfois appelé localement le Couvent des Dames Nobles, est une ancienne abbaye féminine fondée au VIe siècle à Vienne (Isère). Les éléments conservés de nos jours comprennent l'église abbatiale des XIe – XIVe siècles et les bâtiments conventuels situés au nord de celle-ci, organisés autour d'un cloître et d'une cour d'honneur, et majoritairement datés du XVIIe siècle.\nLa porte de la cour d'honneur est classée aux Monuments historiques en 1924, le reste de l'abbaye fait l'objet d'une inscription aux Monuments historiques en 1998.\nL'église appelée de nos jours Saint-André-le-Haut à Vienne n'appartient pas au même ensemble que le couvent. Il s'agit de l'ancienne chapelle Saint-Louis du collège jésuite (aujourd'hui le collège Ponsard) qui a pris ce nom après la fermeture du couvent et le transfert des fonctions paroissiales.",
+        "coordinates": [
+          {
+            "lat": 45.52611,
+            "lon": 4.879028,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Crypte_de_l%27abbaye_Saint-Andr%C3%A9-le-Haut_%C3%A0_Vienne_%28Is%C3%A8re%29.jpg/960px-Crypte_de_l%27abbaye_Saint-Andr%C3%A9-le-Haut_%C3%A0_Vienne_%28Is%C3%A8re%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 644
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/4/47/Crypte_de_l%27abbaye_Saint-Andr%C3%A9-le-Haut_%C3%A0_Vienne_%28Is%C3%A8re%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2896,
+          "height": 1944
+        },
+        "pageimage": "Crypte_de_l'abbaye_Saint-André-le-Haut_à_Vienne_(Isère).jpg",
+        "pageprops": {
+          "page_image_free": "Crypte_de_l'abbaye_Saint-André-le-Haut_à_Vienne_(Isère).jpg",
+          "wikibase_item": "Q22996664"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:45:46Z",
+        "lastrevid": 234263387,
+        "length": 18766,
+        "fullurl": "https://fr.wikipedia.org/wiki/Abbaye_Saint-Andr%C3%A9-le-Haut_de_Vienne",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Abbaye_Saint-Andr%C3%A9-le-Haut_de_Vienne&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Abbaye_Saint-Andr%C3%A9-le-Haut_de_Vienne"
+      },
+      "1229207": {
+        "pageid": 1229207,
+        "ns": 0,
+        "title": "Cathédrale Saint-Maurice de Vienne",
+        "extract": "La cathédrale Saint-Maurice de Vienne dans le département français de l'Isère est l’ancienne cathédrale de l'archidiocèse de Vienne, mentionnée dès 314 et dont l'archevêché a été supprimé en 1790 lors de la Révolution française. Jusqu’à cette date, la cathédrale était également le siège de la Primatie des Sept Provinces. Elle est aujourd'hui co-cathédrale du diocèse de Grenoble-Vienne.\nLa cathédrale Saint-Maurice fait l’objet d’un classement au titre des monuments historiques par la liste de 1840.",
+        "coordinates": [
+          {
+            "lat": 45.52417,
+            "lon": 4.87306,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Cath%C3%A9drale_Saint-Maurice_%28Vienne%2C_2022%29.jpg/960px-Cath%C3%A9drale_Saint-Maurice_%28Vienne%2C_2022%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 960
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Cath%C3%A9drale_Saint-Maurice_%28Vienne%2C_2022%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2754,
+          "height": 2754
+        },
+        "pageimage": "Cathédrale_Saint-Maurice_(Vienne,_2022).jpg",
+        "pageprops": {
+          "defaultsort": "VienneCathédraleSaintMaurice",
+          "page_image_free": "Cathédrale_Saint-Maurice_(Vienne,_2022).jpg",
+          "wikibase_item": "Q1410336"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:41:22Z",
+        "lastrevid": 240909312,
+        "length": 27130,
+        "fullurl": "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-Maurice_de_Vienne",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Cath%C3%A9drale_Saint-Maurice_de_Vienne&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-Maurice_de_Vienne"
+      },
+      "6591872": {
+        "pageid": 6591872,
+        "ns": 0,
+        "title": "Chapelle Saint-Théodore de Vienne",
+        "extract": "Chapelle créée au XVe siècle par le chanoine Claude de Virieu et sa sœur Jeanne.",
+        "coordinates": [
+          {
+            "lat": 45.5246,
+            "lon": 4.87337,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Autel_de_la_chapelle_Saint-Th%C3%A9odore.jpg/960px-Autel_de_la_chapelle_Saint-Th%C3%A9odore.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 1280
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Autel_de_la_chapelle_Saint-Th%C3%A9odore.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3840,
+          "height": 5120
+        },
+        "pageimage": "Autel_de_la_chapelle_Saint-Théodore.jpg",
+        "pageprops": {
+          "page_image_free": "Autel_de_la_chapelle_Saint-Théodore.jpg",
+          "wikibase_item": "Q2957015"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-08T21:10:56Z",
+        "lastrevid": 233336930,
+        "length": 2004,
+        "fullurl": "https://fr.wikipedia.org/wiki/Chapelle_Saint-Th%C3%A9odore_de_Vienne",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Chapelle_Saint-Th%C3%A9odore_de_Vienne&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Chapelle_Saint-Th%C3%A9odore_de_Vienne"
+      },
+      "14537545": {
+        "pageid": 14537545,
+        "ns": 0,
+        "title": "Château-fort de Seyssuel",
+        "extract": "Le château de Seyssuel est un ancien château épiscopal du XIIe siècle, situé sur le territoire de la commune de Seyssuel, dans le département de l'Isère et la région Auvergne-Rhône-Alpes, en France.",
+        "coordinates": [
+          {
+            "lat": 45.5606,
+            "lon": 4.8253,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Chateau_des_archeveques_seyssuel%2838%29.jpg/960px-Chateau_des_archeveques_seyssuel%2838%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 788
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Chateau_des_archeveques_seyssuel%2838%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2000,
+          "height": 1641
+        },
+        "pageimage": "Chateau_des_archeveques_seyssuel(38).jpg",
+        "pageprops": {
+          "page_image_free": "Chateau_des_archeveques_seyssuel(38).jpg",
+          "wikibase_item": "Q22975794"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:45:08Z",
+        "lastrevid": 240287477,
+        "length": 5196,
+        "fullurl": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau-fort_de_Seyssuel",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Ch%C3%A2teau-fort_de_Seyssuel&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau-fort_de_Seyssuel"
+      },
+      "17199889": {
+        "pageid": 17199889,
+        "ns": 0,
+        "title": "Château de Chonas",
+        "extract": "Le château de Chonas est un château situé à Chonas-l'Amballan dans le département français de l'Isère, région Auvergne-Rhône-Alpes, en France.",
+        "coordinates": [
+          {
+            "lat": 45.4608,
+            "lon": 4.8122,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Ch%C3%A2teau_de_Chonas-l%27Amballan_-_38121.jpg/960px-Ch%C3%A2teau_de_Chonas-l%27Amballan_-_38121.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 640
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/3/32/Ch%C3%A2teau_de_Chonas-l%27Amballan_-_38121.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 4272,
+          "height": 2848
+        },
+        "pageimage": "Château_de_Chonas-l'Amballan_-_38121.jpg",
+        "pageprops": {
+          "page_image_free": "Château_de_Chonas-l'Amballan_-_38121.jpg",
+          "wikibase_item": "Q22996665"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:46:18Z",
+        "lastrevid": 233776640,
+        "length": 4381,
+        "fullurl": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Chonas",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Ch%C3%A2teau_de_Chonas&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Chonas"
+      },
+      "3144725": {
+        "pageid": 3144725,
+        "ns": 0,
+        "title": "Château de Septème",
+        "extract": "Le château de Septème est un ancien château fort, du XIVe siècle, remanié aux XVe et XVIe siècles, qui se dresse sur la commune de Septème dans le département de l'Isère, en région Auvergne-Rhône-Alpes. Le site concentre les ruines d'un premier château du XIe siècle, d'une enceinte du XIIIe siècle et le château actuel dont l'origine remonte aux XIVe – XVe siècle.\nAu titre des Monuments historiques ; les remparts, les restes du premier château et du chemin de ronde de l'ancienne ville font l'objet d'un classement par arrêté du 12 février 1942 ; le château, la conciergerie et le parc font l'objet d'une inscription par arrêté du 27 février 1947.",
+        "coordinates": [
+          {
+            "lat": 45.550833,
+            "lon": 5.010833,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Sept%C3%A8me-Chateau-sud.JPG/960px-Sept%C3%A8me-Chateau-sud.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 720
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Sept%C3%A8me-Chateau-sud.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1280,
+          "height": 960
+        },
+        "pageimage": "Septème-Chateau-sud.JPG",
+        "pageprops": {
+          "defaultsort": "Chateau Septeme",
+          "page_image_free": "Septème-Chateau-sud.JPG",
+          "wikibase_item": "Q2970677"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:41:56Z",
+        "lastrevid": 237611665,
+        "length": 13411,
+        "fullurl": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Sept%C3%A8me",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Ch%C3%A2teau_de_Sept%C3%A8me&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Sept%C3%A8me"
+      },
+      "6021631": {
+        "pageid": 6021631,
+        "ns": 0,
+        "title": "Château de la Bâtie (Vienne)",
+        "extract": "Le château de la Bâtie est un ancien château fort ou bâtie du XIIIe siècle dont les ruines se dressent sur la commune de Vienne sur le Rhône dans la région Auvergne Rhône-Alpes.\nLe château fait l’objet d’une inscription au titre des monuments historiques par arrêté du 10 décembre 1926.",
+        "coordinates": [
+          {
+            "lat": 45.530779,
+            "lon": 4.876417,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Morning_fog_on_the_Rhone_at_Vienne.jpg/960px-Morning_fog_on_the_Rhone_at_Vienne.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 640
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/8/83/Morning_fog_on_the_Rhone_at_Vienne.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3435,
+          "height": 2290
+        },
+        "pageimage": "Morning_fog_on_the_Rhone_at_Vienne.jpg",
+        "pageprops": {
+          "defaultsort": "Chateau Batie (Vienne)",
+          "page_image_free": "Morning_fog_on_the_Rhone_at_Vienne.jpg",
+          "wikibase_item": "Q2971171"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:42:56Z",
+        "lastrevid": 237354510,
+        "length": 4880,
+        "fullurl": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_B%C3%A2tie_(Vienne)",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Ch%C3%A2teau_de_la_B%C3%A2tie_(Vienne)&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_B%C3%A2tie_(Vienne)"
+      },
+      "1062555": {
+        "pageid": 1062555,
+        "ns": 0,
+        "title": "Cirque romain de Vienne",
+        "extract": "Le cirque romain de Vienne est un ancien monument romain de la ville de Vienne (Isère), construit à la fin du IIe siècle. Il est connu par des fouilles du XIXe siècle. Seul reste visible aujourd'hui un vestige unique en son genre, couramment appelé pyramide de Vienne, et localement simplement « la Pyramide » ou « la Tombe de Pilate ». C'est le seul monument antique égyptisant resté debout en France.\nLa pyramide de Vienne fait l’objet d’un classement au titre des monuments historiques depuis le 22 mars 1852.",
+        "coordinates": [
+          {
+            "lat": 45.5164,
+            "lon": 4.86791,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Is%C3%A8re%2C_Vienne_-_Pyramide_de_la_Spina_du_cirque_2.jpg/960px-Is%C3%A8re%2C_Vienne_-_Pyramide_de_la_Spina_du_cirque_2.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 1280
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/4/49/Is%C3%A8re%2C_Vienne_-_Pyramide_de_la_Spina_du_cirque_2.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3456,
+          "height": 4608
+        },
+        "pageimage": "Isère,_Vienne_-_Pyramide_de_la_Spina_du_cirque_2.jpg",
+        "pageprops": {
+          "page_image_free": "Isère,_Vienne_-_Pyramide_de_la_Spina_du_cirque_2.jpg",
+          "wikibase_item": "Q767620"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:41:16Z",
+        "lastrevid": 232341794,
+        "length": 7776,
+        "fullurl": "https://fr.wikipedia.org/wiki/Cirque_romain_de_Vienne",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Cirque_romain_de_Vienne&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Cirque_romain_de_Vienne"
+      },
+      "6049820": {
+        "pageid": 6049820,
+        "ns": 0,
+        "title": "Enceinte romaine de Vienne",
+        "extract": "L'enceinte romaine de Vienne, est l'ancienne fortification d'agglomération gallo-romaine élevée au Haut-Empire autour d'une partie de la ville antique de Vienne, en France. Elle était l'une des plus longues enceintes de Gaule : plus de 7,250 km de long, enserrant un espace de 250 hectares.",
+        "coordinates": [
+          {
+            "lat": 45.5223,
+            "lon": 4.87064,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Enceinte_Romaine_de_Vienne._001.JPG/960px-Enceinte_Romaine_de_Vienne._001.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 1440
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Enceinte_Romaine_de_Vienne._001.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2848,
+          "height": 4272
+        },
+        "pageimage": "Enceinte_Romaine_de_Vienne._001.JPG",
+        "pageprops": {
+          "page_image_free": "Enceinte_Romaine_de_Vienne._001.JPG",
+          "wikibase_item": "Q3053752"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:42:56Z",
+        "lastrevid": 220095793,
+        "length": 3861,
+        "fullurl": "https://fr.wikipedia.org/wiki/Enceinte_romaine_de_Vienne",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Enceinte_romaine_de_Vienne&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Enceinte_romaine_de_Vienne"
+      },
+      "10877306": {
+        "pageid": 10877306,
+        "ns": 0,
+        "title": "Jardin archéologique de Cybèle",
+        "extract": "Le Jardin archéologique de Cybèle est constitué de vestiges archéologiques d'époque gallo romaine, situés dans la commune de Vienne, dans le département français de l'Isère.",
+        "coordinates": [
+          {
+            "lat": 45.52416667,
+            "lon": 4.87611111,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Jardin_de_Cyb%C3%A8le.jpg/960px-Jardin_de_Cyb%C3%A8le.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 1280
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/8/89/Jardin_de_Cyb%C3%A8le.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3840,
+          "height": 5120
+        },
+        "pageimage": "Jardin_de_Cybèle.jpg",
+        "pageprops": {
+          "page_image_free": "Jardin_de_Cybèle.jpg",
+          "wikibase_item": "Q23305483"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:44:07Z",
+        "lastrevid": 240840609,
+        "length": 4461,
+        "fullurl": "https://fr.wikipedia.org/wiki/Jardin_arch%C3%A9ologique_de_Cyb%C3%A8le",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Jardin_arch%C3%A9ologique_de_Cyb%C3%A8le&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Jardin_arch%C3%A9ologique_de_Cyb%C3%A8le"
+      },
+      "3748083": {
+        "pageid": 3748083,
+        "ns": 0,
+        "title": "Musée de l'industrie textile",
+        "extract": "Le musée de l’Industrie textile, un des cinq musées ou site de la ville de Vienne (avec le Musée des Beaux-Arts et d'Archéologie, le Musée Saint-Pierre, le Théâtre antique de Vienne et le cloître Saint-André-le-Bas), est situé à Vienne dans la vallée de Gère. Il est installé dans l’ancienne usine Proplan depuis 2019.",
+        "coordinates": [
+          {
+            "lat": 45.52719,
+            "lon": 4.88147,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Vienne_mus%C3%A9e_de_l%27industrie_textile.jpg/960px-Vienne_mus%C3%A9e_de_l%27industrie_textile.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 1280
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Vienne_mus%C3%A9e_de_l%27industrie_textile.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3120,
+          "height": 4160
+        },
+        "pageimage": "Vienne_musée_de_l'industrie_textile.jpg",
+        "pageprops": {
+          "defaultsort": "Musee de l'industrie textile",
+          "page_image_free": "Vienne_musée_de_l'industrie_textile.jpg",
+          "wikibase_item": "Q3330022"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:42:08Z",
+        "lastrevid": 240404979,
+        "length": 7562,
+        "fullurl": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_de_l%27industrie_textile",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Mus%C3%A9e_de_l%27industrie_textile&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_de_l%27industrie_textile"
+      },
+      "3344057": {
+        "pageid": 3344057,
+        "ns": 0,
+        "title": "Musée des Beaux-Arts et d'Archéologie de Vienne",
+        "extract": "Le musée des Beaux-Arts et d'Archéologie de Vienne est un musée français. Il fait partie des cinq sites de la ville de Vienne regroupant le Musée de l'Industrie textile, le Musée Saint-Pierre, le Théâtre antique de Vienne et le cloître Saint-André-le-Bas.\nSitué dans une ancienne halle aux grains, en plein cœur de la ville iséroise, il ouvre ses portes au public en 1895 et présente depuis des collections variées, du Néolithique jusqu'à l'époque contemporaine.",
+        "coordinates": [
+          {
+            "lat": 45.523836,
+            "lon": 4.874868,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Mus%C3%A9e_de_Bozart_%28jour_du_march%C3%A9%29.jpg/960px-Mus%C3%A9e_de_Bozart_%28jour_du_march%C3%A9%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 720
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Mus%C3%A9e_de_Bozart_%28jour_du_march%C3%A9%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 5120,
+          "height": 3840
+        },
+        "pageimage": "Musée_de_Bozart_(jour_du_marché).jpg",
+        "pageprops": {
+          "defaultsort": "Musee des Beaux-Arts et d'Archeologie de Vienne",
+          "page_image_free": "Musée_de_Bozart_(jour_du_marché).jpg",
+          "wikibase_item": "Q3330233"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-02T16:07:45Z",
+        "lastrevid": 240477270,
+        "length": 15525,
+        "fullurl": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_des_Beaux-Arts_et_d%27Arch%C3%A9ologie_de_Vienne",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Mus%C3%A9e_des_Beaux-Arts_et_d%27Arch%C3%A9ologie_de_Vienne&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_des_Beaux-Arts_et_d%27Arch%C3%A9ologie_de_Vienne"
+      },
+      "5692861": {
+        "pageid": 5692861,
+        "ns": 0,
+        "title": "Musée gallo-romain de Saint-Romain-en-Gal",
+        "extract": "Le musée gallo-romain de Saint-Romain-en-Gal est un musée archéologique situé à Saint-Romain-en-Gal dans le département du Rhône au-dessus du site archéologique du même nom, situé au cœur de l'ancienne cité romaine de Vienna. Il est géré et exploité par les services du département du Rhône. Le musée accueille régulièrement des expositions temporaires.\nEn 2021, le musée obtient la marque d’État Tourisme et Handicap.",
+        "coordinates": [
+          {
+            "lat": 45.529471,
+            "lon": 4.870931,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Mus%C3%A9e_GR_de_Saint-Romain-en-Gal_27_07_2011_35.jpg/960px-Mus%C3%A9e_GR_de_Saint-Romain-en-Gal_27_07_2011_35.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 700
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Mus%C3%A9e_GR_de_Saint-Romain-en-Gal_27_07_2011_35.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3588,
+          "height": 2616
+        },
+        "pageimage": "Musée_GR_de_Saint-Romain-en-Gal_27_07_2011_35.jpg",
+        "pageprops": {
+          "defaultsort": "Musee gallo-romain de Saint-Romain-en-Gal",
+          "page_image_free": "Musée_GR_de_Saint-Romain-en-Gal_27_07_2011_35.jpg",
+          "wikibase_item": "Q3330574"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:42:49Z",
+        "lastrevid": 238913637,
+        "length": 11793,
+        "fullurl": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_gallo-romain_de_Saint-Romain-en-Gal",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Mus%C3%A9e_gallo-romain_de_Saint-Romain-en-Gal&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_gallo-romain_de_Saint-Romain-en-Gal"
+      },
+      "6969583": {
+        "pageid": 6969583,
+        "ns": 0,
+        "title": "Palais du Miroir",
+        "extract": "Le palais du Miroir à Saint-Romain-en-Gal, est un vestige de thermes romains de l'ancienne cité romaine de Vienna Allobrogum situé sur la rive droite du Rhône.",
+        "coordinates": [
+          {
+            "lat": 45.529632,
+            "lon": 4.8663,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Thermes_du_Palais_du_Miroir._001.JPG/960px-Thermes_du_Palais_du_Miroir._001.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 640
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Thermes_du_Palais_du_Miroir._001.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 4272,
+          "height": 2848
+        },
+        "pageimage": "Thermes_du_Palais_du_Miroir._001.JPG",
+        "pageprops": {
+          "page_image_free": "Thermes_du_Palais_du_Miroir._001.JPG",
+          "wikibase_item": "Q13518353"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-08T21:11:06Z",
+        "lastrevid": 238646341,
+        "length": 3432,
+        "fullurl": "https://fr.wikipedia.org/wiki/Palais_du_Miroir",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Palais_du_Miroir&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Palais_du_Miroir"
+      },
+      "6047650": {
+        "pageid": 6047650,
+        "ns": 0,
+        "title": "Pipet (Vienne)",
+        "extract": "Pipet est une colline et un quartier situé à l'est du centre-ville de Vienne en Isère.",
+        "coordinates": [
+          {
+            "lat": 45.524495,
+            "lon": 4.881642,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Notre_Dame_de_Pipet.jpg/960px-Notre_Dame_de_Pipet.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 640
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Notre_Dame_de_Pipet.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1920,
+          "height": 1280
+        },
+        "pageimage": "Notre_Dame_de_Pipet.jpg",
+        "pageprops": {
+          "page_image_free": "Notre_Dame_de_Pipet.jpg",
+          "wikibase_item": "Q3389028"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:42:56Z",
+        "lastrevid": 235668223,
+        "length": 6011,
+        "fullurl": "https://fr.wikipedia.org/wiki/Pipet_(Vienne)",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Pipet_(Vienne)&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Pipet_(Vienne)"
+      },
+      "5727900": {
+        "pageid": 5727900,
+        "ns": 0,
+        "title": "Pont Saint-Martin (Vienne)",
+        "extract": "Le Pont-Saint-Martin est un pont de la commune de Vienne qui franchit la rivière de la Gère et relie la rue Joseph Martin à l'église Saint-Martin et la Place Saint-Martin dans le quartier Vallée de Gère.",
+        "coordinates": [
+          {
+            "lat": 45.528047,
+            "lon": 4.878284,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Vienne_-_Pont_Saint-Martin_-3.JPG/960px-Vienne_-_Pont_Saint-Martin_-3.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 720
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Vienne_-_Pont_Saint-Martin_-3.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 4896,
+          "height": 3672
+        },
+        "pageimage": "Vienne_-_Pont_Saint-Martin_-3.JPG",
+        "pageprops": {
+          "page_image_free": "Vienne_-_Pont_Saint-Martin_-3.JPG",
+          "wikibase_item": "Q3396730"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:42:50Z",
+        "lastrevid": 221463204,
+        "length": 6008,
+        "fullurl": "https://fr.wikipedia.org/wiki/Pont_Saint-Martin_(Vienne)",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Pont_Saint-Martin_(Vienne)&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Pont_Saint-Martin_(Vienne)"
+      },
+      "3342083": {
+        "pageid": 3342083,
+        "ns": 0,
+        "title": "Temple d'Auguste et de Livie",
+        "extract": "Le temple d'Auguste et de Livie est un temple romain périptère sine postico hexastyle corinthien édifié au début du Ier siècle, qui se situait dans le centre-ville de la cité antique de Vienna, correspondant également au centre de la ville contemporaine de Vienne, dans le département français de l'Isère et la région Rhône-Alpes.\nLors de sa construction, le temple est dédié au culte impérial, pour honorer l'empereur Auguste et son épouse Livie. Visité par Julien en 355, il est alors considéré comme un lieu de présages et de signes de bonne fortune.\nAvec la chute de l'Empire romain d'Occident et la forte christianisation en Gaule, le temple est devenu l'église paroissiale de Sainte-Marie-la-Vieille puis Notre-Dame-de-la-Vie jusqu'à la Révolution française. À partir de 1792, l'église devient le temple de la Raison puis le tribunal de commerce de Vienne, ensuite le musée ainsi que la bibliothèque de Vienne (jusqu'en 1852), et enfin, après 28 ans de travaux, l'édifice retrouve son aspect primitif de temple romain. C'est aujourd'hui, avec la Maison carrée de Nîmes, le seul édifice de ce type qui se soit aussi bien conservé sur le sol de l'ancienne Gaule. Il fait l’objet d’un classement au titre des monuments historiques par la liste de 1840.",
+        "coordinates": [
+          {
+            "lat": 45.5255,
+            "lon": 4.8742,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Vienne_-_Temple_d%27Auguste_et_de_Julie_-2.JPG/960px-Vienne_-_Temple_d%27Auguste_et_de_Julie_-2.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 795
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Vienne_-_Temple_d%27Auguste_et_de_Julie_-2.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3448,
+          "height": 2857
+        },
+        "pageimage": "Vienne_-_Temple_d'Auguste_et_de_Julie_-2.JPG",
+        "pageprops": {
+          "page_image_free": "Vienne_-_Temple_d'Auguste_et_de_Julie_-2.JPG",
+          "wikibase-badge-Q17437798": "",
+          "wikibase_item": "Q3517516"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:41:59Z",
+        "lastrevid": 236675112,
+        "length": 44165,
+        "fullurl": "https://fr.wikipedia.org/wiki/Temple_d%27Auguste_et_de_Livie",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Temple_d%27Auguste_et_de_Livie&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Temple_d%27Auguste_et_de_Livie"
+      },
+      "1331653": {
+        "pageid": 1331653,
+        "ns": 0,
+        "title": "Théâtre antique de Vienne",
+        "extract": "Le Théâtre antique de Vienne (Isère) a été édifié au Ier siècle de l'ère chrétienne en plusieurs étapes.\nLe Théâtre antique de Vienne fait l’objet d’un classement au titre des monuments historiques par la liste de 1840. Il est un des cinq musées ou site de la ville de Vienne avec le Musée des Beaux-Arts et d'Archéologie, le Musée de l'industrie textile le Musée Saint-Pierre, et le cloître Saint-André-le-Bas).",
+        "coordinates": [
+          {
+            "lat": 45.5248,
+            "lon": 4.87888,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Vienne_%28Is%C3%A8re%29_-_Th%C3%A9%C3%A2tre_antique_depuis_le_mont_Pipet_%28ao%C3%BBt_2020%29.jpg/960px-Vienne_%28Is%C3%A8re%29_-_Th%C3%A9%C3%A2tre_antique_depuis_le_mont_Pipet_%28ao%C3%BBt_2020%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 718
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/4/41/Vienne_%28Is%C3%A8re%29_-_Th%C3%A9%C3%A2tre_antique_depuis_le_mont_Pipet_%28ao%C3%BBt_2020%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 4032,
+          "height": 3016
+        },
+        "pageimage": "Vienne_(Isère)_-_Théâtre_antique_depuis_le_mont_Pipet_(août_2020).jpg",
+        "pageprops": {
+          "defaultsort": "Theatre antique Vienne",
+          "page_image_free": "Vienne_(Isère)_-_Théâtre_antique_depuis_le_mont_Pipet_(août_2020).jpg",
+          "wikibase_item": "Q10149"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-08T21:08:24Z",
+        "lastrevid": 236074735,
+        "length": 9637,
+        "fullurl": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_antique_de_Vienne",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Th%C3%A9%C3%A2tre_antique_de_Vienne&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_antique_de_Vienne"
+      },
+      "5729443": {
+        "pageid": 5729443,
+        "ns": 0,
+        "title": "Théâtre de Vienne",
+        "extract": "Le théâtre de Vienne est un théâtre en régie autonome personnalisée, scène régionale Auvergne-Rhône-Alpes et scène ressource du département de l’Isère situé à Vienne, en Isère. Il programme un répertoire contemporain et classique et du théâtre de création.",
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Th%C3%A9%C3%A2tre_municipal_%28Vienne%29.jpg/960px-Th%C3%A9%C3%A2tre_municipal_%28Vienne%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 541
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Th%C3%A9%C3%A2tre_municipal_%28Vienne%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3552,
+          "height": 2000
+        },
+        "pageimage": "Théâtre_municipal_(Vienne).jpg",
+        "pageprops": {
+          "defaultsort": "Theatre municipal de Vienne",
+          "page_image_free": "Théâtre_municipal_(Vienne).jpg",
+          "wikibase_item": "Q3527870"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:42:50Z",
+        "lastrevid": 199540167,
+        "length": 2330,
+        "fullurl": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_de_Vienne",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Th%C3%A9%C3%A2tre_de_Vienne&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_de_Vienne"
+      },
+      "5190086": {
+        "pageid": 5190086,
+        "ns": 0,
+        "title": "Tour des Valois",
+        "extract": "La tour de Valois se situe à Sainte-Colombe, au sud du département du Rhône, sur la rive droite du fleuve, en face de Vienne.",
+        "coordinates": [
+          {
+            "lat": 45.526511,
+            "lon": 4.869635,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Tour_de_Valois_1.JPG/960px-Tour_de_Valois_1.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 1294
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/8/86/Tour_de_Valois_1.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 2670,
+          "height": 3600
+        },
+        "pageimage": "Tour_de_Valois_1.JPG",
+        "pageprops": {
+          "page_image_free": "Tour_de_Valois_1.JPG",
+          "wikibase_item": "Q3533656"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:42:38Z",
+        "lastrevid": 232054729,
+        "length": 8987,
+        "fullurl": "https://fr.wikipedia.org/wiki/Tour_des_Valois",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Tour_des_Valois&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Tour_des_Valois"
+      },
+      "7689381": {
+        "pageid": 7689381,
+        "ns": 0,
+        "title": "Villa Vaganay",
+        "coordinates": [
+          {
+            "lat": 45.5251,
+            "lon": 4.87742,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/38544_Villa_VAGANAY_2.jpg/960px-38544_Villa_VAGANAY_2.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 1280
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/f/ff/38544_Villa_VAGANAY_2.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 1200,
+          "height": 1600
+        },
+        "pageimage": "38544_Villa_VAGANAY_2.jpg",
+        "pageprops": {
+          "defaultsort": "Villa Vaganay",
+          "page_image_free": "38544_Villa_VAGANAY_2.jpg",
+          "wikibase_item": "Q15953471"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-08T21:11:26Z",
+        "lastrevid": 199540185,
+        "length": 2728,
+        "fullurl": "https://fr.wikipedia.org/wiki/Villa_Vaganay",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=Villa_Vaganay&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/Villa_Vaganay"
+      },
+      "2734766": {
+        "pageid": 2734766,
+        "ns": 0,
+        "title": "Église Saint-Pierre de Vienne (Isère)",
+        "coordinates": [
+          {
+            "lat": 45.523,
+            "lon": 4.87072,
+            "primary": "",
+            "globe": "earth"
+          }
+        ],
+        "thumbnail": {
+          "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/%C3%89glise_Saint-Pierre_de_Vienne.jpg/960px-%C3%89glise_Saint-Pierre_de_Vienne.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "width": 960,
+          "height": 1280
+        },
+        "original": {
+          "source": "https://upload.wikimedia.org/wikipedia/commons/5/57/%C3%89glise_Saint-Pierre_de_Vienne.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=original",
+          "width": 3840,
+          "height": 5120
+        },
+        "pageimage": "Église_Saint-Pierre_de_Vienne.jpg",
+        "pageprops": {
+          "page_image_free": "Église_Saint-Pierre_de_Vienne.jpg",
+          "wikibase_item": "Q3584158"
+        },
+        "contentmodel": "wikitext",
+        "pagelanguage": "fr",
+        "pagelanguagehtmlcode": "fr",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-11-06T20:41:47Z",
+        "lastrevid": 238264812,
+        "length": 11195,
+        "fullurl": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_de_Vienne_(Is%C3%A8re)",
+        "editurl": "https://fr.wikipedia.org/w/index.php?title=%C3%89glise_Saint-Pierre_de_Vienne_(Is%C3%A8re)&action=edit",
+        "canonicalurl": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_de_Vienne_(Is%C3%A8re)"
+      }
+    }
+  },
+  "limits": {
+    "coordinates": 500
+  }
+}

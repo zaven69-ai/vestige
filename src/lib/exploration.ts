@@ -85,6 +85,7 @@ export const historicalPeriods = [
   "Renaissance",
   "Époque moderne",
   "Époque contemporaine",
+  "Période non précisée",
 ] as const;
 export type HistoricalPeriod = (typeof historicalPeriods)[number];
 export function historicalPeriod(era: string): HistoricalPeriod {
@@ -95,5 +96,5 @@ export function historicalPeriod(era: string): HistoricalPeriod {
     era === "Époque moderne"
   )
     return era;
-  return "Époque contemporaine";
+  return era === "Époque contemporaine" ? era : "Période non précisée";
 }

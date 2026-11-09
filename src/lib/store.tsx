@@ -1,3 +1,5 @@
+import { initializeProgress, loadProgress, recordDiscovery } from "./progress";
+import { progressDatabase } from "./progressDatabase";
 import React, {
   createContext,
   useContext,
@@ -10,7 +12,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Location from "expo-location";
 import { AppState } from "react-native";
 import { monuments } from "../data/monuments";
-import { Fix, canDiscover, readJournal, totalXP } from "./game";
+import { Fix, canDiscover } from "./game";
 type Journal = Record<string, number>;
 type State = {
   journal: Journal;
@@ -25,6 +27,7 @@ type State = {
 const Context = createContext<State | null>(null);
 const KEY = "vestige.journal.v1";
 export function GameProvider({ children }: { children: React.ReactNode }) {
+  const [xp, setXP] = useState(0);
   const [journal, setJournal] = useState<Journal>({});
   const journalRef = useRef<Journal>({});
   const [ready, setReady] = useState(false),
@@ -36,14 +39,17 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
     mounted = useRef(true);
   const saving = useRef(false);
   useEffect(() => {
-    AsyncStorage.getItem(KEY)
-      .then((raw) => {
-        const cleaned = readJournal(
-          raw,
-          monuments.map((m) => m.id),
+    progressDatabase()
+      .then(async (db) => {
+        await initializeProgress(
+          db,
+          () => AsyncStorage.getItem(KEY),
+          monuments,
         );
-        journalRef.current = cleaned;
-        setJournal(cleaned);
+        const snapshot = await loadProgress(db);
+        journalRef.current = snapshot.journal;
+        setJournal(snapshot.journal);
+        setXP(snapshot.xp);
         setReady(true);
       })
       .catch(() =>
@@ -140,9 +146,15 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
     const next = { ...journalRef.current, [id]: Date.now() };
     saving.current = true;
     try {
-      await AsyncStorage.setItem(KEY, JSON.stringify(next));
+      await recordDiscovery(
+        await progressDatabase(),
+        id,
+        next[id],
+        monument.xp,
+      );
       journalRef.current = next;
       setJournal(next);
+      setXP((value) => value + monument.xp);
       return "ok";
     } catch {
       setStorageError(
@@ -153,7 +165,7 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
       saving.current = false;
     }
   };
-  const xp = totalXP(journal, monuments);
+
   return (
     <Context.Provider
       value={{

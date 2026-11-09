@@ -66,8 +66,14 @@ export default function Carnet() {
         </Card>
       )}
       {found.length > 0 && (
-        <View style={{ flexDirection: "row", gap: theme.space.xs }}>
-          {["Tous", "Vienne", "Lyon"].map((item) => (
+        <View
+          style={{
+            flexDirection: "row",
+            flexWrap: "wrap",
+            gap: theme.space.xs,
+          }}
+        >
+          {["Tous", ...new Set(found.map((m) => m.city))].map((item) => (
             <Pressable
               key={item}
               accessibilityRole="button"

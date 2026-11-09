@@ -1,0 +1,1525 @@
+[
+  {
+    "id": "cybele",
+    "name": "Jardin archéologique de Cybèle",
+    "city": "Vienne",
+    "era": "Antiquité",
+    "category": "Vestiges archéologiques",
+    "xp": 100,
+    "latitude": 45.524166666667,
+    "longitude": 4.8761111111111,
+    "description": "Le Jardin archéologique de Cybèle est constitué de vestiges archéologiques d'époque gallo romaine, situés dans la commune de Vienne, dans le département français de l'Isère.",
+    "source": "https://fr.wikipedia.org/wiki/Jardin_arch%C3%A9ologique_de_Cyb%C3%A8le",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q23305483",
+        "url": "https://www.wikidata.org/wiki/Q23305483",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "10877306",
+        "url": "https://fr.wikipedia.org/wiki/Jardin_arch%C3%A9ologique_de_Cyb%C3%A8le",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00117327",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00117327",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/54992718",
+        "url": "https://www.openstreetmap.org/way/54992718",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q23305483",
+      "url": "https://www.wikidata.org/wiki/Q23305483",
+      "precisionDegrees": 0.00027777777777778
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Jardin de Cybèle.jpg",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Jardin_de_Cyb%C3%A8le.jpg/960px-Jardin_de_Cyb%C3%A8le.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "pyramide",
+    "name": "Pyramide du cirque romain",
+    "city": "Vienne",
+    "era": "Antiquité",
+    "category": "Monument antique",
+    "xp": 100,
+    "latitude": 45.516394250000005,
+    "longitude": 4.867890900000001,
+    "description": "Le cirque romain de Vienne est un ancien monument romain de la ville de Vienne (Isère), construit à la fin du IIe siècle. Il est connu par des fouilles du XIXe siècle. Seul reste visible aujourd'hui un vestige unique en son genre, couramment appelé pyramide de Vienne, et localement simplement « la Pyramide » ou « la Tombe de Pilate ». C'est le seul monument antique égyptisant resté debout en France.\nLa pyramide de Vienne fait l’objet d’un classement au titre des monuments historiques depuis le 22 mars 1852.",
+    "source": "https://fr.wikipedia.org/wiki/Cirque_romain_de_Vienne",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q767620",
+        "url": "https://www.wikidata.org/wiki/Q767620",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "1062555",
+        "url": "https://fr.wikipedia.org/wiki/Cirque_romain_de_Vienne",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00117318",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00117318",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/116990669",
+        "url": "https://www.openstreetmap.org/way/116990669",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "OpenStreetMap",
+      "id": "way/116990669",
+      "url": "https://www.openstreetmap.org/way/116990669",
+      "method": "representative mean of verified building footprint; not an entrance",
+      "precisionDegrees": null
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Pyramid is the surviving circus monument. Coordinate uses its OSM footprint, not an invented point."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Pyramide de Vienne (Isère).jpg",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Is%C3%A8re%2C_Vienne_-_Pyramide_de_la_Spina_du_cirque_2.jpg/960px-Is%C3%A8re%2C_Vienne_-_Pyramide_de_la_Spina_du_cirque_2.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "odeon",
+    "name": "Odéon antique de Vienne",
+    "city": "Vienne",
+    "era": "Antiquité",
+    "category": "Monument antique",
+    "xp": 100,
+    "latitude": 45.52387,
+    "longitude": 4.8777,
+    "description": "",
+    "source": "https://www.wikidata.org/wiki/Q22967127",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q22967127",
+        "url": "https://www.wikidata.org/wiki/Q22967127",
+        "license": "CC0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00117343",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00117343",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/131339241",
+        "url": "https://www.openstreetmap.org/way/131339241",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q22967127",
+      "url": "https://www.wikidata.org/wiki/Q22967127",
+      "precisionDegrees": 2.7777777777778e-05
+    },
+    "contentQuality": "minimal",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Odéon antique de Vienne. 001.JPG",
+    "_thumbUrl": null
+  },
+  {
+    "id": "saint-pierre",
+    "name": "Église Saint-Pierre de Vienne (Isère)",
+    "city": "Vienne",
+    "era": "Antiquité",
+    "category": "Édifice religieux",
+    "xp": 100,
+    "latitude": 45.523,
+    "longitude": 4.87072,
+    "description": "L’église Saint-Pierre de Vienne, aujourd'hui musée archéologique Saint-Pierre, est une ancienne abbatiale, l'une des plus anciennes églises françaises et l'un des rares monuments européens de l'antiquité tardive encore en élévation, située dans le département de l'Isère et la région Auvergne-Rhône-Alpes. \nCette église fait l’objet d’un classement au titre des monuments historiques par la liste de 1862.",
+    "source": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_de_Vienne_(Is%C3%A8re)",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q3584158",
+        "url": "https://www.wikidata.org/wiki/Q3584158",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "2734766",
+        "url": "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Pierre_de_Vienne_(Is%C3%A8re)",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00117326",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00117326",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/135880564",
+        "url": "https://www.openstreetmap.org/way/135880564",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q3584158",
+      "url": "https://www.wikidata.org/wiki/Q3584158",
+      "precisionDegrees": 2.7777777777778e-05
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Église Saint-Pierre de Vienne.jpg",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/%C3%89glise_Saint-Pierre_de_Vienne.jpg/960px-%C3%89glise_Saint-Pierre_de_Vienne.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "pipet-chapelle",
+    "name": "Chapelle Notre-Dame-de-Pipet",
+    "city": "Vienne",
+    "era": "Époque contemporaine",
+    "category": "Édifice religieux",
+    "xp": 100,
+    "latitude": 45.524658,
+    "longitude": 4.880188,
+    "description": "",
+    "source": "https://www.wikidata.org/wiki/Q60353086",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q60353086",
+        "url": "https://www.wikidata.org/wiki/Q60353086",
+        "license": "CC0"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/116992309",
+        "url": "https://www.openstreetmap.org/way/116992309",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q60353086",
+      "url": "https://www.wikidata.org/wiki/Q60353086",
+      "precisionDegrees": 1e-06
+    },
+    "contentQuality": "minimal",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Use chapel entity Q60353086 and its precise coordinate, not the coarse coordinate of Pipet hill Q3389028."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Mont Pipet... in the summertime.jpg",
+    "_thumbUrl": null
+  },
+  {
+    "id": "batie",
+    "name": "Château de la Bâtie (Vienne)",
+    "city": "Vienne",
+    "era": "Moyen Âge",
+    "category": "Château",
+    "xp": 100,
+    "latitude": 45.5308,
+    "longitude": 4.87642,
+    "description": "Le château de la Bâtie est un ancien château fort ou bâtie du XIIIe siècle dont les ruines se dressent sur la commune de Vienne sur le Rhône dans la région Auvergne Rhône-Alpes.\nLe château fait l’objet d’une inscription au titre des monuments historiques par arrêté du 10 décembre 1926.",
+    "source": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_B%C3%A2tie_(Vienne)",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q2971171",
+        "url": "https://www.wikidata.org/wiki/Q2971171",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "6021631",
+        "url": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_B%C3%A2tie_(Vienne)",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00117321",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00117321",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/278053326",
+        "url": "https://www.openstreetmap.org/way/278053326",
+        "license": "ODbL 1.0"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/1251088199",
+        "url": "https://www.openstreetmap.org/way/1251088199",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q2971171",
+      "url": "https://www.wikidata.org/wiki/Q2971171",
+      "precisionDegrees": 2.7777777777778e-05
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Château de La Bâtie.jpg",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Morning_fog_on_the_Rhone_at_Vienne.jpg/960px-Morning_fog_on_the_Rhone_at_Vienne.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "srg-site",
+    "name": "Musée et site archéologique de Saint-Romain-en-Gal",
+    "city": "Saint-Romain-en-Gal",
+    "era": "Antiquité",
+    "category": "Musée et site archéologique",
+    "xp": 100,
+    "latitude": 45.5295,
+    "longitude": 4.87093,
+    "description": "Le musée gallo-romain de Saint-Romain-en-Gal est un musée archéologique situé à Saint-Romain-en-Gal dans le département du Rhône au-dessus du site archéologique du même nom, situé au cœur de l'ancienne cité romaine de Vienna. Il est géré et exploité par les services du département du Rhône. Le musée accueille régulièrement des expositions temporaires.\nEn 2021, le musée obtient la marque d’État Tourisme et Handicap.",
+    "source": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_gallo-romain_de_Saint-Romain-en-Gal",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q3330574",
+        "url": "https://www.wikidata.org/wiki/Q3330574",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "5692861",
+        "url": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_gallo-romain_de_Saint-Romain-en-Gal",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/131339005",
+        "url": "https://www.openstreetmap.org/way/131339005",
+        "license": "ODbL 1.0"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/131339006",
+        "url": "https://www.openstreetmap.org/way/131339006",
+        "license": "ODbL 1.0"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/377916763",
+        "url": "https://www.openstreetmap.org/way/377916763",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q3330574",
+      "url": "https://www.wikidata.org/wiki/Q3330574",
+      "precisionDegrees": 2.777777777777778e-05
+    },
+    "contentQuality": "documented",
+    "aliases": [
+      "Musée gallo-romain de Saint-Romain-en-Gal",
+      "Site archéologique de Saint-Romain-en-Gal"
+    ],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Museum and archaeological site share source entity Q3330574; one discovery avoids double XP."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Musée Gallo-Romain de Saint-Romain-en-Gal.jpg",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Mus%C3%A9e_GR_de_Saint-Romain-en-Gal_27_07_2011_35.jpg/960px-Mus%C3%A9e_GR_de_Saint-Romain-en-Gal_27_07_2011_35.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "miroir",
+    "name": "Vestiges du palais du Miroir",
+    "city": "Saint-Romain-en-Gal",
+    "era": "Antiquité",
+    "category": "Vestiges archéologiques",
+    "xp": 100,
+    "latitude": 45.5296,
+    "longitude": 4.8663,
+    "description": "Le palais du Miroir à Saint-Romain-en-Gal, est un vestige de thermes romains de l'ancienne cité romaine de Vienna Allobrogum situé sur la rive droite du Rhône.",
+    "source": "https://fr.wikipedia.org/wiki/Palais_du_Miroir",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q13518353",
+        "url": "https://www.wikidata.org/wiki/Q13518353",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "6969583",
+        "url": "https://fr.wikipedia.org/wiki/Palais_du_Miroir",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00118059",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00118059",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q13518353",
+      "url": "https://www.wikidata.org/wiki/Q13518353",
+      "precisionDegrees": 0.00027777777777778
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Thermes du Palais du Miroir. 001.JPG",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Thermes_du_Palais_du_Miroir._001.JPG/960px-Thermes_du_Palais_du_Miroir._001.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "valois",
+    "name": "Tour des Valois",
+    "city": "Sainte-Colombe",
+    "era": "Moyen Âge",
+    "category": "Fortification",
+    "xp": 100,
+    "latitude": 45.5265,
+    "longitude": 4.86964,
+    "description": "La tour de Valois se situe à Sainte-Colombe, au sud du département du Rhône, sur la rive droite du fleuve, en face de Vienne.",
+    "source": "https://fr.wikipedia.org/wiki/Tour_des_Valois",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q3533656",
+        "url": "https://www.wikidata.org/wiki/Q3533656",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "5190086",
+        "url": "https://fr.wikipedia.org/wiki/Tour_des_Valois",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00118027",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00118027",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/136823087",
+        "url": "https://www.openstreetmap.org/way/136823087",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q3533656",
+      "url": "https://www.wikidata.org/wiki/Q3533656",
+      "precisionDegrees": 2.7777777777778e-05
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Tour de Valois 1.JPG",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Tour_de_Valois_1.JPG/960px-Tour_de_Valois_1.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "andre-haut-abbaye",
+    "name": "Abbaye Saint-André-le-Haut de Vienne",
+    "city": "Vienne",
+    "era": "Moyen Âge",
+    "category": "Édifice religieux",
+    "xp": 100,
+    "latitude": 45.525876200063045,
+    "longitude": 4.87897891038334,
+    "description": "L'abbaye Saint-André-le-Haut de Vienne, parfois appelé localement le Couvent des Dames Nobles, est une ancienne abbaye féminine fondée au VIe siècle à Vienne (Isère). Les éléments conservés de nos jours comprennent l'église abbatiale des XIe – XIVe siècles et les bâtiments conventuels situés au nord de celle-ci, organisés autour d'un cloître et d'une cour d'honneur, et majoritairement datés du XVIIe siècle.\nLa porte de la cour d'honneur est classée aux Monuments historiques en 1924, le reste de l'abbaye fait l'objet d'une inscription aux Monuments historiques en 1998.\nL'église appelée de nos jours Saint-André-le-Haut à Vienne n'appartient pas au même ensemble que le couvent. Il s'agit de l'ancienne chapelle Saint-Louis du collège jésuite (aujourd'hui le collège Ponsard) qui a pris ce nom après la fermeture du couvent et le transfert des fonctions paroissiales.",
+    "source": "https://fr.wikipedia.org/wiki/Abbaye_Saint-Andr%C3%A9-le-Haut_de_Vienne",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q22996664",
+        "url": "https://www.wikidata.org/wiki/Q22996664",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "16008057",
+        "url": "https://fr.wikipedia.org/wiki/Abbaye_Saint-Andr%C3%A9-le-Haut_de_Vienne",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA38000008",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA38000008",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "node/4475476309",
+        "url": "https://www.openstreetmap.org/node/4475476309",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q22996664",
+      "url": "https://www.wikidata.org/wiki/Q22996664",
+      "precisionDegrees": 2.777777777777778e-06
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Abbaye de Saint-André-le-Haut.jpg",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Crypte_de_l%27abbaye_Saint-Andr%C3%A9-le-Haut_%C3%A0_Vienne_%28Is%C3%A8re%29.jpg/960px-Crypte_de_l%27abbaye_Saint-Andr%C3%A9-le-Haut_%C3%A0_Vienne_%28Is%C3%A8re%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "musee-beaux-arts",
+    "name": "Musée des Beaux-Arts et d'Archéologie de Vienne",
+    "city": "Vienne",
+    "era": "Époque contemporaine",
+    "category": "Musée",
+    "xp": 100,
+    "latitude": 45.523836,
+    "longitude": 4.874868,
+    "description": "Le musée des Beaux-Arts et d'Archéologie de Vienne est un musée français. Il fait partie des cinq sites de la ville de Vienne regroupant le Musée de l'Industrie textile, le Musée Saint-Pierre, le Théâtre antique de Vienne et le cloître Saint-André-le-Bas.\nSitué dans une ancienne halle aux grains, en plein cœur de la ville iséroise, il ouvre ses portes au public en 1895 et présente depuis des collections variées, du Néolithique jusqu'à l'époque contemporaine.",
+    "source": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_des_Beaux-Arts_et_d%27Arch%C3%A9ologie_de_Vienne",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q3330233",
+        "url": "https://www.wikidata.org/wiki/Q3330233",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "3344057",
+        "url": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_des_Beaux-Arts_et_d%27Arch%C3%A9ologie_de_Vienne",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "node/2675390826",
+        "url": "https://www.openstreetmap.org/node/2675390826",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikipedia",
+      "id": "Musée des Beaux-Arts et d'Archéologie de Vienne",
+      "url": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_des_Beaux-Arts_et_d%27Arch%C3%A9ologie_de_Vienne",
+      "precisionDegrees": null
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Musée de Bozart (jour du marché).jpg",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Mus%C3%A9e_de_Bozart_%28jour_du_march%C3%A9%29.jpg/960px-Mus%C3%A9e_de_Bozart_%28jour_du_march%C3%A9%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "musee-textile",
+    "name": "Musée de l'industrie textile",
+    "city": "Vienne",
+    "era": "Époque contemporaine",
+    "category": "Patrimoine industriel",
+    "xp": 100,
+    "latitude": 45.52719,
+    "longitude": 4.88147,
+    "description": "Le musée de l’Industrie textile, un des cinq musées ou site de la ville de Vienne (avec le Musée des Beaux-Arts et d'Archéologie, le Musée Saint-Pierre, le Théâtre antique de Vienne et le cloître Saint-André-le-Bas), est situé à Vienne dans la vallée de Gère. Il est installé dans l’ancienne usine Proplan depuis 2019.",
+    "source": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_de_l%27industrie_textile",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q3330022",
+        "url": "https://www.wikidata.org/wiki/Q3330022",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "3748083",
+        "url": "https://fr.wikipedia.org/wiki/Mus%C3%A9e_de_l%27industrie_textile",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "IA38000771",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/IA38000771",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "node/7603006843",
+        "url": "https://www.openstreetmap.org/node/7603006843",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q3330022",
+      "url": "https://www.wikidata.org/wiki/Q3330022",
+      "precisionDegrees": 1e-05
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [
+      {
+        "date": "1995",
+        "label": "Date de création indiquée par Wikidata (peut concerner une phase du site).",
+        "source": "https://www.wikidata.org/wiki/Q3330022"
+      }
+    ],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Vienne musée de l'industrie textile.jpg",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Vienne_mus%C3%A9e_de_l%27industrie_textile.jpg/960px-Vienne_mus%C3%A9e_de_l%27industrie_textile.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "enceinte-romaine",
+    "name": "Enceinte romaine de Vienne",
+    "city": "Vienne",
+    "era": "Antiquité",
+    "category": "Fortification",
+    "xp": 100,
+    "latitude": 45.5223,
+    "longitude": 4.87064,
+    "description": "L'enceinte romaine de Vienne, est l'ancienne fortification d'agglomération gallo-romaine élevée au Haut-Empire autour d'une partie de la ville antique de Vienne, en France. Elle était l'une des plus longues enceintes de Gaule : plus de 7,250 km de long, enserrant un espace de 250 hectares.",
+    "source": "https://fr.wikipedia.org/wiki/Enceinte_romaine_de_Vienne",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q3053752",
+        "url": "https://www.wikidata.org/wiki/Q3053752",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "6049820",
+        "url": "https://fr.wikipedia.org/wiki/Enceinte_romaine_de_Vienne",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00132973",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00132973",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "node/4475617249",
+        "url": "https://www.openstreetmap.org/node/4475617249",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q3053752",
+      "url": "https://www.wikidata.org/wiki/Q3053752",
+      "precisionDegrees": 2.7777777777778e-05
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Enceinte Romaine de Vienne. 001.JPG",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Enceinte_Romaine_de_Vienne._001.JPG/960px-Enceinte_Romaine_de_Vienne._001.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "aqueduc",
+    "name": "aqueduc romain de Vienne",
+    "city": "Vienne",
+    "era": "Antiquité",
+    "category": "Vestiges archéologiques",
+    "xp": 100,
+    "latitude": 45.52586575,
+    "longitude": 4.87925782,
+    "description": "",
+    "source": "https://www.wikidata.org/wiki/Q22967084",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q22967084",
+        "url": "https://www.wikidata.org/wiki/Q22967084",
+        "license": "CC0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00117319",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00117319",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "node/4475506465",
+        "url": "https://www.openstreetmap.org/node/4475506465",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q22967084",
+      "url": "https://www.wikidata.org/wiki/Q22967084",
+      "precisionDegrees": 2.7777777777778e-06
+    },
+    "contentQuality": "minimal",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": null,
+    "_thumbUrl": null
+  },
+  {
+    "id": "pont-saint-martin",
+    "name": "Pont Saint-Martin (Vienne)",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Ouvrage historique",
+    "xp": 100,
+    "latitude": 45.528,
+    "longitude": 4.87828,
+    "description": "Le Pont-Saint-Martin est un pont de la commune de Vienne qui franchit la rivière de la Gère et relie la rue Joseph Martin à l'église Saint-Martin et la Place Saint-Martin dans le quartier Vallée de Gère.",
+    "source": "https://fr.wikipedia.org/wiki/Pont_Saint-Martin_(Vienne)",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q3396730",
+        "url": "https://www.wikidata.org/wiki/Q3396730",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "5727900",
+        "url": "https://fr.wikipedia.org/wiki/Pont_Saint-Martin_(Vienne)",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00117345",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00117345",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/95119363",
+        "url": "https://www.openstreetmap.org/way/95119363",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q3396730",
+      "url": "https://www.wikidata.org/wiki/Q3396730",
+      "precisionDegrees": 2.7777777777778e-05
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Vienne - Pont Saint-Martin -3.JPG",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Vienne_-_Pont_Saint-Martin_-3.JPG/960px-Vienne_-_Pont_Saint-Martin_-3.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "saint-theodore",
+    "name": "Chapelle Saint-Théodore de Vienne",
+    "city": "Vienne",
+    "era": "Moyen Âge",
+    "category": "Édifice religieux",
+    "xp": 100,
+    "latitude": 45.5246,
+    "longitude": 4.87337,
+    "description": "Chapelle créée au XVe siècle par le chanoine Claude de Virieu et sa sœur Jeanne.",
+    "source": "https://fr.wikipedia.org/wiki/Chapelle_Saint-Th%C3%A9odore_de_Vienne",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q2957015",
+        "url": "https://www.wikidata.org/wiki/Q2957015",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "6591872",
+        "url": "https://fr.wikipedia.org/wiki/Chapelle_Saint-Th%C3%A9odore_de_Vienne",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00117320",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00117320",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/695712321",
+        "url": "https://www.openstreetmap.org/way/695712321",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q2957015",
+      "url": "https://www.wikidata.org/wiki/Q2957015",
+      "precisionDegrees": 2.7777777777778e-05
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Saint-Théodore de Vienne 4.JPG",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Autel_de_la_chapelle_Saint-Th%C3%A9odore.jpg/960px-Autel_de_la_chapelle_Saint-Th%C3%A9odore.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "villa-vaganay",
+    "name": "Villa Vaganay",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Architecture civile",
+    "xp": 100,
+    "latitude": 45.5251,
+    "longitude": 4.87742,
+    "description": "",
+    "source": "https://fr.wikipedia.org/wiki/Villa_Vaganay",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q15953471",
+        "url": "https://www.wikidata.org/wiki/Q15953471",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "7689381",
+        "url": "https://fr.wikipedia.org/wiki/Villa_Vaganay",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA38000018",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA38000018",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/117921086",
+        "url": "https://www.openstreetmap.org/way/117921086",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q15953471",
+      "url": "https://www.wikidata.org/wiki/Q15953471",
+      "precisionDegrees": 2.7777777777778e-05
+    },
+    "contentQuality": "minimal",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "38544 Villa VAGANAY 2.jpg",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/38544_Villa_VAGANAY_2.jpg/960px-38544_Villa_VAGANAY_2.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "theatre-municipal",
+    "name": "Théâtre de Vienne",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Architecture civile",
+    "xp": 100,
+    "latitude": 45.52500925,
+    "longitude": 4.8764801,
+    "description": "Le théâtre de Vienne est un théâtre en régie autonome personnalisée, scène régionale Auvergne-Rhône-Alpes et scène ressource du département de l’Isère situé à Vienne, en Isère. Il programme un répertoire contemporain et classique et du théâtre de création.",
+    "source": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_de_Vienne",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q3527870",
+        "url": "https://www.wikidata.org/wiki/Q3527870",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "5729443",
+        "url": "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_de_Vienne",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00117350",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00117350",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/116993147",
+        "url": "https://www.openstreetmap.org/way/116993147",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "OpenStreetMap",
+      "id": "way/116993147",
+      "url": "https://www.openstreetmap.org/way/116993147",
+      "method": "representative mean of source geometry; not an entrance",
+      "precisionDegrees": null
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "38544 Théâtre municipal.jpg",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Th%C3%A9%C3%A2tre_municipal_%28Vienne%29.jpg/960px-Th%C3%A9%C3%A2tre_municipal_%28Vienne%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "saint-romain-eglise",
+    "name": "église Saint-Romain de Saint-Romain-en-Gal",
+    "city": "Saint-Romain-en-Gal",
+    "era": "Période non précisée",
+    "category": "Édifice religieux",
+    "xp": 100,
+    "latitude": 45.5359602,
+    "longitude": 4.858389,
+    "description": "",
+    "source": "https://www.wikidata.org/wiki/Q22968220",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q22968220",
+        "url": "https://www.wikidata.org/wiki/Q22968220",
+        "license": "CC0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00118057",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00118057",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/141849261",
+        "url": "https://www.openstreetmap.org/way/141849261",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q22968220",
+      "url": "https://www.wikidata.org/wiki/Q22968220",
+      "precisionDegrees": 2.7777777777778e-06
+    },
+    "contentQuality": "minimal",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Saint-Romain-en-Gal-02.JPG",
+    "_thumbUrl": null
+  },
+  {
+    "id": "fontaine-jeu-paume",
+    "name": "fontaine du Jeu de Paume",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Architecture civile",
+    "xp": 100,
+    "latitude": 45.527237,
+    "longitude": 4.873415,
+    "description": "",
+    "source": "https://www.wikidata.org/wiki/Q22967088",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q22967088",
+        "url": "https://www.wikidata.org/wiki/Q22967088",
+        "license": "CC0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00117328",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00117328",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "node/4475643719",
+        "url": "https://www.openstreetmap.org/node/4475643719",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q22967088",
+      "url": "https://www.wikidata.org/wiki/Q22967088",
+      "precisionDegrees": 2.7777777777778e-06
+    },
+    "contentQuality": "minimal",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Jeu de paume bus hub.jpg",
+    "_thumbUrl": null
+  },
+  {
+    "id": "fontaine-hotel-ville",
+    "name": "fontaine, place de l'Hôtel-de-Ville",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Architecture civile",
+    "xp": 100,
+    "latitude": 45.52544,
+    "longitude": 4.87532,
+    "description": "",
+    "source": "https://www.wikidata.org/wiki/Q22967089",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q22967089",
+        "url": "https://www.wikidata.org/wiki/Q22967089",
+        "license": "CC0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00117329",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00117329",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "node/4475627581",
+        "url": "https://www.openstreetmap.org/node/4475627581",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q22967089",
+      "url": "https://www.wikidata.org/wiki/Q22967089",
+      "precisionDegrees": 2.7777777777778e-05
+    },
+    "contentQuality": "minimal",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "38544 Fontaines Mairie 2.jpg",
+    "_thumbUrl": null
+  },
+  {
+    "id": "fontaine-jouvenet",
+    "name": "fontaine place Jouvenet",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Architecture civile",
+    "xp": 100,
+    "latitude": 45.52574,
+    "longitude": 4.87848,
+    "description": "",
+    "source": "https://www.wikidata.org/wiki/Q22967090",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q22967090",
+        "url": "https://www.wikidata.org/wiki/Q22967090",
+        "license": "CC0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00117330",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00117330",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "node/3469643440",
+        "url": "https://www.openstreetmap.org/node/3469643440",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q22967090",
+      "url": "https://www.wikidata.org/wiki/Q22967090",
+      "precisionDegrees": 2.7777777777778e-05
+    },
+    "contentQuality": "minimal",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "38544 Fontaines Jouvenet 1.JPG",
+    "_thumbUrl": null
+  },
+  {
+    "id": "porte-ambulance",
+    "name": "cour de l'Ambulance",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Architecture civile",
+    "xp": 100,
+    "latitude": 45.52616,
+    "longitude": 4.87838,
+    "description": "",
+    "source": "https://www.wikidata.org/wiki/Q22967129",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q22967129",
+        "url": "https://www.wikidata.org/wiki/Q22967129",
+        "license": "CC0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00117346",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00117346",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "node/4508753267",
+        "url": "https://www.openstreetmap.org/node/4508753267",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q22967129",
+      "url": "https://www.wikidata.org/wiki/Q22967129",
+      "precisionDegrees": 2.7777777777778e-05
+    },
+    "contentQuality": "minimal",
+    "aliases": [],
+    "timeline": [
+      {
+        "date": "1665",
+        "label": "Date de création indiquée par Wikidata (peut concerner une phase du site).",
+        "source": "https://www.wikidata.org/wiki/Q22967129"
+      }
+    ],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Porte de la cour de l'Ambulance (1665).jpg",
+    "_thumbUrl": null
+  },
+  {
+    "id": "memorial-vienne",
+    "name": "monument aux morts de Vienne",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Monument commémoratif",
+    "xp": 100,
+    "latitude": 45.52152,
+    "longitude": 4.87368,
+    "description": "",
+    "source": "https://www.wikidata.org/wiki/Q66759117",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q66759117",
+        "url": "https://www.wikidata.org/wiki/Q66759117",
+        "license": "CC0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA38000039",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA38000039",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "OpenStreetMap",
+        "id": "way/280165636",
+        "url": "https://www.openstreetmap.org/way/280165636",
+        "license": "ODbL 1.0"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q66759117",
+      "url": "https://www.wikidata.org/wiki/Q66759117",
+      "precisionDegrees": 2.7777777777778e-05
+    },
+    "contentQuality": "minimal",
+    "aliases": [],
+    "timeline": [
+      {
+        "date": "1923",
+        "label": "Date de création indiquée par Wikidata (peut concerner une phase du site).",
+        "source": "https://www.wikidata.org/wiki/Q66759117"
+      }
+    ],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": null,
+    "_thumbUrl": null
+  },
+  {
+    "id": "seyssuel",
+    "name": "Château-fort de Seyssuel",
+    "city": "Seyssuel",
+    "era": "Moyen Âge",
+    "category": "Château",
+    "xp": 100,
+    "latitude": 45.5606,
+    "longitude": 4.8253,
+    "description": "Le château de Seyssuel est un ancien château épiscopal du XIIe siècle, situé sur le territoire de la commune de Seyssuel, dans le département de l'Isère et la région Auvergne-Rhône-Alpes, en France.",
+    "source": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau-fort_de_Seyssuel",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q22975794",
+        "url": "https://www.wikidata.org/wiki/Q22975794",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "14537545",
+        "url": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau-fort_de_Seyssuel",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00132950",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00132950",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q22975794",
+      "url": "https://www.wikidata.org/wiki/Q22975794",
+      "precisionDegrees": 0.00027777777777778
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Chateau des archeveques seyssuel(38).jpg",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Chateau_des_archeveques_seyssuel%2838%29.jpg/960px-Chateau_des_archeveques_seyssuel%2838%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "septeme",
+    "name": "Château de Septème",
+    "city": "Septème",
+    "era": "Moyen Âge",
+    "category": "Château",
+    "xp": 100,
+    "latitude": 45.5508,
+    "longitude": 5.01083,
+    "description": "Le château de Septème est un ancien château fort, du XIVe siècle, remanié aux XVe et XVIe siècles, qui se dresse sur la commune de Septème dans le département de l'Isère, en région Auvergne-Rhône-Alpes. Le site concentre les ruines d'un premier château du XIe siècle, d'une enceinte du XIIIe siècle et le château actuel dont l'origine remonte aux XIVe – XVe siècle.\nAu titre des Monuments historiques ; les remparts, les restes du premier château et du chemin de ronde de l'ancienne ville font l'objet d'un classement par arrêté du 12 février 1942 ; le château, la conciergerie et le parc font l'objet d'une inscription par arrêté du 27 février 1947.",
+    "source": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Sept%C3%A8me",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q2970677",
+        "url": "https://www.wikidata.org/wiki/Q2970677",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "3144725",
+        "url": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Sept%C3%A8me",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00117287",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00117287",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA00117285",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA00117285",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PJR38000440",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PJR38000440",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q2970677",
+      "url": "https://www.wikidata.org/wiki/Q2970677",
+      "precisionDegrees": 2.7777777777778e-05
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "Septème-Chateau-sud.JPG",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Sept%C3%A8me-Chateau-sud.JPG/960px-Sept%C3%A8me-Chateau-sud.JPG?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  },
+  {
+    "id": "chonas",
+    "name": "Château de Chonas",
+    "city": "Chonas-l’Amballan",
+    "era": "Période non précisée",
+    "category": "Château",
+    "xp": 100,
+    "latitude": 45.460833333333,
+    "longitude": 4.8122222222222,
+    "description": "Le château de Chonas est un château situé à Chonas-l'Amballan dans le département français de l'Isère, région Auvergne-Rhône-Alpes, en France.",
+    "source": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Chonas",
+    "sourceRefs": [
+      {
+        "provider": "Wikidata",
+        "id": "Q22996665",
+        "url": "https://www.wikidata.org/wiki/Q22996665",
+        "license": "CC0"
+      },
+      {
+        "provider": "Wikipedia",
+        "id": "17199889",
+        "url": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Chonas",
+        "license": "CC BY-SA 4.0"
+      },
+      {
+        "provider": "POP / Mérimée (reference via Wikidata)",
+        "id": "PA38000009",
+        "url": "https://pop.culture.gouv.fr/notice/merimee/PA38000009",
+        "license": "Identifier referenced from CC0 data; no POP image/text copied"
+      }
+    ],
+    "coordinateSource": {
+      "provider": "Wikidata",
+      "id": "Q22996665",
+      "url": "https://www.wikidata.org/wiki/Q22996665",
+      "precisionDegrees": 0.00027777777777778
+    },
+    "contentQuality": "documented",
+    "aliases": [],
+    "timeline": [],
+    "relatedIds": [],
+    "review": {
+      "status": "approved",
+      "reviewedAt": "2026-11-09",
+      "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+    },
+    "photoPage": null,
+    "attribution": "",
+    "image": null,
+    "_photoFile": "10 ARA - Isère - Chonas-l'Amballan - Le Chateau (2014-05-19 12-28-42).jpg",
+    "_thumbUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Ch%C3%A2teau_de_Chonas-l%27Amballan_-_38121.jpg/960px-Ch%C3%A2teau_de_Chonas-l%27Amballan_-_38121.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+  }
+]

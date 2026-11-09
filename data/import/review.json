@@ -1,0 +1,256 @@
+[
+  {
+    "key": "Q23305483",
+    "id": "cybele",
+    "city": "Vienne",
+    "era": "Antiquité",
+    "category": "Vestiges archéologiques",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q767620",
+    "id": "pyramide",
+    "city": "Vienne",
+    "era": "Antiquité",
+    "category": "Monument antique",
+    "status": "approved",
+    "note": "Pyramid is the surviving circus monument. Coordinate uses its OSM footprint, not an invented point.",
+    "name": "Pyramide du cirque romain",
+    "coordinateOsmWay": 116990669
+  },
+  {
+    "key": "Q22967127",
+    "id": "odeon",
+    "city": "Vienne",
+    "era": "Antiquité",
+    "category": "Monument antique",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative.",
+    "name": "Odéon antique de Vienne"
+  },
+  {
+    "key": "Q3584158",
+    "id": "saint-pierre",
+    "city": "Vienne",
+    "era": "Antiquité",
+    "category": "Édifice religieux",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q60353086",
+    "id": "pipet-chapelle",
+    "city": "Vienne",
+    "era": "Époque contemporaine",
+    "category": "Édifice religieux",
+    "status": "approved",
+    "note": "Use chapel entity Q60353086 and its precise coordinate, not the coarse coordinate of Pipet hill Q3389028.",
+    "name": "Chapelle Notre-Dame-de-Pipet",
+    "minimalOnly": true
+  },
+  {
+    "key": "Q2971171",
+    "id": "batie",
+    "city": "Vienne",
+    "era": "Moyen Âge",
+    "category": "Château",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q3330574",
+    "id": "srg-site",
+    "city": "Saint-Romain-en-Gal",
+    "era": "Antiquité",
+    "category": "Musée et site archéologique",
+    "status": "approved",
+    "note": "Museum and archaeological site share source entity Q3330574; one discovery avoids double XP.",
+    "name": "Musée et site archéologique de Saint-Romain-en-Gal",
+    "aliases": [
+      "Musée gallo-romain de Saint-Romain-en-Gal",
+      "Site archéologique de Saint-Romain-en-Gal"
+    ]
+  },
+  {
+    "key": "Q13518353",
+    "id": "miroir",
+    "city": "Saint-Romain-en-Gal",
+    "era": "Antiquité",
+    "category": "Vestiges archéologiques",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative.",
+    "name": "Vestiges du palais du Miroir"
+  },
+  {
+    "key": "Q3533656",
+    "id": "valois",
+    "city": "Sainte-Colombe",
+    "era": "Moyen Âge",
+    "category": "Fortification",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q22996664",
+    "id": "andre-haut-abbaye",
+    "city": "Vienne",
+    "era": "Moyen Âge",
+    "category": "Édifice religieux",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q3330233",
+    "id": "musee-beaux-arts",
+    "city": "Vienne",
+    "era": "Époque contemporaine",
+    "category": "Musée",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q3330022",
+    "id": "musee-textile",
+    "city": "Vienne",
+    "era": "Époque contemporaine",
+    "category": "Patrimoine industriel",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q3053752",
+    "id": "enceinte-romaine",
+    "city": "Vienne",
+    "era": "Antiquité",
+    "category": "Fortification",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q22967084",
+    "id": "aqueduc",
+    "city": "Vienne",
+    "era": "Antiquité",
+    "category": "Vestiges archéologiques",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q3396730",
+    "id": "pont-saint-martin",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Ouvrage historique",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q2957015",
+    "id": "saint-theodore",
+    "city": "Vienne",
+    "era": "Moyen Âge",
+    "category": "Édifice religieux",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q15953471",
+    "id": "villa-vaganay",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Architecture civile",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q3527870",
+    "id": "theatre-municipal",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Architecture civile",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q22968220",
+    "id": "saint-romain-eglise",
+    "city": "Saint-Romain-en-Gal",
+    "era": "Période non précisée",
+    "category": "Édifice religieux",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q22967088",
+    "id": "fontaine-jeu-paume",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Architecture civile",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q22967089",
+    "id": "fontaine-hotel-ville",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Architecture civile",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q22967090",
+    "id": "fontaine-jouvenet",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Architecture civile",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q22967129",
+    "id": "porte-ambulance",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Architecture civile",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q66759117",
+    "id": "memorial-vienne",
+    "city": "Vienne",
+    "era": "Période non précisée",
+    "category": "Monument commémoratif",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q22975794",
+    "id": "seyssuel",
+    "city": "Seyssuel",
+    "era": "Moyen Âge",
+    "category": "Château",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q2970677",
+    "id": "septeme",
+    "city": "Septème",
+    "era": "Moyen Âge",
+    "category": "Château",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  },
+  {
+    "key": "Q22996665",
+    "id": "chonas",
+    "city": "Chonas-l’Amballan",
+    "era": "Période non précisée",
+    "category": "Château",
+    "status": "approved",
+    "note": "Entity identity and coordinate source reviewed against retained Wikidata/Wikipedia/OSM extracts. No unsourced narrative."
+  }
+]

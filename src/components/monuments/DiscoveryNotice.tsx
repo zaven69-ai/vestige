@@ -49,9 +49,31 @@ export function DiscoveryNotice({
           },
         ]}
       >
-        <LinearGradient colors={theme.gradients.primary} style={styles.emblem}>
-          <Icon name="sparkles" color={colors.bg} size={30} />
-        </LinearGradient>
+        <Animated.View
+          style={{
+            transform: [
+              {
+                rotate: entrance.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: ["-12deg", "0deg"],
+                }),
+              },
+              {
+                scale: entrance.interpolate({
+                  inputRange: [0, 0.7, 1],
+                  outputRange: [0.7, 1.08, 1],
+                }),
+              },
+            ],
+          }}
+        >
+          <LinearGradient
+            colors={theme.gradients.primary}
+            style={styles.emblem}
+          >
+            <Icon name="sparkles" color={colors.bg} size={30} />
+          </LinearGradient>
+        </Animated.View>
         <Text accessibilityRole="header" style={styles.label}>
           VESTIGE DÉCOUVERT !
         </Text>

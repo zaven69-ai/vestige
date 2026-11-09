@@ -1,3 +1,7 @@
+# VESTIGE V3 — version locale
+
+La V3 ajoute un atlas local, 27 lieux sourcés et un carnet SQLite. [Guide V3 : fonctionnement, limites, sources et procédure Windows/iPhone](docs/v3/README.md). La branche V3 n’a pas été publiée ; les instructions GitHub ci-dessous concernent les versions précédentes.
+
 # VESTIGE
 
 **Nouvel avatar :** branche `codex/premium-explorer-avatar`, personnage archéo-tech original en sprites 2.5D avec respiration, marche conditionnée au GPS et direction relative à la carte. Voir le [guide avatar et les trois propositions](docs/AVATAR_DESIGN.md).

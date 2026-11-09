@@ -1,5 +1,8 @@
+import { MonumentPhoto } from "../MonumentPhoto";
+import { monuments } from "../../data/monuments";
+import { router } from "expo-router";
 import React, { useEffect, useState } from "react";
-import { Alert, Image, Linking, ScrollView, Text, View } from "react-native";
+import { Alert, Linking, ScrollView, Text, View } from "react-native";
 import type { Monument } from "../../data/monuments";
 import { useGame } from "../../lib/store";
 import {
@@ -54,9 +57,8 @@ export function MonumentDetails({ monument }: { monument: Monument }) {
   return (
     <View style={s.page}>
       <ScrollView contentContainerStyle={{ paddingBottom: theme.space.xxl }}>
-        <Image
-          source={monument.image}
-          accessibilityLabel={`Photographie de ${monument.name}`}
+        <MonumentPhoto
+          monument={monument}
           style={{ height: 220, width: "100%" }}
         />
         <View style={{ padding: theme.space.lg, gap: theme.space.lg }}>
@@ -69,6 +71,7 @@ export function MonumentDetails({ monument }: { monument: Monument }) {
           >
             <Badge tone="blue">{monument.city}</Badge>
             <Badge>{monument.era}</Badge>
+            {monument.category && <Badge>{monument.category}</Badge>}
             <Badge tone={found ? "turquoise" : "coral"}>
               {found ? "Découvert ✓" : `+${monument.xp} XP`}
             </Badge>
@@ -117,27 +120,95 @@ export function MonumentDetails({ monument }: { monument: Monument }) {
           </Card>
           <Text style={s.heading}>L’histoire du lieu</Text>
           <Text style={[s.body, { color: colors.ink, lineHeight: 25 }]}>
-            {monument.description}
+            {monument.description ||
+              "Lieu identifié et géolocalisé. Son histoire détaillée reste à documenter ; consultez les références ci-dessous."}
           </Text>
           <Text style={s.caption}>
             La proximité GPS ne garantit pas l’accès au site. Respectez les
             horaires, les voies publiques et les zones fermées.
           </Text>
-          <Text style={s.eyebrow}>Sources & photographie</Text>
-          <Button
-            title="Source historique · Wikipédia ↗"
-            secondary
-            onPress={() => open(monument.source)}
-          />
-          <Text style={s.caption}>{monument.attribution}</Text>
-          <Button
-            title="Auteur, licence et photographie originale ↗"
-            secondary
-            onPress={() => open(monument.photoPage)}
-          />
+          {!!monument.aliases?.length && (
+            <Text style={s.body}>
+              Cette fiche couvre : {monument.aliases.join(" · ")}
+            </Text>
+          )}
+          <Text style={s.eyebrow}>Repères & localisation</Text>
+          <Text selectable style={s.body}>
+            {monument.latitude.toFixed(6)}, {monument.longitude.toFixed(6)}
+          </Text>
           <Text style={s.caption}>
-            Textes issus des résumés Wikipédia · CC BY-SA. Sources et
-            coordonnées consultées le 9 novembre 2026.
+            {monument.coordinateSource
+              ? `Coordonnées : ${monument.coordinateSource.provider}. ${monument.coordinateSource.method ?? "Point de référence ; ce n’est pas une entrée garantie."}`
+              : "Point de référence du catalogue initial."}
+          </Text>
+          <Text style={s.caption}>
+            Les dates mentionnées dans le texte proviennent de la source citée.
+            Aucune chronologie supplémentaire n’est déduite automatiquement.
+          </Text>
+          {!!monument.timeline?.length && (
+            <>
+              <Text style={s.eyebrow}>Repères chronologiques</Text>
+              {monument.timeline.map((event, index) => (
+                <View key={index}>
+                  <Text style={s.heading}>{event.date}</Text>
+                  <Text style={s.body}>{event.label}</Text>
+                  <Button
+                    secondary
+                    title="Source du repère ↗"
+                    onPress={() => open(event.source)}
+                  />
+                </View>
+              ))}
+            </>
+          )}
+          <Text style={s.eyebrow}>À proximité</Text>
+          {monuments
+            .filter(
+              (m) => m.id !== monument.id && distance(m, monument) <= 1200,
+            )
+            .sort((a, b) => distance(a, monument) - distance(b, monument))
+            .slice(0, 3)
+            .map((m) => (
+              <Button
+                key={m.id}
+                title={`${m.name} · ${formatDistance(distance(m, monument))}`}
+                secondary
+                onPress={() => router.push(`/monument/${m.id}`)}
+              />
+            ))}
+          <Text style={s.eyebrow}>Sources & photographie</Text>
+          {monument.sourceRefs?.length ? (
+            monument.sourceRefs.map((ref) => (
+              <View key={ref.provider + ref.id} style={{ gap: 4 }}>
+                <Button
+                  title={`${ref.provider} · ${ref.id} ↗`}
+                  secondary
+                  onPress={() => open(ref.url)}
+                />
+                <Text style={s.caption}>{ref.license}</Text>
+              </View>
+            ))
+          ) : (
+            <Button
+              title="Source historique · Wikipédia ↗"
+              secondary
+              onPress={() => open(monument.source)}
+            />
+          )}
+          {!!monument.attribution && (
+            <Text style={s.caption}>{monument.attribution}</Text>
+          )}
+          {!!monument.photoPage && (
+            <Button
+              title="Auteur, licence et photographie originale ↗"
+              secondary
+              onPress={() => open(monument.photoPage)}
+            />
+          )}
+          <Text style={s.caption}>
+            Extraits Wikipédia : CC BY-SA 4.0, liens ci-dessus. Données Wikidata
+            : CC0. Les références POP ne constituent pas une copie de ses textes
+            ou photos. Sources consultées le 9 novembre 2026.
           </Text>
         </View>
       </ScrollView>
