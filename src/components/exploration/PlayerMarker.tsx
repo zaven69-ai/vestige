@@ -1,21 +1,26 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Animated, Platform, Easing, View } from "react-native";
+import { Animated, Platform, Easing } from "react-native";
 import { Marker, type MapMarker } from "react-native-maps";
-import { ExplorerAvatar } from "./ExplorerAvatar";
 import type { Fix } from "../../lib/game";
 import { avatarMotion } from "../../lib/exploration";
+import { avatarFacing, avatarSpec } from "../../lib/avatar";
 import { theme } from "../../theme";
+import { avatarSprites } from "./avatar/sprites";
+import { useAvatarFrame } from "./avatar/useAvatarFrame";
+import { useAvatarAssets } from "./avatar/useAvatarAssets";
 const AnimatedMarker = Animated.createAnimatedComponent(Marker);
 export function PlayerMarker({
   fix,
   direction,
   reducedMotion,
   mapHeading,
+  active,
 }: {
   fix: Fix;
   direction: number | null;
   reducedMotion: boolean;
   mapHeading: number;
+  active: boolean;
 }) {
   const [initialPoint] = useState(() => ({
     latitude: fix.latitude,
@@ -25,18 +30,22 @@ export function PlayerMarker({
     latitude: new Animated.Value(fix.latitude),
     longitude: new Animated.Value(fix.longitude),
   }));
-  const marker = useRef<MapMarker | null>(null);
-  const previous = useRef(fix);
-  const directional = direction !== null;
-  // MapKit ignores Marker.rotation. Rotate the 2D view relative to the native camera instead.
-  const screenRotation =
-    Platform.OS === "ios" && direction !== null ? direction - mapHeading : 0;
+  const marker = useRef<MapMarker | null>(null),
+    previous = useRef(fix);
+  const facing = avatarFacing(direction, mapHeading);
+  const ready = useAvatarAssets(facing, active && !reducedMotion);
+  const frame = useAvatarFrame(fix, active, reducedMotion, ready);
+  const pose =
+    active && !reducedMotion && ready
+      ? frame
+      : { phase: "idle" as const, frame: 0 };
+  const image = avatarSprites[facing][pose.phase][pose.frame];
   useEffect(() => {
     const motion = avatarMotion(previous.current, fix, reducedMotion);
     if (motion === "hold") return;
     previous.current = fix;
     const point = { latitude: fix.latitude, longitude: fix.longitude };
-    const duration = motion === "snap" ? 0 : theme.motion.travel;
+    const duration = motion === "snap" || !active ? 0 : theme.motion.travel;
     if (Platform.OS === "android")
       marker.current?.animateMarkerToCoordinate(point, duration);
     else {
@@ -58,45 +67,27 @@ export function PlayerMarker({
       animation.start();
       return () => animation.stop();
     }
-  }, [coordinate, fix, reducedMotion]);
-  // Native maps snapshot custom views on Android: redraw only on layout/appearance changes.
-  useEffect(() => {
-    const timer = setTimeout(() => marker.current?.redraw(), 150);
-    return () => clearTimeout(timer);
-  }, [directional, screenRotation]);
+  }, [coordinate, fix, reducedMotion, active]);
+  // Native image swaps work with tracksViewChanges=false. No animated custom-view bitmap snapshots.
   const props = {
     ref: marker,
-    anchor: { x: 0.5, y: 0.5 },
+    image,
+    anchor: avatarSpec.anchor,
+    centerOffset: {
+      x: 0,
+      y: -(avatarSpec.height * (avatarSpec.anchor.y - 0.5)),
+    },
     zIndex: 100,
-    rotation: Platform.OS === "android" ? (direction ?? 0) : 0,
-    flat: Platform.OS === "android" && directional,
+    rotation: 0,
+    flat: false,
     tracksViewChanges: false,
-    title: "Votre explorateur · position GPS réelle",
+    tappable: false,
     identifier: "vestige-player",
+    accessibilityLabel: "Votre explorateur VESTIGE, position GPS réelle",
   };
-  const avatar = (
-    <View
-      collapsable={false}
-      onLayout={() => marker.current?.redraw()}
-      style={{
-        width: 72,
-        height: 72,
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <View style={{ transform: [{ rotate: `${screenRotation}deg` }] }}>
-        <ExplorerAvatar size={52} directional={directional} />
-      </View>
-    </View>
-  );
   return Platform.OS === "android" ? (
-    <Marker {...props} coordinate={initialPoint}>
-      {avatar}
-    </Marker>
+    <Marker {...props} coordinate={initialPoint} />
   ) : (
-    <AnimatedMarker {...props} coordinate={coordinate}>
-      {avatar}
-    </AnimatedMarker>
+    <AnimatedMarker {...props} coordinate={coordinate} />
   );
 }

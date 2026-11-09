@@ -103,7 +103,7 @@ La carte reste plein écran, derrière le HUD et la navigation. Il n’y a aucun
 
 Le pictogramme central décrit la période : colonne, bouclier, palette, télescope ou bâtiment. La forme reste compacte et le marqueur sélectionné a une bordure blanche. Les conditions de découverte restent : rayon 100 m, précision ≤ 50 m, relevé de moins de 30 secondes et récompense unique.
 
-L’avatar 2D existant est conservé et recoloré avec veste bleue, foulard corail et boussole turquoise. Ses proportions et le code GPS V2 restent conservés ; seul le logo officiel est interdit de modification.
+L’avatar joueur est désormais un explorateur archéo-tech original en sprites 2.5D : silhouette élancée, veste bleu nuit, sangle corail, scanner turquoise et détails violets. Il reste vertical sur la carte et possède une respiration discrète et une marche conditionnée au GPS. Le logo officiel n’est pas modifié. Voir `docs/AVATAR_DESIGN.md` pour les trois directions proposées, le choix et les limites.
 
 ## Progression et animation
 
