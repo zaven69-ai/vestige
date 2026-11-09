@@ -39,7 +39,9 @@
     "typecheck": "tsc --noEmit",
     "lint": "expo lint",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
-    "avatar:build": "node scripts/build-avatar.mjs"
+    "avatar:build": "node scripts/build-avatar.mjs",
+    "avatars:validate": "node scripts/avatars/validate-glb.mjs",
+    "avatars:register": "node scripts/avatars/register-pack.mjs"
   },
   "private": true
 }

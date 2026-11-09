@@ -43,3 +43,6 @@ yarn-error.*
 # Python import tooling cache
 __pycache__/
 *.pyc
+
+# Also ignore a local node_modules symlink used by Cloud worktrees
+/node_modules

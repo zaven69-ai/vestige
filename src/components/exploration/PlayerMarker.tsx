@@ -5,7 +5,7 @@ import type { Fix } from "../../lib/game";
 import { avatarMotion } from "../../lib/exploration";
 import { avatarFacing, avatarSpec } from "../../lib/avatar";
 import { theme } from "../../theme";
-import { avatarSprites } from "./avatar/sprites";
+import { useAvatarPreferences } from "../../lib/avatars/preferences";
 import { useAvatarFrame } from "./avatar/useAvatarFrame";
 import { useAvatarAssets } from "./avatar/useAvatarAssets";
 const AnimatedMarker = Animated.createAnimatedComponent(Marker);
@@ -22,6 +22,7 @@ export function PlayerMarker({
   mapHeading: number;
   active: boolean;
 }) {
+  const { pack, activeChoice, packVersion } = useAvatarPreferences();
   const [initialPoint] = useState(() => ({
     latitude: fix.latitude,
     longitude: fix.longitude,
@@ -33,13 +34,18 @@ export function PlayerMarker({
   const marker = useRef<MapMarker | null>(null),
     previous = useRef(fix);
   const facing = avatarFacing(direction, mapHeading);
-  const ready = useAvatarAssets(facing, active && !reducedMotion);
+  const ready = useAvatarAssets(
+    facing,
+    active && !reducedMotion,
+    pack.sprites,
+    `${activeChoice}:${packVersion}`,
+  );
   const frame = useAvatarFrame(fix, active, reducedMotion, ready);
   const pose =
     active && !reducedMotion && ready
       ? frame
       : { phase: "idle" as const, frame: 0 };
-  const image = avatarSprites[facing][pose.phase][pose.frame];
+  const image = pack.sprites[facing][pose.phase][pose.frame];
   useEffect(() => {
     const motion = avatarMotion(previous.current, fix, reducedMotion);
     if (motion === "hold") return;

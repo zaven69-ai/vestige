@@ -1,3 +1,6 @@
+import { router } from "expo-router";
+import { useAvatarPreferences } from "../../lib/avatars/preferences";
+import { avatarCharacters } from "../../lib/avatars/catalogue";
 import React from "react";
 import { Text, View, Linking, Alert } from "react-native";
 import { useGame } from "../../lib/store";
@@ -18,6 +21,8 @@ import {
 import { colors, theme } from "../../theme";
 export default function Profil() {
   const { xp, journal, gps, fix, requestGPS, storageError } = useGame();
+  const avatar = useAvatarPreferences();
+  const chosen = avatarCharacters.find((item) => item.id === avatar.choice);
   const badges = achievements(journal, monuments);
   const visited = monuments.filter((m) => journal[m.id]);
   const cities = new Set(visited.map((m) => m.city)).size;
@@ -38,6 +43,18 @@ export default function Profil() {
         </View>
         <Badge>Niveau {levelFor(xp)} · Explorateur</Badge>
         <Text style={s.heading}>Passeur de mémoire</Text>
+        <Text style={s.caption}>
+          {avatar.pending
+            ? `${chosen?.name} · préférence en attente du modèle`
+            : avatar.activeChoice === "legacy"
+              ? "Avatar actuel"
+              : chosen?.name}
+        </Text>
+        <Button
+          title="Choisir mon explorateur"
+          secondary
+          onPress={() => router.push("/avatars")}
+        />
         <XPBar xp={xp} />
         <View
           style={{

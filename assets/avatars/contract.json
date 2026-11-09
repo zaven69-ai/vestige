@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "rig": "vestige-humanoid-v1",
+  "units": "metres",
+  "glTFForward": "+Z",
+  "glTFUp": "+Y",
+  "heightRange": [1.55, 1.95],
+  "maxSourceBytes": 12582912,
+  "maxTriangles": 35000,
+  "maxTextureSize": 2048,
+  "pixelWidth": 160,
+  "pixelHeight": 208,
+  "feetPixelY": 182,
+  "portraitSize": 256,
+  "facings": ["n", "ne", "e", "se", "s", "sw", "w", "nw", "unknown"],
+  "phases": { "idle": { "frames": 4, "frameMs": 700 }, "walk": { "frames": 6, "frameMs": 125 } },
+  "futureClips": ["run", "turn", "discover", "celebrate"],
+  "requiredBones": ["Hips", "Spine", "Chest", "Neck", "Head", "LeftUpperArm", "LeftLowerArm", "LeftHand", "RightUpperArm", "RightLowerArm", "RightHand", "LeftUpperLeg", "LeftLowerLeg", "LeftFoot", "RightUpperLeg", "RightLowerLeg", "RightFoot"]
+}

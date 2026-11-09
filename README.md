@@ -1,3 +1,7 @@
+# Prototype avatars Alex/Léa — préparation 3D
+
+[État exact, fiches des six personnages, chaîne GLB/Blender et test Expo Go](docs/avatars/README.md). Les modèles Alex/Léa ne sont pas encore fournis : l’avatar actuel est conservé. Travail local, non publié.
+
 # VESTIGE V3 — version locale
 
 La V3 ajoute un atlas local, 27 lieux sourcés et un carnet SQLite. [Guide V3 : fonctionnement, limites, sources et procédure Windows/iPhone](docs/v3/README.md). La branche V3 n’a pas été publiée ; les instructions GitHub ci-dessous concernent les versions précédentes.

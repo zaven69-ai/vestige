@@ -1,3 +1,4 @@
+import { AvatarPreferencesProvider } from "../lib/avatars/preferences";
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import { Stack } from "expo-router";
@@ -35,7 +36,9 @@ function AppShell() {
 export default function RootLayout() {
   return (
     <GameProvider>
-      <AppShell />
+      <AvatarPreferencesProvider>
+        <AppShell />
+      </AvatarPreferencesProvider>
     </GameProvider>
   );
 }

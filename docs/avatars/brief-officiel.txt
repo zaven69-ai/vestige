@@ -1,0 +1,297 @@
+VESTIGE — FICHE OFFICIELLE DES AVATARS 3D
+
+Cahier des charges pour Codex — Version 1.0
+
+1. CONTEXTE
+
+Tu développes VESTIGE, une application mobile de découverte historique géolocalisée et gamifiée, créée avec React Native, Expo et TypeScript.
+
+Je souhaite remplacer les avatars actuels par six véritables personnages de jeu vidéo, avec une direction artistique commune.
+
+Une illustration de référence montrant les six personnages est jointe à ce message.
+
+Cette illustration définit la direction artistique officielle des avatars Vestige.
+
+Ne recrée pas le projet mobile. Conserve les fonctionnalités existantes.
+
+2. DIRECTION ARTISTIQUE
+
+Style : 3D semi-réaliste, jeu d’aventure mobile premium.
+
+Caractéristiques obligatoires :
+
+* Proportions humaines naturelles, légèrement stylisées.
+* Visages expressifs, sans exagération cartoon.
+* Anatomie cohérente entre tous les personnages.
+* Textures soignées et matériaux réalistes.
+* Vêtements urbains contemporains.
+* Accessoires liés à l’exploration historique.
+* Éléments technologiques discrets.
+* Silhouettes reconnaissables à distance.
+* Identité graphique commune aux six personnages.
+
+L’univers visuel mélange exploration urbaine, aventure et technologie liée à la découverte du passé.
+
+Ne pas copier les personnages de Pokémon GO ou d’autres jeux existants.
+
+3. IDENTITÉ GRAPHIQUE
+
+Les avatars doivent s’intégrer à l’identité de Vestige.
+
+Couleurs principales :
+
+* Bleu nuit : #020D27
+* Bleu profond : #0B1B3D
+* Violet : #A454ED
+* Corail : #F77B54
+* Turquoise : #32BCC0
+
+Utiliser ces couleurs principalement sur les vêtements, les accessoires et les éléments technologiques.
+
+Éviter de rendre toutes les tenues identiques.
+
+Le logo officiel Vestige représente une épingle de géolocalisation contenant une colonne antique, avec un dégradé multicolore.
+
+Ne pas le redessiner de manière approximative.
+
+4. PERSONNAGES DE DÉPART
+
+ALEX — Explorateur urbain
+
+* Homme, jeune adulte.
+* Cheveux bruns courts et légèrement ondulés.
+* Veste moderne bleu nuit.
+* Sweat ou t-shirt sobre.
+* Pantalon cargo foncé.
+* Sneakers urbaines.
+* Sac à dos compact.
+* Montre connectée.
+
+Personnalité : accessible, curieux, polyvalent.
+
+LÉA — Aventurière
+
+* Femme, jeune adulte.
+* Cheveux châtains attachés.
+* Veste violette avec touches corail.
+* Pantalon technique.
+* Chaussures de randonnée modernes.
+* Sac à dos.
+* Accessoire de navigation.
+
+Personnalité : sportive, dynamique, audacieuse.
+
+NOA — Voyageur du temps
+
+* Homme, jeune adulte.
+* Cheveux bruns foncés.
+* Veste blanche et bleu électrique.
+* Sweat moderne.
+* Pantalon cargo.
+* Sneakers.
+* Bracelet connecté.
+* Dispositif holographique discret.
+
+Personnalité : curieux, technologique, visionnaire.
+
+CAMILLE — Archéologue moderne
+
+* Femme adulte.
+* Cheveux bruns ondulés.
+* Lunettes.
+* Veste beige technique.
+* Pantalon de terrain.
+* Bottines contemporaines.
+* Sacoche d’archéologue.
+* Tablette numérique.
+
+Personnalité : érudite, analytique, passionnée.
+
+SAM — Aventurier dynamique
+
+* Homme, jeune adulte.
+* Cheveux courts et bouclés.
+* Veste corail.
+* Pantalon technique sombre.
+* Sneakers turquoise.
+* Sac à dos.
+* Casque audio ou accessoire urbain.
+
+Personnalité : énergique, positif, explorateur.
+
+NOVA — Exploratrice d’élite
+
+* Femme adulte.
+* Cheveux argentés.
+* Veste sombre aux détails violets.
+* Pantalon technique.
+* Bottes modernes.
+* Accessoires holographiques discrets.
+* Bracelet lumineux.
+* Équipement d’exploration avancé.
+
+Personnalité : stratégique, expérimentée, mystérieuse.
+
+Nova pourra devenir une apparence spéciale à débloquer ultérieurement, sans avantage injuste dans le jeu.
+
+5. COHÉRENCE ENTRE LES AVATARS
+
+Tous les personnages doivent être conçus selon les mêmes règles :
+
+* Même style de rendu.
+* Même qualité de modélisation.
+* Même échelle générale.
+* Même niveau de détail.
+* Même système de squelette si des modèles 3D sont créés.
+* Même bibliothèque d’animations.
+* Même logique d’intégration dans l’application.
+
+Les différences de morphologie doivent rester naturelles.
+
+Les personnages doivent avoir une apparence cohérente lorsqu’ils sont affichés côte à côte.
+
+6. ANIMATIONS SOUHAITÉES
+
+Prévoir les animations suivantes :
+
+Idle
+Le personnage reste debout, respire et effectue de petits mouvements naturels.
+
+Walk
+Marche fluide synchronisée avec le déplacement GPS.
+
+Run
+Course légère, utilisable ultérieurement.
+
+Turn
+Rotation progressive lors d’un changement de direction.
+
+Discover
+Animation courte lorsque le joueur découvre un monument.
+
+Celebrate
+Animation de victoire lors d’une récompense importante ou d’une montée de niveau.
+
+Ne pas faire marcher le personnage sur place en permanence lorsque le GPS est immobile.
+
+Les transitions doivent être naturelles et fluides.
+
+7. MODÈLES 3D
+
+Pour une véritable intégration 3D, privilégier :
+
+* Format GLB ou glTF.
+* Maillage optimisé pour mobile.
+* Textures compressées.
+* Squelette compatible avec les animations.
+* Animations réutilisables.
+* Échelle standardisée.
+* Orientation cohérente.
+* Ombre légère.
+
+Prévoir des niveaux de détail adaptés aux performances.
+
+Attention : les illustrations jointes sont des références visuelles et non des modèles 3D utilisables directement.
+
+Si tu ne disposes pas des outils nécessaires pour produire de véritables modèles 3D animables, signale-le clairement. Ne prétends pas qu’une image PNG est un personnage 3D.
+
+8. INTÉGRATION DANS VESTIGE
+
+L’avatar doit apparaître sur la carte géolocalisée.
+
+Fonctionnement attendu :
+
+* Position synchronisée avec le GPS.
+* Orientation selon la direction réelle du déplacement lorsque disponible.
+* Animation d’attente à l’arrêt.
+* Animation de marche pendant un déplacement fiable.
+* Recentrage de la caméra sur le personnage.
+* Cercle de découverte autour du joueur.
+* Taille adaptée au zoom et à la perspective.
+
+Ne pas sacrifier les performances de la carte pour les animations.
+
+9. SÉLECTION ET PERSONNALISATION
+
+Prévoir un futur écran de sélection d’avatar.
+
+Le joueur pourra choisir un personnage de départ.
+
+À terme, envisager :
+
+* Coiffures.
+* Couleurs de cheveux.
+* Tenues.
+* Accessoires.
+* Sacs.
+* Chaussures.
+* Objets cosmétiques.
+* Tenues historiques à débloquer.
+
+Les personnalisations doivent être principalement cosmétiques.
+
+Le choix et les modifications du personnage devront être sauvegardés.
+
+10. MÉTHODE DE DÉVELOPPEMENT
+
+Procéder progressivement.
+
+Phase A — Audit
+
+Analyser les avatars existants, le moteur cartographique et la compatibilité Expo.
+
+Phase B — Préparation des assets
+
+Organiser les références des six personnages.
+
+Définir les formats d’assets, les proportions, les orientations et les animations nécessaires.
+
+Phase C — Prototype
+
+Commencer par Alex et Léa.
+
+Préparer leur intégration et tester l’affichage dans Vestige.
+
+Phase D — Animation
+
+Ajouter les animations compatibles avec la solution retenue.
+
+Phase E — Déploiement
+
+Lorsque le rendu est validé, décliner Noa, Camille, Sam et Nova.
+
+11. CONTRAINTES TECHNIQUES
+
+* Ne pas recréer l’application.
+* Conserver les fonctionnalités existantes.
+* Préserver le GPS et les découvertes.
+* Conserver la progression XP.
+* Ne pas modifier inutilement la base de données.
+* Vérifier les performances iOS.
+* Éviter les dépendances natives inutiles.
+* Préserver Expo Go lorsque c’est techniquement possible.
+* Ne pas imposer une migration 3D complète sans validation.
+
+Travailler sur une branche Git dédiée.
+
+12. LIVRABLE ATTENDU
+
+Je veux que tu :
+
+1. Analyses l’illustration de référence.
+2. Crées une fiche technique réutilisable pour les six avatars.
+3. Définisses une architecture d’assets cohérente.
+4. Vérifies les possibilités d’animation dans le projet actuel.
+5. Proposes la meilleure solution technique pour obtenir un rendu proche de l’illustration.
+6. Prépares un prototype fonctionnel avec Alex et Léa.
+7. Distingues clairement les assets provisoires des véritables modèles 3D.
+8. Indiques les outils nécessaires à la modélisation si ceux-ci ne sont pas disponibles.
+9. Présentes les résultats et les limites avant toute migration native importante.
+
+RÈGLE FONDAMENTALE : la qualité visuelle et la cohérence graphique des personnages sont prioritaires.
+
+Ne remplace pas les avatars actuels par de simples émoticônes ou des personnages dessinés approximativement.
+
+Je veux progressivement obtenir de véritables avatars semi-réalistes, animables et personnalisables, adaptés à un jeu mobile d’exploration historique.
+
+Commence par l’audit et la préparation du prototype Alex/Léa.
