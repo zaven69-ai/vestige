@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "vestige",
+    "slug": "vestige",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "VESTIGE utilise votre position pour afficher les lieux proches et valider vos d\u00e9couvertes historiques."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "VESTIGE utilise votre position pour afficher les lieux proches et valider vos d\u00e9couvertes historiques."
+        }
+      ]
+    ],
+    "scheme": "vestige",
+    "platforms": ["ios", "android"]
+  }
+}
