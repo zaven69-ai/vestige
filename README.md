@@ -1,5 +1,7 @@
 # VESTIGE
 
+**Nouvel avatar :** branche `codex/premium-explorer-avatar`, personnage archéo-tech original en sprites 2.5D avec respiration, marche conditionnée au GPS et direction relative à la carte. Voir le [guide avatar et les trois propositions](docs/AVATAR_DESIGN.md).
+
 **Charte officielle V1 :** branche `codex/official-brand-v1`, issue de la V2 complète. Palette bleu nuit, composants partagés, fiches en bottom sheet et récompenses après sauvegarde. Consultez le [design system](DESIGN_SYSTEM.md) et le [guide de test iPhone/Windows](docs/BRAND-VALIDATION.md).
 
 **Logo :** l’original fourni sur GitHub est intégré sans redessin. Les exports d’icônes et le splash sont configurés ; leur rendu système se valide dans une build native, pas entièrement dans Expo Go.

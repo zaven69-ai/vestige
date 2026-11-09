@@ -1,12 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import {
-  Image,
-  Platform,
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import MapView, { Circle } from "react-native-maps";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
@@ -97,7 +90,6 @@ export default function Explorer() {
   }, []);
   const readCameraHeading = (force = false) => {
     if (
-      Platform.OS !== "ios" ||
       !map.current ||
       cameraRead.current.busy ||
       (!force && Date.now() - cameraRead.current.timestamp < 250)
@@ -311,6 +303,7 @@ export default function Explorer() {
               fix={fix}
               direction={direction}
               mapHeading={mapHeading}
+              active={focused && !sheetOpen && panel === null}
               reducedMotion={reducedMotion}
             />
           </>

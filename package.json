@@ -8,6 +8,7 @@
     "eslint": "^9.39.5",
     "eslint-config-expo": "~58.0.4",
     "expo": "~58.0.23",
+    "expo-asset": "~58.0.20",
     "expo-constants": "~58.0.15",
     "expo-linear-gradient": "~58.0.3",
     "expo-linking": "~58.0.16",
@@ -23,6 +24,7 @@
     "react-native-screens": "~4.30.1"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "@types/react": "~19.3.0",
     "prettier": "^3.9.10",
     "typescript": "~6.0.3"
@@ -34,7 +36,8 @@
     "web": "expo start --web",
     "typecheck": "tsc --noEmit",
     "lint": "expo lint",
-    "test": "node --experimental-strip-types --test tests/*.test.ts"
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "avatar:build": "node scripts/build-avatar.mjs"
   },
   "private": true
 }

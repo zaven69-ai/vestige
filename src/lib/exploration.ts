@@ -29,15 +29,6 @@ export function playerDirection(
 ): number | null {
   if (!isFreshFix(fix, now)) return null;
   if (
-    reading &&
-    reading.accuracy >= 2 &&
-    reading.degrees >= 0 &&
-    reading.degrees < 360 &&
-    now - reading.timestamp >= -3000 &&
-    now - reading.timestamp < 15_000
-  )
-    return reading.degrees;
-  if (
     fix.accuracy !== null &&
     fix.accuracy >= 0 &&
     fix.accuracy <= 25 &&
@@ -48,6 +39,15 @@ export function playerDirection(
     fix.heading < 360
   )
     return fix.heading;
+  if (
+    reading &&
+    reading.accuracy >= 2 &&
+    reading.degrees >= 0 &&
+    reading.degrees < 360 &&
+    now - reading.timestamp >= -3000 &&
+    now - reading.timestamp < 15_000
+  )
+    return reading.degrees;
   return null;
 }
 /** Filtering is visual only. Discovery and distance checks always use the raw GPS fix. */
