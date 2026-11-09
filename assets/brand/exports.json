@@ -1,0 +1,63 @@
+{
+  "source": "assets/brand/vestige-logo.png",
+  "sourceSize": [
+    1339,
+    1174
+  ],
+  "sourceSha256": "ce19ec5101008381614299b13a867717d1ffaab9736afdd0736670cdbb1e7c9c",
+  "operations": "Proportional downsampling and padding only. Original white background retained. No cropping, redraw, recoloring or background removal.",
+  "exports": [
+    {
+      "path": "assets/brand/app-icon-1024.png",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "content": [
+        1024,
+        898
+      ],
+      "offset": [
+        0,
+        63
+      ],
+      "mode": "RGB",
+      "sha256": "c1abc89d0129d8187841286a697cdd74807831ebe687f0dce92102d07a63dcce"
+    },
+    {
+      "path": "assets/brand/android-adaptive-foreground.png",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "content": [
+        640,
+        561
+      ],
+      "offset": [
+        192,
+        231
+      ],
+      "mode": "RGBA",
+      "sha256": "9458c81216b786c24e4d8e11728054ab18e9035b9396628b18a51d6b340ea0ae"
+    },
+    {
+      "path": "assets/brand/favicon-64.png",
+      "canvas": [
+        64,
+        64
+      ],
+      "content": [
+        64,
+        56
+      ],
+      "offset": [
+        0,
+        4
+      ],
+      "mode": "RGB",
+      "sha256": "eb54d849b7fe4eadf6ea721822d38735d5d16b18612e1790570523e7b231fbae"
+    }
+  ],
+  "splash": "Uses the original source directly with Expo resizeMode=contain."
+}

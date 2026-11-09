@@ -8,13 +8,15 @@ VESTIGE est un jeu mobile de découverte historique. La carte et les lieux reste
 
 La référence de logo fournie est une épingle de localisation contenant une colonne antique, avec un dégradé cyan/bleu/violet/rose/orange. **Le logo ne doit être ni redessiné, ni recoloré, ni déformé.** Aucun symbole de remplacement n’a été généré.
 
-### Fichier du logo : intégration bloquée par la source manquante
+### Logo intégré
 
-L’image est visible dans la conversation, mais seul le cahier des charges texte est accessible sous forme de fichier dans ce Cloud. Ni le PNG/SVG original ni les captures Lovable annoncées ne sont disponibles dans le stockage ou le dépôt inspecté. Leur analyse ne doit pas être présentée comme une analyse de fichiers reçus.
+Le fichier original `assets/brand/vestige-logo.png` a été ajouté par le propriétaire du dépôt. Il mesure 1339 × 1174 px, RGB, et reste inchangé (SHA-256 : `ce19ec5101008381614299b13a867717d1ffaab9736afdd0736670cdbb1e7c9c`). L’autre PNG ajouté, au nom UUID, est identique et a également été conservé.
 
-`src/theme/brandAssets.ts` contient donc `officialLogo = null`. `BrandSignature` affiche provisoirement le nom VESTIGE en texte ; il n’imite pas le logo. Dès que l’original est fourni, l’enregistrer dans `assets/brand/`, puis déclarer un `require` statique dans ce registre. Les emplacements de marque sont déjà préparés pour le lancement applicatif et les en-têtes des écrans.
+`src/theme/brandAssets.ts` référence désormais cet original. `BrandSignature` affiche le vrai logo, avec `resizeMode="contain"`, dans les en-têtes et le lancement applicatif. Les exports système sont obtenus uniquement par réduction proportionnelle et ajout de marges : icône opaque 1024 × 1024, foreground adaptatif Android 1024 × 1024 avec contenu centré, favicon 64 × 64. Le splash utilise directement l’original avec `contain`.
 
-Les icônes système existantes restent inchangées et ne sont **pas** présentées comme les nouvelles icônes officielles. Le splash natif avec logo et les exports finaux iOS/Android attendent ce fichier. Voir `assets/brand/README.md`.
+Le fond blanc de la source est conservé. Le splash natif et le fond de l’icône adaptative sont blancs pour éviter une suppression ou recoloration de ce fond. Aucune variante monochrome n’a été inventée. `scripts/export_brand_assets.py` permet de reproduire les exports avec Python/Pillow ; `assets/brand/exports.json` décrit dimensions et empreintes. Il n’est pas nécessaire d’installer Python pour lancer l’application.
+
+Les captures Lovable annoncées restent absentes : aucune reproduction précise de ces références n’est revendiquée.
 
 ## Palette et rôles
 
@@ -84,7 +86,7 @@ Les commandes de carte emploient une hiérarchie plus compacte. Les textes conse
 | `MonumentDetails`                | Contenu unique pour les fiches routées et le panneau de carte              |
 | `MonumentBottomSheet`            | Grande fiche native depuis le bas, réduite par bouton/geste sur la poignée |
 | `DiscoveryNotice`                | Notification de découverte sauvegardée et de montée de niveau              |
-| `BrandSignature` / `BrandLaunch` | Emplacements de marque, en attente du fichier du logo                      |
+| `BrandSignature` / `BrandLaunch` | Logo officiel dans les en-têtes et le lancement applicatif                 |
 
 Icônes : famille **Ionicons**, contours pour la navigation, validation explicite par coche. Aucune utilisation systématique de l’or. Les badges et compteurs d’un joueur sont calculés à partir de son carnet ; aucune activité communautaire inventée.
 
@@ -124,8 +126,8 @@ Les huit photos ont été récupérées en meilleure définition depuis les mêm
 
 ## Compatibilité et validation
 
-Expo SDK 58 conservé. Seul ajout natif : `expo-linear-gradient ~58.0.3`, vérifié dans la documentation versionnée et inclus dans Expo Go. Pas de nouvelle permission ni de changement de moteur cartographique.
+Expo SDK 58 conservé. Modules ajoutés pour la marque : `expo-linear-gradient ~58.0.3` et `expo-splash-screen ~58.0.13`, vérifiés avec le SDK 58. Pas de nouvelle permission ni de changement de moteur cartographique.
 
-Tests disponibles : TypeScript, lint, 15 tests Node (règles GPS, progression, états de marqueurs, contraste) et exports Hermes iOS/Android. Ces vérifications ne remplacent pas un essai sur téléphone : bottom sheet, animations, grands caractères, capteurs et conservation de l’expérience Expo Go doivent être contrôlés sur l’iPhone.
+Tests disponibles : TypeScript, lint, 17 tests Node (règles GPS, progression, états de marqueurs, contraste) et exports Hermes iOS/Android. Ces vérifications ne remplacent pas un essai sur téléphone : bottom sheet, animations, grands caractères, capteurs et conservation de l’expérience Expo Go doivent être contrôlés sur l’iPhone.
 
-Les icônes et le splash natifs personnalisés nécessiteront les fichiers officiels et une build native pour une validation complète ; Expo Go ne permet pas de valider l’icône installée de VESTIGE sur l’écran d’accueil iOS.
+Les icônes et le splash natifs personnalisés sont configurés ; une build native de production est nécessaire pour leur validation complète ; Expo Go ne permet pas de valider l’icône installée de VESTIGE sur l’écran d’accueil iOS.

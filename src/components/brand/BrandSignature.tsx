@@ -10,14 +10,17 @@ export function BrandSignature({
   const launch = size === "launch";
   return (
     <View
-      style={styles.brand}
+      style={[
+        styles.brand,
+        launch && { flexDirection: "column", gap: theme.space.lg },
+      ]}
       accessibilityLabel="VESTIGE, exploration historique"
     >
       {officialLogo && (
         <Image
           source={officialLogo}
           resizeMode="contain"
-          style={{ width: launch ? 100 : 28, height: launch ? 100 : 28 }}
+          style={{ width: launch ? 180 : 40, height: launch ? 158 : 36 }}
         />
       )}
       <Text

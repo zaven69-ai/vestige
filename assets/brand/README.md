@@ -1,14 +1,20 @@
-# Logo officiel — fichier source attendu
+# Ressources officielles VESTIGE
 
-Le logo joint dans la conversation est la référence : épingle, colonne, dégradé cyan/bleu/violet/rose/orange. Son dessin ne doit pas être recréé.
+`vestige-logo.png` est le fichier original fourni par le propriétaire du dépôt (1339 × 1174, RGB). Son contenu n’est pas modifié. Le PNG au nom UUID, ajouté en même temps, est identique et conservé.
 
-Dans cet environnement, seul le cahier des charges texte est accessible sous forme de fichier ; l’image affichée dans le message n’a pas de chemin ni d’identifiant de téléchargement exploitable. Aucun logo de remplacement n’a été créé.
+Exports configurés dans `app.json` :
 
-À réception du fichier original PNG haute définition ou SVG :
-1. Conserver une copie inchangée ici.
-2. Enregistrer la ressource dans `src/theme/brandAssets.ts`.
-3. Produire des exports par redimensionnement proportionnel et ajout de marges uniquement : icône iOS opaque 1024 × 1024 ; icône Android opaque 1024 × 1024 et foreground adaptatif avec zone de sécurité centrale ; splash avec `contain`.
-4. Si le fichier source a un fond blanc, le conserver : ne pas supprimer automatiquement ce fond, ne pas changer les couleurs, ne pas déformer ni rogner le symbole.
-5. Configurer `app.json` avec ces vrais exports et tester une build native. Les icônes et le splash natifs personnalisés ne sont pas entièrement testables dans Expo Go.
+- `app-icon-1024.png` : 1024 × 1024, RGB opaque, réduction proportionnelle et marges blanches ; iOS et icône Android standard.
+- `android-adaptive-foreground.png` : 1024 × 1024 RGBA, image originale réduite à 640 px de large et centrée ; fond Android blanc. Le blanc de l’original n’a pas été supprimé.
+- `favicon-64.png` : 64 × 64 opaque ; remplace la ressource Expo par défaut dans la configuration.
+- Splash : utilise directement `vestige-logo.png`, avec `contain`, largeur logique 200 et fond blanc dans les deux modes système.
 
-Les icônes système existantes restent inchangées en attendant cet original. Les écrans emploient provisoirement le nom VESTIGE en texte, sans prétendre afficher le logo officiel.
+Pas de recadrage, recoloration, déformation ni redessin. Pas de variante monochrome inventée. Les anciennes ressources Expo restent dans le dépôt mais ne sont plus référencées par ces champs de configuration.
+
+`exports.json` enregistre les dimensions, positions et empreintes SHA-256. Pour régénérer les seuls exports, avec Python 3 et Pillow disponibles :
+
+```bash
+python scripts/export_brand_assets.py
+```
+
+Les fichiers générés sont versionnés : Python n’est pas requis pour lancer l’application sur Windows avec Expo Go. Expo Go ne permet pas une validation complète de l’icône installée et du splash natif ; tester ceux-ci dans une build native de production.

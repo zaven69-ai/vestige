@@ -35,7 +35,7 @@ Avec Git : sauvegarder les modifications locales, puis `git fetch origin` et `gi
 
 ## Limites connues avant validation finale
 
-Le fichier source du logo n’est pas accessible dans le Cloud. Le nom VESTIGE est provisoirement affiché en texte ; les icônes système existantes ne sont pas les nouvelles icônes officielles. Le splash natif avec logo attend aussi cet original. Les emplacements et spécifications sont documentés dans `DESIGN_SYSTEM.md` et `assets/brand/README.md`.
+Le logo officiel est désormais intégré aux en-têtes et au lancement applicatif. Les icônes natives et le splash sont configurés depuis cet original. Vérifier le logo dans les écrans Parcours, Carnet, Défis et Profil, ainsi que dans le HUD compact d’Explorer et dans le lancement applicatif lorsqu’il est visible. Expo Go ne remplace pas son icône installée par celle de VESTIGE : les icônes système et le splash exact doivent être vérifiés dans une build native de production.
 
 Aucune capture Lovable n’a été reçue comme fichier exploitable. La mise en page suit donc la charte écrite, sans prétendre reproduire ces références.
 

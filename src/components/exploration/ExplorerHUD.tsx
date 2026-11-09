@@ -1,10 +1,11 @@
 import React from "react";
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Text, Pressable, StyleSheet, Image } from "react-native";
 import { router } from "expo-router";
 import { Icon, XPBar } from "../ui";
 import { colors, theme } from "../../theme";
 import { levelFor } from "../../lib/game";
 import { ExplorerAvatar } from "./ExplorerAvatar";
+import { officialLogo } from "../../theme/brandAssets";
 export function MapButton({
   label,
   icon,
@@ -44,6 +45,12 @@ export function ExplorerProfile({ xp, count }: { xp: number; count: number }) {
       onPress={() => router.push("/profil")}
       style={styles.profile}
     >
+      <Image
+        source={officialLogo}
+        accessible={false}
+        resizeMode="contain"
+        style={{ width: 28, height: 28 }}
+      />
       <View style={styles.portrait}>
         <ExplorerAvatar size={36} />
       </View>
@@ -90,7 +97,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  stats: { width: 86, gap: 5 },
+  stats: { width: 76, gap: 5 },
   levelLine: { flexDirection: "row", justifyContent: "space-between", gap: 4 },
   level: {
     color: colors.violet,
