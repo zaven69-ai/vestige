@@ -1,5 +1,10 @@
 export type Point = { latitude: number; longitude: number };
-export type Fix = Point & { accuracy: number | null; timestamp: number };
+export type Fix = Point & {
+  accuracy: number | null;
+  timestamp: number;
+  heading?: number | null;
+  speed?: number | null;
+};
 export const DISCOVERY_RADIUS = 100;
 export function distance(a: Point, b: Point): number {
   const r = Math.PI / 180;
