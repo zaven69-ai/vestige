@@ -1,0 +1,63 @@
+{
+  "originalPreserved": true,
+  "originalSha256": "9c3e5b819423af36553d94b7fc01d7e1f4c4f8ad721074b5e23eb2f01055966c",
+  "texturePreserved": true,
+  "candidates": [
+    {
+      "file": "assets/avatars/catia/mobile/catia-30000.glb",
+      "triangles": 29996,
+      "bytes": 1464540,
+      "sha256": "c0251d31efd678fd3332f6949e02356d534a547ebca58a16552dbab5592b8f18",
+      "textureSha256": "22b4e0d976480b4da6273ba32cd7f2f3e39e6f538b8b100b76cdb709a2161dcf"
+    },
+    {
+      "file": "assets/avatars/catia/mobile/catia-25000.glb",
+      "triangles": 24996,
+      "bytes": 1351192,
+      "sha256": "53d196183c6c678384025a905ebedae83fe9418025f3f45da08186854abe4a9d",
+      "textureSha256": "22b4e0d976480b4da6273ba32cd7f2f3e39e6f538b8b100b76cdb709a2161dcf"
+    },
+    {
+      "file": "assets/avatars/catia/mobile/catia-20000.glb",
+      "triangles": 19995,
+      "bytes": 1236068,
+      "sha256": "5ba9d418ed93d22eca7886a2ccaba051d6314e81bf0b1dd1fb19266b45765467",
+      "textureSha256": "22b4e0d976480b4da6273ba32cd7f2f3e39e6f538b8b100b76cdb709a2161dcf"
+    }
+  ],
+  "selected": {
+    "file": "assets/avatars/catia/mobile/catia-25000.glb",
+    "triangles": 24996,
+    "bytes": 1351192,
+    "sha256": "53d196183c6c678384025a905ebedae83fe9418025f3f45da08186854abe4a9d",
+    "textureSha256": "22b4e0d976480b4da6273ba32cd7f2f3e39e6f538b8b100b76cdb709a2161dcf"
+  },
+  "experimentalRig": {
+    "file": "assets/avatars/catia/rig-lab/catia-motion-trials.glb",
+    "sha256": "b00769c0864701723b2c73dbe932fe99acfa6054f637dade7bb0b606b423da16",
+    "triangles": 24996,
+    "bones": 17,
+    "vertexCount": 16122,
+    "clips": [
+      {
+        "name": "idle",
+        "channels": 51,
+        "movingChannels": 2
+      },
+      {
+        "name": "walk",
+        "channels": 51,
+        "movingChannels": 11
+      },
+      {
+        "name": "run",
+        "channels": 51,
+        "movingChannels": 11
+      }
+    ],
+    "bytes": 1726668
+  },
+  "mapEnabled": false,
+  "artApproved": false,
+  "deviceTested": false
+}

@@ -1,0 +1,14 @@
+{
+  "status": "weighting-failed",
+  "sourceSha256": "c0251d31efd678fd3332f6949e02356d534a547ebca58a16552dbab5592b8f18",
+  "rigBones": 17,
+  "vertices": 18727,
+  "weightedVertices": 18627,
+  "weightCoverage": 0.9946601164094623,
+  "weightingError": null,
+  "productionApproved": false,
+  "deviceTested": false,
+  "clips": [],
+  "requiresManualSkinningReview": true,
+  "landmarks": "Approximate fit to posed original; not a validated T-pose/retarget"
+}

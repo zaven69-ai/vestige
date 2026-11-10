@@ -1,0 +1,27 @@
+{
+  "name": "Catia",
+  "originalSha256": "9c3e5b819423af36553d94b7fc01d7e1f4c4f8ad721074b5e23eb2f01055966c",
+  "sourcePreserved": true,
+  "optimizedTriangles": 24996,
+  "optimizedBytes": 1351192,
+  "textureWidth": 2048,
+  "textureHeight": 2048,
+  "hasSkeleton": true,
+  "hasWeights": true,
+  "actualClips": [
+    "idle",
+    "walk",
+    "run"
+  ],
+  "deformationReviewed": false,
+  "artApproved": false,
+  "iosDeviceTested": false,
+  "androidDeviceTested": false,
+  "mapEnabled": false,
+  "stage": "experimental",
+  "qualityIssues": [
+    "Marche : déformations ou contacts au sol à corriger.",
+    "Course : déformations ou contacts au sol à corriger."
+  ],
+  "note": "Rig et mouvements expérimentaux ; aucune activation sur la carte."
+}

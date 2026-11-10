@@ -1,3 +1,7 @@
+# Catia — préparation mobile et animation expérimentale
+
+[Résultats, fichiers, limites du rig et test Expo Go](docs/avatars/catia/PREPARATION.md). Base retenue : 24 996 triangles. Idle/Walk/Run réels mais non approuvés ; Catia reste désactivée sur la carte.
+
 # Prototype avatars Alex/Léa — préparation 3D
 
 [État exact, fiches des six personnages, chaîne GLB/Blender et test Expo Go](docs/avatars/README.md). Les modèles Alex/Léa ne sont pas encore fournis : l’avatar actuel est conservé. Travail local, non publié.

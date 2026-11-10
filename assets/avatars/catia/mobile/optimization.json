@@ -1,0 +1,57 @@
+{
+  "sourceSha256": "9c3e5b819423af36553d94b7fc01d7e1f4c4f8ad721074b5e23eb2f01055966c",
+  "sourceTriangles": 151692,
+  "heightMeters": 1.75,
+  "forwardBlender": "-Y",
+  "forwardGlTF": "+Z",
+  "upGlTF": "+Y",
+  "candidates": [
+    {
+      "file": "catia-30000.glb",
+      "target": 30000,
+      "triangles": 29996,
+      "bytes": 1464540,
+      "sha256": "c0251d31efd678fd3332f6949e02356d534a547ebca58a16552dbab5592b8f18",
+      "skins": 0,
+      "animations": [],
+      "textures": [
+        [
+          2048,
+          2048
+        ]
+      ]
+    },
+    {
+      "file": "catia-25000.glb",
+      "target": 25000,
+      "triangles": 24996,
+      "bytes": 1351192,
+      "sha256": "53d196183c6c678384025a905ebedae83fe9418025f3f45da08186854abe4a9d",
+      "skins": 0,
+      "animations": [],
+      "textures": [
+        [
+          2048,
+          2048
+        ]
+      ]
+    },
+    {
+      "file": "catia-20000.glb",
+      "target": 20000,
+      "triangles": 19995,
+      "bytes": 1236068,
+      "sha256": "5ba9d418ed93d22eca7886a2ccaba051d6314e81bf0b1dd1fb19266b45765467",
+      "skins": 0,
+      "animations": [],
+      "textures": [
+        [
+          2048,
+          2048
+        ]
+      ]
+    }
+  ],
+  "sourcePreserved": true,
+  "blenderVersion": "4.3.2"
+}

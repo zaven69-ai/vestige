@@ -1,0 +1,223 @@
+{
+  "status": "experimental-not-approved",
+  "sourceSha256": "53d196183c6c678384025a905ebedae83fe9418025f3f45da08186854abe4a9d",
+  "rigBones": 17,
+  "vertices": 16122,
+  "initialWeightedVertices": 16031,
+  "initialWeightCoverage": 0.9943555390150105,
+  "weightingError": null,
+  "productionApproved": false,
+  "deviceTested": false,
+  "clips": [
+    {
+      "name": "idle",
+      "frames": 73,
+      "fps": 24,
+      "actualKeyframes": 11169,
+      "status": "experimental-real-motion-not-production",
+      "deformationSamples": [
+        {
+          "fraction": 0,
+          "minZ": 8.974661614047363e-05,
+          "maxEdgeStretch": 1.000033414161028,
+          "p99EdgeStretch": 1.000002498414199,
+          "maxSeamGapMeters": 7.356998461537962e-06
+        },
+        {
+          "fraction": 0.125,
+          "minZ": 8.974661614047363e-05,
+          "maxEdgeStretch": 1.0949234083209949,
+          "p99EdgeStretch": 1.0113944096438083,
+          "maxSeamGapMeters": 7.356998461537962e-06
+        },
+        {
+          "fraction": 0.25,
+          "minZ": 8.974661614047363e-05,
+          "maxEdgeStretch": 1.1344992419246827,
+          "p99EdgeStretch": 1.0161599900724954,
+          "maxSeamGapMeters": 7.356998461537962e-06
+        },
+        {
+          "fraction": 0.375,
+          "minZ": 8.974661614047363e-05,
+          "maxEdgeStretch": 1.0949234083209949,
+          "p99EdgeStretch": 1.0113944096438083,
+          "maxSeamGapMeters": 7.356998461537962e-06
+        },
+        {
+          "fraction": 0.5,
+          "minZ": 8.974661614047363e-05,
+          "maxEdgeStretch": 1.000033414161028,
+          "p99EdgeStretch": 1.000002498414199,
+          "maxSeamGapMeters": 7.356998461537962e-06
+        },
+        {
+          "fraction": 0.625,
+          "minZ": 8.974661614047363e-05,
+          "maxEdgeStretch": 1.0803730003329504,
+          "p99EdgeStretch": 1.003091535545313,
+          "maxSeamGapMeters": 7.356998461537962e-06
+        },
+        {
+          "fraction": 0.75,
+          "minZ": 8.974661614047363e-05,
+          "maxEdgeStretch": 1.113369828467034,
+          "p99EdgeStretch": 1.0045516272356623,
+          "maxSeamGapMeters": 7.356998461537962e-06
+        },
+        {
+          "fraction": 0.875,
+          "minZ": 8.974661614047363e-05,
+          "maxEdgeStretch": 1.0803730003329504,
+          "p99EdgeStretch": 1.003091535545313,
+          "maxSeamGapMeters": 7.356998461537962e-06
+        }
+      ],
+      "groundCheckPassed": true,
+      "stretchCheckPassed": true
+    },
+    {
+      "name": "walk",
+      "frames": 25,
+      "fps": 24,
+      "actualKeyframes": 3825,
+      "status": "experimental-real-motion-not-production",
+      "deformationSamples": [
+        {
+          "fraction": 0,
+          "minZ": 8.974661614047363e-05,
+          "maxEdgeStretch": 2.078130256384652,
+          "p99EdgeStretch": 1.008657252078989,
+          "maxSeamGapMeters": 7.332597824752951e-06
+        },
+        {
+          "fraction": 0.125,
+          "minZ": -0.004256220068782568,
+          "maxEdgeStretch": 15.531166544844844,
+          "p99EdgeStretch": 1.6194892566656398,
+          "maxSeamGapMeters": 7.355519423656584e-06
+        },
+        {
+          "fraction": 0.25,
+          "minZ": 0.006601280067116022,
+          "maxEdgeStretch": 21.59876287615539,
+          "p99EdgeStretch": 1.992779182711906,
+          "maxSeamGapMeters": 7.411646442648434e-06
+        },
+        {
+          "fraction": 0.375,
+          "minZ": -0.004256220068782568,
+          "maxEdgeStretch": 15.531166544844844,
+          "p99EdgeStretch": 1.6194892566656398,
+          "maxSeamGapMeters": 7.355519423656584e-06
+        },
+        {
+          "fraction": 0.5,
+          "minZ": 8.974661614047363e-05,
+          "maxEdgeStretch": 2.078130256384652,
+          "p99EdgeStretch": 1.008657252078989,
+          "maxSeamGapMeters": 7.332597824752951e-06
+        },
+        {
+          "fraction": 0.625,
+          "minZ": 0.012774225324392319,
+          "maxEdgeStretch": 15.74507665870229,
+          "p99EdgeStretch": 1.6400752052986691,
+          "maxSeamGapMeters": 7.402023395968248e-06
+        },
+        {
+          "fraction": 0.75,
+          "minZ": 0.0341317355632782,
+          "maxEdgeStretch": 21.878000274944018,
+          "p99EdgeStretch": 2.0060351113688712,
+          "maxSeamGapMeters": 7.270331368129221e-06
+        },
+        {
+          "fraction": 0.875,
+          "minZ": 0.012774225324392319,
+          "maxEdgeStretch": 15.74507665870229,
+          "p99EdgeStretch": 1.6400752052986691,
+          "maxSeamGapMeters": 7.402023395968248e-06
+        }
+      ],
+      "groundCheckPassed": true,
+      "stretchCheckPassed": false
+    },
+    {
+      "name": "run",
+      "frames": 19,
+      "fps": 24,
+      "actualKeyframes": 2907,
+      "status": "experimental-real-motion-not-production",
+      "deformationSamples": [
+        {
+          "fraction": 0,
+          "minZ": 8.974661614047363e-05,
+          "maxEdgeStretch": 8.187928353792914,
+          "p99EdgeStretch": 1.0920925787656297,
+          "maxSeamGapMeters": 7.4127136508112945e-06
+        },
+        {
+          "fraction": 0.125,
+          "minZ": 0.03138801455497742,
+          "maxEdgeStretch": 29.26107963544772,
+          "p99EdgeStretch": 2.749253612182519,
+          "maxSeamGapMeters": 7.258517598159879e-06
+        },
+        {
+          "fraction": 0.25,
+          "minZ": 0.09231725335121155,
+          "maxEdgeStretch": 39.49369745711517,
+          "p99EdgeStretch": 3.5990215217118458,
+          "maxSeamGapMeters": 7.484418798548569e-06
+        },
+        {
+          "fraction": 0.375,
+          "minZ": 0.03138801455497742,
+          "maxEdgeStretch": 29.26107963544772,
+          "p99EdgeStretch": 2.749253612182519,
+          "maxSeamGapMeters": 7.258517598159879e-06
+        },
+        {
+          "fraction": 0.5,
+          "minZ": 8.974661614047363e-05,
+          "maxEdgeStretch": 8.187928353792914,
+          "p99EdgeStretch": 1.0920925787656297,
+          "maxSeamGapMeters": 7.4127136508112945e-06
+        },
+        {
+          "fraction": 0.625,
+          "minZ": 0.06504920870065689,
+          "maxEdgeStretch": 29.663682387880076,
+          "p99EdgeStretch": 2.8687982798344396,
+          "maxSeamGapMeters": 7.195151092133655e-06
+        },
+        {
+          "fraction": 0.75,
+          "minZ": 0.1582924723625183,
+          "maxEdgeStretch": 40.05881586155272,
+          "p99EdgeStretch": 3.807093202111785,
+          "maxSeamGapMeters": 7.220931130825539e-06
+        },
+        {
+          "fraction": 0.875,
+          "minZ": 0.06504920870065689,
+          "maxEdgeStretch": 29.663682387880076,
+          "p99EdgeStretch": 2.8687982798344396,
+          "maxSeamGapMeters": 7.195151092133655e-06
+        }
+      ],
+      "groundCheckPassed": true,
+      "stretchCheckPassed": false
+    }
+  ],
+  "requiresManualSkinningReview": true,
+  "landmarks": "Approximate fit to posed original; not a validated T-pose/retarget",
+  "unweightedRepairMaxDistanceMeters": 0.01965971104800701,
+  "proximityRepairedVertices": 91,
+  "weightedVertices": 16122,
+  "weightCoverage": 1.0,
+  "synchronizedSeamClusters": 930,
+  "maxInfluencesPerVertex": 4,
+  "requiresManualFootContactCorrection": false
+}

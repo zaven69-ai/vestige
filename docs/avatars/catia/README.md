@@ -1,3 +1,5 @@
+> Préparation mobile ultérieure : [optimisation, rig réel, animations expérimentales et limites](PREPARATION.md). Le constat ci-dessous concerne le GLB original, qui reste inchangé.
+
 # Catia — source reçue le 10 novembre 2026
 
 Nom donné par l'utilisateur : **Catia**. Cette source supplémentaire ne remplace aucun personnage du catalogue initial.

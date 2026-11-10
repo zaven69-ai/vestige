@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Pressable, Text, View } from "react-native";
-import { Stack } from "expo-router";
+import { Stack, router } from "expo-router";
 import { Page, Card, Badge, Button, s, colors } from "../components/ui";
 import { avatarCharacters, type AvatarChoice } from "../lib/avatars/catalogue";
 import { useAvatarPreferences } from "../lib/avatars/preferences";
@@ -36,6 +36,18 @@ export default function AvatarWorkshop() {
             sauvegardée dès maintenant ; elle ne remplace l’avatar sur la carte
             que lorsqu’un pack validé est disponible.
           </Text>
+        </Card>
+        <Card>
+          <Badge tone="blue">Catia · en préparation</Badge>
+          <Text style={s.body}>
+            Modèle optimisé et essais de mouvements, sans activation sur la
+            carte.
+          </Text>
+          <Button
+            title="Examiner Catia"
+            secondary
+            onPress={() => router.push("/catia")}
+          />
         </Card>
         <Text style={s.heading}>Choisir une préférence</Text>
         <Pressable
