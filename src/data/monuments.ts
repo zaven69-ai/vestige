@@ -1,9 +1,12 @@
 import data from "./monuments.json";
+import imported from "./imported-pois.json";
 import { ImageSourcePropType } from "react-native";
 export type City = "Vienne" | "Lyon";
 export type Monument = Omit<(typeof data)[number], "city" | "image"> & {
   city: City;
   image: ImageSourcePropType;
+  reviewStatus?: string;
+  category?: string;
 };
 const images: Record<string, ImageSourcePropType> = {
   auguste: require("../../assets/monuments/auguste.jpg"),
@@ -15,11 +18,18 @@ const images: Record<string, ImageSourcePropType> = {
   "saint-jean": require("../../assets/monuments/saint-jean.jpg"),
   amphitheatre: require("../../assets/monuments/amphitheatre.jpg"),
 };
-export const monuments: Monument[] = data.map((m) => ({
+const curated: Monument[] = data.map((m) => ({
   ...m,
   city: m.city as City,
   image: images[m.id],
 }));
+/** Imported candidates remain distinct from editorially verified monuments. */
+const importedCandidates: Monument[] = imported.map((m) => ({
+  ...m,
+  city: m.city as City,
+  image: require("../../assets/brand/vestige-logo.png"),
+}));
+export const monuments: Monument[] = [...curated, ...importedCandidates];
 export const cities: Record<City, { latitude: number; longitude: number }> = {
   Vienne: { latitude: 45.5254, longitude: 4.878 },
   Lyon: { latitude: 45.7602, longitude: 4.826 },
