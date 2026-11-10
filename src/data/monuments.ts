@@ -1,3 +1,5 @@
+import { isPublicPoi } from "../lib/poi";
+import type { PoiProvenance, PoiCategory } from "../lib/poi";
 import data from "./monuments.json";
 import { heritagePhotos } from "./generated/photos";
 import heritage from "./generated/heritage.json";
@@ -11,6 +13,13 @@ export type SourceRef = {
 };
 export type Monument = Omit<(typeof data)[number], "city" | "image"> & {
   city: City;
+  poiCategory?: PoiCategory;
+  origin?: PoiProvenance["origin"];
+  reviewStatus?: PoiProvenance["reviewStatus"];
+  verifiedAt?: string;
+  verifiedBy?: string;
+  contributorId?: string;
+  provenanceHistory?: PoiProvenance["provenanceHistory"];
   image: ImageSourcePropType | undefined;
   category?: string;
   timeline?: { date: string; label: string; source: string }[];
@@ -34,10 +43,18 @@ const images: Record<string, ImageSourcePropType> = {
   "saint-jean": require("../../assets/monuments/saint-jean.jpg"),
   amphitheatre: require("../../assets/monuments/amphitheatre.jpg"),
 };
-export const monuments: Monument[] = [
+const catalogue: Monument[] = [
   ...data.map((m) => ({
     ...m,
     city: m.city as City,
+    origin: "editorial" as const,
+    provenanceHistory: [{ origin: "editorial" as const, sourceUrl: m.source }],
+    reviewStatus: "unreviewed" as const,
+    poiCategory: (m.id === "auguste" ||
+    m.id.startsWith("theatre") ||
+    m.id === "amphitheatre"
+      ? "temple"
+      : "religious") as PoiCategory,
     aliases:
       m.id === "saint-andre"
         ? ["Église Saint-André-le-Bas", "Cloître Saint-André-le-Bas"]
@@ -46,11 +63,19 @@ export const monuments: Monument[] = [
   })),
   ...heritage.map(({ image: _image, photoPage, ...m }) => ({
     ...m,
+    origin: "import" as const,
+    provenanceHistory: m.sourceRefs.map((ref) => ({
+      origin: "import" as const,
+      sourceUrl: ref.url,
+    })),
+    reviewStatus: "unreviewed" as const,
     image: heritagePhotos[m.id]?.image,
     photoPage: heritagePhotos[m.id]?.photoPage ?? photoPage ?? "",
     attribution: heritagePhotos[m.id]?.attribution ?? "",
   })),
 ];
+export const monuments = catalogue.filter(isPublicPoi);
+
 export const cities: Record<City, { latitude: number; longitude: number }> = {
   Vienne: { latitude: 45.5254, longitude: 4.878 },
   "Saint-Romain-en-Gal": { latitude: 45.5295, longitude: 4.87093 },

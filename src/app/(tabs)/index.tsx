@@ -1,3 +1,14 @@
+import {
+  PoiClusterMarker,
+  type PoiGroup,
+} from "../../components/exploration/PoiClusterMarker";
+import {
+  defaultPoiFilters,
+  matchesPoi,
+  poiCategories,
+  poiStatuses,
+} from "../../lib/poi";
+import { PoiBadge } from "../../components/poi/PoiBadge";
 import { MonumentPhoto } from "../../components/MonumentPhoto";
 import { useLocalAtlas } from "../../hooks/useLocalAtlas";
 import { viewportGroups } from "../../lib/mapViewport";
@@ -18,12 +29,7 @@ import {
   ScrollView,
   useWindowDimensions,
 } from "react-native";
-import MapView, {
-  Circle,
-  LocalTile,
-  Marker,
-  type Region,
-} from "react-native-maps";
+import MapView, { Circle, LocalTile, type Region } from "react-native-maps";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { useIsFocused } from "expo-router";
@@ -110,10 +116,13 @@ export default function Explorer() {
   const [mapReady, setMapReady] = useState(false);
   const [mapHeading, setMapHeading] = useState(0);
   const [immersive, setImmersive] = useState(true);
-  const [panel, setPanel] = useState<"settings" | "filters" | null>(null);
+  const [panel, setPanel] = useState<"settings" | "filters" | "legend" | null>(
+    null,
+  );
   const [periods, setPeriods] = useState<HistoricalPeriod[]>([
     ...historicalPeriods,
   ]);
+  const [poiFilters, setPoiFilters] = useState(defaultPoiFilters);
   const [clusterChoices, setClusterChoices] = useState<Monument[]>([]);
   const [selection, setSelection] = useState<Monument | null>(null);
   const [sheetOpen, setSheetOpen] = useState(false);
@@ -157,15 +166,20 @@ export default function Explorer() {
   const touchOrigin = useRef<{ x: number; y: number } | null>(null);
   const bottom = insets.bottom + 86;
   const visibleMonuments = useMemo(
-    () => monuments.filter((m) => periods.includes(historicalPeriod(m.era))),
-    [periods],
+    () =>
+      monuments.filter(
+        (m) =>
+          periods.includes(historicalPeriod(m.era)) &&
+          matchesPoi(m, !!journal[m.id], poiFilters),
+      ),
+    [periods, journal, poiFilters],
   );
   const groups = useMemo(
     () => viewportGroups(visibleMonuments, region, width, height),
     [visibleMonuments, region, width, height],
   );
   const selected =
-    selection && periods.includes(historicalPeriod(selection.era))
+    selection && visibleMonuments.some((m) => m.id === selection.id)
       ? selection
       : null;
   const goodGPS =
@@ -235,6 +249,23 @@ export default function Explorer() {
       setSelection(monument);
     },
     [stopFollowing],
+  );
+  const selectCluster = useCallback(
+    (group: PoiGroup) => {
+      stopFollowing();
+      if (region.latitudeDelta < 0.001) setClusterChoices(group.members);
+      else
+        map.current?.animateToRegion(
+          {
+            latitude: group.latitude,
+            longitude: group.longitude,
+            latitudeDelta: region.latitudeDelta / 2,
+            longitudeDelta: region.longitudeDelta / 2,
+          },
+          reducedMotion ? 0 : 350,
+        );
+    },
+    [region, stopFollowing, reducedMotion],
   );
   const browse = (city: City) => {
     stopFollowing();
@@ -390,48 +421,11 @@ export default function Explorer() {
               onSelect={selectMonument}
             />
           ) : (
-            <Marker
+            <PoiClusterMarker
               key={group.key}
-              coordinate={{
-                latitude: group.latitude,
-                longitude: group.longitude,
-              }}
-              stopPropagation
-              accessibilityLabel={`${group.members.length} lieux historiques. Agrandir la carte.`}
-              onPress={(event) => {
-                event.stopPropagation();
-                stopFollowing();
-                if (region.latitudeDelta < 0.001)
-                  setClusterChoices(group.members);
-                else
-                  map.current?.animateToRegion(
-                    {
-                      latitude: group.latitude,
-                      longitude: group.longitude,
-                      latitudeDelta: region.latitudeDelta / 2,
-                      longitudeDelta: region.longitudeDelta / 2,
-                    },
-                    reducedMotion ? 0 : 350,
-                  );
-              }}
-            >
-              <View
-                style={{
-                  width: 44,
-                  height: 44,
-                  borderRadius: 22,
-                  backgroundColor: colors.violet,
-                  borderWidth: 3,
-                  borderColor: colors.turquoise,
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Text style={{ color: "white", fontWeight: "800" }}>
-                  {group.members.length}
-                </Text>
-              </View>
-            </Marker>
+              group={group}
+              onSelect={selectCluster}
+            />
           ),
         )}
         {fresh && (
@@ -501,9 +495,14 @@ export default function Explorer() {
         <ExplorerProfile xp={xp} count={Object.keys(journal).length} />
         <View style={styles.tools}>
           <MapButton
-            label="Filtrer les périodes historiques"
+            label="Filtrer les lieux : époque, catégorie, contrôle et visites"
             icon="layers-outline"
-            active={periods.length !== historicalPeriods.length}
+            active={
+              periods.length !== historicalPeriods.length ||
+              poiFilters.categories.length !== poiCategories.length ||
+              poiFilters.statuses.length !== poiStatuses.length ||
+              poiFilters.visits !== "all"
+            }
             onPress={() => setPanel("filters")}
           />
           <MapButton
@@ -513,13 +512,29 @@ export default function Explorer() {
           />
         </View>
       </View>
-      {periods.length === 0 && (
+      <Pressable
+        accessibilityRole="button"
+        onPress={() => setPanel("legend")}
+        style={[
+          styles.filterHint,
+          {
+            top: insets.top + 78,
+            left: 14,
+            alignSelf: "flex-start",
+            minHeight: 44,
+            justifyContent: "center",
+          },
+        ]}
+      >
+        <Text style={styles.hintText}>ⓘ Comprendre les marqueurs</Text>
+      </Pressable>
+      {visibleMonuments.length === 0 && (
         <View
           pointerEvents="none"
-          style={[styles.filterHint, { top: insets.top + 86 }]}
+          style={[styles.filterHint, { top: insets.top + 126 }]}
         >
           <Text style={styles.hintText}>
-            Aucune période affichée · modifiez les filtres
+            Aucun lieu ne correspond · modifiez les filtres
           </Text>
         </View>
       )}
@@ -528,7 +543,7 @@ export default function Explorer() {
         style={[
           styles.controls,
           {
-            bottom: bottom + (selected ? 150 : 10),
+            bottom: bottom + (selected ? 220 : 10),
             right: Math.max(insets.right, 14),
           },
         ]}
@@ -563,7 +578,7 @@ export default function Explorer() {
           styles.status,
           {
             left: Math.max(insets.left, 14),
-            bottom: bottom + (selected ? 150 : 10),
+            bottom: bottom + (selected ? 220 : 10),
             maxWidth: "70%",
           },
         ]}
@@ -607,6 +622,7 @@ export default function Explorer() {
               <Text numberOfLines={2} style={styles.name}>
                 {selected.name}
               </Text>
+              <PoiBadge poi={selected} compact />
               <Text style={styles.distance}>
                 {fresh
                   ? formatDistance(distance(fix, selected))
@@ -635,6 +651,9 @@ export default function Explorer() {
         setAtlasEnabled={setAtlasEnabled}
         atlasStatus={atlas.status}
         panel={panel}
+        poiFilters={poiFilters}
+        setPoiFilters={setPoiFilters}
+        visibleCount={visibleMonuments.length}
         close={() => setPanel(null)}
         immersive={immersive}
         setImmersive={setPerspective}

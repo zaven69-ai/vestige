@@ -1,3 +1,5 @@
+import { PoiBadge } from "../poi/PoiBadge";
+import { isPublicPoi, poiStatus } from "../../lib/poi";
 import { MonumentPhoto } from "../MonumentPhoto";
 import { monuments } from "../../data/monuments";
 import { router } from "expo-router";
@@ -24,6 +26,9 @@ export function MonumentDetails({ monument }: { monument: Monument }) {
     const timer = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(timer);
   }, []);
+  const review = poiStatus(monument);
+  const verified =
+    review === "editorial_verified" || review === "community_verified";
   const found = !!journal[monument.id],
     eligible = canDiscover(fix, monument, now);
   const open = (url: string) => {
@@ -76,6 +81,7 @@ export function MonumentDetails({ monument }: { monument: Monument }) {
               {found ? "Découvert ✓" : `+${monument.xp} XP`}
             </Badge>
           </View>
+          <PoiBadge poi={monument} />
           <Text accessibilityRole="header" style={s.title}>
             {monument.name}
           </Text>
@@ -118,7 +124,47 @@ export function MonumentDetails({ monument }: { monument: Monument }) {
               onPress={() => void claim()}
             />
           </Card>
-          <Text style={s.heading}>L’histoire du lieu</Text>
+          <Card>
+            <Text style={s.heading}>Origine et contrôle</Text>
+            <Text style={s.body}>
+              {monument.origin === "community"
+                ? "Contribution communautaire"
+                : monument.origin === "editorial"
+                  ? "Catalogue éditorial Vestige"
+                  : "Import de données externes"}
+              .{" "}
+              {verified
+                ? `Contrôle explicite : ${monument.verifiedBy}, le ${monument.verifiedAt}.`
+                : "Information non vérifiée individuellement."}
+            </Text>
+            <Text style={s.caption}>
+              Source disponible ≠ information vérifiée. Une découverte GPS
+              valide votre carnet, pas l’exactitude historique de la fiche.
+            </Text>
+            {!!monument.contributorId && (
+              <Text style={s.body}>
+                Identifiant du contributeur : {monument.contributorId}
+              </Text>
+            )}
+            {!!monument.provenanceHistory?.length && (
+              <>
+                <Text style={s.eyebrow}>Historique de provenance</Text>
+                {monument.provenanceHistory.map((entry, index) => (
+                  <Button
+                    key={index}
+                    secondary
+                    title={`${entry.origin === "import" ? "Import" : entry.origin === "community" ? "Communauté" : "Éditorial"}${entry.recordedAt ? ` · ${entry.recordedAt}` : ""} · référence ↗`}
+                    onPress={() => open(entry.sourceUrl)}
+                  />
+                ))}
+              </>
+            )}
+          </Card>
+          <Text style={s.heading}>
+            {monument.contentQuality === "minimal" || !monument.description
+              ? "Fiche à documenter"
+              : "L’histoire du lieu"}
+          </Text>
           <Text style={[s.body, { color: colors.ink, lineHeight: 25 }]}>
             {monument.description ||
               "Lieu identifié et géolocalisé. Son histoire détaillée reste à documenter ; consultez les références ci-dessous."}
@@ -164,7 +210,10 @@ export function MonumentDetails({ monument }: { monument: Monument }) {
           <Text style={s.eyebrow}>À proximité</Text>
           {monuments
             .filter(
-              (m) => m.id !== monument.id && distance(m, monument) <= 1200,
+              (m) =>
+                isPublicPoi(m) &&
+                m.id !== monument.id &&
+                distance(m, monument) <= 1200,
             )
             .sort((a, b) => distance(a, monument) - distance(b, monument))
             .slice(0, 3)

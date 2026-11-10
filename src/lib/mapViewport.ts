@@ -13,15 +13,29 @@ export function viewportGroups<T extends MapPoint>(
 ): { key: string; latitude: number; longitude: number; members: T[] }[] {
   const latitudeSpan = Math.max(0.00001, region.latitudeDelta);
   const longitudeSpan = Math.max(0.00001, region.longitudeDelta);
-  const groups = new Map<string, T[]>();
-  for (const point of points) {
+  // Adapt the screen-space grid instead of dropping points when zoomed out.
+  // Every visible POI remains represented, but native marker views stay bounded.
+  let cell = 52;
+  let groups = new Map<string, T[]>();
+  const visible = points.filter((point) => {
     const dx = ((point.longitude - region.longitude + 540) % 360) - 180;
-    const dy = point.latitude - region.latitude;
-    // Overscan accommodates the tilted camera and keeps markers near the edges.
-    if (Math.abs(dx) > longitudeSpan || Math.abs(dy) > latitudeSpan) continue;
-    const key = `${Math.floor(((dx / longitudeSpan + 0.5) * width) / 52)}:${Math.floor(((dy / latitudeSpan + 0.5) * height) / 52)}`;
-    groups.set(key, [...(groups.get(key) ?? []), point]);
-  }
+    return (
+      Math.abs(dx) <= longitudeSpan &&
+      Math.abs(point.latitude - region.latitude) <= latitudeSpan
+    );
+  });
+  do {
+    groups = new Map();
+    for (const point of visible) {
+      const dx = ((point.longitude - region.longitude + 540) % 360) - 180;
+      const dy = point.latitude - region.latitude;
+      const key = `${cell}:${Math.floor(((dx / longitudeSpan + 0.5) * width) / cell)}:${Math.floor(((dy / latitudeSpan + 0.5) * height) / cell)}`;
+      const members = groups.get(key);
+      if (members) members.push(point);
+      else groups.set(key, [point]);
+    }
+    cell *= 1.4;
+  } while (groups.size > 96);
   return [...groups.entries()].map(([key, members]) => ({
     key,
     members,

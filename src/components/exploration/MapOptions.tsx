@@ -1,3 +1,5 @@
+import { PoiFilterPanel, PoiLegend } from "../poi/PoiControls";
+import { defaultPoiFilters, type PoiFilters } from "../../lib/poi";
 import React from "react";
 import {
   Modal,
@@ -23,7 +25,10 @@ type Props = {
   atlasEnabled: boolean;
   setAtlasEnabled: (value: boolean) => void;
   atlasStatus: string;
-  panel: "settings" | "filters" | null;
+  panel: "settings" | "filters" | "legend" | null;
+  poiFilters: PoiFilters;
+  setPoiFilters: (filters: PoiFilters) => void;
+  visibleCount: number;
   close: () => void;
   immersive: boolean;
   setImmersive: (value: boolean) => void;
@@ -42,6 +47,9 @@ export function MapOptions({
   setAtlasEnabled,
   atlasStatus,
   panel,
+  poiFilters,
+  setPoiFilters,
+  visibleCount,
   close,
   immersive,
   setImmersive,
@@ -80,7 +88,11 @@ export function MapOptions({
         >
           <View style={styles.header}>
             <Text style={s.heading}>
-              {panel === "filters" ? "Les strates du temps" : "Votre boussole"}
+              {panel === "legend"
+                ? "Comprendre les marqueurs"
+                : panel === "filters"
+                  ? "Affiner l’exploration"
+                  : "Votre boussole"}
             </Text>
             <Pressable
               accessibilityRole="button"
@@ -92,12 +104,18 @@ export function MapOptions({
             </Pressable>
           </View>
           <ScrollView contentContainerStyle={{ gap: 18, paddingBottom: 10 }}>
-            {panel === "filters" ? (
+            {panel === "legend" ? (
+              <PoiLegend />
+            ) : panel === "filters" ? (
               <>
                 <Text style={s.body}>
                   Choisissez les périodes visibles sur la carte. Les lieux
                   masqués restent accessibles dans les parcours et le carnet.
                 </Text>
+                <Text style={s.heading}>
+                  {visibleCount} lieux correspondent · toutes villes
+                </Text>
+                <Text style={s.eyebrow}>Époque</Text>
                 {historicalPeriods.map((period) => (
                   <Pressable
                     key={period}
@@ -121,10 +139,14 @@ export function MapOptions({
                   </Pressable>
                 ))}
                 <Button
-                  title="Afficher toutes les périodes"
+                  title="Réinitialiser tous les filtres"
                   secondary
-                  onPress={() => setPeriods([...historicalPeriods])}
+                  onPress={() => {
+                    setPeriods([...historicalPeriods]);
+                    setPoiFilters(defaultPoiFilters());
+                  }}
                 />
+                <PoiFilterPanel filters={poiFilters} onChange={setPoiFilters} />
               </>
             ) : (
               <>
