@@ -55,7 +55,7 @@ export default function Profil() {
           secondary
           onPress={() => router.push("/avatars")}
         />
-        <XPBar xp={xp} />
+        <Button\n          title="Tester Catia en mouvement (atelier)"\n          secondary\n          onPress={() => router.push("/catia")}\n        />\n        <XPBar xp={xp} />
         <View
           style={{
             flexDirection: "row",
