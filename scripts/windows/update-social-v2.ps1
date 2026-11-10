@@ -19,7 +19,7 @@ Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/zaven
 $files = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
 # Refuse an old differential package that cannot repair a missing V1 dependency.
 $paths = @($files | ForEach-Object { [string]$_.path })
-foreach ($required in @('src/components/exploration/PoiClusterMarker.tsx', 'src/components/poi/assets.ts', 'src/lib/mapViewport.ts', 'src/lib/poi.ts')) {
+foreach ($required in @('src/components/exploration/PoiClusterMarker.tsx', 'src/components/poi/assets.ts', 'src/lib/mapViewport.ts', 'src/lib/poi.ts', 'src/components/poi/illustrated.ts', 'assets/poi/illustrated/temple.png', 'assets/poi/illustrated/castle.png', 'assets/poi/illustrated/religious.png', 'assets/poi/illustrated/museum.png', 'assets/poi/illustrated/industrial.png', 'assets/poi/illustrated/nature.png', 'assets/poi/illustrated/other.png')) {
     if ($paths -notcontains $required) { throw "Paquet incomplet : $required. Utilisez la revision du correctif cumulatif." }
 }
 Write-Host "Reception de $($files.Count) fichiers de la V2..."

@@ -1,8 +1,11 @@
-import { landmarkAssets } from "./landmarks";
 import React, { memo } from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
-import { poiAssets } from "./assets";
+import { Image, StyleSheet, View } from "react-native";
+import { illustratedPoi, reviewSeals, discoverySeals } from "./illustrated";
 import type { PoiCategory, PoiStatus } from "../../lib/poi";
+/** Three independent layers. Seven shared illustrations; no per-POI 3D scene.
+ * landmarkId is retained for existing callers, but artwork represents categories,
+ * not documentary photos of a named monument.
+ */
 export const PoiGlyph = memo(function PoiGlyph({
   category,
   status,
@@ -10,19 +13,19 @@ export const PoiGlyph = memo(function PoiGlyph({
   selected = false,
   progress = "none",
   onLoad,
-  landmarkId,
   glowOpacity = 0.8,
 }: {
-  onLoad?: () => void;
-  landmarkId?: string;
-  glowOpacity?: number;
   category: PoiCategory;
   status: PoiStatus;
   size?: number;
   selected?: boolean;
   progress?: "none" | "nearby" | "discovered" | "completed";
+  onLoad?: () => void;
+  landmarkId?: string;
+  glowOpacity?: number;
 }) {
   const halo = selected || progress === "nearby";
+  const discovery = progress === "nearby" ? "none" : progress;
   return (
     <View style={{ width: size, height: (size * 56) / 52 }}>
       {halo && (
@@ -30,56 +33,51 @@ export const PoiGlyph = memo(function PoiGlyph({
           style={[
             styles.halo,
             {
-              borderColor: selected ? "#E8D19A" : "#F77B54",
+              borderColor: selected ? "#F5D281" : "#F77B54",
               opacity: selected ? glowOpacity : 1,
             },
           ]}
         />
       )}
       <Image
-        source={
-          landmarkId && landmarkAssets[landmarkId]
-            ? landmarkAssets[landmarkId][status]
-            : poiAssets[category][status]
-        }
+        source={illustratedPoi[category]}
         onLoad={onLoad}
-        style={{ width: size, height: (size * 56) / 52 }}
         resizeMode="contain"
+        fadeDuration={0}
+        resizeMethod="resize"
+        style={{ width: size, height: (size * 56) / 52 }}
         accessible={false}
       />
-      {(progress === "discovered" || progress === "completed") && (
-        <View style={styles.progress}>
-          <Text style={styles.check}>
-            {progress === "completed" ? "✓✓" : "✓"}
-          </Text>
-        </View>
-      )}
+      <Image
+        source={reviewSeals[status]}
+        onLoad={onLoad}
+        resizeMode="contain"
+        fadeDuration={0}
+        style={[styles.review, { width: size * 0.34, height: size * 0.34 }]}
+        accessible={false}
+      />
+      <Image
+        source={discoverySeals[discovery]}
+        onLoad={onLoad}
+        resizeMode="contain"
+        fadeDuration={0}
+        style={[styles.discovery, { width: size * 0.3, height: size * 0.3 }]}
+        accessible={false}
+      />
     </View>
   );
 });
 const styles = StyleSheet.create({
   halo: {
     position: "absolute",
+    top: 0,
+    bottom: 0,
     left: 0,
     right: 0,
-    top: 2,
-    bottom: 3,
+    borderRadius: 28,
     borderWidth: 1.5,
-    borderRadius: 25,
-    backgroundColor: "#FFFFFF0A",
+    backgroundColor: "#F5D2810D",
   },
-  progress: {
-    position: "absolute",
-    top: 1,
-    left: 1,
-    borderRadius: 9,
-    minWidth: 17,
-    height: 17,
-    backgroundColor: "#081626",
-    borderColor: "#FFFFFF",
-    borderWidth: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  check: { fontSize: 10, color: "#FFFFFF", fontWeight: "800" },
+  review: { position: "absolute", right: -1, bottom: 5 },
+  discovery: { position: "absolute", left: -1, top: 0 },
 });

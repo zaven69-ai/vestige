@@ -39,9 +39,9 @@ export const PoiClusterMarker = memo(function PoiClusterMarker({
           width: 44,
           height: 44,
           borderRadius: 22,
-          backgroundColor: "#081626",
+          backgroundColor: "#102C48",
           borderWidth: 2,
-          borderColor: "#8596A9",
+          borderColor: "#CDB67C",
           alignItems: "center",
           justifyContent: "center",
         }}

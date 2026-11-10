@@ -1,3 +1,4 @@
+import ts from "typescript";
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync } from "node:fs";
@@ -49,5 +50,45 @@ test("every Windows patch file exists and matches its published checksum", () =>
       entry.sha256,
       entry.path,
     );
+  }
+});
+
+test("every PNG required by POI modules is shipped in the cumulative update", () => {
+  for (const file of sources("src/components/poi")) {
+    if (!/\.tsx?$/.test(file)) continue;
+    const text = readFileSync(new URL(file, root), "utf8");
+    const syntax = ts.createSourceFile(
+      file,
+      text,
+      ts.ScriptTarget.Latest,
+      true,
+    );
+    const assets: string[] = [];
+    function visit(node: ts.Node) {
+      if (
+        ts.isCallExpression(node) &&
+        ts.isIdentifier(node.expression) &&
+        node.expression.text === "require" &&
+        node.arguments.length > 0 &&
+        ts.isStringLiteral(node.arguments[0])
+      )
+        assets.push(node.arguments[0].text);
+      if (
+        ts.isImportDeclaration(node) &&
+        ts.isStringLiteral(node.moduleSpecifier)
+      )
+        assets.push(node.moduleSpecifier.text);
+      ts.forEachChild(node, visit);
+    }
+    visit(syntax);
+    for (const specifier of assets.filter(
+      (asset) => asset.startsWith(".") && asset.endsWith(".png"),
+    )) {
+      const asset = new URL(specifier, new URL(file, root));
+      const relative = decodeURIComponent(
+        asset.pathname.slice(root.pathname.length),
+      );
+      assert.ok(paths.has(relative), `Missing required PNG: ${relative}`);
+    }
   }
 });

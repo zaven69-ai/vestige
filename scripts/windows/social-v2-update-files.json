@@ -52,6 +52,62 @@
     "sha256": "3df9651cfeb40b4238c3d5ff0b27650257b4d1c06aacb42fe9b52a9b30eb48a3"
   },
   {
+    "path": "assets/poi/discovery/completed.png",
+    "sha256": "3270c91487eee3cdf07f4ecb59f5a0d7f0f7deca728bc655f53ec84155ab2f3b"
+  },
+  {
+    "path": "assets/poi/discovery/completed.svg",
+    "sha256": "49444ad7547993eabdfb91d0bbb71164e04407a28da7f0ae493f925d2deaa9b1"
+  },
+  {
+    "path": "assets/poi/discovery/discovered.png",
+    "sha256": "7bff6980e76f62906f0d940d68101388c74404d4c29c0bdda2a4791f7bcabec1"
+  },
+  {
+    "path": "assets/poi/discovery/discovered.svg",
+    "sha256": "428c733963ad72c5e36a71e2c4c3f7831ca14613c38059218b0d7d198eb0aa3a"
+  },
+  {
+    "path": "assets/poi/discovery/undiscovered.png",
+    "sha256": "ea4c05a139adb052e8e5c5e25b9b39b5a50ae74603546c19d90cc96402ba5955"
+  },
+  {
+    "path": "assets/poi/discovery/undiscovered.svg",
+    "sha256": "0437308466cbb317c27d354ff30e34f811b512a468275c83ca83d9da16e78ea8"
+  },
+  {
+    "path": "assets/poi/illustrated/README.md",
+    "sha256": "7d17467fd3dc309ca995e2cecd4b2cea0cb76d7f7b06263ddf7d91620517afc8"
+  },
+  {
+    "path": "assets/poi/illustrated/castle.png",
+    "sha256": "e03acb612c8d0c22260d70b07eafe50787cf390fa61653147dcde93960fa3083"
+  },
+  {
+    "path": "assets/poi/illustrated/industrial.png",
+    "sha256": "5834fd9ae470e45c7a8c656f059dcaed9c1d8cbe410f14a29e26ea8085c5e0a6"
+  },
+  {
+    "path": "assets/poi/illustrated/museum.png",
+    "sha256": "cbc87d8a44f4d45ec6dadebee3cdc02413006ce829aadb5430bd82af73f14010"
+  },
+  {
+    "path": "assets/poi/illustrated/nature.png",
+    "sha256": "088ad93bfe875516f949b645676f71386e21cb42689ab82b8732f5c9e7a7c504"
+  },
+  {
+    "path": "assets/poi/illustrated/other.png",
+    "sha256": "287d7e275d57610f179a4a24eb00b35b8ea156462ec67af02212fad08b4d939e"
+  },
+  {
+    "path": "assets/poi/illustrated/religious.png",
+    "sha256": "734db683296ee2a2d99ab1b9c6a1dbf32a691b0b552389b842df06364192d822"
+  },
+  {
+    "path": "assets/poi/illustrated/temple.png",
+    "sha256": "77f751bf2563da9dd2fb4922ce4025118d0d89a519f997ac927ed776a8c118be"
+  },
+  {
     "path": "assets/poi/industrial-community_pending.png",
     "sha256": "17c43d86d47a7f9dd6a907ddee29845e631b6ab59a4174b3684a85f717ab3047"
   },
@@ -676,6 +732,54 @@
     "sha256": "95b6d77fdb03ac592259cc10b023a84da9baa6fd4d324cec60f5a350ee1a0014"
   },
   {
+    "path": "assets/poi/review/community_pending.png",
+    "sha256": "c27e63e280b545957a28f40f224b18e4fc5944d0c59b4828ccd808530738678f"
+  },
+  {
+    "path": "assets/poi/review/community_pending.svg",
+    "sha256": "e28b4dca47661fb95dca0ead5a019584b95428cc7afc00df06fa584b92debfa4"
+  },
+  {
+    "path": "assets/poi/review/community_unreviewed.png",
+    "sha256": "9e2fe12d5572ff15fb99ae76d2f915ef620dfe0322612fc4d28d43661c348e54"
+  },
+  {
+    "path": "assets/poi/review/community_unreviewed.svg",
+    "sha256": "60a0769f3f71d4214ed94b617d8671dddab9fd71e50e9a816b5ab7bc3e3894d6"
+  },
+  {
+    "path": "assets/poi/review/community_verified.png",
+    "sha256": "2d233e071ad769268815ccc2241543c4d75428ab04e5815803d93a50f1fa963e"
+  },
+  {
+    "path": "assets/poi/review/community_verified.svg",
+    "sha256": "5bf4646304c01b99de5ddf0fbe3de84036978712e569fa386980e3435af73863"
+  },
+  {
+    "path": "assets/poi/review/editorial_unreviewed.png",
+    "sha256": "f4e6ac4aa32aef3cddf3c7924f703fa11b25234c542385ad06254c96a9b38f93"
+  },
+  {
+    "path": "assets/poi/review/editorial_unreviewed.svg",
+    "sha256": "69bfc07893ce45e913e3f9e1debe7012e0428eb87461f5f71a47f9e41d397d33"
+  },
+  {
+    "path": "assets/poi/review/editorial_verified.png",
+    "sha256": "f003fe0945573213a9851ef5de484bf8bec99590f8899cfa964b2afce164c2b4"
+  },
+  {
+    "path": "assets/poi/review/editorial_verified.svg",
+    "sha256": "d12c71ea658d7e2c83a9872c0d781796ed98916f075978bb849a5273a76c8421"
+  },
+  {
+    "path": "assets/poi/review/imported_unreviewed.png",
+    "sha256": "2317fae0de5a833407f52e05cee1c5b7858a7f562e746084720d53d85a309078"
+  },
+  {
+    "path": "assets/poi/review/imported_unreviewed.svg",
+    "sha256": "ed7689bda2cdc5d7da7630125a19240fc027d6fa5eca749afa746eca92961631"
+  },
+  {
     "path": "assets/poi/temple-community_pending.png",
     "sha256": "8b97b06234481f73a9ef6d2dededef037e344340647363aaa10d2fcd16258f5f"
   },
@@ -728,6 +832,10 @@
     "sha256": "9eb8477d50ac028b007ecebff64b0a16531e2206acb80787bccedb9abda97577"
   },
   {
+    "path": "docs/design/POI-ILLUSTRATED-V2-DELIVERY.md",
+    "sha256": "fcd827fc3b2552f6bce4bc4f69a4c695c345dd4fb8b81e15732b043992e1f14c"
+  },
+  {
     "path": "docs/design/POI-INTEGRATION-V1.md",
     "sha256": "cfe7b870b0d7d8e924f7facabd31dacb9f07979562e0e58495c75f2f80310839"
   },
@@ -744,6 +852,18 @@
     "sha256": "19b5ac46f6099bc695915d94424e0cff259aa1a7a92fcb00470d9ea0dd53a8dc"
   },
   {
+    "path": "docs/design/poi-illustrated-320.png",
+    "sha256": "d4670275436eb5e283d4846608f8a903d4df7df84f18ce158565cf35dabbd43b"
+  },
+  {
+    "path": "docs/design/poi-illustrated-390.png",
+    "sha256": "fbbafc14d1d5685a2ecca5bfdfe97f9f99e717a4c9b11a30fea06dfe34125737"
+  },
+  {
+    "path": "docs/design/poi-illustrated-430.png",
+    "sha256": "b2d6561f8b60f0f79203ba8d8f31d4a45abe6d3b5388b090395e36d4790ceb28"
+  },
+  {
     "path": "docs/design/poi-preview-320.png",
     "sha256": "d4dd2a8a0f9337f6d86626537622406d0feeebcfa5edb733b98c76d48b7c0a14"
   },
@@ -757,7 +877,7 @@
   },
   {
     "path": "docs/design/poi-preview.html",
-    "sha256": "11fb3fa27041a2cc5ff89aef80dbdcb54b813050b5ca590606c47c14ffe2bf7f"
+    "sha256": "27cbc4c27c2397308f63d2b486ad0425b289230a5d3eb0bacd38b7b2a86f21a3"
   },
   {
     "path": "docs/design/poi-v2-preview-320.png",
@@ -785,11 +905,19 @@
   },
   {
     "path": "scripts/poi/build-markers.cjs",
-    "sha256": "459e17359b44b63195adaaf7431c201abc2c9c918f115bc64c6cda01e841447c"
+    "sha256": "470893ac19ff5c2d1d55458968a9d1687f26f4ec49c149ee8c0a1c4f3c8d76bc"
   },
   {
     "path": "scripts/poi/build-preview.cjs",
-    "sha256": "396565722804f6d00eff2a04fdd4d9e9184d1b9c381cf1ba1eb2583ae364cc91"
+    "sha256": "04a37869f7ef2f38380e0e04ae8beb08b485afc075b194364df4e8357f3de3cb"
+  },
+  {
+    "path": "scripts/poi/build-seals.cjs",
+    "sha256": "08b35811dcb644d7928371245e0342e7d0f9d45cf77d1bed5a7601fe50713d29"
+  },
+  {
+    "path": "scripts/poi/png-inspect.cjs",
+    "sha256": "e9affc651036e422c73b678a7fae2a17cb147532462b1ed2af158cda325b083d"
   },
   {
     "path": "scripts/windows/build-social-manifest.cjs",
@@ -805,7 +933,7 @@
   },
   {
     "path": "scripts/windows/update-social-v2.ps1",
-    "sha256": "7499cbedf2a722c032526077b4911bd0bea4e75021a47e4eef9086f13ab863f0"
+    "sha256": "ecd85553bf361c75fba9b63405108a684c3ba12748df40c4796d96da303b18c9"
   },
   {
     "path": "src/app/(tabs)/index.tsx",
@@ -841,7 +969,7 @@
   },
   {
     "path": "src/components/exploration/PoiClusterMarker.tsx",
-    "sha256": "07cc64e1aae2dff68675e36570ae21889640376185eab4f8c8af670a0f6dcacc"
+    "sha256": "3a55d4d5e14483bcb0d415995a19033597e8cfc0f58ab2febdd798fda5522247"
   },
   {
     "path": "src/components/monuments/MonumentBottomSheet.tsx",
@@ -857,15 +985,19 @@
   },
   {
     "path": "src/components/poi/PoiControls.tsx",
-    "sha256": "508aa1b82ea814e6329225f988e617e28446e994490a094f130ef1c2b7782203"
+    "sha256": "667a99e65fe9fbeda5f012161e37b5cf3eab81215372305a2fb9af6db3830db5"
   },
   {
     "path": "src/components/poi/PoiGlyph.tsx",
-    "sha256": "0d1bb5789e3349d3ff614fea4c12c9d59cf4e34a02b96525828d13999ac96b58"
+    "sha256": "1acb9871fe053ed9b88deb2ae521191baa935c040da8545c3b1c5d86a90ba5ab"
   },
   {
     "path": "src/components/poi/assets.ts",
     "sha256": "be2774cf4f9734af2e8ad1a34e5840dff0b82a7de1ea04301a40511348190baf"
+  },
+  {
+    "path": "src/components/poi/illustrated.ts",
+    "sha256": "048f6dce2876e9b2249263e00f1ab2341a1fadfd10f202b58c69e7d0c2118243"
   },
   {
     "path": "src/components/poi/landmarks.ts",
@@ -916,11 +1048,15 @@
     "sha256": "8b87f76bcba493f8f6b1d089da1ccc919f574f6f90fa9fa141fdecb0c4658af1"
   },
   {
+    "path": "tests/illustrated-poi.test.ts",
+    "sha256": "dae48993c7d8b1ace559d9eceb747034fbf61ea2506a5774d94aa231acda1ff8"
+  },
+  {
     "path": "tests/poi.test.ts",
     "sha256": "2e2c344998f8a4128330d148ca1f32f20c90dab18fced260a27d8a644a7c239a"
   },
   {
     "path": "tests/update-package.test.ts",
-    "sha256": "3227c3c5efafc27fda835d07166c00e5945daba720e8cc843002637d259caada"
+    "sha256": "23660a90c7b4e28b7ac8fc32a933ff7eea2453d67fafa3f5cd8a66fdeffdbc47"
   }
 ]

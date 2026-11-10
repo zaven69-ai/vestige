@@ -125,11 +125,12 @@ export function PoiFilterPanel({
 export function PoiLegend() {
   return (
     <View style={{ gap: 18 }}>
-      <Text style={s.heading}>Miniatures des lieux phares</Text>
+      <Text style={s.heading}>Illustrations des catégories</Text>
       <Text style={s.body}>
-        Illustrations stylisées des monuments actuels, pas des reconstitutions
-        historiques. L’or de l’architecture et de l’éclairage est décoratif :
-        seul le sceau de contrôle indique la vérification.
+        Chaque illustration représente un type de lieu, pas une photographie du
+        monument sélectionné. Le cadre doré est décoratif : seul le sceau de
+        contrôle indique la vérification. Les photographies et leurs sources
+        restent dans la fiche.
       </Text>
       <View style={{ flexDirection: "row", gap: 16 }}>
         <PoiGlyph
@@ -194,7 +195,7 @@ export function PoiLegend() {
       <Text style={s.heading}>3 · Votre progression est indépendante</Text>
       {(
         [
-          ["none", "À découvrir · sans marque de progression"],
+          ["none", "À découvrir · boussole en haut à gauche"],
           ["nearby", "À portée · halo corail"],
           ["discovered", "Découvert · coche blanche en haut à gauche"],
           [
