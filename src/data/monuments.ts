@@ -3,6 +3,7 @@ import type { PoiProvenance, PoiCategory } from "../lib/poi";
 import data from "./monuments.json";
 import { heritagePhotos } from "./generated/photos";
 import heritage from "./generated/heritage.json";
+import osmCandidates from "./imported-pois.json";
 import { ImageSourcePropType } from "react-native";
 export type City = string;
 export type SourceRef = {
@@ -74,7 +75,50 @@ const catalogue: Monument[] = [
     attribution: heritagePhotos[m.id]?.attribution ?? "",
   })),
 ];
-export const monuments = catalogue.filter(isPublicPoi);
+// OSM candidates are discovery leads, not historically verified articles.
+// Retain provenance and keep editorial/curated articles when names overlap.
+type OsmCandidate = {
+  id: string; name: string; city: string; era: string; xp: number;
+  latitude: number; longitude: number; description: string;
+  source: string; photoPage: string; attribution: string; category: string;
+};
+const categoryForOsm = (category: string): PoiCategory => {
+  if (/^(archaeological_site|ruins|monument|historic|temple)$/.test(category)) return "temple";
+  if (/^(museum|gallery)$/.test(category)) return "museum";
+  if (/^(castle|fort|fortification|city_gate)$/.test(category)) return "castle";
+  if (/^(church|cathedral|chapel|monastery|place_of_worship)$/.test(category)) return "religious";
+  if (/^(industrial|mill|factory|works)$/.test(category)) return "industrial";
+  if (/^(park|garden|natural)$/.test(category)) return "nature";
+  return "other";
+};
+const canonical = (name: string) =>
+  name.normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ").trim();
+const existing = new Set(catalogue.map((m) => m.city + "|" + canonical(m.name)));
+const osm: Monument[] = [];
+for (const candidate of osmCandidates as OsmCandidate[]) {
+  const key = candidate.city + "|" + canonical(candidate.name);
+  if (!key.split("|")[1] || existing.has(key)) continue;
+  existing.add(key);
+  osm.push({
+    ...candidate,
+    origin: "import",
+    reviewStatus: "unreviewed",
+    poiCategory: categoryForOsm(candidate.category),
+    image: undefined,
+    photoPage: candidate.source,
+    attribution: "Données OpenStreetMap · ODbL 1.0 · aucune photographie fournie",
+    sourceRefs: [{
+      provider: "OpenStreetMap",
+      id: candidate.id,
+      url: candidate.source,
+      license: "ODbL 1.0",
+    }],
+    provenanceHistory: [{ origin: "import", sourceUrl: candidate.source }],
+    contentQuality: "unreviewed",
+  });
+}
+export const monuments = [...catalogue, ...osm].filter(isPublicPoi);
 
 export const cities: Record<City, { latitude: number; longitude: number }> = {
   Vienne: { latitude: 45.5254, longitude: 4.878 },
