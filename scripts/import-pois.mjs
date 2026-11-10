@@ -7,7 +7,13 @@
  */
 import { writeFile } from "node:fs/promises";
 
-const endpoint = process.env.OVERPASS_URL || "https://overpass.kumi.systems/api/interpreter";
+const endpoints = process.env.OVERPASS_URL
+  ? [process.env.OVERPASS_URL]
+  : [
+      "https://overpass.private.coffee/api/interpreter",
+      "https://overpass.kumi.systems/api/interpreter",
+      "https://overpass-api.de/api/interpreter",
+    ];
 const cities = [
   { city: "Vienne", bbox: [45.47, 4.81, 45.58, 4.96], limit: 300 },
   { city: "Lyon", bbox: [45.69, 4.73, 45.84, 4.94], limit: 700 },
@@ -28,7 +34,11 @@ function query({ bbox }) {
     ");out center tags;";
 }
 async function fetchCity(area) {
-  const response = await fetch(endpoint, {
+  let response;
+  let lastError;
+  for (const endpoint of endpoints) {
+    try {
+      response = await fetch(endpoint, {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
@@ -36,8 +46,15 @@ async function fetchCity(area) {
     },
     body: new URLSearchParams({ data: query(area) }),
     signal: AbortSignal.timeout(200_000),
-  });
-  if (!response.ok) throw new Error(area.city + ": HTTP " + response.status);
+      });
+      if (!response.ok) throw new Error("HTTP " + response.status);
+      break;
+    } catch (error) {
+      lastError = error;
+      console.warn(area.city + ": serveur indisponible " + endpoint + " (" + error.message + ")");
+    }
+  }
+  if (!response?.ok) throw new Error(area.city + ": aucun serveur Overpass accessible. " + lastError?.message);
   const json = await response.json();
   if (!Array.isArray(json.elements)) throw new Error("Unexpected Overpass response");
   const rows = [];
