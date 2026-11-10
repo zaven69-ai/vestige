@@ -1,3 +1,5 @@
+> Ce document décrit la préparation initiale. Voir la [révision 2 du rig et des animations](revision-2/README.md) pour les fichiers corrigés et les nouveaux résultats.
+
 # Catia — préparation mobile du 10 novembre 2026
 
 Branche locale : `codex/catia-mobile-preparation`, issue du prototype avatars et de la réception du modèle original. Aucune publication ni génération payante. Catia reste désactivée sur la carte.

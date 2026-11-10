@@ -1,0 +1,2510 @@
+{
+  "file": "catia-corrected.glb",
+  "sha256": "3efe730d69dbc67cb6ca3fcc33d2767ab976a54686a345927fcf73d4fe8318a9",
+  "rigBones": 17,
+  "clips": [
+    {
+      "name": "run",
+      "durationSeconds": 0.8,
+      "samples": [
+        {
+          "phase": 0.0,
+          "minZ": -5.792826414108276e-07,
+          "p99EdgeStretch": 1.2005860589128963,
+          "maxEdgeStretch": 1.7725047323609626,
+          "maxSeamGapMeters": 7.312284636153286e-06,
+          "stanceSoleZ": {
+            "Left": -5.792826414108276e-07
+          }
+        },
+        {
+          "phase": 0.020833333333333332,
+          "minZ": -0.0008081216365098953,
+          "p99EdgeStretch": 1.2066104953145786,
+          "maxEdgeStretch": 1.8171742038475704,
+          "maxSeamGapMeters": 7.31762330199538e-06,
+          "stanceSoleZ": {
+            "Left": -0.0008081216365098953
+          }
+        },
+        {
+          "phase": 0.041666666666666664,
+          "minZ": -6.910413503646851e-07,
+          "p99EdgeStretch": 1.2166153231318733,
+          "maxEdgeStretch": 1.8630281223694445,
+          "maxSeamGapMeters": 7.310762620816423e-06,
+          "stanceSoleZ": {
+            "Left": -6.910413503646851e-07
+          }
+        },
+        {
+          "phase": 0.0625,
+          "minZ": -0.00043156836181879044,
+          "p99EdgeStretch": 1.2198288120598029,
+          "maxEdgeStretch": 1.9071545282040088,
+          "maxSeamGapMeters": 7.302911736015587e-06,
+          "stanceSoleZ": {
+            "Left": -0.00043156836181879044
+          }
+        },
+        {
+          "phase": 0.08333333333333333,
+          "minZ": -4.833564162254333e-07,
+          "p99EdgeStretch": 1.2306121756428212,
+          "maxEdgeStretch": 1.950932730649637,
+          "maxSeamGapMeters": 7.308453724867597e-06,
+          "stanceSoleZ": {
+            "Left": -4.833564162254333e-07
+          }
+        },
+        {
+          "phase": 0.10416666666666667,
+          "minZ": -0.0003288593143224716,
+          "p99EdgeStretch": 1.2375250958753774,
+          "maxEdgeStretch": 1.9738775376953284,
+          "maxSeamGapMeters": 7.306888890233913e-06,
+          "stanceSoleZ": {
+            "Left": -0.0003288593143224716
+          }
+        },
+        {
+          "phase": 0.125,
+          "minZ": -1.8533319234848022e-07,
+          "p99EdgeStretch": 1.245358960112535,
+          "maxEdgeStretch": 1.99670952091175,
+          "maxSeamGapMeters": 7.312618654177978e-06,
+          "stanceSoleZ": {
+            "Left": -1.8533319234848022e-07
+          }
+        },
+        {
+          "phase": 0.14583333333333334,
+          "minZ": -0.00029997527599334717,
+          "p99EdgeStretch": 1.2474981587321998,
+          "maxEdgeStretch": 1.9904524409609912,
+          "maxSeamGapMeters": 7.292577135758615e-06,
+          "stanceSoleZ": {
+            "Left": -0.00029997527599334717
+          }
+        },
+        {
+          "phase": 0.16666666666666666,
+          "minZ": -4.563480615615845e-08,
+          "p99EdgeStretch": 1.2486043061291006,
+          "maxEdgeStretch": 1.9841861501114495,
+          "maxSeamGapMeters": 7.309349935542944e-06,
+          "stanceSoleZ": {
+            "Left": -4.563480615615845e-08
+          }
+        },
+        {
+          "phase": 0.1875,
+          "minZ": -0.00029445160180330276,
+          "p99EdgeStretch": 1.2506857158132851,
+          "maxEdgeStretch": 1.9460598836058893,
+          "maxSeamGapMeters": 7.313252487347019e-06,
+          "stanceSoleZ": {
+            "Left": -0.00029445160180330276
+          }
+        },
+        {
+          "phase": 0.20833333333333334,
+          "minZ": 2.8777867555618286e-07,
+          "p99EdgeStretch": 1.2625905782607656,
+          "maxEdgeStretch": 1.9076188800820404,
+          "maxSeamGapMeters": 7.311297675570546e-06,
+          "stanceSoleZ": {
+            "Left": 2.8777867555618286e-07
+          }
+        },
+        {
+          "phase": 0.22916666666666666,
+          "minZ": -0.0002959594130516052,
+          "p99EdgeStretch": 1.2633956626943863,
+          "maxEdgeStretch": 1.840378993795999,
+          "maxSeamGapMeters": 7.30119745622791e-06,
+          "stanceSoleZ": {
+            "Left": -0.0002959594130516052
+          }
+        },
+        {
+          "phase": 0.25,
+          "minZ": 7.543712854385376e-07,
+          "p99EdgeStretch": 1.2648633708806687,
+          "maxEdgeStretch": 1.7738770599066866,
+          "maxSeamGapMeters": 7.297161929012059e-06,
+          "stanceSoleZ": {
+            "Left": 7.543712854385376e-07
+          }
+        },
+        {
+          "phase": 0.2708333333333333,
+          "minZ": -0.0003000190481543541,
+          "p99EdgeStretch": 1.2597862339917616,
+          "maxEdgeStretch": 1.6905049004061738,
+          "maxSeamGapMeters": 7.30119745622791e-06,
+          "stanceSoleZ": {
+            "Left": -0.0003000190481543541
+          }
+        },
+        {
+          "phase": 0.2916666666666667,
+          "minZ": 1.085922122001648e-06,
+          "p99EdgeStretch": 1.2559285647714087,
+          "maxEdgeStretch": 1.7213337081471214,
+          "maxSeamGapMeters": 7.311297675570546e-06,
+          "stanceSoleZ": {
+            "Left": 1.085922122001648e-06
+          }
+        },
+        {
+          "phase": 0.3125,
+          "minZ": -0.00030306633561849594,
+          "p99EdgeStretch": 1.2480915516937217,
+          "maxEdgeStretch": 1.74949602666728,
+          "maxSeamGapMeters": 7.313252487347019e-06,
+          "stanceSoleZ": {
+            "Left": -0.00030306633561849594
+          }
+        },
+        {
+          "phase": 0.3333333333333333,
+          "minZ": 1.364387571811676e-06,
+          "p99EdgeStretch": 1.2379580147248708,
+          "maxEdgeStretch": 1.777938407654649,
+          "maxSeamGapMeters": 7.309349935542944e-06,
+          "stanceSoleZ": {
+            "Left": 1.364387571811676e-06
+          }
+        },
+        {
+          "phase": 0.3541666666666667,
+          "minZ": -0.0003037303686141968,
+          "p99EdgeStretch": 1.225807202208593,
+          "maxEdgeStretch": 1.7740071498038381,
+          "maxSeamGapMeters": 7.292577135758615e-06,
+          "stanceSoleZ": {
+            "Left": -0.0003037303686141968
+          }
+        },
+        {
+          "phase": 0.375,
+          "minZ": 1.6735866665840149e-06,
+          "p99EdgeStretch": 1.2124879570103224,
+          "maxEdgeStretch": 1.7700853690696554,
+          "maxSeamGapMeters": 7.312618654177978e-06,
+          "stanceSoleZ": {
+            "Left": 1.6735866665840149e-06
+          }
+        },
+        {
+          "phase": 0.3958333333333333,
+          "minZ": -0.0003115404397249222,
+          "p99EdgeStretch": 1.1975531795016332,
+          "maxEdgeStretch": 1.7443271054119316,
+          "maxSeamGapMeters": 7.306888890233913e-06,
+          "stanceSoleZ": {
+            "Left": -0.0003115404397249222
+          }
+        },
+        {
+          "phase": 0.4166666666666667,
+          "minZ": 2.0014122128486633e-06,
+          "p99EdgeStretch": 1.192730607206907,
+          "maxEdgeStretch": 1.718594083739538,
+          "maxSeamGapMeters": 7.308453724867597e-06,
+          "stanceSoleZ": {
+            "Left": 2.0014122128486633e-06
+          }
+        },
+        {
+          "phase": 0.4375,
+          "minZ": -0.00023049023002386093,
+          "p99EdgeStretch": 1.1855926189190589,
+          "maxEdgeStretch": 1.6910443143744123,
+          "maxSeamGapMeters": 7.302911736015587e-06,
+          "stanceSoleZ": {
+            "Left": -0.00023049023002386093
+          }
+        },
+        {
+          "phase": 0.4583333333333333,
+          "minZ": 0.00021759234368801117,
+          "p99EdgeStretch": 1.181298178955044,
+          "maxEdgeStretch": 1.6635566591444726,
+          "maxSeamGapMeters": 7.310762620816423e-06,
+          "stanceSoleZ": {}
+        },
+        {
+          "phase": 0.4791666666666667,
+          "minZ": 0.0025126070249825716,
+          "p99EdgeStretch": 1.1796254566521587,
+          "maxEdgeStretch": 1.6523262242771883,
+          "maxSeamGapMeters": 7.31762330199538e-06,
+          "stanceSoleZ": {}
+        },
+        {
+          "phase": 0.5,
+          "minZ": -4.5184424379840493e-07,
+          "p99EdgeStretch": 1.1795458586386345,
+          "maxEdgeStretch": 1.6411488461061912,
+          "maxSeamGapMeters": 7.312284636153286e-06,
+          "stanceSoleZ": {
+            "Right": -4.5184424379840493e-07
+          }
+        },
+        {
+          "phase": 0.5208333333333334,
+          "minZ": -0.00040517773595638573,
+          "p99EdgeStretch": 1.185303628781459,
+          "maxEdgeStretch": 1.6270944146361215,
+          "maxSeamGapMeters": 7.305266729740128e-06,
+          "stanceSoleZ": {
+            "Right": -0.00040517773595638573
+          }
+        },
+        {
+          "phase": 0.5416666666666666,
+          "minZ": -4.345711204223335e-07,
+          "p99EdgeStretch": 1.1943407051903348,
+          "maxEdgeStretch": 1.6130893858627795,
+          "maxSeamGapMeters": 7.309304368160274e-06,
+          "stanceSoleZ": {
+            "Right": -4.345711204223335e-07
+          }
+        },
+        {
+          "phase": 0.5625,
+          "minZ": -0.00032038893550634384,
+          "p99EdgeStretch": 1.201707643339857,
+          "maxEdgeStretch": 1.5926652638060308,
+          "maxSeamGapMeters": 7.311749416370872e-06,
+          "stanceSoleZ": {
+            "Right": -0.00032038893550634384
+          }
+        },
+        {
+          "phase": 0.5833333333333334,
+          "minZ": -4.5340857468545437e-07,
+          "p99EdgeStretch": 1.2080486955787666,
+          "maxEdgeStretch": 1.6192190736249281,
+          "maxSeamGapMeters": 7.306725550800497e-06,
+          "stanceSoleZ": {
+            "Right": -4.5340857468545437e-07
+          }
+        },
+        {
+          "phase": 0.6041666666666666,
+          "minZ": -0.0002968500484712422,
+          "p99EdgeStretch": 1.215735985098936,
+          "maxEdgeStretch": 1.6271961992288577,
+          "maxSeamGapMeters": 7.311050914606821e-06,
+          "stanceSoleZ": {
+            "Right": -0.0002968500484712422
+          }
+        },
+        {
+          "phase": 0.625,
+          "minZ": -4.220928531140089e-07,
+          "p99EdgeStretch": 1.2233883370995664,
+          "maxEdgeStretch": 1.6351656082819435,
+          "maxSeamGapMeters": 7.317092265971053e-06,
+          "stanceSoleZ": {
+            "Right": -4.220928531140089e-07
+          }
+        },
+        {
+          "phase": 0.6458333333333334,
+          "minZ": -0.0002979612036142498,
+          "p99EdgeStretch": 1.2268040577446917,
+          "maxEdgeStretch": 1.6172149530708582,
+          "maxSeamGapMeters": 7.321585889883587e-06,
+          "stanceSoleZ": {
+            "Right": -0.0002979612036142498
+          }
+        },
+        {
+          "phase": 0.6666666666666666,
+          "minZ": -3.8593861972913146e-07,
+          "p99EdgeStretch": 1.2272333243476958,
+          "maxEdgeStretch": 1.5992474471286429,
+          "maxSeamGapMeters": 7.319989736896773e-06,
+          "stanceSoleZ": {
+            "Right": -3.8593861972913146e-07
+          }
+        },
+        {
+          "phase": 0.6875,
+          "minZ": -0.00030309974681586027,
+          "p99EdgeStretch": 1.2256022326779494,
+          "maxEdgeStretch": 1.5536409671698703,
+          "maxSeamGapMeters": 7.302773902938549e-06,
+          "stanceSoleZ": {
+            "Right": -0.00030309974681586027
+          }
+        },
+        {
+          "phase": 0.7083333333333334,
+          "minZ": -4.6465720515698195e-07,
+          "p99EdgeStretch": 1.2301370213260916,
+          "maxEdgeStretch": 1.5511245968955845,
+          "maxSeamGapMeters": 7.304335819264909e-06,
+          "stanceSoleZ": {
+            "Right": -4.6465720515698195e-07
+          }
+        },
+        {
+          "phase": 0.7291666666666666,
+          "minZ": -0.00030524274916388094,
+          "p99EdgeStretch": 1.2299400330879275,
+          "maxEdgeStretch": 1.544158882189765,
+          "maxSeamGapMeters": 7.312117621419203e-06,
+          "stanceSoleZ": {
+            "Right": -0.00030524274916388094
+          }
+        },
+        {
+          "phase": 0.75,
+          "minZ": -5.061374395154417e-07,
+          "p99EdgeStretch": 1.2299278606879258,
+          "maxEdgeStretch": 1.5935232391624659,
+          "maxSeamGapMeters": 7.310564960973648e-06,
+          "stanceSoleZ": {
+            "Right": -5.061374395154417e-07
+          }
+        },
+        {
+          "phase": 0.7708333333333334,
+          "minZ": -0.00030652349232695997,
+          "p99EdgeStretch": 1.2274986981897604,
+          "maxEdgeStretch": 1.623846385357496,
+          "maxSeamGapMeters": 7.312117621419203e-06,
+          "stanceSoleZ": {
+            "Right": -0.00030652349232695997
+          }
+        },
+        {
+          "phase": 0.7916666666666666,
+          "minZ": -3.460227162577212e-07,
+          "p99EdgeStretch": 1.2252119247746396,
+          "maxEdgeStretch": 1.6549380286736313,
+          "maxSeamGapMeters": 7.304335819264909e-06,
+          "stanceSoleZ": {
+            "Right": -3.460227162577212e-07
+          }
+        },
+        {
+          "phase": 0.8125,
+          "minZ": -0.000311250303639099,
+          "p99EdgeStretch": 1.2261976396511793,
+          "maxEdgeStretch": 1.6628295678972367,
+          "maxSeamGapMeters": 7.302773902938549e-06,
+          "stanceSoleZ": {
+            "Right": -0.000311250303639099
+          }
+        },
+        {
+          "phase": 0.8333333333333334,
+          "minZ": -4.27491613663733e-07,
+          "p99EdgeStretch": 1.2264178870351798,
+          "maxEdgeStretch": 1.6711886986679747,
+          "maxSeamGapMeters": 7.319989736896773e-06,
+          "stanceSoleZ": {
+            "Right": -4.27491613663733e-07
+          }
+        },
+        {
+          "phase": 0.8541666666666666,
+          "minZ": -0.000325715693179518,
+          "p99EdgeStretch": 1.2223563463391205,
+          "maxEdgeStretch": 1.6727638552499469,
+          "maxSeamGapMeters": 7.321585889883587e-06,
+          "stanceSoleZ": {
+            "Right": -0.000325715693179518
+          }
+        },
+        {
+          "phase": 0.875,
+          "minZ": -4.264511517249048e-07,
+          "p99EdgeStretch": 1.2202145698929534,
+          "maxEdgeStretch": 1.696196212203103,
+          "maxSeamGapMeters": 7.317092265971053e-06,
+          "stanceSoleZ": {
+            "Right": -4.264511517249048e-07
+          }
+        },
+        {
+          "phase": 0.8958333333333334,
+          "minZ": -0.00036878453101962805,
+          "p99EdgeStretch": 1.2133131354852122,
+          "maxEdgeStretch": 1.7120265856775339,
+          "maxSeamGapMeters": 7.311050914606821e-06,
+          "stanceSoleZ": {
+            "Right": -0.00036878453101962805
+          }
+        },
+        {
+          "phase": 0.9166666666666666,
+          "minZ": -4.576431820169091e-07,
+          "p99EdgeStretch": 1.2101924124670533,
+          "maxEdgeStretch": 1.727829969129967,
+          "maxSeamGapMeters": 7.306725550800497e-06,
+          "stanceSoleZ": {
+            "Right": -4.576431820169091e-07
+          }
+        },
+        {
+          "phase": 0.9375,
+          "minZ": -0.0003652271698229015,
+          "p99EdgeStretch": 1.203793585351867,
+          "maxEdgeStretch": 1.7305480571292235,
+          "maxSeamGapMeters": 7.311749416370872e-06,
+          "stanceSoleZ": {
+            "Right": -0.0003652271698229015
+          }
+        },
+        {
+          "phase": 0.9583333333333334,
+          "minZ": 0.00021465803729370236,
+          "p99EdgeStretch": 1.201266281001784,
+          "maxEdgeStretch": 1.7332656519109249,
+          "maxSeamGapMeters": 7.309304368160274e-06,
+          "stanceSoleZ": {}
+        },
+        {
+          "phase": 0.9791666666666666,
+          "minZ": 0.0023386990651488304,
+          "p99EdgeStretch": 1.2013429583370205,
+          "maxEdgeStretch": 1.7529113502410905,
+          "maxSeamGapMeters": 7.305266729740128e-06,
+          "stanceSoleZ": {}
+        }
+      ],
+      "groundPassed": true,
+      "stretchPassed": true,
+      "loopMaxPositionErrorMeters": 0.0,
+      "stanceContactPassed": true
+    },
+    {
+      "name": "walk",
+      "durationSeconds": 1.2,
+      "samples": [
+        {
+          "phase": 0.0,
+          "minZ": -4.1909515857696533e-07,
+          "p99EdgeStretch": 1.13880729242799,
+          "maxEdgeStretch": 1.5114637583070205,
+          "maxSeamGapMeters": 7.31750571876904e-06,
+          "stanceSoleZ": {
+            "Left": -4.1909515857696533e-07,
+            "Right": -3.8050347939133644e-07
+          }
+        },
+        {
+          "phase": 0.013888888888888888,
+          "minZ": -4.779547452926636e-05,
+          "p99EdgeStretch": 1.1389049894033714,
+          "maxEdgeStretch": 1.5141754240852618,
+          "maxSeamGapMeters": 7.314755249464944e-06,
+          "stanceSoleZ": {
+            "Left": -4.779547452926636e-05,
+            "Right": -2.9013688617851585e-05
+          }
+        },
+        {
+          "phase": 0.027777777777777776,
+          "minZ": -4.3207546696066856e-07,
+          "p99EdgeStretch": 1.1397095702444298,
+          "maxEdgeStretch": 1.516889037614648,
+          "maxSeamGapMeters": 7.31691398095027e-06,
+          "stanceSoleZ": {
+            "Left": -4.256144165992737e-07,
+            "Right": -4.3207546696066856e-07
+          }
+        },
+        {
+          "phase": 0.041666666666666664,
+          "minZ": -3.572974674170837e-05,
+          "p99EdgeStretch": 1.1396765619313154,
+          "maxEdgeStretch": 1.5172692845188087,
+          "maxSeamGapMeters": 7.319079660174398e-06,
+          "stanceSoleZ": {
+            "Left": -3.181491047143936e-05,
+            "Right": -3.572974674170837e-05
+          }
+        },
+        {
+          "phase": 0.05555555555555555,
+          "minZ": -4.7313369577750564e-07,
+          "p99EdgeStretch": 1.1391727941813772,
+          "maxEdgeStretch": 1.517649690216125,
+          "maxSeamGapMeters": 7.323431837164326e-06,
+          "stanceSoleZ": {
+            "Left": -3.501772880554199e-07,
+            "Right": -4.7313369577750564e-07
+          }
+        },
+        {
+          "phase": 0.06944444444444445,
+          "minZ": -4.489998536882922e-05,
+          "p99EdgeStretch": 1.1388618464602953,
+          "maxEdgeStretch": 1.5156641862042755,
+          "maxSeamGapMeters": 7.316473939752858e-06,
+          "stanceSoleZ": {
+            "Left": -2.436526119709015e-05,
+            "Right": -4.489998536882922e-05
+          }
+        },
+        {
+          "phase": 0.08333333333333333,
+          "minZ": -4.3751788325607777e-07,
+          "p99EdgeStretch": 1.1380940595068911,
+          "maxEdgeStretch": 1.5136802028010161,
+          "maxSeamGapMeters": 7.3186700887282525e-06,
+          "stanceSoleZ": {
+            "Left": -3.1851232051849365e-07,
+            "Right": -4.3751788325607777e-07
+          }
+        },
+        {
+          "phase": 0.09722222222222222,
+          "minZ": -5.5981836339924484e-05,
+          "p99EdgeStretch": 1.1375034528670103,
+          "maxEdgeStretch": 1.5093636419950829,
+          "maxSeamGapMeters": 7.323083151765982e-06,
+          "stanceSoleZ": {
+            "Left": -2.12816521525383e-05,
+            "Right": -5.5981836339924484e-05
+          }
+        },
+        {
+          "phase": 0.1111111111111111,
+          "minZ": -3.8436701288446784e-07,
+          "p99EdgeStretch": 1.134802014780227,
+          "maxEdgeStretch": 1.5050467275990842,
+          "maxSeamGapMeters": 7.311753212393798e-06,
+          "stanceSoleZ": {
+            "Left": -3.781169652938843e-07,
+            "Right": -3.8436701288446784e-07
+          }
+        },
+        {
+          "phase": 0.125,
+          "minZ": -2.026371657848358e-05,
+          "p99EdgeStretch": 1.1348023154878129,
+          "maxEdgeStretch": 1.5044194867322198,
+          "maxSeamGapMeters": 7.316185622548756e-06,
+          "stanceSoleZ": {
+            "Left": -2.026371657848358e-05
+          }
+        },
+        {
+          "phase": 0.1388888888888889,
+          "minZ": -3.7439167499542236e-07,
+          "p99EdgeStretch": 1.1338307460431987,
+          "maxEdgeStretch": 1.5037919151105095,
+          "maxSeamGapMeters": 7.318412198650871e-06,
+          "stanceSoleZ": {
+            "Left": -3.7439167499542236e-07
+          }
+        },
+        {
+          "phase": 0.1527777777777778,
+          "minZ": -2.0030885934829712e-05,
+          "p99EdgeStretch": 1.1362575081589135,
+          "maxEdgeStretch": 1.52355795448786,
+          "maxSeamGapMeters": 7.311555816588354e-06,
+          "stanceSoleZ": {
+            "Left": -2.0030885934829712e-05
+          }
+        },
+        {
+          "phase": 0.16666666666666666,
+          "minZ": -2.7008354663848877e-07,
+          "p99EdgeStretch": 1.1378299143303416,
+          "maxEdgeStretch": 1.5433292981723494,
+          "maxSeamGapMeters": 7.311555816588354e-06,
+          "stanceSoleZ": {
+            "Left": -2.7008354663848877e-07
+          }
+        },
+        {
+          "phase": 0.18055555555555555,
+          "minZ": -2.0409002900123596e-05,
+          "p99EdgeStretch": 1.1420955110043818,
+          "maxEdgeStretch": 1.5721788541835615,
+          "maxSeamGapMeters": 7.322886061370528e-06,
+          "stanceSoleZ": {
+            "Left": -2.0409002900123596e-05
+          }
+        },
+        {
+          "phase": 0.19444444444444445,
+          "minZ": -2.4586915969848633e-07,
+          "p99EdgeStretch": 1.1466588568316078,
+          "maxEdgeStretch": 1.6010041130089592,
+          "maxSeamGapMeters": 7.322886061370528e-06,
+          "stanceSoleZ": {
+            "Left": -2.4586915969848633e-07
+          }
+        },
+        {
+          "phase": 0.20833333333333334,
+          "minZ": -2.141110599040985e-05,
+          "p99EdgeStretch": 1.1510998506439183,
+          "maxEdgeStretch": 1.6262717387513792,
+          "maxSeamGapMeters": 7.316049047275777e-06,
+          "stanceSoleZ": {
+            "Left": -2.141110599040985e-05
+          }
+        },
+        {
+          "phase": 0.2222222222222222,
+          "minZ": -8.475035429000854e-08,
+          "p99EdgeStretch": 1.1560488582643873,
+          "maxEdgeStretch": 1.6514969207975767,
+          "maxSeamGapMeters": 7.318011123599033e-06,
+          "stanceSoleZ": {
+            "Left": -8.475035429000854e-08
+          }
+        },
+        {
+          "phase": 0.2361111111111111,
+          "minZ": -2.3322179913520813e-05,
+          "p99EdgeStretch": 1.1596225577265415,
+          "maxEdgeStretch": 1.6662725882608609,
+          "maxSeamGapMeters": 7.322886061370528e-06,
+          "stanceSoleZ": {
+            "Left": -2.3322179913520813e-05
+          }
+        },
+        {
+          "phase": 0.25,
+          "minZ": -1.3783574104309082e-07,
+          "p99EdgeStretch": 1.1639450230037023,
+          "maxEdgeStretch": 1.681028922409679,
+          "maxSeamGapMeters": 7.316049047275777e-06,
+          "stanceSoleZ": {
+            "Left": -1.3783574104309082e-07
+          }
+        },
+        {
+          "phase": 0.2638888888888889,
+          "minZ": -2.5906600058078766e-05,
+          "p99EdgeStretch": 1.1708604897785677,
+          "maxEdgeStretch": 1.6820663353396765,
+          "maxSeamGapMeters": 7.322886061370528e-06,
+          "stanceSoleZ": {
+            "Left": -2.5906600058078766e-05
+          }
+        },
+        {
+          "phase": 0.2777777777777778,
+          "minZ": -9.406358003616333e-08,
+          "p99EdgeStretch": 1.1804648434710987,
+          "maxEdgeStretch": 1.6831040667457742,
+          "maxSeamGapMeters": 7.318011123599033e-06,
+          "stanceSoleZ": {
+            "Left": -9.406358003616333e-08
+          }
+        },
+        {
+          "phase": 0.2916666666666667,
+          "minZ": -2.8536655008792877e-05,
+          "p99EdgeStretch": 1.185799401025543,
+          "maxEdgeStretch": 1.6694998803301706,
+          "maxSeamGapMeters": 7.316049047275777e-06,
+          "stanceSoleZ": {
+            "Left": -2.8536655008792877e-05
+          }
+        },
+        {
+          "phase": 0.3055555555555556,
+          "minZ": -8.847564458847046e-08,
+          "p99EdgeStretch": 1.1916307292646289,
+          "maxEdgeStretch": 1.6558763215342385,
+          "maxSeamGapMeters": 7.322886061370528e-06,
+          "stanceSoleZ": {
+            "Left": -8.847564458847046e-08
+          }
+        },
+        {
+          "phase": 0.3194444444444444,
+          "minZ": -3.0336901545524597e-05,
+          "p99EdgeStretch": 1.194120682368195,
+          "maxEdgeStretch": 1.628626383253511,
+          "maxSeamGapMeters": 7.322886061370528e-06,
+          "stanceSoleZ": {
+            "Left": -3.0336901545524597e-05
+          }
+        },
+        {
+          "phase": 0.3333333333333333,
+          "minZ": -7.450580596923828e-09,
+          "p99EdgeStretch": 1.1963921661562027,
+          "maxEdgeStretch": 1.6013247961836479,
+          "maxSeamGapMeters": 7.311555816588354e-06,
+          "stanceSoleZ": {
+            "Left": -7.450580596923828e-09
+          }
+        },
+        {
+          "phase": 0.3472222222222222,
+          "minZ": -3.0484981834888458e-05,
+          "p99EdgeStretch": 1.1959418033064406,
+          "maxEdgeStretch": 1.5631092373366147,
+          "maxSeamGapMeters": 7.311555816588354e-06,
+          "stanceSoleZ": {
+            "Left": -3.0484981834888458e-05
+          }
+        },
+        {
+          "phase": 0.3611111111111111,
+          "minZ": 7.35744833946228e-08,
+          "p99EdgeStretch": 1.1948665888358228,
+          "maxEdgeStretch": 1.5248576564912886,
+          "maxSeamGapMeters": 7.318412198650871e-06,
+          "stanceSoleZ": {
+            "Left": 7.35744833946228e-08
+          }
+        },
+        {
+          "phase": 0.375,
+          "minZ": -2.912525087594986e-05,
+          "p99EdgeStretch": 1.189329671652423,
+          "maxEdgeStretch": 1.4798191251837218,
+          "maxSeamGapMeters": 7.316185622548756e-06,
+          "stanceSoleZ": {
+            "Left": -2.912525087594986e-05
+          }
+        },
+        {
+          "phase": 0.3888888888888889,
+          "minZ": 1.0337680578231812e-07,
+          "p99EdgeStretch": 1.1842929594207126,
+          "maxEdgeStretch": 1.434867467008576,
+          "maxSeamGapMeters": 7.311753212393798e-06,
+          "stanceSoleZ": {
+            "Left": 1.0337680578231812e-07
+          }
+        },
+        {
+          "phase": 0.4027777777777778,
+          "minZ": -2.6742927730083466e-05,
+          "p99EdgeStretch": 1.1773789576103482,
+          "maxEdgeStretch": 1.4266521111946258,
+          "maxSeamGapMeters": 7.323083151765982e-06,
+          "stanceSoleZ": {
+            "Left": -2.6742927730083466e-05
+          }
+        },
+        {
+          "phase": 0.4166666666666667,
+          "minZ": 1.210719347000122e-07,
+          "p99EdgeStretch": 1.1703182019423772,
+          "maxEdgeStretch": 1.4195911390532605,
+          "maxSeamGapMeters": 7.3186700887282525e-06,
+          "stanceSoleZ": {
+            "Left": 1.210719347000122e-07
+          }
+        },
+        {
+          "phase": 0.4305555555555556,
+          "minZ": -2.4060718715190887e-05,
+          "p99EdgeStretch": 1.1599485873338728,
+          "maxEdgeStretch": 1.4038121787980498,
+          "maxSeamGapMeters": 7.316473939752858e-06,
+          "stanceSoleZ": {
+            "Left": -2.4060718715190887e-05
+          }
+        },
+        {
+          "phase": 0.4444444444444444,
+          "minZ": 3.7439167499542236e-07,
+          "p99EdgeStretch": 1.1551407981251143,
+          "maxEdgeStretch": 1.3881499344368513,
+          "maxSeamGapMeters": 7.323431837164326e-06,
+          "stanceSoleZ": {
+            "Left": 3.7439167499542236e-07
+          }
+        },
+        {
+          "phase": 0.4583333333333333,
+          "minZ": -2.1830201148986816e-05,
+          "p99EdgeStretch": 1.1490304687482462,
+          "maxEdgeStretch": 1.3722164302868674,
+          "maxSeamGapMeters": 7.319079660174398e-06,
+          "stanceSoleZ": {
+            "Left": -2.1830201148986816e-05
+          }
+        },
+        {
+          "phase": 0.4722222222222222,
+          "minZ": 2.086162567138672e-07,
+          "p99EdgeStretch": 1.1434969159052235,
+          "maxEdgeStretch": 1.361047765850923,
+          "maxSeamGapMeters": 7.31691398095027e-06,
+          "stanceSoleZ": {
+            "Left": 2.086162567138672e-07
+          }
+        },
+        {
+          "phase": 0.4861111111111111,
+          "minZ": -2.101808786392212e-05,
+          "p99EdgeStretch": 1.1421531403351814,
+          "maxEdgeStretch": 1.3548178414825742,
+          "maxSeamGapMeters": 7.314755249464944e-06,
+          "stanceSoleZ": {
+            "Left": -2.101808786392212e-05
+          }
+        },
+        {
+          "phase": 0.5,
+          "minZ": -5.167385097593069e-07,
+          "p99EdgeStretch": 1.140795626746261,
+          "maxEdgeStretch": 1.3485826155093015,
+          "maxSeamGapMeters": 7.31750571876904e-06,
+          "stanceSoleZ": {
+            "Left": 3.8463622331619263e-07,
+            "Right": -5.167385097593069e-07
+          }
+        },
+        {
+          "phase": 0.5138888888888888,
+          "minZ": -2.31228259508498e-05,
+          "p99EdgeStretch": 1.14174836979603,
+          "maxEdgeStretch": 1.3451098251081233,
+          "maxSeamGapMeters": 7.324583896957312e-06,
+          "stanceSoleZ": {
+            "Left": -2.2008083760738373e-05,
+            "Right": -2.31228259508498e-05
+          }
+        },
+        {
+          "phase": 0.5277777777777778,
+          "minZ": -5.326728569343686e-07,
+          "p99EdgeStretch": 1.1418407255511742,
+          "maxEdgeStretch": 1.3416472553841354,
+          "maxSeamGapMeters": 7.324583896957312e-06,
+          "stanceSoleZ": {
+            "Left": 3.7904828786849976e-07,
+            "Right": -5.326728569343686e-07
+          }
+        },
+        {
+          "phase": 0.5416666666666666,
+          "minZ": -2.4747103452682495e-05,
+          "p99EdgeStretch": 1.1412196666289103,
+          "maxEdgeStretch": 1.3367369976654249,
+          "maxSeamGapMeters": 7.320353735905956e-06,
+          "stanceSoleZ": {
+            "Left": -2.4747103452682495e-05,
+            "Right": -2.0842817320954055e-05
+          }
+        },
+        {
+          "phase": 0.5555555555555556,
+          "minZ": -4.5640626922249794e-07,
+          "p99EdgeStretch": 1.1410875179723303,
+          "maxEdgeStretch": 1.331818906097044,
+          "maxSeamGapMeters": 7.316151478969531e-06,
+          "stanceSoleZ": {
+            "Left": 5.112960934638977e-07,
+            "Right": -4.5640626922249794e-07
+          }
+        },
+        {
+          "phase": 0.5694444444444444,
+          "minZ": -2.8951093554496765e-05,
+          "p99EdgeStretch": 1.139681716617635,
+          "maxEdgeStretch": 1.325640682869991,
+          "maxSeamGapMeters": 7.325387199843254e-06,
+          "stanceSoleZ": {
+            "Left": -2.8951093554496765e-05,
+            "Right": -2.0094754290767014e-05
+          }
+        },
+        {
+          "phase": 0.5833333333333334,
+          "minZ": -4.723988240584731e-07,
+          "p99EdgeStretch": 1.1386585552992525,
+          "maxEdgeStretch": 1.3194666511131579,
+          "maxSeamGapMeters": 7.325387199843254e-06,
+          "stanceSoleZ": {
+            "Left": 5.289912223815918e-07,
+            "Right": -4.723988240584731e-07
+          }
+        },
+        {
+          "phase": 0.5972222222222222,
+          "minZ": -3.3785589039325714e-05,
+          "p99EdgeStretch": 1.1362844020382374,
+          "maxEdgeStretch": 1.3122730763309103,
+          "maxSeamGapMeters": 7.309900518964e-06,
+          "stanceSoleZ": {
+            "Left": -3.3785589039325714e-05,
+            "Right": -2.041321567958221e-05
+          }
+        },
+        {
+          "phase": 0.6111111111111112,
+          "minZ": -4.182729753665626e-07,
+          "p99EdgeStretch": 1.1333083530025787,
+          "maxEdgeStretch": 1.3050794648799051,
+          "maxSeamGapMeters": 7.309900518964e-06,
+          "stanceSoleZ": {
+            "Left": 5.355104804039001e-07,
+            "Right": -4.182729753665626e-07
+          }
+        },
+        {
+          "phase": 0.625,
+          "minZ": -2.086623862851411e-05,
+          "p99EdgeStretch": 1.131681173550212,
+          "maxEdgeStretch": 1.2995780623948452,
+          "maxSeamGapMeters": 7.3078308696718706e-06,
+          "stanceSoleZ": {
+            "Right": -2.086623862851411e-05
+          }
+        },
+        {
+          "phase": 0.6388888888888888,
+          "minZ": -4.340836312621832e-07,
+          "p99EdgeStretch": 1.1285767250541985,
+          "maxEdgeStretch": 1.3056020743167742,
+          "maxSeamGapMeters": 7.32634195473687e-06,
+          "stanceSoleZ": {
+            "Right": -4.340836312621832e-07
+          }
+        },
+        {
+          "phase": 0.6527777777777778,
+          "minZ": -2.1065192413516343e-05,
+          "p99EdgeStretch": 1.1310875785177399,
+          "maxEdgeStretch": 1.3113630294101906,
+          "maxSeamGapMeters": 7.340829866210694e-06,
+          "stanceSoleZ": {
+            "Right": -2.1065192413516343e-05
+          }
+        },
+        {
+          "phase": 0.6666666666666666,
+          "minZ": -4.067333065904677e-07,
+          "p99EdgeStretch": 1.1339507545858725,
+          "maxEdgeStretch": 1.3171383889315245,
+          "maxSeamGapMeters": 7.32019069692104e-06,
+          "stanceSoleZ": {
+            "Right": -4.067333065904677e-07
+          }
+        },
+        {
+          "phase": 0.6805555555555556,
+          "minZ": -2.0990388293284923e-05,
+          "p99EdgeStretch": 1.1362882663586595,
+          "maxEdgeStretch": 1.3230710764628717,
+          "maxSeamGapMeters": 7.318154299485503e-06,
+          "stanceSoleZ": {
+            "Right": -2.0990388293284923e-05
+          }
+        },
+        {
+          "phase": 0.6944444444444444,
+          "minZ": -5.324327503331006e-07,
+          "p99EdgeStretch": 1.139775038623984,
+          "maxEdgeStretch": 1.3290173379438146,
+          "maxSeamGapMeters": 7.3294819177148105e-06,
+          "stanceSoleZ": {
+            "Right": -5.324327503331006e-07
+          }
+        },
+        {
+          "phase": 0.7083333333333334,
+          "minZ": -2.0684528863057494e-05,
+          "p99EdgeStretch": 1.1411154692796532,
+          "maxEdgeStretch": 1.3354946711741487,
+          "maxSeamGapMeters": 7.318154299485503e-06,
+          "stanceSoleZ": {
+            "Right": -2.0684528863057494e-05
+          }
+        },
+        {
+          "phase": 0.7222222222222222,
+          "minZ": -4.407120286487043e-07,
+          "p99EdgeStretch": 1.1442719684499556,
+          "maxEdgeStretch": 1.3426494811390428,
+          "maxSeamGapMeters": 7.316595333071394e-06,
+          "stanceSoleZ": {
+            "Right": -4.407120286487043e-07
+          }
+        },
+        {
+          "phase": 0.7361111111111112,
+          "minZ": -2.0528786990325898e-05,
+          "p99EdgeStretch": 1.1486109363566415,
+          "maxEdgeStretch": 1.362707326409514,
+          "maxSeamGapMeters": 7.325421300375049e-06,
+          "stanceSoleZ": {
+            "Right": -2.0528786990325898e-05
+          }
+        },
+        {
+          "phase": 0.75,
+          "minZ": -4.5034539652988315e-07,
+          "p99EdgeStretch": 1.1504656898975087,
+          "maxEdgeStretch": 1.3825269372629503,
+          "maxSeamGapMeters": 7.323401517353955e-06,
+          "stanceSoleZ": {
+            "Right": -4.5034539652988315e-07
+          }
+        },
+        {
+          "phase": 0.7638888888888888,
+          "minZ": -2.0787141693290323e-05,
+          "p99EdgeStretch": 1.1535736393074574,
+          "maxEdgeStretch": 1.3953748128098826,
+          "maxSeamGapMeters": 7.325421300375049e-06,
+          "stanceSoleZ": {
+            "Right": -2.0787141693290323e-05
+          }
+        },
+        {
+          "phase": 0.7777777777777778,
+          "minZ": -4.11942892242223e-07,
+          "p99EdgeStretch": 1.1563666031080424,
+          "maxEdgeStretch": 1.4081025874944264,
+          "maxSeamGapMeters": 7.316595333071394e-06,
+          "stanceSoleZ": {
+            "Right": -4.11942892242223e-07
+          }
+        },
+        {
+          "phase": 0.7916666666666666,
+          "minZ": -2.1409927285276353e-05,
+          "p99EdgeStretch": 1.1583195174707184,
+          "maxEdgeStretch": 1.4123124622742131,
+          "maxSeamGapMeters": 7.318154299485503e-06,
+          "stanceSoleZ": {
+            "Right": -2.1409927285276353e-05
+          }
+        },
+        {
+          "phase": 0.8055555555555556,
+          "minZ": -4.3606996769085526e-07,
+          "p99EdgeStretch": 1.161176972135402,
+          "maxEdgeStretch": 1.4165107329208757,
+          "maxSeamGapMeters": 7.3294819177148105e-06,
+          "stanceSoleZ": {
+            "Right": -4.3606996769085526e-07
+          }
+        },
+        {
+          "phase": 0.8194444444444444,
+          "minZ": -2.2146639821585268e-05,
+          "p99EdgeStretch": 1.1630839869572587,
+          "maxEdgeStretch": 1.4115490967725108,
+          "maxSeamGapMeters": 7.318154299485503e-06,
+          "stanceSoleZ": {
+            "Right": -2.2146639821585268e-05
+          }
+        },
+        {
+          "phase": 0.8333333333333334,
+          "minZ": -4.378161975182593e-07,
+          "p99EdgeStretch": 1.161918319715501,
+          "maxEdgeStretch": 1.426232935987766,
+          "maxSeamGapMeters": 7.32019069692104e-06,
+          "stanceSoleZ": {
+            "Right": -4.378161975182593e-07
+          }
+        },
+        {
+          "phase": 0.8472222222222222,
+          "minZ": -2.2552398149855435e-05,
+          "p99EdgeStretch": 1.1591166558518118,
+          "maxEdgeStretch": 1.4325851948350703,
+          "maxSeamGapMeters": 7.340829866210694e-06,
+          "stanceSoleZ": {
+            "Right": -2.2552398149855435e-05
+          }
+        },
+        {
+          "phase": 0.8611111111111112,
+          "minZ": -4.6804052544757724e-07,
+          "p99EdgeStretch": 1.1556361279272833,
+          "maxEdgeStretch": 1.4389850028268465,
+          "maxSeamGapMeters": 7.32634195473687e-06,
+          "stanceSoleZ": {
+            "Right": -4.6804052544757724e-07
+          }
+        },
+        {
+          "phase": 0.875,
+          "minZ": -2.2411899408325553e-05,
+          "p99EdgeStretch": 1.152416123218429,
+          "maxEdgeStretch": 1.4403153769036974,
+          "maxSeamGapMeters": 7.3078308696718706e-06,
+          "stanceSoleZ": {
+            "Right": -2.2411899408325553e-05
+          }
+        },
+        {
+          "phase": 0.8888888888888888,
+          "minZ": -4.5143679017201066e-07,
+          "p99EdgeStretch": 1.152639100781766,
+          "maxEdgeStretch": 1.4509318507681837,
+          "maxSeamGapMeters": 7.309900518964e-06,
+          "stanceSoleZ": {
+            "Right": -4.5143679017201066e-07
+          }
+        },
+        {
+          "phase": 0.9027777777777778,
+          "minZ": -2.195463457610458e-05,
+          "p99EdgeStretch": 1.1518629367502893,
+          "maxEdgeStretch": 1.4607670750545703,
+          "maxSeamGapMeters": 7.309900518964e-06,
+          "stanceSoleZ": {
+            "Right": -2.195463457610458e-05
+          }
+        },
+        {
+          "phase": 0.9166666666666666,
+          "minZ": -4.5140041038393974e-07,
+          "p99EdgeStretch": 1.1500474361599784,
+          "maxEdgeStretch": 1.4706109540980745,
+          "maxSeamGapMeters": 7.325387199843254e-06,
+          "stanceSoleZ": {
+            "Right": -4.5140041038393974e-07
+          }
+        },
+        {
+          "phase": 0.9305555555555556,
+          "minZ": -2.177293208660558e-05,
+          "p99EdgeStretch": 1.147778184611302,
+          "maxEdgeStretch": 1.4791929398537058,
+          "maxSeamGapMeters": 7.325387199843254e-06,
+          "stanceSoleZ": {
+            "Right": -2.177293208660558e-05
+          }
+        },
+        {
+          "phase": 0.9444444444444444,
+          "minZ": -4.3270119931548834e-07,
+          "p99EdgeStretch": 1.143909687682392,
+          "maxEdgeStretch": 1.4877794184688413,
+          "maxSeamGapMeters": 7.316151478969531e-06,
+          "stanceSoleZ": {
+            "Right": -4.3270119931548834e-07
+          }
+        },
+        {
+          "phase": 0.9583333333333334,
+          "minZ": -2.2513784642796963e-05,
+          "p99EdgeStretch": 1.1417267709329897,
+          "maxEdgeStretch": 1.4946941695158076,
+          "maxSeamGapMeters": 7.320353735905956e-06,
+          "stanceSoleZ": {
+            "Right": -2.2513784642796963e-05
+          }
+        },
+        {
+          "phase": 0.9722222222222222,
+          "minZ": -2.946107997559011e-07,
+          "p99EdgeStretch": 1.139415660621809,
+          "maxEdgeStretch": 1.5016117331850931,
+          "maxSeamGapMeters": 7.324583896957312e-06,
+          "stanceSoleZ": {
+            "Right": -2.946107997559011e-07
+          }
+        },
+        {
+          "phase": 0.9861111111111112,
+          "minZ": -2.46786730713211e-05,
+          "p99EdgeStretch": 1.1384711729413077,
+          "maxEdgeStretch": 1.5065359731701222,
+          "maxSeamGapMeters": 7.324583896957312e-06,
+          "stanceSoleZ": {
+            "Right": -2.46786730713211e-05
+          }
+        }
+      ],
+      "groundPassed": true,
+      "stretchPassed": true,
+      "loopMaxPositionErrorMeters": 0.0,
+      "stanceContactPassed": true
+    },
+    {
+      "name": "idle",
+      "durationSeconds": 3.0,
+      "samples": [
+        {
+          "phase": 0.0,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0000100744507345,
+          "maxEdgeStretch": 1.0000362196390788,
+          "maxSeamGapMeters": 7.356998461537962e-06
+        },
+        {
+          "phase": 0.005555555555555556,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0003592025243095,
+          "maxEdgeStretch": 1.000686776207949,
+          "maxSeamGapMeters": 7.354745828768448e-06
+        },
+        {
+          "phase": 0.011111111111111112,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.000718419815185,
+          "maxEdgeStretch": 1.0013854886927165,
+          "maxSeamGapMeters": 7.356998461537962e-06
+        },
+        {
+          "phase": 0.016666666666666666,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0010760372621783,
+          "maxEdgeStretch": 1.0020572210340413,
+          "maxSeamGapMeters": 7.354745828768448e-06
+        },
+        {
+          "phase": 0.022222222222222223,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0014341675233052,
+          "maxEdgeStretch": 1.0027402435095591,
+          "maxSeamGapMeters": 7.354745828768448e-06
+        },
+        {
+          "phase": 0.027777777777777776,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0017912272183962,
+          "maxEdgeStretch": 1.0034383295937943,
+          "maxSeamGapMeters": 7.354745828768448e-06
+        },
+        {
+          "phase": 0.03333333333333333,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.002144119306916,
+          "maxEdgeStretch": 1.004097077130422,
+          "maxSeamGapMeters": 7.354745828768448e-06
+        },
+        {
+          "phase": 0.03888888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0024961618209762,
+          "maxEdgeStretch": 1.0047552167569602,
+          "maxSeamGapMeters": 7.354745828768448e-06
+        },
+        {
+          "phase": 0.044444444444444446,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.002849829612097,
+          "maxEdgeStretch": 1.0054266612366807,
+          "maxSeamGapMeters": 7.35250005581804e-06
+        },
+        {
+          "phase": 0.05,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0031915337026462,
+          "maxEdgeStretch": 1.0060871989194893,
+          "maxSeamGapMeters": 7.35250005581804e-06
+        },
+        {
+          "phase": 0.05555555555555555,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0035329155782944,
+          "maxEdgeStretch": 1.006740962000264,
+          "maxSeamGapMeters": 7.354745828768448e-06
+        },
+        {
+          "phase": 0.06111111111111111,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0038768907455418,
+          "maxEdgeStretch": 1.0073917518859645,
+          "maxSeamGapMeters": 7.35250005581804e-06
+        },
+        {
+          "phase": 0.06666666666666667,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0042105432816704,
+          "maxEdgeStretch": 1.0080196973522075,
+          "maxSeamGapMeters": 7.35250005581804e-06
+        },
+        {
+          "phase": 0.07222222222222222,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0045334490400646,
+          "maxEdgeStretch": 1.008655898430021,
+          "maxSeamGapMeters": 7.35250005581804e-06
+        },
+        {
+          "phase": 0.07777777777777778,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0048627838729964,
+          "maxEdgeStretch": 1.0092698886811655,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.08333333333333333,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0051751444461103,
+          "maxEdgeStretch": 1.0098655755287194,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.08888888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0054899510898319,
+          "maxEdgeStretch": 1.010462736368526,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.09444444444444444,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0057882251950059,
+          "maxEdgeStretch": 1.011040665720177,
+          "maxSeamGapMeters": 7.35250005581804e-06
+        },
+        {
+          "phase": 0.1,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.006088632185658,
+          "maxEdgeStretch": 1.0116178975701497,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.10555555555555556,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0063837959207624,
+          "maxEdgeStretch": 1.012174978803729,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.1111111111111111,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.006667492980773,
+          "maxEdgeStretch": 1.012731331743769,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.11666666666666667,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0069407477486947,
+          "maxEdgeStretch": 1.013263830681707,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.12222222222222222,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.007205992249805,
+          "maxEdgeStretch": 1.0137743555080634,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.12777777777777777,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0074635278847166,
+          "maxEdgeStretch": 1.0142356494001135,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.13333333333333333,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0077102658628527,
+          "maxEdgeStretch": 1.0147444566708121,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.1388888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.007947056702099,
+          "maxEdgeStretch": 1.01520171205593,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.14444444444444443,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0081850389428126,
+          "maxEdgeStretch": 1.0156358725838732,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.15,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.008395314241688,
+          "maxEdgeStretch": 1.0160410907410469,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.15555555555555556,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0086073240219477,
+          "maxEdgeStretch": 1.0164468040335326,
+          "maxSeamGapMeters": 7.3571946381033015e-06
+        },
+        {
+          "phase": 0.16111111111111112,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0087975879697848,
+          "maxEdgeStretch": 1.016844244431716,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.16666666666666666,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0089956267925648,
+          "maxEdgeStretch": 1.0171964651292544,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.17222222222222222,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0091620326367563,
+          "maxEdgeStretch": 1.0175389906461065,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.17777777777777778,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0093335021299747,
+          "maxEdgeStretch": 1.0178593619408172,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.18333333333333332,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0094902014052696,
+          "maxEdgeStretch": 1.0181676506142434,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.18888888888888888,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0096311345084608,
+          "maxEdgeStretch": 1.0184311599396825,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.19444444444444445,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0097579967849224,
+          "maxEdgeStretch": 1.0186826992012614,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.2,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0098780184442386,
+          "maxEdgeStretch": 1.0189342760647004,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.20555555555555555,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0099820427749155,
+          "maxEdgeStretch": 1.0191281438243653,
+          "maxSeamGapMeters": 7.336654470103633e-06
+        },
+        {
+          "phase": 0.2111111111111111,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0100831964552028,
+          "maxEdgeStretch": 1.0193225838737368,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.21666666666666667,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0101614146513196,
+          "maxEdgeStretch": 1.0194567765510416,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.2222222222222222,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0102382458200765,
+          "maxEdgeStretch": 1.0196355994973012,
+          "maxSeamGapMeters": 7.433305023928094e-06
+        },
+        {
+          "phase": 0.22777777777777777,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0102915792493967,
+          "maxEdgeStretch": 1.0197108991331676,
+          "maxSeamGapMeters": 7.431112873115432e-06
+        },
+        {
+          "phase": 0.23333333333333334,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0103310006054294,
+          "maxEdgeStretch": 1.0198089102077588,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.2388888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0103682852015448,
+          "maxEdgeStretch": 1.0198691982618366,
+          "maxSeamGapMeters": 7.433305023928094e-06
+        },
+        {
+          "phase": 0.24444444444444444,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0103969366181658,
+          "maxEdgeStretch": 1.0199050849452866,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.25,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0103969366181658,
+          "maxEdgeStretch": 1.0199050849452866,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.25555555555555554,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0103969366181658,
+          "maxEdgeStretch": 1.0199050849452866,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.2611111111111111,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0103682852015448,
+          "maxEdgeStretch": 1.0198691982618366,
+          "maxSeamGapMeters": 7.433305023928094e-06
+        },
+        {
+          "phase": 0.26666666666666666,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0103310006054294,
+          "maxEdgeStretch": 1.0198089102077588,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.2722222222222222,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0102915792493967,
+          "maxEdgeStretch": 1.0197108991331676,
+          "maxSeamGapMeters": 7.431112873115432e-06
+        },
+        {
+          "phase": 0.2777777777777778,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0102382458200765,
+          "maxEdgeStretch": 1.0196355994973012,
+          "maxSeamGapMeters": 7.433305023928094e-06
+        },
+        {
+          "phase": 0.2833333333333333,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0101614146513196,
+          "maxEdgeStretch": 1.0194567765510416,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.28888888888888886,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0100831964552028,
+          "maxEdgeStretch": 1.0193225838737368,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.29444444444444445,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0099820427749155,
+          "maxEdgeStretch": 1.0191281438243653,
+          "maxSeamGapMeters": 7.336654470103633e-06
+        },
+        {
+          "phase": 0.3,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0098780184442386,
+          "maxEdgeStretch": 1.0189342760647004,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.3055555555555556,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0097579967849224,
+          "maxEdgeStretch": 1.0186826992012614,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.3111111111111111,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0096311345084608,
+          "maxEdgeStretch": 1.0184311599396825,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.31666666666666665,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0094902014052696,
+          "maxEdgeStretch": 1.0181676506142434,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.32222222222222224,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0093335021299747,
+          "maxEdgeStretch": 1.0178593619408172,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.3277777777777778,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0091620326367563,
+          "maxEdgeStretch": 1.0175389906461065,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.3333333333333333,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0089956267925648,
+          "maxEdgeStretch": 1.0171964651292544,
+          "maxSeamGapMeters": 7.345803958701271e-06
+        },
+        {
+          "phase": 0.3388888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0087975879697848,
+          "maxEdgeStretch": 1.016844244431716,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.34444444444444444,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0086073240219477,
+          "maxEdgeStretch": 1.0164468040335326,
+          "maxSeamGapMeters": 7.3571946381033015e-06
+        },
+        {
+          "phase": 0.35,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.008395314241688,
+          "maxEdgeStretch": 1.0160410907410469,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.35555555555555557,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0081850389428126,
+          "maxEdgeStretch": 1.0156358725838732,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.3611111111111111,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.007947056702099,
+          "maxEdgeStretch": 1.01520171205593,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.36666666666666664,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0077102658628527,
+          "maxEdgeStretch": 1.0147444566708121,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.37222222222222223,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0074635278847166,
+          "maxEdgeStretch": 1.0142356494001135,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.37777777777777777,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.007205992249805,
+          "maxEdgeStretch": 1.0137743555080634,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.38333333333333336,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0069407477486947,
+          "maxEdgeStretch": 1.013263830681707,
+          "maxSeamGapMeters": 7.348029114514073e-06
+        },
+        {
+          "phase": 0.3888888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.006667492980773,
+          "maxEdgeStretch": 1.012731331743769,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.39444444444444443,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0063837959207624,
+          "maxEdgeStretch": 1.012174978803729,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.4,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.006088632185658,
+          "maxEdgeStretch": 1.0116178975701497,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.40555555555555556,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0057882251950059,
+          "maxEdgeStretch": 1.011040665720177,
+          "maxSeamGapMeters": 7.35250005581804e-06
+        },
+        {
+          "phase": 0.4111111111111111,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0054899510898319,
+          "maxEdgeStretch": 1.010462736368526,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.4166666666666667,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0051751444461103,
+          "maxEdgeStretch": 1.0098655755287194,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.4222222222222222,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0048627838729964,
+          "maxEdgeStretch": 1.0092698886811655,
+          "maxSeamGapMeters": 7.350261148974514e-06
+        },
+        {
+          "phase": 0.42777777777777776,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0045334490400646,
+          "maxEdgeStretch": 1.008655898430021,
+          "maxSeamGapMeters": 7.35250005581804e-06
+        },
+        {
+          "phase": 0.43333333333333335,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0042105432816704,
+          "maxEdgeStretch": 1.0080196973522075,
+          "maxSeamGapMeters": 7.35250005581804e-06
+        },
+        {
+          "phase": 0.4388888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0038768907455418,
+          "maxEdgeStretch": 1.0073917518859645,
+          "maxSeamGapMeters": 7.35250005581804e-06
+        },
+        {
+          "phase": 0.4444444444444444,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0035329155782944,
+          "maxEdgeStretch": 1.006740962000264,
+          "maxSeamGapMeters": 7.354745828768448e-06
+        },
+        {
+          "phase": 0.45,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0031915337026462,
+          "maxEdgeStretch": 1.0060871989194893,
+          "maxSeamGapMeters": 7.35250005581804e-06
+        },
+        {
+          "phase": 0.45555555555555555,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.002849829612097,
+          "maxEdgeStretch": 1.0054266612366807,
+          "maxSeamGapMeters": 7.35250005581804e-06
+        },
+        {
+          "phase": 0.46111111111111114,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0024961618209762,
+          "maxEdgeStretch": 1.0047552167569602,
+          "maxSeamGapMeters": 7.354745828768448e-06
+        },
+        {
+          "phase": 0.4666666666666667,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.002144119306916,
+          "maxEdgeStretch": 1.004097077130422,
+          "maxSeamGapMeters": 7.354745828768448e-06
+        },
+        {
+          "phase": 0.4722222222222222,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0017912272183962,
+          "maxEdgeStretch": 1.0034383295937943,
+          "maxSeamGapMeters": 7.354745828768448e-06
+        },
+        {
+          "phase": 0.4777777777777778,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0014341675233052,
+          "maxEdgeStretch": 1.0027402435095591,
+          "maxSeamGapMeters": 7.354745828768448e-06
+        },
+        {
+          "phase": 0.48333333333333334,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0010760372621783,
+          "maxEdgeStretch": 1.0020572210340413,
+          "maxSeamGapMeters": 7.354745828768448e-06
+        },
+        {
+          "phase": 0.4888888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.000718419815185,
+          "maxEdgeStretch": 1.0013854886927165,
+          "maxSeamGapMeters": 7.356998461537962e-06
+        },
+        {
+          "phase": 0.49444444444444446,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0003594159603932,
+          "maxEdgeStretch": 1.000686776207949,
+          "maxSeamGapMeters": 7.356998461537962e-06
+        },
+        {
+          "phase": 0.5,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0000100744507345,
+          "maxEdgeStretch": 1.0000362196390788,
+          "maxSeamGapMeters": 7.356998461537962e-06
+        },
+        {
+          "phase": 0.5055555555555555,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0002754706225319,
+          "maxEdgeStretch": 1.0006470468767261,
+          "maxSeamGapMeters": 7.356998461537962e-06
+        },
+        {
+          "phase": 0.5111111111111111,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.000552019279664,
+          "maxEdgeStretch": 1.0013044512369735,
+          "maxSeamGapMeters": 7.359257947827312e-06
+        },
+        {
+          "phase": 0.5166666666666667,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0008279210637425,
+          "maxEdgeStretch": 1.0019541912064651,
+          "maxSeamGapMeters": 7.350125206870956e-06
+        },
+        {
+          "phase": 0.5222222222222223,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.001102399595209,
+          "maxEdgeStretch": 1.0026116763452428,
+          "maxSeamGapMeters": 7.359257947827312e-06
+        },
+        {
+          "phase": 0.5277777777777778,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0013721282328019,
+          "maxEdgeStretch": 1.0032457361557336,
+          "maxSeamGapMeters": 7.359257947827312e-06
+        },
+        {
+          "phase": 0.5333333333333333,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0016435539286148,
+          "maxEdgeStretch": 1.0038958757399727,
+          "maxSeamGapMeters": 7.272820049541064e-06
+        },
+        {
+          "phase": 0.5388888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0019087268072557,
+          "maxEdgeStretch": 1.0045400557551865,
+          "maxSeamGapMeters": 7.359257947827312e-06
+        },
+        {
+          "phase": 0.5444444444444444,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0021817577204142,
+          "maxEdgeStretch": 1.0051661686508995,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.55,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0024480045458644,
+          "maxEdgeStretch": 1.0057985597900865,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.5555555555555556,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0027121262336847,
+          "maxEdgeStretch": 1.006430337392188,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.5611111111111111,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0029714347473753,
+          "maxEdgeStretch": 1.0070498665277727,
+          "maxSeamGapMeters": 7.363797455711414e-06
+        },
+        {
+          "phase": 0.5666666666666667,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0032242572375272,
+          "maxEdgeStretch": 1.0076539724276876,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.5722222222222222,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0034772909505127,
+          "maxEdgeStretch": 1.0082575625106174,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.5777777777777777,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0037262191585874,
+          "maxEdgeStretch": 1.0088278916470377,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.5833333333333334,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0039702517621665,
+          "maxEdgeStretch": 1.0094119965213975,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.5888888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0042110452320543,
+          "maxEdgeStretch": 1.0100145191423613,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.5944444444444444,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.004443439382215,
+          "maxEdgeStretch": 1.0105285006521334,
+          "maxSeamGapMeters": 7.359257947827312e-06
+        },
+        {
+          "phase": 0.6,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0046779771704981,
+          "maxEdgeStretch": 1.0110929515293452,
+          "maxSeamGapMeters": 7.372943377236217e-06
+        },
+        {
+          "phase": 0.6055555555555555,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.00489490605256,
+          "maxEdgeStretch": 1.0116335543497657,
+          "maxSeamGapMeters": 7.363797455711414e-06
+        },
+        {
+          "phase": 0.6111111111111112,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.005116092392524,
+          "maxEdgeStretch": 1.0121565435386977,
+          "maxSeamGapMeters": 7.372943377236217e-06
+        },
+        {
+          "phase": 0.6166666666666667,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.005322372346108,
+          "maxEdgeStretch": 1.0126385524463175,
+          "maxSeamGapMeters": 7.363797455711414e-06
+        },
+        {
+          "phase": 0.6222222222222222,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0055332370066703,
+          "maxEdgeStretch": 1.0131385404961817,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.6277777777777778,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0057182112129934,
+          "maxEdgeStretch": 1.0136078534470578,
+          "maxSeamGapMeters": 7.363797455711414e-06
+        },
+        {
+          "phase": 0.6333333333333333,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0059264114807727,
+          "maxEdgeStretch": 1.0140625821235683,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.6388888888888888,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0060880237038272,
+          "maxEdgeStretch": 1.014470098283691,
+          "maxSeamGapMeters": 7.363797455711414e-06
+        },
+        {
+          "phase": 0.6444444444444445,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0062701807002272,
+          "maxEdgeStretch": 1.0149097220651668,
+          "maxSeamGapMeters": 7.35695318928e-06
+        },
+        {
+          "phase": 0.65,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0064485793894618,
+          "maxEdgeStretch": 1.0153180776911934,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.6555555555555556,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0066075698934112,
+          "maxEdgeStretch": 1.015693673658069,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.6611111111111111,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0067611248745585,
+          "maxEdgeStretch": 1.0160543375559565,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.6666666666666666,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.006904682488444,
+          "maxEdgeStretch": 1.0164122434452536,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.6722222222222223,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0070357833137902,
+          "maxEdgeStretch": 1.0167189488842512,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.6777777777777778,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0071668544959826,
+          "maxEdgeStretch": 1.0170411575418357,
+          "maxSeamGapMeters": 7.368364301799564e-06
+        },
+        {
+          "phase": 0.6833333333333333,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0072807666606107,
+          "maxEdgeStretch": 1.0173128071244513,
+          "maxSeamGapMeters": 7.368364301799564e-06
+        },
+        {
+          "phase": 0.6888888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0074045242132723,
+          "maxEdgeStretch": 1.0175822684530507,
+          "maxSeamGapMeters": 7.359242861738871e-06
+        },
+        {
+          "phase": 0.6944444444444444,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0075012964916001,
+          "maxEdgeStretch": 1.0178148261745024,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.7,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0075949255204568,
+          "maxEdgeStretch": 1.0180466747834362,
+          "maxSeamGapMeters": 7.368364301799564e-06
+        },
+        {
+          "phase": 0.7055555555555556,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0076712046189467,
+          "maxEdgeStretch": 1.0182246420721157,
+          "maxSeamGapMeters": 7.368364301799564e-06
+        },
+        {
+          "phase": 0.7111111111111111,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0077575068292248,
+          "maxEdgeStretch": 1.0184199510855925,
+          "maxSeamGapMeters": 7.377504561789418e-06
+        },
+        {
+          "phase": 0.7166666666666667,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0077988299275125,
+          "maxEdgeStretch": 1.0185579423147697,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.7222222222222222,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.007870987188661,
+          "maxEdgeStretch": 1.018680006469005,
+          "maxSeamGapMeters": 7.2820344969233156e-06
+        },
+        {
+          "phase": 0.7277777777777777,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0078972329643912,
+          "maxEdgeStretch": 1.0187929346379299,
+          "maxSeamGapMeters": 7.2820344969233156e-06
+        },
+        {
+          "phase": 0.7333333333333333,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0079430242856815,
+          "maxEdgeStretch": 1.018874491038348,
+          "maxSeamGapMeters": 7.368364301799564e-06
+        },
+        {
+          "phase": 0.7388888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0079695459469318,
+          "maxEdgeStretch": 1.018934150588617,
+          "maxSeamGapMeters": 7.284355339045525e-06
+        },
+        {
+          "phase": 0.7444444444444445,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0079777498924882,
+          "maxEdgeStretch": 1.0189884596332162,
+          "maxSeamGapMeters": 7.368364301799564e-06
+        },
+        {
+          "phase": 0.75,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0079777498924882,
+          "maxEdgeStretch": 1.0189884596332162,
+          "maxSeamGapMeters": 7.368364301799564e-06
+        },
+        {
+          "phase": 0.7555555555555555,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0079777498924882,
+          "maxEdgeStretch": 1.0189884596332162,
+          "maxSeamGapMeters": 7.368364301799564e-06
+        },
+        {
+          "phase": 0.7611111111111111,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0079695459469318,
+          "maxEdgeStretch": 1.018934150588617,
+          "maxSeamGapMeters": 7.284355339045525e-06
+        },
+        {
+          "phase": 0.7666666666666667,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0079430242856815,
+          "maxEdgeStretch": 1.018874491038348,
+          "maxSeamGapMeters": 7.368364301799564e-06
+        },
+        {
+          "phase": 0.7722222222222223,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0078972329643912,
+          "maxEdgeStretch": 1.0187929346379299,
+          "maxSeamGapMeters": 7.2820344969233156e-06
+        },
+        {
+          "phase": 0.7777777777777778,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.007870987188661,
+          "maxEdgeStretch": 1.018680006469005,
+          "maxSeamGapMeters": 7.2820344969233156e-06
+        },
+        {
+          "phase": 0.7833333333333333,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0077988299275125,
+          "maxEdgeStretch": 1.0185579423147697,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.7888888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0077575068292248,
+          "maxEdgeStretch": 1.0184199510855925,
+          "maxSeamGapMeters": 7.377504561789418e-06
+        },
+        {
+          "phase": 0.7944444444444444,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0076712046189467,
+          "maxEdgeStretch": 1.0182246420721157,
+          "maxSeamGapMeters": 7.368364301799564e-06
+        },
+        {
+          "phase": 0.8,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0075949255204568,
+          "maxEdgeStretch": 1.0180466747834362,
+          "maxSeamGapMeters": 7.368364301799564e-06
+        },
+        {
+          "phase": 0.8055555555555556,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0075012964916001,
+          "maxEdgeStretch": 1.0178148261745024,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.8111111111111111,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0074045242132723,
+          "maxEdgeStretch": 1.0175822684530507,
+          "maxSeamGapMeters": 7.359242861738871e-06
+        },
+        {
+          "phase": 0.8166666666666667,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0072807666606107,
+          "maxEdgeStretch": 1.0173119293623794,
+          "maxSeamGapMeters": 7.368364301799564e-06
+        },
+        {
+          "phase": 0.8222222222222222,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0071668544959826,
+          "maxEdgeStretch": 1.0170411575418357,
+          "maxSeamGapMeters": 7.368364301799564e-06
+        },
+        {
+          "phase": 0.8277777777777777,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0070357833137902,
+          "maxEdgeStretch": 1.0167189488842512,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.8333333333333334,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.006904682488444,
+          "maxEdgeStretch": 1.0164122434452536,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.8388888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0067611248745585,
+          "maxEdgeStretch": 1.0160543375559565,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.8444444444444444,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0066075698934112,
+          "maxEdgeStretch": 1.015693673658069,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.85,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0064485793894618,
+          "maxEdgeStretch": 1.0153180776911934,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.8555555555555555,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0062701807002272,
+          "maxEdgeStretch": 1.0149097220651668,
+          "maxSeamGapMeters": 7.35695318928e-06
+        },
+        {
+          "phase": 0.8611111111111112,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0060880237038272,
+          "maxEdgeStretch": 1.014470098283691,
+          "maxSeamGapMeters": 7.363797455711414e-06
+        },
+        {
+          "phase": 0.8666666666666667,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0059264114807727,
+          "maxEdgeStretch": 1.0140625821235683,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.8722222222222222,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0057182112129934,
+          "maxEdgeStretch": 1.0136078534470578,
+          "maxSeamGapMeters": 7.363797455711414e-06
+        },
+        {
+          "phase": 0.8777777777777778,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0055332370066703,
+          "maxEdgeStretch": 1.0131385404961817,
+          "maxSeamGapMeters": 7.3660774646508305e-06
+        },
+        {
+          "phase": 0.8833333333333333,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.005322372346108,
+          "maxEdgeStretch": 1.0126385524463175,
+          "maxSeamGapMeters": 7.363797455711414e-06
+        },
+        {
+          "phase": 0.8888888888888888,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.005116092392524,
+          "maxEdgeStretch": 1.0121565435386977,
+          "maxSeamGapMeters": 7.372943377236217e-06
+        },
+        {
+          "phase": 0.8944444444444445,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.00489490605256,
+          "maxEdgeStretch": 1.0116335543497657,
+          "maxSeamGapMeters": 7.363797455711414e-06
+        },
+        {
+          "phase": 0.9,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0046779771704981,
+          "maxEdgeStretch": 1.0110929515293452,
+          "maxSeamGapMeters": 7.372943377236217e-06
+        },
+        {
+          "phase": 0.9055555555555556,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.004443439382215,
+          "maxEdgeStretch": 1.0105285006521334,
+          "maxSeamGapMeters": 7.359257947827312e-06
+        },
+        {
+          "phase": 0.9111111111111111,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0042110452320543,
+          "maxEdgeStretch": 1.0100145191423613,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.9166666666666666,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0039702517621665,
+          "maxEdgeStretch": 1.0094119965213975,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.9222222222222223,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0037262191585874,
+          "maxEdgeStretch": 1.0088278916470377,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.9277777777777778,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0034772909505127,
+          "maxEdgeStretch": 1.0082575625106174,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.9333333333333333,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0032242572375272,
+          "maxEdgeStretch": 1.0076539724276876,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.9388888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0029714347473753,
+          "maxEdgeStretch": 1.0070498665277727,
+          "maxSeamGapMeters": 7.363797455711414e-06
+        },
+        {
+          "phase": 0.9444444444444444,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0027121262336847,
+          "maxEdgeStretch": 1.006430337392188,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.95,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0024480045458644,
+          "maxEdgeStretch": 1.0057985597900865,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.9555555555555556,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0021817577204142,
+          "maxEdgeStretch": 1.0051661686508995,
+          "maxSeamGapMeters": 7.361524281325808e-06
+        },
+        {
+          "phase": 0.9611111111111111,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0019087268072557,
+          "maxEdgeStretch": 1.0045400557551865,
+          "maxSeamGapMeters": 7.359257947827312e-06
+        },
+        {
+          "phase": 0.9666666666666667,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0016435539286148,
+          "maxEdgeStretch": 1.0038958757399727,
+          "maxSeamGapMeters": 7.272820049541064e-06
+        },
+        {
+          "phase": 0.9722222222222222,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0013721282328019,
+          "maxEdgeStretch": 1.0032457361557336,
+          "maxSeamGapMeters": 7.359257947827312e-06
+        },
+        {
+          "phase": 0.9777777777777777,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.001102399595209,
+          "maxEdgeStretch": 1.0026116763452428,
+          "maxSeamGapMeters": 7.359257947827312e-06
+        },
+        {
+          "phase": 0.9833333333333333,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0008279210637425,
+          "maxEdgeStretch": 1.0019541912064651,
+          "maxSeamGapMeters": 7.350125206870956e-06
+        },
+        {
+          "phase": 0.9888888888888889,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.000552019279664,
+          "maxEdgeStretch": 1.0013044512369735,
+          "maxSeamGapMeters": 7.359257947827312e-06
+        },
+        {
+          "phase": 0.9944444444444445,
+          "minZ": 8.963976142695174e-05,
+          "p99EdgeStretch": 1.0002754706225319,
+          "maxEdgeStretch": 1.0006470468767261,
+          "maxSeamGapMeters": 7.356998461537962e-06
+        }
+      ],
+      "groundPassed": true,
+      "stretchPassed": true,
+      "loopMaxPositionErrorMeters": 0.0,
+      "stanceContactPassed": null
+    }
+  ],
+  "mapEnabled": false,
+  "deviceTested": false,
+  "roundTripPassed": true
+}

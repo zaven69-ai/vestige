@@ -1,3 +1,7 @@
+# Catia — correction du rig, révision 2
+
+[GLB et Blender corrigés, tests et vidéos avant/après](docs/avatars/catia/revision-2/README.md). Les actions Idle/Walk/Run sont améliorées et contrôlées après réimport du GLB. Catia reste désactivée, sans test matériel iPhone revendiqué.
+
 # Catia — préparation mobile et animation expérimentale
 
 [Résultats, fichiers, limites du rig et test Expo Go](docs/avatars/catia/PREPARATION.md). Base retenue : 24 996 triangles. Idle/Walk/Run réels mais non approuvés ; Catia reste désactivée sur la carte.

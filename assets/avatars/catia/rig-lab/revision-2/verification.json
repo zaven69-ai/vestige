@@ -1,0 +1,32 @@
+{
+  "sourcePreserved": true,
+  "neutralGeometryAndUVPreserved": true,
+  "texturePreserved": true,
+  "triangles": 24996,
+  "bones": 17,
+  "bytes": 1736124,
+  "sha256": "3efe730d69dbc67cb6ca3fcc33d2767ab976a54686a345927fcf73d4fe8318a9",
+  "clips": [
+    {
+      "name": "idle",
+      "durationSeconds": 2.9999999664723873,
+      "movingChannels": 3
+    },
+    {
+      "name": "walk",
+      "durationSeconds": 1.2000000141561031,
+      "movingChannels": 15
+    },
+    {
+      "name": "run",
+      "durationSeconds": 0.7999999783933163,
+      "movingChannels": 15
+    }
+  ],
+  "blenderChecksPassed": true,
+  "glbRoundtripPassed": true,
+  "maximumAllowedEdgeStretch": 2,
+  "mapEnabled": false,
+  "deviceTested": false,
+  "productionApproved": false
+}
