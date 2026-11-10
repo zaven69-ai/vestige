@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Alert, Image, Linking, ScrollView, Text, View } from "react-native";
+import { Alert, Image, Linking, ScrollView, Share, Text, View } from "react-native";
 import type { Monument } from "../../data/monuments";
 import { useGame } from "../../lib/store";
 import {
@@ -115,6 +115,15 @@ export function MonumentDetails({ monument }: { monument: Monument }) {
               onPress={() => void claim()}
             />
           </Card>
+          <Button
+            title="Partager ce lieu ↗"
+            secondary
+            onPress={() => {
+              void Share.share({
+                message: `Découvre ${monument.name} à ${monument.city} sur Vestige !\n${monument.source}`,
+              }).catch(() => Alert.alert("Partage indisponible", "Réessayez plus tard."));
+            }}
+          />
           <Text style={s.heading}>L’histoire du lieu</Text>
           <Text style={[s.body, { color: colors.ink, lineHeight: 25 }]}>
             {monument.description}
