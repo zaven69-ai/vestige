@@ -29,7 +29,7 @@ const category = (tags) =>
   tags.historic || tags.tourism || tags.heritage || "patrimoine";
 function query(bbox) {
   const box = bbox.join(",");
-  return '[out:json][timeout:55];(' +
+  return '[out:json][timeout:35];(' +
     heritage.map((tag) => "nwr" + tag + "(" + box + ");").join("") +
     ");out center tags;";
 }
@@ -56,7 +56,7 @@ async function fetchTile(bbox) {
           "User-Agent": "Vestige-heritage-import/1.0 (openstreetmap.org/copyright)",
         },
         body: new URLSearchParams({ data: query(bbox) }),
-        signal: AbortSignal.timeout(70_000),
+        signal: AbortSignal.timeout(45_000),
       });
       if (!response.ok) throw new Error("HTTP " + response.status);
       const json = await response.json();
