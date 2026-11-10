@@ -737,7 +737,23 @@
   },
   {
     "path": "docs/design/POI-SOCIAL-V2-DELIVERY.md",
-    "sha256": "693b1baf2112950fcfcc2c7aef9603755641de9fa6866e763e71633560c25bb1"
+    "sha256": "f35f2d4d682e604a237959ce0a1c67b5878305953dfdae6cbf7f50d321bc551d"
+  },
+  {
+    "path": "docs/design/POI-VISUAL-SYSTEM-V1.md",
+    "sha256": "19b5ac46f6099bc695915d94424e0cff259aa1a7a92fcb00470d9ea0dd53a8dc"
+  },
+  {
+    "path": "docs/design/poi-preview-320.png",
+    "sha256": "d4dd2a8a0f9337f6d86626537622406d0feeebcfa5edb733b98c76d48b7c0a14"
+  },
+  {
+    "path": "docs/design/poi-preview-390.png",
+    "sha256": "ea676d96d77c976f652086a35b45a540403989b697440a804afcbfdc4030000a"
+  },
+  {
+    "path": "docs/design/poi-preview-430.png",
+    "sha256": "d6dea38ae5c745a2a1596a42dbbfc42585d51c80928ed3986c041c3b3982fdea"
   },
   {
     "path": "docs/design/poi-preview.html",
@@ -776,8 +792,20 @@
     "sha256": "396565722804f6d00eff2a04fdd4d9e9184d1b9c381cf1ba1eb2583ae364cc91"
   },
   {
+    "path": "scripts/windows/build-social-manifest.cjs",
+    "sha256": "f012b1a232ba914d15a0267fcf719fd7a30110ad3cb8f9fab7e45dc0e2e144fe"
+  },
+  {
+    "path": "scripts/windows/poi-update-files.json",
+    "sha256": "44a9177be18c40afe4f76787fedcca81245b37c42c5a69da72fb67e825b2845c"
+  },
+  {
+    "path": "scripts/windows/update-poi.ps1",
+    "sha256": "0dc18b069f2ef315249685c44278503721b242c640ca41cc3f6c4574c31b3395"
+  },
+  {
     "path": "scripts/windows/update-social-v2.ps1",
-    "sha256": "c04775b747ae499009e5ae5aba9ae51f4abc3b3ac39c18122184c601fd1032c7"
+    "sha256": "7499cbedf2a722c032526077b4911bd0bea4e75021a47e4eef9086f13ab863f0"
   },
   {
     "path": "src/app/(tabs)/index.tsx",
@@ -796,6 +824,10 @@
     "sha256": "c3ab9f784ae0a3837b935c566abfabc2639815065bf7c3a9c20860074c100b48"
   },
   {
+    "path": "src/app/monument/[id].tsx",
+    "sha256": "4dfd310a532769690efe3ddf79793d749a90b21b8200a49faf24566d60d73c2e"
+  },
+  {
     "path": "src/components/contributions/MonumentActions.tsx",
     "sha256": "d148ba11e2b641e6783f3507784da891ea67ed2a5efd36fc4c254fa50ef74227"
   },
@@ -806,6 +838,10 @@
   {
     "path": "src/components/exploration/MapOptions.tsx",
     "sha256": "a5e423c59f7b526edaa013286c7e9b1bc77da243a32e714dcde8d6ccf130fc5c"
+  },
+  {
+    "path": "src/components/exploration/PoiClusterMarker.tsx",
+    "sha256": "07cc64e1aae2dff68675e36570ae21889640376185eab4f8c8af670a0f6dcacc"
   },
   {
     "path": "src/components/monuments/MonumentBottomSheet.tsx",
@@ -826,6 +862,10 @@
   {
     "path": "src/components/poi/PoiGlyph.tsx",
     "sha256": "0d1bb5789e3349d3ff614fea4c12c9d59cf4e34a02b96525828d13999ac96b58"
+  },
+  {
+    "path": "src/components/poi/assets.ts",
+    "sha256": "be2774cf4f9734af2e8ad1a34e5840dff0b82a7de1ea04301a40511348190baf"
   },
   {
     "path": "src/components/poi/landmarks.ts",
@@ -860,6 +900,10 @@
     "sha256": "69da0b315bde74614fe93a4a080c23f4fc50739e12caa15516a83d5c2653c741"
   },
   {
+    "path": "src/lib/mapViewport.ts",
+    "sha256": "02a140d118426818144ffeea99eee1dadedb81cdaa2cb423ef6fcf0856d1cc00"
+  },
+  {
     "path": "src/lib/poi.ts",
     "sha256": "81cb0025fa1f9f632c0e3adda73e59aeb06db7f1e455b2d65195750f1f277f78"
   },
@@ -870,5 +914,13 @@
   {
     "path": "tests/contributions.test.ts",
     "sha256": "8b87f76bcba493f8f6b1d089da1ccc919f574f6f90fa9fa141fdecb0c4658af1"
+  },
+  {
+    "path": "tests/poi.test.ts",
+    "sha256": "2e2c344998f8a4128330d148ca1f32f20c90dab18fced260a27d8a644a7c239a"
+  },
+  {
+    "path": "tests/update-package.test.ts",
+    "sha256": "3227c3c5efafc27fda835d07166c00e5945daba720e8cc843002637d259caada"
   }
 ]

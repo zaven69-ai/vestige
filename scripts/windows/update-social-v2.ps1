@@ -17,6 +17,11 @@ New-Item -ItemType Directory -Path $stage -Force | Out-Null
 $manifestPath = Join-Path $stage 'social-v2-update-files.json'
 Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/zaven69-ai/vestige/$Revision/scripts/windows/social-v2-update-files.json" -OutFile $manifestPath
 $files = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
+# Refuse an old differential package that cannot repair a missing V1 dependency.
+$paths = @($files | ForEach-Object { [string]$_.path })
+foreach ($required in @('src/components/exploration/PoiClusterMarker.tsx', 'src/components/poi/assets.ts', 'src/lib/mapViewport.ts', 'src/lib/poi.ts')) {
+    if ($paths -notcontains $required) { throw "Paquet incomplet : $required. Utilisez la revision du correctif cumulatif." }
+}
 Write-Host "Reception de $($files.Count) fichiers de la V2..."
 # Download and verify every byte before modifying any existing file.
 foreach ($entry in $files) {
@@ -53,5 +58,12 @@ foreach ($entry in $files) {
     Copy-Item -LiteralPath (Join-Path $stage $entry.path) -Destination $target -Force
 }
 Copy-Item -LiteralPath $manifestPath -Destination (Join-Path $root 'scripts/windows/social-v2-update-files.json') -Force
+# Verify the installed files too, so a failed copy never reports success.
+foreach ($entry in $files) {
+    $target = Join-Path $root $entry.path
+    if (!(Test-Path -LiteralPath $target) -or (Get-FileHash -LiteralPath $target -Algorithm SHA256).Hash.ToLowerInvariant() -ne $entry.sha256) {
+        throw "Copie incomplete : $($entry.path). Sauvegarde disponible : $backup"
+    }
+}
 Write-Host "Vestige social V2 mis a jour. Sauvegarde : $backup"
 Write-Host 'Installez la dependance photo : npm.cmd install ; puis npx.cmd expo start --tunnel --clear'

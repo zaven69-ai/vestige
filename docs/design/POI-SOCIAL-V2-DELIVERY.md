@@ -43,7 +43,7 @@ Favoris privés fonctionnels. Signalement préparé comme brouillon privé, **pa
 
 ## Windows et Expo Go
 
-La mise à jour partielle inclut le catalogue OSM ajouté depuis `7760435`, le code, les assets et `package.json`/lock. Elle conserve les fichiers Catia et toutes les données de l'application. `scripts/windows/update-social-v2.ps1` télécharge un manifeste du commit fixé, vérifie les SHA256 avant copie et sauvegarde les fichiers existants dans un dossier voisin. Aucune suppression de fichier du projet.
+La mise à jour est désormais **cumulative depuis `2916df9` (avant POI V1)** : elle inclut tous les modules V1, le catalogue OSM, la V2, les assets et `package.json`/lock. Le paquet initial `5562db0` était différentiel depuis V1 et omettait notamment `PoiClusterMarker.tsx`, `src/components/poi/assets.ts` et le regroupement V1 si cette mise à jour intermédiaire n’avait pas été installée. Ce défaut de livraison est corrigé, sans changer le composant ni le GPS. Elle conserve les fichiers Catia et toutes les données de l'application. `scripts/windows/update-social-v2.ps1` télécharge un manifeste du commit fixé, vérifie les SHA256 avant copie et sauvegarde les fichiers existants dans un dossier voisin. Aucune suppression de fichier du projet.
 
 Arrêter Metro, fermer Vestige dans Expo Go, exécuter le script depuis le dossier contenant `package.json`, puis **`npm.cmd install`** (nouvelle dépendance image-picker), et **`npx.cmd expo start --tunnel --clear`**. Un compte Expo gratuit reste nécessaire pour le tunnel SDK 58. Mettre Expo Go à jour pour SDK 58 ; le libellé de permission du client hôte peut mentionner Expo Go plutôt que Vestige. Les messages du plugin seront appliqués dans une future build autonome.
 
@@ -56,3 +56,7 @@ Parcours de contrôle :
 5. Depuis une fiche : parcourir les trois onglets, préparer correction/date/photo/signalement ; « Soumettre » doit rester indisponible.
 6. Partager et ouvrir le lien source sans compte, puis vérifier qu'il ne contient aucune position personnelle ni progression.
 7. Ajouter/retirer un favori, supprimer un brouillon et tester l'effacement des seules données de contribution. Carnet/XP/Catia doivent rester intacts.
+
+Le script mainteneur `node scripts/windows/build-social-manifest.cjs` reconstruit le manifeste cumulatif (historique Git requis). Des tests vérifient la présence des dépendances POI inchangées et tous les SHA256. Le script Windows refuse un manifeste incomplet et vérifie aussi les fichiers après copie.
+
+Validation du correctif de livraison : sur une copie de `2916df9` sans POI V1, le paquet original reproduit les absences de `PoiClusterMarker.tsx` et `poi/assets.ts`. Après application du paquet cumulatif : installation npm neuve, TypeScript, **63 tests** et exports Hermes iOS/Android réussis. Le PowerShell lui-même et le rendu iPhone restent à vérifier sur les appareils correspondants.
