@@ -70,6 +70,12 @@ export default function Explorer() {
   const direction = playerDirection(heading, fix, now);
   const [following, setFollowing] = useState(true);
   const [mapReady, setMapReady] = useState(false);
+  const [viewport, setViewport] = useState({
+    latitude: cities.Vienne.latitude,
+    longitude: cities.Vienne.longitude,
+    latitudeDelta: 0.025,
+    longitudeDelta: 0.035,
+  });
   const [mapHeading, setMapHeading] = useState(0);
   const [immersive, setImmersive] = useState(true);
   const [panel, setPanel] = useState<"settings" | "filters" | null>(null);
@@ -117,9 +123,15 @@ export default function Explorer() {
   const cameraFix = useRef<typeof fix>(null);
   const touchOrigin = useRef<{ x: number; y: number } | null>(null);
   const bottom = insets.bottom + 86;
-  const visibleMonuments = monuments.filter((m) =>
-    periods.includes(historicalPeriod(m.era)),
-  );
+  // Only render POIs inside the current viewport. Thousands of native map markers
+  // at once would degrade iPhone performance and Expo Go responsiveness.
+  const visibleMonuments = monuments
+    .filter((m) =>
+      periods.includes(historicalPeriod(m.era)) &&
+      Math.abs(m.latitude - viewport.latitude) <= viewport.latitudeDelta * 0.65 &&
+      Math.abs(m.longitude - viewport.longitude) <= viewport.longitudeDelta * 0.65,
+    )
+    .slice(0, 150);
   const selected =
     selection && periods.includes(historicalPeriod(selection.era))
       ? selection
@@ -237,7 +249,17 @@ export default function Explorer() {
         onMapReady={() => setMapReady(true)}
         onPanDrag={stopFollowing}
         onRegionChange={() => readCameraHeading()}
-        onRegionChangeComplete={() => readCameraHeading(true)}
+        onRegionChangeComplete={(region) => {
+          readCameraHeading(true);
+          setViewport((previous) => {
+            const changed =
+              Math.abs(previous.latitude - region.latitude) > 0.0005 ||
+              Math.abs(previous.longitude - region.longitude) > 0.0005 ||
+              Math.abs(previous.latitudeDelta - region.latitudeDelta) > 0.002 ||
+              Math.abs(previous.longitudeDelta - region.longitudeDelta) > 0.002;
+            return changed ? region : previous;
+          });
+        }}
         onRegionChangeStart={(_region, details) => {
           if (details.isGesture) stopFollowing();
         }}
