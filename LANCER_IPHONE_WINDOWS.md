@@ -46,7 +46,7 @@ Dans l'app : **Profil → Tester Catia en 3D**. L'accès existant **Choisir mon 
 - Glisser un doigt dans la vue pour tourner le modèle et modifier l'angle. Les boutons permettent aussi la rotation, le zoom, la pause et la réinitialisation.
 - La pause conserve la pose courante. Un changement d'animation en pause affiche la première pose du nouveau clip.
 - Si « Réduire les animations » est activé sur l'iPhone, la lecture reste en pause ; la rotation et les images restent accessibles.
-- Le mode **Images de contrôle** est conservé si le rendu 3D échoue. L'erreur technique est journalisée avec le préfixe `[Catia 3D]`, et une panne de l'aperçu ne remplace pas l'écran Explorer.
+- Le mode **Images de contrôle** conserve aussi l’aperçu animé par images (4 poses par mouvement, face/profil) ajouté à la branche GitHub, si le rendu 3D échoue. L'erreur technique est journalisée avec le préfixe `[Catia 3D]`, et une panne de l'aperçu ne remplace pas l'écran Explorer.
 
 La vue est une scène 3D native séparée, pas une vidéo ou une image qui tourne. Elle charge le GLB corrigé existant, sans créer un nouveau personnage. Elle se ferme lorsque vous quittez l'écran ou passez l'app en arrière-plan ; elle ne continue pas de rendre en parallèle de la carte. Les instances possèdent leurs ressources pour éviter qu'une fermeture ne détruise les ressources d'un autre contexte.
 

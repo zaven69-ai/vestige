@@ -1,3 +1,4 @@
+import { CatiaMotionFrames } from "../components/avatars/CatiaMotionFrames";
 import React, { Suspense, lazy, useState } from "react";
 import { Image, Pressable, Text, View } from "react-native";
 import { Stack } from "expo-router";
@@ -88,6 +89,7 @@ export default function CatiaPreview() {
             </CatiaViewerBoundary>
           </Card>
         )}
+        {mode === "images" && <CatiaMotionFrames />}
         {mode === "images" && (
           <Card>
             <Image

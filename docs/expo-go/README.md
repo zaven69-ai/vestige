@@ -24,3 +24,5 @@ Le contrôle navigateur joint est réalisé sur Chromium avec WebGL logiciel. Il
 ![Contrôle WebGL, pas une capture iPhone](catia-webgl-check.png)
 
 Source de compatibilité SDK : https://docs.expo.dev/versions/v58.0.0/sdk/gl-view/
+
+L’aperçu animé par images ajouté sur GitHub est conservé dans `CatiaMotionFrames.tsx`, en mode Images de contrôle. Le workflow existant est conservé et utilise Node 24, comme le projet.
