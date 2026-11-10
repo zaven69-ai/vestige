@@ -126,6 +126,18 @@ export default function Profil() {
         />
       </Card>
       <Card>
+        <Text style={s.heading}>La mémoire collective commence ici</Text>
+        <Button
+          title="Mes contributions · brouillons et favoris"
+          onPress={() => router.push("/contributions")}
+        />
+        <Button
+          title="+ Proposer un lieu"
+          secondary
+          onPress={() => router.push("/contribuer")}
+        />
+      </Card>
+      <Card>
         <Badge tone="blue">Prochainement · non disponible</Badge>
         <Text style={s.heading}>Explorer ensemble</Text>
         <Text style={s.body}>
@@ -137,8 +149,9 @@ export default function Profil() {
         <Text style={s.heading}>Votre aventure reste locale</Text>
         <Text style={s.body}>
           Le carnet et les XP restent sur ce téléphone, sans compte ni
-          synchronisation. VESTIGE n’enregistre pas vos positions GPS. Les fonds
-          de carte dépendent d’Apple ou Google et nécessitent Internet.
+          synchronisation. Le suivi GPS n’est pas enregistré. Les coordonnées
+          que vous choisissez pour un brouillon restent locales. Les fonds de
+          carte dépendent d’Apple ou Google et nécessitent Internet.
         </Text>
         <Text style={s.caption}>
           Photos et fiches intégrées disponibles hors ligne. Localisation au

@@ -1,3 +1,4 @@
+import { landmarkAssets } from "./landmarks";
 import React, { memo } from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import { poiAssets } from "./assets";
@@ -9,8 +10,12 @@ export const PoiGlyph = memo(function PoiGlyph({
   selected = false,
   progress = "none",
   onLoad,
+  landmarkId,
+  glowOpacity = 0.8,
 }: {
   onLoad?: () => void;
+  landmarkId?: string;
+  glowOpacity?: number;
   category: PoiCategory;
   status: PoiStatus;
   size?: number;
@@ -24,12 +29,19 @@ export const PoiGlyph = memo(function PoiGlyph({
         <View
           style={[
             styles.halo,
-            { borderColor: selected ? "#FFFFFF" : "#F77B54" },
+            {
+              borderColor: selected ? "#E8D19A" : "#F77B54",
+              opacity: selected ? glowOpacity : 1,
+            },
           ]}
         />
       )}
       <Image
-        source={poiAssets[category][status]}
+        source={
+          landmarkId && landmarkAssets[landmarkId]
+            ? landmarkAssets[landmarkId][status]
+            : poiAssets[category][status]
+        }
         onLoad={onLoad}
         style={{ width: size, height: (size * 56) / 52 }}
         resizeMode="contain"

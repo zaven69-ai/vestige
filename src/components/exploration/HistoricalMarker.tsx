@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useEffect, useRef } from "react";
+import React, { memo, useCallback, useEffect, useRef, useState } from "react";
 import { View } from "react-native";
 import { Marker, type MapMarker } from "react-native-maps";
 import { PoiGlyph } from "../poi/PoiGlyph";
@@ -16,18 +16,31 @@ export const HistoricalMarker = memo(function HistoricalMarker({
   selected,
   state,
   onSelect,
+  reducedMotion,
 }: {
+  reducedMotion: boolean;
   monument: Monument;
   selected: boolean;
   state: MonumentState;
   onSelect: (monument: Monument) => void;
 }) {
+  const [pulse, setPulse] = useState(0.8);
+  useEffect(() => {
+    if (!selected || reducedMotion) return;
+    let ticks = 0;
+    const timer = setInterval(() => {
+      ticks++;
+      setPulse(ticks % 2 ? 0.45 : 1);
+      if (ticks >= 8) clearInterval(timer);
+    }, 180);
+    return () => clearInterval(timer);
+  }, [selected, reducedMotion]);
   const marker = useRef<MapMarker>(null);
   const redraw = useCallback(() => marker.current?.redraw(), []);
   useEffect(() => {
     const timer = setTimeout(() => marker.current?.redraw(), 100);
     return () => clearTimeout(timer);
-  }, [selected, state, monument]);
+  }, [selected, state, monument, pulse]);
   return (
     <Marker
       ref={marker}
@@ -66,6 +79,8 @@ export const HistoricalMarker = memo(function HistoricalMarker({
       >
         <PoiGlyph
           onLoad={redraw}
+          landmarkId={monument.id}
+          glowOpacity={reducedMotion ? 1 : pulse}
           category={poiCategory(monument)}
           status={poiStatus(monument)}
           size={selected ? 62 : 52}

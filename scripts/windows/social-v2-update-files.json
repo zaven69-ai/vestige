@@ -1,0 +1,874 @@
+[
+  {
+    "path": "app.json",
+    "sha256": "104eb31671d46f8cb6c906044895934ce3ea0fff9359d358834587f17454517a"
+  },
+  {
+    "path": "assets/poi/castle-community_pending.png",
+    "sha256": "5ac488f55c6065a2f241ef5fad8e799c1ce3b919c660bd0b6ded9441565c6a59"
+  },
+  {
+    "path": "assets/poi/castle-community_pending.svg",
+    "sha256": "870575d082864e43e41bc9f02671725b641354a53c9e51e35a887b7ee16e6f35"
+  },
+  {
+    "path": "assets/poi/castle-community_unreviewed.png",
+    "sha256": "9a210b2bbfa0b3c1543c6496b928b64d4be80585747d7fec9b785bd9bd2da93e"
+  },
+  {
+    "path": "assets/poi/castle-community_unreviewed.svg",
+    "sha256": "bddfc311d53d1289a38da2f0b87c1e30a753fa9da2f010fb2f3b3ddc77494584"
+  },
+  {
+    "path": "assets/poi/castle-community_verified.png",
+    "sha256": "2b4f28a4609b14423879960a2a92bbd5b3030880ea3dbbae9989b9b2e200cf2a"
+  },
+  {
+    "path": "assets/poi/castle-community_verified.svg",
+    "sha256": "0814ae2bdfaa3367d6501760661afde5a4061256373726bb8362da72475901f2"
+  },
+  {
+    "path": "assets/poi/castle-editorial_unreviewed.png",
+    "sha256": "7d7ebcc52a6b13a72e59b1757897a17ba60dff4c92ae1d6cec724a0df4df5fcb"
+  },
+  {
+    "path": "assets/poi/castle-editorial_unreviewed.svg",
+    "sha256": "41ad4ea6f7f46868662e8ea96fe7238e94405524a9f5c57c67356cf9ed50a20f"
+  },
+  {
+    "path": "assets/poi/castle-editorial_verified.png",
+    "sha256": "4d314ed7a49b3b263dd592e47ff15ca147c5dfd65f6ff1769fd030ceedbe7b92"
+  },
+  {
+    "path": "assets/poi/castle-editorial_verified.svg",
+    "sha256": "eec0fa061af0516347af81ea576dc998f59cf6dd6e65ed01a10a3d7f091ff1bb"
+  },
+  {
+    "path": "assets/poi/castle-imported_unreviewed.png",
+    "sha256": "5d4d7f0af9827c03d1aaa9adf20cfb4633085c7b9d3ece06c495fe71d94ef595"
+  },
+  {
+    "path": "assets/poi/castle-imported_unreviewed.svg",
+    "sha256": "3df9651cfeb40b4238c3d5ff0b27650257b4d1c06aacb42fe9b52a9b30eb48a3"
+  },
+  {
+    "path": "assets/poi/industrial-community_pending.png",
+    "sha256": "17c43d86d47a7f9dd6a907ddee29845e631b6ab59a4174b3684a85f717ab3047"
+  },
+  {
+    "path": "assets/poi/industrial-community_pending.svg",
+    "sha256": "e9aa05ad2e95358584e1895515a45ad6feef7966d09c03a74f2ec1f65dc0f4ba"
+  },
+  {
+    "path": "assets/poi/industrial-community_unreviewed.png",
+    "sha256": "4f2f89e64cb12057b4c033d4c2de3126e6f043f3cbdfb6437cac8eaf137bc4b4"
+  },
+  {
+    "path": "assets/poi/industrial-community_unreviewed.svg",
+    "sha256": "f9a0f6ae2a5fb73e150f8a9aff9523bc6cea5fc29150e2c51707fffaa7cccfde"
+  },
+  {
+    "path": "assets/poi/industrial-community_verified.png",
+    "sha256": "acb3f223f137224257d58ac69e98835d62a8831ee248e9d2d0b7c0a70dc33648"
+  },
+  {
+    "path": "assets/poi/industrial-community_verified.svg",
+    "sha256": "cdae1e34bb3fa191be154f293405578b1fda90916275fe042163c239a1ac9ea4"
+  },
+  {
+    "path": "assets/poi/industrial-editorial_unreviewed.png",
+    "sha256": "5a2324a58a95c3d553655ac0296516f952f07d64aa6e14f732a04e2f791ccd54"
+  },
+  {
+    "path": "assets/poi/industrial-editorial_unreviewed.svg",
+    "sha256": "842d1f6c3fb8ca642fc3db2a691ebed1bfc966c5aef8446e65c0009143652758"
+  },
+  {
+    "path": "assets/poi/industrial-editorial_verified.png",
+    "sha256": "535b1c1da098ee2dd55ea97ce5364ab2e874e6aae2c53af0a14b114d259100b4"
+  },
+  {
+    "path": "assets/poi/industrial-editorial_verified.svg",
+    "sha256": "e02a1f1454ac5e4c933d9a3d6f45a9e9ccda872550cf35985d82e06b265dcfcc"
+  },
+  {
+    "path": "assets/poi/industrial-imported_unreviewed.png",
+    "sha256": "427577b3b9de75577680ca47b7250eeb1d864bf6889fb92b91f354615b6aaf0e"
+  },
+  {
+    "path": "assets/poi/industrial-imported_unreviewed.svg",
+    "sha256": "50041a008bf7c1d2636a299811a02d5026c614e1358a89c99a71f4186506fa05"
+  },
+  {
+    "path": "assets/poi/landmarks/amphitheatre-community_pending.png",
+    "sha256": "22bf6b9aa580eb8a6abe9848f677d1eda610395c19139ea3dcc0ae4a8e7d0888"
+  },
+  {
+    "path": "assets/poi/landmarks/amphitheatre-community_pending.svg",
+    "sha256": "dc06829a329134f7f34e96dfaf8f2817ed83e0741827ad93e95bd341642d47a4"
+  },
+  {
+    "path": "assets/poi/landmarks/amphitheatre-community_unreviewed.png",
+    "sha256": "eac3d5dfe704c8f776ea3e42d89a634476c1b9f1f78a6a40d46cdf6c00cbc6c1"
+  },
+  {
+    "path": "assets/poi/landmarks/amphitheatre-community_unreviewed.svg",
+    "sha256": "2ab456d8bc620b8bcc9e128fb6af0204226c7e7e90af467df0e8744519ad9b7f"
+  },
+  {
+    "path": "assets/poi/landmarks/amphitheatre-community_verified.png",
+    "sha256": "d1dabdf0dcc79de0afbd39d3a9969be907dad33eb9a6bba5062576ec60a315f2"
+  },
+  {
+    "path": "assets/poi/landmarks/amphitheatre-community_verified.svg",
+    "sha256": "83db5c6909f02b004065f18b3a5b18cf688d335b9f4253ffb479c6906b5e6ce8"
+  },
+  {
+    "path": "assets/poi/landmarks/amphitheatre-editorial_unreviewed.png",
+    "sha256": "22dad26df80184b102abc2ee59d76ad0b1656c095ef65c4174718f40b34c82a1"
+  },
+  {
+    "path": "assets/poi/landmarks/amphitheatre-editorial_unreviewed.svg",
+    "sha256": "a779c0e38fa65ef92af347ecbe05d0ec17e7dbaa72ce7852f3e856968439a775"
+  },
+  {
+    "path": "assets/poi/landmarks/amphitheatre-editorial_verified.png",
+    "sha256": "960dcd07000c4782915dda436ac6d3c702274f2d4342905a2fe9b30e19e0100d"
+  },
+  {
+    "path": "assets/poi/landmarks/amphitheatre-editorial_verified.svg",
+    "sha256": "13a3c63e958021caa04fbfdfb7b9ff56cdc1737a4541ce8e8e2109126be3fe82"
+  },
+  {
+    "path": "assets/poi/landmarks/amphitheatre-imported_unreviewed.png",
+    "sha256": "844c5629d7034e7c546b9d25ac20e574916a7a04846bddcbf8514a2585f6928f"
+  },
+  {
+    "path": "assets/poi/landmarks/amphitheatre-imported_unreviewed.svg",
+    "sha256": "0b352f5ab2fe6c39d743c7eda18362ece2c445dd81571a3529be1d0ad16f1e79"
+  },
+  {
+    "path": "assets/poi/landmarks/auguste-community_pending.png",
+    "sha256": "9229af8b4b88271aa8e267b8b8090049bfe2f5dab246c0341dc05b3892be22cd"
+  },
+  {
+    "path": "assets/poi/landmarks/auguste-community_pending.svg",
+    "sha256": "22b7b37c331d2297efec6fa4474a335c0fe1846237db3457ae94b9e6a953014c"
+  },
+  {
+    "path": "assets/poi/landmarks/auguste-community_unreviewed.png",
+    "sha256": "5cfeecf95bccfcbf60a4332cbf4e52e5b605fc48d206a2c9e9c25db02f71fa2a"
+  },
+  {
+    "path": "assets/poi/landmarks/auguste-community_unreviewed.svg",
+    "sha256": "eae71cb0c1c02951ee0844c796bf0d9e8fc3521207d529851b594ff5c9c324fb"
+  },
+  {
+    "path": "assets/poi/landmarks/auguste-community_verified.png",
+    "sha256": "ff55a4012b2ce345234d4ac6c851aa44b6ad845618eba13320f7d53698b136c1"
+  },
+  {
+    "path": "assets/poi/landmarks/auguste-community_verified.svg",
+    "sha256": "f2f349d8eb848bed4bbe196c476a9265b0a0dd0d464a5cf8807169548c7612d0"
+  },
+  {
+    "path": "assets/poi/landmarks/auguste-editorial_unreviewed.png",
+    "sha256": "cd7c22d525e5da41dbe2daa989b8fcfd7ba4b5e615ad4d1e7535826392fc6918"
+  },
+  {
+    "path": "assets/poi/landmarks/auguste-editorial_unreviewed.svg",
+    "sha256": "7b0f037e621dca432b826e8f95afc5fc7acab8a5ace328c7904365cb3040de0b"
+  },
+  {
+    "path": "assets/poi/landmarks/auguste-editorial_verified.png",
+    "sha256": "28d7388802facb8ee0141154631eeced8b38191be20ce92fe140789b76b87ab8"
+  },
+  {
+    "path": "assets/poi/landmarks/auguste-editorial_verified.svg",
+    "sha256": "61e38133b63f5666e68bacf05b040fc981519b86dc41468becdf47c0ca52f1dd"
+  },
+  {
+    "path": "assets/poi/landmarks/auguste-imported_unreviewed.png",
+    "sha256": "e668cfba3e411ab2b53d081433125f6d36d628a2c6d81be4874b95913f5d9e5f"
+  },
+  {
+    "path": "assets/poi/landmarks/auguste-imported_unreviewed.svg",
+    "sha256": "822ca915741b62f8fcdbbea968f6b4d7cc862712cc33f82bd7ee309ae4b97ffc"
+  },
+  {
+    "path": "assets/poi/landmarks/fourviere-community_pending.png",
+    "sha256": "f6a75e3c20e0660ca2626dcd8b8a22e688048bc2d467a8858a83edc742d0bf1c"
+  },
+  {
+    "path": "assets/poi/landmarks/fourviere-community_pending.svg",
+    "sha256": "d97eb4410626268d87da7e02702909185c8500cf86239478d8308c270eb95170"
+  },
+  {
+    "path": "assets/poi/landmarks/fourviere-community_unreviewed.png",
+    "sha256": "3d3c291681ab5708c730416925567f4e59ea07457c126d168af72da425518b15"
+  },
+  {
+    "path": "assets/poi/landmarks/fourviere-community_unreviewed.svg",
+    "sha256": "c09d69ba6a9ae558c3c0e780d26832a905f114b7677c4ffb862f159549073913"
+  },
+  {
+    "path": "assets/poi/landmarks/fourviere-community_verified.png",
+    "sha256": "76b1d2d17a3290de0bd53c1114860bc177e226eb1fae31ac9c71229302b0d4ef"
+  },
+  {
+    "path": "assets/poi/landmarks/fourviere-community_verified.svg",
+    "sha256": "61e3614c398c52b53e71085252779a3113d4937b92932003874da7106e7f197f"
+  },
+  {
+    "path": "assets/poi/landmarks/fourviere-editorial_unreviewed.png",
+    "sha256": "41b50e7549043a025359169beeb9cc79339353e014966f8f5cf0d823098a8c83"
+  },
+  {
+    "path": "assets/poi/landmarks/fourviere-editorial_unreviewed.svg",
+    "sha256": "239f2d47dd8663770524c6bbcaacaa2561c41b6b242c74f69ee851e118dba62e"
+  },
+  {
+    "path": "assets/poi/landmarks/fourviere-editorial_verified.png",
+    "sha256": "00d8238f58ea6cbad6358df4a921dd1865fe75b0bb0275c000d8a933404b6708"
+  },
+  {
+    "path": "assets/poi/landmarks/fourviere-editorial_verified.svg",
+    "sha256": "85fbb47af4cecf2d89a33afd93be2d85c91c5f0819ac45b961aa4c72fbcc90c6"
+  },
+  {
+    "path": "assets/poi/landmarks/fourviere-imported_unreviewed.png",
+    "sha256": "b37be8e748de9ed35abc119baf610e7489ee853d462fab3f429c777621ced06a"
+  },
+  {
+    "path": "assets/poi/landmarks/fourviere-imported_unreviewed.svg",
+    "sha256": "2ae11a92bb08837a2a75ebeafbbb91f0e144310ac5063aa4b268a41a32017b7f"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-andre-community_pending.png",
+    "sha256": "c088de8171a71902554d45e0abbab7c6a0b0ad0d440395b084a5d80cb30edf08"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-andre-community_pending.svg",
+    "sha256": "d152b11c6537d58b3cfdbea5263cb44bde3751ddafb23d2f3ec50e0cef0660dd"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-andre-community_unreviewed.png",
+    "sha256": "f9a50800326b8ca95d5de9155dd7125ea3db9b0976119bd688f10e5e6d0ef910"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-andre-community_unreviewed.svg",
+    "sha256": "c52a825293176abfcc22c2e6c35ee49106492da00ae53a352e734edaef75c468"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-andre-community_verified.png",
+    "sha256": "6b2544cc87bb83fd939f8f29975e79136be44ae6fdbd3aef41bb6b51d62ce8f5"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-andre-community_verified.svg",
+    "sha256": "0bfbe8c88160e55ff7cb00725634f89420e387de97a22b8856cc3e4d74e43ac7"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-andre-editorial_unreviewed.png",
+    "sha256": "3cf6f9ed30154ef749b62ab1f90e02945600478230e35703d2349630cfe170a8"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-andre-editorial_unreviewed.svg",
+    "sha256": "6787546bb58ab67121f6d34c413c6f843969cd3ea3552e6c12545019483acbf3"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-andre-editorial_verified.png",
+    "sha256": "ad02d893f6db28bf75b8f8fd0742998163fefad5e944ddd0aac73f0ae53464fa"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-andre-editorial_verified.svg",
+    "sha256": "46fd5aa0b253f6f7eaf875107bc3500628688606a1940d46ba26665cb92ba0f6"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-andre-imported_unreviewed.png",
+    "sha256": "d9dcf742b8d2e7799a0a9bdca24af88118e752d469e46e8ec420e4e3134038a6"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-andre-imported_unreviewed.svg",
+    "sha256": "81209443d7d3b024021c413e3513f03ff2e6e8a3f45a44d30bc263db58b5e033"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-jean-community_pending.png",
+    "sha256": "8bc46ad9efc52fd702524354aac804dcce4a70a48e65b1144d5f0110846fef6c"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-jean-community_pending.svg",
+    "sha256": "52f897d280f6c82ed82360f1aa0e916ab6800582860e34c5f1c403708b0f6d4b"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-jean-community_unreviewed.png",
+    "sha256": "9944c825b5a3906742738e58d2ca6b617d27aaf034eb2869fcafd1829b3eaf5d"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-jean-community_unreviewed.svg",
+    "sha256": "f351c20e32425240fdddc90883e5565ce15c9862649239835ebed6d8e34b4151"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-jean-community_verified.png",
+    "sha256": "f45cbe579ebfdae8f9670221a177da8661ce1992452c16f472753a1cd0e7cfc4"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-jean-community_verified.svg",
+    "sha256": "d709bc3baaee4864a7f9a208264a509264c9680e9025ac39c2bd499cb67f8f3a"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-jean-editorial_unreviewed.png",
+    "sha256": "420dd26acf9008cd482c311a1821123fe7c52b5a74666c9276b544e5d4bc612b"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-jean-editorial_unreviewed.svg",
+    "sha256": "9cca9febbf626c06c221bd8f780e9a0e6679c50cd793e85458afe298b56c996d"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-jean-editorial_verified.png",
+    "sha256": "4e71eceb8007fce2b6090707dc8cb6d3318533b305abc273eec935f4d6ed94bd"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-jean-editorial_verified.svg",
+    "sha256": "ad210f695c29f3bb31879d2471af965dffbb2eb88714e59db1c4b0c1a5953928"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-jean-imported_unreviewed.png",
+    "sha256": "4fb854a5d75d7a4db587cb419b914629f159ecfe7271f9b5ca355e7604d63488"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-jean-imported_unreviewed.svg",
+    "sha256": "4935c2bb38deed3d3f1a00fc5b3af0dbe46161cfc88025f33bfd5ad31499daad"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-maurice-community_pending.png",
+    "sha256": "70081f88dcd7ec0792c2bafa60492bd3e8c94e07044f7776ecedd3d137e35511"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-maurice-community_pending.svg",
+    "sha256": "e2347c7a9009ab9cf2a5f89d01ab4abb5489b20ed2a900daba16f7166cfe4dea"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-maurice-community_unreviewed.png",
+    "sha256": "3b7a2a40414ace75fe2cbd6357beaa35d8db1fa33ae697ae539ff24ea66ac730"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-maurice-community_unreviewed.svg",
+    "sha256": "ab02b10c78edfd7f712833baaa30883f20f4a996ac61eb693310c21d1ed0e6a7"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-maurice-community_verified.png",
+    "sha256": "8f878286e1453e03fad4f7649ccd7ea39e6e2dbe897666e10b68fa63f86997e2"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-maurice-community_verified.svg",
+    "sha256": "747399138be5654eb3594c116ba9b6ab325b008cd25a9386026777e27df3ac1e"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-maurice-editorial_unreviewed.png",
+    "sha256": "1215c100c873152c59e5cb79af88bb41d0c3665a4b987942d2ae9772e056fd98"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-maurice-editorial_unreviewed.svg",
+    "sha256": "11b40f1e10bb424651535cc2da52dd58389649cd2565451d10ae97f163ba2c28"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-maurice-editorial_verified.png",
+    "sha256": "de0d334adfa31b7330e3bb3d41c43a34e572a3f80c2d81fe5494a5d1fa83455a"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-maurice-editorial_verified.svg",
+    "sha256": "b95d15ef5e14fb31a98947dc4501dd6569336358716678faddc1edb6d662cad7"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-maurice-imported_unreviewed.png",
+    "sha256": "8e5ad80e4a8e9ab4cbe8a61498316272e3f6e728449ccfe4f5438f15efd31dc3"
+  },
+  {
+    "path": "assets/poi/landmarks/saint-maurice-imported_unreviewed.svg",
+    "sha256": "b882413f163b076c1c4e3633b2db978a7d539104f0371ebd5da8443616cf5ebe"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-lyon-community_pending.png",
+    "sha256": "38633683cbb4df799cb94c245da5c24c56976edba05982ee4ccc8a8abfb54d89"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-lyon-community_pending.svg",
+    "sha256": "68443f3b4f508b3c3cc3758fd8adf03872093bfa9482b38ef2f06e17d573efbc"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-lyon-community_unreviewed.png",
+    "sha256": "e528dfed3ddf802c4d17af30ebfe5d8a68679004550034b757ee35cf58877e5c"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-lyon-community_unreviewed.svg",
+    "sha256": "b689c1cecbebb9e365442b32a0a40ba680d029a35f308f66a5b469044f53f796"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-lyon-community_verified.png",
+    "sha256": "4aae697e88597425789899a6da393ea815074644d4239631cec35da4090554a7"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-lyon-community_verified.svg",
+    "sha256": "3ea49691ea21d59873ffade813e29fdfe76747321fdf0537dfdd1e5eeb7004a8"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-lyon-editorial_unreviewed.png",
+    "sha256": "499a744854d67687e4631e4a18fcf67d1f279bf3dbaf1e3a9d286d0291370b23"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-lyon-editorial_unreviewed.svg",
+    "sha256": "a68545e3f21ea05c8fb7ee2f7a1a59dcd8b8cd22f459d032dc09f960f99568bf"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-lyon-editorial_verified.png",
+    "sha256": "2a3da6af79b2cd7467c66211457fae3d1db7f0f5bd45a3506a7ad5b4d5399bc3"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-lyon-editorial_verified.svg",
+    "sha256": "55c4c14a3854b41122e8eba3ae0e3509c0a431ddfc2767c03d361664d7d39d08"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-lyon-imported_unreviewed.png",
+    "sha256": "1164d2aa6d51a173f6c66068aae3c923a6c15194a3dec01fc9cefdb2ac4e5daf"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-lyon-imported_unreviewed.svg",
+    "sha256": "7a7b1d05e4c837efbdc0caa43c72393dae1bf1a1e49fa6c564f22a71e48591c9"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-vienne-community_pending.png",
+    "sha256": "93056fa9d5e2cc0513f7a6ef938faf7ee3335f05384cdf3fdb9b2a261f380263"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-vienne-community_pending.svg",
+    "sha256": "f7adde62f71a59dad568f899965150a30d2d50195b07ce37ce1dc225d90c7d74"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-vienne-community_unreviewed.png",
+    "sha256": "02ea8d0b7eea9024260034674f79ae569d7bfe78b81c2d1018e3a2f6ee644685"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-vienne-community_unreviewed.svg",
+    "sha256": "d5798c87dafa8865e55e56fb574540c4f2713f056c1403569c2fced61b2ef63c"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-vienne-community_verified.png",
+    "sha256": "e02655626a0d9bc18378cfdfc9c42f93995759e644d63d46e4a91650eb808b2c"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-vienne-community_verified.svg",
+    "sha256": "9b1cd93d77f66460446860bd7518721660ad792b62f293b6aafe665ebc0bf138"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-vienne-editorial_unreviewed.png",
+    "sha256": "b4d272ea5d53835e86ede96300ee7f1fd4657db09c4f71ad8a2b7c7abc15a02c"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-vienne-editorial_unreviewed.svg",
+    "sha256": "f2a3567855b0138257acdc0acf56fb3ef850b4fc59a7407c5a49f456b08e05e7"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-vienne-editorial_verified.png",
+    "sha256": "4787757ff5aa7ffcf2319e8d513300122f6c2203ca4c2162e4a7d1e3888387ad"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-vienne-editorial_verified.svg",
+    "sha256": "d39774007d4c206164b2b10a98517fef114043f20e69659facd7b518fd354085"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-vienne-imported_unreviewed.png",
+    "sha256": "b8947faeb8f2710ecd8742f5157477eea663c330fce24b122004e7644abcdcb3"
+  },
+  {
+    "path": "assets/poi/landmarks/theatre-vienne-imported_unreviewed.svg",
+    "sha256": "c320b26ba40bc537e9dbbc51baa43fdfe770417ddd93d7897daaf7bdea02d21e"
+  },
+  {
+    "path": "assets/poi/museum-community_pending.png",
+    "sha256": "5d052ce2c2b46bf824d15b8b89fa28af4bfd43ea6cde49c15163a7b6063e4d6b"
+  },
+  {
+    "path": "assets/poi/museum-community_pending.svg",
+    "sha256": "bdaa90052947f51b130ab4b4602f8f646f66aa0dfdb7a3cbd448353b74cc7aee"
+  },
+  {
+    "path": "assets/poi/museum-community_unreviewed.png",
+    "sha256": "7ff495d764f590bca7750f83375a1cfbe042067dae5c2b30b2bc4c567e70837c"
+  },
+  {
+    "path": "assets/poi/museum-community_unreviewed.svg",
+    "sha256": "da5f92123cfd123217b42da5e256d85fbe7a0bde24490b98d0d0ee8e7f91e221"
+  },
+  {
+    "path": "assets/poi/museum-community_verified.png",
+    "sha256": "248946bc1072a52a1727dd227aac6b5609e3f43a8c4bef86aa03d293a4089038"
+  },
+  {
+    "path": "assets/poi/museum-community_verified.svg",
+    "sha256": "b40e3a0551a676012ef8d180954138ac597dd67d93db316009bfdb7289797f62"
+  },
+  {
+    "path": "assets/poi/museum-editorial_unreviewed.png",
+    "sha256": "be83382b8697e1ca8c10769a0ba5531ede7419d94d3bb9e4aec5b4b473e109f1"
+  },
+  {
+    "path": "assets/poi/museum-editorial_unreviewed.svg",
+    "sha256": "2efca82966f30d802d05be80df23c53a19449181025a21dff804cfd3036d6b3c"
+  },
+  {
+    "path": "assets/poi/museum-editorial_verified.png",
+    "sha256": "5a6c26e26f0b1c100a86bc9770a1db155b29fdee69db92a7db71fa66e8a56441"
+  },
+  {
+    "path": "assets/poi/museum-editorial_verified.svg",
+    "sha256": "dbb8c1eff587bec24008aff1448cf93bccafafaa497c843a04a3c0b53fd1ae4e"
+  },
+  {
+    "path": "assets/poi/museum-imported_unreviewed.png",
+    "sha256": "2168a90f2bdd435b3103779548bdb9c1d426f07d7efcd68026300c6f844399d6"
+  },
+  {
+    "path": "assets/poi/museum-imported_unreviewed.svg",
+    "sha256": "693684e6d11fd7fabf6d739c41c3060f09455aab4c248430ccd949fdeac0300c"
+  },
+  {
+    "path": "assets/poi/nature-community_pending.png",
+    "sha256": "fb3ffb029f014da511f6d9558dee0958f40e2c989882a47c3ef86a2e7fb8c398"
+  },
+  {
+    "path": "assets/poi/nature-community_pending.svg",
+    "sha256": "737ff2a1b4add5144832670430701e2bacacdece9f14f062b47afca2146aeb96"
+  },
+  {
+    "path": "assets/poi/nature-community_unreviewed.png",
+    "sha256": "73942c53aa4e78302ba2725df40492e5bb9fc8c646dbec3b26db55cc006b38a8"
+  },
+  {
+    "path": "assets/poi/nature-community_unreviewed.svg",
+    "sha256": "9403b0fa62beffaf256f95035a38000db93fa7597a3a313a1262868f23482695"
+  },
+  {
+    "path": "assets/poi/nature-community_verified.png",
+    "sha256": "6ed39e169fa4d539d1285e57ba463865cac571d9c52aea50031fbc9f6cd4000a"
+  },
+  {
+    "path": "assets/poi/nature-community_verified.svg",
+    "sha256": "5eaee47187f932917c3c07f507fab2e85e6fc6dff91fde101c0d1cc21b4b85e3"
+  },
+  {
+    "path": "assets/poi/nature-editorial_unreviewed.png",
+    "sha256": "e37d1c2583691c84afb92e76eb56af42335700631caa6fdc0b8462d3478fa2e6"
+  },
+  {
+    "path": "assets/poi/nature-editorial_unreviewed.svg",
+    "sha256": "3c0c5b9372cb68fb8340211e624e23e03ae297a40504a3c79cf8d3b1c16539b2"
+  },
+  {
+    "path": "assets/poi/nature-editorial_verified.png",
+    "sha256": "1cd476413ffaba5f709d309bcab0acdc961b38a0e87bef0d3922a792f87208a0"
+  },
+  {
+    "path": "assets/poi/nature-editorial_verified.svg",
+    "sha256": "a260ff59b0720e4a725d55e2c578800b4be3d8a09840877630e3a5aa3ad28341"
+  },
+  {
+    "path": "assets/poi/nature-imported_unreviewed.png",
+    "sha256": "1dc23e5c385e4a727cc83d80b0db0e523304aa4d1b6d224e7c70d622274c36c9"
+  },
+  {
+    "path": "assets/poi/nature-imported_unreviewed.svg",
+    "sha256": "6edc9ac6da9d4ce3fbdcf90d91b8e069ba6cd29b5f32e1b094f22a10f701222e"
+  },
+  {
+    "path": "assets/poi/other-community_pending.png",
+    "sha256": "b2a363b5761fe12ff821a32be55464cffd76fca75a96f8340d55eb4ebd2bf4e9"
+  },
+  {
+    "path": "assets/poi/other-community_pending.svg",
+    "sha256": "b0770db4907ca087a0889a7d4fd4a901cc2e20683f1275229c5e89adb2e771d4"
+  },
+  {
+    "path": "assets/poi/other-community_unreviewed.png",
+    "sha256": "47e7b26f02c4c7dd5417d9b859f2fd3d792708080b22cd6979febb8711a4d6e7"
+  },
+  {
+    "path": "assets/poi/other-community_unreviewed.svg",
+    "sha256": "839471c7d6b87abad1348a504df751c9c2f7643ecbead60ccab71f5da8f69150"
+  },
+  {
+    "path": "assets/poi/other-community_verified.png",
+    "sha256": "e7135abcd27d288223cb650864a9f67f847f8b0a60745d2ac89259dc45616996"
+  },
+  {
+    "path": "assets/poi/other-community_verified.svg",
+    "sha256": "f25ca66cd45d474a2abaadd6bd8b95080707422d8207b219ab2e5ecdc6545ff3"
+  },
+  {
+    "path": "assets/poi/other-editorial_unreviewed.png",
+    "sha256": "b2450bb9c9f45b5431c45f8ac054e40a68eda7baf1ee0c41e05dd4f20fcf4e4e"
+  },
+  {
+    "path": "assets/poi/other-editorial_unreviewed.svg",
+    "sha256": "17ecfbade1a3f881664adfd9c34d494d3d555b44e0da93433705e968587819db"
+  },
+  {
+    "path": "assets/poi/other-editorial_verified.png",
+    "sha256": "cd1910fb2e7d8eb9a89680837fbaaa7854158e59c3786c8d193cb819c16abe1d"
+  },
+  {
+    "path": "assets/poi/other-editorial_verified.svg",
+    "sha256": "3a6cefb33d43407eb903b3540b7d136027a5e70b32f7864d3a0753e982c98e53"
+  },
+  {
+    "path": "assets/poi/other-imported_unreviewed.png",
+    "sha256": "581538526cb25d5251e088ffc760eb9aee1fa1f6b7db53b95d5805560b0e3b4b"
+  },
+  {
+    "path": "assets/poi/other-imported_unreviewed.svg",
+    "sha256": "f02c2abde3c452204faf3d7c913ecef021b41beb2655467c9234d290d607c7ac"
+  },
+  {
+    "path": "assets/poi/religious-community_pending.png",
+    "sha256": "7ed57ff75a178d5dabec50c0e32a6d932c1e2c7b81bff4a07650d5fd8408d3e7"
+  },
+  {
+    "path": "assets/poi/religious-community_pending.svg",
+    "sha256": "8204eb5eafa75d33106db48b963a3f39775db4b945dfc9985a1031fa00a36b6f"
+  },
+  {
+    "path": "assets/poi/religious-community_unreviewed.png",
+    "sha256": "6e4c01edd3cc7a61afcb60fa4a709bd78ff306dccaa05bd3426a60104910b0ad"
+  },
+  {
+    "path": "assets/poi/religious-community_unreviewed.svg",
+    "sha256": "ec1123ff1224012b1f00df7330041feb0955560c808fc151fc054432474fac0b"
+  },
+  {
+    "path": "assets/poi/religious-community_verified.png",
+    "sha256": "34ce744458576b7cb64cb64c144f0b1b7e22eb7ebff63e895d82a22361723eb8"
+  },
+  {
+    "path": "assets/poi/religious-community_verified.svg",
+    "sha256": "cf0245bd71b1d0e058529b46f1a724eaac5be65b0c9b234437bb069ff885fdf5"
+  },
+  {
+    "path": "assets/poi/religious-editorial_unreviewed.png",
+    "sha256": "55852e4d7f17ce1ef5ad9bfca3f268a284025a55cfab96e1e00e9780f609df10"
+  },
+  {
+    "path": "assets/poi/religious-editorial_unreviewed.svg",
+    "sha256": "086cb5b809c4295f5eca8234de2fe72e29cf38eea4b762d554642add7599be7a"
+  },
+  {
+    "path": "assets/poi/religious-editorial_verified.png",
+    "sha256": "6396c3e69579a7bf505f72ad78fde393343a2c20523d829670253a79a674d1a6"
+  },
+  {
+    "path": "assets/poi/religious-editorial_verified.svg",
+    "sha256": "2a466eec57d334c33102135202b7883642757b4be1016275218caae89a2df2c9"
+  },
+  {
+    "path": "assets/poi/religious-imported_unreviewed.png",
+    "sha256": "de5f8c27050e4356762cb76aa875abcf945f4dda50f945ef95524bc54cdc720a"
+  },
+  {
+    "path": "assets/poi/religious-imported_unreviewed.svg",
+    "sha256": "95b6d77fdb03ac592259cc10b023a84da9baa6fd4d324cec60f5a350ee1a0014"
+  },
+  {
+    "path": "assets/poi/temple-community_pending.png",
+    "sha256": "8b97b06234481f73a9ef6d2dededef037e344340647363aaa10d2fcd16258f5f"
+  },
+  {
+    "path": "assets/poi/temple-community_pending.svg",
+    "sha256": "91896820744ce054cf968188ce83c82748e43f91ac89325fe5644af2d58fd1fc"
+  },
+  {
+    "path": "assets/poi/temple-community_unreviewed.png",
+    "sha256": "639424e933a62790dbfde763c73fbee877d0e65f7e1b5bc47ca0ab2134349490"
+  },
+  {
+    "path": "assets/poi/temple-community_unreviewed.svg",
+    "sha256": "19559fea18b75d3295dde9e34b1b834a55970176fb097204952abea125c20085"
+  },
+  {
+    "path": "assets/poi/temple-community_verified.png",
+    "sha256": "f56257ff4a5e3009c71cf7f6031c178acf8e86c9a66d6832d001fa2f73bf8abb"
+  },
+  {
+    "path": "assets/poi/temple-community_verified.svg",
+    "sha256": "58a9a511c5f90c4c092d034faad8cca0c7f49982bb040fc56578fc96d87449e9"
+  },
+  {
+    "path": "assets/poi/temple-editorial_unreviewed.png",
+    "sha256": "d78360e3c8b0364e0476ebb323ccb6b9e8c3bf57a0d12d2c0c66a6ab94b3421e"
+  },
+  {
+    "path": "assets/poi/temple-editorial_unreviewed.svg",
+    "sha256": "e38c15ac48983ea42f2d5a6391ec113fecb96108694e8073c0d6e2c345c46cec"
+  },
+  {
+    "path": "assets/poi/temple-editorial_verified.png",
+    "sha256": "fddb73b9e1576bc03884038b4aeb5acbc37f06922ea42227189051ff94be4ce0"
+  },
+  {
+    "path": "assets/poi/temple-editorial_verified.svg",
+    "sha256": "b0ae4899bc43b4a287177a34d06ed09ffc0674e158a278b6b23ff71f90066040"
+  },
+  {
+    "path": "assets/poi/temple-imported_unreviewed.png",
+    "sha256": "720f4d80bee85e4592b04d152127c5b045ad420b00989f51a89d9e08c357ac42"
+  },
+  {
+    "path": "assets/poi/temple-imported_unreviewed.svg",
+    "sha256": "0dd4daba8df84773565b126bf4977bf7394dd4007376f3292a0a00fff29ca364"
+  },
+  {
+    "path": "docs/community/BACKEND-CONTRACT.md",
+    "sha256": "9eb8477d50ac028b007ecebff64b0a16531e2206acb80787bccedb9abda97577"
+  },
+  {
+    "path": "docs/design/POI-INTEGRATION-V1.md",
+    "sha256": "cfe7b870b0d7d8e924f7facabd31dacb9f07979562e0e58495c75f2f80310839"
+  },
+  {
+    "path": "docs/design/POI-SOCIAL-IMMERSIVE-V2.md",
+    "sha256": "c935d8ccb21bb42f253097774a86c40c098d1d692f31a29dd6556e7888e3e31c"
+  },
+  {
+    "path": "docs/design/POI-SOCIAL-V2-DELIVERY.md",
+    "sha256": "693b1baf2112950fcfcc2c7aef9603755641de9fa6866e763e71633560c25bb1"
+  },
+  {
+    "path": "docs/design/poi-preview.html",
+    "sha256": "11fb3fa27041a2cc5ff89aef80dbdcb54b813050b5ca590606c47c14ffe2bf7f"
+  },
+  {
+    "path": "docs/design/poi-v2-preview-320.png",
+    "sha256": "68e5a70dd2b79f7cd39c9872788558e61ff7428ba491b4702ab6879bf7aba729"
+  },
+  {
+    "path": "docs/design/poi-v2-preview-390.png",
+    "sha256": "c2b2c8d54aa90d9e741089e545c2d9374cb69db4e58c7fda98785cafc39c2d02"
+  },
+  {
+    "path": "docs/design/poi-v2-preview-430.png",
+    "sha256": "0f85c277faf9faff084b3d2d51ffaa33499d89231eac1fad0c0982ff8856a008"
+  },
+  {
+    "path": "package-lock.json",
+    "sha256": "f4392f294cccf4e5f7d7d6317487f79e552440c6e037a0f07a2a4118f99c270a"
+  },
+  {
+    "path": "package.json",
+    "sha256": "ef4109a74c8d3bf0fa3053258219eef54546409f407de4a6636648a2cabf9bc9"
+  },
+  {
+    "path": "scripts/poi/build-landmarks.cjs",
+    "sha256": "4a351bb49c848e829d1f0ce7d6b0a91506fcea0fc77ddf8da9e07999ee2c5c7e"
+  },
+  {
+    "path": "scripts/poi/build-markers.cjs",
+    "sha256": "459e17359b44b63195adaaf7431c201abc2c9c918f115bc64c6cda01e841447c"
+  },
+  {
+    "path": "scripts/poi/build-preview.cjs",
+    "sha256": "396565722804f6d00eff2a04fdd4d9e9184d1b9c381cf1ba1eb2583ae364cc91"
+  },
+  {
+    "path": "scripts/windows/update-social-v2.ps1",
+    "sha256": "c04775b747ae499009e5ae5aba9ae51f4abc3b3ac39c18122184c601fd1032c7"
+  },
+  {
+    "path": "src/app/(tabs)/index.tsx",
+    "sha256": "29064e431de6002b0535fd751bfffe0d08447b53261d6aca054fb562aeaba334"
+  },
+  {
+    "path": "src/app/(tabs)/profil.tsx",
+    "sha256": "ccea0f98273e261b335757b19967703174d9ffd63a21a4097c557262c07be28a"
+  },
+  {
+    "path": "src/app/contribuer.tsx",
+    "sha256": "5e24f45423c597d5e767da78899a3ae3a8b416d3b2575aae9604029fd2b957b4"
+  },
+  {
+    "path": "src/app/contributions.tsx",
+    "sha256": "c3ab9f784ae0a3837b935c566abfabc2639815065bf7c3a9c20860074c100b48"
+  },
+  {
+    "path": "src/components/contributions/MonumentActions.tsx",
+    "sha256": "d148ba11e2b641e6783f3507784da891ea67ed2a5efd36fc4c254fa50ef74227"
+  },
+  {
+    "path": "src/components/exploration/HistoricalMarker.tsx",
+    "sha256": "d1ae172d056728bc0f1ea005200ab74d4b69d5d3670568b6ea396162721e342c"
+  },
+  {
+    "path": "src/components/exploration/MapOptions.tsx",
+    "sha256": "a5e423c59f7b526edaa013286c7e9b1bc77da243a32e714dcde8d6ccf130fc5c"
+  },
+  {
+    "path": "src/components/monuments/MonumentBottomSheet.tsx",
+    "sha256": "4034b6b067054b49b130ae0d0374d5b9e1eeebbd8fd18f2da1ccd10437883f33"
+  },
+  {
+    "path": "src/components/monuments/MonumentDetails.tsx",
+    "sha256": "93b4e0288f915605ef0edc404f24e2ec526baeabf3c5b87c00e3c53f438a61db"
+  },
+  {
+    "path": "src/components/poi/PoiBadge.tsx",
+    "sha256": "f5c2ad09bfebf1844f6810c78597c37c8268372c475d318da19b2671c73e55b4"
+  },
+  {
+    "path": "src/components/poi/PoiControls.tsx",
+    "sha256": "508aa1b82ea814e6329225f988e617e28446e994490a094f130ef1c2b7782203"
+  },
+  {
+    "path": "src/components/poi/PoiGlyph.tsx",
+    "sha256": "0d1bb5789e3349d3ff614fea4c12c9d59cf4e34a02b96525828d13999ac96b58"
+  },
+  {
+    "path": "src/components/poi/landmarks.ts",
+    "sha256": "ee5458eaf184642ac71352d88c02500d8e50d61e89b22d59504a284e31f34f9d"
+  },
+  {
+    "path": "src/data/imported-pois.json",
+    "sha256": "ab6f21dd196ba32cca5ea7a3ad4e2e7f7515df0f7e88eef5d60887db21351f21"
+  },
+  {
+    "path": "src/data/monuments.ts",
+    "sha256": "ee4f7f6a570056365096561cab2e56070fcd291648cf9b6a640f30f0c7245bca"
+  },
+  {
+    "path": "src/lib/contributions/model.ts",
+    "sha256": "056b768fbb20413d077d8fc42a66acfb1fb6b82ac751a8bf6bc04321645ef375"
+  },
+  {
+    "path": "src/lib/contributions/native.ts",
+    "sha256": "f1075558f19aae331041487c3d5c644651e48c2ff2fab56fc68c5a8fd58a7b0e"
+  },
+  {
+    "path": "src/lib/contributions/photos.ts",
+    "sha256": "b77614f822ad66b0af4bdd7b20de7d4b29fb622114cbeb6a0f89e76f13ae83b5"
+  },
+  {
+    "path": "src/lib/contributions/share.ts",
+    "sha256": "d752b65dbfadbcc23f9827cf73c9dad0ef9ad2a48d1ed361a5122f31399f53b0"
+  },
+  {
+    "path": "src/lib/contributions/store.ts",
+    "sha256": "69da0b315bde74614fe93a4a080c23f4fc50739e12caa15516a83d5c2653c741"
+  },
+  {
+    "path": "src/lib/poi.ts",
+    "sha256": "81cb0025fa1f9f632c0e3adda73e59aeb06db7f1e455b2d65195750f1f277f78"
+  },
+  {
+    "path": "src/theme/index.ts",
+    "sha256": "6518b97995667b2e797795c817ee07fa634ed67d7765ef5182440ffa423c0c0c"
+  },
+  {
+    "path": "tests/contributions.test.ts",
+    "sha256": "8b87f76bcba493f8f6b1d089da1ccc919f574f6f90fa9fa141fdecb0c4658af1"
+  }
+]

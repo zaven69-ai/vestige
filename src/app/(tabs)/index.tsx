@@ -32,7 +32,7 @@ import {
 import MapView, { Circle, LocalTile, type Region } from "react-native-maps";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { useIsFocused } from "expo-router";
+import { router, useIsFocused } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import {
   cities,
@@ -98,7 +98,7 @@ export default function Explorer() {
   const reducedMotion = useReducedMotion();
   const direction = playerDirection(heading, fix, now);
   const { width, height } = useWindowDimensions();
-  const [atlasEnabled, setAtlasEnabled] = useState(true);
+  const [atlasEnabled, setAtlasEnabled] = useState(false);
   const atlas = useLocalAtlas(atlasEnabled);
   const [region, setRegion] = useState<Region>({
     ...cities.Vienne,
@@ -293,7 +293,7 @@ export default function Explorer() {
             : "Exploration libre";
   return (
     <View style={styles.root}>
-      {focused && <StatusBar style="dark" />}
+      {focused && <StatusBar style="light" />}
       <Modal
         visible={clusterChoices.length > 0}
         transparent
@@ -357,7 +357,7 @@ export default function Explorer() {
         style={StyleSheet.absoluteFill}
         initialCamera={initialCamera}
         customMapStyle={mapStyle}
-        userInterfaceStyle="light"
+        userInterfaceStyle="dark"
         showsCompass={false}
         showsUserLocation={false}
         showsMyLocationButton={false}
@@ -419,6 +419,7 @@ export default function Explorer() {
               )}
               selected={selected?.id === group.members[0].id}
               onSelect={selectMonument}
+              reducedMotion={reducedMotion}
             />
           ) : (
             <PoiClusterMarker
@@ -528,10 +529,30 @@ export default function Explorer() {
       >
         <Text style={styles.hintText}>ⓘ Comprendre les marqueurs</Text>
       </Pressable>
+      <Pressable
+        accessibilityRole="button"
+        onPress={() => router.push("/contribuer")}
+        style={[
+          styles.filterHint,
+          {
+            top: insets.top + 128,
+            left: 14,
+            minHeight: 44,
+            justifyContent: "center",
+            borderWidth: 1,
+            borderColor: "#D8BE80",
+            paddingHorizontal: 18,
+          },
+        ]}
+      >
+        <Text style={{ color: "#F0DCAB", fontWeight: "700" }}>
+          + Contribuer
+        </Text>
+      </Pressable>
       {visibleMonuments.length === 0 && (
         <View
           pointerEvents="none"
-          style={[styles.filterHint, { top: insets.top + 126 }]}
+          style={[styles.filterHint, { top: insets.top + 182 }]}
         >
           <Text style={styles.hintText}>
             Aucun lieu ne correspond · modifiez les filtres

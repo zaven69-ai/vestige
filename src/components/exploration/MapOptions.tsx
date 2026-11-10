@@ -167,7 +167,9 @@ export function MapOptions({
                 </View>
                 <View style={styles.row}>
                   <View style={{ flex: 1 }}>
-                    <Text style={styles.option}>Atlas VESTIGE · Vienne</Text>
+                    <Text style={styles.option}>
+                      Atlas local · Vienne (clair, hors ligne)
+                    </Text>
                     <Text style={s.body}>{atlasStatus}</Text>
                   </View>
                   <Switch

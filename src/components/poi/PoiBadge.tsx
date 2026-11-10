@@ -13,13 +13,14 @@ export function PoiBadge({
   poi,
   compact = false,
 }: {
-  poi: PoiRecord;
+  poi: PoiRecord & { id?: string };
   compact?: boolean;
 }) {
   const status = poiStatus(poi);
   return (
     <View style={{ flexDirection: "row", gap: 8, alignItems: "center" }}>
       <PoiGlyph
+        landmarkId={poi.id}
         category={poiCategory(poi)}
         status={status}
         size={compact ? 32 : 40}

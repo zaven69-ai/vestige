@@ -69,7 +69,11 @@ export function MonumentBottomSheet({
             </View>
           </View>
           {monument && (
-            <MonumentDetails key={monument.id} monument={monument} />
+            <MonumentDetails
+              key={monument.id}
+              monument={monument}
+              onNavigate={close}
+            />
           )}
         </View>
       </View>

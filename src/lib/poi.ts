@@ -98,7 +98,10 @@ export function poiStatus(poi: PoiRecord): PoiStatus {
     : "imported_unreviewed";
 }
 export function isPublicPoi(poi: PoiRecord) {
-  return poi.reviewStatus !== "rejected";
+  return (
+    poi.reviewStatus !== "rejected" &&
+    !(poi.origin === "community" && poi.reviewStatus === "pending")
+  );
 }
 export type PoiFilters = {
   categories: PoiCategory[];

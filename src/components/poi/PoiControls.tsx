@@ -125,6 +125,26 @@ export function PoiFilterPanel({
 export function PoiLegend() {
   return (
     <View style={{ gap: 18 }}>
+      <Text style={s.heading}>Miniatures des lieux phares</Text>
+      <Text style={s.body}>
+        Illustrations stylisées des monuments actuels, pas des reconstitutions
+        historiques. L’or de l’architecture et de l’éclairage est décoratif :
+        seul le sceau de contrôle indique la vérification.
+      </Text>
+      <View style={{ flexDirection: "row", gap: 16 }}>
+        <PoiGlyph
+          landmarkId="auguste"
+          category="temple"
+          status="editorial_unreviewed"
+          size={72}
+        />
+        <PoiGlyph
+          landmarkId="fourviere"
+          category="religious"
+          status="editorial_unreviewed"
+          size={72}
+        />
+      </View>
       <Text style={s.heading}>1 · Le dessin indique la catégorie</Text>
       <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 10 }}>
         {poiCategories.map((id) => (
@@ -201,8 +221,9 @@ export function PoiLegend() {
         un nombre regroupe plusieurs lieux.
       </Text>
       <Text style={s.caption}>
-        Les contributions communautaires ne sont pas encore ouvertes. Les
-        auteurs et révisions accompagneront les contributions publiées.
+        Les brouillons privés sont disponibles via Contribuer. La publication
+        communautaire n’est pas encore ouverte. Les auteurs et révisions
+        accompagneront les contributions publiées.
       </Text>
     </View>
   );
