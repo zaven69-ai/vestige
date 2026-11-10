@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import { Image, Pressable, Text, View } from "react-native";
 import { Stack } from "expo-router";
 import { Page, Card, Badge, s, colors } from "../components/ui";
 import status from "../data/avatars/catia.json";
+import verification from "../../assets/avatars/catia/rig-lab/revision-2/verification.json";
+import { CatiaViewerBoundary } from "../components/avatars/CatiaViewerBoundary";
 import { catiaBlockers } from "../lib/avatars/catia";
+const Catia3DPreview = lazy(
+  () => import("../components/avatars/Catia3DPreview"),
+);
 const views = [
   {
     label: "Face",
@@ -24,62 +29,111 @@ const views = [
 ];
 export default function CatiaPreview() {
   const [index, setIndex] = useState(0);
+  const [mode, setMode] = useState<"3d" | "images">("3d");
+  const [attempt, setAttempt] = useState(0);
   return (
     <>
       <Stack.Screen options={{ title: "Préparation de Catia" }} />
-      <Page eyebrow="Atelier Vestige" title="Catia prend forme">
+      <Page eyebrow="Atelier Vestige" title="Catia en 3D">
         <Card>
           <Badge tone="coral">Non activée sur la carte</Badge>
           <Text style={s.body}>
             Son modèle a été optimisé en conservant la texture et la tenue
-            d’origine. Le squelette et les mouvements restent expérimentaux.
-            Votre explorateur actuel et votre progression sont conservés.
+            d’origine. Les mouvements corrigés ont passé les contrôles hors
+            ligne et restent à tester sur votre iPhone. Votre explorateur actuel
+            et votre progression sont conservés.
           </Text>
         </Card>
-        <Card>
-          <Image
-            source={views[index].asset}
-            resizeMode="contain"
-            accessibilityLabel={`Catia, aperçu ${views[index].label.toLowerCase()} du modèle optimisé`}
-            style={{
-              width: "100%",
-              height: 360,
-              backgroundColor: colors.raised,
-              borderRadius: 18,
-            }}
-          />
-          <View style={{ flexDirection: "row", gap: 6 }}>
-            {views.map((view, i) => (
-              <Pressable
-                key={view.label}
-                accessibilityRole="button"
-                accessibilityState={{ selected: index === i }}
-                onPress={() => setIndex(i)}
-                style={{
-                  flex: 1,
-                  minHeight: 44,
-                  paddingVertical: 12,
-                  borderBottomWidth: 2,
-                  borderBottomColor:
-                    index === i ? colors.turquoise : colors.line,
-                }}
+        <View style={{ flexDirection: "row", gap: 8 }}>
+          {(
+            [
+              ["3d", "Vue 3D animée"],
+              ["images", "Images de contrôle"],
+            ] as const
+          ).map(([value, label]) => (
+            <Pressable
+              key={value}
+              accessibilityRole="button"
+              accessibilityState={{ selected: mode === value }}
+              onPress={() => {
+                if (value === "3d") setAttempt((n) => n + 1);
+                setMode(value);
+              }}
+              style={{
+                flex: 1,
+                minHeight: 44,
+                padding: 12,
+                borderRadius: 12,
+                borderWidth: 1,
+                borderColor: mode === value ? colors.turquoise : colors.line,
+              }}
+            >
+              <Text style={{ color: colors.ink, textAlign: "center" }}>
+                {label}
+              </Text>
+            </Pressable>
+          ))}
+        </View>
+        {mode === "3d" && (
+          <Card>
+            <CatiaViewerBoundary
+              key={attempt}
+              onImages={() => setMode("images")}
+            >
+              <Suspense
+                fallback={<Text style={s.body}>Préparation de la vue 3D…</Text>}
               >
-                <Text style={{ color: colors.ink, textAlign: "center" }}>
-                  {view.label}
-                </Text>
-              </Pressable>
-            ))}
-          </View>
-          <Text style={s.caption}>
-            Images de contrôle calculées depuis le GLB optimisé. Cette vue ne
-            simule pas un personnage 3D interactif ou une animation validée.
-          </Text>
-        </Card>
+                <Catia3DPreview />
+              </Suspense>
+            </CatiaViewerBoundary>
+          </Card>
+        )}
+        {mode === "images" && (
+          <Card>
+            <Image
+              source={views[index].asset}
+              resizeMode="contain"
+              accessibilityLabel={`Catia, aperçu ${views[index].label.toLowerCase()} du modèle optimisé`}
+              style={{
+                width: "100%",
+                height: 360,
+                backgroundColor: colors.raised,
+                borderRadius: 18,
+              }}
+            />
+            <View style={{ flexDirection: "row", gap: 6 }}>
+              {views.map((view, i) => (
+                <Pressable
+                  key={view.label}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: index === i }}
+                  onPress={() => setIndex(i)}
+                  style={{
+                    flex: 1,
+                    minHeight: 44,
+                    paddingVertical: 12,
+                    borderBottomWidth: 2,
+                    borderBottomColor:
+                      index === i ? colors.turquoise : colors.line,
+                  }}
+                >
+                  <Text style={{ color: colors.ink, textAlign: "center" }}>
+                    {view.label}
+                  </Text>
+                </Pressable>
+              ))}
+            </View>
+            <Text style={s.caption}>
+              Images de contrôle calculées depuis le GLB optimisé. Cette vue ne
+              simule pas un personnage 3D interactif ou une animation validée.
+            </Text>
+          </Card>
+        )}
         <Card>
-          <Text style={s.heading}>Préparation technique</Text>
+          <Text style={s.heading}>Version corrigée</Text>
           <Text style={s.body}>
-            {status.optimizedTriangles.toLocaleString("fr-FR")} triangles ·
-            texture {status.textureWidth} × {status.textureHeight}
+            {verification.triangles.toLocaleString("fr-FR")} triangles · texture{" "}
+            {status.textureWidth} × {status.textureHeight}
           </Text>
           <Text style={s.body}>
             Squelette : {status.hasSkeleton ? "créé, à contrôler" : "à créer"} ·
@@ -88,11 +142,11 @@ export default function CatiaPreview() {
               ? "clips expérimentaux produits"
               : "préparation en cours"}
           </Text>
-          {status.qualityIssues.map((issue) => (
-            <Text key={issue} style={s.caption}>
-              {issue}
-            </Text>
-          ))}
+          <Text style={s.caption}>
+            Contrôles Blender et export/réimport GLB réussis. Le rendu temps
+            réel et les performances restent à vérifier sur appareil. La course
+            conserve les mains près des poches.
+          </Text>
           <Text style={s.caption}>
             Ces fichiers ne sont pas chargés sur la carte. L’aperçu reste léger
             et compatible avec Expo Go.

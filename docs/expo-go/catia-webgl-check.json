@@ -1,0 +1,12 @@
+{
+  "clips": [
+    "idle",
+    "walk",
+    "run"
+  ],
+  "walkMoves": true,
+  "pauseFreezes": true,
+  "runDiffers": true,
+  "trianglesRendered": 24996,
+  "errors": []
+}

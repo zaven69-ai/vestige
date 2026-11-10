@@ -1,3 +1,9 @@
+# Vestige — test Catia 3D sur iPhone
+
+**[Télécharger le ZIP complet](https://codeload.github.com/zaven69-ai/vestige/zip/refs/heads/codex/catia-mobile-preparation)** · **[Commandes PowerShell et procédure Expo Go](LANCER_IPHONE_WINDOWS.md)**
+
+Profil → Tester Catia en 3D : véritable GLB corrigé, Idle/Walk/Run, rotation et zoom. Le personnage de la carte reste inchangé. Node.js 24 et Expo Go SDK 58 ; le tunnel Expo par défaut demande `npx expo login`.
+
 # Catia — correction du rig, révision 2
 
 [GLB et Blender corrigés, tests et vidéos avant/après](docs/avatars/catia/revision-2/README.md). Les actions Idle/Walk/Run sont améliorées et contrôlées après réimport du GLB. Catia reste désactivée, sans test matériel iPhone revendiqué.
