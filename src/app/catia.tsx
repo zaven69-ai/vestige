@@ -1,6 +1,5 @@
-import { Catia3DPreviewLoader } from "../components/avatars/Catia3DPreviewLoader";
 import { CatiaMotionFrames } from "../components/avatars/CatiaMotionFrames";
-import React, { useState } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import { Image, Pressable, Text, View } from "react-native";
 import { Stack } from "expo-router";
 import { Page, Card, Badge, s, colors } from "../components/ui";
@@ -8,6 +7,9 @@ import status from "../data/avatars/catia.json";
 import verification from "../../assets/avatars/catia/rig-lab/revision-2/verification.json";
 import { CatiaViewerBoundary } from "../components/avatars/CatiaViewerBoundary";
 import { catiaBlockers } from "../lib/avatars/catia";
+const Catia3DPreview = lazy(
+  () => import("../components/avatars/Catia3DPreview"),
+);
 const views = [
   {
     label: "Face",
@@ -79,7 +81,11 @@ export default function CatiaPreview() {
               key={attempt}
               onImages={() => setMode("images")}
             >
-              <Catia3DPreviewLoader />
+              <Suspense
+                fallback={<Text style={s.body}>Préparation de la vue 3D…</Text>}
+              >
+                <Catia3DPreview />
+              </Suspense>
             </CatiaViewerBoundary>
           </Card>
         )}

@@ -13,12 +13,19 @@ if (!(Test-Path -LiteralPath (Join-Path $root 'package.json'))) {
 $package = Get-Content -LiteralPath (Join-Path $root 'package.json') -Raw | ConvertFrom-Json
 if ($package.name -ne 'vestige') { throw 'Ce dossier ne contient pas le projet Vestige.' }
 $files = @(
+    'metro.config.js',
     'src/app/catia.tsx',
     'src/components/avatars/Catia3DPreview.tsx',
+    'tests/catia-native-resolution.test.ts',
+    'scripts/avatars/catia/inspect-native-module.cjs',
+    'scripts/windows/update-catia.ps1',
+    'docs/expo-go/CATIA_IPHONE_FIX.md',
+    'docs/expo-go/catia-module-resolution.json'
+)
+$obsolete = @(
     'src/components/avatars/Catia3DPreviewLoader.tsx',
     'src/lib/avatars/catiaModule.ts',
-    'tests/catia-module.test.ts',
-    'docs/expo-go/CATIA_IPHONE_FIX.md'
+    'tests/catia-module.test.ts'
 )
 $stage = Join-Path $env:TEMP ('Vestige-Catia-patch-' + [guid]::NewGuid().ToString('N'))
 $backup = Join-Path (Split-Path $root -Parent) ('Vestige-Catia-backup-' + (Get-Date -Format 'yyyyMMdd-HHmmss-fff'))
@@ -28,7 +35,7 @@ foreach ($file in $files) {
     New-Item -ItemType Directory -Path (Split-Path $download -Parent) -Force | Out-Null
     Invoke-WebRequest -Uri "https://raw.githubusercontent.com/zaven69-ai/vestige/$Revision/$file" -OutFile $download
 }
-foreach ($file in $files) {
+foreach ($file in ($files + $obsolete)) {
     $target = Join-Path $root $file
     if (Test-Path -LiteralPath $target) {
         $saved = Join-Path $backup $file
@@ -40,6 +47,12 @@ foreach ($file in $files) {
     $target = Join-Path $root $file
     New-Item -ItemType Directory -Path (Split-Path $target -Parent) -Force | Out-Null
     Copy-Item -LiteralPath (Join-Path $stage $file) -Destination $target -Force
+}
+# These three unused files belong to the previous loader workaround.
+# Existing contents have been backed up above, including any local edits.
+foreach ($file in $obsolete) {
+    $target = Join-Path $root $file
+    if (Test-Path -LiteralPath $target) { Remove-Item -LiteralPath $target }
 }
 Write-Host "Correctif installe. Sauvegarde des fichiers precedents : $backup"
 Write-Host 'Lancez : npx.cmd expo start --tunnel --clear'

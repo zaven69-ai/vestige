@@ -147,7 +147,7 @@ function Control({
     </Pressable>
   );
 }
-export function Catia3DPreview() {
+export default function Catia3DPreview() {
   const focused = useIsFocused();
   const reduced = useReducedMotion();
   const [foreground, setForeground] = useState(
@@ -339,6 +339,3 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
-
-// Retain the default export for existing consumers; the native loader uses the named export.
-export default Catia3DPreview;

@@ -1,30 +1,56 @@
-# Correctif du chargement Catia — validation iPhone en attente
+# Catia : cause identifiée dans le graphe Metro — validation iPhone en attente
 
-## Symptôme et correction
+## Pourquoi les deux correctifs précédents échouaient
 
-L'iPhone signale une résolution `React.lazy` vers `undefined`. L'ancien écran utilisait `lazy(() => import("../components/avatars/Catia3DPreview"))`. L'export par défaut existe dans le source et dans le module iOS compilé inspecté ; cela ne prouve pas sa résolution correcte lors de l'exécution sur le téléphone. La cause précise de cette résolution indéfinie n'a pas été reproduite sur appareil dans le Cloud.
+Le fichier TSX exporte un composant valide. Le problème précède son rendu :
 
-Le lecteur est maintenant chargé par un `require` Metro littéral et différé, depuis `Catia3DPreviewLoader`, rendu **à l'intérieur** de `CatiaViewerBoundary`. L'export nommé `Catia3DPreview` est vérifié avant rendu ; l'export par défaut est conservé. Le composant est mémorisé par un initialiseur `useState` et conserve son identité. Il n'existe plus de promesse `import()` / `React.lazy` entre l'écran et le lecteur. Les erreurs d'évaluation native restent interceptables par la frontière d'erreur ; elles ne se produisent pas lors du chargement initial du mode images. Les `Suspense` du Canvas et du chargement GLTF restent en place : ils attendent des ressources, pas l'export d'un composant.
+1. `Catia3DPreview` importe `@react-three/fiber/native` 9.8.2.
+2. Son point d'entrée natif CommonJS fait `require("three")`.
+3. Les conditions de résolution Metro sélectionnent `three/build/three.cjs`, version 0.187.0. Le GLTFLoader et SkeletonUtils sélectionnent, eux, la version ESM.
+4. La ligne 12 du vrai fichier `three.cjs` appelle **`process.emitWarning(...)`**, API Node absente de React Native. L'évaluation de l'import échoue.
+5. `metro-runtime/src/polyfills/require.js`, dans `guardedLoadModule`, transmet l'exception à `global.ErrorUtils.reportFatalError` puis retourne `undefined`. Il efface aussi les exports du module qui a échoué.
+6. `React.lazy` reçoit donc un module sans composant. Le chargeur ajouté dans `c53ef5d` recevait le même `undefined`, puis lançait son erreur générique. Il ne corrigeait pas l'import de Three et masquait la cause par un second message.
 
-Aucun remplacement de GLB, changement du rig, activation sur carte ou changement de GPS/XP. Le mode images et ses séquences sont conservés. Aucun changement de dépendances nécessaire.
+Ce mécanisme est **reproduit avec les vraies factories du bundle iOS et le vrai chargeur Metro**, dans une VM JavaScript sans `process.emitWarning`. Les frontières natives RN/Expo, l'asset et l'UI/capteurs sont substitués ; React, Three, GLTFLoader, R3F, le JS d'Expo GL et le module Catia viennent du vrai bundle. Cela n'est pas une mesure directe des exports sur l'iPhone ni un test du GPU natif.
 
-## Compatibilité examinée
+Résultat avant : `requireType: "undefined"`, aucune clé, erreur fatale `process.emitWarning is not a function`, deux identifiants de modules Three.
 
-- Expo 58.0.23, React 19.3.0, React Native 0.88.1.
-- `@react-three/fiber/native` 9.8.2 expose `Canvas`, `useFrame`, `useLoader`, `useThree`. Ses contraintes React `>=19 <19.4` et RN `>=0.78` incluent les versions installées.
-- Son implémentation native importe bien **`{ GLView }`** depuis `expo-gl`. Expo GL 58.0.4 exporte ce composant nommé ; cette version et `expo-asset` 58.0.20 correspondent aux modules attendus par le SDK installé.
-- Documentation versionnée consultée : https://docs.expo.dev/versions/v58.0.0/sdk/gl-view/ . GLView est inclus dans Expo Go ; le JavaScript ne doit pas être exécuté dans un Chrome distant, les appels GL étant natifs synchrones.
-- Une compatibilité déclarée et un export réussi ne valident pas le rendu Expo Go sur l'iPhone.
+Résultat après : `requireType: "object"`, clés `["default"]`, `defaultType: "function"`, aucune erreur fatale, un seul identifiant Three, aucun `three.cjs` dans le graphe. Rapport : [catia-module-resolution.json](catia-module-resolution.json).
 
-## Vérifications
+## Correction
 
-Tests de régression : résolutions nommée/par défaut, refus d'un export manquant ou d'une promesse, exécution du vrai composant chargeur compilé avec React, chargement natif différé, remontée des erreurs natives vers son parent. Le moteur natif est substitué dans ces tests ; ils ne testent pas le GPU de l'iPhone. Les autres tests du projet sont conservés.
+`metro.config.js` résout **toute demande exacte de `three` sur iOS/Android vers `three/build/three.module.js`**, qu'elle provienne d'un import ESM ou d'un require CommonJS. Il utilise le chemin du package installé, sans chemin absolu propre au Cloud. Les autres modules et la résolution web sont délégués au résolveur Metro d'origine. L'extension asset `glb` est conservée.
 
-Contrôles réussis dans le Cloud : **51 tests sur 51**, TypeScript (`npm run typecheck`), lint (`npm run lint`), versions Expo (`expo install --check`) et exports Hermes iOS/Android (`expo export --platform ios --platform android`). Le GLB corrigé conserve son SHA-256 `3efe730d69dbc67cb6ca3fcc33d2767ab976a54686a345927fcf73d4fe8318a9`. Le script PowerShell a été relu, mais ne peut pas être exécuté sur Windows dans cet environnement Linux. Aucun iPhone physique connecté au Cloud : **le plantage signalé reste à confirmer comme corrigé sur appareil**.
+Cela évite le point d'entrée Node et garantit une seule instance de Three : les patchs FileLoader/TextureLoader de R3F natif s'appliquent aussi au GLTFLoader. Il n'y a aucun faux `process.emitWarning`, aucune désactivation de l'erreur et aucun alias vers un Canvas web.
 
-## Mise à jour locale
+Le chargeur personnalisé, son helper et leurs tests devenus inutiles sont retirés. L'écran retrouve `lazy(() => import(...))` avec un **export default fonction**, sous `CatiaViewerBoundary` et `Suspense`. Les Suspense internes du Canvas et du modèle restent présents. Les éléments `View/Text/Pressable` restent à l'extérieur du Canvas ; les éléments Three restent à l'intérieur. Le mode images reste indépendant.
 
-Arrêter Metro avec Ctrl+C, fermer complètement Vestige dans Expo Go, puis mettre à jour les fichiers. Si le dossier est un clone Git sans changements locaux :
+Le GLB corrigé, sa texture, son squelette, Idle/Walk/Run, le joueur de la carte et le GPS/XP ne changent pas. Aucun changement de dépendances.
+
+## Compatibilité et preuves
+
+Expo 58.0.23, React 19.3.0, RN 0.88.1, R3F 9.8.2 et expo-gl 58.0.4. Les peers R3F incluent ces versions de React/RN. Expo GL exporte bien `GLView`, import nommé utilisé par R3F natif, et correspond à `expo/bundledNativeModules.json`. Cette compatibilité déclarée n'empêche pas le bug d'entrée Three décrit ci-dessus.
+
+Documentation versionnée consultée : https://docs.expo.dev/versions/v58.0.0/sdk/gl-view/ . Expo GL est inclus dans Expo Go ; ne pas exécuter le JavaScript dans un Chrome distant, les appels GL étant natifs synchrones.
+
+Contrôles déjà réussis : **49 tests sur 49**, TypeScript, lint, `expo install --check` et exports Hermes iOS/Android. Les graphes iOS et Android exposent le default Catia, `Canvas`, `useFrame`, `useLoader`, `useThree` et `GLView` comme fonctions, avec une seule cible Three ESM et aucune erreur fatale dans le contrôle JavaScript.
+
+Tests de régression : vraie source Three CJS + vrai chargeur Metro pour reproduire le retour undefined et l'erreur d'origine ; résolution ESM native et délégation des autres modules. Le script `scripts/avatars/catia/inspect-native-module.cjs` vérifie aussi un bundle de développement réel.
+
+Pour reproduire ce dernier contrôle après `npx expo start --localhost --port 8093 --clear` :
+
+```powershell
+Invoke-WebRequest -Uri 'http://127.0.0.1:8093/src/app/catia.bundle?platform=ios&dev=true&minify=false&runModule=false&modulesOnly=true' -OutFile "$env:TEMP\catia-ios.bundle"
+node scripts/avatars/catia/inspect-native-module.cjs "$env:TEMP\catia-ios.bundle"
+```
+
+Le script doit trouver un export default fonction, une seule instance Three, aucun point d'entrée Three CJS et aucune erreur fatale. Ce contrôle ne monte pas de GLView sur un appareil.
+
+## Mise à jour Windows
+
+Arrêter Metro avec Ctrl+C. **Le serveur doit redémarrer**, car sa configuration change : un simple rechargement Fast Refresh ne suffit pas. Fermer Vestige dans Expo Go.
+
+Pour un clone Git sans modifications locales :
 
 ```powershell
 git switch codex/catia-mobile-preparation
@@ -32,15 +58,15 @@ git pull --ff-only origin codex/catia-mobile-preparation
 npx.cmd expo start --tunnel --clear
 ```
 
-Si Git signale des changements locaux, ne pas les effacer ; les sauvegarder/committer avant de poursuivre.
+Pour le dossier extrait du ZIP, lancer `scripts/windows/update-catia.ps1 -Revision <SHA complet du commit>` depuis le dossier contenant `package.json`. Il télécharge uniquement huit fichiers, sauvegarde les fichiers remplacés et les trois anciens fichiers de contournement dans un dossier voisin `Vestige-Catia-backup-...`, puis retire ces trois fichiers inutilisés. Les téléchargements et sauvegardes précèdent les modifications. Aucun modèle ni dépendance n'est supprimé. Le script ne nécessite pas Git ; PowerShell n'est pas disponible dans le Cloud pour le tester sous Windows.
 
-Pour un dossier extrait du ZIP, le script `scripts/windows/update-catia.ps1 -Revision <SHA complet du commit>` télécharge uniquement les six fichiers du correctif et sauvegarde les fichiers existants dans un dossier voisin `Vestige-Catia-backup-...`. Tous les téléchargements sont terminés avant la copie des fichiers. Il ne touche pas aux modèles ni à `node_modules` et ne nécessite pas Git. Lancer ce script depuis le dossier contenant `package.json`. Ne pas l'utiliser pour remplacer une révision plus récente ou un travail local non examiné.
+## Validation physique encore nécessaire
 
-## Validation sur iPhone requise
-
-1. Mettre à jour Expo Go pour SDK 58 et scanner le nouveau QR après `--clear`.
-2. Profil → Tester Catia en 3D : vérifier que Catia apparaît, sans l'erreur lazy.
+1. Mettre à jour Expo Go pour SDK 58 et scanner le QR du serveur redémarré.
+2. Profil → Tester Catia en 3D : vérifier que le modèle apparaît.
 3. Essayer Idle, Walk, Run, pause/reprise, rotation et zoom.
-4. Passer en mode images puis revenir en 3D ; sortir/réouvrir l'écran et passer en arrière-plan.
+4. Basculer images/3D, quitter/réouvrir l'écran, passer en arrière-plan.
 5. Revenir à Explorer et contrôler le GPS, les monuments et la progression.
-6. Si échec : conserver le message complet `[Catia 3D]`, le modèle d'iPhone et la version Expo Go. Le mode images reste accessible. Ne pas activer Catia sur la carte avant validation.
+6. Si échec, conserver **la première erreur** du terminal Metro et du téléphone, le modèle d'iPhone et la version Expo Go.
+
+**Aucun iPhone physique n'est connecté au Cloud. Le rendu iPhone n'est pas déclaré validé. Catia reste désactivée sur la carte.**

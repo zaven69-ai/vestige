@@ -1,0 +1,61 @@
+{
+  "scope": "Real development Metro module factories and Metro require guard in a JS VM; native bridge, assets and UI/sensors are substituted. No physical iPhone, Android device or GL context.",
+  "before_c53ef5d": {
+    "platform": "ios",
+    "nativeExports": null,
+    "requireType": "undefined",
+    "keys": [],
+    "defaultType": "undefined",
+    "threeCJS": true,
+    "threeModuleIds": [
+      17,
+      1278
+    ],
+    "fatals": [
+      {
+        "name": "TypeError",
+        "message": "process.emitWarning is not a function"
+      }
+    ]
+  },
+  "after_ESM_ios": {
+    "platform": "ios",
+    "nativeExports": {
+      "Canvas": "function",
+      "useFrame": "function",
+      "useLoader": "function",
+      "useThree": "function",
+      "GLView": "function"
+    },
+    "requireType": "object",
+    "keys": [
+      "default"
+    ],
+    "defaultType": "function",
+    "threeCJS": false,
+    "threeModuleIds": [
+      1338
+    ],
+    "fatals": []
+  },
+  "after_ESM_android": {
+    "platform": "android",
+    "nativeExports": {
+      "Canvas": "function",
+      "useFrame": "function",
+      "useLoader": "function",
+      "useThree": "function",
+      "GLView": "function"
+    },
+    "requireType": "object",
+    "keys": [
+      "default"
+    ],
+    "defaultType": "function",
+    "threeCJS": false,
+    "threeModuleIds": [
+      1338
+    ],
+    "fatals": []
+  }
+}
