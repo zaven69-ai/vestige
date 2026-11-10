@@ -17,9 +17,9 @@ Implémentation de [POI-VISUAL-SYSTEM-V1.md](POI-VISUAL-SYSTEM-V1.md), sans chan
 
 ## Données réelles et limites
 
-Cette branche contient **35 lieux : huit fiches initiales et 27 fiches générées/importées**. Le catalogue de 791 imports mentionné dans le cahier n'est pas présent ; aucun import supplémentaire ni lieu fictif n'a été ajouté pour atteindre ce chiffre.
+**Mise à jour :** cette branche inclut désormais les **791 candidats OpenStreetMap** issus de `src/data/imported-pois.json` (91 à Vienne, 700 à Lyon), en plus des huit fiches initiales et 27 fiches enrichies. Un rapprochement prudent par ville et nom normalisé élimine les doublons évidents (48 doublons entre les 27 fiches et les 791 imports au moment de l'intégration ; les huit fiches initiales peuvent aussi se recouper). Le total affiché doit être vérifié sur appareil. Tous les candidats OSM restent non vérifiés et sont affichés comme tels. Les tests et performances iPhone de cette fusion restent à confirmer.
 
-Les huit fiches sont `origin=editorial`, `reviewStatus=unreviewed`. Les 27 autres sont `origin=import`, `reviewStatus=unreviewed`. Aucun badge vérifié n'est attribué à la présence d'une URL, d'une description, d'OSM ou de Wikidata. Un futur statut vérifié exige une validation explicite, un identifiant de contrôleur non vide et une date valide ; une validation communautaire conserve l'origine communautaire.
+Les huit fiches sont `origin=editorial`, `reviewStatus=unreviewed`. Les 27 fiches enrichies et les nouveaux candidats OSM sont `origin=import`, `reviewStatus=unreviewed`. Aucun badge vérifié n'est attribué à la présence d'une URL, d'une description, d'OSM ou de Wikidata. Un futur statut vérifié exige une validation explicite, un identifiant de contrôleur non vide et une date valide ; une validation communautaire conserve l'origine communautaire.
 
 Il n'existe pas de backend communautaire dans cette version. Les états, filtres et champs sont prêts, mais **soumission, modération et profils contributeurs ne sont pas activés ni simulés**. Aucun auteur, événement de vérification ou historique de révision n'est inventé. L'historique de provenance initial reprend uniquement les liens déjà présents.
 
