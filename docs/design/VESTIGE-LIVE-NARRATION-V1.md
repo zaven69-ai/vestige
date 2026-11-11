@@ -37,3 +37,11 @@ L'expérience audio doit être celle d'un **narrateur historique**, pas d'un com
 - Aucun contenu communautaire non validé dans le moteur audio.
 - Tests sur iPhone Expo Go pour interface; certaines capacités natives de localisation arrière-plan peuvent nécessiter un build de développement, à vérifier selon la stack Expo en place.
 - Conserver Catia, carte, progression, statuts POI et fonctionnalités de contribution existantes.
+
+## Décision UX complémentaire — choix du mode (11 novembre 2026)
+- **Mode manuel (par défaut)** : aucun déclenchement audio automatique. L'utilisateur sélectionne un POI ou une étape et lance la lecture explicitement.
+- **Mode automatique (opt-in)** : l'utilisateur démarre une session de promenade, autorise la localisation appropriée et les narrations se déclenchent à l'entrée de géozones éditorialement approuvées, avec contrôles pause/ignorer/arrêter.
+- L'utilisateur peut basculer à tout moment entre les deux modes, sans perdre la progression de visite; un changement vers manuel arrête les nouveaux déclenchements automatiques.
+- Réglages séparés pour notifications, lecture automatique et localisation en arrière-plan; le mode automatique ne vaut pas consentement implicite à la localisation permanente.
+- Préciser à l'écran les limites iOS/Android, la batterie et les permissions; prévoir un fonctionnement premier plan avant les builds natifs nécessaires pour le fond.
+- Pour les parcours guidés, les deux modes restent possibles : étapes déclenchées automatiquement ou ouvertes manuellement.
