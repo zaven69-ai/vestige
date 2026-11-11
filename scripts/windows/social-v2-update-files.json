@@ -3360,6 +3360,10 @@
     "sha256": "fcd827fc3b2552f6bce4bc4f69a4c695c345dd4fb8b81e15732b043992e1f14c"
   },
   {
+    "path": "docs/design/POI-INDIVIDUAL-IOS-V24.md",
+    "sha256": "ffa2cc05304c00de6c69dc3ffd9f3a98c44205973e1ec1439c110dd669e13887"
+  },
+  {
     "path": "docs/design/POI-INTEGRATION-V1.md",
     "sha256": "cfe7b870b0d7d8e924f7facabd31dacb9f07979562e0e58495c75f2f80310839"
   },
@@ -3477,11 +3481,11 @@
   },
   {
     "path": "scripts/windows/update-social-v2.ps1",
-    "sha256": "8fe4bc545c19e33c76978b1d54adf781c40dfef6cfbfb2ea9f83db281a5923f3"
+    "sha256": "35da9cecc8c695ba334dd0ed091181fa892692f94dc286fc8d85997d403f6360"
   },
   {
     "path": "src/app/(tabs)/index.tsx",
-    "sha256": "12be5f95cb3140bfa1bf173f1d5fabd0ee14393f9e0b716c1f1093bdeddf7eb3"
+    "sha256": "cafadf3788b03b996ff9a1c2e52643620bd133ee5a12161b53d857dc42f8fd1d"
   },
   {
     "path": "src/app/(tabs)/profil.tsx",
@@ -3509,11 +3513,11 @@
   },
   {
     "path": "src/components/exploration/IllustratedPoiMarker.tsx",
-    "sha256": "1bc2ee1b7d663320dec43bfdc13bd02e0ac30c747331fdbe27d3400ac03c387c"
+    "sha256": "73ebe31733271a3992ccf2fec718ea2a4a6a8b1ef51f6962f1e220f0eadc3d04"
   },
   {
     "path": "src/components/exploration/MapOptions.tsx",
-    "sha256": "b169b9e7f6e49ac970fa7a719f4b21cc63bb5edd16ca5eb95f03c192ca3d8c35"
+    "sha256": "6c157578b2807a25a907c528fd13c58ba2162450e6b9d73378760a162e1e6bcb"
   },
   {
     "path": "src/components/exploration/PoiClusterMarker.tsx",
@@ -3585,7 +3589,7 @@
   },
   {
     "path": "src/lib/mapViewport.ts",
-    "sha256": "1c3ebebe04e19c046d313119dc7e3a06a006ebb87a7dcb39efe97b5c51d67e29"
+    "sha256": "f3db8573489d0aa9c6244dcdf04d4c038ea757e3d77ff7101017e693b4dab160"
   },
   {
     "path": "src/lib/poi.ts",
@@ -3593,7 +3597,7 @@
   },
   {
     "path": "src/lib/poiMapRendering.ts",
-    "sha256": "153f124c31b116f99c2237e87cefd380492a4697eddd1aa55a3687060a3b70d8"
+    "sha256": "3a0c3fce41dba808f7d41140207ad0db97eb810811099e84bbcd1f1c0d978ad1"
   },
   {
     "path": "src/theme/index.ts",
@@ -3609,11 +3613,11 @@
   },
   {
     "path": "tests/native-poi-map.test.ts",
-    "sha256": "c5c440786ecfc200ac86ae51df23ba3ee8475bb243f0bcf0c663e58f96ccf36b"
+    "sha256": "b80ac436621c22f6d4ff87d61637e1747591a6898c7e88f22a99ca8eef5f45f7"
   },
   {
     "path": "tests/poi-clustering.test.ts",
-    "sha256": "f5f47fece885451a8b049f6d785966aa2c84776ff6645c024ab02701c3cf5f03"
+    "sha256": "78a25a7e9c6b1e3e8b45eb865d692894cc961ac15b1667d40b0a22c7b7a06526"
   },
   {
     "path": "tests/poi.test.ts",
@@ -3622,5 +3626,9 @@
   {
     "path": "tests/update-package.test.ts",
     "sha256": "23660a90c7b4e28b7ac8fc32a933ff7eea2453d67fafa3f5cd8a66fdeffdbc47"
+  },
+  {
+    "path": "tests/v3.test.ts",
+    "sha256": "41c340e30fcbb7c8ee6038791a9ce421c61c32672985d047a4786c5e12ba8bb0"
   }
 ]

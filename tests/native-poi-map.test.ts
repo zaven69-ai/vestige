@@ -53,58 +53,94 @@ test("every native sprite has 1x, 2x and 3x local image assets at a bounded disp
       }
   assert.equal(families, 210);
 });
-test("actual map marker component sends a composed image to Marker.image and has no snapshot children", () => {
-  const assets = evaluate("src/components/poi/nativeMapAssets.ts", (id) =>
-    id.endsWith(".png")
-      ? id
-      : id === "../../lib/poiMapRendering"
-        ? { nativePoiMode }
-        : nodeRequire(id),
-  );
-  let captured: any;
-  const loaded = evaluate(
-    "src/components/exploration/IllustratedPoiMarker.tsx",
-    (id) => {
-      if (id === "react-native-maps")
-        return {
-          Marker: (props: any) => {
-            captured = props;
-            return null;
-          },
-        };
-      if (id === "../../lib/poi") return poi;
-      if (id === "../../lib/poiMapRendering") return { POI_MARKER_SIZE };
-      if (id === "../poi/nativeMapAssets") return assets;
-      return nodeRequire(id);
-    },
-  );
-  const monument = {
-    id: "fixture",
-    name: "Temple",
-    latitude: 45,
-    longitude: 4,
-    category: "Monument antique",
-    origin: "import",
-    reviewStatus: "unreviewed",
-  };
-  renderToStaticMarkup(
-    React.createElement(loaded.IllustratedPoiMarker, {
-      monument,
-      state: "discovered",
-      selected: true,
-      reducedMotion: false,
-      onSelect: () => {},
-    }),
-  );
-  assert.match(
-    captured.image,
-    /temple-imported_unreviewed-discovered-selected\.png$/,
-  );
-  assert.equal(captured.children, undefined);
-  assert.equal(captured.style.width, 64);
-  assert.equal(captured.style.height, 72);
-  assert.match(captured.accessibilityLabel, /Importé · non vérifié/);
-});
+for (const platform of ["ios", "android"])
+  test(`actual ${platform} marker loads its PNG and dispatches the monument press`, () => {
+    const assets = evaluate("src/components/poi/nativeMapAssets.ts", (id) =>
+      id.endsWith(".png")
+        ? id
+        : id === "../../lib/poiMapRendering"
+          ? { nativePoiMode }
+          : nodeRequire(id),
+    );
+    let captured: any, loadedImage: any, selected: any;
+    const loaded = evaluate(
+      "src/components/exploration/IllustratedPoiMarker.tsx",
+      (id) => {
+        if (id === "react-native")
+          return {
+            Platform: { OS: platform },
+            Image: (props: any) => {
+              loadedImage = props;
+              return null;
+            },
+          };
+        if (id === "react-native-maps")
+          return {
+            Marker: (props: any) => {
+              captured = props;
+              return props.children;
+            },
+          };
+        if (id === "../../lib/poi") return poi;
+        if (id === "../../lib/poiMapRendering") return { POI_MARKER_SIZE };
+        if (id === "../poi/nativeMapAssets") return assets;
+        return nodeRequire(id);
+      },
+    );
+    const monument = {
+      id: "fixture",
+      name: "Temple",
+      latitude: 45,
+      longitude: 4,
+      category: "Monument antique",
+      origin: "import",
+      reviewStatus: "unreviewed",
+    };
+    renderToStaticMarkup(
+      React.createElement(loaded.IllustratedPoiMarker, {
+        monument,
+        state: "discovered",
+        selected: true,
+        reducedMotion: false,
+        onSelect: (m: any) => {
+          selected = m;
+        },
+      }),
+    );
+    if (platform === "ios") {
+      assert.equal(captured.image, undefined);
+      assert.match(
+        loadedImage.source,
+        /temple-imported_unreviewed-discovered-selected\.png$/,
+      );
+      assert.equal(loadedImage.style.width, 64);
+      assert.equal(loadedImage.style.height, 72);
+      assert.equal(typeof loadedImage.onLoad, "function");
+      assert.equal(
+        captured.tracksViewChanges,
+        true,
+        "do not freeze the view before PNG load",
+      );
+      assert.equal(loadedImage.pointerEvents, "none");
+    } else {
+      assert.match(
+        captured.image,
+        /temple-imported_unreviewed-discovered-selected\.png$/,
+      );
+      assert.equal(captured.children, null);
+      assert.equal(captured.tracksViewChanges, false);
+    }
+    assert.equal(captured.tappable, true);
+    assert.match(captured.accessibilityLabel, /Importé · non vérifié/);
+    let stopped = false;
+    captured.onPress({
+      stopPropagation() {
+        stopped = true;
+      },
+    });
+    assert.equal(stopped, true);
+    assert.equal(selected, monument);
+  });
 test("Explorer mounts the native illustrated component, not only a preview or the old pictogram component", () => {
   const source = ts.createSourceFile(
     "index.tsx",

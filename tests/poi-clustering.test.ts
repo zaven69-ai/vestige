@@ -1,7 +1,11 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { viewportGroups, clusterTarget } from "../src/lib/mapViewport.ts";
+import {
+  viewportGroups,
+  clusterTarget,
+  coincidentPois,
+} from "../src/lib/mapViewport.ts";
 const region = {
   latitude: 45.525,
   longitude: 4.875,
@@ -43,7 +47,7 @@ test("sparse distant POIs stay individual instead of sharing an arbitrary grid c
     2,
   );
 });
-test("close-up locations ten metres apart are individual; coincident locations remain selectable", () => {
+test("close-up locations are all individual; a tapped co-located marker offers every identity", () => {
   const close = [
     { id: "a", latitude: 45.525, longitude: 4.875 },
     { id: "b", latitude: 45.52509, longitude: 4.875 },
@@ -55,13 +59,14 @@ test("close-up locations ten metres apart are individual; coincident locations r
     390,
     800,
   );
-  assert.equal(groups.length, 2);
-  const coincident = groups.find((g) => g.members.length === 2)!;
-  assert.equal(clusterTarget(coincident.members), null);
+  assert.equal(groups.length, 3);
+  assert.ok(groups.every((g) => g.members.length === 1));
+  const choices = coincidentPois(close[0], close);
   assert.deepEqual(
-    coincident.members.map((p) => p.id),
+    choices.map((p) => p.id),
     ["a", "c"],
   );
+  assert.equal(clusterTarget(choices), null);
 });
 test("cluster touch fits member bounds instead of halving the current zoom blindly", () => {
   const target = clusterTarget(points)!;
@@ -92,7 +97,7 @@ test("hundreds of visible imports retain every identity, including at maximum zo
     const ids = groups.flatMap((g) => g.members.map((p) => p.id));
     assert.equal(ids.length, dense.length);
     assert.equal(new Set(ids).size, dense.length);
-    if (delta >= 0.01) assert.ok(groups.length <= 96);
+    if (delta > 0.03) assert.ok(groups.length <= 96);
   }
 });
 test("grouping is deterministic across import order and excludes only offscreen points", () => {
@@ -151,4 +156,80 @@ test("real Vienne catalogue shows mostly individual POIs at city scale and retai
     groups.flatMap((g) => g.members.map((p) => p.id)).sort(),
     expected.map((p: { id: string }) => p.id).sort(),
   );
+});
+
+test("all 791 imported records are included in city-zoom regression coverage", () => {
+  const imports = JSON.parse(
+    readFileSync(
+      new URL("../src/data/imported-pois.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const editorial = JSON.parse(
+    readFileSync(
+      new URL("../src/data/monuments.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const heritage = JSON.parse(
+    readFileSync(
+      new URL("../src/data/generated/heritage.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const all = [...editorial, ...heritage, ...imports];
+  assert.equal(imports.length, 791);
+  for (const delta of [0.025, 0.01, 0.003]) {
+    const groups = viewportGroups(
+      all,
+      { ...region, latitudeDelta: delta, longitudeDelta: delta },
+      390,
+      800,
+    );
+    const expected = all.filter(
+      (p) =>
+        Math.abs(p.latitude - region.latitude) <= delta * 0.6 &&
+        Math.abs(p.longitude - region.longitude) <= delta * 0.6,
+    );
+    assert.ok(expected.length > 0);
+    assert.equal(groups.length, expected.length);
+    assert.ok(groups.every((g) => g.members.length === 1));
+    assert.deepEqual(
+      groups.flatMap((g) => g.members.map((p) => p.id)).sort(),
+      expected.map((p) => p.id).sort(),
+    );
+  }
+});
+test("explicit individual mode has zero counters even at far zoom with hundreds of imports", () => {
+  const imports = JSON.parse(
+    readFileSync(
+      new URL("../src/data/imported-pois.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const groups = viewportGroups(
+    imports,
+    {
+      latitude: 45.65,
+      longitude: 4.85,
+      latitudeDelta: 0.5,
+      longitudeDelta: 0.5,
+    },
+    390,
+    800,
+    "individual",
+  );
+  assert.ok(groups.length > 500);
+  assert.ok(groups.every((g) => g.members.length === 1));
+});
+
+test("Explorer starts with individual POIs and map taps use the co-location-aware selector", () => {
+  const explorer = readFileSync(
+    new URL("../src/app/(tabs)/index.tsx", import.meta.url),
+    "utf8",
+  );
+  assert.match(explorer, /useState<PoiGroupingMode>\("individual"\)/);
+  assert.match(explorer, /onSelect=\{selectMapMonument\}/);
+  assert.match(explorer, /coincidentPois\(monument, visibleMonuments\)/);
+  assert.match(explorer, /selectMonument\(m\)/);
 });

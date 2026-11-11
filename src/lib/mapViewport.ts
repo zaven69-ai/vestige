@@ -4,6 +4,7 @@ export type Viewport = {
   latitudeDelta: number;
   longitudeDelta: number;
 };
+export type PoiGroupingMode = "auto" | "individual";
 export type MapPoint = { id: string; latitude: number; longitude: number };
 export type ViewportGroup<T> = {
   key: string;
@@ -21,17 +22,18 @@ function distanceMeters(a: MapPoint, b: MapPoint) {
   );
 }
 /** Spatial hash of fixed anchors: no all-pairs scan, no arbitrary cell-boundary split.
- * At street zoom only practically coincident locations remain grouped.
+ * City and street views keep every individual marker, including co-located POIs.
  */
 export function viewportGroups<T extends MapPoint>(
   points: T[],
   region: Viewport,
   width: number,
   height: number,
+  mode: PoiGroupingMode = "auto",
 ): ViewportGroup<T>[] {
   const latSpan = Math.max(0.00001, region.latitudeDelta);
   const lonSpan = Math.max(0.00001, region.longitudeDelta);
-  const close = latSpan <= 0.003;
+  const close = mode === "individual" || latSpan <= 0.03;
   const visible = points.filter(
     (p) =>
       Number.isFinite(p.latitude) &&
@@ -40,22 +42,22 @@ export function viewportGroups<T extends MapPoint>(
         lonSpan * 0.6 &&
       Math.abs(p.latitude - region.latitude) <= latSpan * 0.6,
   );
-  // Deterministic seeds make source ordering irrelevant. Padding keeps edge pins visible.
   visible.sort((a, b) => a.id.localeCompare(b.id));
-  const project = (p: T) =>
-    close
-      ? [
-          longitudeDistance(p.longitude, region.longitude) *
-            111320 *
-            Math.cos((region.latitude * Math.PI) / 180),
-          (p.latitude - region.latitude) * 111320,
-        ]
-      : [
-          (longitudeDistance(p.longitude, region.longitude) / lonSpan) *
-            Math.max(1, width),
-          ((p.latitude - region.latitude) / latSpan) * Math.max(1, height),
-        ];
-  let radius = close ? 3 : latSpan < 0.01 ? 18 : 32;
+  // City/street view: every POI keeps its own illustrated, tappable marker.
+  if (close)
+    return visible.map((p) => ({
+      key: `poi:${p.id}`,
+      latitude: p.latitude,
+      longitude: p.longitude,
+      members: [p],
+    }));
+  // Deterministic seeds make source ordering irrelevant.
+  const project = (p: T) => [
+    (longitudeDistance(p.longitude, region.longitude) / lonSpan) *
+      Math.max(1, width),
+    ((p.latitude - region.latitude) / latSpan) * Math.max(1, height),
+  ];
+  let radius = 32;
   let result: { anchor: T; x: number; y: number; members: T[] }[];
   do {
     result = [];
@@ -86,8 +88,8 @@ export function viewportGroups<T extends MapPoint>(
         result.push({ anchor: point, x, y, members: [point] });
       }
     }
-    // Bound distant native views only. Never force close-up POIs into larger groups.
-    if (close || latSpan < 0.01 || result.length <= 96) break;
+    // Only distant views reach this path. Never drop members to cap the markers.
+    if (result.length <= 96) break;
     radius *= 1.25;
   } while (true);
   return result.map((g) => ({
@@ -123,4 +125,9 @@ export function clusterTarget<T extends MapPoint>(
     latitudeDelta: Math.max(0.00015, (maxLat - minLat) * 1.8),
     longitudeDelta: Math.max(0.00015, (maxLon - minLon) * 1.8),
   };
+}
+
+/** Co-located identities remain accessible from a tapped individual marker. */
+export function coincidentPois<T extends MapPoint>(point: T, points: T[]): T[] {
+  return points.filter((p) => distanceMeters(point, p) <= 3);
 }

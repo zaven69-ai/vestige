@@ -83,7 +83,7 @@ test("viewport groups close points, excludes distant points, separates them on z
     latitudeDelta: 0.02,
     longitudeDelta: 0.02,
   };
-  assert.equal(viewportGroups(points, region, 400, 800).length, 1);
+  assert.equal(viewportGroups(points, region, 400, 800).length, 2);
   assert.equal(
     viewportGroups(
       points,

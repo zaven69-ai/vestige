@@ -1,3 +1,4 @@
+import type { PoiGroupingMode } from "../../lib/mapViewport";
 import { POI_MAP_RENDERER } from "../../lib/poiMapRendering";
 import { PoiFilterPanel, PoiLegend } from "../poi/PoiControls";
 import { defaultPoiFilters, type PoiFilters } from "../../lib/poi";
@@ -30,6 +31,8 @@ type Props = {
   poiFilters: PoiFilters;
   setPoiFilters: (filters: PoiFilters) => void;
   visibleCount: number;
+  poiGrouping: PoiGroupingMode;
+  setPoiGrouping: (mode: PoiGroupingMode) => void;
   individualCount: number;
   clusterCount: number;
   close: () => void;
@@ -53,6 +56,8 @@ export function MapOptions({
   poiFilters,
   setPoiFilters,
   visibleCount,
+  poiGrouping,
+  setPoiGrouping,
   individualCount,
   clusterCount,
   close,
@@ -204,11 +209,26 @@ export function MapOptions({
                     {individualCount} lieux individuels · {clusterCount}{" "}
                     regroupements dans la zone affichée.
                   </Text>
+                  <View style={styles.row}>
+                    <View style={{ flex: 1 }}>
+                      <Text style={styles.option}>POI individuels</Text>
+                      <Text style={s.caption}>
+                        Désactiver tous les regroupements, même à distance.
+                      </Text>
+                    </View>
+                    <Switch
+                      accessibilityLabel="Afficher tous les POI individuellement"
+                      value={poiGrouping === "individual"}
+                      onValueChange={(value) =>
+                        setPoiGrouping(value ? "individual" : "auto")
+                      }
+                    />
+                  </View>
                   <Text style={s.caption}>
-                    Les illustrations individuelles sont des images de marqueur
-                    natives de 64 × 72 points. Les cercles « lieux » sont des
-                    regroupements : touchez-les pour agrandir ou choisir un
-                    lieu.
+                    En vue ville et rue, chaque lieu est individuel. Les
+                    illustrations mesurent 64 × 72 points. Les cercles « lieux »
+                    sont des regroupements : touchez-les pour agrandir ou
+                    choisir un lieu.
                   </Text>
                 </View>
                 <Text style={s.eyebrow}>Explorer une ville</Text>

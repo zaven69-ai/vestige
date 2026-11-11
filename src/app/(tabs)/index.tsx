@@ -11,7 +11,12 @@ import {
 import { PoiBadge } from "../../components/poi/PoiBadge";
 import { MonumentPhoto } from "../../components/MonumentPhoto";
 import { useLocalAtlas } from "../../hooks/useLocalAtlas";
-import { clusterTarget, viewportGroups } from "../../lib/mapViewport";
+import {
+  clusterTarget,
+  coincidentPois,
+  viewportGroups,
+  type PoiGroupingMode,
+} from "../../lib/mapViewport";
 import React, {
   useCallback,
   useEffect,
@@ -98,6 +103,7 @@ export default function Explorer() {
   const reducedMotion = useReducedMotion();
   const direction = playerDirection(heading, fix, now);
   const { width, height } = useWindowDimensions();
+  const [poiGrouping, setPoiGrouping] = useState<PoiGroupingMode>("individual");
   const [atlasEnabled, setAtlasEnabled] = useState(false);
   const atlas = useLocalAtlas(atlasEnabled);
   const [region, setRegion] = useState<Region>({
@@ -175,8 +181,8 @@ export default function Explorer() {
     [periods, journal, poiFilters],
   );
   const groups = useMemo(
-    () => viewportGroups(visibleMonuments, region, width, height),
-    [visibleMonuments, region, width, height],
+    () => viewportGroups(visibleMonuments, region, width, height, poiGrouping),
+    [visibleMonuments, region, width, height, poiGrouping],
   );
   const selected =
     selection && visibleMonuments.some((m) => m.id === selection.id)
@@ -249,6 +255,16 @@ export default function Explorer() {
       setSelection(monument);
     },
     [stopFollowing],
+  );
+  const selectMapMonument = useCallback(
+    (monument: Monument) => {
+      const choices = coincidentPois(monument, visibleMonuments);
+      if (choices.length > 1) {
+        stopFollowing();
+        setClusterChoices(choices);
+      } else selectMonument(monument);
+    },
+    [visibleMonuments, stopFollowing, selectMonument],
   );
   const selectCluster = useCallback(
     (group: PoiGroup) => {
@@ -393,7 +409,9 @@ export default function Explorer() {
         onTouchEnd={() => {
           touchOrigin.current = null;
         }}
-        onPress={() => setSelection(null)}
+        onPress={(event) => {
+          if (event.nativeEvent.action !== "marker-press") setSelection(null);
+        }}
       >
         {atlasActive && atlas.path && (
           <LocalTile pathTemplate={atlas.path} tileSize={256} zIndex={0} />
@@ -410,7 +428,7 @@ export default function Explorer() {
                 now,
               )}
               selected={selected?.id === group.members[0].id}
-              onSelect={selectMonument}
+              onSelect={selectMapMonument}
               reducedMotion={reducedMotion}
             />
           ) : (
@@ -667,6 +685,8 @@ export default function Explorer() {
         poiFilters={poiFilters}
         setPoiFilters={setPoiFilters}
         visibleCount={visibleMonuments.length}
+        poiGrouping={poiGrouping}
+        setPoiGrouping={setPoiGrouping}
         individualCount={
           groups.filter((group) => group.members.length === 1).length
         }
