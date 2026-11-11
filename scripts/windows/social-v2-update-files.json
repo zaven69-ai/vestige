@@ -16,6 +16,46 @@
     "sha256": "432fbe0ed2b6d7e70ac8e766d0da4e58f431404c2e73b1f302218fa1363a5b1c"
   },
   {
+    "path": "assets/audio/georges-demo/01-Rue-Cleberg.mp3",
+    "sha256": "6c9ec5d21cac8cd13bb03f03ccd5faa78f0b4125447c13b4309522da8a7e7b09"
+  },
+  {
+    "path": "assets/audio/georges-demo/02-Rue-Antiquaille.mp3",
+    "sha256": "06e9eae8189ff7abd40a5a2ecb030ac2560cd9795b4c87120ea2a10e55d925a7"
+  },
+  {
+    "path": "assets/audio/georges-demo/03-Musee.mp3",
+    "sha256": "a5837058e4cd3143ef6184ded76f694f9dd60581641e80a60d806f8c510251d1"
+  },
+  {
+    "path": "assets/audio/georges-demo/04-Grand-Theatre.mp3",
+    "sha256": "c4de7f6635b5e0e6ac4f2bd17ecb128d0debee94be6967198db824865d7dea6c"
+  },
+  {
+    "path": "assets/audio/georges-demo/05-Odeon.mp3",
+    "sha256": "ca32b234c2f1dc4e7ca060b79bbc996ce28badab4c04ef8e7c414270d79dcdfc"
+  },
+  {
+    "path": "assets/audio/georges-demo/06-Rue-des-Farges.mp3",
+    "sha256": "db38cb8211015ada818d2094e255d35e19b596103e861acd8b7c01329c292f37"
+  },
+  {
+    "path": "assets/audio/georges-demo/07-Place-Abbe-Larue.mp3",
+    "sha256": "bcd5af3fde0d39adddb3b5ea24ab760d59a0f2cda6113715c36c8ecc9d7d693d"
+  },
+  {
+    "path": "assets/audio/georges-demo/08-Rue-des-Macchabees.mp3",
+    "sha256": "2a53913a84cd7479934cf9d3bc614c383d2d0c77c6a884d4b446de059f6e39a0"
+  },
+  {
+    "path": "assets/audio/georges-demo/09-Place-Eugene-Wernert.mp3",
+    "sha256": "90071101aba8619646171036d0639b0e10567b60db0a90a85203cc3817d1de15"
+  },
+  {
+    "path": "assets/audio/georges-demo/10-Amphitheatre-des-Trois-Gaules.mp3",
+    "sha256": "afc5f46605672ec9f4b70ce84656c447b7f888d89ec25cc55bf9cdeb30bf626f"
+  },
+  {
     "path": "assets/avatars/catia/map-sprites/e-idle-0.png",
     "sha256": "5a3a95367cde0c0f6d91eae1d9ca0127360dbcaecc59faf4b4e261e6b25a8e8f"
   },
@@ -5225,7 +5265,7 @@
   },
   {
     "path": "src/app/(tabs)/index.tsx",
-    "sha256": "8da87b05dc63e55ea65692dfac91e5b894d9e6006a2071262b4e15ea69d01061"
+    "sha256": "a69341bea694b8e41553e9b42926030ee21bee59c81c3a973ac0ce5c5fce01cd"
   },
   {
     "path": "src/app/(tabs)/parcours.tsx",
@@ -5361,7 +5401,11 @@
   },
   {
     "path": "src/components/live/ExplorerAudioPlayer.tsx",
-    "sha256": "bae7ca44b21bf6c217845b453b12a74f09fc618b7d4d42b97a99753dcf9a0681"
+    "sha256": "30c06f58cf90ef0f1e6ee5a2cfd30db9efd0c2a2195eb4da09d13478e21c8994"
+  },
+  {
+    "path": "src/components/live/GeorgesDemo.tsx",
+    "sha256": "be1b3b8fb659db2ddbc5d1e52ab1d13a54b53466fa7c1e75a1152b114be6c5f3"
   },
   {
     "path": "src/components/live/NativeNarration.tsx",
@@ -5456,6 +5500,14 @@
     "sha256": "3afa354f873e87d6c2850861dedd0fedcaf61fcc6bfef8d81752e67ca9b8f552"
   },
   {
+    "path": "src/data/live/georgesCapsules.ts",
+    "sha256": "e350f362c5923df23b5b31acabc1939dc5c9ee816eb15bd886f68b9425c7e1b7"
+  },
+  {
+    "path": "src/data/live/georgesDemoPaths.json",
+    "sha256": "ea2cbdc2292fdf07a80cb3b55e2719e4dfa77218431e3c6b5d3956d34c66e446"
+  },
+  {
     "path": "src/data/live/stories.json",
     "sha256": "5479f296c32776e78ca4726be6f8c5e6cc1c49b482d1f4bfcadbf3b6ed8e2baa"
   },
@@ -5481,7 +5533,7 @@
   },
   {
     "path": "src/hooks/useExplorerGuidance.ts",
-    "sha256": "74b7b9e33a5569a14e33c4a3fce6291fba2071924be1c2e23c8f6f4a6a2ba3e7"
+    "sha256": "0735389c7d065da8445d6dfbcd4017ed41ed969eeba9377a0fcf8404f282428c"
   },
   {
     "path": "src/hooks/useMapCityPreference.ts",
@@ -5541,15 +5593,15 @@
   },
   {
     "path": "src/lib/developer/simulation.ts",
-    "sha256": "7135e4c5ec44c7b3cde766cbcd03005cec1fee70477d2de04489c9eff1c4d87c"
+    "sha256": "d99115230549fb2613962544a3af3cc2cfad6a149cdc4543a9a1bddd386c38b4"
   },
   {
     "path": "src/lib/live/LiveProvider.tsx",
-    "sha256": "3a0ecf309af3541e5c325e055996ed53bc0a3ed0b990c1123c30e67b97b48f12"
+    "sha256": "241d880f7f0844310941e6193271598cbfdbcc7c2a72f4bda10315ab95e0d57a"
   },
   {
     "path": "src/lib/live/audioPlayback.ts",
-    "sha256": "4fa9b5f1b7eaefc5e25c16a455e7c16dc60e9e3e9837545001a5c1d69e175b84"
+    "sha256": "1a4f96266b8c3d144b8f7f060309fe146c278f1d6eeb007469762d74be59e0be"
   },
   {
     "path": "src/lib/live/checkpoints.ts",
@@ -5669,11 +5721,11 @@
   },
   {
     "path": "tests/developer-location.test.ts",
-    "sha256": "cd8ff0ba65a93d587fdc4707b5bc3d48d4bf5275e90a34808e4cc7d483ebbac9"
+    "sha256": "6eaaf1f353242c2d713cfb3c5886467d4b928993d9b89cbf2af1f9e32c510479"
   },
   {
     "path": "tests/explorer-guidance.test.ts",
-    "sha256": "e823ffee3fecd0279271316e7212af57b9116075d3ca8d3bd2bc9b76eb6b24ea"
+    "sha256": "b127edc2514fbf73c3c86c553ae33e52847be2e2d12018860d18bd0bf1ce902b"
   },
   {
     "path": "tests/fixtures/navigation/cybele-theatre.json",

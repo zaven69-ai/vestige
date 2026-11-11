@@ -1,3 +1,7 @@
+import {
+  georgesCapsules,
+  type GeorgesCapsule,
+} from "../../data/live/georgesCapsules";
 import { canDiscover } from "../game";
 import { georgeDemo } from "../../data/live/georgeDemo";
 import { georgePrivateSource } from "../../data/live/georgePrivateAsset";
@@ -401,6 +405,34 @@ function useLiveState(
     });
     return true;
   }, [scopeAllowed, ready, foreground, visible, updatePlayback]);
+  const playGeorgesCapsule = useCallback(
+    (capsule: GeorgesCapsule) => {
+      const current = playbackRef.current;
+      if (
+        !__DEV__ ||
+        !preview ||
+        !ready ||
+        !scopeAllowed() ||
+        !foreground ||
+        !visible ||
+        (current && !current.ended)
+      )
+        return false;
+      setAudioError(null);
+      updatePlayback({
+        storyId: capsule.id,
+        kind: "georges-demo",
+        token: ++serial.current,
+        intent: "play",
+        status: "loading",
+        position: 0,
+        duration: capsule.duration,
+        ended: false,
+      });
+      return true;
+    },
+    [preview, ready, scopeAllowed, foreground, visible, updatePlayback],
+  );
   const replay = useCallback(() => {
     if (!scopeAllowed() || !foreground || !visible) return;
     const current = playbackRef.current;
@@ -560,6 +592,7 @@ function useLiveState(
     togglePause,
     play,
     playDemo,
+    playGeorgesCapsule,
     playPoi,
     closeAudio: stopAudio,
     pauseAudio,
@@ -582,7 +615,14 @@ function useLiveState(
   };
 }
 type LiveState = ReturnType<typeof useLiveState> & {
-  audioStory?: LiveStory | typeof georgeDemo;
+  audioStory?:
+    | LiveStory
+    | typeof georgeDemo
+    | (GeorgesCapsule & {
+        warning: string;
+        transcriptStatus: "provided_unreviewed";
+        sources: [];
+      });
 };
 const Context = createContext<LiveState | null>(null);
 export function LiveProvider({ children }: { children: React.ReactNode }) {
@@ -597,17 +637,32 @@ export function LiveProvider({ children }: { children: React.ReactNode }) {
   const value = simulation.enabled ? demo : real;
   const story = liveStories.find((s) => s.id === value.playback?.storyId);
   const demoPlayback = __DEV__ && value.playback?.kind === "private-demo";
+  const capsule =
+    __DEV__ && value.preview && value.playback?.kind === "georges-demo"
+      ? georgesCapsules.find((item) => item.id === value.playback?.storyId)
+      : undefined;
   const asset = story ? playableAsset(story, liveAssets) : null;
   const source = useMemo(
     () =>
       demoPlayback
         ? georgeSource
-        : asset
-          ? (asset.module ?? { uri: asset.uri })
-          : null,
-    [demoPlayback, asset],
+        : capsule
+          ? capsule.source
+          : asset
+            ? (asset.module ?? { uri: asset.uri })
+            : null,
+    [demoPlayback, capsule, asset],
   );
-  const audioStory = demoPlayback ? georgeDemo : story;
+  const audioStory = demoPlayback
+    ? georgeDemo
+    : capsule
+      ? {
+          ...capsule,
+          warning: "Georges · Capsule de démonstration",
+          transcriptStatus: "provided_unreviewed" as const,
+          sources: [] as [],
+        }
+      : story;
   return (
     <Context.Provider value={{ ...value, audioStory }}>
       {children}

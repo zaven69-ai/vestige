@@ -37,6 +37,20 @@ test("production rejects activation, teleportation and joystick movement", () =>
   assert.equal(sim.getSnapshot().fix, null);
   assert.equal(sim.canCommitRealProgress(), true);
 });
+test("fast demo position advances Catia without teleporting or writing real progress", () => {
+  const production = new LocationSimulation(false);
+  production.moveAlongDemo(cybele, 18);
+  assert.equal(production.getSnapshot().fix, null);
+  const sim = start();
+  sim.moveAlongDemo(cybele, 18, 100250);
+  sim.tick(0.25, 100500);
+  assert.equal(sim.getSnapshot().fix?.speed, 18);
+  assert.equal(distance(sim.getSnapshot().fix!, cybele), 0);
+  assert.equal(sim.getSnapshot().teleport, 0);
+  assert.equal(sim.canCommitRealProgress(), false);
+  sim.moveAlongDemo(cybele, 0, 100750);
+  assert.equal(sim.getSnapshot().fix?.speed, 0);
+});
 test("joystick walks continuously at bounded speed, rotates with the map and stops on release", () => {
   const sim = start();
   sim.setStick(1, 0);

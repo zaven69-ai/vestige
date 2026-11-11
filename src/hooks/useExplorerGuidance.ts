@@ -9,6 +9,7 @@ import type { NavigationPosition } from "../lib/navigation/position";
 export function useExplorerGuidance(
   focused: boolean,
   position?: NavigationPosition,
+  suspended = false,
 ) {
   const live = useLive(),
     { session, tour } = live;
@@ -16,7 +17,11 @@ export function useExplorerGuidance(
     live.preview === (position?.source === "developer-preview");
   const { setVisible } = live;
   const active =
-    live.ready && matchingScope && !!session && session.endedAt === null;
+    !suspended &&
+    live.ready &&
+    matchingScope &&
+    !!session &&
+    session.endedAt === null;
   const stop = tour.stops[Math.min(session?.index ?? 0, tour.stops.length - 1)];
   const navigation = useWalkingNavigation(
     stop.approach,
