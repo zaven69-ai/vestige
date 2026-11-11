@@ -4268,6 +4268,426 @@
     "sha256": "47a8812556e7d68a105fdb99539ce04ce4971f80981ba51594919cea4e19860c"
   },
   {
+    "path": "assets/poi/map-pins/castle-discovered-selected.png",
+    "sha256": "5c2d46280117f906d1cd9f28c14c96a95999ca14f02e056f4742aa889076da3f"
+  },
+  {
+    "path": "assets/poi/map-pins/castle-discovered-selected@2x.png",
+    "sha256": "2acc6859079370153bcc3d388275969314af0623ee2257ceab26e72bd4182e3b"
+  },
+  {
+    "path": "assets/poi/map-pins/castle-discovered-selected@3x.png",
+    "sha256": "71e000a68cf5ab929992aed414af1f0f774037fac877f612d38acdf368202428"
+  },
+  {
+    "path": "assets/poi/map-pins/castle-discovered.png",
+    "sha256": "c6bbdde01d5eb60282363da6f3d12a1bcd841c79ac13ae77a54c486dfa25dda8"
+  },
+  {
+    "path": "assets/poi/map-pins/castle-discovered@2x.png",
+    "sha256": "01ff83d2c77142b6c1cce4b06dbd4a8a90e8dd4119fe7c9bea039064912341c2"
+  },
+  {
+    "path": "assets/poi/map-pins/castle-discovered@3x.png",
+    "sha256": "38c36e85d23f947b7e6db3ead5ae2afe6d003ed483642513112ee665e1430e13"
+  },
+  {
+    "path": "assets/poi/map-pins/castle-idle.png",
+    "sha256": "6f16978c8d0d34b5d5251c7dcbe1d54acdb9633970538e0ce9f74b506447fdef"
+  },
+  {
+    "path": "assets/poi/map-pins/castle-idle@2x.png",
+    "sha256": "7b2e2bc125f7de44a4f3fbb65c72323caab599dc2283de4408d4f57373d983ed"
+  },
+  {
+    "path": "assets/poi/map-pins/castle-idle@3x.png",
+    "sha256": "664f628b003a53f62c289de2f61f89332fdf397310e53d53c69ffd93df052d27"
+  },
+  {
+    "path": "assets/poi/map-pins/castle-nearby.png",
+    "sha256": "812bcc9b5f6c17f22606b64bfab2ae85cc8171f5a22866fcd1bef53d0ad9987f"
+  },
+  {
+    "path": "assets/poi/map-pins/castle-nearby@2x.png",
+    "sha256": "94865631e6233e00714307c8c65bd1c2fb710b2f6d7ae931c8e3716ff0ae25f0"
+  },
+  {
+    "path": "assets/poi/map-pins/castle-nearby@3x.png",
+    "sha256": "6582927e4150e072eab1b56f3c12cb7f4e9e2c8f152ffe7440f7f4e38a127357"
+  },
+  {
+    "path": "assets/poi/map-pins/castle-selected.png",
+    "sha256": "edfccca21a2a5dd9862c9ca278af193c5150a554c567ccacf1e9f07eae3290f0"
+  },
+  {
+    "path": "assets/poi/map-pins/castle-selected@2x.png",
+    "sha256": "0ede809255ce573eb53871be51b927bb6a947f9182e96a78a4020e6748056030"
+  },
+  {
+    "path": "assets/poi/map-pins/castle-selected@3x.png",
+    "sha256": "556d5c39ac785050d8045db60a2ee9b4f5b4f13d7eb6ca70e62fa133f3b2f41d"
+  },
+  {
+    "path": "assets/poi/map-pins/industrial-discovered-selected.png",
+    "sha256": "a2615af9306e7d1c58a8429f4a58d14577cbbb418c74c34e978727ebf6490fa4"
+  },
+  {
+    "path": "assets/poi/map-pins/industrial-discovered-selected@2x.png",
+    "sha256": "1de13a29f545614f0d318b5cb476f4102220c62b9302809929d28a004edb3485"
+  },
+  {
+    "path": "assets/poi/map-pins/industrial-discovered-selected@3x.png",
+    "sha256": "b3f538b8dfa15b2596f001f640facbdd1cc3d7c41decd6594e8fa4257549f9d0"
+  },
+  {
+    "path": "assets/poi/map-pins/industrial-discovered.png",
+    "sha256": "38a893c0e895c627aced634f4cff5740529d1ba18a384e9985b21bd8fc605d9f"
+  },
+  {
+    "path": "assets/poi/map-pins/industrial-discovered@2x.png",
+    "sha256": "fea12d8eab1545da187034e515ad499e81b68fa90af4ed6a5894822b9d77ab3e"
+  },
+  {
+    "path": "assets/poi/map-pins/industrial-discovered@3x.png",
+    "sha256": "16bde1b5a6515763e6aa3afdec77d03c55015aa6ec315c765bb6c19f49a21e10"
+  },
+  {
+    "path": "assets/poi/map-pins/industrial-idle.png",
+    "sha256": "f6802765019cc61a94a1bdbea5ef09158b74a6f80a1b2c4ef2aa413a283e2294"
+  },
+  {
+    "path": "assets/poi/map-pins/industrial-idle@2x.png",
+    "sha256": "f08d69bb449500d0bc2eb530f150bb27bb8763e5ff27ecbecd7f0e29d4a4b5b3"
+  },
+  {
+    "path": "assets/poi/map-pins/industrial-idle@3x.png",
+    "sha256": "15df5c695fd2a32b46bcfc8a5ed28d1614d809c5756bcb83ea9424e133732439"
+  },
+  {
+    "path": "assets/poi/map-pins/industrial-nearby.png",
+    "sha256": "fab16f284ba033c5086fd605d7af4f48600048ffc90442186c97e8f9b2d95757"
+  },
+  {
+    "path": "assets/poi/map-pins/industrial-nearby@2x.png",
+    "sha256": "69b6db9c9bada1ca7295ce4908aa4432121402f53fbb049ed550881ad0572034"
+  },
+  {
+    "path": "assets/poi/map-pins/industrial-nearby@3x.png",
+    "sha256": "cd784666433637a833e54b45dc5cd53e7c69863b4e38e662ed1ad735ca894ace"
+  },
+  {
+    "path": "assets/poi/map-pins/industrial-selected.png",
+    "sha256": "f6a83b8a4dbf76cec8d7831601409b5022075fae14645313f00dbb7c2dd9998f"
+  },
+  {
+    "path": "assets/poi/map-pins/industrial-selected@2x.png",
+    "sha256": "e26be84f6d80554b3e6a41001939cba4282897f21d9025590845406251a2d951"
+  },
+  {
+    "path": "assets/poi/map-pins/industrial-selected@3x.png",
+    "sha256": "e2cb8dc52c220fe8b3dc9e703f1fc982ccaa670de842ce05553268c92104266e"
+  },
+  {
+    "path": "assets/poi/map-pins/museum-discovered-selected.png",
+    "sha256": "4abe928b3cc3cb83f40afaf7a5fe6c5fea8f7aa1ae4bd2c50ecb6a4f658d5f67"
+  },
+  {
+    "path": "assets/poi/map-pins/museum-discovered-selected@2x.png",
+    "sha256": "2f093f329d825a600390cf9ab404464a959b24acf47f70de46d2a181ba9b0b6f"
+  },
+  {
+    "path": "assets/poi/map-pins/museum-discovered-selected@3x.png",
+    "sha256": "681e0063d7e5406f82ac656b0f68693cb6902b18fc3ef3d7e29ddeb8c3961e99"
+  },
+  {
+    "path": "assets/poi/map-pins/museum-discovered.png",
+    "sha256": "4f26ad8f660bb8b5c0aff30cd4b36eca61ac3b2d05c5dd63f381fa026362fe21"
+  },
+  {
+    "path": "assets/poi/map-pins/museum-discovered@2x.png",
+    "sha256": "a34d98383b5c20985f42f3609a3aa57e8a60c784a5d80aeb2f5a9e455422670c"
+  },
+  {
+    "path": "assets/poi/map-pins/museum-discovered@3x.png",
+    "sha256": "90ecb8d79508b71e361a2fb4a6eb2e5cf2cd511d868cee73d3cc579539d0e276"
+  },
+  {
+    "path": "assets/poi/map-pins/museum-idle.png",
+    "sha256": "ebaa9d3233ba249c9ce82275e78637bcc749c69fe4a0715c3dcbeab054527ace"
+  },
+  {
+    "path": "assets/poi/map-pins/museum-idle@2x.png",
+    "sha256": "db6e7dde21ddf1c688332b648c94a8b5c990a1200f881b7c5b62405c373e97c9"
+  },
+  {
+    "path": "assets/poi/map-pins/museum-idle@3x.png",
+    "sha256": "ea2e6385e43c0c8d61fb363be8d0254090d4604364cd947c02499fc86def112e"
+  },
+  {
+    "path": "assets/poi/map-pins/museum-nearby.png",
+    "sha256": "59b665f996fb8798ab3c56f5974b3e9dbea298458a1b37ba2efb89d78d201cee"
+  },
+  {
+    "path": "assets/poi/map-pins/museum-nearby@2x.png",
+    "sha256": "40185b5b151ea7fb31782ab1fbc5206492255d523e28cd49524a1fec876e4409"
+  },
+  {
+    "path": "assets/poi/map-pins/museum-nearby@3x.png",
+    "sha256": "0d8a508c526438ebe6c4d95dda711c0246afdf65ddfc7ccf3f46c4ea37964327"
+  },
+  {
+    "path": "assets/poi/map-pins/museum-selected.png",
+    "sha256": "5dfebfb8eef59ca3e767bfc6ca888ea896fe7c70834f9ff140f68509467a0e08"
+  },
+  {
+    "path": "assets/poi/map-pins/museum-selected@2x.png",
+    "sha256": "93b7154ab815b97d8c2c4949280bed3c32b92918fc28bf04abe749f5f4ccbf12"
+  },
+  {
+    "path": "assets/poi/map-pins/museum-selected@3x.png",
+    "sha256": "720c6ca6802e8d0ca24833d21e590f81a9165e1e0f8989a741d6a5b0eb09a3fb"
+  },
+  {
+    "path": "assets/poi/map-pins/nature-discovered-selected.png",
+    "sha256": "5f7be02bf44e84cc792583dc8299da4c17f41910720021836b88f62884cfd72e"
+  },
+  {
+    "path": "assets/poi/map-pins/nature-discovered-selected@2x.png",
+    "sha256": "d31ea579dcd6e74996ea94dc7e261ff536a14fdf025ad87cc3f5dc2e2101b8a0"
+  },
+  {
+    "path": "assets/poi/map-pins/nature-discovered-selected@3x.png",
+    "sha256": "51db90a0c6a04c7bd86a67bd046c33f61508cdbc399a21ffeb2cae46a0483f5c"
+  },
+  {
+    "path": "assets/poi/map-pins/nature-discovered.png",
+    "sha256": "8768b453968ad3f6d29006a3c9440ff11f4c7ca1cdd7047b91ce774a5b1760b8"
+  },
+  {
+    "path": "assets/poi/map-pins/nature-discovered@2x.png",
+    "sha256": "fb3e31970dc32473150db30a4455f17975d40facd259303ef35d77bce1197ad7"
+  },
+  {
+    "path": "assets/poi/map-pins/nature-discovered@3x.png",
+    "sha256": "6c7d645e198afd65743fa4bf121cfcbd4f771795972d5896969a78ca62e649c6"
+  },
+  {
+    "path": "assets/poi/map-pins/nature-idle.png",
+    "sha256": "5a451044dd322cf05c44d0c2e4877b8f8f3fc2d3e6d92d648782c1ea78034530"
+  },
+  {
+    "path": "assets/poi/map-pins/nature-idle@2x.png",
+    "sha256": "9533575896cc7ebe8b451e72cf0d2f46fce05ccf4fa1c8ef2c6209b9456a935a"
+  },
+  {
+    "path": "assets/poi/map-pins/nature-idle@3x.png",
+    "sha256": "49030e84684237047eecb0ba00aa07e9ca43efcaf5cdc9442254e53e4c613bd3"
+  },
+  {
+    "path": "assets/poi/map-pins/nature-nearby.png",
+    "sha256": "01b620ad538bb900a58611dca70fc7162042bb468945f98de3993e89d715add2"
+  },
+  {
+    "path": "assets/poi/map-pins/nature-nearby@2x.png",
+    "sha256": "300ab685d2df36e793132d9358bc7fbd030f4cc2e16310521d43a855d2a06b1e"
+  },
+  {
+    "path": "assets/poi/map-pins/nature-nearby@3x.png",
+    "sha256": "a5e8f9958f55d11f218d2041fe854224bcec1ba674f4f25b9549ef437d84a25e"
+  },
+  {
+    "path": "assets/poi/map-pins/nature-selected.png",
+    "sha256": "251a82e5425e4be6b52c22e77f636ccece89417f312b651fa46d689c039318c0"
+  },
+  {
+    "path": "assets/poi/map-pins/nature-selected@2x.png",
+    "sha256": "b8237bcd3b182a8de8f0fe3e17ea6bff6ee9ed811b52da4366e6ab13528d7df3"
+  },
+  {
+    "path": "assets/poi/map-pins/nature-selected@3x.png",
+    "sha256": "a882fdcf166882d40bcb2133d0e426bcfcd50955f63ccd77095ccad572f1dcb5"
+  },
+  {
+    "path": "assets/poi/map-pins/other-discovered-selected.png",
+    "sha256": "8949a4aba9aaad0f43a27ba39724e44d53f47aa36a1413ef723b3f2411037b67"
+  },
+  {
+    "path": "assets/poi/map-pins/other-discovered-selected@2x.png",
+    "sha256": "2b62e471f26d0ecd31ddac39f08c468fd0dec3e2a095f877cd86270bfff73151"
+  },
+  {
+    "path": "assets/poi/map-pins/other-discovered-selected@3x.png",
+    "sha256": "ee5c1fd66457a5d1ac9561f36c7e3f41ff926a34eee0b1a5c86ee32df2681ea4"
+  },
+  {
+    "path": "assets/poi/map-pins/other-discovered.png",
+    "sha256": "d9b94602a5982fcbf26ae3ce7a5a399fa2c86ab4076c461326a77a6614021370"
+  },
+  {
+    "path": "assets/poi/map-pins/other-discovered@2x.png",
+    "sha256": "513b00ee7eb87cc8f1f9139b75e3d1f0b9287038f69d9cd733bd726cd6ac22f7"
+  },
+  {
+    "path": "assets/poi/map-pins/other-discovered@3x.png",
+    "sha256": "018b252dab21e3d562d15a99c7380930abc51257a9d0119a8af59cb7593ba8be"
+  },
+  {
+    "path": "assets/poi/map-pins/other-idle.png",
+    "sha256": "223637b72730b08b6c7460777d90ca282ed3e0f34e3c8fb03f2f4183a31b44fa"
+  },
+  {
+    "path": "assets/poi/map-pins/other-idle@2x.png",
+    "sha256": "90bf75da722da81eea8b6b621d744e2c8e757b0630a05ca096afaf5620bd26eb"
+  },
+  {
+    "path": "assets/poi/map-pins/other-idle@3x.png",
+    "sha256": "2209f5e6b9543e93571d09f0da6bef5e8fef48f6cdc2b8346538f8b4bdc40d5d"
+  },
+  {
+    "path": "assets/poi/map-pins/other-nearby.png",
+    "sha256": "8e683382e21bc5ab313c3d2651662e3685c7770abbe22a640f5275993282f5c0"
+  },
+  {
+    "path": "assets/poi/map-pins/other-nearby@2x.png",
+    "sha256": "e1cc3723eac5e1f36465e921bf15ca9434ae9e316b6f93e1de88fa01c125db3b"
+  },
+  {
+    "path": "assets/poi/map-pins/other-nearby@3x.png",
+    "sha256": "b14b479d99851451d74a0f4ec0e2c338e86fce261ee9ea5c27a1116ca4ef3b7c"
+  },
+  {
+    "path": "assets/poi/map-pins/other-selected.png",
+    "sha256": "6ad3342ac83d58c7f652ce2eb4d84f081ef0108005bd53636ab3ae09cc18aae4"
+  },
+  {
+    "path": "assets/poi/map-pins/other-selected@2x.png",
+    "sha256": "b58f51ac8683ef8899981aeeaed6c3029cc0acc48f91db849ce6b272b33f6a17"
+  },
+  {
+    "path": "assets/poi/map-pins/other-selected@3x.png",
+    "sha256": "7d7b1ca51d43b56ed60cefcda8bc81c8e940cd4dc2cd6111a71830fcd3303475"
+  },
+  {
+    "path": "assets/poi/map-pins/religious-discovered-selected.png",
+    "sha256": "45dc15208382178b754095f0a925b48941711fb344840de0fa1ab9766aa17e1e"
+  },
+  {
+    "path": "assets/poi/map-pins/religious-discovered-selected@2x.png",
+    "sha256": "bcb88a65da3456b726793b65f36d11488f424e0e0f432848e9155b3262e13419"
+  },
+  {
+    "path": "assets/poi/map-pins/religious-discovered-selected@3x.png",
+    "sha256": "5fd82c25165e30e82a9d0e4a9c09d8227ad25d1b4e0a4b5639f5911801f739c9"
+  },
+  {
+    "path": "assets/poi/map-pins/religious-discovered.png",
+    "sha256": "e1ea18541f92ce5b88826129d17c3a5d70a83141ac30a6ca05894a84b0e72927"
+  },
+  {
+    "path": "assets/poi/map-pins/religious-discovered@2x.png",
+    "sha256": "015131aff892ffbfbef7037da38b4abb3f99afcbdc34ddb3410d3f83fe92372e"
+  },
+  {
+    "path": "assets/poi/map-pins/religious-discovered@3x.png",
+    "sha256": "d7b9580e6b28d866c61e8b546c370a2b6662e7c03aeb809861b28b17e2346a76"
+  },
+  {
+    "path": "assets/poi/map-pins/religious-idle.png",
+    "sha256": "8267268dda628d7f139bfc896e64a3e3fc16179f3a2155ac3d7c54951b458a1e"
+  },
+  {
+    "path": "assets/poi/map-pins/religious-idle@2x.png",
+    "sha256": "445f67781ea193888ca26ab030efc4b1ef69443a5b913c2567e9d5d23ea9100b"
+  },
+  {
+    "path": "assets/poi/map-pins/religious-idle@3x.png",
+    "sha256": "0c86394ca1219aa68cc450ca070c77a732c35dcc48080bb2de5e70e5f62aebf7"
+  },
+  {
+    "path": "assets/poi/map-pins/religious-nearby.png",
+    "sha256": "10cbd0d34cba2e76c123a5c7340b0375e11a6b72948e9b3e881ca125e099506c"
+  },
+  {
+    "path": "assets/poi/map-pins/religious-nearby@2x.png",
+    "sha256": "43b49c78b95805150c6a5d6df52ff288d5c0db6470bd302bec05a69484128083"
+  },
+  {
+    "path": "assets/poi/map-pins/religious-nearby@3x.png",
+    "sha256": "8aff6f4dbcab2aac682976919ab1c1e94f4597cd92edb151330b575d0657e0f8"
+  },
+  {
+    "path": "assets/poi/map-pins/religious-selected.png",
+    "sha256": "a4a0813ccdd2707722a60548dc91e19d0fec4d515786f0e46a4fe5f0666f9e19"
+  },
+  {
+    "path": "assets/poi/map-pins/religious-selected@2x.png",
+    "sha256": "ad87d7da07031138dfabd3d0616258893c889b809322fefc4444bc35a800d12b"
+  },
+  {
+    "path": "assets/poi/map-pins/religious-selected@3x.png",
+    "sha256": "224f14a0b539d37902c77e50c4662b4ae2ef4f3a5e2ee056a2f40613791c567d"
+  },
+  {
+    "path": "assets/poi/map-pins/temple-discovered-selected.png",
+    "sha256": "5f9e7de6642b1e648df38d57d86f47bb15d18a1e5c3a4e2ccec65b42b995af81"
+  },
+  {
+    "path": "assets/poi/map-pins/temple-discovered-selected@2x.png",
+    "sha256": "54fba312564dff5929eb2dbd5ab38461fa88b6ab71eff7221eba3a899d62eae7"
+  },
+  {
+    "path": "assets/poi/map-pins/temple-discovered-selected@3x.png",
+    "sha256": "d6f660a24bc3a99c95b4ea4da4f8304a72ba26a73d87dc897840ea9cf8af6e6e"
+  },
+  {
+    "path": "assets/poi/map-pins/temple-discovered.png",
+    "sha256": "ab92455fd5804ea928277996d549521e92e53ecc3c7bd0961e4860006477f99d"
+  },
+  {
+    "path": "assets/poi/map-pins/temple-discovered@2x.png",
+    "sha256": "7d794be033046d6c79b7f69021b33ec1417b41ff5ad6d8cd5f04a2cd9c61dbf0"
+  },
+  {
+    "path": "assets/poi/map-pins/temple-discovered@3x.png",
+    "sha256": "99182ed64f2874b5e4e727889d39bfaabfb25732bcc04f6d068dde6449efa931"
+  },
+  {
+    "path": "assets/poi/map-pins/temple-idle.png",
+    "sha256": "b9dd838b3bd5e48b1d2879ca499b0fd5350d25eb6e5aafc67d3718af0d7c23a4"
+  },
+  {
+    "path": "assets/poi/map-pins/temple-idle@2x.png",
+    "sha256": "bc7e3c6c72d8e979c5e827302a3a120dbdedd88c756f524f5b81db3b6f3dc276"
+  },
+  {
+    "path": "assets/poi/map-pins/temple-idle@3x.png",
+    "sha256": "6899487d0a79d39161936b1923b5bbc4ecb18954411de1c8a2a1e612d0d7101f"
+  },
+  {
+    "path": "assets/poi/map-pins/temple-nearby.png",
+    "sha256": "71da987fb4b23a7130dd835243d0f6ce77d844632d20e2de9c6c0035223122d9"
+  },
+  {
+    "path": "assets/poi/map-pins/temple-nearby@2x.png",
+    "sha256": "7c1c7e48cdbdf30bcf4a964a6d74324bf9483d5ea25c1566af313fc578886645"
+  },
+  {
+    "path": "assets/poi/map-pins/temple-nearby@3x.png",
+    "sha256": "317a5eca2b1388cccbfaf385d99c194d3140fcf6dfc17137f414cf49fcb9b561"
+  },
+  {
+    "path": "assets/poi/map-pins/temple-selected.png",
+    "sha256": "754f73c180eef71087dc7805cb5eff1e5962299c05b6dccb1750a8366bba6639"
+  },
+  {
+    "path": "assets/poi/map-pins/temple-selected@2x.png",
+    "sha256": "38b207c3ee2dec98c00141fc3aab925c8dcd3138f42e23d4a5690fe67b2aaba4"
+  },
+  {
+    "path": "assets/poi/map-pins/temple-selected@3x.png",
+    "sha256": "d48173455dccf10c68517bcad8df14612d49d85768fb27b9fbe9110606104584"
+  },
+  {
     "path": "assets/poi/museum-community_pending.png",
     "sha256": "5d052ce2c2b46bf824d15b8b89fa28af4bfd43ea6cde49c15163a7b6063e4d6b"
   },
@@ -4641,7 +5061,7 @@
   },
   {
     "path": "docs/design/poi-native-preview.html",
-    "sha256": "eafca739f8959228c492b30b1955e7d427c1f99bee46f02e267c2d90e62e2f42"
+    "sha256": "771ef963963b2d9d230672b79c4eae2fb2dabb0d8448eb65ff9b211bd9fa3f06"
   },
   {
     "path": "docs/design/poi-preview-320.png",
@@ -4769,11 +5189,11 @@
   },
   {
     "path": "scripts/poi/build-native-map.cjs",
-    "sha256": "bffd960d2b8f2c4b80c0008f51a62515f61870144b608771c59f3cf23f51eecd"
+    "sha256": "3d92ee2dec121ee865ee8dd29108c9758ab34516dd7a0741f0e89f4e3cce41dd"
   },
   {
     "path": "scripts/poi/build-native-preview.cjs",
-    "sha256": "895122f370a90cb9eedee6da46573ce6ff9aa22901772f27fcb9d7909e3b3ebe"
+    "sha256": "7dd364772084df34cab6146f38ec2902eebdff4714dc8b74a6e390fd12827bba"
   },
   {
     "path": "scripts/poi/build-preview.cjs",
@@ -4909,7 +5329,7 @@
   },
   {
     "path": "src/components/exploration/IllustratedPoiMarker.tsx",
-    "sha256": "73ebe31733271a3992ccf2fec718ea2a4a6a8b1ef51f6962f1e220f0eadc3d04"
+    "sha256": "ecc693f785329da68be51b6a4acf89c48337fb71b7444943c6562b855fb1aed1"
   },
   {
     "path": "src/components/exploration/MapOptions.tsx",
@@ -4925,7 +5345,7 @@
   },
   {
     "path": "src/components/exploration/PoiClusterMarker.tsx",
-    "sha256": "7d8a970bb2f5a9c2092ee51284ec8bf75bf888756e860c03c378a86a6c99763d"
+    "sha256": "82857a35f42712c9bd11eb126537cdabf22fddd9ee0f561b3f34c99b28adf638"
   },
   {
     "path": "src/components/exploration/avatar/catiaSprites.ts",
@@ -5001,7 +5421,7 @@
   },
   {
     "path": "src/components/poi/nativeMapAssets.ts",
-    "sha256": "6c034090743e1f70fbb5e8a61917082f1968d6293349dc17af7e7d26b083a180"
+    "sha256": "f1c4a3d97ae1b66b69546357c5c15b94e70eec501e210681e8d093bf5b81b5fa"
   },
   {
     "path": "src/data/adventures/index.ts",
@@ -5289,7 +5709,7 @@
   },
   {
     "path": "tests/native-poi-map.test.ts",
-    "sha256": "1d9a6ab57d30563564c6938905bee7f740c4fa63c09fe759b69b7b1877d459bf"
+    "sha256": "bf427674782618b298d02ee1ea71185bb3b0b5140323303e6b0959dcda652d38"
   },
   {
     "path": "tests/navigation.test.ts",
