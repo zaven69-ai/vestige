@@ -1,0 +1,79 @@
+[
+  {
+    "id": "vienne-antique-temple",
+    "poiId": "auguste",
+    "title": "Temple d’Auguste et de Livie",
+    "language": "fr",
+    "version": 1,
+    "script": "Au cœur de Vienne, le temple d’Auguste et de Livie rappelle le rôle politique et religieux du forum romain. Sa construction a connu plusieurs campagnes : une partie remonte au règne d’Auguste, tandis que d’autres éléments sont attribués au premier siècle de notre ère. Le monument était dédié à Rome et à Auguste ; le culte de Livie divinisée s’y est ensuite ajouté. Observez le podium, les colonnes et leurs chapiteaux corinthiens. Ces formes exprimaient les liens de la cité avec le pouvoir impérial. Transformé en église dans l’Antiquité tardive, l’édifice a traversé les siècles. Aujourd’hui, sa présence au milieu des rues permet de lire un fragment du centre monumental de Vienna.",
+    "contentHash": "be9fbb71a0036ad9b9869c07a82b7bea2fe4a5e2746164057a79833d2da8d5ba",
+    "origin": "vestige_editorial",
+    "status": "draft",
+    "sources": [
+      {
+        "title": "Temple d’Auguste et de Livie",
+        "url": "https://www.vienne-condrieu.com/patrimoine-culturel/temple-dauguste-et-de-livie-vienne/",
+        "publisher": "Vienne Condrieu Tourisme",
+        "author": null,
+        "publishedAt": null,
+        "consultedAt": "2026-11-11"
+      }
+    ],
+    "approval": null,
+    "audioId": null
+  },
+  {
+    "id": "vienne-antique-cybele",
+    "poiId": "cybele",
+    "title": "Jardin archéologique de Cybèle",
+    "language": "fr",
+    "version": 1,
+    "script": "Le jardin de Cybèle conserve plusieurs fragments du quartier du forum de la Vienne gallo-romaine. Les vestiges visibles appartiennent à des constructions différentes : des arcades d’un portique, une salle d’assemblée municipale et les restes d’une grande maison urbaine. Ils ne formaient donc pas un seul bâtiment. Prenez le temps de regarder les volumes et les maçonneries : ces éléments aident à comprendre comment s’organisait le cœur civique de la ville. Le temple que vous venez de découvrir appartenait lui aussi à cet ensemble monumental plus vaste. Ce jardin offre une halte pour observer les traces de la cité antique, tout en distinguant ce que l’archéologie conserve de ce qui a disparu.",
+    "contentHash": "fe656757a2ce654342c3d5478fcf628d15e7dae70d7566d85403cb0018484c1a",
+    "origin": "vestige_editorial",
+    "status": "draft",
+    "sources": [
+      {
+        "title": "Jardin archéologique de Cybèle",
+        "url": "https://www.vienne-condrieu.com/patrimoine-culturel/jardin-archeologique-de-cybele-vienne/",
+        "publisher": "Vienne Condrieu Tourisme",
+        "author": null,
+        "publishedAt": null,
+        "consultedAt": "2026-11-11"
+      }
+    ],
+    "approval": null,
+    "audioId": null
+  },
+  {
+    "id": "vienne-antique-theatre",
+    "poiId": "theatre-vienne",
+    "title": "Théâtre antique",
+    "language": "fr",
+    "version": 1,
+    "script": "Adossé à la colline de Pipet, le théâtre antique de Vienne fut construit au premier siècle de notre ère, vers les années quarante à cinquante. Son hémicycle et ses gradins s’appuient sur le relief, complété par des aménagements bâtis pour accueillir le public et organiser sa circulation. Ce monument accueillait des spectacles, mais pouvait aussi servir à des rassemblements civiques. Après son abandon à la fin de l’Antiquité, il a été redécouvert puis restauré au vingtième siècle. Il reçoit à nouveau des manifestations artistiques, notamment Jazz à Vienne. L’accès intérieur dépend des horaires et de la programmation : observez depuis les espaces autorisés et consultez les informations du site avant d’entrer.",
+    "contentHash": "a93f5f9d0ddde9ee1804edfaa2a1b3ec61e089c60ed6e99b8341ccfd507a5747",
+    "origin": "vestige_editorial",
+    "status": "draft",
+    "sources": [
+      {
+        "title": "Théâtre antique",
+        "url": "https://www.vienne-condrieu.com/patrimoine-culturel/theatre-antique-vienne/",
+        "publisher": "Vienne Condrieu Tourisme",
+        "author": null,
+        "publishedAt": null,
+        "consultedAt": "2026-11-11"
+      },
+      {
+        "title": "Les Musées — Théâtre antique",
+        "url": "https://vienne.fr/nos-services/culture/les-musees/",
+        "publisher": "Ville de Vienne",
+        "author": null,
+        "publishedAt": null,
+        "consultedAt": "2026-11-11"
+      }
+    ],
+    "approval": null,
+    "audioId": null
+  }
+]

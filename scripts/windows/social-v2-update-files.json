@@ -1,7 +1,11 @@
 [
   {
+    "path": ".github/workflows/catia-preview-checks.yml",
+    "sha256": "b28c860fb91c56df2f16dc384431ecfc46e6814face8f318144ad8fba5a77b29"
+  },
+  {
     "path": "app.json",
-    "sha256": "104eb31671d46f8cb6c906044895934ce3ea0fff9359d358834587f17454517a"
+    "sha256": "432fbe0ed2b6d7e70ac8e766d0da4e58f431404c2e73b1f302218fa1363a5b1c"
   },
   {
     "path": "assets/avatars/catia/map-sprites/e-idle-0.png",
@@ -4232,6 +4236,10 @@
     "sha256": "72b6e94fd327747dbd8e4195983fb8dc50679360363db49b1a5c75d11afb586d"
   },
   {
+    "path": "docs/design/VIENNE-ANTIQUE-AUDIO-MVP.md",
+    "sha256": "35f138b19070517909a44cf8b013045e02aba2eeb9ff475d10d5dcd1f2f2f389"
+  },
+  {
     "path": "docs/design/poi-illustrated-320.png",
     "sha256": "d4670275436eb5e283d4846608f8a903d4df7df84f18ce158565cf35dabbd43b"
   },
@@ -4276,16 +4284,28 @@
     "sha256": "0f85c277faf9faff084b3d2d51ffaa33499d89231eac1fad0c0982ff8856a008"
   },
   {
+    "path": "docs/live/VIENNE-ANTIQUE-MVP-DELIVERY.md",
+    "sha256": "944c3c77e4d2384cb1ab22e7fe8cf5359fdf344c01e1a69b3898f73cc7bb7528"
+  },
+  {
+    "path": "docs/live/VIENNE-ANTIQUE-SCRIPTS-V1.md",
+    "sha256": "8681611ffc5f983b5855ec1177f0b14185e1d8bb0881a70864583be64a32139a"
+  },
+  {
     "path": "package-lock.json",
-    "sha256": "f4392f294cccf4e5f7d7d6317487f79e552440c6e037a0f07a2a4118f99c270a"
+    "sha256": "bf3b9488caca52d882019eed48bfaa7adbd088238c372b40094a4791892dd4cd"
   },
   {
     "path": "package.json",
-    "sha256": "ef4109a74c8d3bf0fa3053258219eef54546409f407de4a6636648a2cabf9bc9"
+    "sha256": "b4ab0aab54d8f581d04d356351946e9781d6af115a82ff6473e165cc7bf80fc0"
   },
   {
     "path": "scripts/avatars/catia/render_map_sprites.py",
     "sha256": "eaac316f50444c4ecf99396db7eae444621bb35b852fdbf050f6051c39e9e41f"
+  },
+  {
+    "path": "scripts/live/register-audio.cjs",
+    "sha256": "b7acda53c16196228207e68246bd067b291a49d94e61c9f9d8cf1f4b0b8e1556"
   },
   {
     "path": "scripts/poi/build-landmarks.cjs",
@@ -4329,15 +4349,23 @@
   },
   {
     "path": "scripts/windows/update-social-v2.ps1",
-    "sha256": "cf8c21f879074d86339b474f3ed3c4f933ff6bf338195cd8b95b8446b2b08da4"
+    "sha256": "7844bad61d6bd3c3fd4fec6660321f87467b8e4d1fc876d66a6827e23a2eb346"
   },
   {
     "path": "src/app/(tabs)/index.tsx",
     "sha256": "1963b3874ce6803db4e1b255771a8f6a483c5fcc43cce4d3a0e05fec69b43d70"
   },
   {
+    "path": "src/app/(tabs)/parcours.tsx",
+    "sha256": "7b6cb5ca32eacc3bdd7299d4057b9ac3acbbc60578618e0725d527a81a670a38"
+  },
+  {
     "path": "src/app/(tabs)/profil.tsx",
     "sha256": "ccea0f98273e261b335757b19967703174d9ffd63a21a4097c557262c07be28a"
+  },
+  {
+    "path": "src/app/_layout.tsx",
+    "sha256": "af20d1ca8b32e5c3dbc9247a4f8f39bd55dd97e055b729f3f7ba92ed865fef68"
   },
   {
     "path": "src/app/avatars.tsx",
@@ -4358,6 +4386,10 @@
   {
     "path": "src/app/monument/[id].tsx",
     "sha256": "4dfd310a532769690efe3ddf79793d749a90b21b8200a49faf24566d60d73c2e"
+  },
+  {
+    "path": "src/app/visite-vienne.tsx",
+    "sha256": "174df1d80810b41d25af154566fc61706ffa009d7703e9586e4ed5f6b3bb6214"
   },
   {
     "path": "src/components/contributions/MonumentActions.tsx",
@@ -4400,6 +4432,18 @@
     "sha256": "99968657e3fd416289ab15dbdf1f55e7aced316fc2cd8f428f9bf02f9166ec76"
   },
   {
+    "path": "src/components/live/NativeNarration.tsx",
+    "sha256": "4c96b2ba05e5a784fa255000e4e09fb824cfb06f6356a708f5409112c91a0481"
+  },
+  {
+    "path": "src/components/live/TourCard.tsx",
+    "sha256": "a0f7094bc0c36ce07503da6a48b1f2ee85dd8b16762ab7e534c8a3017c53e329"
+  },
+  {
+    "path": "src/components/live/VisitMap.tsx",
+    "sha256": "4a4e8d7a10895160b895669aa78b4c8e7f06945d565999bd3ffb0f32723e5f4d"
+  },
+  {
     "path": "src/components/monuments/MonumentBottomSheet.tsx",
     "sha256": "4034b6b067054b49b130ae0d0374d5b9e1eeebbd8fd18f2da1ccd10437883f33"
   },
@@ -4440,6 +4484,22 @@
     "sha256": "ab6f21dd196ba32cca5ea7a3ad4e2e7f7515df0f7e88eef5d60887db21351f21"
   },
   {
+    "path": "src/data/live/audio-manifest.json",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  },
+  {
+    "path": "src/data/live/audioAssets.ts",
+    "sha256": "7832911ce4399fb4ec31ef12477a97d898846859ef507d1e51975b163b03aeb3"
+  },
+  {
+    "path": "src/data/live/stories.json",
+    "sha256": "5479f296c32776e78ca4726be6f8c5e6cc1c49b482d1f4bfcadbf3b6ed8e2baa"
+  },
+  {
+    "path": "src/data/live/vienneAntique.ts",
+    "sha256": "d8b6e13d71479ccf875d32ee43f7d33aaed6c75d554de022de706b18b9fbfa2c"
+  },
+  {
     "path": "src/data/monuments.ts",
     "sha256": "ee4f7f6a570056365096561cab2e56070fcd291648cf9b6a640f30f0c7245bca"
   },
@@ -4472,6 +4532,30 @@
     "sha256": "69da0b315bde74614fe93a4a080c23f4fc50739e12caa15516a83d5c2653c741"
   },
   {
+    "path": "src/lib/live/LiveProvider.tsx",
+    "sha256": "7bc0bb4767cbb1ca7c85527724b32b646e15649b234e55f08bd14b85222c2b43"
+  },
+  {
+    "path": "src/lib/live/eligibility.ts",
+    "sha256": "df321443d2fb3e4d74b2450a15a6c59a0befca1ce952cf24a7f1cf7e5e787fe2"
+  },
+  {
+    "path": "src/lib/live/geofence.ts",
+    "sha256": "48b33cc86bb3ce80e3c0eadafafaf35da006c2965bb492e2b84348c3bc326455"
+  },
+  {
+    "path": "src/lib/live/playback.ts",
+    "sha256": "ebae43733b1053c33c1b71f3e7b1021380c74c60914c15957e72b006554467bf"
+  },
+  {
+    "path": "src/lib/live/session.ts",
+    "sha256": "4b32a56256394d6205985d239ed74e14a78aae56bd65cd9afd8e7fe7925ca569"
+  },
+  {
+    "path": "src/lib/live/types.ts",
+    "sha256": "04e35ffbd0aa3d6515cbff95a6d0fd25ee7d7cefa1a8f15928e276f1e154e2b1"
+  },
+  {
     "path": "src/lib/mapViewport.ts",
     "sha256": "f3db8573489d0aa9c6244dcdf04d4c038ea757e3d77ff7101017e693b4dab160"
   },
@@ -4502,6 +4586,10 @@
   {
     "path": "tests/illustrated-poi.test.ts",
     "sha256": "dae48993c7d8b1ace559d9eceb747034fbf61ea2506a5774d94aa231acda1ff8"
+  },
+  {
+    "path": "tests/live.test.ts",
+    "sha256": "f0bf248a61cc30462643674ccccbc89aeb4db6a9e3a1d6b63ed0ea8861fcac1f"
   },
   {
     "path": "tests/native-poi-map.test.ts",

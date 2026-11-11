@@ -1,3 +1,4 @@
+import { TourCard } from "../../components/live/TourCard";
 import { MonumentPhoto } from "../../components/MonumentPhoto";
 import React, { useState } from "react";
 import { Text, View, StyleSheet } from "react-native";
@@ -21,9 +22,10 @@ export default function Parcours() {
       eyebrow="Des histoires à parcourir"
       title="Choisissez votre prochaine aventure"
     >
+      <TourCard />
       <Text style={s.body}>
-        Deux circuits à explorer à votre rythme. Les étapes sont suggérées ; le
-        guidage routier reste à venir.
+        Deux autres circuits à explorer à votre rythme. Les étapes sont
+        suggérées ; le guidage routier reste à venir.
       </Text>
       {trails.map((trail) => {
         const stops = trail.ids.map((id) =>
