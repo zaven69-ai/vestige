@@ -45,6 +45,13 @@ export type LiveAsset = {
   uri?: string;
 };
 export type LiveStop = {
+  history?: {
+    title: string;
+    text: string;
+    sources: string[];
+    checkedAt: string;
+    status: "documented";
+  };
   poiId: string;
   storyId: string;
   approach: { latitude: number; longitude: number };
@@ -53,6 +60,7 @@ export type LiveStop = {
   checkedAt: string;
 };
 export type LiveTour = {
+  presenceRequired?: boolean;
   id: string;
   title: string;
   subtitle: string;

@@ -4564,6 +4564,10 @@
     "sha256": "9eb8477d50ac028b007ecebff64b0a16531e2206acb80787bccedb9abda97577"
   },
   {
+    "path": "docs/design/LYON-AVENTURES-V1.md",
+    "sha256": "59487ca5a50e7c74df0d3171cd182bf206bd7808b988e373dd4b7c35f7996fb8"
+  },
+  {
     "path": "docs/design/LYON-DEMO-V1.md",
     "sha256": "bfa4a3693caa0314fb825f2ffb93da7e056bde3c751486fa9d475e4741685d5e"
   },
@@ -4701,7 +4705,7 @@
   },
   {
     "path": "scripts/developer/check-simulation-browser.cjs",
-    "sha256": "ac0d9e7dd58eb82e4f850ff7c4ff860afc81de3e4544385e8e393a4cbffd8a7d"
+    "sha256": "1d9e386607d5f3a636df25b320dd72ea703a443f323d8ed99353cd8e93ba2c7a"
   },
   {
     "path": "scripts/live/import-george-private.cjs",
@@ -4769,7 +4773,7 @@
   },
   {
     "path": "scripts/windows/update-social-v2.ps1",
-    "sha256": "aae669c4b242985bf60206e36a3b17084426f1387a555d32b5c500ae5b84b490"
+    "sha256": "9926cd898aa7736a52b11854f06fc3ecbdf685139aa15b5ca3e6bd2b2ad279f5"
   },
   {
     "path": "src/app/(tabs)/index.tsx",
@@ -4777,7 +4781,7 @@
   },
   {
     "path": "src/app/(tabs)/parcours.tsx",
-    "sha256": "ca3cb4bdf3f771fbfba9e8f7652084db88c4ef6ee4f7a08a5cca3d3f61d94aa3"
+    "sha256": "2be97e534b15479a9673284cf7fb348bfeed8cee9bbfe771e6cbdb6afeb02ee9"
   },
   {
     "path": "src/app/(tabs)/profil.tsx",
@@ -4864,6 +4868,10 @@
     "sha256": "99968657e3fd416289ab15dbdf1f55e7aced316fc2cd8f428f9bf02f9166ec76"
   },
   {
+    "path": "src/components/live/AdventureCard.tsx",
+    "sha256": "ea06dc6289ca700c4dd19244ba5b22687d13f65a8bd3e7322bc96522e61ab26b"
+  },
+  {
     "path": "src/components/live/ExplorerAudioPlayer.tsx",
     "sha256": "bae7ca44b21bf6c217845b453b12a74f09fc618b7d4d42b97a99753dcf9a0681"
   },
@@ -4893,7 +4901,7 @@
   },
   {
     "path": "src/components/navigation/GuidedVisitFooter.tsx",
-    "sha256": "310cc8ce7067e979da784179ebb763917362f4a5299743bf08804de3f0165ac1"
+    "sha256": "749eb9bde049b425fa4c35f9673cb9e30800c4d1dd9b77b783e24fecd2cfe29a"
   },
   {
     "path": "src/components/navigation/WalkingNavigationPanel.tsx",
@@ -4928,6 +4936,14 @@
     "sha256": "6c034090743e1f70fbb5e8a61917082f1968d6293349dc17af7e7d26b083a180"
   },
   {
+    "path": "src/data/adventures/index.ts",
+    "sha256": "b2dfb8413000c05879ad2a3b6f1ef4226d2941fe5a274c76a3e48c7bcf26be03"
+  },
+  {
+    "path": "src/data/adventures/lyon.json",
+    "sha256": "9aad2b575dbcdad0565013b9ab7fc31be8a5793633f09f79e8f83cdb398ea4ee"
+  },
+  {
     "path": "src/data/imported-pois.json",
     "sha256": "ab6f21dd196ba32cca5ea7a3ad4e2e7f7515df0f7e88eef5d60887db21351f21"
   },
@@ -4957,7 +4973,7 @@
   },
   {
     "path": "src/data/live/tours.ts",
-    "sha256": "5faf540c28ca947d6bd5219b33a911dfba77e63fcce5dabdfec9ec7227684a25"
+    "sha256": "58d8a04871dd0167e9b2872403d98f02ffac83d3a7659f1957525b94c45332d2"
   },
   {
     "path": "src/data/live/vienneAntique.ts",
@@ -4990,6 +5006,10 @@
   {
     "path": "src/hooks/useWalkingNavigation.ts",
     "sha256": "5c55b99593aa4de8b1c085c7483be2a98255cae5688d8cdd0d1f2e88bed01fdf"
+  },
+  {
+    "path": "src/lib/adventures.ts",
+    "sha256": "35feb1c12e03c0d36a8416aa637829e9676c2d6450fc70569cac6845ad676c43"
   },
   {
     "path": "src/lib/avatars/catiaMap.ts",
@@ -5025,7 +5045,7 @@
   },
   {
     "path": "src/lib/live/LiveProvider.tsx",
-    "sha256": "d0e66704f8f50169e228558f10bc31df4d7717e7dbe11675a9e8906b512384ec"
+    "sha256": "49ae105be514774cc50a16cdbbaa9a221d5aeebb371efe7e36bd81e40e0961fe"
   },
   {
     "path": "src/lib/live/audioPlayback.ts",
@@ -5057,7 +5077,7 @@
   },
   {
     "path": "src/lib/live/types.ts",
-    "sha256": "16c1b33dc1daea6b46d707d42dd966f4aedfcfce0b4411180097db9af17aa8dc"
+    "sha256": "5731093fd1f2a74d940b16c8d3a31a2180d511f15082b37ebb7ca590c44b17e1"
   },
   {
     "path": "src/lib/mapViewport.ts",
@@ -5102,6 +5122,10 @@
   {
     "path": "src/theme/index.ts",
     "sha256": "6518b97995667b2e797795c817ee07fa634ed67d7765ef5182440ffa423c0c0c"
+  },
+  {
+    "path": "tests/adventures.test.ts",
+    "sha256": "5ea849138ef7e5d2d0c87b5de316c93d94266a8492c1070f9daae0922009d708"
   },
   {
     "path": "tests/catia-map.test.ts",

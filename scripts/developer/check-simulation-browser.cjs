@@ -121,7 +121,7 @@ function resolve(id, from) {
     const candidate = id.startsWith("/")
       ? id
       : path.resolve(path.dirname(from), id);
-    for (const suffix of ["", ".ts", ".tsx", ".js", ".json"])
+    for (const suffix of ["", ".ts", ".tsx", ".js", ".json", "/index.ts"])
       if (
         mocks.has(candidate + suffix) ||
         (fs.existsSync(candidate + suffix) &&

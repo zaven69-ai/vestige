@@ -1,3 +1,4 @@
+import { canDiscover } from "../game";
 import { georgeDemo } from "../../data/live/georgeDemo";
 import { georgePrivateSource } from "../../data/live/georgePrivateAsset";
 import {
@@ -264,13 +265,26 @@ function useLiveState(
   const advance = useCallback(
     (outcome: "consulted" | "skipped" | "listened") => {
       if (!ready || storageError || !scopeAllowed()) return;
+      const activeTour = session ? guidedTour(session.tourId) : null;
+      if (
+        !preview &&
+        outcome !== "skipped" &&
+        activeTour?.presenceRequired &&
+        (!activeTour.stops[session!.index] ||
+          !canDiscover(
+            fix,
+            activeTour.stops[session!.index].approach,
+            Date.now(),
+          ))
+      )
+        return;
       stopAudio();
       fence.current = emptyFence();
       setSession((s) =>
         s ? advanceVisit(s, guidedTour(s.tourId)!, outcome, Date.now()) : s,
       );
     },
-    [ready, storageError, stopAudio, scopeAllowed],
+    [ready, storageError, stopAudio, scopeAllowed, session, preview, fix],
   );
   const leave = useCallback(() => {
     if (!scopeAllowed()) return;

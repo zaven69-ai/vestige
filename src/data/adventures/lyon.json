@@ -1,0 +1,192 @@
+[
+  {
+    "id": "lyon-crime",
+    "title": "Lyon, cité du crime",
+    "period": "Époques à documenter",
+    "audience": "16 ans et plus",
+    "difficulty": "À déterminer",
+    "publication": "draft",
+    "origin": "editorial",
+    "version": 1,
+    "summary": "Bientôt : vérification des affaires, des lieux et des sources avant tout récit ou accusation.",
+    "badges": ["En préparation"],
+    "sources": [
+      "https://www.visiterlyon.com/decouvrir/lyon-comme-vous-l-aimez/100-insolite/les-grandes-affaires-criminelles-de-lyon"
+    ],
+    "steps": []
+  },
+  {
+    "id": "lyon-resistance",
+    "title": "Lyon, capitale de la Résistance",
+    "period": "Seconde Guerre mondiale",
+    "audience": "12 ans et plus, accompagné",
+    "difficulty": "À déterminer",
+    "publication": "draft",
+    "origin": "editorial",
+    "version": 1,
+    "summary": "Bientôt : parcours documentaire respectueux des victimes. Aucun défi ou récompense lié à la persécution.",
+    "badges": ["En préparation"],
+    "sources": [
+      "https://www.chrd.lyon.fr/musee/parcours-urbain/sur-les-pas-de-jean-moulin"
+    ],
+    "steps": []
+  },
+  {
+    "id": "lyon-lugdunum",
+    "title": "Lugdunum : aux origines de Lyon",
+    "period": "Antiquité · musée contemporain",
+    "audience": "Tout public, enfants accompagnés",
+    "difficulty": "Soutenue · pente et escaliers",
+    "publication": "published",
+    "origin": "editorial",
+    "version": 1,
+    "summary": "Une découverte originale du musée et des deux théâtres, sans restitution antique inventée. Accès intérieur et horaires à vérifier.",
+    "badges": ["Étapes sourcées", "À pied"],
+    "sources": [
+      "https://www.grandlyon.com/actualite/plongez-dans-les-vestiges-de-la-ville-a-lepoque-romaine-avec-explore-lyon-antique"
+    ],
+    "steps": [
+      {
+        "poiId": "osm-way-88526510",
+        "title": "Lugdunum, le musée et son site",
+        "text": "Le musée Lugdunum accompagne la découverte des vestiges antiques de la colline de Fourvière. Ce repère extérieur permet de préparer la visite ; l’entrée au musée constitue une visite distincte.",
+        "status": "documented",
+        "checkedAt": "2026-11-11",
+        "sources": [
+          "https://www.grandlyon.com/actualite/plongez-dans-les-vestiges-de-la-ville-a-lepoque-romaine-avec-explore-lyon-antique",
+          "https://lugdunum.grandlyon.com/fr/un-musee-de-sites/theatres-romains"
+        ],
+        "approach": {
+          "latitude": 45.760373,
+          "longitude": 4.820519
+        },
+        "access": "Observation depuis les espaces publics accessibles. Les horaires, fermetures et conditions d’entrée doivent être contrôlés sur place. Ne pas franchir de grille ni entrer dans un passage privé."
+      },
+      {
+        "poiId": "theatre-lyon",
+        "title": "Le grand théâtre",
+        "text": "Le grand théâtre est adossé à la pente de la colline de Fourvière. Le site réunit ce théâtre et un édifice plus petit, l’odéon : deux constructions différentes à observer dans leur état archéologique actuel.",
+        "status": "documented",
+        "checkedAt": "2026-11-11",
+        "sources": [
+          "https://lugdunum.grandlyon.com/fr/un-musee-de-sites/theatres-romains"
+        ],
+        "approach": {
+          "latitude": 45.759682,
+          "longitude": 4.819723
+        },
+        "access": "Observation depuis les espaces publics accessibles. Les horaires, fermetures et conditions d’entrée doivent être contrôlés sur place. Ne pas franchir de grille ni entrer dans un passage privé."
+      },
+      {
+        "poiId": "osm-way-88526506",
+        "title": "L’odéon",
+        "text": "L’odéon est le plus petit des deux édifices du site des théâtres. Observer sa forme permet de le distinguer du grand théâtre voisin, sans imaginer une toiture ou un décor antique encore en place.",
+        "status": "documented",
+        "checkedAt": "2026-11-11",
+        "sources": [
+          "https://lugdunum.grandlyon.com/fr/un-musee-de-sites/theatres-romains"
+        ],
+        "approach": {
+          "latitude": 45.758682,
+          "longitude": 4.819716
+        },
+        "access": "Observation depuis les espaces publics accessibles. Les horaires, fermetures et conditions d’entrée doivent être contrôlés sur place. Ne pas franchir de grille ni entrer dans un passage privé."
+      }
+    ]
+  },
+  {
+    "id": "lyon-medieval",
+    "title": "Les secrets du Lyon médiéval",
+    "period": "Moyen Âge et Renaissance, distingués",
+    "audience": "Tout public, enfants accompagnés",
+    "difficulty": "Modérée · pavés et rues anciennes",
+    "publication": "published",
+    "origin": "editorial",
+    "version": 1,
+    "summary": "Un itinéraire extérieur original entre Saint-Jean, Gadagne et Saint-Paul. Aucun passage privé ou traboule n’est nécessaire.",
+    "badges": ["Étapes sourcées", "À pied"],
+    "sources": [
+      "https://www.visiterlyon.com/decouvrir/les-quartiers-de-lyon/le-quartier-du-vieux-lyon"
+    ],
+    "steps": [
+      {
+        "poiId": "saint-jean",
+        "title": "Saint-Jean et le quartier cathédral",
+        "text": "La cathédrale Saint-Jean fait partie du quartier médiéval et Renaissance du Vieux Lyon. Elle appartenait au Moyen Âge à un groupe de bâtiments religieux : le quartier ne se résume pas à une seule époque.",
+        "status": "documented",
+        "checkedAt": "2026-11-11",
+        "sources": [
+          "https://fr.wikipedia.org/wiki/Cath%C3%A9drale_Saint-Jean_de_Lyon"
+        ],
+        "approach": {
+          "latitude": 45.760993,
+          "longitude": 4.827452
+        },
+        "access": "Observation depuis les espaces publics accessibles. Les horaires, fermetures et conditions d’entrée doivent être contrôlés sur place. Ne pas franchir de grille ni entrer dans un passage privé."
+      },
+      {
+        "poiId": "osm-way-700244364",
+        "title": "Gadagne : le repère Renaissance",
+        "text": "Gadagne abrite le musée d’histoire de Lyon dans un ensemble Renaissance. Cette étape distingue explicitement la Renaissance du Moyen Âge ; les collections se visitent selon les conditions du musée.",
+        "status": "documented",
+        "checkedAt": "2026-11-11",
+        "sources": [
+          "https://www.gadagne-lyon.fr/mhl",
+          "https://fr.wikipedia.org/wiki/H%C3%B4tel_de_Gadagne"
+        ],
+        "approach": {
+          "latitude": 45.763964,
+          "longitude": 4.827285
+        },
+        "access": "Observation depuis les espaces publics accessibles. Les horaires, fermetures et conditions d’entrée doivent être contrôlés sur place. Ne pas franchir de grille ni entrer dans un passage privé."
+      },
+      {
+        "poiId": "osm-way-60798750",
+        "title": "Saint-Paul",
+        "text": "L’église Saint-Paul associe des éléments romans et gothiques. Elle est un autre repère pour observer la diversité des édifices anciens du Vieux Lyon, sans attribuer toutes leurs parties à une même période.",
+        "status": "documented",
+        "checkedAt": "2026-11-11",
+        "sources": [
+          "https://fr.wikipedia.org/wiki/%C3%89glise_Saint-Paul_de_Lyon"
+        ],
+        "approach": {
+          "latitude": 45.766816,
+          "longitude": 4.826786
+        },
+        "access": "Observation depuis les espaces publics accessibles. Les horaires, fermetures et conditions d’entrée doivent être contrôlés sur place. Ne pas franchir de grille ni entrer dans un passage privé."
+      }
+    ]
+  },
+  {
+    "id": "lyon-canuts",
+    "title": "La révolte des Canuts",
+    "period": "XIXe siècle",
+    "audience": "12 ans et plus, accompagné",
+    "difficulty": "À confirmer · pente et escaliers",
+    "publication": "draft",
+    "origin": "editorial",
+    "version": 1,
+    "summary": "Bientôt : références historiques et accès aux cours à vérifier. Aucun horaire ni passage privé présenté comme garanti.",
+    "badges": ["En préparation"],
+    "sources": [
+      "https://www.visiterlyon.com/decouvrir/sites-et-monuments/sites-et-monuments-remarquables/cours-et-traboules-de-la-croix-rousse"
+    ],
+    "steps": []
+  },
+  {
+    "id": "lyon-legendes",
+    "title": "Lyon, mystères et légendes",
+    "period": "Folklore · périodes à préciser",
+    "audience": "12 ans et plus, accompagné",
+    "difficulty": "À déterminer",
+    "publication": "draft",
+    "origin": "editorial",
+    "version": 1,
+    "summary": "Bientôt : chaque récit sera identifié comme légende ou fait documenté. Aucun récit ésotérique non vérifié n’est publié.",
+    "badges": ["En préparation"],
+    "sources": [
+      "https://www.visiterlyon.com/decouvrir/sites-et-monuments/les-traboules-et-cours-de-lyon"
+    ],
+    "steps": []
+  }
+]

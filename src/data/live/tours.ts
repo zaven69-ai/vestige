@@ -1,3 +1,5 @@
+import { lyonAdventures } from "../adventures";
+import { playableAdventure } from "../../lib/adventures";
 import { trails, monuments } from "../monuments";
 import { vienneAntique, liveStories } from "./vienneAntique";
 import type { LiveTour } from "../../lib/live/types";
@@ -28,6 +30,33 @@ export const guidedTours: LiveTour[] = [
 // Single-POI guidance uses the same engine and session protections as a trail.
 export const navigationTours: LiveTour[] = [
   ...guidedTours,
+  ...lyonAdventures
+    .filter(
+      (a) =>
+        playableAdventure(a) &&
+        a.steps.every((s) => monuments.some((m) => m.id === s.poiId)),
+    )
+    .map((a) => ({
+      id: a.id,
+      presenceRequired: true,
+      title: a.title,
+      subtitle: a.summary,
+      stops: a.steps.map((s) => ({
+        poiId: s.poiId,
+        storyId: "",
+        approach: s.approach,
+        access: s.access,
+        sourceUrl: s.sources[0],
+        checkedAt: s.checkedAt,
+        history: {
+          title: s.title,
+          text: s.text,
+          sources: s.sources,
+          checkedAt: s.checkedAt,
+          status: "documented" as const,
+        },
+      })),
+    })),
   ...monuments.map((m) => ({
     id: `poi:${m.id}`,
     title: "M’y rendre",

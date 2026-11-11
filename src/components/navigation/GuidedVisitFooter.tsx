@@ -20,6 +20,35 @@ export function GuidedVisitFooter({
     <View
       style={{ borderTopWidth: 1, borderColor: "#B89B5E", padding: 12, gap: 8 }}
     >
+      {guide.stop.history && (
+        <ScrollView
+          style={{ maxHeight: 200 }}
+          contentContainerStyle={{ gap: 8 }}
+        >
+          <Text style={s.heading}>{guide.stop.history.title}</Text>
+          <Text style={s.body}>{guide.stop.history.text}</Text>
+          <Text style={s.caption}>{guide.stop.access}</Text>
+          <Text style={s.caption}>
+            Notice documentée · sources contrôlées le{" "}
+            {guide.stop.history.checkedAt}. Audio en préparation ; aucune
+            approbation audio déduite.
+          </Text>
+          {guide.stop.history.sources.map((url) => (
+            <Text
+              key={url}
+              accessibilityRole="link"
+              style={{ color: "#64CFD0", paddingVertical: 6 }}
+              onPress={() =>
+                void Linking.openURL(url).catch(() =>
+                  Alert.alert("Source indisponible"),
+                )
+              }
+            >
+              Source ↗ {url}
+            </Text>
+          ))}
+        </ScrollView>
+      )}
       <Text style={s.caption}>
         {live.preview ? "MODE TEST · progression non sauvegardée · " : ""}
         {tour.title} · étape {(session?.index ?? 0) + 1}/{tour.stops.length} ·{" "}
@@ -92,13 +121,25 @@ export function GuidedVisitFooter({
         />
       )}
       {live.audioError && <Text style={s.caption}>{live.audioError}</Text>}
+      {tour.presenceRequired && !live.preview && !guide.navigation.arrived && (
+        <Text style={s.caption}>
+          Approchez le repère avec un GPS précis pour valider cette étape. Vous
+          pouvez aussi l’ignorer depuis les options du guidage.
+        </Text>
+      )}
       <Button
         title={
           (session?.index ?? 0) === tour.stops.length - 1
             ? "Terminer le parcours"
             : "Étape suivante"
         }
-        disabled={!!session?.paused || !!live.storageError}
+        disabled={
+          !!session?.paused ||
+          !!live.storageError ||
+          (!!tour.presenceRequired &&
+            !live.preview &&
+            !guide.navigation.arrived)
+        }
         onPress={onNext}
       />
     </View>

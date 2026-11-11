@@ -1,3 +1,5 @@
+import { AdventureCard } from "../../components/live/AdventureCard";
+import { lyonAdventures } from "../../data/adventures";
 import React from "react";
 import { Text } from "react-native";
 import { Page, s } from "../../components/ui";
@@ -10,11 +12,12 @@ export default function Parcours() {
         Choisissez un parcours. Toute l’exploration et le guidage se déroulent
         ensuite dans Explorer.
       </Text>
-      {[...guidedTours]
-        .sort(
-          (a, b) =>
-            Number(b.id === "trail-lyon") - Number(a.id === "trail-lyon"),
-        )
+      {lyonAdventures.map((adventure, index) => (
+        <AdventureCard key={adventure.id} adventure={adventure} index={index} />
+      ))}
+      <Text style={s.heading}>Vienne · parcours conservés</Text>
+      {guidedTours
+        .filter((t) => t.id !== "trail-lyon")
         .map((tour) => (
           <TourCard key={tour.id} tour={tour} />
         ))}
