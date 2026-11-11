@@ -111,7 +111,7 @@ test("map preview has no GPS fix, discovery or XP writer and is labelled explici
   );
   assert.match(map, /simulated=\{location.enabled\}/);
   assert.match(map, /<CatiaMapPreview/);
-  assert.match(map, /<IllustratedPoiMarker/);
+  assert.match(map, /<MonumentMiniatureMarker/);
   assert.match(map, /onSelect=\{selectMapMonument\}/);
   const renderer = readFileSync(
     new URL("src/components/exploration/PlayerMarker.tsx", root),

@@ -26,6 +26,8 @@ import {
 } from "../../lib/exploration";
 import { cities, type City } from "../../data/monuments";
 type Props = {
+  miniaturesEnabled: boolean;
+  setMiniaturesEnabled: (enabled: boolean) => void;
   onDeveloper?: () => void;
   mapPlayer: MapPlayerChoice;
   mapPlayerReady: boolean;
@@ -61,6 +63,8 @@ type Props = {
   storageError: string | null;
 };
 export function MapOptions({
+  miniaturesEnabled,
+  setMiniaturesEnabled,
   onDeveloper,
   mapPlayer,
   mapPlayerReady,
@@ -137,6 +141,24 @@ export function MapOptions({
             </Pressable>
           </View>
           <ScrollView contentContainerStyle={{ gap: 18, paddingBottom: 10 }}>
+            {panel === "settings" && (
+              <View
+                style={{ flexDirection: "row", alignItems: "center", gap: 12 }}
+              >
+                <View style={{ flex: 1 }}>
+                  <Text style={s.body}>Monuments miniatures 2.5D</Text>
+                  <Text style={s.caption}>
+                    Pilote : temple d’Auguste et de Livie, en vue rapprochée.
+                    Rendus Blender, sans mesh 3D dans la carte.
+                  </Text>
+                </View>
+                <Switch
+                  accessibilityLabel="Afficher les miniatures de monuments 2.5D"
+                  value={miniaturesEnabled}
+                  onValueChange={setMiniaturesEnabled}
+                />
+              </View>
+            )}
             {__DEV__ && onDeveloper && (
               <Button
                 title="Développeur · GPS simulé"

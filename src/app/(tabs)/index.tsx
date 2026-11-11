@@ -1,3 +1,6 @@
+import { miniaturePoiIds } from "../../lib/miniatures/assets";
+import { MonumentMiniatureMarker } from "../../components/exploration/MonumentMiniatureMarker";
+import { miniaturePlan } from "../../lib/miniatures/policy";
 import { ExplorerAudioPlayer } from "../../components/live/ExplorerAudioPlayer";
 import { useExplorationLocation } from "../../hooks/useExplorationLocation";
 import { DeveloperControls } from "../../components/developer/DeveloperControls";
@@ -82,7 +85,6 @@ import {
   useReducedMotion,
 } from "../../hooks/useExplorerSensors";
 import { PlayerMarker } from "../../components/exploration/PlayerMarker";
-import { IllustratedPoiMarker } from "../../components/exploration/IllustratedPoiMarker";
 import {
   ExplorerProfile,
   MapButton,
@@ -107,6 +109,7 @@ const mapStyle = [
     stylers: [{ color: theme.map.road }],
   },
 ];
+const noMiniature = { enabled: false, size: 64 };
 const initialCamera = {
   ...explorationCamera(cities.Vienne, true),
   altitude: 1400,
@@ -168,6 +171,7 @@ export default function Explorer() {
   const [mapReady, setMapReady] = useState(false);
   const [mapHeading, setMapHeading] = useState(0);
   const [immersive, setImmersive] = useState(true);
+  const [miniaturesEnabled, setMiniaturesEnabled] = useState(true);
   const [panel, setPanel] = useState<"settings" | "filters" | "legend" | null>(
     null,
   );
@@ -229,6 +233,23 @@ export default function Explorer() {
     [periods, journal, poiFilters, routeIds],
   );
   const visibleMonuments = poiPartition.visible;
+  const miniaturePlans = useMemo(
+    () =>
+      Object.fromEntries(
+        miniaturePoiIds.map((id) => [
+          id,
+          miniaturePlan(
+            id,
+            visibleMonuments,
+            region,
+            height,
+            miniaturesEnabled,
+            miniaturePoiIds,
+          ),
+        ]),
+      ),
+    [visibleMonuments, region, height, miniaturesEnabled],
+  );
   const groups = useMemo(
     () =>
       viewportGroups(poiPartition.ordinary, region, width, height, poiGrouping),
@@ -408,6 +429,14 @@ export default function Explorer() {
     (monument: Monument) => {
       stopFollowing();
       setSelection(monument);
+    },
+    [stopFollowing],
+  );
+  const openMiniature = useCallback(
+    (monument: Monument) => {
+      stopFollowing();
+      setSelection(monument);
+      setSheetOpen(true);
     },
     [stopFollowing],
   );
@@ -614,7 +643,7 @@ export default function Explorer() {
           </>
         )}
         {routePins.map((group) => (
-          <IllustratedPoiMarker
+          <MonumentMiniatureMarker
             key={`route-${group.key}`}
             monument={group.members[0]}
             state={monumentState(
@@ -629,11 +658,14 @@ export default function Explorer() {
             }
             onSelect={selectMapMonument}
             reducedMotion={reducedMotion}
+            mapHeading={mapHeading}
+            plan={miniaturePlans[group.members[0].id] ?? noMiniature}
+            onOpenMiniature={openMiniature}
           />
         ))}
         {groups.map((group) =>
           group.members.length === 1 ? (
-            <IllustratedPoiMarker
+            <MonumentMiniatureMarker
               key={group.members[0].id}
               monument={group.members[0]}
               state={monumentState(
@@ -645,6 +677,9 @@ export default function Explorer() {
               selected={selected?.id === group.members[0].id}
               onSelect={selectMapMonument}
               reducedMotion={reducedMotion}
+              mapHeading={mapHeading}
+              plan={miniaturePlans[group.members[0].id] ?? noMiniature}
+              onOpenMiniature={openMiniature}
             />
           ) : (
             <PoiClusterMarker
@@ -1025,6 +1060,8 @@ export default function Explorer() {
       )}
       <ExplorerAudioPlayer />
       <MapOptions
+        miniaturesEnabled={miniaturesEnabled}
+        setMiniaturesEnabled={setMiniaturesEnabled}
         onDeveloper={() => {
           setPanel(null);
           setDeveloperOpen(true);

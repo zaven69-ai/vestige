@@ -130,7 +130,7 @@ test("cluster renderer has no decorative pseudo-digits and Explorer preserves na
     new URL("../src/app/(tabs)/index.tsx", import.meta.url),
     "utf8",
   );
-  assert.match(explorer, /<IllustratedPoiMarker/);
+  assert.match(explorer, /<MonumentMiniatureMarker/);
   assert.match(explorer, /clusterTarget\(group.members\)/);
 });
 

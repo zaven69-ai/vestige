@@ -1,3 +1,4 @@
+import { miniatureFor } from "../../lib/miniatures/assets";
 import { liveStories, liveAssets } from "../../data/live/vienneAntique";
 import { playableAsset } from "../../lib/live/eligibility";
 import { useExplorationLocation } from "../../hooks/useExplorationLocation";
@@ -16,6 +17,7 @@ import {
   Text,
   View,
   Pressable,
+  Image,
 } from "react-native";
 import type { Monument } from "../../data/monuments";
 import { useGame } from "../../lib/store";
@@ -60,6 +62,7 @@ export function MonumentDetails({
     const timer = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(timer);
   }, []);
+  const miniature = miniatureFor(monument.id);
   const review = poiStatus(monument);
   const verified =
     review === "editorial_verified" || review === "community_verified";
@@ -224,6 +227,26 @@ export function MonumentDetails({
           )}
           {tab === "about" && (
             <>
+              {miniature && (
+                <Card>
+                  <Text style={s.heading}>Le temple en miniature</Text>
+                  <Image
+                    source={miniature.preview}
+                    style={{ width: "100%", height: 220 }}
+                    resizeMode="contain"
+                    accessibilityLabel="Illustration 2.5D du temple actuel restauré"
+                  />
+                  <Text style={s.caption}>{miniature.description}</Text>
+                  {miniature.sources.map((source) => (
+                    <Button
+                      key={source.url}
+                      secondary
+                      title={source.title}
+                      onPress={() => open(source.url)}
+                    />
+                  ))}
+                </Card>
+              )}
               <Card>
                 <Text style={s.heading}>
                   {found

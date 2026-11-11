@@ -848,6 +848,126 @@
     "sha256": "2ead981682d596eb5056e6b89b429ce7f96213e04175ba8bb9387c17c0a746d4"
   },
   {
+    "path": "assets/monuments/miniatures/auguste/LICENSE.txt",
+    "sha256": "da56f592196d9622d1a7cba587d37a11fcebfb9e61ec2615a0d041e9b7fb7b90"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/README.md",
+    "sha256": "bcd909a085a68957e790a38a32d8c32b94abbec9eab0da6cd9d179ad133a8620"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/build-info.json",
+    "sha256": "73654468d564867253cef45e34c6ee01b08282192baa37410320c29b6d4fba1a"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/preview.png",
+    "sha256": "5661df2afab6428423376898d920962839a6f5d0b59265bda613887a88de3eae"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/temple-miniature-source.blend",
+    "sha256": "a6be550ddcb710271b3746387ed8fee74c17327ac9989d6dff973de3aa8cad7b"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/temple-miniature-source.glb",
+    "sha256": "b14daf4b88bc803a6c32a4e53b1cd549c1433dd7203cef05e1985f4e66b28d2b"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-0.png",
+    "sha256": "de1e3a4f9855762ec8257a688012d719dfe9aac5bffd5271149aa89aa9a25697"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-0@2x.png",
+    "sha256": "09df18735159a39da7d763f54dee0c442e7d8f4e5c6aab9cb14d7165eb78b96c"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-0@3x.png",
+    "sha256": "ec5740b9c6c157818a4785925e08ccaf1caaece66d269d93623187e2a19a435d"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-1.png",
+    "sha256": "31c9b53d3478d5e50018180b7fa13a44b39a551b005058da8a0fbf1a60dbfe84"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-1@2x.png",
+    "sha256": "09924db400c006a19d79a59d3073244327f2e21dc03d48f4e45ae938156eb4d9"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-1@3x.png",
+    "sha256": "386c597b57d01ce213117f008c3f748051219c6f0cb151b52092c256a23ab160"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-2.png",
+    "sha256": "6267e1084e6dd734291ecaf71459040f77dfeefdc703c2d4e67f6865aa889016"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-2@2x.png",
+    "sha256": "bd3a1670e1c4544a68c9baa7a7704933b06573df0526a320a8f21520cb9f978c"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-2@3x.png",
+    "sha256": "8f736850e45ff5deef36087478fc9599d935d3ae07e2bd387987ab89114cb81a"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-3.png",
+    "sha256": "c7f2791d0f63c14e94a0e5cb9d9578a8385e008ce993022fc0ac31591be50be2"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-3@2x.png",
+    "sha256": "1840dab38726bf2e3e08158d8f9882e6800ff6f37ae82a859f9604f834245a34"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-3@3x.png",
+    "sha256": "923c4fe95ec1bfd57bb9a19f7d25e79f05f27ad7991ff9fa640073235107e90f"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-4.png",
+    "sha256": "9dc50c2688c7267a31ad0931ae99893c3455f56df5e0d3861d866cc566ad4b64"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-4@2x.png",
+    "sha256": "50d15bd0008379e7369589d1cef3b717351336b649ba24373b9cd5b4f10e87ea"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-4@3x.png",
+    "sha256": "492ef2083b2a9abb2aa9b232eb7accec3ee59444f6e215a12b7c8e322b355349"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-5.png",
+    "sha256": "d56526259007c08691d5aeac5ed77d7a41caaff3db738c9086dbf79e8b6a5ed2"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-5@2x.png",
+    "sha256": "cf5ffd5d2a2092283827e53626831597c62f1e5a8edcafa61c5db66ac0ba85f6"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-5@3x.png",
+    "sha256": "03c3abc127a75eb8b674ab0da51f0c2bb5d945a62a3581d9db713386c9b12cd6"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-6.png",
+    "sha256": "e71d4d8c1d866769f94d7dff62709fa933b80e8380e428afa5a7e8beb9ebbb93"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-6@2x.png",
+    "sha256": "4636e13eb00b3997e573540a0a44c21b455e165dcc641fb41c6f9167cf92059a"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-6@3x.png",
+    "sha256": "3beb115341342bdf98106dddc2da3576aa6b16edadfd068b0bb345d21fb275df"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-7.png",
+    "sha256": "7749b9d0f7a019d0ba516e9b025680ed10616c5811a3bd54e2363ff707d91269"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-7@2x.png",
+    "sha256": "65621c35e9b32989a5e122735fd7ea499620cd0f93d22dfe8e682583494acf0d"
+  },
+  {
+    "path": "assets/monuments/miniatures/auguste/view-7@3x.png",
+    "sha256": "7556b33dc3b521b6f4516692e8a73b706fa6b31f96b68c00217ca2ee714b74b0"
+  },
+  {
     "path": "assets/poi/castle-community_pending.png",
     "sha256": "5ac488f55c6065a2f241ef5fad8e799c1ce3b919c660bd0b6ded9441565c6a59"
   },
@@ -4236,6 +4356,10 @@
     "sha256": "19b5ac46f6099bc695915d94424e0cff259aa1a7a92fcb00470d9ea0dd53a8dc"
   },
   {
+    "path": "docs/design/TEMPLE-MINIATURE-V1.md",
+    "sha256": "12313fe340ce733662f613dd04e613ad4fc1025c8f3d7e221f8c0bb368fa63fe"
+  },
+  {
     "path": "docs/design/VESTIGE-LIVE-NARRATION-V1.md",
     "sha256": "72b6e94fd327747dbd8e4195983fb8dc50679360363db49b1a5c75d11afb586d"
   },
@@ -4344,6 +4468,14 @@
     "sha256": "b7acda53c16196228207e68246bd067b291a49d94e61c9f9d8cf1f4b0b8e1556"
   },
   {
+    "path": "scripts/monuments/build-auguste.py",
+    "sha256": "93b276e0ddcb88e18d42e7dbf00849decec58d7405af102f732a3090296dbcb7"
+  },
+  {
+    "path": "scripts/monuments/check-miniature-browser.cjs",
+    "sha256": "912455aea8dde403dfdd073c425ca0ff1556e6e2ea0c5ac1d1358626931f6980"
+  },
+  {
     "path": "scripts/navigation/probe-valhalla.mjs",
     "sha256": "26f1807566fa2d12cc2ae10051f8d3be5b767bca3f85caa4953d946b19d2fe22"
   },
@@ -4389,11 +4521,11 @@
   },
   {
     "path": "scripts/windows/update-social-v2.ps1",
-    "sha256": "395815d225325c2739e12f901c445e3d9f74eb6b5a48ab3296246d530ed0349c"
+    "sha256": "9b651b9b9659b657db37b1750fb44cdc908645890e314f3e16c08147f1c7c877"
   },
   {
     "path": "src/app/(tabs)/index.tsx",
-    "sha256": "dfcf4f37e49da0756d5ca3fdd2f4f9a15c40121d23604991c85808a9c3a0b449"
+    "sha256": "b57d3962e44d9fa873f6746662503337c7e28031b79b01418ba4c8f627233970"
   },
   {
     "path": "src/app/(tabs)/parcours.tsx",
@@ -4461,7 +4593,11 @@
   },
   {
     "path": "src/components/exploration/MapOptions.tsx",
-    "sha256": "14973c7ca465b99c7f97c3b6d03b4c5e9dc867b288d6c084b0e1ffa4122108bd"
+    "sha256": "bab98f73dc6cb15a2a0e3275a4fabb0036ba1fd5fe02d672cdf3d02b63a707b2"
+  },
+  {
+    "path": "src/components/exploration/MonumentMiniatureMarker.tsx",
+    "sha256": "6f39cbc677b656d924563c3f2d3e21f7e9774a95d3831acce84d39430ba88091"
   },
   {
     "path": "src/components/exploration/PlayerMarker.tsx",
@@ -4501,7 +4637,7 @@
   },
   {
     "path": "src/components/monuments/MonumentDetails.tsx",
-    "sha256": "1d40cbdd393708d74e84d6a1838df2be86b1c5006753713d2ac2ab3567aeee7c"
+    "sha256": "4e3de1b8e60cf8de7f208b05253ac2202d9774e3736d67cc67de1eabf8e25ca4"
   },
   {
     "path": "src/components/navigation/ExplorerGuideHUD.tsx",
@@ -4672,6 +4808,14 @@
     "sha256": "f3db8573489d0aa9c6244dcdf04d4c038ea757e3d77ff7101017e693b4dab160"
   },
   {
+    "path": "src/lib/miniatures/assets.ts",
+    "sha256": "9e017e1742fa6f0902926dcabe47d06d147066d967b97c899f7e5f0e9909f539"
+  },
+  {
+    "path": "src/lib/miniatures/policy.ts",
+    "sha256": "f430cd4d56d39e04c34acf51f177dd545f81ab73323f8981d4680c387ea97d6c"
+  },
+  {
     "path": "src/lib/navigation/explorer.ts",
     "sha256": "bc82b07becd2c39b89f4959f64306b2924a1788093aed598558d5f05874f2ed3"
   },
@@ -4705,7 +4849,7 @@
   },
   {
     "path": "tests/catia-map.test.ts",
-    "sha256": "0297c573053da7e92b76b36459c41bbe2da10dec75247f59902ab438a8ac8cb5"
+    "sha256": "2e60bfad88d562816de18a8708af34a5d90aac094e855369e61ca8018b18e4d3"
   },
   {
     "path": "tests/catia.test.ts",
@@ -4748,8 +4892,12 @@
     "sha256": "f0bf248a61cc30462643674ccccbc89aeb4db6a9e3a1d6b63ed0ea8861fcac1f"
   },
   {
+    "path": "tests/monument-miniature.test.ts",
+    "sha256": "f3b6d1aa4304a740e2fc3c43fc841617cfc56aea09c48b493ca34afb481085a3"
+  },
+  {
     "path": "tests/native-poi-map.test.ts",
-    "sha256": "b80ac436621c22f6d4ff87d61637e1747591a6898c7e88f22a99ca8eef5f45f7"
+    "sha256": "1d9a6ab57d30563564c6938905bee7f740c4fa63c09fe759b69b7b1877d459bf"
   },
   {
     "path": "tests/navigation.test.ts",
@@ -4757,7 +4905,7 @@
   },
   {
     "path": "tests/poi-clustering.test.ts",
-    "sha256": "78a25a7e9c6b1e3e8b45eb865d692894cc961ac15b1667d40b0a22c7b7a06526"
+    "sha256": "fc6054d20100cfb2c2713b7f4cf951fb3148135559de98a5222c9356a5fabe13"
   },
   {
     "path": "tests/poi.test.ts",

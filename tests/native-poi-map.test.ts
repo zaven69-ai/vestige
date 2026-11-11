@@ -156,7 +156,14 @@ test("Explorer mounts the native illustrated component, not only a preview or th
     ts.forEachChild(node, visit);
   }
   visit(source);
-  assert.ok(rendered.includes("IllustratedPoiMarker"));
+  assert.ok(rendered.includes("MonumentMiniatureMarker"));
+  assert.match(
+    readFileSync(
+      new URL("src/components/exploration/MonumentMiniatureMarker.tsx", root),
+      "utf8",
+    ),
+    /<IllustratedPoiMarker/,
+  );
   assert.ok(rendered.includes("PoiClusterMarker"));
   assert.ok(!rendered.includes("HistoricalMarker"));
 });

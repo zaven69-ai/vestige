@@ -1,0 +1,22 @@
+{
+  "renderer": "Blender Cycles CPU",
+  "views": 8,
+  "densities": [
+    128,
+    256,
+    384
+  ],
+  "sourceTriangles": 54964,
+  "geometry": "original procedural approximation of the present restored monument",
+  "heightMeters": 17.0,
+  "license": "MIT",
+  "referenceDimensionsMeters": [
+    27,
+    14.25,
+    17.36
+  ],
+  "modelPodiumMeters": [
+    27,
+    14.25
+  ]
+}
