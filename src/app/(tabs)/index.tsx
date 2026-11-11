@@ -1,3 +1,4 @@
+import { ExplorerAudioPlayer } from "../../components/live/ExplorerAudioPlayer";
 import { useExplorationLocation } from "../../hooks/useExplorationLocation";
 import { DeveloperControls } from "../../components/developer/DeveloperControls";
 import { SimulationNotice } from "../../components/developer/SimulationBanner";
@@ -215,7 +216,7 @@ export default function Explorer() {
   const initialFollow = useRef(false);
   const cameraFix = useRef<typeof fix>(null);
   const touchOrigin = useRef<{ x: number; y: number } | null>(null);
-  const bottom = insets.bottom + 86;
+  const bottom = insets.bottom + 86 + (guidance.live.playback ? 130 : 0);
   const poiPartition = useMemo(
     () =>
       partitionGuidedPois(
@@ -950,6 +951,10 @@ export default function Explorer() {
             <GuidedVisitFooter
               key={guidance.stageKey}
               guide={guidance}
+              onListen={() => {
+                closeSheet();
+                setSelection(null);
+              }}
               onNext={() => {
                 closeSheet();
                 setSelection(null);
@@ -1018,6 +1023,7 @@ export default function Explorer() {
           />
         </>
       )}
+      <ExplorerAudioPlayer />
       <MapOptions
         onDeveloper={() => {
           setPanel(null);

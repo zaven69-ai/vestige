@@ -1,3 +1,5 @@
+import { liveStories, liveAssets } from "../../data/live/vienneAntique";
+import { playableAsset } from "../../lib/live/eligibility";
 import { useExplorationLocation } from "../../hooks/useExplorationLocation";
 import { useLive } from "../../lib/live/LiveProvider";
 import { MonumentActions } from "../contributions/MonumentActions";
@@ -37,6 +39,10 @@ export function MonumentDetails({
   const location = useExplorationLocation();
   const { fix } = location;
   const live = useLive();
+  const audioStory = liveStories.find((s) => s.poiId === monument.id);
+  const availableAudio = audioStory
+    ? playableAsset(audioStory, liveAssets)
+    : null;
   const [tab, setTab] = useState<"about" | "contributions" | "sources">(
     "about",
   );
@@ -131,6 +137,22 @@ export function MonumentDetails({
               router.navigate({
                 pathname: "/(tabs)",
                 params: { guide: "start", command: String(Date.now()) },
+              });
+            }}
+          />
+          <Button
+            title={
+              availableAudio ? "Écouter son histoire" : "Audio en préparation"
+            }
+            disabled={!availableAudio}
+            onPress={() => {
+              onNavigate?.();
+              router.navigate({
+                pathname: "/(tabs)",
+                params: {
+                  audioPoi: monument.id,
+                  audioCommand: String(Date.now()),
+                },
               });
             }}
           />

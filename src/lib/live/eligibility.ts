@@ -28,8 +28,8 @@ export function playableAsset(
     /^[a-f0-9]{64}$/.test(asset.sha256) &&
     !!asset.rightsHolder.trim() &&
     !!asset.license.trim() &&
-    Number.isInteger(asset.module) &&
-    asset.module > 0
+    ((Number.isInteger(asset.module) && (asset.module ?? 0) > 0) ||
+      (typeof asset.uri === "string" && /^https:\/\/[^\s]+$/.test(asset.uri)))
     ? asset
     : null;
 }

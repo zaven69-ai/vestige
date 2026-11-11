@@ -41,7 +41,8 @@ export type LiveAsset = {
   sha256: string;
   rightsHolder: string;
   license: string;
-  module: number;
+  module?: number;
+  uri?: string;
 };
 export type LiveStop = {
   poiId: string;

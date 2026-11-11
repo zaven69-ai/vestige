@@ -1,3 +1,11 @@
+import { georgeDemo } from "../../data/live/georgeDemo";
+import { georgePrivateSource } from "../../data/live/georgePrivateAsset";
+import {
+  admitPrivateDemo,
+  audioProgress,
+  finishedAudio,
+  type AudioPlayback,
+} from "./audioPlayback";
 import {
   useSimulationController,
   useSimulationMode,
@@ -14,6 +22,7 @@ import { playbackAdmission, currentPlayback } from "./playback";
 import React, {
   createContext,
   useCallback,
+  useMemo,
   useContext,
   useEffect,
   useRef,
@@ -38,12 +47,8 @@ import {
   LIVE_SESSION_KEY,
 } from "./session";
 import type { VisitSession, LiveMode, LiveStory } from "./types";
-type Playback = {
-  storyId: string;
-  token: number;
-  intent: "play" | "pause";
-  status: "loading" | "playing" | "paused";
-};
+const georgeSource = georgePrivateSource ?? { uri: georgeDemo.uri };
+type Playback = AudioPlayback;
 function useLiveState(
   preview: boolean,
   simulationEnabled: boolean,
@@ -292,13 +297,13 @@ function useLiveState(
     (story: LiveStory, automatic = false) => {
       if (!scopeAllowed()) return false;
       const admission = playbackAdmission({
-        active: !!session && session.endedAt === null,
-        paused: session?.paused ?? true,
+        active: !automatic || (!!session && session.endedAt === null),
+        paused: automatic ? (session?.paused ?? true) : false,
         foreground,
         visible,
         mode,
         automatic,
-        busy: !!playbackRef.current,
+        busy: automatic && !!playbackRef.current && !playbackRef.current.ended,
         story,
         assets: liveAssets,
       });
@@ -323,6 +328,10 @@ function useLiveState(
       setAudioError(null);
       updatePlayback({
         storyId: story.id,
+        kind: "approved",
+        position: 0,
+        duration: 0,
+        ended: false,
         token: ++serial.current,
         intent: "play",
         status: "loading",
@@ -331,24 +340,74 @@ function useLiveState(
     },
     [session, foreground, visible, mode, updatePlayback, scopeAllowed],
   );
+  const playDemo = useCallback(() => {
+    if (
+      !scopeAllowed() ||
+      !ready ||
+      !admitPrivateDemo(__DEV__, true, foreground, visible)
+    )
+      return false;
+    setAudioError(null);
+    updatePlayback({
+      storyId: georgeDemo.id,
+      kind: "private-demo",
+      token: ++serial.current,
+      intent: "play",
+      status: "loading",
+      position: 0,
+      duration: georgeDemo.duration,
+      ended: false,
+    });
+    return true;
+  }, [scopeAllowed, ready, foreground, visible, updatePlayback]);
   const replay = useCallback(() => {
-    const stop = tour.stops[session?.index ?? 0];
-    const story = liveStories.find((s) => s.id === stop?.storyId);
-    if (!story) return;
-    stopAudio();
-    requestPlay(story);
-  }, [session, tour, stopAudio, requestPlay]);
-  const play = useCallback(() => {
-    if (!scopeAllowed()) return;
+    if (!scopeAllowed() || !foreground || !visible) return;
     const current = playbackRef.current;
     if (current) {
+      if (current.kind === "private-demo" && !__DEV__) return;
+      setAudioError(null);
+      updatePlayback({
+        ...current,
+        token: ++serial.current,
+        intent: "play",
+        status: "loading",
+        position: 0,
+        ended: false,
+      });
+    }
+  }, [scopeAllowed, foreground, visible, updatePlayback]);
+  const play = useCallback(() => {
+    if (!scopeAllowed() || !foreground || !visible) return;
+    const current = playbackRef.current;
+    if (current) {
+      if (current.ended || audioError) {
+        replay();
+        return;
+      }
       updatePlayback({ ...current, intent: "play" });
       return;
     }
     const stop = tour.stops[session?.index ?? 0];
     const story = liveStories.find((s) => s.id === stop?.storyId);
     if (story) requestPlay(story);
-  }, [session, tour, requestPlay, updatePlayback, scopeAllowed]);
+  }, [
+    session,
+    tour,
+    requestPlay,
+    updatePlayback,
+    scopeAllowed,
+    foreground,
+    visible,
+    replay,
+    audioError,
+  ]);
+  const playPoi = useCallback(
+    (poiId: string) => {
+      const story = liveStories.find((s) => s.poiId === poiId);
+      return story ? requestPlay(story) : false;
+    },
+    [requestPlay],
+  );
   useEffect(() => {
     if (!scopeAllowed()) return;
     const tick = () => {
@@ -374,7 +433,7 @@ function useLiveState(
         foreground: foreground && visible,
         automatic: mode === "automatic",
         eligible: !!playableAsset(story, liveAssets),
-        busy: !!playbackRef.current,
+        busy: !!playbackRef.current && !playbackRef.current.ended,
         alreadyTriggered: session?.autoTriggered.includes(key) ?? false,
       });
       fence.current = next.state;
@@ -399,23 +458,36 @@ function useLiveState(
   ]);
   const onEnd = useCallback(
     (token: number) => {
-      if (currentPlayback(playbackRef.current, token)) advance("listened");
+      const current = playbackRef.current;
+      if (scopeAllowed() && currentPlayback(current, token) && current)
+        updatePlayback(finishedAudio(current));
     },
-    [advance],
+    [scopeAllowed, updatePlayback],
   );
   const onError = useCallback(
     (token: number, message: string) => {
       if (!currentPlayback(playbackRef.current, token)) return;
-      stopAudio();
+      const current = playbackRef.current;
+      if (current)
+        updatePlayback({ ...current, intent: "pause", status: "paused" });
       setAudioError(message);
     },
-    [stopAudio],
+    [updatePlayback],
   );
   const onStatus = useCallback(
     (token: number, status: Playback["status"]) => {
       if (!currentPlayback(playbackRef.current, token)) return;
       const p = playbackRef.current;
       if (p && p.status !== status) updatePlayback({ ...p, status });
+    },
+    [updatePlayback],
+  );
+  const onProgress = useCallback(
+    (token: number, position: number, duration: number) => {
+      const current = playbackRef.current;
+      if (!currentPlayback(current, token) || !current) return;
+      const next = audioProgress(current, position, duration);
+      if (next !== current) updatePlayback(next);
     },
     [updatePlayback],
   );
@@ -446,11 +518,15 @@ function useLiveState(
     leave,
     togglePause,
     play,
+    playDemo,
+    playPoi,
+    closeAudio: stopAudio,
     pauseAudio,
     replay,
     onEnd,
     onError,
     onStatus,
+    onProgress,
     onInterrupted,
     setVolume: (volume: number) => {
       if (scopeAllowed())
@@ -459,15 +535,14 @@ function useLiveState(
     effectivePlaying:
       scopeAllowed() &&
       ready &&
-      !!session &&
-      !session.paused &&
-      session.endedAt === null &&
       foreground &&
       visible &&
       playback?.intent === "play",
   };
 }
-type LiveState = ReturnType<typeof useLiveState>;
+type LiveState = ReturnType<typeof useLiveState> & {
+  audioStory?: LiveStory | typeof georgeDemo;
+};
 const Context = createContext<LiveState | null>(null);
 export function LiveProvider({ children }: { children: React.ReactNode }) {
   const simulation = useSimulationMode();
@@ -480,14 +555,25 @@ export function LiveProvider({ children }: { children: React.ReactNode }) {
   );
   const value = simulation.enabled ? demo : real;
   const story = liveStories.find((s) => s.id === value.playback?.storyId);
+  const demoPlayback = __DEV__ && value.playback?.kind === "private-demo";
   const asset = story ? playableAsset(story, liveAssets) : null;
+  const source = useMemo(
+    () =>
+      demoPlayback
+        ? georgeSource
+        : asset
+          ? (asset.module ?? { uri: asset.uri })
+          : null,
+    [demoPlayback, asset],
+  );
+  const audioStory = demoPlayback ? georgeDemo : story;
   return (
-    <Context.Provider value={value}>
+    <Context.Provider value={{ ...value, audioStory }}>
       {children}
-      {value.playback && asset && (
+      {value.playback && source && (
         <NativeNarration
           key={`${value.preview ? "preview" : "real"}:${simulation.epoch}:${value.playback.token}`}
-          asset={asset}
+          source={source}
           token={value.playback.token}
           playing={value.effectivePlaying}
           volume={value.prefs.volume}
@@ -495,6 +581,7 @@ export function LiveProvider({ children }: { children: React.ReactNode }) {
           onError={value.onError}
           onInterrupted={value.onInterrupted}
           onStatus={value.onStatus}
+          onProgress={value.onProgress}
         />
       )}
     </Context.Provider>

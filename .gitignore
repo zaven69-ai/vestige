@@ -46,3 +46,9 @@ __pycache__/
 
 # Also ignore a local node_modules symlink used by Cloud worktrees
 /node_modules
+
+# George private prototype: import locally, never redistribute without rights confirmation
+/assets/audio/private/
+
+/src/data/live/georgePrivateAsset.native.ts
+/src/data/live/georgePrivateTranscript.native.ts

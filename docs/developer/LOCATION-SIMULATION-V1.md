@@ -1,5 +1,7 @@
 # Issue #7 — localisation simulée dans Explorer
 
+Évolution audio : [George dans Explorer, issue #8](../live/GEORGE-EXPLORER-V1.md) ajoute une démonstration privée manuelle distincte des narrations approuvées.
+
 ## Livré
 
 En développement (`__DEV__`, notamment Expo Go), Explorer propose le bouton Développeur et une entrée dans les options de carte. L'activation demande confirmation, place Catia au repère existant du centre de Vienne et affiche **MODE TEST — GPS SIMULÉ · aucun XP**. Le bandeau reste présent dans les autres onglets ; les fiches, options et outils modaux rappellent aussi le mode test.

@@ -4,6 +4,10 @@
     "sha256": "b28c860fb91c56df2f16dc384431ecfc46e6814face8f318144ad8fba5a77b29"
   },
   {
+    "path": ".gitignore",
+    "sha256": "688efa90fbd061acddfd2c3578e7c335eb9ca17efa0ea02e6773e70b9b0e647b"
+  },
+  {
     "path": "app.json",
     "sha256": "432fbe0ed2b6d7e70ac8e766d0da4e58f431404c2e73b1f302218fa1363a5b1c"
   },
@@ -4285,7 +4289,11 @@
   },
   {
     "path": "docs/developer/LOCATION-SIMULATION-V1.md",
-    "sha256": "eb5e3e655f4f86d34264f24ec57cde8763dfca1a7bd5eceefd532593ca58d8a0"
+    "sha256": "d53563513af6624889b60ff083b2b198701ac4e2f4022b46d7cd84abf253d817"
+  },
+  {
+    "path": "docs/live/GEORGE-EXPLORER-V1.md",
+    "sha256": "fba734a57b7025bc62b44a2f39e69d1f502833b406b679f757344c3bb838c3d8"
   },
   {
     "path": "docs/live/VIENNE-ANTIQUE-MVP-DELIVERY.md",
@@ -4325,7 +4333,11 @@
   },
   {
     "path": "scripts/developer/check-simulation-browser.cjs",
-    "sha256": "5ca3e5e54ec1fd2111d55b684f69c3c27d0b5ca1ecbd371d39c5e790e78888d5"
+    "sha256": "581df20d5e9b9b3cc148f2d48092d8ad87e08a14a74cff263fe9c56587ba59a5"
+  },
+  {
+    "path": "scripts/live/import-george-private.cjs",
+    "sha256": "2a4c639aa875c9f2d0431656b9d09a41267313b46aa2d7a64efe98b09eaf04f9"
   },
   {
     "path": "scripts/live/register-audio.cjs",
@@ -4377,11 +4389,11 @@
   },
   {
     "path": "scripts/windows/update-social-v2.ps1",
-    "sha256": "0dd0f3e791e21cae4fc23f0db07d52b2b0448726dd9f3cefc8f46882a1b77ac6"
+    "sha256": "395815d225325c2739e12f901c445e3d9f74eb6b5a48ab3296246d530ed0349c"
   },
   {
     "path": "src/app/(tabs)/index.tsx",
-    "sha256": "25f57a7b664dc2160314d30020d4b269fb65f0520a8d407a54aec797cbfff36e"
+    "sha256": "dfcf4f37e49da0756d5ca3fdd2f4f9a15c40121d23604991c85808a9c3a0b449"
   },
   {
     "path": "src/app/(tabs)/parcours.tsx",
@@ -4425,7 +4437,7 @@
   },
   {
     "path": "src/components/developer/DeveloperControls.tsx",
-    "sha256": "88cc003570540ef9ea4f8743970e29b561e79d6d4bffe0c9181090c9a662030e"
+    "sha256": "ef914625187a7bc387fa96369fb1da37262ba2ec4b6a56befe59113036da75f6"
   },
   {
     "path": "src/components/developer/SimulationBanner.tsx",
@@ -4468,8 +4480,12 @@
     "sha256": "99968657e3fd416289ab15dbdf1f55e7aced316fc2cd8f428f9bf02f9166ec76"
   },
   {
+    "path": "src/components/live/ExplorerAudioPlayer.tsx",
+    "sha256": "bae7ca44b21bf6c217845b453b12a74f09fc618b7d4d42b97a99753dcf9a0681"
+  },
+  {
     "path": "src/components/live/NativeNarration.tsx",
-    "sha256": "4c96b2ba05e5a784fa255000e4e09fb824cfb06f6356a708f5409112c91a0481"
+    "sha256": "11efdfafd41e191643731742164a5df9e9d264224d3ceb26fec5cd6abebe8dd7"
   },
   {
     "path": "src/components/live/TourCard.tsx",
@@ -4485,7 +4501,7 @@
   },
   {
     "path": "src/components/monuments/MonumentDetails.tsx",
-    "sha256": "afccc82db0167f6b4106d054100cf09f180cdd53545214de32fce4659020113c"
+    "sha256": "1d40cbdd393708d74e84d6a1838df2be86b1c5006753713d2ac2ab3567aeee7c"
   },
   {
     "path": "src/components/navigation/ExplorerGuideHUD.tsx",
@@ -4493,7 +4509,7 @@
   },
   {
     "path": "src/components/navigation/GuidedVisitFooter.tsx",
-    "sha256": "e5a4b8f5baf3bdc40aa62b4e4e470da71543631293e8ca015d597ef35107ad18"
+    "sha256": "310cc8ce7067e979da784179ebb763917362f4a5299743bf08804de3f0165ac1"
   },
   {
     "path": "src/components/navigation/WalkingNavigationPanel.tsx",
@@ -4540,6 +4556,18 @@
     "sha256": "7832911ce4399fb4ec31ef12477a97d898846859ef507d1e51975b163b03aeb3"
   },
   {
+    "path": "src/data/live/georgeDemo.ts",
+    "sha256": "b5fba0a86736fac7f08a2d4bd19bcec332de90c513ea83568878ed0822909a3b"
+  },
+  {
+    "path": "src/data/live/georgePrivateAsset.ts",
+    "sha256": "eeaa2509f40001a0efce7f3e9953e7c42ff994fedf4b90a30a5ed711eeda6320"
+  },
+  {
+    "path": "src/data/live/georgePrivateTranscript.ts",
+    "sha256": "3afa354f873e87d6c2850861dedd0fedcaf61fcc6bfef8d81752e67ca9b8f552"
+  },
+  {
     "path": "src/data/live/stories.json",
     "sha256": "5479f296c32776e78ca4726be6f8c5e6cc1c49b482d1f4bfcadbf3b6ed8e2baa"
   },
@@ -4561,7 +4589,7 @@
   },
   {
     "path": "src/hooks/useExplorerGuidance.ts",
-    "sha256": "0bff92f1f073bd3bf2d9335f5880277425ce3e8651706eedff38d65e32496dc0"
+    "sha256": "74b7b9e33a5569a14e33c4a3fce6291fba2071924be1c2e23c8f6f4a6a2ba3e7"
   },
   {
     "path": "src/hooks/useMapPlayer.ts",
@@ -4605,7 +4633,11 @@
   },
   {
     "path": "src/lib/live/LiveProvider.tsx",
-    "sha256": "06a3543c120de0e5d9210ff09f5a55f706509ab7c7743e1f5ff2c0bead988547"
+    "sha256": "fb75b2af5d87116dd04960a1ec347eadfa47be62d5c1093dae5bdab06fe02784"
+  },
+  {
+    "path": "src/lib/live/audioPlayback.ts",
+    "sha256": "4fa9b5f1b7eaefc5e25c16a455e7c16dc60e9e3e9837545001a5c1d69e175b84"
   },
   {
     "path": "src/lib/live/checkpoints.ts",
@@ -4613,7 +4645,7 @@
   },
   {
     "path": "src/lib/live/eligibility.ts",
-    "sha256": "df321443d2fb3e4d74b2450a15a6c59a0befca1ce952cf24a7f1cf7e5e787fe2"
+    "sha256": "3c353a2114ce8e37337ba50cc3be0960ba7f111cfefb57e283046fc71c593de2"
   },
   {
     "path": "src/lib/live/geofence.ts",
@@ -4633,7 +4665,7 @@
   },
   {
     "path": "src/lib/live/types.ts",
-    "sha256": "04e35ffbd0aa3d6515cbff95a6d0fd25ee7d7cefa1a8f15928e276f1e154e2b1"
+    "sha256": "16c1b33dc1daea6b46d707d42dd966f4aedfcfce0b4411180097db9af17aa8dc"
   },
   {
     "path": "src/lib/mapViewport.ts",
@@ -4702,6 +4734,10 @@
   {
     "path": "tests/fixtures/navigation/temple-cybele.json",
     "sha256": "cbca04a5e7e52cff149344ff510290a2aa73751bee7a1d68734ed253c9c1312a"
+  },
+  {
+    "path": "tests/george-audio.test.ts",
+    "sha256": "588045299a10e778fbe978271bfea60563edddbe8b3277fc977ba88503760343"
   },
   {
     "path": "tests/illustrated-poi.test.ts",

@@ -188,6 +188,26 @@ export function DeveloperControls({
                 {SIMULATION_STEP_MS} ms. L’appui long téléporte après
                 confirmation.
               </Text>
+              <Button
+                title="Tester l’audio George — Rue Mercière"
+                disabled={!live.ready}
+                onPress={() =>
+                  Alert.alert(
+                    "Écoute privée de démonstration",
+                    "Contenu non approuvé, droits de diffusion non confirmés. Lecture manuelle de votre prototype uniquement ; aucune publication ni découverte. Désactivez le mode silencieux de l’iPhone pour écouter.",
+                    [
+                      { text: "Annuler", style: "cancel" },
+                      {
+                        text: "Écouter le prototype",
+                        onPress: () => {
+                          close();
+                          live.playDemo();
+                        },
+                      },
+                    ],
+                  )
+                }
+              />
               {!simulation.enabled ? (
                 <Button
                   title="Activer le mode test à Vienne"
@@ -227,8 +247,9 @@ export function DeveloperControls({
                   <Text style={s.caption}>
                     Les routes sont calculées réellement depuis le point simulé
                     par Valhalla. Aucun enregistrement George n’est inventé :
-                    seuls les audios approuvés disponibles peuvent être
-                    prévisualisés.
+                    les arrivées automatiques restent réservées aux audios
+                    approuvés. Le prototype privé se lance uniquement avec le
+                    bouton George.
                   </Text>
                 </>
               )}

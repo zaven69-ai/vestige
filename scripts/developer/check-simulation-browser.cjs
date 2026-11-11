@@ -1,4 +1,4 @@
-/* global __dirname, process */
+/* global __dirname */
 /* Integration harness: real React/providers/hooks, DOM substitutes for native services.
    Requires Playwright in the maintainer environment; never used by the mobile app. */
 const fs = require("node:fs"),
@@ -12,19 +12,20 @@ const source = (file) => fs.readFileSync(path.join(root, file), "utf8");
 const points = JSON.parse(source("src/data/monuments.json")).filter((m) =>
   ["auguste", "cybele", "theatre-vienne"].includes(m.id),
 );
+const checkAudio = process.env.VESTIGE_AUDIO_TEST === "1";
 const mocks = new Map();
 const mock = (id, code) => mocks.set(id, code);
 mock(
   "react-native",
   `const React=require('react');
 const flatten=s=>Array.isArray(s)?Object.assign({},...s.filter(Boolean).map(flatten)):s||{};
-function View(p){const origin=React.useRef(null);const style={...flatten(p.style)};delete style.transform;if(typeof style.lineHeight==='number')style.lineHeight+='px';return React.createElement('div',{style,
+function View(p){const origin=React.useRef(null);const style={display:"flex",flexDirection:"column",boxSizing:"border-box",...flatten(p.style)};delete style.transform;if(typeof style.lineHeight==='number')style.lineHeight+='px';return React.createElement('div',{style,
  onPointerDown:e=>{if(p.onStartShouldSetPanResponder?.()){origin.current={x:e.clientX,y:e.clientY};e.currentTarget.setPointerCapture(e.pointerId);p.onPanResponderGrant?.(e)}},
  onPointerMove:e=>{if(origin.current)p.onPanResponderMove?.(e,{dx:e.clientX-origin.current.x,dy:e.clientY-origin.current.y})},
  onPointerUp:e=>{origin.current=null;p.onPanResponderRelease?.(e)},onPointerCancel:e=>{origin.current=null;p.onPanResponderTerminate?.(e)},
  'aria-label':p.accessibilityLabel},p.children)}
 function Text(p){return React.createElement('span',{style:flatten(p.style)},p.children)}
-exports.View=View;exports.Text=Text;exports.ScrollView=View;exports.Modal=p=>p.visible?React.createElement('section',{'aria-label':'Developer dialog'},p.children):null;
+exports.View=View;exports.Text=Text;exports.ScrollView=View;exports.Modal=p=>p.visible?React.createElement('section',{'aria-label':'Developer dialog',style:{position:'fixed',inset:0,zIndex:1000,overflow:'auto',display:'flex',flexDirection:'column',background:'#07152C'}},p.children):null;
 exports.Animated={ValueXY:class{setValue(){} getTranslateTransform(){return []}},View};
 exports.PanResponder={create:c=>({panHandlers:c})};exports.StyleSheet={create:s=>s};
 exports.Platform={OS:'ios'};exports.Alert={alert:(title,message,buttons)=>{window.confirmation={title,message,buttons}}};
@@ -66,6 +67,29 @@ mock(
   path.join(root, "src/components/ui.tsx"),
   `const React=require('react');exports.s={heading:{color:'white'},body:{color:'#ccc'},caption:{color:'#aaa'}};exports.Button=p=>React.createElement('button',{disabled:p.disabled,onClick:p.onPress,style:{padding:12,margin:4}},p.title);`,
 );
+if (checkAudio) {
+  mocks.delete(path.join(root, "src/components/live/NativeNarration.tsx"));
+  mocks.set(
+    "react-native",
+    mocks.get("react-native") +
+      `
+exports.Pressable=p=>React.createElement('button',{onClick:p.onPress,'aria-label':p.accessibilityLabel,disabled:p.disabled},p.children);`,
+  );
+  const ui = path.join(root, "src/components/ui.tsx");
+  mocks.set(
+    ui,
+    mocks.get(ui) +
+      `
+exports.Icon=()=>React.createElement('span',null,'×');`,
+  );
+  mock(
+    "expo-audio",
+    `const React=require('react');
+exports.useAudioPlayer=()=>{const [player]=React.useState(()=>{const audio=new Audio('/george.mp3');audio.preload='auto';window.nativeAudio=audio;return {audio,play(){audio.play().catch(e=>{window.audioFailure=String(e)})},pause(){audio.pause()},set volume(v){audio.volume=v}}});React.useEffect(()=>()=>player.audio.pause(),[player]);return player};
+exports.useAudioPlayerStatus=player=>{const read=()=>({isLoaded:player.audio.readyState>=2,playing:!player.audio.paused&&!player.audio.ended,isBuffering:player.audio.readyState<3&&!player.audio.paused&&!player.audio.ended,didJustFinish:player.audio.ended,error:player.audio.error?'MP3 decode failed':null,currentTime:player.audio.currentTime,duration:Number.isFinite(player.audio.duration)?player.audio.duration:0});const [status,setStatus]=React.useState(read);React.useEffect(()=>{const timer=setInterval(()=>setStatus(read()),100);return()=>clearInterval(timer)},[player]);return status};
+exports.setAudioModeAsync=async mode=>{window.audioMode=mode};`,
+  );
+}
 const entry = "/simulation-harness.js";
 mock(
   entry,
@@ -77,9 +101,10 @@ const {useExplorationLocation}=require('${root}/src/hooks/useExplorationLocation
 const {useExplorerGuidance}=require('${root}/src/hooks/useExplorerGuidance.ts');
 const {DeveloperControls}=require('${root}/src/components/developer/DeveloperControls.tsx');
 window.appListeners=[];window.storage={};window.storageWrites=[];window.journal={};window.xp=0;window.discoveryWrites=0;window.permission=true;window.routeParams={};
+${checkAudio ? `const AudioPlayer=require('${root}/src/components/live/ExplorerAudioPlayer.tsx').ExplorerAudioPlayer;` : "const AudioPlayer=()=>null;"}
 function Harness(){const simulation=useSimulation(),game=useGame(),live=useLive(),location=useExplorationLocation(),guide=useExplorerGuidance(true,location.position);const [open,setOpen]=React.useState(true),[pulse,force]=React.useState(0);
  window.harness={simulation,game,live,guide,open:()=>setOpen(true),force:()=>force(pulse+1),snapshot:()=>({enabled:simulation.enabled,fix:location.fix,session:live.session,preview:live.preview,ready:live.ready,xp:game.xp,journal:game.journal,storage:window.storage,writes:window.storageWrites.length,discoveryWrites:window.discoveryWrites,status:guide.navigation.status,arrived:guide.navigation.arrived,route:!!guide.navigation.route})};
- return React.createElement('main',null,React.createElement('h1',null,'Contrôle React — substituts DOM, pas un rendu iPhone'),React.createElement('p',null,simulation.enabled?'MODE TEST — GPS SIMULÉ':'GPS réel'),React.createElement(DeveloperControls,{open,close:()=>setOpen(false),active:true,mapHeading:0,bottom:20,onTeleport(){},onReturnGPS:()=>game.requestGPS()}))}
+ return React.createElement('main',null,React.createElement('h1',null,'Contrôle React — substituts DOM, pas un rendu iPhone'),React.createElement('p',null,simulation.enabled?'MODE TEST — GPS SIMULÉ':'GPS réel'),React.createElement(AudioPlayer),React.createElement(DeveloperControls,{open,close:()=>setOpen(false),active:true,mapHeading:0,bottom:20,onTeleport(){},onReturnGPS:()=>game.requestGPS()}))}
 createRoot(document.getElementById('root')).render(React.createElement(DeveloperLocationProvider,null,React.createElement(GameProvider,null,React.createElement(LiveProvider,null,React.createElement(Harness)))));`,
 );
 const modules = new Map();
@@ -125,6 +150,15 @@ const bundle = `const process={env:{NODE_ENV:'development'}};const __DEV__=true;
 (async () => {
   const server = http
     .createServer((req, res) => {
+      if (checkAudio && req.url === "/george.mp3") {
+        res.setHeader("Content-Type", "audio/mpeg");
+        res.end(
+          fs.readFileSync(
+            process.env.GEORGE_MP3 || "/tmp/vestige-george-demo.mp3",
+          ),
+        );
+        return;
+      }
       res.setHeader(
         "Content-Type",
         req.url === "/bundle.js" ? "application/javascript" : "text/html",
@@ -138,7 +172,7 @@ const bundle = `const process={env:{NODE_ENV:'development'}};const __DEV__=true;
     .listen(0, "127.0.0.1");
   const browser = await chromium.launch({
     executablePath: process.env.CHROMIUM_PATH || "/usr/bin/chromium",
-    args: ["--no-sandbox"],
+    args: ["--no-sandbox", "--autoplay-policy=no-user-gesture-required"],
   });
   try {
     const page = await browser.newPage({
@@ -162,6 +196,125 @@ const bundle = `const process={env:{NODE_ENV:'development'}};const __DEV__=true;
     );
     await page.goto(`http://127.0.0.1:${server.address().port}`);
     await page.waitForFunction(() => window.harness?.live.ready);
+    if (checkAudio) {
+      await page.evaluate(() => {
+        window.harness.live.begin();
+      });
+      await page.waitForFunction(
+        () =>
+          window.harness.live.session && window.harness.snapshot().writes >= 3,
+      );
+      const original = await page.evaluate(() => window.harness.snapshot());
+      await page
+        .getByRole("button", { name: "Tester l’audio George — Rue Mercière" })
+        .click();
+      await page.evaluate(() =>
+        window.confirmation.buttons
+          .find((b) => b.text === "Écouter le prototype")
+          .onPress(),
+      );
+      await page.waitForFunction(
+        () => window.harness.live.playback?.position > 0.4,
+      );
+      const firstToken = await page.evaluate(() => {
+        window.firstToken = window.harness.live.playback.token;
+        return window.firstToken;
+      });
+      await page.getByRole("button", { name: "Pause", exact: true }).click();
+      await page.waitForFunction(
+        () =>
+          window.nativeAudio.paused &&
+          window.harness.live.playback.intent === "pause",
+      );
+      await page
+        .getByRole("button", { name: "Reprendre", exact: true })
+        .click();
+      await page.waitForFunction(
+        () =>
+          !window.nativeAudio.paused &&
+          window.harness.live.playback.position > 0.8,
+      );
+      await page.getByRole("button", { name: "Texte", exact: true }).click();
+      if (
+        !(await page
+          .getByText("Vous voici dans la rue Mercière,", { exact: false })
+          .count())
+      )
+        throw Error("Exact transcript missing");
+      await page
+        .getByRole("button", { name: "Fermer la transcription" })
+        .click();
+      await page.evaluate(() =>
+        window.harness.live.onInterrupted(window.harness.live.playback.token),
+      );
+      await page.waitForFunction(() => window.nativeAudio.paused);
+      await page.getByRole("button", { name: "Rejouer", exact: true }).click();
+      await page.waitForFunction(
+        () =>
+          window.harness.live.playback.token > window.firstToken &&
+          window.harness.live.playback.position > 0,
+      );
+      // Let the supplied MP3 finish naturally: the test HTTP fixture is not a native seek engine.
+      await page.waitForFunction(
+        () => window.harness.live.playback.ended,
+        undefined,
+        { timeout: 45000 },
+      );
+      if (
+        (await page.evaluate(() => window.harness.live.session.index)) !==
+        original.session.index
+      )
+        throw Error("Audio advanced visit");
+      await page
+        .getByRole("button", { name: "Réécouter", exact: true })
+        .click();
+      await page.waitForFunction(
+        () =>
+          !window.harness.live.playback.ended &&
+          window.harness.live.playback.position > 0,
+      );
+      await page.evaluate(() =>
+        window.appListeners.forEach((f) => f("background")),
+      );
+      await page.waitForFunction(() => window.nativeAudio.paused);
+      await page.evaluate(() =>
+        window.appListeners.forEach((f) => f("active")),
+      );
+      await page
+        .getByRole("button", { name: "Fermer et arrêter le lecteur audio" })
+        .click();
+      await page.waitForFunction(() => window.harness.live.playback === null);
+      const after = await page.evaluate(() => window.harness.snapshot());
+      if (
+        original.xp !== after.xp ||
+        original.discoveryWrites !== after.discoveryWrites ||
+        JSON.stringify(original.session) !== JSON.stringify(after.session)
+      )
+        throw Error("Audio mutated progress");
+      if (errors.length) throw Error(errors.join("\n"));
+      console.log(
+        JSON.stringify(
+          {
+            passed: true,
+            checks: [
+              "actual MP3 decoded in browser audio adapter",
+              "real NativeNarration hooks",
+              "manual developer entry",
+              "pause/resume/replay",
+              "exact user transcript",
+              "interruption and background pause",
+              "finish does not advance or reward",
+              "one player closed",
+            ],
+            duration: 34.22,
+            firstToken,
+          },
+          null,
+          2,
+        ),
+      );
+      return;
+    }
     // A real saved session exists before testing; stale handlers must not mutate it in simulation.
     await page.evaluate(() => {
       window.harness.live.begin();

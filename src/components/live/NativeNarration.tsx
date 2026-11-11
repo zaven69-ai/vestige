@@ -4,28 +4,33 @@ import {
   useAudioPlayerStatus,
   setAudioModeAsync,
 } from "expo-audio";
+import type { AudioSource } from "expo-audio";
 import type { LiveAsset } from "../../lib/live/types";
-/** Only mounted for a licensed, version-matched and editorially approved asset. */
+/** The shared native player: admission is enforced by LiveProvider before mounting. */
 export function NativeNarration({
   token,
   asset,
+  source,
   playing,
   volume,
   onEnd,
   onError,
   onInterrupted,
   onStatus,
+  onProgress,
 }: {
   token: number;
-  asset: LiveAsset;
+  asset?: LiveAsset;
+  source?: AudioSource;
   playing: boolean;
   volume: number;
   onEnd: (token: number) => void;
   onError: (token: number, error: string) => void;
   onInterrupted: (token: number) => void;
+  onProgress?: (token: number, position: number, duration: number) => void;
   onStatus: (token: number, status: "loading" | "playing" | "paused") => void;
 }) {
-  const player = useAudioPlayer(asset.module, {
+  const player = useAudioPlayer(source ?? asset?.module ?? null, {
     downloadFirst: true,
     updateInterval: 250,
   });
@@ -72,6 +77,9 @@ export function NativeNarration({
     return () => clearTimeout(timer);
   }, [status.isLoaded, onError, token]);
   useEffect(() => {
+    onProgress?.(token, status.currentTime, status.duration);
+  }, [token, status.currentTime, status.duration, onProgress]);
+  useEffect(() => {
     if (status.error) {
       onError(token, status.error);
       return;
@@ -81,13 +89,14 @@ export function NativeNarration({
       onEnd(token);
       return;
     }
-    if (status.playing) started.current = true;
+    const wasPlaying = started.current;
+    started.current = status.playing;
     onStatus(
       token,
       !status.isLoaded ? "loading" : status.playing ? "playing" : "paused",
     );
     if (
-      started.current &&
+      wasPlaying &&
       !status.playing &&
       !status.isBuffering &&
       !status.didJustFinish &&

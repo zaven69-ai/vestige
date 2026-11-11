@@ -25,12 +25,17 @@ export function useExplorerGuidance(
     position,
   );
   const { start, stop: stopNavigation } = navigation;
-  const params = useLocalSearchParams<{ guide?: string; command?: string }>();
+  const params = useLocalSearchParams<{
+    guide?: string;
+    command?: string;
+    audioPoi?: string;
+    audioCommand?: string;
+  }>();
   const handled = useRef("");
   useEffect(() => {
-    setVisible(focused && active && matchingScope);
+    setVisible(focused && matchingScope);
     return () => setVisible(false);
-  }, [focused, active, matchingScope, setVisible]);
+  }, [focused, matchingScope, setVisible]);
   useEffect(() => {
     if (
       focused &&
@@ -43,6 +48,19 @@ export function useExplorerGuidance(
       start();
     }
   }, [focused, active, params.guide, params.command, start]);
+  const audioHandled = useRef("");
+  useEffect(() => {
+    if (
+      focused &&
+      live.visible &&
+      params.audioPoi &&
+      params.audioCommand &&
+      audioHandled.current !== params.audioCommand
+    ) {
+      audioHandled.current = params.audioCommand;
+      live.playPoi(params.audioPoi);
+    }
+  }, [focused, live, params.audioPoi, params.audioCommand]);
   const previewStarted = useRef("");
   const previewSession =
     live.preview && session ? `preview:${session.startedAt}` : "";

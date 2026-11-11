@@ -7,9 +7,11 @@ import { liveAssets } from "../../data/live/vienneAntique";
 export function GuidedVisitFooter({
   guide,
   onNext,
+  onListen,
 }: {
   guide: ExplorerGuidance;
   onNext: () => void;
+  onListen?: () => void;
 }) {
   const [reading, setReading] = useState(false);
   const { story, live, session, tour } = guide;
@@ -67,16 +69,25 @@ export function GuidedVisitFooter({
           onPress={() => setReading((v) => !v)}
         />
       )}
+      {!asset && <Text style={s.caption}>Audio en préparation</Text>}
       {asset && (
         <Button
           title={
+            live.playback?.storyId === story?.id &&
             live.playback?.intent === "play"
               ? "Pause audio"
               : "Écouter / reprendre"
           }
           disabled={session?.paused}
           onPress={
-            live.playback?.intent === "play" ? live.pauseAudio : live.play
+            live.playback?.storyId === story?.id &&
+            live.playback?.intent === "play"
+              ? live.pauseAudio
+              : () => {
+                  if (live.playback?.storyId === story?.id) live.play();
+                  else live.playPoi(guide.stop.poiId);
+                  onListen?.();
+                }
           }
         />
       )}
