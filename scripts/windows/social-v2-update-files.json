@@ -4292,6 +4292,14 @@
     "sha256": "8681611ffc5f983b5855ec1177f0b14185e1d8bb0881a70864583be64a32139a"
   },
   {
+    "path": "docs/navigation/VIENNE-GPS-NAVIGATION-V1.md",
+    "sha256": "f288e5063bda99502b81af525ca5df7ddc7fc725f85df87b6a6ce464ab1323aa"
+  },
+  {
+    "path": "docs/navigation/valhalla-live-check.json",
+    "sha256": "f65e0df2f1c0006b1154f2352fff68e51369ccff6da699cafe90ab2d596aa522"
+  },
+  {
     "path": "package-lock.json",
     "sha256": "bf3b9488caca52d882019eed48bfaa7adbd088238c372b40094a4791892dd4cd"
   },
@@ -4306,6 +4314,10 @@
   {
     "path": "scripts/live/register-audio.cjs",
     "sha256": "b7acda53c16196228207e68246bd067b291a49d94e61c9f9d8cf1f4b0b8e1556"
+  },
+  {
+    "path": "scripts/navigation/probe-valhalla.mjs",
+    "sha256": "26f1807566fa2d12cc2ae10051f8d3be5b767bca3f85caa4953d946b19d2fe22"
   },
   {
     "path": "scripts/poi/build-landmarks.cjs",
@@ -4349,7 +4361,7 @@
   },
   {
     "path": "scripts/windows/update-social-v2.ps1",
-    "sha256": "7844bad61d6bd3c3fd4fec6660321f87467b8e4d1fc876d66a6827e23a2eb346"
+    "sha256": "03cfc7dc284d28f1ccf8af5ffadad1061bd52f1a4b9e5c759b7d5598db69a06f"
   },
   {
     "path": "src/app/(tabs)/index.tsx",
@@ -4389,7 +4401,7 @@
   },
   {
     "path": "src/app/visite-vienne.tsx",
-    "sha256": "174df1d80810b41d25af154566fc61706ffa009d7703e9586e4ed5f6b3bb6214"
+    "sha256": "8ec9a23d330144e53005400668438b3f6263f88cf7c2ad9ecdb7e697022b0ce6"
   },
   {
     "path": "src/components/contributions/MonumentActions.tsx",
@@ -4437,11 +4449,11 @@
   },
   {
     "path": "src/components/live/TourCard.tsx",
-    "sha256": "a0f7094bc0c36ce07503da6a48b1f2ee85dd8b16762ab7e534c8a3017c53e329"
+    "sha256": "870bf90e48dee4bb94e4bfdee7e9e9bf7a1789969ee8f70a74dc332b975e8569"
   },
   {
     "path": "src/components/live/VisitMap.tsx",
-    "sha256": "4a4e8d7a10895160b895669aa78b4c8e7f06945d565999bd3ffb0f32723e5f4d"
+    "sha256": "533c30d7e3577078465575b02de27459b965c0fcf9e76287b97ef581e2d8e427"
   },
   {
     "path": "src/components/monuments/MonumentBottomSheet.tsx",
@@ -4450,6 +4462,10 @@
   {
     "path": "src/components/monuments/MonumentDetails.tsx",
     "sha256": "93b4e0288f915605ef0edc404f24e2ec526baeabf3c5b87c00e3c53f438a61db"
+  },
+  {
+    "path": "src/components/navigation/WalkingNavigationPanel.tsx",
+    "sha256": "7c7e98ec9089ed1c5c3be9d3fb0e27fe830e8f1ce14180d0a0d24451a3970bc0"
   },
   {
     "path": "src/components/poi/PoiBadge.tsx",
@@ -4508,6 +4524,10 @@
     "sha256": "5b3baeb6fa079259d8169de44a673cacd529bc2c13e70f03e44bdf990f06e01b"
   },
   {
+    "path": "src/hooks/useWalkingNavigation.ts",
+    "sha256": "65aa8a1aea84824d2fd082c3f60f91d19f942465cfa3404fbe3a90ce1dd862dc"
+  },
+  {
     "path": "src/lib/avatars/catiaMap.ts",
     "sha256": "423cd26e8cbfccce1d872ede4a93d82eed993526d41c172224eb7c8f2c450686"
   },
@@ -4560,6 +4580,14 @@
     "sha256": "f3db8573489d0aa9c6244dcdf04d4c038ea757e3d77ff7101017e693b4dab160"
   },
   {
+    "path": "src/lib/navigation/requests.ts",
+    "sha256": "fe841f93297d44b6ba34f8d660d72a4336744d9188dcc080826b24a1b986970f"
+  },
+  {
+    "path": "src/lib/navigation/walking.ts",
+    "sha256": "74ff1f2e90c8eff3a66c545e2826cc2ec9f68da08575b02dc7cdebea08b3131f"
+  },
+  {
     "path": "src/lib/poi.ts",
     "sha256": "81cb0025fa1f9f632c0e3adda73e59aeb06db7f1e455b2d65195750f1f277f78"
   },
@@ -4584,6 +4612,18 @@
     "sha256": "8b87f76bcba493f8f6b1d089da1ccc919f574f6f90fa9fa141fdecb0c4658af1"
   },
   {
+    "path": "tests/fixtures/navigation/cybele-theatre.json",
+    "sha256": "16044268ceb57445e64e4a459204b3c1851ba865269a4acdb953e004e448483f"
+  },
+  {
+    "path": "tests/fixtures/navigation/lyon-temple.json",
+    "sha256": "31ed7e8070ba6e8249f68c2a94436ba71dc05ab1cf7a3e6cb9d40fb87af53b7f"
+  },
+  {
+    "path": "tests/fixtures/navigation/temple-cybele.json",
+    "sha256": "cbca04a5e7e52cff149344ff510290a2aa73751bee7a1d68734ed253c9c1312a"
+  },
+  {
     "path": "tests/illustrated-poi.test.ts",
     "sha256": "dae48993c7d8b1ace559d9eceb747034fbf61ea2506a5774d94aa231acda1ff8"
   },
@@ -4594,6 +4634,10 @@
   {
     "path": "tests/native-poi-map.test.ts",
     "sha256": "b80ac436621c22f6d4ff87d61637e1747591a6898c7e88f22a99ca8eef5f45f7"
+  },
+  {
+    "path": "tests/navigation.test.ts",
+    "sha256": "c1286fadc0539f261a0a4e40defd57073dcd239174b1eaefabf54942c0e7861a"
   },
   {
     "path": "tests/poi-clustering.test.ts",

@@ -1,0 +1,150 @@
+{
+  "trip": {
+    "locations": [
+      {
+        "type": "break",
+        "lat": 45.524969,
+        "lon": 4.875451,
+        "side_of_street": "right",
+        "original_index": 0
+      },
+      {
+        "type": "break",
+        "lat": 45.524787,
+        "lon": 4.878314,
+        "original_index": 1
+      }
+    ],
+    "legs": [
+      {
+        "maneuvers": [
+          {
+            "type": 2,
+            "instruction": "Marchez vers l'est sur Rue Chantelouve.",
+            "verbal_succinct_transition_instruction": "Marchez vers l'est.",
+            "verbal_pre_transition_instruction": "Marchez vers l'est sur Rue Chantelouve.",
+            "verbal_post_transition_instruction": "Continuez pendant 200 mètres.",
+            "street_names": [
+              "Rue Chantelouve"
+            ],
+            "bearing_after": 91,
+            "time": 172.959,
+            "length": 0.195,
+            "cost": 204.662,
+            "begin_shape_index": 0,
+            "end_shape_index": 16,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 15,
+            "instruction": "Tournez à gauche dans Rue Victor Hugo/D 41.",
+            "verbal_transition_alert_instruction": "Tournez à gauche dans Rue Victor Hugo.",
+            "verbal_succinct_transition_instruction": "Tournez à gauche. Ensuite, Tournez à droite dans Rue Pipet.",
+            "verbal_pre_transition_instruction": "Tournez à gauche dans Rue Victor Hugo, D 41. Ensuite, Tournez à droite dans Rue Pipet.",
+            "verbal_post_transition_instruction": "Continuez pendant 10 mètres.",
+            "street_names": [
+              "Rue Victor Hugo",
+              "D 41"
+            ],
+            "bearing_before": 90,
+            "bearing_after": 34,
+            "time": 7.058,
+            "length": 0.01,
+            "cost": 12.058,
+            "begin_shape_index": 16,
+            "end_shape_index": 18,
+            "verbal_multi_cue": true,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 10,
+            "instruction": "Tournez à droite dans Rue Pipet.",
+            "verbal_transition_alert_instruction": "Tournez à droite dans Rue Pipet.",
+            "verbal_succinct_transition_instruction": "Tournez à droite.",
+            "verbal_pre_transition_instruction": "Tournez à droite dans Rue Pipet.",
+            "verbal_post_transition_instruction": "Continuez pendant 60 mètres.",
+            "street_names": [
+              "Rue Pipet"
+            ],
+            "bearing_before": 34,
+            "bearing_after": 104,
+            "time": 58.15,
+            "length": 0.059,
+            "cost": 71.011,
+            "begin_shape_index": 18,
+            "end_shape_index": 26,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 10,
+            "instruction": "Tournez à droite dans Rue de Goris.",
+            "verbal_transition_alert_instruction": "Tournez à droite dans Rue de Goris.",
+            "verbal_succinct_transition_instruction": "Tournez à droite.",
+            "verbal_pre_transition_instruction": "Tournez à droite dans Rue de Goris.",
+            "verbal_post_transition_instruction": "Continuez pendant 90 mètres.",
+            "street_names": [
+              "Rue de Goris"
+            ],
+            "bearing_before": 80,
+            "bearing_after": 171,
+            "time": 57.814,
+            "length": 0.087,
+            "cost": 66.641,
+            "begin_shape_index": 26,
+            "end_shape_index": 34,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 4,
+            "instruction": "Vous êtes arrivé à votre destination.",
+            "verbal_transition_alert_instruction": "Vous arriverez à votre destination.",
+            "verbal_pre_transition_instruction": "Vous êtes arrivé à votre destination.",
+            "bearing_before": 197,
+            "time": 0,
+            "length": 0,
+            "cost": 0,
+            "begin_shape_index": 34,
+            "end_shape_index": 34,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 45.524796,
+          "min_lon": 4.875453,
+          "max_lat": 45.525572,
+          "max_lon": 4.878498,
+          "time": 295.983,
+          "length": 0.352,
+          "cost": 354.373
+        },
+        "shape": "acsyuA{jqhH?_@HiIFuCqBy@iLqED}Gq@kg@Bs@^eBq@eGoByJi@{CM_A]yUDyCAqCU]yBkB\\{AD_@RsCFkBMuCcBmM[gFa@eGl@InDk@nAGr@BdARdEt@jVnHrDlA"
+      }
+    ],
+    "summary": {
+      "has_time_restrictions": false,
+      "has_toll": false,
+      "has_highway": false,
+      "has_ferry": false,
+      "min_lat": 45.524796,
+      "min_lon": 4.875453,
+      "max_lat": 45.525572,
+      "max_lon": 4.878498,
+      "time": 295.983,
+      "length": 0.352,
+      "cost": 354.373
+    },
+    "status_message": "Found route between points",
+    "status": 0,
+    "units": "kilometers",
+    "language": "fr-FR"
+  }
+}

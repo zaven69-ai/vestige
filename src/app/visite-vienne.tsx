@@ -1,6 +1,16 @@
-import React, { useEffect } from "react";
-import { Text, View, Switch, Alert, Linking } from "react-native";
-import { Stack, router, useIsFocused } from "expo-router";
+import { useWalkingNavigation } from "../hooks/useWalkingNavigation";
+import { WalkingNavigationPanel } from "../components/navigation/WalkingNavigationPanel";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  Text,
+  View,
+  Switch,
+  Alert,
+  Linking,
+  Modal,
+  ScrollView,
+} from "react-native";
+import { Stack, router, useIsFocused, useLocalSearchParams } from "expo-router";
 import { Page, Card, Badge, Button, ProgressBar, s } from "../components/ui";
 import { useLive } from "../lib/live/LiveProvider";
 import {
@@ -31,6 +41,28 @@ export default function VisitVienne() {
   const asset = playableAsset(story, liveAssets),
     monument = monuments.find((m) => m.id === stop.poiId)!;
   const finished = session?.endedAt !== null && !!session;
+  const navigation = useWalkingNavigation(
+    stop.approach,
+    stop.poiId,
+    focused && live.foreground && !!session && !session.paused && !finished,
+  );
+  const { start: startNavigation } = navigation;
+  const params = useLocalSearchParams<{ navigation?: string }>();
+  const autostarted = useRef(false);
+  const [narrationModal, setNarrationModal] = useState<string | null>(null);
+  const narrationKey = session ? `${session.startedAt}:${stop.poiId}` : null;
+  useEffect(() => {
+    if (
+      params.navigation === "marche" &&
+      focused &&
+      session &&
+      !finished &&
+      !autostarted.current
+    ) {
+      autostarted.current = true;
+      startNavigation();
+    }
+  }, [params.navigation, focused, session, finished, startNavigation]);
   function automatic(value: boolean) {
     if (!value) {
       live.setMode("manual");
@@ -48,6 +80,82 @@ export default function VisitVienne() {
   return (
     <>
       <Stack.Screen options={{ title: "Vienne antique · visite" }} />
+      <Modal
+        visible={
+          narrationModal !== null &&
+          narrationModal === narrationKey &&
+          !finished
+        }
+        transparent
+        animationType="none"
+        onRequestClose={() => setNarrationModal(null)}
+      >
+        <View
+          style={{
+            flex: 1,
+            backgroundColor: "#000A",
+            justifyContent: "center",
+            padding: 20,
+          }}
+        >
+          <View
+            accessibilityViewIsModal
+            style={{
+              maxHeight: "85%",
+              backgroundColor: "#020D27",
+              borderColor: "#CDB67C",
+              borderWidth: 1,
+              borderRadius: 24,
+              padding: 20,
+              gap: 12,
+            }}
+          >
+            <Text accessibilityRole="header" style={s.heading}>
+              {story.title}
+            </Text>
+            <Text style={s.caption}>
+              {asset
+                ? "Narration approuvée"
+                : "Audio en préparation · transcription provisoire à relire"}
+            </Text>
+            <ScrollView>
+              <Text selectable style={s.body}>
+                {editoriallyApproved(story) || __DEV__
+                  ? story.script
+                  : "Transcription en préparation."}
+              </Text>
+              {story.sources.map((source) => (
+                <Button
+                  key={source.url}
+                  title={`Source : ${source.title}`}
+                  secondary
+                  onPress={() =>
+                    void Linking.openURL(source.url).catch(() =>
+                      Alert.alert("Lien indisponible"),
+                    )
+                  }
+                />
+              ))}
+            </ScrollView>
+            <Button
+              title={
+                live.playback?.intent === "play"
+                  ? "Pause audio"
+                  : "Écouter la narration"
+              }
+              disabled={!asset || !!session?.paused}
+              onPress={
+                live.playback?.intent === "play" ? live.pauseAudio : live.play
+              }
+            />
+            <Button
+              title="Fermer"
+              secondary
+              onPress={() => setNarrationModal(null)}
+            />
+          </View>
+        </View>
+      </Modal>
       <Page eyebrow="Vestige Live · premier plan" title={vienneAntique.title}>
         {!session ? (
           <Card>
@@ -116,9 +224,19 @@ export default function VisitVienne() {
               />
             </Card>
             <VisitMap
+              navigation={navigation}
               selectedId={stop.poiId}
               active={focused && live.foreground && !session.paused}
               onSelect={(m) => router.push(`/monument/${m.id}`)}
+            />
+            <WalkingNavigationPanel
+              navigation={navigation}
+              destination={story.title}
+              first={session.index === 0}
+              last={session.index === 2}
+              target={stop.approach}
+              onNarration={() => setNarrationModal(narrationKey)}
+              onNext={() => live.advance("consulted")}
             />
             <Card>
               <View

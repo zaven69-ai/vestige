@@ -1,0 +1,124 @@
+[
+  {
+    "id": "lyon-temple",
+    "start": {
+      "latitude": 45.7578,
+      "longitude": 4.832
+    },
+    "target": {
+      "latitude": 45.525698,
+      "longitude": 4.874218
+    },
+    "meters": 28226,
+    "seconds": 21287.892,
+    "vertices": 1123,
+    "instructions": [
+      "Marchez vers le sud.",
+      "Tournez à gauche dans l'allée.",
+      "Prenez les escaliers.",
+      "Tournez à gauche dans l'allée.",
+      "Tournez à gauche dans l'allée.",
+      "Tournez à droite dans l'allée.",
+      "Tournez à gauche dans l'allée.",
+      "Tournez à droite dans Rue Sala.",
+      "Tournez à droite dans Quai du Docteur Gailleton.",
+      "Serrez à gauche dans Pont de l'Université.",
+      "Tournez à gauche dans l'allée.",
+      "Tournez à droite dans l'allée.",
+      "Tournez à droite dans l'allée.",
+      "Tournez à gauche dans Route de Vienne.",
+      "Gardez la droite pour rester sur Route de Vienne.",
+      "Gardez la droite pour prendre D 307.",
+      "Serrez à droite dans Rue Louis Girardet.",
+      "Tournez à droite dans Rue Descartes.",
+      "Tournez à gauche pour rester sur Rue Descartes.",
+      "Tournez à gauche dans Rue de la Poudrerie.",
+      "Tournez à droite dans Rue Léon Blum.",
+      "Tournez à gauche.",
+      "Tournez à gauche dans Rue Hector Berlioz.",
+      "Tournez à gauche.",
+      "Continuez sur l'allée.",
+      "Continuez.",
+      "Tournez à droite.",
+      "Tournez à gauche dans l'allée.",
+      "Tournez à gauche dans Rue du Dauphiné.",
+      "Tournez à droite dans Chemin des Figuières.",
+      "Serrez à gauche pour rester sur Chemin des Figuières.",
+      "Tournez à droite dans Route Nationale 7/D 307.",
+      "Gardez la gauche pour rester sur D 307.",
+      "Tournez à droite dans Avenue des Portes de Lyon/D 149E.",
+      "Tournez à gauche dans Avenue des Portes de Lyon/D 149E.",
+      "Serrez à droite dans D 307.",
+      "Gardez la droite pour rester sur D 307.",
+      "Gardez la droite pour rester sur D 307.",
+      "Serrez à droite.",
+      "Gardez la gauche à la fourche.",
+      "Gardez la droite pour prendre D 307 vers A 46/Vienne.",
+      "Gardez la gauche pour rester sur Route Départementale 307/D 307.",
+      "Serrez à gauche.",
+      "Gardez la gauche pour prendre N 7.",
+      "Gardez la gauche pour rester sur N 7.",
+      "Serrez à gauche.",
+      "Gardez la droite à la fourche.",
+      "Gardez la gauche pour prendre N 7.",
+      "Gardez la droite pour rester sur N 7.",
+      "Gardez la gauche pour prendre Avenue Marcellin Berthelot/N 7.",
+      "Serrez à gauche.",
+      "Tournez à droite.",
+      "Gardez la gauche pour prendre Rue Francisque Bonnier.",
+      "Gardez la droite pour rester sur Rue Francisque Bonnier.",
+      "Tournez à gauche dans Boulevard du Rhône/N 7. Continuez sur N 7.",
+      "Serrez à droite dans Rue du Jeu de Paume.",
+      "Tournez à gauche dans Rue Maurice Faure.",
+      "Tournez à gauche pour rester sur Rue Maurice Faure.",
+      "Votre destination est sur la droite."
+    ],
+    "checkedAt": "2026-11-11T10:31:25.297Z",
+    "provider": "Valhalla / FOSSGIS"
+  },
+  {
+    "id": "temple-cybele",
+    "start": {
+      "latitude": 45.525698,
+      "longitude": 4.874218
+    },
+    "target": {
+      "latitude": 45.524969,
+      "longitude": 4.875451
+    },
+    "meters": 173,
+    "seconds": 129.245,
+    "vertices": 16,
+    "instructions": [
+      "Marchez vers l'est sur Place Charles de Gaulle.",
+      "Tournez à droite dans Place François Mitterrand.",
+      "Tournez à gauche dans Rue Chantelouve.",
+      "Votre destination est sur la droite."
+    ],
+    "checkedAt": "2026-11-11T10:31:27.878Z",
+    "provider": "Valhalla / FOSSGIS"
+  },
+  {
+    "id": "cybele-theatre",
+    "start": {
+      "latitude": 45.524969,
+      "longitude": 4.875451
+    },
+    "target": {
+      "latitude": 45.524787,
+      "longitude": 4.878314
+    },
+    "meters": 352,
+    "seconds": 295.983,
+    "vertices": 35,
+    "instructions": [
+      "Marchez vers l'est sur Rue Chantelouve.",
+      "Tournez à gauche dans Rue Victor Hugo/D 41.",
+      "Tournez à droite dans Rue Pipet.",
+      "Tournez à droite dans Rue de Goris.",
+      "Vous êtes arrivé à votre destination."
+    ],
+    "checkedAt": "2026-11-11T10:31:30.099Z",
+    "provider": "Valhalla / FOSSGIS"
+  }
+]

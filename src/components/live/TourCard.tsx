@@ -3,19 +3,12 @@ import { Text, View } from "react-native";
 import { router } from "expo-router";
 import { vienneAntique } from "../../data/live/vienneAntique";
 import { monuments } from "../../data/monuments";
-import { distance, formatDistance } from "../../lib/game";
 import { useLive } from "../../lib/live/LiveProvider";
 import { MonumentPhoto } from "../MonumentPhoto";
 import { Badge, Button, ProgressBar, s } from "../ui";
 export function TourCard() {
   const live = useLive(),
     stops = vienneAntique.stops;
-  const length = stops
-    .slice(1)
-    .reduce(
-      (sum, stop, i) => sum + distance(stops[i].approach, stop.approach),
-      0,
-    );
   const resume = !!live.session && live.session.endedAt === null;
   return (
     <View style={[s.card, { gap: 12 }]}>
@@ -27,13 +20,12 @@ export function TourCard() {
       <Text style={s.heading}>{vienneAntique.title}</Text>
       <Text style={s.body}>{vienneAntique.subtitle}</Text>
       <Text style={s.body}>
-        3 étapes · {formatDistance(length)} de distance indicative · ≈{" "}
-        {Math.ceil(length / 60)} min de marche indicative, hors arrêts et
-        détours.
+        3 étapes · itinéraire piéton calculé depuis votre GPS après activation.
       </Text>
       <Text style={s.caption}>
-        Distance à vol d’oiseau entre repères, pas un itinéraire piéton. Le
-        théâtre a des horaires et une entrée généralement payante.
+        Distances, durées et changements de direction sont fournis par le moteur
+        de routage. Le théâtre a des horaires et une entrée généralement
+        payante.
       </Text>
       <Text style={s.body}>
         Audio en préparation · 3 transcriptions provisoires sourcées, à relire.
@@ -58,6 +50,21 @@ export function TourCard() {
         </Text>
       ))}
       {live.storageError && <Text style={s.body}>{live.storageError}</Text>}
+      <Button
+        title={
+          resume && (live.session?.index ?? 0) > 0
+            ? "Rejoindre l’étape en cours"
+            : "Rejoindre le départ"
+        }
+        disabled={!live.ready || !!live.storageError}
+        onPress={() => {
+          if (!resume) live.begin();
+          router.push({
+            pathname: "/visite-vienne",
+            params: { navigation: "marche" },
+          });
+        }}
+      />
       <Button
         title={resume ? "Reprendre la visite" : "Commencer"}
         disabled={!live.ready || !!live.storageError}

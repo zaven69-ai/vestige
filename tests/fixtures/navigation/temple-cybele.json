@@ -1,0 +1,129 @@
+{
+  "trip": {
+    "locations": [
+      {
+        "type": "break",
+        "lat": 45.525698,
+        "lon": 4.874218,
+        "side_of_street": "right",
+        "original_index": 0
+      },
+      {
+        "type": "break",
+        "lat": 45.524969,
+        "lon": 4.875451,
+        "side_of_street": "right",
+        "original_index": 1
+      }
+    ],
+    "legs": [
+      {
+        "maneuvers": [
+          {
+            "type": 2,
+            "instruction": "Marchez vers l'est sur Place Charles de Gaulle.",
+            "verbal_succinct_transition_instruction": "Marchez vers l'est.",
+            "verbal_pre_transition_instruction": "Marchez vers l'est sur Place Charles de Gaulle.",
+            "verbal_post_transition_instruction": "Continuez pendant 70 mètres.",
+            "street_names": [
+              "Place Charles de Gaulle"
+            ],
+            "bearing_after": 89,
+            "time": 53.574,
+            "length": 0.065,
+            "cost": 60.31,
+            "begin_shape_index": 0,
+            "end_shape_index": 5,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 10,
+            "instruction": "Tournez à droite dans Place François Mitterrand.",
+            "verbal_transition_alert_instruction": "Tournez à droite dans Place François Mitterrand.",
+            "verbal_succinct_transition_instruction": "Tournez à droite.",
+            "verbal_pre_transition_instruction": "Tournez à droite dans Place François Mitterrand.",
+            "verbal_post_transition_instruction": "Continuez pendant 80 mètres.",
+            "street_names": [
+              "Place François Mitterrand"
+            ],
+            "bearing_before": 89,
+            "bearing_after": 175,
+            "time": 56.216,
+            "length": 0.081,
+            "cost": 66.216,
+            "begin_shape_index": 5,
+            "end_shape_index": 12,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 15,
+            "instruction": "Tournez à gauche dans Rue Chantelouve.",
+            "verbal_transition_alert_instruction": "Tournez à gauche dans Rue Chantelouve.",
+            "verbal_succinct_transition_instruction": "Tournez à gauche.",
+            "verbal_pre_transition_instruction": "Tournez à gauche dans Rue Chantelouve.",
+            "verbal_post_transition_instruction": "Continuez pendant 30 mètres.",
+            "street_names": [
+              "Rue Chantelouve"
+            ],
+            "bearing_before": 176,
+            "bearing_after": 99,
+            "time": 19.454,
+            "length": 0.027,
+            "cost": 24.454,
+            "begin_shape_index": 12,
+            "end_shape_index": 15,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          },
+          {
+            "type": 5,
+            "instruction": "Votre destination est sur la droite.",
+            "verbal_transition_alert_instruction": "Votre destination sera sur la droite.",
+            "verbal_pre_transition_instruction": "Votre destination est sur la droite.",
+            "bearing_before": 91,
+            "time": 0,
+            "length": 0,
+            "cost": 0,
+            "begin_shape_index": 15,
+            "end_shape_index": 15,
+            "travel_mode": "pedestrian",
+            "travel_type": "foot"
+          }
+        ],
+        "summary": {
+          "has_time_restrictions": false,
+          "has_toll": false,
+          "has_highway": false,
+          "has_ferry": false,
+          "min_lat": 45.525057,
+          "min_lon": 4.874217,
+          "max_lat": 45.525813,
+          "max_lon": 4.875453,
+          "time": 129.245,
+          "length": 0.173,
+          "cost": 150.982
+        },
+        "shape": "wntyuAq}nhHCcM}@qCIeAe@uWB{DhHa@pGa@lEEhBA|A?jKi@vAG^}FFcBD{I"
+      }
+    ],
+    "summary": {
+      "has_time_restrictions": false,
+      "has_toll": false,
+      "has_highway": false,
+      "has_ferry": false,
+      "min_lat": 45.525057,
+      "min_lon": 4.874217,
+      "max_lat": 45.525813,
+      "max_lon": 4.875453,
+      "time": 129.245,
+      "length": 0.173,
+      "cost": 150.982
+    },
+    "status_message": "Found route between points",
+    "status": 0,
+    "units": "kilometers",
+    "language": "fr-FR"
+  }
+}
