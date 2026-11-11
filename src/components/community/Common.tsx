@@ -26,12 +26,16 @@ export function Field({
   change,
   max = 100,
   multiline = false,
+  email = false,
+  password = false,
 }: {
   label: string;
   value: string;
   change: (s: string) => void;
   max?: number;
   multiline?: boolean;
+  email?: boolean;
+  password?: boolean;
 }) {
   return (
     <View style={{ gap: 5 }}>
@@ -42,7 +46,10 @@ export function Field({
         onChangeText={change}
         maxLength={max}
         multiline={multiline}
-        autoCapitalize="sentences"
+        autoCapitalize={email || password ? "none" : "sentences"}
+        autoCorrect={!email && !password}
+        keyboardType={email ? "email-address" : "default"}
+        secureTextEntry={password}
         style={{
           color: "#F5F0E5",
           backgroundColor: "#0B2341",

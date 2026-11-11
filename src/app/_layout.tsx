@@ -1,3 +1,4 @@
+import { SessionProvider } from "../lib/supabase/SessionProvider";
 import { CommunityProvider } from "../lib/community/CommunityProvider";
 import { SimulationBanner } from "../components/developer/SimulationBanner";
 import { DeveloperLocationProvider } from "../lib/developer/DeveloperLocation";
@@ -43,11 +44,13 @@ export default function RootLayout() {
     <DeveloperLocationProvider>
       <GameProvider>
         <AvatarPreferencesProvider>
-          <CommunityProvider>
-            <LiveProvider>
-              <AppShell />
-            </LiveProvider>
-          </CommunityProvider>
+          <SessionProvider>
+            <CommunityProvider>
+              <LiveProvider>
+                <AppShell />
+              </LiveProvider>
+            </CommunityProvider>
+          </SessionProvider>
         </AvatarPreferencesProvider>
       </GameProvider>
     </DeveloperLocationProvider>

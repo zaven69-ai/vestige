@@ -1,5 +1,9 @@
 [
   {
+    "path": ".env.example",
+    "sha256": "96ccd4911ce21df1035bee20924b6f619a10b07b52d788467daf8799057bfd21"
+  },
+  {
     "path": ".github/workflows/catia-preview-checks.yml",
     "sha256": "b28c860fb91c56df2f16dc384431ecfc46e6814face8f318144ad8fba5a77b29"
   },
@@ -4564,8 +4568,12 @@
     "sha256": "9eb8477d50ac028b007ecebff64b0a16531e2206acb80787bccedb9abda97577"
   },
   {
+    "path": "docs/community/SUPABASE-ISSUE-13.md",
+    "sha256": "157aedd718512443b6d56d6c093e9a1731dd2b1d1c3763a8311d5f3fbed0c8f1"
+  },
+  {
     "path": "docs/design/COMMUNITY-MVP-V1.md",
-    "sha256": "5b6518787e8c42f0ced9661065683402f50edbbe26fb52121662b4839dccb3fa"
+    "sha256": "19884c29e3aa3bcb1235b5cca1492939593510ddd800643dffe394690846c447"
   },
   {
     "path": "docs/design/LYON-AVENTURES-V1.md",
@@ -4697,11 +4705,11 @@
   },
   {
     "path": "package-lock.json",
-    "sha256": "bf3b9488caca52d882019eed48bfaa7adbd088238c372b40094a4791892dd4cd"
+    "sha256": "12f1323bc92bbb0dc2d104bb6e88404eea550933e431dcc3b7eb402dd981bc5d"
   },
   {
     "path": "package.json",
-    "sha256": "b4ab0aab54d8f581d04d356351946e9781d6af115a82ff6473e165cc7bf80fc0"
+    "sha256": "2cb82eeb50edf9beb5adaadbe8ed231ebaf1cbe253076325d3842249d6802a16"
   },
   {
     "path": "scripts/avatars/catia/render_map_sprites.py",
@@ -4713,7 +4721,15 @@
   },
   {
     "path": "scripts/community/check-rls.cjs",
-    "sha256": "04c668471baa888e81593f2a2dd9b08957253575c7e7ca7f46fb436b17f6dd90"
+    "sha256": "18e1f77243dd949ed940f5c654bc569e3f37a89cd5f2304a62a6a9ad7f40f201"
+  },
+  {
+    "path": "scripts/community/check-supabase-accounts.mjs",
+    "sha256": "3cf8638d1ffce783546a5c89efd863eb2e0ec10ee971c9972d0ce134fae46111"
+  },
+  {
+    "path": "scripts/community/check-supabase-routes.cjs",
+    "sha256": "88dc4fa9e45815b87d42557e4e883bb02a7bb78d5977f36f07672fce48b3b46e"
   },
   {
     "path": "scripts/developer/check-simulation-browser.cjs",
@@ -4801,7 +4817,7 @@
   },
   {
     "path": "src/app/_layout.tsx",
-    "sha256": "76debfea0b6a308d5b103847afe63fb30c2fe60dadae6da6d7fd9bbc8deacfaf"
+    "sha256": "1242e9ae7801444e43a2bcf00f843ec0166fff5dcd287f5f4c2945a750d2935f"
   },
   {
     "path": "src/app/avatars.tsx",
@@ -4820,12 +4836,16 @@
     "sha256": "7c6533e4259caa08579defe9ec2777d41cac38eb5d39006eb1db248c72ed2ac2"
   },
   {
+    "path": "src/app/communaute/en-ligne.tsx",
+    "sha256": "0e401015094288b5c58b97800e7172a7e9ea4642ea108b913d989e0cb0f09100"
+  },
+  {
     "path": "src/app/communaute/importer.tsx",
     "sha256": "1477b2cf090edb7984d28984f8dcece247065c7fb8dbaac3afceffb2ef628f1a"
   },
   {
     "path": "src/app/communaute/index.tsx",
-    "sha256": "e50f8d33d4b2ceef24eae5dd8028b765c31eebbf747eb858d45e64ceb69b0ee1"
+    "sha256": "f784ab1484e9c17e90ba51b051a3e810b4210b3a727bc4bb66bebdac47f5f430"
   },
   {
     "path": "src/app/communaute/moderation.tsx",
@@ -4853,7 +4873,7 @@
   },
   {
     "path": "src/components/community/Common.tsx",
-    "sha256": "316aa692479f80b24495b8179a466540d94f3495d68138676b440895149272be"
+    "sha256": "35afba6dff3d158581d56e5604330627fd474a30ebfe0a6fadcae62c7d1f5af6"
   },
   {
     "path": "src/components/community/RouteCompletionShare.tsx",
@@ -5065,7 +5085,7 @@
   },
   {
     "path": "src/lib/community/CommunityProvider.tsx",
-    "sha256": "be0dc6cacea9545f937a6e380546a25cb5b72a4e63fe6072e137425e18b06c04"
+    "sha256": "f641ebe9636a9f79b3e8b87be7e9f916b068942c72f59287aaff89fe56328151"
   },
   {
     "path": "src/lib/community/model.ts",
@@ -5180,12 +5200,32 @@
     "sha256": "5b5a2d503ba31b21b996143cca919cbe386fe0cedfbc4c2812823136616e02d6"
   },
   {
+    "path": "src/lib/supabase/SessionProvider.tsx",
+    "sha256": "ddc38c69d934c5db1e17e4c9f19b98a1e5536b9302511015f1770f348caacf9b"
+  },
+  {
+    "path": "src/lib/supabase/client.ts",
+    "sha256": "f010fd7b65ce8dcaead57838a6495e36b9c8cf44e141623bb1d9d92ad4757959"
+  },
+  {
+    "path": "src/lib/supabase/community.ts",
+    "sha256": "b7b1e85ca69714c50d3efce0bf4e2a5db7470ce06accb1112906edfbe1db5ab5"
+  },
+  {
     "path": "src/theme/index.ts",
     "sha256": "6518b97995667b2e797795c817ee07fa634ed67d7765ef5182440ffa423c0c0c"
   },
   {
-    "path": "supabase/migrations/202611110001_community.sql",
+    "path": "supabase/drafts/202611110001_community.sql",
     "sha256": "3e5102d4eceb656417dd4973948c1744f7b9cd904f1136058d843fdd05f56469"
+  },
+  {
+    "path": "supabase/migrations/20261111163805_vestige_community_foundation.sql",
+    "sha256": "8670936f86aefac790a2818232cfb430952858fb1e9f8f634dec80abb3ca97a0"
+  },
+  {
+    "path": "supabase/migrations/20261111171902_vestige_save_route.sql",
+    "sha256": "d05b79962dd26a6d8199f52d0e2225d71125c302a7d1664bd9fabf449542375e"
   },
   {
     "path": "tests/adventures.test.ts",
