@@ -1,0 +1,44 @@
+name: Importer les POI de Vienne et Lyon
+
+on:
+  push:
+    branches:
+      - feature/pois-vienne-lyon-partage
+    paths:
+      - scripts/import-pois.mjs
+      - .github/workflows/import-pois.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vestige-pois-import
+  cancel-in-progress: false
+
+jobs:
+  import-pois:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/pois-vienne-lyon-partage
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Importer les données patrimoniales OpenStreetMap
+        run: node scripts/import-pois.mjs
+      - name: Vérifier le nombre de POI
+        run: |
+          node -e 'const d=require("./src/data/imported-pois.json"); console.log("POI importés :",d.length); if(d.length<10)process.exit(1)'
+      - name: Enregistrer les POI dans GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/imported-pois.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data(poi): import Vienne and Lyon OSM heritage candidates"
+            git push origin HEAD:feature/pois-vienne-lyon-partage
+          fi
