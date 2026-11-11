@@ -46,21 +46,6 @@ export const PoiClusterMarker = memo(function PoiClusterMarker({
           justifyContent: "center",
         }}
       >
-        <View style={{ flexDirection: "row", gap: 3, marginBottom: 1 }}>
-          {[0, 1, 2].map((i) => (
-            <View
-              key={i}
-              style={{
-                width: 6,
-                height: 8,
-                borderRadius: 3,
-                borderWidth: 1,
-                borderColor: "#E8CD8E",
-                transform: [{ translateY: i === 1 ? -2 : 0 }],
-              }}
-            />
-          ))}
-        </View>
         <Text style={{ color: "#FFFFFF", fontWeight: "800", fontSize: 16 }}>
           {group.members.length}
         </Text>

@@ -3352,6 +3352,10 @@
     "sha256": "9eb8477d50ac028b007ecebff64b0a16531e2206acb80787bccedb9abda97577"
   },
   {
+    "path": "docs/design/POI-CLUSTERING-V23.md",
+    "sha256": "44888bffb09b12021411577923bf117346e76227ecd212967ceeef7543c3190a"
+  },
+  {
     "path": "docs/design/POI-ILLUSTRATED-V2-DELIVERY.md",
     "sha256": "fcd827fc3b2552f6bce4bc4f69a4c695c345dd4fb8b81e15732b043992e1f14c"
   },
@@ -3473,11 +3477,11 @@
   },
   {
     "path": "scripts/windows/update-social-v2.ps1",
-    "sha256": "ad481265d2a270342a959ef9c5031aae54724d1b3c6408e1a56956144a38bde7"
+    "sha256": "8fe4bc545c19e33c76978b1d54adf781c40dfef6cfbfb2ea9f83db281a5923f3"
   },
   {
     "path": "src/app/(tabs)/index.tsx",
-    "sha256": "153a8a85bd1d4d2a11a7272c6966c9d7a145f0469a58538bf1942f4c9668ea20"
+    "sha256": "12be5f95cb3140bfa1bf173f1d5fabd0ee14393f9e0b716c1f1093bdeddf7eb3"
   },
   {
     "path": "src/app/(tabs)/profil.tsx",
@@ -3513,7 +3517,7 @@
   },
   {
     "path": "src/components/exploration/PoiClusterMarker.tsx",
-    "sha256": "c668007dc03dd400b20874574fbec2e72cb8e9d6c23c5d1bb3131a8b8b8479c7"
+    "sha256": "7d8a970bb2f5a9c2092ee51284ec8bf75bf888756e860c03c378a86a6c99763d"
   },
   {
     "path": "src/components/monuments/MonumentBottomSheet.tsx",
@@ -3581,7 +3585,7 @@
   },
   {
     "path": "src/lib/mapViewport.ts",
-    "sha256": "9e9cbd4e9b53801415640fadde0ef53f9ff803fbe482b697421a94d04cbbd6c4"
+    "sha256": "1c3ebebe04e19c046d313119dc7e3a06a006ebb87a7dcb39efe97b5c51d67e29"
   },
   {
     "path": "src/lib/poi.ts",
@@ -3589,7 +3593,7 @@
   },
   {
     "path": "src/lib/poiMapRendering.ts",
-    "sha256": "f0f5c9da5327cc144231d2dcd9b90e90926c62a864cef820afa81eb1921d08ef"
+    "sha256": "153f124c31b116f99c2237e87cefd380492a4697eddd1aa55a3687060a3b70d8"
   },
   {
     "path": "src/theme/index.ts",
@@ -3606,6 +3610,10 @@
   {
     "path": "tests/native-poi-map.test.ts",
     "sha256": "c5c440786ecfc200ac86ae51df23ba3ee8475bb243f0bcf0c663e58f96ccf36b"
+  },
+  {
+    "path": "tests/poi-clustering.test.ts",
+    "sha256": "f5f47fece885451a8b049f6d785966aa2c84776ff6645c024ab02701c3cf5f03"
   },
   {
     "path": "tests/poi.test.ts",

@@ -11,7 +11,7 @@ import {
 import { PoiBadge } from "../../components/poi/PoiBadge";
 import { MonumentPhoto } from "../../components/MonumentPhoto";
 import { useLocalAtlas } from "../../hooks/useLocalAtlas";
-import { viewportGroups } from "../../lib/mapViewport";
+import { clusterTarget, viewportGroups } from "../../lib/mapViewport";
 import React, {
   useCallback,
   useEffect,
@@ -253,19 +253,11 @@ export default function Explorer() {
   const selectCluster = useCallback(
     (group: PoiGroup) => {
       stopFollowing();
-      if (region.latitudeDelta < 0.001) setClusterChoices(group.members);
-      else
-        map.current?.animateToRegion(
-          {
-            latitude: group.latitude,
-            longitude: group.longitude,
-            latitudeDelta: region.latitudeDelta / 2,
-            longitudeDelta: region.longitudeDelta / 2,
-          },
-          reducedMotion ? 0 : 350,
-        );
+      const target = clusterTarget(group.members);
+      if (!target) setClusterChoices(group.members);
+      else map.current?.animateToRegion(target, reducedMotion ? 0 : 350);
     },
-    [region, stopFollowing, reducedMotion],
+    [stopFollowing, reducedMotion],
   );
   const browse = (city: City) => {
     stopFollowing();

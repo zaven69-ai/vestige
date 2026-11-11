@@ -1,5 +1,5 @@
 import type { MonumentState } from "./markerState";
-export const POI_MAP_RENDERER = "V2.2 · images natives";
+export const POI_MAP_RENDERER = "V2.3 · zoom progressif";
 export const POI_MARKER_SIZE = { width: 64, height: 72 } as const;
 export const nativePoiModes = [
   "idle",

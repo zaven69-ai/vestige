@@ -23,7 +23,7 @@ foreach ($required in @('src/components/exploration/PoiClusterMarker.tsx', 'src/
     if ($paths -notcontains $required) { throw "Paquet incomplet : $required. Utilisez la revision du correctif cumulatif." }
 }
 Write-Host "Installation dans : $root"
-Write-Host "Reception de $($files.Count) fichiers de la V2.2 native..."
+Write-Host "Reception de $($files.Count) fichiers de la V2.3 - zoom progressif..."
 # Bounded parallel downloads work with Windows PowerShell 5.1 (no extra module).
 # All network reads and checks finish before modifying any project file.
 Add-Type -AssemblyName System.Net.Http
@@ -46,9 +46,9 @@ try {
             [IO.File]::WriteAllBytes($job.Path, $bytes)
             if ((Get-FileHash -LiteralPath $job.Path -Algorithm SHA256).Hash.ToLowerInvariant() -ne $job.Entry.sha256) { throw "SHA256 incorrect : $($job.Entry.path). Aucun fichier du projet n'a ete modifie." }
         }
-        Write-Progress -Activity 'Vestige V2.2 - telechargement verifie' -Status "$last / $($files.Count)" -PercentComplete ([int](100 * $last / $files.Count))
+        Write-Progress -Activity 'Vestige V2.3 - telechargement verifie' -Status "$last / $($files.Count)" -PercentComplete ([int](100 * $last / $files.Count))
     }
-    Write-Progress -Activity 'Vestige V2.2 - telechargement verifie' -Completed
+    Write-Progress -Activity 'Vestige V2.3 - telechargement verifie' -Completed
 } finally { $client.Dispose() }
 Write-Host "Verification terminee. Sauvegarde des fichiers existants..."
 foreach ($entry in $files) {
@@ -93,5 +93,5 @@ foreach ($entry in $files) {
         throw "Copie incomplete : $($entry.path). Sauvegarde disponible : $backup"
     }
 }
-Write-Host "Vestige V2.2 - images natives installees. Sauvegarde : $backup"
-Write-Host 'Installez la dependance photo : npm.cmd install ; puis npx.cmd expo start --tunnel --clear --port 8088'
+Write-Host "Vestige V2.3 - zoom progressif installe. Sauvegarde : $backup"
+Write-Host 'Verifiez les dependances : npm.cmd install ; puis npx.cmd expo start --tunnel --clear --port 8088'
