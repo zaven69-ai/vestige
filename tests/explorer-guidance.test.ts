@@ -258,7 +258,14 @@ test("Explorer owns the guidance map; the existing contribution pin-picker is pr
   assert.deepEqual(locations, [
     "src/app/(tabs)/index.tsx",
     "src/app/contribuer.tsx",
+    "src/components/community/RoutePreview.tsx",
   ]);
+  const preview = readFileSync(
+    new URL("src/components/community/RoutePreview.tsx", root),
+    "utf8",
+  );
+  assert.match(preview, /showsUserLocation=\{false\}/);
+  assert.doesNotMatch(preview, /useWalkingNavigation|useGame|useLive|Polyline/);
 });
 
 test("leaving guidance clears only the active pointer and keeps the unfinished checkpoint resumable", () => {

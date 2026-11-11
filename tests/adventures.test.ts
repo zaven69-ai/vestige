@@ -183,6 +183,7 @@ test("actual step footer requires GPS arrival for real validation, while simulat
             return React.createElement("button", null, p.title);
           },
         };
+      if (id === "expo-router") return { router: { push() {} } };
       if (id === "../../lib/live/eligibility")
         return { playableAsset: () => null };
       if (id === "../../data/live/vienneAntique") return { liveAssets: {} };

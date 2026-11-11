@@ -60,6 +60,12 @@ export type LiveStop = {
   checkedAt: string;
 };
 export type LiveTour = {
+  community?: {
+    author: string;
+    text: string;
+    sources: string[];
+    status: "community_published_unverified";
+  };
   presenceRequired?: boolean;
   id: string;
   title: string;

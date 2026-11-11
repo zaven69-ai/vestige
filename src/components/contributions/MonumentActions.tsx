@@ -1,4 +1,4 @@
-import { useFocusEffect } from "expo-router";
+import { router, useFocusEffect } from "expo-router";
 import React, { useCallback, useState } from "react";
 import { Alert, Platform, Share, Text, View } from "react-native";
 import type { Monument } from "../../data/monuments";
@@ -96,6 +96,16 @@ export function MonumentActions({
         }
         disabled={busy || !ready}
         onPress={() => void toggle()}
+      />
+      <Button
+        secondary
+        title="Raconter ma découverte · communauté locale"
+        onPress={() =>
+          router.push({
+            pathname: "/communaute/creer",
+            params: { kind: "discovery", poi: monument.id },
+          })
+        }
       />
       <Button secondary title="Préparer un signalement" onPress={report} />
       {!!localError && (

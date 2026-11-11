@@ -128,6 +128,10 @@ export default function Profil() {
       <Card>
         <Text style={s.heading}>La mémoire collective commence ici</Text>
         <Button
+          title="Communauté · découvertes et parcours"
+          onPress={() => router.push("/communaute")}
+        />
+        <Button
           title="Mes contributions · brouillons et favoris"
           onPress={() => router.push("/contributions")}
         />
@@ -141,8 +145,9 @@ export default function Profil() {
         <Badge tone="blue">Prochainement · non disponible</Badge>
         <Text style={s.heading}>Explorer ensemble</Text>
         <Text style={s.body}>
-          Classements et communauté ne sont pas encore implémentés. Vos
-          statistiques ci-dessus proviennent uniquement de votre carnet local.
+          Le réseau multi-utilisateur et les classements restent à développer.
+          Vos statistiques ci-dessus proviennent uniquement de votre carnet
+          local.
         </Text>
       </Card>
       <Card>

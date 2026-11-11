@@ -1,8 +1,9 @@
+import { router } from "expo-router";
 import { AdventureCard } from "../../components/live/AdventureCard";
 import { lyonAdventures } from "../../data/adventures";
 import React from "react";
 import { Text } from "react-native";
-import { Page, s } from "../../components/ui";
+import { Page, Button, s } from "../../components/ui";
 import { TourCard } from "../../components/live/TourCard";
 import { guidedTours } from "../../data/live/tours";
 export default function Parcours() {
@@ -12,6 +13,11 @@ export default function Parcours() {
         Choisissez un parcours. Toute l’exploration et le guidage se déroulent
         ensuite dans Explorer.
       </Text>
+      <Button
+        secondary
+        title="Communauté · créer et importer des parcours"
+        onPress={() => router.push("/communaute")}
+      />
       {lyonAdventures.map((adventure, index) => (
         <AdventureCard key={adventure.id} adventure={adventure} index={index} />
       ))}

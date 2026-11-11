@@ -1,3 +1,4 @@
+import { CommunityProvider } from "../lib/community/CommunityProvider";
 import { SimulationBanner } from "../components/developer/SimulationBanner";
 import { DeveloperLocationProvider } from "../lib/developer/DeveloperLocation";
 import { LiveProvider } from "../lib/live/LiveProvider";
@@ -42,9 +43,11 @@ export default function RootLayout() {
     <DeveloperLocationProvider>
       <GameProvider>
         <AvatarPreferencesProvider>
-          <LiveProvider>
-            <AppShell />
-          </LiveProvider>
+          <CommunityProvider>
+            <LiveProvider>
+              <AppShell />
+            </LiveProvider>
+          </CommunityProvider>
         </AvatarPreferencesProvider>
       </GameProvider>
     </DeveloperLocationProvider>

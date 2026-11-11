@@ -4564,6 +4564,10 @@
     "sha256": "9eb8477d50ac028b007ecebff64b0a16531e2206acb80787bccedb9abda97577"
   },
   {
+    "path": "docs/design/COMMUNITY-MVP-V1.md",
+    "sha256": "5b6518787e8c42f0ced9661065683402f50edbbe26fb52121662b4839dccb3fa"
+  },
+  {
     "path": "docs/design/LYON-AVENTURES-V1.md",
     "sha256": "59487ca5a50e7c74df0d3171cd182bf206bd7808b988e373dd4b7c35f7996fb8"
   },
@@ -4704,6 +4708,14 @@
     "sha256": "eaac316f50444c4ecf99396db7eae444621bb35b852fdbf050f6051c39e9e41f"
   },
   {
+    "path": "scripts/community/check-community-browser.cjs",
+    "sha256": "4780d92a0ce03066b0a15a51d42cac44025dbf3962d899f2e900700197496ac9"
+  },
+  {
+    "path": "scripts/community/check-rls.cjs",
+    "sha256": "04c668471baa888e81593f2a2dd9b08957253575c7e7ca7f46fb436b17f6dd90"
+  },
+  {
     "path": "scripts/developer/check-simulation-browser.cjs",
     "sha256": "1d9e386607d5f3a636df25b320dd72ea703a443f323d8ed99353cd8e93ba2c7a"
   },
@@ -4773,23 +4785,23 @@
   },
   {
     "path": "scripts/windows/update-social-v2.ps1",
-    "sha256": "9926cd898aa7736a52b11854f06fc3ecbdf685139aa15b5ca3e6bd2b2ad279f5"
+    "sha256": "68cc87b7743672f27a234112f0ebf025e2849bfc0143bb0dd9ccc3114eab295b"
   },
   {
     "path": "src/app/(tabs)/index.tsx",
-    "sha256": "d6326411d7f69f883af45cbbe14f8c2848feb9da96a1487242fdc315da45cce4"
+    "sha256": "8da87b05dc63e55ea65692dfac91e5b894d9e6006a2071262b4e15ea69d01061"
   },
   {
     "path": "src/app/(tabs)/parcours.tsx",
-    "sha256": "2be97e534b15479a9673284cf7fb348bfeed8cee9bbfe771e6cbdb6afeb02ee9"
+    "sha256": "b358f0ca28c78043d1830c6d79e1ad09446e380d52f5938b2ed93bb513f16507"
   },
   {
     "path": "src/app/(tabs)/profil.tsx",
-    "sha256": "ccea0f98273e261b335757b19967703174d9ffd63a21a4097c557262c07be28a"
+    "sha256": "faae6e7828ccfd37396b72b873be0e5d299e35ac2321ac600ffff7d8e1c2caba"
   },
   {
     "path": "src/app/_layout.tsx",
-    "sha256": "b127d2f79af8b784ef437fcc5e455e846a909d6addf6ebed35f00fea711a0c10"
+    "sha256": "76debfea0b6a308d5b103847afe63fb30c2fe60dadae6da6d7fd9bbc8deacfaf"
   },
   {
     "path": "src/app/avatars.tsx",
@@ -4798,6 +4810,30 @@
   {
     "path": "src/app/catia.tsx",
     "sha256": "ffc8f8d9576d16ed6f399cc8a73f85d494de04e0cb4be85aed21eafcc2b1c01a"
+  },
+  {
+    "path": "src/app/communaute/[id].tsx",
+    "sha256": "bcb6e37d60a284fcb5f0149504351c6c0ab4ca6bbdf06805e181538dfd0677b1"
+  },
+  {
+    "path": "src/app/communaute/creer.tsx",
+    "sha256": "7c6533e4259caa08579defe9ec2777d41cac38eb5d39006eb1db248c72ed2ac2"
+  },
+  {
+    "path": "src/app/communaute/importer.tsx",
+    "sha256": "1477b2cf090edb7984d28984f8dcece247065c7fb8dbaac3afceffb2ef628f1a"
+  },
+  {
+    "path": "src/app/communaute/index.tsx",
+    "sha256": "e50f8d33d4b2ceef24eae5dd8028b765c31eebbf747eb858d45e64ceb69b0ee1"
+  },
+  {
+    "path": "src/app/communaute/moderation.tsx",
+    "sha256": "650add1723f763a920db0cbe0bc4e33f013a9e97788eee6b533279276d4b5195"
+  },
+  {
+    "path": "src/app/communaute/profil.tsx",
+    "sha256": "78167f32181b29728f641957bec4a03ed1996882f132c79fa1b80cddd251fda1"
   },
   {
     "path": "src/app/contribuer.tsx",
@@ -4816,8 +4852,20 @@
     "sha256": "3367d80c8e66c00aacf3e3c7a314e51762b20d1f43b335562bdd642a82430363"
   },
   {
+    "path": "src/components/community/Common.tsx",
+    "sha256": "316aa692479f80b24495b8179a466540d94f3495d68138676b440895149272be"
+  },
+  {
+    "path": "src/components/community/RouteCompletionShare.tsx",
+    "sha256": "d8c8c1f8204cc88ce41c247344e8723e472c7e97e42879e501b89af6640fbb07"
+  },
+  {
+    "path": "src/components/community/RoutePreview.tsx",
+    "sha256": "cf738af41fd21bee6185b33a1e0dafff7a7a79cb9eab81a4a1b724b19876c539"
+  },
+  {
     "path": "src/components/contributions/MonumentActions.tsx",
-    "sha256": "d148ba11e2b641e6783f3507784da891ea67ed2a5efd36fc4c254fa50ef74227"
+    "sha256": "64549f19a18ad07ee7661caba5a1af3b7c4ad5f4acd946a67e1a5faeca6ca5ad"
   },
   {
     "path": "src/components/developer/DeveloperControls.tsx",
@@ -4901,7 +4949,7 @@
   },
   {
     "path": "src/components/navigation/GuidedVisitFooter.tsx",
-    "sha256": "749eb9bde049b425fa4c35f9673cb9e30800c4d1dd9b77b783e24fecd2cfe29a"
+    "sha256": "76051cf0163b59bd894e9442113bd9d1a13ee1e138acf57fb7ef0b816fcaf74b"
   },
   {
     "path": "src/components/navigation/WalkingNavigationPanel.tsx",
@@ -5016,6 +5064,18 @@
     "sha256": "423cd26e8cbfccce1d872ede4a93d82eed993526d41c172224eb7c8f2c450686"
   },
   {
+    "path": "src/lib/community/CommunityProvider.tsx",
+    "sha256": "be0dc6cacea9545f937a6e380546a25cb5b72a4e63fe6072e137425e18b06c04"
+  },
+  {
+    "path": "src/lib/community/model.ts",
+    "sha256": "58235975fa9cf5b111d15b99ee3071d5bb6a298a5fd31645f6cff9740446f468"
+  },
+  {
+    "path": "src/lib/community/store.ts",
+    "sha256": "49ce7c2775b264d0f06dbb1903ab8e0e9bde0b94f52dcc0b75220bd8689c2239"
+  },
+  {
     "path": "src/lib/contributions/model.ts",
     "sha256": "056b768fbb20413d077d8fc42a66acfb1fb6b82ac751a8bf6bc04321645ef375"
   },
@@ -5045,7 +5105,7 @@
   },
   {
     "path": "src/lib/live/LiveProvider.tsx",
-    "sha256": "49ae105be514774cc50a16cdbbaa9a221d5aeebb371efe7e36bd81e40e0961fe"
+    "sha256": "3a0ecf309af3541e5c325e055996ed53bc0a3ed0b990c1123c30e67b97b48f12"
   },
   {
     "path": "src/lib/live/audioPlayback.ts",
@@ -5077,7 +5137,7 @@
   },
   {
     "path": "src/lib/live/types.ts",
-    "sha256": "5731093fd1f2a74d940b16c8d3a31a2180d511f15082b37ebb7ca590c44b17e1"
+    "sha256": "3435baa5b2c367cf406cd9bbdc66b8ca227a1ff121451e5fb3d8b27942fe8751"
   },
   {
     "path": "src/lib/mapViewport.ts",
@@ -5124,8 +5184,12 @@
     "sha256": "6518b97995667b2e797795c817ee07fa634ed67d7765ef5182440ffa423c0c0c"
   },
   {
+    "path": "supabase/migrations/202611110001_community.sql",
+    "sha256": "3e5102d4eceb656417dd4973948c1744f7b9cd904f1136058d843fdd05f56469"
+  },
+  {
     "path": "tests/adventures.test.ts",
-    "sha256": "5ea849138ef7e5d2d0c87b5de316c93d94266a8492c1070f9daae0922009d708"
+    "sha256": "e290c50aa70dac74ff67d767d5480ada1c1f1b47ac84aa29fed397b4d02e8179"
   },
   {
     "path": "tests/catia-map.test.ts",
@@ -5134,6 +5198,10 @@
   {
     "path": "tests/catia.test.ts",
     "sha256": "aebd514602c978c5b30a4cfc1011f05e058b9cccb179e4ecedd15bd1291cf6dd"
+  },
+  {
+    "path": "tests/community.test.ts",
+    "sha256": "bb716212272d5b03fe1a18e715e1f2fea0b49ac1be8678a8df289e358464c395"
   },
   {
     "path": "tests/contributions.test.ts",
@@ -5145,7 +5213,7 @@
   },
   {
     "path": "tests/explorer-guidance.test.ts",
-    "sha256": "3c30e892b216598d2d96f01ba0a5d64b7851d6543d1e6dd4dfe3f2d2ee82352a"
+    "sha256": "e823ffee3fecd0279271316e7212af57b9116075d3ca8d3bd2bc9b76eb6b24ea"
   },
   {
     "path": "tests/fixtures/navigation/cybele-theatre.json",

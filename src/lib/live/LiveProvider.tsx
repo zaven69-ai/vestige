@@ -12,7 +12,8 @@ import {
   useSimulationMode,
 } from "../developer/DeveloperLocation";
 import { canUseLiveScope, canPersistLiveScope } from "./scope";
-import { navigationTours, guidedTour } from "../../data/live/tours";
+import { useCommunityTours } from "../community/CommunityProvider";
+import { navigationTours } from "../../data/live/tours";
 import {
   LIVE_CHECKPOINTS_KEY,
   emptyCheckpoints,
@@ -56,6 +57,15 @@ function useLiveState(
   simulationEpoch: number,
   initialTourId?: string,
 ) {
+  const community = useCommunityTours();
+  const allTours = useMemo(
+    () => [...navigationTours, ...community.tours],
+    [community.tours],
+  );
+  const guidedTour = useCallback(
+    (id: string) => allTours.find((t) => t.id === id),
+    [allTours],
+  );
   const simulation = useSimulationController();
   const scopeAllowed = useCallback(
     () => canUseLiveScope(preview, simulation.isEnabled()),
@@ -63,12 +73,16 @@ function useLiveState(
   );
   const [previewEpoch, setPreviewEpoch] = useState(-1);
   const { fix } = useGame();
-  const [session, setSession] = useState<VisitSession | null>(null),
+  const [storedSession, setSession] = useState<VisitSession | null>(null),
     [loaded, setReady] = useState(false),
     [storageError, setStorageError] = useState<string | null>(null);
   const ready = preview
     ? simulationEnabled && previewEpoch === simulationEpoch
     : loaded;
+  const session =
+    storedSession && community.ready && !guidedTour(storedSession.tourId)
+      ? null
+      : storedSession;
   const tour = guidedTour(session?.tourId ?? vienneAntique.id) ?? vienneAntique;
   const checkpoints = useRef(emptyCheckpoints());
   const [savedVisits, setSavedVisits] = useState(emptyCheckpoints);
@@ -105,6 +119,7 @@ function useLiveState(
       return () => {
         mounted.current = false;
       };
+    if (!community.ready) return;
     void Promise.all([
       AsyncStorage.getItem(LIVE_SESSION_KEY),
       AsyncStorage.getItem(LIVE_PREFS_KEY),
@@ -114,7 +129,7 @@ function useLiveState(
         const { store, session: restored } = restoreTourState(
           saved,
           s,
-          navigationTours,
+          allTours,
         );
         checkpoints.current = store;
         const preferences = restorePreferences(p);
@@ -131,7 +146,9 @@ function useLiveState(
     return () => {
       mounted.current = false;
     };
-  }, [preview]);
+    // Restore once local routes are hydrated; edits must not reload a live session.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [preview, community.ready]);
   useEffect(() => {
     if (!preview) return;
     const timer = setTimeout(() => {
@@ -260,12 +277,13 @@ function useLiveState(
       );
       setAudioError(null);
     },
-    [ready, storageError, stopAudio, scopeAllowed],
+    [ready, storageError, stopAudio, scopeAllowed, guidedTour],
   );
   const advance = useCallback(
     (outcome: "consulted" | "skipped" | "listened") => {
       if (!ready || storageError || !scopeAllowed()) return;
       const activeTour = session ? guidedTour(session.tourId) : null;
+      if (!activeTour) return;
       if (
         !preview &&
         outcome !== "skipped" &&
@@ -284,7 +302,16 @@ function useLiveState(
         s ? advanceVisit(s, guidedTour(s.tourId)!, outcome, Date.now()) : s,
       );
     },
-    [ready, storageError, stopAudio, scopeAllowed, session, preview, fix],
+    [
+      ready,
+      storageError,
+      stopAudio,
+      scopeAllowed,
+      session,
+      preview,
+      fix,
+      guidedTour,
+    ],
   );
   const leave = useCallback(() => {
     if (!scopeAllowed()) return;

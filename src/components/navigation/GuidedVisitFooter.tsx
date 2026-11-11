@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, ScrollView, Linking, Alert } from "react-native";
+import { router } from "expo-router";
 import { Button, s } from "../ui";
 import type { ExplorerGuidance } from "../../hooks/useExplorerGuidance";
 import { playableAsset, editoriallyApproved } from "../../lib/live/eligibility";
@@ -20,6 +21,12 @@ export function GuidedVisitFooter({
     <View
       style={{ borderTopWidth: 1, borderColor: "#B89B5E", padding: 12, gap: 8 }}
     >
+      {tour.community && (
+        <Text style={s.caption}>
+          Parcours proposé par {tour.community.author} · communauté · non
+          vérifié. Aucune narration automatique de ce contenu.
+        </Text>
+      )}
       {guide.stop.history && (
         <ScrollView
           style={{ maxHeight: 200 }}
@@ -126,6 +133,18 @@ export function GuidedVisitFooter({
           Approchez le repère avec un GPS précis pour valider cette étape. Vous
           pouvez aussi l’ignorer depuis les options du guidage.
         </Text>
+      )}
+      {(session?.index ?? 0) === tour.stops.length - 1 && (
+        <Button
+          secondary
+          title="Partager ma découverte de cette étape"
+          onPress={() =>
+            router.push({
+              pathname: "/communaute/creer",
+              params: { kind: "discovery", poi: guide.stop.poiId },
+            })
+          }
+        />
       )}
       <Button
         title={

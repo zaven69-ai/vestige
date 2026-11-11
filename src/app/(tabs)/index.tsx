@@ -1,3 +1,4 @@
+import { RouteCompletionShare } from "../../components/community/RouteCompletionShare";
 import { useMapCityPreference } from "../../hooks/useMapCityPreference";
 import { miniaturePoiIds } from "../../lib/miniatures/assets";
 import { MonumentMiniatureMarker } from "../../components/exploration/MonumentMiniatureMarker";
@@ -1072,6 +1073,7 @@ export default function Explorer() {
           />
         </>
       )}
+      {!guideActive && !selected && <RouteCompletionShare bottom={bottom + 56} />}
       <ExplorerAudioPlayer />
       <MapOptions
         miniaturesEnabled={miniaturesEnabled}
