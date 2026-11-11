@@ -551,7 +551,7 @@ export function LiveProvider({ children }: { children: React.ReactNode }) {
     true,
     simulation.enabled,
     simulation.epoch,
-    real.session?.tourId,
+    real.session?.endedAt === null ? real.session.tourId : undefined,
   );
   const value = simulation.enabled ? demo : real;
   const story = liveStories.find((s) => s.id === value.playback?.storyId);
