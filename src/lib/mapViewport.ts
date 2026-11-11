@@ -15,7 +15,7 @@ export function viewportGroups<T extends MapPoint>(
   const longitudeSpan = Math.max(0.00001, region.longitudeDelta);
   // Adapt the screen-space grid instead of dropping points when zoomed out.
   // Every visible POI remains represented, but native marker views stay bounded.
-  let cell = 52;
+  let cell = 64;
   let groups = new Map<string, T[]>();
   const visible = points.filter((point) => {
     const dx = ((point.longitude - region.longitude + 540) % 360) - 180;

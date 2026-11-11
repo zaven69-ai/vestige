@@ -58,7 +58,7 @@ import {
   useReducedMotion,
 } from "../../hooks/useExplorerSensors";
 import { PlayerMarker } from "../../components/exploration/PlayerMarker";
-import { HistoricalMarker } from "../../components/exploration/HistoricalMarker";
+import { IllustratedPoiMarker } from "../../components/exploration/IllustratedPoiMarker";
 import {
   ExplorerProfile,
   MapButton,
@@ -408,7 +408,7 @@ export default function Explorer() {
         )}
         {groups.map((group) =>
           group.members.length === 1 ? (
-            <HistoricalMarker
+            <IllustratedPoiMarker
               key={group.members[0].id}
               monument={group.members[0]}
               state={monumentState(
@@ -675,6 +675,10 @@ export default function Explorer() {
         poiFilters={poiFilters}
         setPoiFilters={setPoiFilters}
         visibleCount={visibleMonuments.length}
+        individualCount={
+          groups.filter((group) => group.members.length === 1).length
+        }
+        clusterCount={groups.filter((group) => group.members.length > 1).length}
         close={() => setPanel(null)}
         immersive={immersive}
         setImmersive={setPerspective}

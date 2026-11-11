@@ -19,24 +19,37 @@ Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/zaven
 $files = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
 # Refuse an old differential package that cannot repair a missing V1 dependency.
 $paths = @($files | ForEach-Object { [string]$_.path })
-foreach ($required in @('src/components/exploration/PoiClusterMarker.tsx', 'src/components/poi/assets.ts', 'src/lib/mapViewport.ts', 'src/lib/poi.ts', 'src/components/poi/illustrated.ts', 'assets/poi/illustrated/temple.png', 'assets/poi/illustrated/castle.png', 'assets/poi/illustrated/religious.png', 'assets/poi/illustrated/museum.png', 'assets/poi/illustrated/industrial.png', 'assets/poi/illustrated/nature.png', 'assets/poi/illustrated/other.png')) {
+foreach ($required in @('src/components/exploration/PoiClusterMarker.tsx', 'src/components/poi/assets.ts', 'src/lib/mapViewport.ts', 'src/lib/poi.ts', 'src/components/exploration/IllustratedPoiMarker.tsx', 'src/components/poi/nativeMapAssets.ts', 'src/components/poi/illustrated.ts', 'assets/poi/illustrated/temple.png', 'assets/poi/illustrated/castle.png', 'assets/poi/illustrated/religious.png', 'assets/poi/illustrated/museum.png', 'assets/poi/illustrated/industrial.png', 'assets/poi/illustrated/nature.png', 'assets/poi/illustrated/other.png')) {
     if ($paths -notcontains $required) { throw "Paquet incomplet : $required. Utilisez la revision du correctif cumulatif." }
 }
-Write-Host "Reception de $($files.Count) fichiers de la V2..."
-# Download and verify every byte before modifying any existing file.
-foreach ($entry in $files) {
-    $file = [string]$entry.path
-    $target = [IO.Path]::GetFullPath((Join-Path $root $file))
-    if (!$target.StartsWith($root.TrimEnd('\') + '\', [StringComparison]::OrdinalIgnoreCase)) {
-        throw "Chemin inattendu : $file"
+Write-Host "Installation dans : $root"
+Write-Host "Reception de $($files.Count) fichiers de la V2.2 native..."
+# Bounded parallel downloads work with Windows PowerShell 5.1 (no extra module).
+# All network reads and checks finish before modifying any project file.
+Add-Type -AssemblyName System.Net.Http
+$client = New-Object System.Net.Http.HttpClient
+try {
+    for ($offset = 0; $offset -lt $files.Count; $offset += 8) {
+        $jobs = @()
+        $last = [Math]::Min($offset + 8, $files.Count)
+        for ($index = $offset; $index -lt $last; $index++) {
+            $entry = $files[$index]
+            $file = [string]$entry.path
+            $target = [IO.Path]::GetFullPath((Join-Path $root $file))
+            if (!$target.StartsWith($root.TrimEnd('\') + '\', [StringComparison]::OrdinalIgnoreCase)) { throw "Chemin inattendu : $file" }
+            $download = Join-Path $stage $file
+            New-Item -ItemType Directory -Path (Split-Path $download -Parent) -Force | Out-Null
+            $jobs += [PSCustomObject]@{ Entry = $entry; Path = $download; Task = $client.GetByteArrayAsync("https://raw.githubusercontent.com/zaven69-ai/vestige/$Revision/$file") }
+        }
+        foreach ($job in $jobs) {
+            $bytes = $job.Task.GetAwaiter().GetResult()
+            [IO.File]::WriteAllBytes($job.Path, $bytes)
+            if ((Get-FileHash -LiteralPath $job.Path -Algorithm SHA256).Hash.ToLowerInvariant() -ne $job.Entry.sha256) { throw "SHA256 incorrect : $($job.Entry.path). Aucun fichier du projet n'a ete modifie." }
+        }
+        Write-Progress -Activity 'Vestige V2.2 - telechargement verifie' -Status "$last / $($files.Count)" -PercentComplete ([int](100 * $last / $files.Count))
     }
-    $download = Join-Path $stage $file
-    New-Item -ItemType Directory -Path (Split-Path $download -Parent) -Force | Out-Null
-    Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/zaven69-ai/vestige/$Revision/$file" -OutFile $download
-    if ((Get-FileHash -LiteralPath $download -Algorithm SHA256).Hash.ToLowerInvariant() -ne $entry.sha256) {
-        throw "Verification SHA256 echouee : $file. Aucun fichier du projet n'a ete modifie."
-    }
-}
+    Write-Progress -Activity 'Vestige V2.2 - telechargement verifie' -Completed
+} finally { $client.Dispose() }
 Write-Host "Verification terminee. Sauvegarde des fichiers existants..."
 foreach ($entry in $files) {
     $target = Join-Path $root $entry.path
@@ -52,6 +65,21 @@ if (Test-Path -LiteralPath $oldManifest) {
     New-Item -ItemType Directory -Path (Split-Path $savedManifest -Parent) -Force | Out-Null
     Copy-Item -LiteralPath $oldManifest -Destination $savedManifest
 }
+# An old emitted JS or platform-specific file can override the updated TSX.
+# Quarantine only competing renderers not supplied by this version, with backup.
+$renderers = @('src/app/(tabs)/index', 'src/components/exploration/IllustratedPoiMarker', 'src/components/exploration/HistoricalMarker', 'src/components/exploration/PoiClusterMarker', 'src/components/poi/nativeMapAssets', 'src/components/exploration/MapOptions')
+foreach ($base in $renderers) {
+    foreach ($extension in @('.ts', '.tsx', '.ios.ts', '.ios.tsx', '.native.ts', '.native.tsx', '.js', '.jsx', '.ios.js', '.ios.jsx', '.native.js', '.native.jsx')) {
+        $relative = $base + $extension
+        $candidate = Join-Path $root $relative
+        if (($paths -notcontains $relative) -and (Test-Path -LiteralPath $candidate)) {
+            $saved = Join-Path $backup $relative
+            New-Item -ItemType Directory -Path (Split-Path $saved -Parent) -Force | Out-Null
+            Move-Item -LiteralPath $candidate -Destination $saved
+            Write-Host "Ancienne variante de rendu sauvegardee : $relative"
+        }
+    }
+}
 foreach ($entry in $files) {
     $target = Join-Path $root $entry.path
     New-Item -ItemType Directory -Path (Split-Path $target -Parent) -Force | Out-Null
@@ -65,5 +93,5 @@ foreach ($entry in $files) {
         throw "Copie incomplete : $($entry.path). Sauvegarde disponible : $backup"
     }
 }
-Write-Host "Vestige social V2 mis a jour. Sauvegarde : $backup"
-Write-Host 'Installez la dependance photo : npm.cmd install ; puis npx.cmd expo start --tunnel --clear'
+Write-Host "Vestige V2.2 - images natives installees. Sauvegarde : $backup"
+Write-Host 'Installez la dependance photo : npm.cmd install ; puis npx.cmd expo start --tunnel --clear --port 8088'

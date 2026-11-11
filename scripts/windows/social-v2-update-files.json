@@ -540,6 +540,2526 @@
     "sha256": "c320b26ba40bc537e9dbbc51baa43fdfe770417ddd93d7897daaf7bdea02d21e"
   },
   {
+    "path": "assets/poi/map-native/castle-community_pending-discovered-selected.png",
+    "sha256": "afe315dfb3380f7d1c5a0830eaa6b24dd6a5343f16354d080fafc2880c81e607"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_pending-discovered-selected@2x.png",
+    "sha256": "e27f5e3ab7bc59717ae63d957c85837e21fe7c3af218b2e493dc179ae1c5125a"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_pending-discovered-selected@3x.png",
+    "sha256": "123eb66990eef2d6ca098cd00f5e094832e61d846e091c5ce6e6113a3699a679"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_pending-discovered.png",
+    "sha256": "e7ef695210ced301b23a7bc68dac7d8551fcd2f09fa758d167e0ebbf14bb1767"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_pending-discovered@2x.png",
+    "sha256": "cd86b84614b4a5a6f74677a1fac2ad8aee4e4038b6dd81f44269659e7c0f36f3"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_pending-discovered@3x.png",
+    "sha256": "314ae19380744d4166a136296eec4e1476443740f8b24d11fc31af0503dbb618"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_pending-idle.png",
+    "sha256": "ed9bc97b10cda9754dde8e06da19d32ce06901f1d7bcc6ae6a8d917f01dbc6cc"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_pending-idle@2x.png",
+    "sha256": "cf7d9d93e3456acc228dc6563b580862514837d775644bd1036cd8c4d6742305"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_pending-idle@3x.png",
+    "sha256": "855c1e70aebf712424cc12badafe7fa6de15f99eebfe47de16fe2975a46acee9"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_pending-nearby.png",
+    "sha256": "7e1b10d709147e48377482b125ed742823a6271feb9a0c0cc0faa6d836d8c7c3"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_pending-nearby@2x.png",
+    "sha256": "1202b5bdbfb4e07925e6f7474599f6aac59287820dba064cc1900b4f09308d42"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_pending-nearby@3x.png",
+    "sha256": "855f7e84f17c8cb9fa45964f999740666e19794e552208ccbcd98f40b344bdcc"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_pending-selected.png",
+    "sha256": "d8d8e81cea95c717e461dc9aa71546c447b04ef628d7f191dd788729c168c0a1"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_pending-selected@2x.png",
+    "sha256": "95acbad3781039796be90aec0794af06563dda0e1640eafe829632699dc4487b"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_pending-selected@3x.png",
+    "sha256": "174812863daf7d03e2ff6b6649efcd85f68d0500f15b1ae029b895b746adbc2d"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_unreviewed-discovered-selected.png",
+    "sha256": "1c3fd4d9b731a1c147df9b04d9fff38ab0794b6828a4202dc0a5591644a297a6"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_unreviewed-discovered-selected@2x.png",
+    "sha256": "1ad3aa511c2b509f53c11ae3f4df2d96bcc2987390a0c7457d9409d9ed52ee57"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_unreviewed-discovered-selected@3x.png",
+    "sha256": "05015083e1ae7436eb0bfe133a80af49a455e8d27a2d08a7f245f106a65d98dd"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_unreviewed-discovered.png",
+    "sha256": "612f31bd0f334b7c3b553cb691ad52031ace507f4911c99b5e93b924d20f0acd"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_unreviewed-discovered@2x.png",
+    "sha256": "1abdb8b8d71ecce78ecbb38107d9c8bf999cbe6c54785d4c5ab110bdeaa20dce"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_unreviewed-discovered@3x.png",
+    "sha256": "08585dd1de348c854d2d0a6512dc45206e58c3dd68a46ef2f85b8a22f952134f"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_unreviewed-idle.png",
+    "sha256": "ba76185f79c6f3955bfd5d1e57e23c095d32b4ca25a58bf9df5dbec5678b50b8"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_unreviewed-idle@2x.png",
+    "sha256": "48384ba13d93068efa050f68f10055d0a6ddeb35a69f420ce9b5becad5cdb3c1"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_unreviewed-idle@3x.png",
+    "sha256": "d4c71248e75354eb43141619782bcdb4813333c0b976076ce292c158315441fc"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_unreviewed-nearby.png",
+    "sha256": "7974eb21647c4b99c6236e72168410bab09c0956fcd780b721a7d2f43cd327b2"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_unreviewed-nearby@2x.png",
+    "sha256": "c93b48a20d820e6c9fb02b73e42046b766d349beb77c32e69cd349eca390b884"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_unreviewed-nearby@3x.png",
+    "sha256": "5f48e9f7500672ed3f185b679bb58cd893ac796d27cf7680d8584a2eec5af9d6"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_unreviewed-selected.png",
+    "sha256": "1e1ecf7942f00fa73864b5ab04f7c31cff39475cbf2a42352a1179ad2def282b"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_unreviewed-selected@2x.png",
+    "sha256": "d93881d3dbf276bcf97c6cf526f4321baf812f9fe548040ec0b189a6eca54e8f"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_unreviewed-selected@3x.png",
+    "sha256": "abd673c88468e4923194f2d89977b6bbec6109b772ac323adad062c1c1be5cc9"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_verified-discovered-selected.png",
+    "sha256": "ef9727fee5c26a341834260f88524ad6f3ee4cb3511f0c78d5cc26131ee1bc6c"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_verified-discovered-selected@2x.png",
+    "sha256": "47de4da3e79ee7abf5c007f660341ba540faab0ce3ada84a65dfe418cf1732bf"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_verified-discovered-selected@3x.png",
+    "sha256": "e0ff476a4a725a93a614c865ed2d8567071718fd8c6e127b2728ddb53374151f"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_verified-discovered.png",
+    "sha256": "d4ed54ed8fe7f4afd4112ca506680656827183524eb58c7bbeb81b21a5929e70"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_verified-discovered@2x.png",
+    "sha256": "86650fa262a84dcc7703d1a02d5890cb96959c20c7e7a657decf53be9a831882"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_verified-discovered@3x.png",
+    "sha256": "744327a2a83fd2a60d0d8631a0c517fdf3d355d95be1e16ccc34f30d138ea20b"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_verified-idle.png",
+    "sha256": "d48407ed22efb24d9bb0a9dbba74371e5442077fa0be160aeb49394468b10359"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_verified-idle@2x.png",
+    "sha256": "8b003944b267b899800d9e423d621d727181d20427568a7edf83bc33607e0ae1"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_verified-idle@3x.png",
+    "sha256": "2eb19cb53953a9b5ebf1c42db4ce573cccb0c5598fe2b9ec80ca5b6565fd8814"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_verified-nearby.png",
+    "sha256": "eb0246859d25669a9e52071a25d33472f21be177a6bc743523ba8437eae14db6"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_verified-nearby@2x.png",
+    "sha256": "76532ab2ab4ca9cb99018a7fd8de994cffa0cdcac5a56c3e8a968f17f7450cf8"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_verified-nearby@3x.png",
+    "sha256": "83b6a962f47c42076b16d13b46dac4efa3dbfada0cc6601f008541650e1999e1"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_verified-selected.png",
+    "sha256": "1971cfc100fbcaf8d15101400a8963c9bc324707f8e41be4ce464be6b43e036c"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_verified-selected@2x.png",
+    "sha256": "bf320b663ee5bfb4b7883535c52e5916c696deda70c2eb5e5ea954a582fbfa7d"
+  },
+  {
+    "path": "assets/poi/map-native/castle-community_verified-selected@3x.png",
+    "sha256": "5ea9c286f0b7405eaaa333f9b699f2150229505cd647b8fc7ba8c2b095bc8fed"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_unreviewed-discovered-selected.png",
+    "sha256": "a10fe74c22a276f762a780dc8ddd16f75701a92e121f3d326bba5fb767c03526"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_unreviewed-discovered-selected@2x.png",
+    "sha256": "eae12be8301e2b2564883531a3363eb520226bdd54d39f2561011cff3feeb68e"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_unreviewed-discovered-selected@3x.png",
+    "sha256": "65a422cfd7c72f9943a427f5aae7960a026e0eb4c48e0dc4f65220d631f03ce5"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_unreviewed-discovered.png",
+    "sha256": "965b82c0bcdd5cb18b03d1981d9234e339263efeef618c53452d5e757480c5e3"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_unreviewed-discovered@2x.png",
+    "sha256": "43d200099ca45aa8125c143e151fa26f1e6a2b8ed037a7f81bf62ad0a1d22e20"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_unreviewed-discovered@3x.png",
+    "sha256": "32f8a0a03f4630e73218cb7dbffcf1155ba4dd0e9e005fd56aa81bf539030760"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_unreviewed-idle.png",
+    "sha256": "0ec95a80934c50d4c18726da572d5dcf478835d394258cf9bcae69f8160618f6"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_unreviewed-idle@2x.png",
+    "sha256": "fe5c0122129056bb3b6a42c75daf4c72469edd86b01b28bac5b3434985ef8a3a"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_unreviewed-idle@3x.png",
+    "sha256": "21fb2e8d1f6582364222aea12c6046281e6a6e5cb0a0b7576bb3790278925923"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_unreviewed-nearby.png",
+    "sha256": "0df17ebe2860714f66b589d194309e2273812336894531a0feaa062b633655a6"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_unreviewed-nearby@2x.png",
+    "sha256": "f674473820dd5ae24144a04d594f4f5190c5470cb63423bde5855a952710e05a"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_unreviewed-nearby@3x.png",
+    "sha256": "f7ccaab781a5cebf672a421c70c108a48a564c487e64d34361e66f7145e57293"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_unreviewed-selected.png",
+    "sha256": "59a73d169cc20ab1e61928e3d5ae9bffa46ca65385f5d0ccc2616887e881aa7a"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_unreviewed-selected@2x.png",
+    "sha256": "00a5927f495f8da529eeb0829e16319a83732a9dc7100d821fc8bd37a7b6ebc7"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_unreviewed-selected@3x.png",
+    "sha256": "9f99a58ba523200d86f32a33c0837606c83fc1114b721640634a6e8c64968805"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_verified-discovered-selected.png",
+    "sha256": "9dd9bfcf0b45bec4d72ae778c5d54b88723ccb32cfbc4a6bc35fef3e4ac08fa0"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_verified-discovered-selected@2x.png",
+    "sha256": "dfdd28f70204832535a178d3d3519aa36ae287ca59a63dd6a96d48b05cde136d"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_verified-discovered-selected@3x.png",
+    "sha256": "45e1287f433b3198e447d746abdcc4b88b239f53f453296784fe30751278fe33"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_verified-discovered.png",
+    "sha256": "b2761bce80e0c395ee78ff9d7c64bdef976f01de70072a999b39a9b91311a31b"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_verified-discovered@2x.png",
+    "sha256": "4b7ae30f6184ed64c285a748972ae459068375bb462135e7e119de9fbd93ec7f"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_verified-discovered@3x.png",
+    "sha256": "365bf7e9f9ee66e55ea9ea4d7a117a9dbbc58606b09da0b30758fbe3b4fcc520"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_verified-idle.png",
+    "sha256": "e962a503ca4906f659ff7ec16590570b34a7284d94ba2f345fb9aee89e116c17"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_verified-idle@2x.png",
+    "sha256": "34543ffee8057d9e325648a80b4692b85a7291df231f4cf95d9351704440461a"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_verified-idle@3x.png",
+    "sha256": "72f5594c1257a339a76546676cd0d1944172bc03ccd8f7243fdc9cad3be14e14"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_verified-nearby.png",
+    "sha256": "470169a5e59f0e9eb3d909bc2af566044a797a03c90c81dbd044c5fa15b84c6a"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_verified-nearby@2x.png",
+    "sha256": "429dccb6fe9be71126e4b1933a5db0c112aab9057a9a61c6ce2ccfff3360318f"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_verified-nearby@3x.png",
+    "sha256": "713e96c2d6c328f92f1d7959048ddefde9ee1bb5215cb8674d1e6221708b6a94"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_verified-selected.png",
+    "sha256": "60c9ebea0aee6e0ca0c6bb21de8b8c2e52538bbf1243ab8d2bac99fe247b95cb"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_verified-selected@2x.png",
+    "sha256": "969c4382f1c8c730a7c1515867a02a8bfa8da8c35b24d6368031eb56030fce3c"
+  },
+  {
+    "path": "assets/poi/map-native/castle-editorial_verified-selected@3x.png",
+    "sha256": "d07145d2c4dc5f027690d11965e94cfc85796ebf7d1c49b4b861d148082f9ae6"
+  },
+  {
+    "path": "assets/poi/map-native/castle-imported_unreviewed-discovered-selected.png",
+    "sha256": "b83ef41d7bf2029ed446416b1efd131824e6256e0e03f44bff4551af15762690"
+  },
+  {
+    "path": "assets/poi/map-native/castle-imported_unreviewed-discovered-selected@2x.png",
+    "sha256": "0cc13d43acda7ccd7011ae019e299c8f1bec3161e5ba9f6ee3dce69eb999d577"
+  },
+  {
+    "path": "assets/poi/map-native/castle-imported_unreviewed-discovered-selected@3x.png",
+    "sha256": "bc5a698618f95b8de22f1b05250cdd68812de4a68e924af96a67f499e0ace6f5"
+  },
+  {
+    "path": "assets/poi/map-native/castle-imported_unreviewed-discovered.png",
+    "sha256": "0e51a37760cdd938fa6b0c0fdb882eca46be48486cb126b30db28d83505bbc90"
+  },
+  {
+    "path": "assets/poi/map-native/castle-imported_unreviewed-discovered@2x.png",
+    "sha256": "3f704d9e18d99107056a733df0f54b3fa432ef753c6e574d4c7f86e6b99dba99"
+  },
+  {
+    "path": "assets/poi/map-native/castle-imported_unreviewed-discovered@3x.png",
+    "sha256": "7049db25cb9d39d82b5854306c92ce25f13b4aefdded0e5c8bd21f88e0109280"
+  },
+  {
+    "path": "assets/poi/map-native/castle-imported_unreviewed-idle.png",
+    "sha256": "99be460792ba420b25824ce28f4a5cd4a338f5d65f6e70475133c2581a425ab6"
+  },
+  {
+    "path": "assets/poi/map-native/castle-imported_unreviewed-idle@2x.png",
+    "sha256": "5945bf5f2ece6fc3426139166314db43f0c55028237e9049e6849fd23f418086"
+  },
+  {
+    "path": "assets/poi/map-native/castle-imported_unreviewed-idle@3x.png",
+    "sha256": "c216103b6aa8ba6391206358c945817e5cd4188f8fe2d4eaf19a9f0eec07dd4b"
+  },
+  {
+    "path": "assets/poi/map-native/castle-imported_unreviewed-nearby.png",
+    "sha256": "39fc6716cb38ea0ae94e5457ffa0848374de6e4852476ddb5dbdcc84f63b7776"
+  },
+  {
+    "path": "assets/poi/map-native/castle-imported_unreviewed-nearby@2x.png",
+    "sha256": "967f3543df9b5e623a43be96c24c191fbcec217ffb7912272365e172719cbfec"
+  },
+  {
+    "path": "assets/poi/map-native/castle-imported_unreviewed-nearby@3x.png",
+    "sha256": "862892470995f3197e2c8f276d15fb6099b897b7db939b8a938373c0b461126c"
+  },
+  {
+    "path": "assets/poi/map-native/castle-imported_unreviewed-selected.png",
+    "sha256": "49eba3cd26ea82ccad7c53d3ee09a8456ba9b8ebac33941063be6176520e134d"
+  },
+  {
+    "path": "assets/poi/map-native/castle-imported_unreviewed-selected@2x.png",
+    "sha256": "f8d82062341ca67ce75051f5487ecfffe37e849e427c2907547c6d5f9c7fb420"
+  },
+  {
+    "path": "assets/poi/map-native/castle-imported_unreviewed-selected@3x.png",
+    "sha256": "51b01153859b8cb8312584cc320bf70c1918ae1c8d339122951de9e9db97cceb"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_pending-discovered-selected.png",
+    "sha256": "3708108799bfd569206cce5a0c8e577930ffac193dec294c2b8412f3d5604752"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_pending-discovered-selected@2x.png",
+    "sha256": "88203aa55528688f93536e84188f549a34f6ab748f8f826ddcc40a1137a75c20"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_pending-discovered-selected@3x.png",
+    "sha256": "683358d2e875d140c42c2cdb66c7d29109cfbc04d0f2bb614dc1dccff5b79315"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_pending-discovered.png",
+    "sha256": "bc7814126f4ddb07ce7c6329abe622ccb30b28dbfa7a065e7d3f4f12b3882a08"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_pending-discovered@2x.png",
+    "sha256": "95132b4761a46b619a01402b5023d8d381eff6a0a4f1bc34e26938c427b35335"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_pending-discovered@3x.png",
+    "sha256": "60bad6c8f64f289e86c3e0c37abd9b5781b63bb1b5c043120095c606faa561ae"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_pending-idle.png",
+    "sha256": "0ca1a17c4892ae0ed58a3817a23374e554e5d8ff60b2a394993b4bbc72e2b0e0"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_pending-idle@2x.png",
+    "sha256": "319a50fe77c246454064cc4b40f9eff3a056eada94a6f9a7d2646e078f0928bd"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_pending-idle@3x.png",
+    "sha256": "b8be98d6c25f95759cf7966d84a5286797e839e2fd1871af7bba2e6cbe4c6f53"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_pending-nearby.png",
+    "sha256": "f612d90b90560c38940a7bfe6ecf25cba207274d6cd84c3b3ae0c84211e98c45"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_pending-nearby@2x.png",
+    "sha256": "c836e1bb3d72c2716b9e5e5f4db67d6398ffc6c438e0f55eb399d069caffee75"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_pending-nearby@3x.png",
+    "sha256": "28a15a8575f60350fb5544086a4c3e35db52b2ff31ee1af945dd7c3732b8b4f6"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_pending-selected.png",
+    "sha256": "13c4d2e2095b5c11f5b8c70f43ca48161057883664b319ecb0dff441fe4c2ec5"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_pending-selected@2x.png",
+    "sha256": "6dc580e8e18e7fc88725883bebfba40f8cc646cbb84ee06ecde866cada4743f8"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_pending-selected@3x.png",
+    "sha256": "fa26b150045491ad8bfbaaa97c1971def38205bc6d167318a87df9d86aa4ad66"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_unreviewed-discovered-selected.png",
+    "sha256": "3041cb4c29799c87fc629f194b4afb536972e11340f195df8467142c47f6628b"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_unreviewed-discovered-selected@2x.png",
+    "sha256": "7fcbab1cdf2ff6c1b75ac41d784465037f838357ed91fab9a5c99f4ef74174aa"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_unreviewed-discovered-selected@3x.png",
+    "sha256": "1726df277f294e5a4e0353382e074c93cd42ecc26d4175d196608175f58b1143"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_unreviewed-discovered.png",
+    "sha256": "c59caf7da4147524fcf12d02b87f13c7b7bdc43a6866fea0e31833027107cdaa"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_unreviewed-discovered@2x.png",
+    "sha256": "c8a7315ff3d22df2c9a0e1cbdcf4fed6c4a7dfad9dbfe9bfad2557d6a90d2ed8"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_unreviewed-discovered@3x.png",
+    "sha256": "9e7caa3cb265bc7bb473a308bae1b19299fe098b244a93fa35c4e47a0d1ae15b"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_unreviewed-idle.png",
+    "sha256": "d6e6f478e922728cf099e501f8f3fdfb0e112a46c144515fc1f0f03a6a4874fc"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_unreviewed-idle@2x.png",
+    "sha256": "8020289628ee48e26de59735b64e44d45b93498af92550bbfa598a60fd51aadc"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_unreviewed-idle@3x.png",
+    "sha256": "543a9f6722a3525896b323028a8c386383a0efeb92e482f843a91a01cbdfdf38"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_unreviewed-nearby.png",
+    "sha256": "4440717cf2d04cfb3999ff6458373b3e7746bf7430d6ca204e7d86581bbb35d5"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_unreviewed-nearby@2x.png",
+    "sha256": "c1d38410b390963d7424b5503f6d43d937b094b322210143b475eb6593156140"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_unreviewed-nearby@3x.png",
+    "sha256": "8f56d5f6a588f5e94b2254f59f52eb4abe96159dc1fa37323ddcaf14a905674d"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_unreviewed-selected.png",
+    "sha256": "2e9eaf7e472e5e770c183f5ca5c0225d57c6944c955ade0f8706b1c7e0c22732"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_unreviewed-selected@2x.png",
+    "sha256": "9f64d1cec8f869e2a5b907d0316825b084c704fc48a76017251f0cf4c733d958"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_unreviewed-selected@3x.png",
+    "sha256": "d09d326402ed9ce14f4ade64a178cf45160304af98ce97965fb0a38af5916e15"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_verified-discovered-selected.png",
+    "sha256": "f12bc47a0c1e4f18105f84209ced64df6aa5981c4477e2b4fe6ebdf8b52e38d7"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_verified-discovered-selected@2x.png",
+    "sha256": "893986e4de44f6c5acc540775c3d5ebde0fa3ad7cdb7849f9f1e8ccbd87b35a6"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_verified-discovered-selected@3x.png",
+    "sha256": "0d3fdb642efde6c460c72ea0f7f1a5e52b0de24726e0aef696c3d08f6aa889a6"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_verified-discovered.png",
+    "sha256": "768cdaae8c3750a7e60023e240512efa34e3519f7133fec877949b134e9ffacf"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_verified-discovered@2x.png",
+    "sha256": "d7108ad80be75f2323eb60d780908457736ffac9de7ee5f393214337e8002421"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_verified-discovered@3x.png",
+    "sha256": "3c9b2e618a5e8d7f7b69eb9dd89a46101896f76748e624a790fdf7b12906ab27"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_verified-idle.png",
+    "sha256": "196d8ef8ba5b05b781045677ecd326964ba3ace8a111e5092b3ea652a6d94a6c"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_verified-idle@2x.png",
+    "sha256": "b875dbd39565d44d448e429d1d0d9e193fcf2cfaec9f35fcd3abad7d9cfb5fe7"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_verified-idle@3x.png",
+    "sha256": "2288d67928ba798dd1005e310d4e5e37a7c16c14d5fff0157f3d3dbd7fee3cc8"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_verified-nearby.png",
+    "sha256": "227304eb697fcbdef4b28f2c20753ccac08d7cb93af563f4e3408e86ac289d62"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_verified-nearby@2x.png",
+    "sha256": "ec61a2dc773272ac2c3082fee996d6e4680174f8c563305275785a99635b02ca"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_verified-nearby@3x.png",
+    "sha256": "e718449ee13969d7bc6a96521bf6e242eef84fd41dc89a6b4b8ea5a28ac5d005"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_verified-selected.png",
+    "sha256": "5ff55e198bfd878089a5a033e83db767df49a7ffbf3f7f5545e8a9ddee5912f3"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_verified-selected@2x.png",
+    "sha256": "52b733a5a7158a9981b9ee39af12b27eab619d00ff7354c4ca9781814879ae56"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-community_verified-selected@3x.png",
+    "sha256": "1ca4eca443b5728968f080a7ca12906fc02bc1f780b18f81e76803921f49363a"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_unreviewed-discovered-selected.png",
+    "sha256": "4c68b26daf0ffcff219aeea682acbc16695f1ad37edcff2999330ef4a09f28ee"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_unreviewed-discovered-selected@2x.png",
+    "sha256": "83710a42aabc95316645d1705d4c3a2400bbea67bb55a0af4e01f5994e75ddbc"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_unreviewed-discovered-selected@3x.png",
+    "sha256": "872ba21aac81702f5178ace728d6004cb3a579a0c42d378989ca03d309f655b9"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_unreviewed-discovered.png",
+    "sha256": "230af8b584ba351069cabf8e0ff554e4eba39e38c7349d500a695a2d10897ada"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_unreviewed-discovered@2x.png",
+    "sha256": "8fff2c5423db214f7e8a634efdfb901f8d59b2779a4eebaf3830a5d185e7ec4a"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_unreviewed-discovered@3x.png",
+    "sha256": "4b876c8b44d64f38dbbe1a66d606b183770a640f4f2b72987e703582cb1641ac"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_unreviewed-idle.png",
+    "sha256": "bbe0abe65e98c43462a1ec7284e44b226ddeb65c3e77dad7d1d93aa5d861bced"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_unreviewed-idle@2x.png",
+    "sha256": "7ad8aa4dd6b4aab00d15e56f64a965664dbb1c3ac1e105e7041be14bc56d3429"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_unreviewed-idle@3x.png",
+    "sha256": "07b57a5e843236c0ca0593e6829d5b2022ee71a86a5d29de02bc07f9bc5edc9e"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_unreviewed-nearby.png",
+    "sha256": "43d6d21526896f467da7a1794f2fac2b174476825560c43ce7375c1d4a12d7a8"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_unreviewed-nearby@2x.png",
+    "sha256": "4b6318c567a7a0ae67f78e9c8262961ad4b969bb6a2805cc766ce10b516a88bc"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_unreviewed-nearby@3x.png",
+    "sha256": "7672776bdaf0da17d89800490603f40690e68effcea3d59cb8949dca0be73df6"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_unreviewed-selected.png",
+    "sha256": "141f9a8700acc605860e26f03a0270c49ea021dcba39e06e1dfaa338e275a8e3"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_unreviewed-selected@2x.png",
+    "sha256": "82cb849371a169254770400da453556c6259711066c7a7faacf4829c49da1029"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_unreviewed-selected@3x.png",
+    "sha256": "7f0a2f79368ce47900a756298eeb227f8fc1fd68ad945a6551ef64850159ab67"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_verified-discovered-selected.png",
+    "sha256": "7d534cb7d3ee2bbb06b154f9b2138fb1beca17dba77e74faef9c928424dd0d03"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_verified-discovered-selected@2x.png",
+    "sha256": "79530f6756c043fdb55d2ce89a6840c99ee84491eee06b42286c77784741693f"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_verified-discovered-selected@3x.png",
+    "sha256": "91bb04486bde8d05f71f53a1ba5fb9b76864dc3c023d93e383d4897c1946eb05"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_verified-discovered.png",
+    "sha256": "39199a65e093cf0771e735f436a09c28eddeefb6c821a53d51ced1243adb8ef9"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_verified-discovered@2x.png",
+    "sha256": "17022d2479859874c99caab5aefd06ef3511004939682cb8fdab973758b3cc49"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_verified-discovered@3x.png",
+    "sha256": "1014541794fd28b46d9d5afd820826219b2131e79e362236738beb669cb86a7e"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_verified-idle.png",
+    "sha256": "8e3aab501ebffd6901152b00ef6938834ae5d72e0f16ebb2fe49f7ab62b2fe3d"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_verified-idle@2x.png",
+    "sha256": "0ec3f0f4d22999c10e0e6f96a078ab98a794bb631692169464756cba8a54a00d"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_verified-idle@3x.png",
+    "sha256": "74eb74a000a124de2fe1aa2250f207ca53c6c904d7e78bc9b318901fb968c113"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_verified-nearby.png",
+    "sha256": "4386f940126a344ace4e00e9c9ed6a93fc079e2e275c0e45a9efa6211eaaa4a0"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_verified-nearby@2x.png",
+    "sha256": "d16917d20e50fe8932126bd459dddf2c25ccd652ac89a97b504d09e1cf2fb1b0"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_verified-nearby@3x.png",
+    "sha256": "dcd90d3004fd2fe6473c2e2dcaaef68d2bd69e181c86875946b0ded34db551d5"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_verified-selected.png",
+    "sha256": "b4ecfd8b25626c6fbf82e329c057a5c67bccfb763e55cbfe5b8852114d1b31fd"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_verified-selected@2x.png",
+    "sha256": "7a261af2e7dca8e2ea46edced08064273c96e78504234d83feac8f61dbd76b3c"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-editorial_verified-selected@3x.png",
+    "sha256": "02a283ddee8f82fc53d10bcc945160428b7257173991e13851aba08a3e8cc8cc"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-imported_unreviewed-discovered-selected.png",
+    "sha256": "9c9b62d5a84316b2f3fa06d79d03d960b51fc023ea353840e1fdca7432fb1fee"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-imported_unreviewed-discovered-selected@2x.png",
+    "sha256": "882ca1d2147c87bf7cf57ba90360341f6363147bf157f4b1613580058401f63c"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-imported_unreviewed-discovered-selected@3x.png",
+    "sha256": "b8f547fc954f40f6a52cea75d9078929abc1b733f4983b5ef940401d9ec4f242"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-imported_unreviewed-discovered.png",
+    "sha256": "1da4fefdce40e23955f885b1091dcf66d6c4adbbd2efce538825dcda834954f5"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-imported_unreviewed-discovered@2x.png",
+    "sha256": "7f53b3878b028c6982c4d10fb2598ab9d0fcbc262089b9819bc51e497e71af3b"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-imported_unreviewed-discovered@3x.png",
+    "sha256": "ec1b531dd85ac008557fcbebb6390a8d86db124707fc438d40661c39f06009ef"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-imported_unreviewed-idle.png",
+    "sha256": "e107e7f7a77f17935b4594583c4089518a6ebfc4e34f53780c92fb08f4fce47c"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-imported_unreviewed-idle@2x.png",
+    "sha256": "05a49cbe071d362af4c3dbe3321b198ae4e118e01ec2d53b72da6447106fedb0"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-imported_unreviewed-idle@3x.png",
+    "sha256": "5c8b3f15f2d29d2862efbba80703c7f5a0467369b49177e32fe427082c3a1f33"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-imported_unreviewed-nearby.png",
+    "sha256": "4048b02c27529b603d65d4d39a28713b43ad543ed0418270e9716df7f6a61992"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-imported_unreviewed-nearby@2x.png",
+    "sha256": "cac5e6c16e6a2ebcc15be981391193adcb0111c44801610f7bc8c64933c6135f"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-imported_unreviewed-nearby@3x.png",
+    "sha256": "9df5b7382356cdaa9fcb009034a4a29e0cbf484f95ed8a9fdad004fbdfea8e45"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-imported_unreviewed-selected.png",
+    "sha256": "c46130f2caa4809f5e27f73cdee62ad5c89f308543a2ea3687bdae849d719d38"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-imported_unreviewed-selected@2x.png",
+    "sha256": "77f28db4b65395cb12ec7f7289c1dbcddc706aa806e73887f1d14262a8ab7410"
+  },
+  {
+    "path": "assets/poi/map-native/industrial-imported_unreviewed-selected@3x.png",
+    "sha256": "02542b3d16d812344fcabd1b9c926bd7f57df98b2925a77fba1f6d46c1fc7e17"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_pending-discovered-selected.png",
+    "sha256": "4ac059c2c83f0e3a1202f963a86d3fa1d91beb0b3b88f5204edecc6093a111d6"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_pending-discovered-selected@2x.png",
+    "sha256": "ca3c78602ab0fd8563901459d993932fd0d1651968e5eced2be239588cf39c95"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_pending-discovered-selected@3x.png",
+    "sha256": "f724fb1d71c378d2380099b5be633e26dcc25cec9c5fe6dd51a8a1d6fc8cfddf"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_pending-discovered.png",
+    "sha256": "4616947c21ac092c106b371b24878b5f2b701227319c7ce6388e0e909e3c6f18"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_pending-discovered@2x.png",
+    "sha256": "84c6e67ae80dc8ae4ee3bb6edb8560035e81f317fd1d4d2210a510eba3888f3e"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_pending-discovered@3x.png",
+    "sha256": "b888b32d5ec74476fcfefd3b3ddadf8cab763aa79e5170464eec96bf2cd9bb7a"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_pending-idle.png",
+    "sha256": "3f4a016cfefb8b3a7d124243e728179c423fd6f996241942d18fbd7adc07dc53"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_pending-idle@2x.png",
+    "sha256": "9e122eb8b171e74b26a88dce8e906df9456ad6b348af054e99ed0a79aa17923e"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_pending-idle@3x.png",
+    "sha256": "8b63793ef787d21f9635db7c1fe0d475c2c8d8b3d100cb46027d53ce44f8fd4a"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_pending-nearby.png",
+    "sha256": "6caa153dd6f97655acb75a6b625b78e7da5064d2b03880d9b8a17695f70c5dd1"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_pending-nearby@2x.png",
+    "sha256": "641c07fe1235d5ebf77b5f865bcdff6b4ae037682ce6706cb76661631a68d572"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_pending-nearby@3x.png",
+    "sha256": "389f1177f274d31afa8c42ae41f95155ba7adbb07ed9aad6c3d82dda6e99cffc"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_pending-selected.png",
+    "sha256": "2231788868413d401bd680b6a65483e141527d956d7592f491aabd956947982d"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_pending-selected@2x.png",
+    "sha256": "652d8ce357f15c884c069b11bc42961c054f83b4f72ab8046495823cf3c4ac6c"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_pending-selected@3x.png",
+    "sha256": "c75b15c8578fc9baa45c7d83ab99316fbcf1b91acba3128e707767cc2c6a1aea"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_unreviewed-discovered-selected.png",
+    "sha256": "15c387ab8b775c7243fc077cbef75a4e7bf7e2b977c55ea9f0a6197c63532112"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_unreviewed-discovered-selected@2x.png",
+    "sha256": "d2ae0ff46b8b86c11c2bc00d05b8b6d1fed2dccc3b4bd916778c9afe53e935c1"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_unreviewed-discovered-selected@3x.png",
+    "sha256": "82f5b99af3f9b6774b3422bb40f878b42727f1ebf0fb6b22e9c881d784479bb9"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_unreviewed-discovered.png",
+    "sha256": "c7e10060c8d4a6d4681a5f4dff549e3f796d1e241cf7449fc53d4ebbcc2f1378"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_unreviewed-discovered@2x.png",
+    "sha256": "bb16dbc929577705fd8cf18f6b9957e747048469bf02550a09d77e797d716797"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_unreviewed-discovered@3x.png",
+    "sha256": "d44aea968b7c1b1fdd26cdd07b14bfd0ed65573292e7755c886eece17540cfd9"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_unreviewed-idle.png",
+    "sha256": "d5507b557c6c36bdf47dd87c1f56837b9936174c2457db1c42a09dafef5b52fe"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_unreviewed-idle@2x.png",
+    "sha256": "48d3be911ce99828e0f78dce6c327d3988395e0e72b35bcbe6845f1830fb65fe"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_unreviewed-idle@3x.png",
+    "sha256": "66b915b22021594c6f3ea1aa5980c9a3abf107c1a86a18c8f4fc93e68b9c58a6"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_unreviewed-nearby.png",
+    "sha256": "1b761e7598c2904d3f14bd4c03e52912c21aa3360fead8c45da44f84287b5a72"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_unreviewed-nearby@2x.png",
+    "sha256": "597348ebb01efbc04eee462ed1d12d245fb7c5177d87259081339cd51e919d85"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_unreviewed-nearby@3x.png",
+    "sha256": "59d3ddde27dcc2a11064516cbc36939c6bf1ede58d505fc9df4f9f1697863d07"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_unreviewed-selected.png",
+    "sha256": "be5bf1932dca7a4aa4007e502f43e1ddbb1892350d0115736c83b4abd7a5ff8b"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_unreviewed-selected@2x.png",
+    "sha256": "615eca8dbcc344c7fa2b84874fdaf72b2d22cc966c5a37ecc09a0efd9298c41b"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_unreviewed-selected@3x.png",
+    "sha256": "75280d7e7410f77a5d60826bb95299017c1ad9860326a7ec33a6f2d8708d2e87"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_verified-discovered-selected.png",
+    "sha256": "dfdc23df4af7b943076a298c9078dad11a4d7d23934dc21721686187bf7e3b03"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_verified-discovered-selected@2x.png",
+    "sha256": "a2a75c0de3a17d5e2157ffbbb7e9707798af3210eb1e0a85f4b42e4c7cfcd9cc"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_verified-discovered-selected@3x.png",
+    "sha256": "cd5618246ce5164bcd7e0136d9d1a16bae2c10fdf8a26e79f7a04617d56208c0"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_verified-discovered.png",
+    "sha256": "5d29da2ab6478c925bad42d0411195d05f491106cfdca6d5e2350742a0a9fdb7"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_verified-discovered@2x.png",
+    "sha256": "96701772cd41aaa280e7feb085a9c28319db6762fc35d5e77e10437fd9772fe3"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_verified-discovered@3x.png",
+    "sha256": "be123ae1d003cb1d2f07dc19a310b1b217f0fc11ba8ea42bb4502651eec1f93e"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_verified-idle.png",
+    "sha256": "982c41345049ddd7dfeb9c199c35eed072f4abb0d9ff93561981d0eb4e492041"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_verified-idle@2x.png",
+    "sha256": "4ebe294cf152a2435eca852b2938e2fb237a0d46a146c962738739460e566fcd"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_verified-idle@3x.png",
+    "sha256": "84f871842e8b76c4d313a7315e3fd3db718fa23bc336c6b9aae095bb89a4b0fb"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_verified-nearby.png",
+    "sha256": "e339e1c38bc6c1591d1440697f22feb4897e44aefd2deae981650c5f18d86bfb"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_verified-nearby@2x.png",
+    "sha256": "8f132800e18d350c653f28d0071f6341284e1eb2e0b982fa8051fcc959128077"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_verified-nearby@3x.png",
+    "sha256": "8021926121be5851efa9dd15aff9807f38dfad8720b5e60be06d85242a205c7f"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_verified-selected.png",
+    "sha256": "768c1de6be1d2e716c989ad0806d0a8bdf8fa744196272c868e01c0e591243ce"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_verified-selected@2x.png",
+    "sha256": "e454b3edd025a89d80bb4993796319da460e733f26a9a63079fdd0a89d9b0be8"
+  },
+  {
+    "path": "assets/poi/map-native/museum-community_verified-selected@3x.png",
+    "sha256": "6af1363e010f592546792cc6829d63a4d0a88d4bef98f56bfcd356a18234a414"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_unreviewed-discovered-selected.png",
+    "sha256": "53ffc619153932ba601b5181f4933cdb571c2eb8ee24f0513445929a96912138"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_unreviewed-discovered-selected@2x.png",
+    "sha256": "f1ddf8cfaada8fcc1bda171bba54910184b4297bee0ef632e09df0b576165d2b"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_unreviewed-discovered-selected@3x.png",
+    "sha256": "4aa0dcb015aecab27063a2d257ee9f5640c305e08732c8d1f63d1f9c2028e3c7"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_unreviewed-discovered.png",
+    "sha256": "74df8a74a2d9b44093e0b5beb305b44cebca6f3ffdd2b040a61d71d9e9c6cf64"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_unreviewed-discovered@2x.png",
+    "sha256": "46dcaba64dc7aed32826a0151b95e0d76ce36d45d557c08783503fa3ba659f9d"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_unreviewed-discovered@3x.png",
+    "sha256": "7eafd10d8d147c717cda563972106396012044c33dfcb96fb28cfeb0c6a411c8"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_unreviewed-idle.png",
+    "sha256": "d74521df8b64784d7eb591d4192ed59971ac58e270d4b43065c1abe87ed86c4c"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_unreviewed-idle@2x.png",
+    "sha256": "2bfd1c7ebc62a61ac4e2e2b6f86bda62139cec7945d739949dd842f28fa3242c"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_unreviewed-idle@3x.png",
+    "sha256": "0eda59d17234710cc008299668589b35459adf260fe61c482c5cb783524457c1"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_unreviewed-nearby.png",
+    "sha256": "438276e3c5439e8508978ca83cc0e7abf965945316445e9fa042b26739936683"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_unreviewed-nearby@2x.png",
+    "sha256": "ce75ae786ef57b04a36dc6dcb13d4793952f936f6fad1a0976ccae6211dd330b"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_unreviewed-nearby@3x.png",
+    "sha256": "5807ade2c8fc3792c667592c6d69d562652f9dc7982b737aa8a7591dc38213a3"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_unreviewed-selected.png",
+    "sha256": "0a21a51f5bd10f49ddd70515e504e20dd91caecb347901a9a2ccdf1708b2efc4"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_unreviewed-selected@2x.png",
+    "sha256": "a42099f92a3abeea5fb5a169739bc77bc4b273bcccf6d8eac55d8fba389e7c4d"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_unreviewed-selected@3x.png",
+    "sha256": "9bfdf4daab0506345ca1f3eeb6523b83625ca7609cbfec36facb5d1ef0513149"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_verified-discovered-selected.png",
+    "sha256": "c41c99753a57a7000ae6d39cd7e2bea5c7bcb91c367ba7e302cbe4388feb8d62"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_verified-discovered-selected@2x.png",
+    "sha256": "d095db8d09bc9cdd212886b76a14b3caa142239a174dfc5faa9989f228b943a7"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_verified-discovered-selected@3x.png",
+    "sha256": "395d4f287a5ee8bd5676c20b095d76e61236dc6b29613419deda3b145341b6eb"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_verified-discovered.png",
+    "sha256": "620ac8443ea5efe5e58f47ee0ea170123fc74b57a1bc4c7d571bfd07361d9a2d"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_verified-discovered@2x.png",
+    "sha256": "ef7e79825570a67b1f7fa3a7347d5ca9ef8486d2a65831af673e133a3311654a"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_verified-discovered@3x.png",
+    "sha256": "481a61db35649a5f93eb79ac97373d8006fed5bb4ea67135e5faa3ede4cd4c84"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_verified-idle.png",
+    "sha256": "d8bcfc1b091ab56865cf52442b00a46787eb2a287f1ae88450f1af6ada59d489"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_verified-idle@2x.png",
+    "sha256": "a3b403f4e86c8deb50a451b4beb31a4c910b9b6b8790fe57ce303f0955668fa3"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_verified-idle@3x.png",
+    "sha256": "4183044f3c72553879fc0e8720688226675af9305aa501a765ee5b5ab43463fa"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_verified-nearby.png",
+    "sha256": "7ad872411bedd0c8d483a45297843972b7db4afe897c60b1bfe722a47cc2ee19"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_verified-nearby@2x.png",
+    "sha256": "1a617f4b005382b5d8b303d4072845d147e0846daa1655c12d3d301c471ddbf3"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_verified-nearby@3x.png",
+    "sha256": "f589dccfa548f3583d5d766c06281a4098acee4d0271ef5124a30a57474242c4"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_verified-selected.png",
+    "sha256": "e7721957791055ff578cb46b79d090f881e5a29581d5cddd2a8bb24e915178fb"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_verified-selected@2x.png",
+    "sha256": "5027485c229cba980edd26264d356d54ea725736a4734a4167d89a272a8099a8"
+  },
+  {
+    "path": "assets/poi/map-native/museum-editorial_verified-selected@3x.png",
+    "sha256": "51caeb1a0a757e7377772b6cec0007deb74166cb5c534785f18808fdefa3c5b3"
+  },
+  {
+    "path": "assets/poi/map-native/museum-imported_unreviewed-discovered-selected.png",
+    "sha256": "7137bc74e085f69ed7d8cf12f68c487d0cec0074130a7083fb6f0d9e5b525dbc"
+  },
+  {
+    "path": "assets/poi/map-native/museum-imported_unreviewed-discovered-selected@2x.png",
+    "sha256": "cb1af1ced2c7e4219b5c0250b475a4c47815e3fe0c1845c265afcb1502612656"
+  },
+  {
+    "path": "assets/poi/map-native/museum-imported_unreviewed-discovered-selected@3x.png",
+    "sha256": "bf7c603871ff76fe28d30fa7de634976637884ed474b112deb699418f153293d"
+  },
+  {
+    "path": "assets/poi/map-native/museum-imported_unreviewed-discovered.png",
+    "sha256": "d4a7eb4776e630d466335f4bcea59d1c8afd774cc5d1171b10fb8ba13c0aa8f8"
+  },
+  {
+    "path": "assets/poi/map-native/museum-imported_unreviewed-discovered@2x.png",
+    "sha256": "45a9c3d1074c21e9c89f796bc5c96bff92ee0d6a1efa73d4a5281ba2315a2295"
+  },
+  {
+    "path": "assets/poi/map-native/museum-imported_unreviewed-discovered@3x.png",
+    "sha256": "75c6342a2b65b8604476a39d8761223d1b08ae9c788a5649723d35cf72508028"
+  },
+  {
+    "path": "assets/poi/map-native/museum-imported_unreviewed-idle.png",
+    "sha256": "4917100bb004b4303e6aa5a4342f6e8930872319711a104297153f25d72ee57b"
+  },
+  {
+    "path": "assets/poi/map-native/museum-imported_unreviewed-idle@2x.png",
+    "sha256": "a5c1ea54ff7448fa48992a40828a55b1e1e4d5696570afd2258adda9528889bc"
+  },
+  {
+    "path": "assets/poi/map-native/museum-imported_unreviewed-idle@3x.png",
+    "sha256": "72965a507866cabd592a62d735039e7e3cab204777e2364c238cb31c46fc0b42"
+  },
+  {
+    "path": "assets/poi/map-native/museum-imported_unreviewed-nearby.png",
+    "sha256": "371122ede7a9ad44cc8643924fc86966134d62201e18c4d6580b8c686780b82c"
+  },
+  {
+    "path": "assets/poi/map-native/museum-imported_unreviewed-nearby@2x.png",
+    "sha256": "d75ff3d5119040ed748ef3021c2d931bd94aa04d71bbe804130a4942b0bce072"
+  },
+  {
+    "path": "assets/poi/map-native/museum-imported_unreviewed-nearby@3x.png",
+    "sha256": "0cbc6bd6d292786d310e145679d313f2103a3f44f7451481a18cb6b38a48e61d"
+  },
+  {
+    "path": "assets/poi/map-native/museum-imported_unreviewed-selected.png",
+    "sha256": "ade1b60b5b7374f6c28b021707abad7f32b872ea3132c4986412ade03dd97cd2"
+  },
+  {
+    "path": "assets/poi/map-native/museum-imported_unreviewed-selected@2x.png",
+    "sha256": "6d96d421f29e5de84954005558229b622021756b0893931bcbbcd37b7255790a"
+  },
+  {
+    "path": "assets/poi/map-native/museum-imported_unreviewed-selected@3x.png",
+    "sha256": "e3eea6688e68fa372a237973ad04e7fff87bf443ccc0a5195336830d0b8fcaaf"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_pending-discovered-selected.png",
+    "sha256": "d1fdeb65dc26d70c405b852f82bb04820dc03972e584962d1aa5b3d8b2d9e22a"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_pending-discovered-selected@2x.png",
+    "sha256": "2e0555e200a4412a1f52b55dfbc7fff581a4c34d2ad5459597da77b6d325ec19"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_pending-discovered-selected@3x.png",
+    "sha256": "a967835f750357b7a94a7ed932765758db88a8c7e5e7edb5fb7c479f2ce594ef"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_pending-discovered.png",
+    "sha256": "f392b9444cae2a125a8205d0244e38a32fb428e63ae9fb8e03dee4f0659ef253"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_pending-discovered@2x.png",
+    "sha256": "e7b50c3ff27194070e00887fe7b831b477cd069e9c776375fcc744fd262ce3c9"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_pending-discovered@3x.png",
+    "sha256": "ac0253a54be0aba34f05449b1e24f27d70e48e2ccc29bfe10437ff2f7bf359d2"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_pending-idle.png",
+    "sha256": "be96e4cf381cd8fc3388f020d45e2ab2c10bdba04b9d6715516ef53c83b27a02"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_pending-idle@2x.png",
+    "sha256": "2b081512c8fa1623e89c44c2bee18d6ade2e101a5bcf11e465be7e9c036f0922"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_pending-idle@3x.png",
+    "sha256": "648b71f4dfeb37fd271f5b4fed76fa46d1b8f25948551df7cfd882e2c0918895"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_pending-nearby.png",
+    "sha256": "924c1b853dc2e39ea1ecbdd69adda4d6579320267a0d26718ee3fb59473ee9b9"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_pending-nearby@2x.png",
+    "sha256": "b29158535e1b9688c6f628dc28b0092d1b80ea1fde4bf254963a2b5523d9220e"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_pending-nearby@3x.png",
+    "sha256": "0e737093aad0e9cf424c0fe95dde53f097cc2a6ef5def9c066f7397c4c4a1e8e"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_pending-selected.png",
+    "sha256": "65b99e6e8ad2ad31a81cdd5d9d425e862f5466ecf8a56519dc5c82621d3c72a6"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_pending-selected@2x.png",
+    "sha256": "fe00897834eadd3a29d359e041264549789a905fcdf41b1f6ec4ba8036d6d131"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_pending-selected@3x.png",
+    "sha256": "0055ccd48275848e8ee7463793b5ea9e5804dd2696d56e746a7d9f36c01cedeb"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_unreviewed-discovered-selected.png",
+    "sha256": "a10a59ef035e2593ed25357531b924139f80b30051c9b324e48d32a532303f6b"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_unreviewed-discovered-selected@2x.png",
+    "sha256": "ff3870856fda3bab0328a389298e675370050d06a6fb45e03689ff19adeb257b"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_unreviewed-discovered-selected@3x.png",
+    "sha256": "557d9330d34253dba012689811cb4e6f9c8437325bca5292b76c70223d642f9d"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_unreviewed-discovered.png",
+    "sha256": "5136b956016e8817e6a48db646b8a47179f722640429918e0e4acd6c36d4cc5a"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_unreviewed-discovered@2x.png",
+    "sha256": "7f2a7211f18b2701d2f28971b43e95d8e0830afff4a757d5503c28dc477affcc"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_unreviewed-discovered@3x.png",
+    "sha256": "3d6511429857bfbac353624bf08c1477c2bc6fb9592cb48f145503197de5e328"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_unreviewed-idle.png",
+    "sha256": "90111aacd0ca3873c05bb9cd187328cf0cb03774efc0d54d5e3a3744a14eecf4"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_unreviewed-idle@2x.png",
+    "sha256": "3b9cc90f499ed69b84ec4a2cf00b25dce703832ee1947d8fa8e6d3138fae829f"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_unreviewed-idle@3x.png",
+    "sha256": "5deb625a66d14f3716e83d973f7a255c6611fed772e5ec0f923bbf391776a7ab"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_unreviewed-nearby.png",
+    "sha256": "b2a58fff51ee43b1082c1a37a35af89b1fcf4fbfd32ad60d5db5be67683b6a6d"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_unreviewed-nearby@2x.png",
+    "sha256": "87e63ba3e7afca07b6d493b2490d1356f961516a0f12722854995036a336cfbc"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_unreviewed-nearby@3x.png",
+    "sha256": "e4a51efbe5fa6c24dd4c1c050822f256c7d75ac172766b8a9372b30b0aef38f3"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_unreviewed-selected.png",
+    "sha256": "0ff5c9bc1a7e42a2518fa2b3d3fdde42453a51eb489ebaadc56745df800b3090"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_unreviewed-selected@2x.png",
+    "sha256": "4ef2000479d796c0a84f41e06d91308619ed373fd7771e2e0ba9e16dadc18553"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_unreviewed-selected@3x.png",
+    "sha256": "d9fa2eb0ada0b333cf7cb9dc94452205100dbd0e5680647c655c1985dbad1176"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_verified-discovered-selected.png",
+    "sha256": "2f1db6f870d62c3e2f1f1dd0f83b8bcea71875c3d7fe3f214650a90501a60db7"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_verified-discovered-selected@2x.png",
+    "sha256": "ec0eabd59197a8ef91eaa1fd8ca953c6e82e07cd88e7704e3eed19763db8bc56"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_verified-discovered-selected@3x.png",
+    "sha256": "e418a7b72f5647fecbbd77d5c292fb2f212b148e0b9c42995f314bc765ad00cd"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_verified-discovered.png",
+    "sha256": "54f8a54a2e3056a6854d476786b02df2ead4cc2b4acb181831c4f60a6b0d0191"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_verified-discovered@2x.png",
+    "sha256": "7ef3bd5a9eff78e108f091d53a2ff9b3ba408c29eacdb80439cf79ac9f146bc9"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_verified-discovered@3x.png",
+    "sha256": "a7824f421aa26615f4c705e177b7f06b9dfb7abd38d661a92df4e3babff74d56"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_verified-idle.png",
+    "sha256": "08b6a11d75575f482de20147fd8cf2ff90ac60674248b98955d7c15d4f3a71ee"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_verified-idle@2x.png",
+    "sha256": "6c233d31a843bd1e72e5411c3b42cdc4e91df039bcb9e672cc75e6c6a386a720"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_verified-idle@3x.png",
+    "sha256": "e2bb8e44dbbeb3a90d48247d2106feb671016d44a6c19fdda7290d014ec4d6ed"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_verified-nearby.png",
+    "sha256": "6991dcb7aafa368dcea08357e52a897c0b9ec051c5256308d1446ced854b2e32"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_verified-nearby@2x.png",
+    "sha256": "70bfa2ffaf93bf3ddabb15a7f7df819b5c15950846d029e5bcc8360d24d58697"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_verified-nearby@3x.png",
+    "sha256": "0a493d7fbe599f6c711f135779a006cfa59128823041b93a6c527b27c1935e71"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_verified-selected.png",
+    "sha256": "059aa691bce20b420b3ccfeff2a9ebebe6e935d7f81cab049dd7b24cac9ce43e"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_verified-selected@2x.png",
+    "sha256": "2ddf3df47934067447e8f6d456e79d80f3b70df7962f5baa7ea4f792c9d33aaf"
+  },
+  {
+    "path": "assets/poi/map-native/nature-community_verified-selected@3x.png",
+    "sha256": "d7e121bf8512ae58f1e11e52c2ce6ef4c9d36bed87cfb06b578457d695ca2f32"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_unreviewed-discovered-selected.png",
+    "sha256": "c0630f60c9e1d034169a296199f1f88e971b7deb8db795c87ab4ed1091e9a5de"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_unreviewed-discovered-selected@2x.png",
+    "sha256": "faa4dca4d98162d6f3c5e03af4d1bf1b63872b6fe97e64a26a80a8e56221f47c"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_unreviewed-discovered-selected@3x.png",
+    "sha256": "67c8067f3c1747b179e4782cd5662038b631e9a7094ce8459966a30e8ddf0046"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_unreviewed-discovered.png",
+    "sha256": "67fa005b166d5e73d0c8b19e9de449d5a01609bd58087fba84dcd7b1c7bbc68c"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_unreviewed-discovered@2x.png",
+    "sha256": "d979e885665c30c992911881fee8d26412a51c253290e416a7fdabcc1bd00c91"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_unreviewed-discovered@3x.png",
+    "sha256": "ea3d12fe1344b9594b303ded37b9af3ed3ba80afba6fb62a1bce42f2c906982c"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_unreviewed-idle.png",
+    "sha256": "f32b5920c90cc21475bbdde9a01878956b3b76350f8cfab91646895918349201"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_unreviewed-idle@2x.png",
+    "sha256": "caaa6f7f037446ce9bf4ee668ffde89e17c8a5e303a44b7a120dd0348d68ac9b"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_unreviewed-idle@3x.png",
+    "sha256": "8d34522aaae834b8dbc93e3fabcd4ae9d514ce833cb6f151c68b1cfb691da131"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_unreviewed-nearby.png",
+    "sha256": "bacfd0f2a3bdc937dcf469ecbfa1f2a294d8e84cee8f7d2229c3fc7db1bf23ec"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_unreviewed-nearby@2x.png",
+    "sha256": "ece0d686010eb6ca761926f1374d5a1f2edc27806d8ae58bb4ab785f29ec187e"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_unreviewed-nearby@3x.png",
+    "sha256": "92cd2fb767948a8122152de20d9e32f443a183f33d8bae68e9309e6021c3be06"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_unreviewed-selected.png",
+    "sha256": "8042b0b01590e867518db0a44edc0aa71178f374148cc6e0b29866cf8c5074d7"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_unreviewed-selected@2x.png",
+    "sha256": "26dad16209b2aeaa9fd5b81492dc2710e76dc98dea28e9e438cfad4e89c13457"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_unreviewed-selected@3x.png",
+    "sha256": "bf377dfe6b8dec2943cbe806068d133aa7b4de10b7f486ea638531b13f87d78d"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_verified-discovered-selected.png",
+    "sha256": "42fe3502e355f5912e59c277d4d421d2be6d131d4920f907332ad517a53a861b"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_verified-discovered-selected@2x.png",
+    "sha256": "a4fda8034d36f88d1c3707e09cec3e53a7c343a3470fc4b6168b127f84e36a3d"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_verified-discovered-selected@3x.png",
+    "sha256": "155b964145f7c3ebd246d12e1796a0c03fe0ae88e35d3f7c093b5aa442d7b849"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_verified-discovered.png",
+    "sha256": "33ebd274270a65d26eac80643fa71cef80939cd242ed6c31fa32bee921d0d83f"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_verified-discovered@2x.png",
+    "sha256": "620d90f2f0b8254dd2414eeddcbe577ea22da38305c25972752bc88e064dac3d"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_verified-discovered@3x.png",
+    "sha256": "10ec7d7b62e8ac003aafe878b862c8717df8160e3946649633ea376629e12269"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_verified-idle.png",
+    "sha256": "1df5002c2b73d20bb79bc8033072dc4428b5bf6a838880dd3fb92dc843427834"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_verified-idle@2x.png",
+    "sha256": "1cf15929f2de05fc1cdec50d8fda34cf7d44c6ac63e56db1105a2c5e7fb3e8dc"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_verified-idle@3x.png",
+    "sha256": "3e64f6870c7ba5bf358ae1e0e665de24e1f44fecd72ae1c3295abd59f8a9edca"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_verified-nearby.png",
+    "sha256": "39c52211bf3430eba11ec44b84238483fbba8497b638822d5f425b5d1b001c16"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_verified-nearby@2x.png",
+    "sha256": "2270747ea709c69886780b606dcd55ceef427b589c205ffa47fa3987b194ee53"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_verified-nearby@3x.png",
+    "sha256": "d8c472b1dcd9c5db4e099cca543ce7b012d083d7944b44909310a1cd795b454a"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_verified-selected.png",
+    "sha256": "4043211d2d9261dff43cf46a0970c53a9c54d6cdd3cf7a702d5d198e3b69e660"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_verified-selected@2x.png",
+    "sha256": "84af4bae5bbd1304364779dc2a706acae395bdc3b631275f12d694950c900618"
+  },
+  {
+    "path": "assets/poi/map-native/nature-editorial_verified-selected@3x.png",
+    "sha256": "34f0f9f548e6dffc36e78456a71e7c0f45e202fe03eb22f2732d46c46954a831"
+  },
+  {
+    "path": "assets/poi/map-native/nature-imported_unreviewed-discovered-selected.png",
+    "sha256": "50fe1baeb342d703b7adf96ae707ea5fe25f8b8509858fc8f6839396b0b49c62"
+  },
+  {
+    "path": "assets/poi/map-native/nature-imported_unreviewed-discovered-selected@2x.png",
+    "sha256": "30f775e562baf174e4c3dc10eed4471dedf856d4e9d3a57eea0fe0313b4dc938"
+  },
+  {
+    "path": "assets/poi/map-native/nature-imported_unreviewed-discovered-selected@3x.png",
+    "sha256": "c527a2a9afedf489fdd8cd7d0d0cf7b26350d3f5ebf0fa41588b206b17549ca1"
+  },
+  {
+    "path": "assets/poi/map-native/nature-imported_unreviewed-discovered.png",
+    "sha256": "96f437533b8be9e90131541eee6d69fddc7943698945bcdd0444f122a64fbe3c"
+  },
+  {
+    "path": "assets/poi/map-native/nature-imported_unreviewed-discovered@2x.png",
+    "sha256": "38399e2d1438412f820df1ed61e3e4714fdb7a117829934a7f8fdfb0f71bef1f"
+  },
+  {
+    "path": "assets/poi/map-native/nature-imported_unreviewed-discovered@3x.png",
+    "sha256": "8ae4bc5306a6ddc911b4777154a53fc5004164220988f3d878f3cbbdc61f81ff"
+  },
+  {
+    "path": "assets/poi/map-native/nature-imported_unreviewed-idle.png",
+    "sha256": "5f2a4db6c6538da4294075752f44c228e7a338e2d7a45753489e81f3b2a9ad10"
+  },
+  {
+    "path": "assets/poi/map-native/nature-imported_unreviewed-idle@2x.png",
+    "sha256": "e2a5d89e89e2faa5205afc0c1f8fa0abcccdc80d953b15f1fe7ad0ae4c6af323"
+  },
+  {
+    "path": "assets/poi/map-native/nature-imported_unreviewed-idle@3x.png",
+    "sha256": "42e49d05660d3b21a8e4fc53aa52626cfb5fc35c3f951842ea89bb2951453b4c"
+  },
+  {
+    "path": "assets/poi/map-native/nature-imported_unreviewed-nearby.png",
+    "sha256": "c91f34a7f066687e483e612187fe9727c297a5ac00ea2fe4ebc0d87216ad6b2d"
+  },
+  {
+    "path": "assets/poi/map-native/nature-imported_unreviewed-nearby@2x.png",
+    "sha256": "7f80d299690129bf0d3a3224e16e1767dfb5517865af8c6b8871f18ec5933afd"
+  },
+  {
+    "path": "assets/poi/map-native/nature-imported_unreviewed-nearby@3x.png",
+    "sha256": "223ce7d799a8a934d7ba043233201dc4649d6cf3bf161de1118682027ae52e44"
+  },
+  {
+    "path": "assets/poi/map-native/nature-imported_unreviewed-selected.png",
+    "sha256": "afc777fd48c995e2910596e0bafb3bca7accfa1d839b7a964445f92db8a9a03a"
+  },
+  {
+    "path": "assets/poi/map-native/nature-imported_unreviewed-selected@2x.png",
+    "sha256": "e9f6883b58644c0175e03fd1d49787a43c86937b1211b7bec3a1562788014781"
+  },
+  {
+    "path": "assets/poi/map-native/nature-imported_unreviewed-selected@3x.png",
+    "sha256": "841bb84936e7c49009c449d7641471e2f3dadd42a20f4496314988488a35902a"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_pending-discovered-selected.png",
+    "sha256": "56f5586ea3f392b4dad70d9111f61b0e02d9693b271a140c6351718e3949c5b7"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_pending-discovered-selected@2x.png",
+    "sha256": "e936b0dcdc037755f17c33a1796fada3c825c7bfa6c7bc48a1b8da99d1458435"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_pending-discovered-selected@3x.png",
+    "sha256": "a48bd1f914078cd18b139800dfa96ba7c34526a712c8ab78f45871fb9732b68f"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_pending-discovered.png",
+    "sha256": "778548318e5de44b9bbef0b21931d5b4d2088fc02be0eb4fe2a37de16c846b3b"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_pending-discovered@2x.png",
+    "sha256": "3f91b0fa03e96ad2e0a1a39ae55e627fbaaf08b3a54381f22685bbe15f60276b"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_pending-discovered@3x.png",
+    "sha256": "2aceb44638080c78af8b2dda6bbc35b7f7b9d558b44162dfb991b6f63ba69d52"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_pending-idle.png",
+    "sha256": "cd40fc9ec4a2ed35727291c9d42907934c500d223f05db31eb3f80e60929b567"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_pending-idle@2x.png",
+    "sha256": "a638bfa7e79906b54ba5776fa258b7b7a9d35df2e67e31f30a97e73389c80ba9"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_pending-idle@3x.png",
+    "sha256": "7ee6b0fe6877f3d5c7cfbb2b076c5de6ac2e7da653aac1af9da51170400a21f2"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_pending-nearby.png",
+    "sha256": "4582968212aab5e2c1fd5678902152cbdd7f9be218709bc78f72a9e3baf2ec76"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_pending-nearby@2x.png",
+    "sha256": "b9294c590cfeedb0e5b7d0eaa0e41bff7f665a1d6e465ec8e0e935f79f5edf66"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_pending-nearby@3x.png",
+    "sha256": "16f437dec646960f3eeaf000dacfe0dc8d9451128db51c75bd2139705379c5ea"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_pending-selected.png",
+    "sha256": "661144d91bc78fc16071801505dbd241b6df04888489c18110f72f27572fad31"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_pending-selected@2x.png",
+    "sha256": "481fc580aa3c0dd03a9a7a48692a3edb386aa07803e9309db505ab6b537bb4b9"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_pending-selected@3x.png",
+    "sha256": "c9be8fe5b98230f9fd3a21144448c53a82fbf0527fd9e06f4df849cbeb6f7eb1"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_unreviewed-discovered-selected.png",
+    "sha256": "a5274eaef7c6ff140203540a3fe2ebcefe000884dbb6efa58ffdd7b5f1dc786a"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_unreviewed-discovered-selected@2x.png",
+    "sha256": "91f849730329ef78703cf12079f149ac1710038e904a51177b529964152d38f5"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_unreviewed-discovered-selected@3x.png",
+    "sha256": "a54be4342b521ba4e3b00442765fd9ac9658ca948808ea7fc375d2a6be75c258"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_unreviewed-discovered.png",
+    "sha256": "68babaf5797b3a3eea4761836d4670c240fe8da97c0ea460c051e4c517799348"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_unreviewed-discovered@2x.png",
+    "sha256": "e77f75735fca2d049adb7f4acbdf618ded1b0a342e41ad22614ef76aa7749f51"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_unreviewed-discovered@3x.png",
+    "sha256": "af4e401d2b17c27b74ded902412e2feeaabbe6d0b81940de046135160416f052"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_unreviewed-idle.png",
+    "sha256": "f67a2d7eff6c206b110acb30a1d6e95aae4cd803c4e7be638e349e07a6836422"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_unreviewed-idle@2x.png",
+    "sha256": "a3b4535548b67b645d2d61e618f6f224d415dd0a94cf90ea6a76d6e836f7aa13"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_unreviewed-idle@3x.png",
+    "sha256": "16ba4304be841c2937139a0947d7b446950ce34f3b8e9855bb51af1b8e78412d"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_unreviewed-nearby.png",
+    "sha256": "6b0cbf045d1fedb07d8194ae1174220dc5902562ab9f1e711632fd4737ce8a7f"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_unreviewed-nearby@2x.png",
+    "sha256": "d6cc99aa4d4bcc4ac6c9d59502986533ed5419c92b7fcb6507bb3325434dfdbd"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_unreviewed-nearby@3x.png",
+    "sha256": "a4d4b3369bc6cf4c4381b0e019d9e0dcf62598e417962d8296a45362b94191ac"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_unreviewed-selected.png",
+    "sha256": "8fa8b5f86fcc65d8fdd583114b2bb64e559962ddd3b2d6be19ca6e53d64964d6"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_unreviewed-selected@2x.png",
+    "sha256": "f6013f3ed5e08fdd92932fe93a2dfb4bc78622865ceb0fe2bf784a9ed62c5855"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_unreviewed-selected@3x.png",
+    "sha256": "3754367b24c92d39fa7c6763c8d5314b72f710f8879ef53142bd83fb807d8b89"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_verified-discovered-selected.png",
+    "sha256": "a593895a86b86ff30deed3e9e84f606d498c5119d9cd462a9524c8b82b69cbc8"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_verified-discovered-selected@2x.png",
+    "sha256": "49b41d857697f9320fa9de0fc9f2832dafb39699a077068a8631daa1dafbe27c"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_verified-discovered-selected@3x.png",
+    "sha256": "57f3a229d33088822351c84c63779aaf95f750fd7738a1eff2025999198a9a26"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_verified-discovered.png",
+    "sha256": "71f2f3043a292de539bf38cd00a36f26850e2290b365397e84770339883b97c3"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_verified-discovered@2x.png",
+    "sha256": "fc13d5c766c95ee1053e5ca839a42c9125f2c1549dbb8785ac8fa1100d18a58d"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_verified-discovered@3x.png",
+    "sha256": "db5ccc74402f0efe45cf162b20f21ddcc4fb4de048f50bb3aa3df68448eb61fd"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_verified-idle.png",
+    "sha256": "f90be488c7f665e871920d67c604112a32dd22c1416a3c11b22ab7ff5837b88c"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_verified-idle@2x.png",
+    "sha256": "b2ecf00ec7c4aff185ac930b93f621e9c303fcff724b5bcd850b17ac00a4736f"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_verified-idle@3x.png",
+    "sha256": "f141bafdf9862d78920967116a362b07f1fe0a40c5c40017d8146c049238b06d"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_verified-nearby.png",
+    "sha256": "5cde5a4d978603d6091f4afdbd8d0eecc9f1d88bf9b5d7539d82cc817d5224fa"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_verified-nearby@2x.png",
+    "sha256": "54ff910ec0ce6619ad8d83fa154012e87cb6a602fde4c373d6535fa4ab80571c"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_verified-nearby@3x.png",
+    "sha256": "aba6fe51d3ed32543f01c4f37c10f3d6f1142a4d104c340927aac7f31c662f42"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_verified-selected.png",
+    "sha256": "f140466f3da9f1631c3cbe400c4a4cd2beb3de394d7f1fabcfe6b69cc4c21411"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_verified-selected@2x.png",
+    "sha256": "bc868d07ebf0ae73374ca3e9f38d16ef2bbbf04223f47399a35bd2d46a222fc1"
+  },
+  {
+    "path": "assets/poi/map-native/other-community_verified-selected@3x.png",
+    "sha256": "7d26473e0c820b99313630ff6e43ba82da4af141e8fa9591d35625fd2d9b3b6b"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_unreviewed-discovered-selected.png",
+    "sha256": "dfecd51a23671e1aef13a77bd60782ad77243e6daeb7f660e956102309a45cd0"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_unreviewed-discovered-selected@2x.png",
+    "sha256": "5134e9800ca0ae2b1b8c6d4ccfe96c6662cec221580482c80c31318931c6015d"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_unreviewed-discovered-selected@3x.png",
+    "sha256": "53f570c5b3d613f823c64c66d766845bff31577f18e2bf761ef1ae623a7b04de"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_unreviewed-discovered.png",
+    "sha256": "409f8e9e773f2663ca358fad3817d2c8176ea260241b74c0d0d81f5d6619afd3"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_unreviewed-discovered@2x.png",
+    "sha256": "57e7c5af257445c9780e3f66164da6b4914776139e484bb9dcbbf7b847fc8480"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_unreviewed-discovered@3x.png",
+    "sha256": "e23ae4403733953a6559caeb63358e15b1378895a2f7dec22196566a690fb72c"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_unreviewed-idle.png",
+    "sha256": "85f4ed2559f487aa1ca2ed37431781c9fc4648f2726c2f8dcdabef4a193c6abc"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_unreviewed-idle@2x.png",
+    "sha256": "986f98311a2cdca433cb2b52fcef3ac5c9776a1b2529e0f5985eaa226e00caf1"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_unreviewed-idle@3x.png",
+    "sha256": "235beca250ec40c0b321a8f6ab91541758f093be5d6ff8b5d1ec539adff7469f"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_unreviewed-nearby.png",
+    "sha256": "3d56f0377179008a45241715407e1df7420886e262316b20680c87863d1e2981"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_unreviewed-nearby@2x.png",
+    "sha256": "13c37dfb9d3bad3b84a2ba80d634802b1e60057b56b3ba410a40d7bd6a2eebbf"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_unreviewed-nearby@3x.png",
+    "sha256": "c36e81edbc0781085170924001cff868bd82ded88329fbe247ab3625aa24a223"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_unreviewed-selected.png",
+    "sha256": "f821524ddd9364852701f53f8df2c0fceb8de07f1e4e80aaadcec4cf051ee0ac"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_unreviewed-selected@2x.png",
+    "sha256": "2d52c1f1045c1c6d1bf7832a4873bea8c330a42090464561d90f0da107e76f1a"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_unreviewed-selected@3x.png",
+    "sha256": "9c018be3a27b7991038a7f5613d549bf1d4320990ecf6d640c59850d31c6eccf"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_verified-discovered-selected.png",
+    "sha256": "cc1e8f6748ad4c84450b8a99962b94f8f53ab9bbe2a15a464fb0cc5f228b31ce"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_verified-discovered-selected@2x.png",
+    "sha256": "18aa08bb8e1995b8112111ae5e828c0a370095855e1f304e8c2938b57eb5f626"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_verified-discovered-selected@3x.png",
+    "sha256": "62a6f15a002ceb7d410b7afc3b8a639bbcaa7719464be04271c9a3c4752f6645"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_verified-discovered.png",
+    "sha256": "8c1602a72e02d80397206c6cbbfbdc1b6d251972035d8b40d47a96ed3e0870f2"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_verified-discovered@2x.png",
+    "sha256": "e104f1d1a89aa1913f2100f4ff683e8de8fef6e81af4a74051e401e40d48b045"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_verified-discovered@3x.png",
+    "sha256": "bf3fb73e464a51e1ba84ef0b2b128fc354eff16bf5e15a7c25e2a43736bd18c3"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_verified-idle.png",
+    "sha256": "d820d03c0af246e13ba661334b750ccdbfb3ada12df324087b147a3e25bc7bf3"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_verified-idle@2x.png",
+    "sha256": "f4d0f9b9d2a70d6f6a586aab8c41a11051d098cf015606ac4b43692e9438581a"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_verified-idle@3x.png",
+    "sha256": "80af3f41e068a0a1dc4eba6b0d8c1f9d3845fcf6c85d093c88dd15a616afd7ac"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_verified-nearby.png",
+    "sha256": "982f882c392f176e291f98d28e89ea1f39e57997999124ebe5ec1fe56270584c"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_verified-nearby@2x.png",
+    "sha256": "a8adf95c63dfa155d31b7a93dac003e917fcecded29b18e17c31f36b9027a95c"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_verified-nearby@3x.png",
+    "sha256": "ca038482e874a0c890f18b3132f2e29775944ba200073456258ccb9e9d35b4bd"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_verified-selected.png",
+    "sha256": "b7be2012e8f5405e921fe43d407652ff492249cef1b7b1a8ae84ace38856bf2f"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_verified-selected@2x.png",
+    "sha256": "1f0d07462a458168ad7c6a1edf95a2527c4448723c3e2ea48eb8714b999c2df3"
+  },
+  {
+    "path": "assets/poi/map-native/other-editorial_verified-selected@3x.png",
+    "sha256": "79c8bc6130911e5d4bcd7a66e4abb7ba082953a6ad0e053aec80ca5ab35b0a7f"
+  },
+  {
+    "path": "assets/poi/map-native/other-imported_unreviewed-discovered-selected.png",
+    "sha256": "605661e2c88324dcb5b9a5e24b7251e98cedff641cbe7be42ca16469692a7d4b"
+  },
+  {
+    "path": "assets/poi/map-native/other-imported_unreviewed-discovered-selected@2x.png",
+    "sha256": "bb43e566d7d616ad8fc215d51d67924aff1cbf5d1b1271d7024c25814b97986c"
+  },
+  {
+    "path": "assets/poi/map-native/other-imported_unreviewed-discovered-selected@3x.png",
+    "sha256": "743f0f28932340cca4ea1c190d00b29abd71aacb9142776697b6bbedfc72734a"
+  },
+  {
+    "path": "assets/poi/map-native/other-imported_unreviewed-discovered.png",
+    "sha256": "18f40ab03db44c726bda6a8b4dd22a4214cdf47e8c2be51e4e9812b3713d6e38"
+  },
+  {
+    "path": "assets/poi/map-native/other-imported_unreviewed-discovered@2x.png",
+    "sha256": "3763b5e681c537eff1596a5077dc23c5bd6ad1b1420f77e2162f7af44a228392"
+  },
+  {
+    "path": "assets/poi/map-native/other-imported_unreviewed-discovered@3x.png",
+    "sha256": "66204b9c4ce280d8fd2aff85228bb9e12c395499b607ef77f2d2d93d9fb8d287"
+  },
+  {
+    "path": "assets/poi/map-native/other-imported_unreviewed-idle.png",
+    "sha256": "182bd999f50bbf62799cfab181c1305b3aed573bf86c21fba884a765bdc10076"
+  },
+  {
+    "path": "assets/poi/map-native/other-imported_unreviewed-idle@2x.png",
+    "sha256": "4bbd4f5044dbfe597aec8ccaca188fa473a9673eea085c4bb8aa4f94c513230b"
+  },
+  {
+    "path": "assets/poi/map-native/other-imported_unreviewed-idle@3x.png",
+    "sha256": "47dec197d1c5467307d417c745142294544407ec3da1472179c05c043f81f658"
+  },
+  {
+    "path": "assets/poi/map-native/other-imported_unreviewed-nearby.png",
+    "sha256": "77cc248989a949e9046898e418996530492e198cd691cb7cdcce7c5ee57f04fd"
+  },
+  {
+    "path": "assets/poi/map-native/other-imported_unreviewed-nearby@2x.png",
+    "sha256": "93b9bd3d196e758e43ec617508dd527928efec9c2bef68aba1f34e24de54d442"
+  },
+  {
+    "path": "assets/poi/map-native/other-imported_unreviewed-nearby@3x.png",
+    "sha256": "117f818b58c42ae33c844cb1bc59b03ce6d27aad834058c5232fc25d180afc24"
+  },
+  {
+    "path": "assets/poi/map-native/other-imported_unreviewed-selected.png",
+    "sha256": "fdd4a717430666df2a150fa873d3467bbb5cf01511cce5903aca31671a79dd11"
+  },
+  {
+    "path": "assets/poi/map-native/other-imported_unreviewed-selected@2x.png",
+    "sha256": "dbfa5f3e49bb4330543f7b57818143cec5cd89014fcb19422a3ed14471bcd7c4"
+  },
+  {
+    "path": "assets/poi/map-native/other-imported_unreviewed-selected@3x.png",
+    "sha256": "9fd0ddd8b7bb7923a517e118b12f0ac2a5a33d99566e681071a4cc1e2015c74b"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_pending-discovered-selected.png",
+    "sha256": "87689950816727a710c1b17ff2c1d8ad6989a7b0b511ea46bad29ce2fb00446f"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_pending-discovered-selected@2x.png",
+    "sha256": "767addf75e61912fdf95b073f5c0451e183d00d97fc04a156a913932184da49f"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_pending-discovered-selected@3x.png",
+    "sha256": "b906127faf6d51e31f51ff7b5735950e733c5b005e2e891326fcfb4c9aec922e"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_pending-discovered.png",
+    "sha256": "d9189cb98123a9ebc96f4dfb3ba53e49225fdcb14476e337aea1249af795a6ce"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_pending-discovered@2x.png",
+    "sha256": "3b2e158def7c286e6bcfb5388437423093d11d44cb1bed4f6e64fb36943fe8cf"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_pending-discovered@3x.png",
+    "sha256": "caa062ea46a25e7f97e55cc8adda382da6d14838f382c3c793f37e30087ec7c9"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_pending-idle.png",
+    "sha256": "b6f1c693303715d38f8ad9084e4003962f290e7062e03d5b91760c29867d743a"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_pending-idle@2x.png",
+    "sha256": "e8d7d3720db7dc46989500a779d1edb776eb403432ac8689e65cc28c7560ecd7"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_pending-idle@3x.png",
+    "sha256": "5dbf2b49bb84f3a6c7ab5c9e2046de8f0e83a2f089afbcf739795d1ca44c3578"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_pending-nearby.png",
+    "sha256": "922b5c1ddda208788642e389cd0f6c2df191bfe72272696eeeb027d562d8bd78"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_pending-nearby@2x.png",
+    "sha256": "a28c2b1632914c8a11d397d46c7789aa54d54e92f91da77b20886c1aeb8556f6"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_pending-nearby@3x.png",
+    "sha256": "1677ad3df2b66d66d8157d28db7305b50174a82342976dd8710f37cd731e5922"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_pending-selected.png",
+    "sha256": "7fe8fbcc87327ad1ecee09bce23cb474c2b44242c9bfa5a7c3b71003a84c3d08"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_pending-selected@2x.png",
+    "sha256": "5a3ce08614af781d18e8596c16b1c763314940b4ef2bc8960dc44ff2205ee76d"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_pending-selected@3x.png",
+    "sha256": "c7af5bdfffb12d86e078790b498d7b17c551830dfdca60ed245ab2167cb73ea1"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_unreviewed-discovered-selected.png",
+    "sha256": "328c9117e220fa822b4df07bb36ee5ba7bbf9a5ef039d2bab2e12250187b360c"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_unreviewed-discovered-selected@2x.png",
+    "sha256": "f3457b78fadb40f09686f3ce0783bbe25cc128706ef797dfbc93dd9ed53371c6"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_unreviewed-discovered-selected@3x.png",
+    "sha256": "6bd7c28695f2ed673d94c44b0c285e43660672e6bd918e38d8e0e939cb6b98b6"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_unreviewed-discovered.png",
+    "sha256": "89cc8b02d9fc803c9f9c6cc4320cf8a3cc06a1f551cd38b2f6606f17513aacaa"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_unreviewed-discovered@2x.png",
+    "sha256": "6247ba0da7a7ff29686eeca57a9f80531f923fd0432d2f6caae5e812a3958196"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_unreviewed-discovered@3x.png",
+    "sha256": "775d7ea78ab0417e3dce8d38ea65f7a47dcfed8c5270adfd3e4d845cfd8d72d6"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_unreviewed-idle.png",
+    "sha256": "de9da8b1422d554663b811639d321a0acd7c92240ed85ddad7ed9c57377a6510"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_unreviewed-idle@2x.png",
+    "sha256": "050ad77271b167462ebd75b6f1a953643ab343ae1049cb0dec6c1e2243595138"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_unreviewed-idle@3x.png",
+    "sha256": "be787a0bdc6fa63684e4d8a5c726ebbd55c4dfea50339d73d148094a127bbc41"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_unreviewed-nearby.png",
+    "sha256": "c2abfaaaceda89cbbea2adb9d83438e4f4ee223dfee52a30d3d09a6e8cec5b0a"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_unreviewed-nearby@2x.png",
+    "sha256": "8f3a78d640a957e64962501b458d7f32e609b39d61d209a8e818baa85afdaecc"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_unreviewed-nearby@3x.png",
+    "sha256": "122374f45500abda7ac9a42c16d640789272158d20edf866cc2140efd8292f94"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_unreviewed-selected.png",
+    "sha256": "2f5d211543228f19b72455c26d9c8257785f3f874dad315663cc6e1adf9a9224"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_unreviewed-selected@2x.png",
+    "sha256": "7a36d9e5d40312f912fd5a6eabfa7ebfea03c670375003380c8d1c85f998a7c3"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_unreviewed-selected@3x.png",
+    "sha256": "a1e4d9d001e1770fd95a84b3a9bc342e885b46b248d29ce9c1589ba67f29fbe4"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_verified-discovered-selected.png",
+    "sha256": "343dc1567dcb18783444259615dd283e426f307ec549a2c8888ccf55a104b21e"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_verified-discovered-selected@2x.png",
+    "sha256": "6974448a1bd5526003ed985e88a311b1204f69f0822e50e94cd577fa70613363"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_verified-discovered-selected@3x.png",
+    "sha256": "5f05f3afcc99d373b5f7db3f141dc3b8414183617dac2b2445c2aba185e40348"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_verified-discovered.png",
+    "sha256": "96d825f4df0591d2c7070393b4c0c75041113aa407eec237ecd6b19f4c3275a3"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_verified-discovered@2x.png",
+    "sha256": "c377f01f51a424d52c7788a14890bf500b35ec0bb666123a686c5be8b75468a7"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_verified-discovered@3x.png",
+    "sha256": "bb84413da1e058b96579d918de324f0e7af8fba7e746ad6cbf3f8a4f02392436"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_verified-idle.png",
+    "sha256": "01de58a584070e92cbbb82a5fef971ddb93d9b40195963555872c1e5577f1721"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_verified-idle@2x.png",
+    "sha256": "9bcb4c0d2be06274347fa953d66bc0be602da29c75d99e1f971f680b7a1c985c"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_verified-idle@3x.png",
+    "sha256": "0f53fc9ffcef64073c1873c282f1944a9fcc09f9af40603cbc57b60d8b3adbcc"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_verified-nearby.png",
+    "sha256": "8c86c71ce70df57559a684cd67d33b134c5e7fa387d9fed1daa9682eac9d1d54"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_verified-nearby@2x.png",
+    "sha256": "7d7f612b3ceb4c342f18b2b2e4f9216d6205c303243433a0dcce00d46d1c0cf8"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_verified-nearby@3x.png",
+    "sha256": "b5da498cccd30dc60c6308d7aac1cbea2f826d909bcdc7d8ff02a1fcbe1ffae7"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_verified-selected.png",
+    "sha256": "c9cafe7e4710bec2975d77236c36a3b0fcf8ce582c66802857f45cd25e23f187"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_verified-selected@2x.png",
+    "sha256": "e67c123af5c7614948eec1bcf53ac6a5775474583f9adfa18097a577af2faf9a"
+  },
+  {
+    "path": "assets/poi/map-native/religious-community_verified-selected@3x.png",
+    "sha256": "f522c8c0f299df0713ce36e6a55851c8392caabf275497587e0134daba1bf38c"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_unreviewed-discovered-selected.png",
+    "sha256": "9ee630c87bf374005bfcd11d8fe17cbffa8632f8e036ca1e69c0bb60ee95b187"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_unreviewed-discovered-selected@2x.png",
+    "sha256": "1918f8c0e56ad2b335b4b177a8feebe23cef42aeee617530f683b0475de0ab30"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_unreviewed-discovered-selected@3x.png",
+    "sha256": "cc54a042307a9fcf5c4f5626185f66622b28c7c33e11dac8f8135b25ca716f23"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_unreviewed-discovered.png",
+    "sha256": "53cf550cc6161c0544409748d1973063489f6f8b6b1df000c3c3760d96e73c1d"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_unreviewed-discovered@2x.png",
+    "sha256": "75e63e7648d532337f21ebdb667cc5e28adde9eff225e31bc806402f6581cda5"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_unreviewed-discovered@3x.png",
+    "sha256": "070661b7f10f5f34fda1ebfd4f4a709a0a106c2ef5029123308c45bb563d1067"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_unreviewed-idle.png",
+    "sha256": "96f16a8bb59e6af07e450e501ebd3f8f0ac99b2ad31c2cfe874a8c3f6c323f0d"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_unreviewed-idle@2x.png",
+    "sha256": "5847d117ccb21a9682a8aa6cb3a19ea5706937d8e2aa8025898668d9fc1b3e9f"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_unreviewed-idle@3x.png",
+    "sha256": "e76e54b55b2ec00242a1d402dcf5cf7a095a15fb83feb4447b417e493ca20a49"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_unreviewed-nearby.png",
+    "sha256": "96700ec7ce898eb9b64e5fcea95c4f0346e5812c80869a30f112e67448f287a4"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_unreviewed-nearby@2x.png",
+    "sha256": "e0052372c31a57aab3ce2872759257a8e957af6086910bcad7f5b95ad281de38"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_unreviewed-nearby@3x.png",
+    "sha256": "18cf2119509f7278a365ec311837c0e405e41768bf9708ed812e1f58f500a279"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_unreviewed-selected.png",
+    "sha256": "60e9f84c87955e78fbeae1ae7da3297fb649b2e669613c66e2439eca1d6b4750"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_unreviewed-selected@2x.png",
+    "sha256": "64c79887ffa97ed39a61af0013b902eb5f2aebccf523e340a8b5578c76d6f447"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_unreviewed-selected@3x.png",
+    "sha256": "0a5271903390cb9196f292882f9fc7dff8cee7422a6be80a8f204ae3f26595bc"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_verified-discovered-selected.png",
+    "sha256": "ce92f490da1f41fadd3867ed3581a4ea496e1ce60ed65b57075e3242368675ac"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_verified-discovered-selected@2x.png",
+    "sha256": "12c2b25df2db0cfad42c21b14133b64f8909304c69592625d032df31e4ddbcd6"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_verified-discovered-selected@3x.png",
+    "sha256": "c9f72198e05502da735d9f6305d3df5b3b34264886f8c1978001bfdd898e2a5f"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_verified-discovered.png",
+    "sha256": "da49c65f013e47422500fd653d2828a7449b72102d339711786ab099235c47f4"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_verified-discovered@2x.png",
+    "sha256": "ff07e57aab435f58fe3919d891842b2841275125bd5a6109155c522741a3c7c7"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_verified-discovered@3x.png",
+    "sha256": "3c6870f35ab956204fc11f2a8801ca6392233d0c1235485800ac68537f76bc71"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_verified-idle.png",
+    "sha256": "6eafecfabc1ae2c1d86a8cf1013824c6bbb5aaadd55e6c07b50a5296f75f76c5"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_verified-idle@2x.png",
+    "sha256": "192149d59c6e7a93492e6a1984dc43fb6d16dcec43906c46c01731c341ceaf27"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_verified-idle@3x.png",
+    "sha256": "01b98ca057560e24fb07119cfba556da95cae007399a81b4e828226842b6762e"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_verified-nearby.png",
+    "sha256": "348993f4fe65bf9a02de0ef512207fd50d9328140d1bcb6f80d10a694cc29552"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_verified-nearby@2x.png",
+    "sha256": "0ffd85a01d27ea3359abc6d88a9fc8f02167b511236aacdd134c3f2ff3e8657e"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_verified-nearby@3x.png",
+    "sha256": "aa7c7f8b709f9d0c380883804112c0c6a9669b03b5569a40f1a61afe50860d67"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_verified-selected.png",
+    "sha256": "c53977802af865f76ca259d3023d2751b3b816d275a6600f0ecef8787771ff05"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_verified-selected@2x.png",
+    "sha256": "fb29ec50fca5900c84657b537d6d83084e8a15610c8ed3cb1876b3092cbf0ebc"
+  },
+  {
+    "path": "assets/poi/map-native/religious-editorial_verified-selected@3x.png",
+    "sha256": "088b6ad6a314fcd01deb0aa2231574f108be115e27c0af0e1acb60f8ff930b14"
+  },
+  {
+    "path": "assets/poi/map-native/religious-imported_unreviewed-discovered-selected.png",
+    "sha256": "0e24c9d965abbf294600f62a1c962a32e9c3c21ea129327585b82f8467f46f0e"
+  },
+  {
+    "path": "assets/poi/map-native/religious-imported_unreviewed-discovered-selected@2x.png",
+    "sha256": "4619fba2042feebbd2e654f4fa19a62f698fc8a415bc04f0295281aea16deda4"
+  },
+  {
+    "path": "assets/poi/map-native/religious-imported_unreviewed-discovered-selected@3x.png",
+    "sha256": "9b5b013c3719c6f9940fd871babf30df32ce40997e389e19d500f3efc5aaaf8e"
+  },
+  {
+    "path": "assets/poi/map-native/religious-imported_unreviewed-discovered.png",
+    "sha256": "c8fd3ec3529a86c9875c4ce87d09691b18e40b7c17c6304e8c2fd5e796d7a6ff"
+  },
+  {
+    "path": "assets/poi/map-native/religious-imported_unreviewed-discovered@2x.png",
+    "sha256": "fbe51f0b3169b72132fa8146797be32a3d2c4ac22512fceef068f83e081df55f"
+  },
+  {
+    "path": "assets/poi/map-native/religious-imported_unreviewed-discovered@3x.png",
+    "sha256": "b4b6af265c556f6a7308735c734f5d4a0a05394cc7dd427439b91c440f3a930e"
+  },
+  {
+    "path": "assets/poi/map-native/religious-imported_unreviewed-idle.png",
+    "sha256": "6baacea4cc3b302ab4bd1bfab738eba9c28fd8cf6bb3dd684f902cbc594aeda9"
+  },
+  {
+    "path": "assets/poi/map-native/religious-imported_unreviewed-idle@2x.png",
+    "sha256": "f3eeaff9eba4821ab9a2a6e0e9650bc3e80ac9a121296780c8119d59f4a92daa"
+  },
+  {
+    "path": "assets/poi/map-native/religious-imported_unreviewed-idle@3x.png",
+    "sha256": "3064ce8d661e997ecd07577f1a8cb36da590b6d1a7d6f276c85fbec40ad4ac97"
+  },
+  {
+    "path": "assets/poi/map-native/religious-imported_unreviewed-nearby.png",
+    "sha256": "66d690f325533583e4a1b9b3e27e641f880054251879ce0ba713dbb45f990f3f"
+  },
+  {
+    "path": "assets/poi/map-native/religious-imported_unreviewed-nearby@2x.png",
+    "sha256": "2cdf425a90fe4712ccb93d33434356628ccd14bd39a81d0695d38d7cc1c496b2"
+  },
+  {
+    "path": "assets/poi/map-native/religious-imported_unreviewed-nearby@3x.png",
+    "sha256": "884544d265d9377f41b33b929f36733d9953ea3f3aed3311c7bdbcc868c430f6"
+  },
+  {
+    "path": "assets/poi/map-native/religious-imported_unreviewed-selected.png",
+    "sha256": "52d72448cc05d3856034c8c01ebc48ff8ef863ef9c53d2b504582ed95f241ef9"
+  },
+  {
+    "path": "assets/poi/map-native/religious-imported_unreviewed-selected@2x.png",
+    "sha256": "8d2569d3edf8158fe0bb90e631ca0054664aafebee7787ff5d050581cc11ba7e"
+  },
+  {
+    "path": "assets/poi/map-native/religious-imported_unreviewed-selected@3x.png",
+    "sha256": "b818b84d9b770787f613e7cd2c32e415ab14b3c6ff6bc005e1505ac71c6d0bbf"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_pending-discovered-selected.png",
+    "sha256": "1e467616161743d3f2e2e7a19f2a2afd8f0ab12405722d7c46b68665c255ea18"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_pending-discovered-selected@2x.png",
+    "sha256": "3420a12f1b0a2843a9c5b3aa395db8a8082a3c606313a22aa9ce365a31c6a569"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_pending-discovered-selected@3x.png",
+    "sha256": "ce1ce523f2723a97442d4cea0059fd92c84a7f67608e523030ebee83bc1c20fa"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_pending-discovered.png",
+    "sha256": "267fd23d7a3cd2d8a01524a60faaeaeb951de066ee272b88398d80e25fd621ec"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_pending-discovered@2x.png",
+    "sha256": "45b02d0f6ab307b48cc2c2830c757327ca6cdbb82135dd70b1c43abd6c59baa6"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_pending-discovered@3x.png",
+    "sha256": "d096151a3eef1303916ec55434afe15fc388ff6e9157cb98814d976a19bbb8be"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_pending-idle.png",
+    "sha256": "0f3094d3f339de04c8430f0650a82755124669c8d95995797c2a9d1bb46a1647"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_pending-idle@2x.png",
+    "sha256": "1f21efbe2b4eb3386c0bb8da73a2c304127a2cdd0fce2b649d22fd1b0fc0c9dc"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_pending-idle@3x.png",
+    "sha256": "a181e69c5aa32eba79906bf4ede00666a04a5c5d70bc796b5373be58f8800e4b"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_pending-nearby.png",
+    "sha256": "7df72bd670c05df4370e8cfd68ecc64a9898461f63f8211740e4508055d5a0e3"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_pending-nearby@2x.png",
+    "sha256": "79cd5ee6069ec5d669158cb1e4ff87e795842e37bb744fd886e446df0f397626"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_pending-nearby@3x.png",
+    "sha256": "29f3d9da0ca2ca4a555855a5fc1eeaacdc943111a0e3b0bfaa15b0ce66cebc56"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_pending-selected.png",
+    "sha256": "639f1712ddcdfedde1cf80637c722e58a71671eb82ea9018f4d5c90ca08abfae"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_pending-selected@2x.png",
+    "sha256": "7f97d219dd817034a988c81878a1915ed52192bc4bf7861a28a39b2fcda5b893"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_pending-selected@3x.png",
+    "sha256": "2b76068ed9abb9d9d985bf08e7bec6556efc4518f7ca392628430bb07958e27a"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_unreviewed-discovered-selected.png",
+    "sha256": "5197136d9a23396a59dc4559598d297ae7ffb2301b28c97380fa3d4f7fa4ded1"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_unreviewed-discovered-selected@2x.png",
+    "sha256": "0795368404731bf9139ccff6882719203ad9b206bfdd01a5860f3437ef870d9d"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_unreviewed-discovered-selected@3x.png",
+    "sha256": "10fa2e716451e06626876a00854646d739d2455fdbfe6740ec33d3768c3c910b"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_unreviewed-discovered.png",
+    "sha256": "8dfaa23394e9a3dee16057f52388f050c9da795ffa213e6fe7dde8fdc79d2463"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_unreviewed-discovered@2x.png",
+    "sha256": "970f442fbab6984c5e68d5c0d704c924baf3e34c06787e57c16b80e7bdf1eecf"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_unreviewed-discovered@3x.png",
+    "sha256": "fe08a15d65b75a5645bd788f07242a9e1340fa008da42aaed587767aae2a1664"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_unreviewed-idle.png",
+    "sha256": "1b88c58f1dd5332b7210890aae950df2415f1e1b658c66ec7f4a4d3e2eea065a"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_unreviewed-idle@2x.png",
+    "sha256": "706d5e1348c785749219ad2c581dd7013105f8e974cf7087d3a0145597387dfa"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_unreviewed-idle@3x.png",
+    "sha256": "6c8eb4883fa425e22ff13583b754642216b1ccc23695e796e08cd0b4c8ce5520"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_unreviewed-nearby.png",
+    "sha256": "c60878972dc3fae6633054cd5617b7296254a6f0cc43ee15385a72e992769fca"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_unreviewed-nearby@2x.png",
+    "sha256": "9bf7e5b1ad4afd4ef12d9833393b07b5391f9bb3e5b56bf6e405738753770499"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_unreviewed-nearby@3x.png",
+    "sha256": "237966937d8ea80b54d543cb5aabc5358e833444a4136e36c104ea8d5eca1396"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_unreviewed-selected.png",
+    "sha256": "b1fb339ddfc005aadc11e37682460ef7f6cd128e3d66ab779ec58f02b894c61c"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_unreviewed-selected@2x.png",
+    "sha256": "827859f6cee6c375bc2d195b14e3d2c45c6f848787bd101be4009c471dbe610a"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_unreviewed-selected@3x.png",
+    "sha256": "3903e5f1249c644da966ce0f7266070f6b4bd9fe06e2bf639e5e41d60747e660"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_verified-discovered-selected.png",
+    "sha256": "c0085fc04b0ba40eba930b12f1a63c02dc28a1fa5d6164c1fcdb622eda22b651"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_verified-discovered-selected@2x.png",
+    "sha256": "24476368e1c530e7dd949909080df8e5fdfe1aa7a7887bb81c956502f97ade18"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_verified-discovered-selected@3x.png",
+    "sha256": "62923a36ad76ea4f158578c010acea67840fb2a0a5c1442e0aa12ab719135ca8"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_verified-discovered.png",
+    "sha256": "4440afb173af9069debbcaf4548f19a31d7749032811d09d8c84ee6947ac9df6"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_verified-discovered@2x.png",
+    "sha256": "0b7ac3176bb75d1adf730d17289d8d1756e47af66078ecdc2ccf6ac7101039e6"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_verified-discovered@3x.png",
+    "sha256": "e1b12781dc8b2ce70c42cbbc3556e06fc775f183f5c0ed4cef562622716a9b04"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_verified-idle.png",
+    "sha256": "53219f13dc8d7b49426fb12b3682a76ddb6ed23f57af34d8f1f6063604cff132"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_verified-idle@2x.png",
+    "sha256": "df09faea33d5b09075d094c13a0a1263a620a7dc1c4b7dabd8e968f799394ca7"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_verified-idle@3x.png",
+    "sha256": "ca63846705176d85d52794bdcdb01b392df69a0489f1b3874ce80445d28dc96c"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_verified-nearby.png",
+    "sha256": "59bd8d207d5af9d730e0d32d81dc53f608b85087ab3d0dd899257ebbf93a9daa"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_verified-nearby@2x.png",
+    "sha256": "d10d14358094e0963b153ad0f8d6401dfc2d0ff7e0240bdecf19746be96f3eea"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_verified-nearby@3x.png",
+    "sha256": "43c0c3ec6c59746e6914eb3089531c4f0a4f4d18f9778721e692d82637fbe6ee"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_verified-selected.png",
+    "sha256": "2f65e9feefcbf992a4acc9eb7d7d50da34e4e0b9b8f85a2d7c5d97ec9907bf0c"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_verified-selected@2x.png",
+    "sha256": "68203a5fbca4aaad86587d4e2536bc43acc96627b3aaba2b4e5483d9c55d1c7c"
+  },
+  {
+    "path": "assets/poi/map-native/temple-community_verified-selected@3x.png",
+    "sha256": "d47c3499d0ddaa992d94856cf74b108f4a606036f251a7fd9774605517b155b0"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_unreviewed-discovered-selected.png",
+    "sha256": "73ef9451c9390ebb2b649d1f12655e16e5be05d233e320f624eaad9fbdf9f558"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_unreviewed-discovered-selected@2x.png",
+    "sha256": "2f34a6f0e7f2d25b60082e9d41a7b7dbcbef14c92b3f4a9c0f34f1950caa94fc"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_unreviewed-discovered-selected@3x.png",
+    "sha256": "6d7d271bd70bd5170e6533275f14757db92584a18c194751d1f1c883658c86be"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_unreviewed-discovered.png",
+    "sha256": "783081e8c30c4b03ba48e5fc1a42f5e40086fd724a20b003d1724c2112cf7569"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_unreviewed-discovered@2x.png",
+    "sha256": "2b58d2d26667c9151ab24e3af596bd160ead02f5791dcdb76c2e48df535562a9"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_unreviewed-discovered@3x.png",
+    "sha256": "ea2788d2a197e3dafb03af733490dfc99d518c31f7b0bbd01891fd6b4a056aca"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_unreviewed-idle.png",
+    "sha256": "97170da15052df7a5cf4e032255423dbab137449b27e53fa8d5edea16477a7b0"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_unreviewed-idle@2x.png",
+    "sha256": "9908f97f48beb56c4c25f939754998d6ae96cfd20d4c10efcca4cc52c5133a94"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_unreviewed-idle@3x.png",
+    "sha256": "b9406520ad3ad3c87ead137ae47abac8e5212d769985ae3737b407339fe9cea4"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_unreviewed-nearby.png",
+    "sha256": "28829068faa9d5459d65b1f2b1f7e2e310dedd6f2225b190a5302a822ae4b1ab"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_unreviewed-nearby@2x.png",
+    "sha256": "ddf67f823d2bbf1f2944dfa908ee5de654b2c1a5c252aa651111ee5bae25f625"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_unreviewed-nearby@3x.png",
+    "sha256": "97ddbbbd192ede1d63f55102450d65c76946e898f9f1ebcac1837c3775bd8dc4"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_unreviewed-selected.png",
+    "sha256": "2468fd184104ba714919f97061dc6e74bc36dfe6c0abc92870f636fee5082477"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_unreviewed-selected@2x.png",
+    "sha256": "c26666debcde65ced211f98c0b16e30a55ec71c9580bc1ea0a25f4a1329fde7c"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_unreviewed-selected@3x.png",
+    "sha256": "f4d79c841ad1c66a63f9fb6106ea9736b3a2efa4b689af456ce7d635fe7b2156"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_verified-discovered-selected.png",
+    "sha256": "0a9c8f281083faf3048ee5e9285b91774d9359f07aa92dbdba13d80a760cdc55"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_verified-discovered-selected@2x.png",
+    "sha256": "bc9f8d03238ca96ff57e042b84290ebfdcdf21b906192f7be66640f9fff57cf7"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_verified-discovered-selected@3x.png",
+    "sha256": "0167889efe5c26c25b076ca0392b82cbfb542f24116fc9096521fa57a4e31e8b"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_verified-discovered.png",
+    "sha256": "8e36d2635dee27a2ffba65e48fa445945a896daa6c52fbda177128aa7f96cecb"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_verified-discovered@2x.png",
+    "sha256": "c858cdd9fad494484a9d980a7f0bd0402aae38f537a507ffe5c21978f8ac0262"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_verified-discovered@3x.png",
+    "sha256": "e73553ec63a9b68febc6f2a1272d44883e835379d3232de4d029bf8def1e0c28"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_verified-idle.png",
+    "sha256": "89f12a4b3efb3c16051857418205d36667af4f8494c46cd944233accf510c110"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_verified-idle@2x.png",
+    "sha256": "2af3f61837c2aef62b5e4ae09156e3a8aece029f64f6025ecfe4de64191d5831"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_verified-idle@3x.png",
+    "sha256": "280a895e63b111cbf30dbff05a5373a0a1ebcdffcebe7b7334832720b6a5a8c2"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_verified-nearby.png",
+    "sha256": "97ab7a289084ae433f96977ae0ed89d54860cb7b30f1944b2bbe0b5a12f741d3"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_verified-nearby@2x.png",
+    "sha256": "b562989deb61ec8e5c28a8a6c655ba27216be19d66f04dc480c778a08308df0f"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_verified-nearby@3x.png",
+    "sha256": "cba014c20e407b97819a28d2bd4e82eae7580ea1efc7c708e29ee99a8f0763bf"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_verified-selected.png",
+    "sha256": "753af87c7a93730d54c62dc15fac330e507a79307375baf11caf9d8a0d66a2a8"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_verified-selected@2x.png",
+    "sha256": "cc79b75a865963eb46b253381100344ea9c48ba0633161b341d2552c12f3f000"
+  },
+  {
+    "path": "assets/poi/map-native/temple-editorial_verified-selected@3x.png",
+    "sha256": "b0df7f48816b564a3910e6d76351151724c3eeaad802bf2c02a5a708dbdd2dae"
+  },
+  {
+    "path": "assets/poi/map-native/temple-imported_unreviewed-discovered-selected.png",
+    "sha256": "a2554b5791097a986e7428642d17777df7507f590faf21c86bb14219bab05713"
+  },
+  {
+    "path": "assets/poi/map-native/temple-imported_unreviewed-discovered-selected@2x.png",
+    "sha256": "ebab3db1a1cd75c4abec0635c1a5d706769ac167b39845d3ee1ab88605524f1f"
+  },
+  {
+    "path": "assets/poi/map-native/temple-imported_unreviewed-discovered-selected@3x.png",
+    "sha256": "75d8890666356e95dd2a23330ecedb493c7e8647387fbcfed15ddf731f7263c1"
+  },
+  {
+    "path": "assets/poi/map-native/temple-imported_unreviewed-discovered.png",
+    "sha256": "b6fb9c3c8c155f3dfe18a52f2a9c06609023c68c51e05b4232a7b1cb6ce442e4"
+  },
+  {
+    "path": "assets/poi/map-native/temple-imported_unreviewed-discovered@2x.png",
+    "sha256": "9dd9540f788458cfe189f2bdbf4ea0ef48faf2b8849afe490f4ccbb9cb9d49ba"
+  },
+  {
+    "path": "assets/poi/map-native/temple-imported_unreviewed-discovered@3x.png",
+    "sha256": "3761a64959ffff02f14afbc0bce089b5db23b84bbcf8d184496141bb32b3e144"
+  },
+  {
+    "path": "assets/poi/map-native/temple-imported_unreviewed-idle.png",
+    "sha256": "b33b8a0b5316e165f7403b70c2855371dd05a8883a61beef8dc5a0d4d69e5d81"
+  },
+  {
+    "path": "assets/poi/map-native/temple-imported_unreviewed-idle@2x.png",
+    "sha256": "f39f25ba7f2b87d6f8757bd10ade28477dd0a632e179d0599f56b6250658c79c"
+  },
+  {
+    "path": "assets/poi/map-native/temple-imported_unreviewed-idle@3x.png",
+    "sha256": "66445fe856a1b56cb5d0793f76e5f05223d6a81733a87075ac05aadb2783fdd6"
+  },
+  {
+    "path": "assets/poi/map-native/temple-imported_unreviewed-nearby.png",
+    "sha256": "21fe01d4396fbcbc95539e30ccdf428c262a74fd09478154f57e326a43d63817"
+  },
+  {
+    "path": "assets/poi/map-native/temple-imported_unreviewed-nearby@2x.png",
+    "sha256": "2ba2b2379c92bffe6abd32759b15e1bb632eeba73b7c7cf5d3836d537a2fa11c"
+  },
+  {
+    "path": "assets/poi/map-native/temple-imported_unreviewed-nearby@3x.png",
+    "sha256": "91324953a6fa805d7eccfe099e216ff167342d9688ccc3563e92ba2c4c262a89"
+  },
+  {
+    "path": "assets/poi/map-native/temple-imported_unreviewed-selected.png",
+    "sha256": "21eb4fb703df8a2c8140b4f6b21fec307f7174292323188eea62ca5872961467"
+  },
+  {
+    "path": "assets/poi/map-native/temple-imported_unreviewed-selected@2x.png",
+    "sha256": "e46f2d162f7492e58da7fb00922ad4355f7d89fc7b501cf94c73e86175ece19a"
+  },
+  {
+    "path": "assets/poi/map-native/temple-imported_unreviewed-selected@3x.png",
+    "sha256": "47a8812556e7d68a105fdb99539ce04ce4971f80981ba51594919cea4e19860c"
+  },
+  {
     "path": "assets/poi/museum-community_pending.png",
     "sha256": "5d052ce2c2b46bf824d15b8b89fa28af4bfd43ea6cde49c15163a7b6063e4d6b"
   },
@@ -840,6 +3360,10 @@
     "sha256": "cfe7b870b0d7d8e924f7facabd31dacb9f07979562e0e58495c75f2f80310839"
   },
   {
+    "path": "docs/design/POI-NATIVE-MAP-FIX.md",
+    "sha256": "6b8b1574da0f44bce7e0e8658506a7421e84e5179ea371fa5cda1c2146786d33"
+  },
+  {
     "path": "docs/design/POI-SOCIAL-IMMERSIVE-V2.md",
     "sha256": "c935d8ccb21bb42f253097774a86c40c098d1d692f31a29dd6556e7888e3e31c"
   },
@@ -852,6 +3376,10 @@
     "sha256": "19b5ac46f6099bc695915d94424e0cff259aa1a7a92fcb00470d9ea0dd53a8dc"
   },
   {
+    "path": "docs/design/VESTIGE-LIVE-NARRATION-V1.md",
+    "sha256": "72b6e94fd327747dbd8e4195983fb8dc50679360363db49b1a5c75d11afb586d"
+  },
+  {
     "path": "docs/design/poi-illustrated-320.png",
     "sha256": "d4670275436eb5e283d4846608f8a903d4df7df84f18ce158565cf35dabbd43b"
   },
@@ -862,6 +3390,10 @@
   {
     "path": "docs/design/poi-illustrated-430.png",
     "sha256": "b2d6561f8b60f0f79203ba8d8f31d4a45abe6d3b5388b090395e36d4790ceb28"
+  },
+  {
+    "path": "docs/design/poi-native-preview.html",
+    "sha256": "eafca739f8959228c492b30b1955e7d427c1f99bee46f02e267c2d90e62e2f42"
   },
   {
     "path": "docs/design/poi-preview-320.png",
@@ -908,6 +3440,14 @@
     "sha256": "470893ac19ff5c2d1d55458968a9d1687f26f4ec49c149ee8c0a1c4f3c8d76bc"
   },
   {
+    "path": "scripts/poi/build-native-map.cjs",
+    "sha256": "bffd960d2b8f2c4b80c0008f51a62515f61870144b608771c59f3cf23f51eecd"
+  },
+  {
+    "path": "scripts/poi/build-native-preview.cjs",
+    "sha256": "895122f370a90cb9eedee6da46573ce6ff9aa22901772f27fcb9d7909e3b3ebe"
+  },
+  {
     "path": "scripts/poi/build-preview.cjs",
     "sha256": "04a37869f7ef2f38380e0e04ae8beb08b485afc075b194364df4e8357f3de3cb"
   },
@@ -933,11 +3473,11 @@
   },
   {
     "path": "scripts/windows/update-social-v2.ps1",
-    "sha256": "ecd85553bf361c75fba9b63405108a684c3ba12748df40c4796d96da303b18c9"
+    "sha256": "ad481265d2a270342a959ef9c5031aae54724d1b3c6408e1a56956144a38bde7"
   },
   {
     "path": "src/app/(tabs)/index.tsx",
-    "sha256": "29064e431de6002b0535fd751bfffe0d08447b53261d6aca054fb562aeaba334"
+    "sha256": "153a8a85bd1d4d2a11a7272c6966c9d7a145f0469a58538bf1942f4c9668ea20"
   },
   {
     "path": "src/app/(tabs)/profil.tsx",
@@ -961,15 +3501,19 @@
   },
   {
     "path": "src/components/exploration/HistoricalMarker.tsx",
-    "sha256": "d1ae172d056728bc0f1ea005200ab74d4b69d5d3670568b6ea396162721e342c"
+    "sha256": "8b4930b3c71d2f831b7b77aef436177d6c20ada173e9bd0129db009239d93b1a"
+  },
+  {
+    "path": "src/components/exploration/IllustratedPoiMarker.tsx",
+    "sha256": "1bc2ee1b7d663320dec43bfdc13bd02e0ac30c747331fdbe27d3400ac03c387c"
   },
   {
     "path": "src/components/exploration/MapOptions.tsx",
-    "sha256": "a5e423c59f7b526edaa013286c7e9b1bc77da243a32e714dcde8d6ccf130fc5c"
+    "sha256": "b169b9e7f6e49ac970fa7a719f4b21cc63bb5edd16ca5eb95f03c192ca3d8c35"
   },
   {
     "path": "src/components/exploration/PoiClusterMarker.tsx",
-    "sha256": "3a55d4d5e14483bcb0d415995a19033597e8cfc0f58ab2febdd798fda5522247"
+    "sha256": "c668007dc03dd400b20874574fbec2e72cb8e9d6c23c5d1bb3131a8b8b8479c7"
   },
   {
     "path": "src/components/monuments/MonumentBottomSheet.tsx",
@@ -1004,6 +3548,10 @@
     "sha256": "ee5458eaf184642ac71352d88c02500d8e50d61e89b22d59504a284e31f34f9d"
   },
   {
+    "path": "src/components/poi/nativeMapAssets.ts",
+    "sha256": "6c034090743e1f70fbb5e8a61917082f1968d6293349dc17af7e7d26b083a180"
+  },
+  {
     "path": "src/data/imported-pois.json",
     "sha256": "ab6f21dd196ba32cca5ea7a3ad4e2e7f7515df0f7e88eef5d60887db21351f21"
   },
@@ -1033,11 +3581,15 @@
   },
   {
     "path": "src/lib/mapViewport.ts",
-    "sha256": "02a140d118426818144ffeea99eee1dadedb81cdaa2cb423ef6fcf0856d1cc00"
+    "sha256": "9e9cbd4e9b53801415640fadde0ef53f9ff803fbe482b697421a94d04cbbd6c4"
   },
   {
     "path": "src/lib/poi.ts",
     "sha256": "81cb0025fa1f9f632c0e3adda73e59aeb06db7f1e455b2d65195750f1f277f78"
+  },
+  {
+    "path": "src/lib/poiMapRendering.ts",
+    "sha256": "f0f5c9da5327cc144231d2dcd9b90e90926c62a864cef820afa81eb1921d08ef"
   },
   {
     "path": "src/theme/index.ts",
@@ -1050,6 +3602,10 @@
   {
     "path": "tests/illustrated-poi.test.ts",
     "sha256": "dae48993c7d8b1ace559d9eceb747034fbf61ea2506a5774d94aa231acda1ff8"
+  },
+  {
+    "path": "tests/native-poi-map.test.ts",
+    "sha256": "c5c440786ecfc200ac86ae51df23ba3ee8475bb243f0bcf0c663e58f96ccf36b"
   },
   {
     "path": "tests/poi.test.ts",

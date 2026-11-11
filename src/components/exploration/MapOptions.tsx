@@ -1,3 +1,4 @@
+import { POI_MAP_RENDERER } from "../../lib/poiMapRendering";
 import { PoiFilterPanel, PoiLegend } from "../poi/PoiControls";
 import { defaultPoiFilters, type PoiFilters } from "../../lib/poi";
 import React from "react";
@@ -29,6 +30,8 @@ type Props = {
   poiFilters: PoiFilters;
   setPoiFilters: (filters: PoiFilters) => void;
   visibleCount: number;
+  individualCount: number;
+  clusterCount: number;
   close: () => void;
   immersive: boolean;
   setImmersive: (value: boolean) => void;
@@ -50,6 +53,8 @@ export function MapOptions({
   poiFilters,
   setPoiFilters,
   visibleCount,
+  individualCount,
+  clusterCount,
   close,
   immersive,
   setImmersive,
@@ -190,6 +195,22 @@ export function MapOptions({
                     follow();
                   }}
                 />
+                <View style={s.card}>
+                  <Text style={s.eyebrow}>Rendu des lieux</Text>
+                  <Text selectable style={s.body}>
+                    {POI_MAP_RENDERER}
+                  </Text>
+                  <Text style={s.body}>
+                    {individualCount} lieux individuels · {clusterCount}{" "}
+                    regroupements dans la zone affichée.
+                  </Text>
+                  <Text style={s.caption}>
+                    Les illustrations individuelles sont des images de marqueur
+                    natives de 64 × 72 points. Les cercles « lieux » sont des
+                    regroupements : touchez-les pour agrandir ou choisir un
+                    lieu.
+                  </Text>
+                </View>
                 <Text style={s.eyebrow}>Explorer une ville</Text>
                 <View
                   style={{
