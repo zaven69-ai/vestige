@@ -1,3 +1,4 @@
+import { useSimulationController } from "./developer/DeveloperLocation";
 import { initializeProgress, loadProgress, recordDiscovery } from "./progress";
 import { progressDatabase } from "./progressDatabase";
 import React, {
@@ -21,12 +22,15 @@ type State = {
   fix: Fix | null;
   gps: string;
   requestGPS: () => Promise<void>;
-  discover: (id: string) => Promise<"ok" | "already" | "gps" | "storage">;
+  discover: (
+    id: string,
+  ) => Promise<"ok" | "already" | "gps" | "storage" | "simulation">;
   xp: number;
 };
 const Context = createContext<State | null>(null);
 const KEY = "vestige.journal.v1";
 export function GameProvider({ children }: { children: React.ReactNode }) {
+  const simulation = useSimulationController();
   const [xp, setXP] = useState(0);
   const [journal, setJournal] = useState<Journal>({});
   const journalRef = useRef<Journal>({});
@@ -139,6 +143,7 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
     };
   }, [requestGPS]);
   const discover: State["discover"] = async (id) => {
+    if (!simulation.canCommitRealProgress()) return "simulation";
     if (!ready || storageError || saving.current) return "storage";
     if (journalRef.current[id]) return "already";
     const monument = monuments.find((m) => m.id === id);
@@ -146,12 +151,9 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
     const next = { ...journalRef.current, [id]: Date.now() };
     saving.current = true;
     try {
-      await recordDiscovery(
-        await progressDatabase(),
-        id,
-        next[id],
-        monument.xp,
-      );
+      const database = await progressDatabase();
+      if (!simulation.canCommitRealProgress()) return "simulation";
+      await recordDiscovery(database, id, next[id], monument.xp);
       journalRef.current = next;
       setJournal(next);
       setXP((value) => value + monument.xp);

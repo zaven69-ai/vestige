@@ -105,7 +105,11 @@ test("map preview has no GPS fix, discovery or XP writer and is labelled explici
   assert.ok(!/useGame|discover\(|latitude:|longitude:/.test(source));
   const map = readFileSync(new URL("src/app/(tabs)/index.tsx", root), "utf8");
   assert.match(map, /!fresh \|\| catiaPreview/);
-  assert.match(map, /character=\{mapPlayer.choice\}/);
+  assert.match(
+    map,
+    /character=\{location.enabled \? "catia" : mapPlayer.choice\}/,
+  );
+  assert.match(map, /simulated=\{location.enabled\}/);
   assert.match(map, /<CatiaMapPreview/);
   assert.match(map, /<IllustratedPoiMarker/);
   assert.match(map, /onSelect=\{selectMapMonument\}/);

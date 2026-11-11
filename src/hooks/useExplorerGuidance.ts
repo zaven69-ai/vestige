@@ -12,9 +12,11 @@ export function useExplorerGuidance(
 ) {
   const live = useLive(),
     { session, tour } = live;
-  const authoritative = position?.source !== "developer-preview";
+  const matchingScope =
+    live.preview === (position?.source === "developer-preview");
   const { setVisible } = live;
-  const active = !!session && session.endedAt === null;
+  const active =
+    live.ready && matchingScope && !!session && session.endedAt === null;
   const stop = tour.stops[Math.min(session?.index ?? 0, tour.stops.length - 1)];
   const navigation = useWalkingNavigation(
     stop.approach,
@@ -26,9 +28,9 @@ export function useExplorerGuidance(
   const params = useLocalSearchParams<{ guide?: string; command?: string }>();
   const handled = useRef("");
   useEffect(() => {
-    setVisible(focused && active && authoritative);
+    setVisible(focused && active && matchingScope);
     return () => setVisible(false);
-  }, [focused, active, authoritative, setVisible]);
+  }, [focused, active, matchingScope, setVisible]);
   useEffect(() => {
     if (
       focused &&
@@ -41,6 +43,15 @@ export function useExplorerGuidance(
       start();
     }
   }, [focused, active, params.guide, params.command, start]);
+  const previewStarted = useRef("");
+  const previewSession =
+    live.preview && session ? `preview:${session.startedAt}` : "";
+  useEffect(() => {
+    if (active && previewSession && previewStarted.current !== previewSession) {
+      previewStarted.current = previewSession;
+      start();
+    }
+  }, [active, previewSession, start]);
   useEffect(() => {
     if (!active) stopNavigation();
   }, [active, stopNavigation]);
@@ -52,7 +63,7 @@ export function useExplorerGuidance(
     stop,
     navigation,
     stageKey: session
-      ? `${session.startedAt}:${session.tourId}:${session.index}`
+      ? `${live.preview ? "preview" : "real"}:${session.startedAt}:${session.tourId}:${session.index}`
       : "",
     monument: monuments.find((m) => m.id === stop.poiId)!,
     story: liveStories.find((s) => s.id === stop.storyId),

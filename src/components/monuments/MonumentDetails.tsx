@@ -1,3 +1,5 @@
+import { useExplorationLocation } from "../../hooks/useExplorationLocation";
+import { useLive } from "../../lib/live/LiveProvider";
 import { MonumentActions } from "../contributions/MonumentActions";
 import { PoiBadge } from "../poi/PoiBadge";
 import { isPublicPoi, poiStatus } from "../../lib/poi";
@@ -31,8 +33,10 @@ export function MonumentDetails({
   monument: Monument;
   onNavigate?: () => void;
 }) {
-  const { fix, journal, discover, requestGPS, ready, storageError, xp } =
-    useGame();
+  const { journal, discover, requestGPS, ready, storageError, xp } = useGame();
+  const location = useExplorationLocation();
+  const { fix } = location;
+  const live = useLive();
   const [tab, setTab] = useState<"about" | "contributions" | "sources">(
     "about",
   );
@@ -54,7 +58,7 @@ export function MonumentDetails({
   const verified =
     review === "editorial_verified" || review === "community_verified";
   const found = !!journal[monument.id],
-    eligible = canDiscover(fix, monument, now);
+    eligible = !location.enabled && canDiscover(fix, monument, now);
   const open = (url: string) => {
     void Linking.openURL(url).catch(() =>
       Alert.alert("Lien indisponible", "Vérifiez votre connexion Internet."),
@@ -76,11 +80,13 @@ export function MonumentDetails({
     else
       Alert.alert(
         "Découverte non validée",
-        result === "gps"
-          ? "Approchez-vous à moins de 100 m avec un relevé de moins de 30 secondes et une précision de 50 m ou mieux."
-          : result === "already"
-            ? "Ce monument figure déjà dans votre carnet."
-            : "Le carnet ne peut pas être sauvegardé pour le moment.",
+        result === "simulation"
+          ? "Mode test : aucune découverte ni récompense réelle ne peut être enregistrée."
+          : result === "gps"
+            ? "Approchez-vous à moins de 100 m avec un relevé de moins de 30 secondes et une précision de 50 m ou mieux."
+            : result === "already"
+              ? "Ce monument figure déjà dans votre carnet."
+              : "Le carnet ne peut pas être sauvegardé pour le moment.",
       );
   }
   return (
@@ -109,6 +115,25 @@ export function MonumentDetails({
           <Text accessibilityRole="header" style={s.title}>
             {monument.name}
           </Text>
+          {location.enabled && (
+            <Text accessibilityRole="alert" style={s.body}>
+              MODE TEST — GPS SIMULÉ · découvertes et XP désactivés.
+            </Text>
+          )}
+          <Button
+            title={
+              location.enabled ? "M’y rendre · trajet de test" : "M’y rendre"
+            }
+            disabled={!live.ready || !!live.storageError}
+            onPress={() => {
+              live.begin(`poi:${monument.id}`);
+              onNavigate?.();
+              router.navigate({
+                pathname: "/(tabs)",
+                params: { guide: "start", command: String(Date.now()) },
+              });
+            }}
+          />
           <MonumentActions
             monument={monument}
             contribute={() => contribute()}
@@ -186,36 +211,47 @@ export function MonumentDetails({
                 <Text style={s.body}>
                   {found
                     ? `Découvert le ${new Date(journal[monument.id]).toLocaleDateString("fr-FR")}`
-                    : fix
-                      ? `${formatDistance(distance(fix, monument))} depuis le dernier relevé · précision ${fix.accuracy === null ? "indisponible" : `±${Math.round(fix.accuracy)} m`}. Validation dans un rayon de 100 m avec un GPS récent et précis.`
-                      : "Activez votre position. L’histoire du lieu reste accessible partout."}
+                    : location.enabled && fix
+                      ? `${formatDistance(distance(fix, monument))} depuis la position simulée. Aucune découverte réelle ne sera validée.`
+                      : fix
+                        ? `${formatDistance(distance(fix, monument))} depuis le dernier relevé · précision ${fix.accuracy === null ? "indisponible" : `±${Math.round(fix.accuracy)} m`}. Validation dans un rayon de 100 m avec un GPS récent et précis.`
+                        : "Activez votre position. L’histoire du lieu reste accessible partout."}
                 </Text>
                 {storageError && (
                   <Text accessibilityRole="alert" style={s.body}>
                     {storageError}
                   </Text>
                 )}
-                {(!fix || now - fix.timestamp >= 30000) && !found && (
-                  <Button
-                    title={
-                      fix ? "Actualiser ma position" : "Activer ma position"
-                    }
-                    onPress={() => void requestGPS()}
-                    secondary
-                  />
-                )}
+                {!location.enabled &&
+                  (!fix || now - fix.timestamp >= 30000) &&
+                  !found && (
+                    <Button
+                      title={
+                        fix ? "Actualiser ma position" : "Activer ma position"
+                      }
+                      onPress={() => void requestGPS()}
+                      secondary
+                    />
+                  )}
                 <Button
                   title={
-                    busy
-                      ? "Enregistrement…"
-                      : found
-                        ? "Consigné dans le carnet ✓"
-                        : eligible
-                          ? "Découvrir ce monument"
-                          : "Rapprochez-vous pour découvrir"
+                    location.enabled
+                      ? "Mode test · aucun XP"
+                      : busy
+                        ? "Enregistrement…"
+                        : found
+                          ? "Consigné dans le carnet ✓"
+                          : eligible
+                            ? "Découvrir ce monument"
+                            : "Rapprochez-vous pour découvrir"
                   }
                   disabled={
-                    busy || found || !eligible || !ready || !!storageError
+                    location.enabled ||
+                    busy ||
+                    found ||
+                    !eligible ||
+                    !ready ||
+                    !!storageError
                   }
                   onPress={() => void claim()}
                 />

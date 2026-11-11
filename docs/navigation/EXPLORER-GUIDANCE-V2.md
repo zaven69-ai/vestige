@@ -1,5 +1,7 @@
 # Guidage dans Explorer — V2
 
+Évolution : le mode développeur préparé ici est désormais implémenté par [la localisation simulée V1](../developer/LOCATION-SIMULATION-V1.md). Le guidage simulé est autorisé uniquement sur une session de démonstration sans sauvegarde ; aucune position d’aperçu ne devient un GPS de récompense.
+
 ## Architecture livrée
 
 Parcours présente les parcours existants et appelle `LiveProvider.begin(tour.id)` avant de naviguer vers Explorer. Explorer héberge l'unique instance de guidage et sa grande carte. Les anciennes routes de visite redirigent vers Explorer. Le sélecteur de position de Contribuer garde sa carte indépendante : il ne fait pas de guidage.

@@ -1,3 +1,4 @@
+import { SimulationNotice } from "../developer/SimulationBanner";
 import type { MapPlayerChoice } from "../../lib/avatars/catiaMap";
 import type { PoiGroupingMode } from "../../lib/mapViewport";
 import { POI_MAP_RENDERER } from "../../lib/poiMapRendering";
@@ -25,6 +26,7 @@ import {
 } from "../../lib/exploration";
 import { cities, type City } from "../../data/monuments";
 type Props = {
+  onDeveloper?: () => void;
   mapPlayer: MapPlayerChoice;
   mapPlayerReady: boolean;
   mapPlayerError: string | null;
@@ -59,6 +61,7 @@ type Props = {
   storageError: string | null;
 };
 export function MapOptions({
+  onDeveloper,
   mapPlayer,
   mapPlayerReady,
   mapPlayerError,
@@ -115,6 +118,7 @@ export function MapOptions({
             { paddingBottom: Math.max(insets.bottom, 18), maxHeight: "80%" },
           ]}
         >
+          <SimulationNotice />
           <View style={styles.header}>
             <Text style={s.heading}>
               {panel === "legend"
@@ -133,6 +137,13 @@ export function MapOptions({
             </Pressable>
           </View>
           <ScrollView contentContainerStyle={{ gap: 18, paddingBottom: 10 }}>
+            {__DEV__ && onDeveloper && (
+              <Button
+                title="Développeur · GPS simulé"
+                secondary
+                onPress={onDeveloper}
+              />
+            )}
             {panel === "legend" ? (
               <PoiLegend />
             ) : panel === "filters" ? (

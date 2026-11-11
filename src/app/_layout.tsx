@@ -1,3 +1,5 @@
+import { SimulationBanner } from "../components/developer/SimulationBanner";
+import { DeveloperLocationProvider } from "../lib/developer/DeveloperLocation";
 import { LiveProvider } from "../lib/live/LiveProvider";
 import { AvatarPreferencesProvider } from "../lib/avatars/preferences";
 import React from "react";
@@ -26,6 +28,7 @@ function AppShell() {
           options={{ title: "Archives du lieu", presentation: "modal" }}
         />
       </Stack>
+      <SimulationBanner />
       {!ready && !storageError && (
         <View style={StyleSheet.absoluteFill}>
           <BrandLaunch />
@@ -36,12 +39,14 @@ function AppShell() {
 }
 export default function RootLayout() {
   return (
-    <GameProvider>
-      <AvatarPreferencesProvider>
-        <LiveProvider>
-          <AppShell />
-        </LiveProvider>
-      </AvatarPreferencesProvider>
-    </GameProvider>
+    <DeveloperLocationProvider>
+      <GameProvider>
+        <AvatarPreferencesProvider>
+          <LiveProvider>
+            <AppShell />
+          </LiveProvider>
+        </AvatarPreferencesProvider>
+      </GameProvider>
+    </DeveloperLocationProvider>
   );
 }

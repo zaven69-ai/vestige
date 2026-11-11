@@ -224,7 +224,7 @@ test("Explorer owns the guidance map; the existing contribution pin-picker is pr
     new URL("src/app/(tabs)/index.tsx", root),
     "utf8",
   );
-  assert.match(explorer, /useExplorerGuidance\(focused\)/);
+  assert.match(explorer, /useExplorerGuidance\(focused, location.position\)/);
   assert.match(explorer, /<Polyline/);
   assert.match(explorer, /<ExplorerGuideHUD/);
   assert.match(explorer, /<GuidedVisitFooter/);

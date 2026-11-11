@@ -64,7 +64,9 @@ export function ExplorerGuideHUD({
   function quit() {
     Alert.alert(
       "Quitter le guidage ?",
-      "La progression de visite est conservée. Les XP et le carnet ne changent pas.",
+      live.preview
+        ? "Démonstration éphémère : aucune progression réelle enregistrée."
+        : "La progression de visite est conservée. Les XP et le carnet ne changent pas.",
       [
         { text: "Continuer", style: "cancel" },
         {
@@ -95,6 +97,7 @@ export function ExplorerGuideHUD({
     <View style={styles.shell}>
       <View style={styles.row}>
         <Text numberOfLines={1} style={styles.kicker}>
+          {live.preview ? "TEST · " : ""}
           {tour.title} · {session.index + 1}/{tour.stops.length}
         </Text>
         <Pressable
@@ -150,8 +153,9 @@ export function ExplorerGuideHUD({
             <Text style={styles.note}>{live.storageError}</Text>
           )}
           <Text style={styles.note}>
-            Le calcul transmet le départ GPS et l’étape au service public
-            Valhalla/FOSSGIS. Aucun trajet fictif en cas d’échec.
+            Le calcul transmet le départ {live.preview ? "simulé" : "GPS"} et
+            l’étape au service public Valhalla/FOSSGIS. Aucun trajet fictif en
+            cas d’échec.
           </Text>
           {!n.enabled && (
             <Action text="Démarrer le guidage à pied" onPress={n.start} />

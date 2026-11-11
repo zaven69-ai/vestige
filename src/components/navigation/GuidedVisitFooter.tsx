@@ -19,6 +19,7 @@ export function GuidedVisitFooter({
       style={{ borderTopWidth: 1, borderColor: "#B89B5E", padding: 12, gap: 8 }}
     >
       <Text style={s.caption}>
+        {live.preview ? "MODE TEST · progression non sauvegardée · " : ""}
         {tour.title} · étape {(session?.index ?? 0) + 1}/{tour.stops.length} ·{" "}
         {asset
           ? "Narration approuvée"

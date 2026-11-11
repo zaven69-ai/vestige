@@ -1,5 +1,6 @@
 import {
-  authoritativeNavigationFix,
+  routingPositionFix,
+  navigationPositionKey,
   type NavigationPosition,
 } from "../lib/navigation/position";
 import { RouteRequestGate } from "../lib/navigation/requests";
@@ -30,11 +31,14 @@ export function useWalkingNavigation(
   active: boolean,
   position?: NavigationPosition,
 ) {
-  const { fix: deviceFix, requestGPS } = useGame(),
-    now = useExplorationClock();
+  const { fix: deviceFix, requestGPS } = useGame();
+  useExplorationClock(); // Re-render when a stationary GPS fix becomes stale.
+  // A joystick sample can arrive between clock ticks. Validate against actual wall time, not an older UI tick.
+  const now = Date.now();
   const source = position?.source ?? "device";
-  const fix = authoritativeNavigationFix(
+  const fix = routingPositionFix(
     position ?? { source: "device", fix: deviceFix },
+    __DEV__,
   );
   const [enabled, setEnabled] = useState(false),
     [snapshot, setSnapshot] = useState<Snapshot>({
@@ -47,7 +51,7 @@ export function useWalkingNavigation(
       AppState.currentState === "active",
     ),
     [arrivalStatus, setArrivalStatus] = useState({ key: "", value: false });
-  const key = `${source}:${targetId}:${target.latitude}:${target.longitude}`;
+  const key = `${navigationPositionKey(position ?? { source: "device", fix: deviceFix })}:${targetId}:${target.latitude}:${target.longitude}`;
   const valid = validNavigationFix(fix, now),
     running = enabled && active && foreground;
   const gate = useRef(new RouteRequestGate()),

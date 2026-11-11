@@ -25,4 +25,24 @@ export const guidedTours: LiveTour[] = [
     }),
   })),
 ];
-export const guidedTour = (id: string) => guidedTours.find((t) => t.id === id);
+// Single-POI guidance uses the same engine and session protections as a trail.
+export const navigationTours: LiveTour[] = [
+  ...guidedTours,
+  ...monuments.map((m) => ({
+    id: `poi:${m.id}`,
+    title: "M’y rendre",
+    subtitle: m.name,
+    stops: [
+      {
+        poiId: m.id,
+        storyId: liveStories.find((s) => s.poiId === m.id)?.id ?? "",
+        approach: { latitude: m.latitude, longitude: m.longitude },
+        access: "Respectez les accès publics et horaires.",
+        sourceUrl: m.source,
+        checkedAt: "",
+      },
+    ],
+  })),
+];
+const toursById = new Map(navigationTours.map((t) => [t.id, t]));
+export const guidedTour = (id: string) => toursById.get(id);

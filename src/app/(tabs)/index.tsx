@@ -1,3 +1,6 @@
+import { useExplorationLocation } from "../../hooks/useExplorationLocation";
+import { DeveloperControls } from "../../components/developer/DeveloperControls";
+import { SimulationNotice } from "../../components/developer/SimulationBanner";
 import {
   partitionGuidedPois,
   canPresentArrival,
@@ -42,6 +45,7 @@ import {
   Modal,
   ScrollView,
   useWindowDimensions,
+  Alert,
 } from "react-native";
 import MapView, {
   Circle,
@@ -108,10 +112,13 @@ const initialCamera = {
   zoom: 16,
 };
 export default function Explorer() {
-  const { fix, gps, requestGPS, xp, journal, storageError } = useGame();
+  const { requestGPS, xp, journal, storageError } = useGame();
+  const location = useExplorationLocation();
+  const { fix, gps } = location;
+  const [developerOpen, setDeveloperOpen] = useState(false);
   const insets = useSafeAreaInsets();
   const focused = useIsFocused();
-  const guidance = useExplorerGuidance(focused);
+  const guidance = useExplorerGuidance(focused, location.position);
   const guideActive = guidance.active;
   const routeMonuments = useMemo(
     () =>
@@ -132,10 +139,14 @@ export default function Explorer() {
   const [catiaAnimating, setCatiaAnimating] = useState(true);
   const [catiaPreview, setCatiaPreview] = useState(false);
   const previewVisible =
-    mapPlayer.choice === "catia" && (!fresh || catiaPreview);
-  const heading = useExplorerHeading(focused && fresh);
+    !location.enabled &&
+    mapPlayer.choice === "catia" &&
+    (!fresh || catiaPreview);
+  const heading = useExplorerHeading(focused && fresh && !location.enabled);
   const reducedMotion = useReducedMotion();
-  const direction = playerDirection(heading, fix, now);
+  const direction = location.enabled
+    ? (fix?.heading ?? 0)
+    : playerDirection(heading, fix, now);
   const { width, height } = useWindowDimensions();
   const [poiGrouping, setPoiGrouping] = useState<PoiGroupingMode>("individual");
   const [atlasEnabled, setAtlasEnabled] = useState(false);
@@ -240,9 +251,11 @@ export default function Explorer() {
     (camera: Parameters<MapView["animateCamera"]>[0]) => {
       if (reducedMotion) map.current?.setCamera(camera);
       else
-        map.current?.animateCamera(camera, { duration: theme.motion.travel });
+        map.current?.animateCamera(camera, {
+          duration: location.enabled ? 250 : theme.motion.travel,
+        });
     },
-    [reducedMotion],
+    [reducedMotion, location.enabled],
   );
   useEffect(() => {
     if (
@@ -269,13 +282,19 @@ export default function Explorer() {
       moveCamera({
         ...explorationCamera(fix, immersive),
         ...(guideActive
-          ? { altitude: 400, zoom: 18, heading: direction ?? 0 }
+          ? {
+              altitude: 400,
+              zoom: 18,
+              heading: location.enabled ? 0 : (direction ?? 0),
+            }
           : {}),
       });
     } else
       moveCamera({
         center: { latitude: fix.latitude, longitude: fix.longitude },
-        ...(guideActive && direction !== null ? { heading: direction } : {}),
+        ...(guideActive && !location.enabled && direction !== null
+          ? { heading: direction }
+          : {}),
       });
   }, [
     fix,
@@ -288,6 +307,7 @@ export default function Explorer() {
     reducedMotion,
     guideActive,
     direction,
+    location.enabled,
   ]);
   const recenter = () => {
     followingRef.current = true;
@@ -300,11 +320,27 @@ export default function Explorer() {
       moveCamera({
         ...explorationCamera(fix, immersive),
         ...(guideActive
-          ? { altitude: 400, zoom: 18, heading: direction ?? 0 }
+          ? {
+              altitude: 400,
+              zoom: 18,
+              heading: location.enabled ? 0 : (direction ?? 0),
+            }
           : {}),
       });
     } else void requestGPS();
   };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      followingRef.current = true;
+      initialFollow.current = false;
+      cameraFix.current = null;
+      setFollowing(true);
+      setSelection(null);
+      setSheetOpen(false);
+      arrivalsSeen.current.clear();
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [location.epoch]);
   const guidedSheetKey = useRef<string | null>(null);
   const arrivalsSeen = useRef(new Set<string>());
   const openGuidedStage = useCallback(() => {
@@ -320,7 +356,7 @@ export default function Explorer() {
         active: guideActive,
         focused,
         arrived: guidance.navigation.arrived,
-        blocked: sheetOpen || panel !== null,
+        blocked: sheetOpen || panel !== null || developerOpen,
       })
     )
       return;
@@ -336,6 +372,7 @@ export default function Explorer() {
     guidance.stageKey,
     sheetOpen,
     panel,
+    developerOpen,
     openGuidedStage,
   ]);
   useEffect(() => {
@@ -405,17 +442,19 @@ export default function Explorer() {
     setImmersive(value);
     moveCamera({ pitch: value ? 45 : 0 });
   };
-  const status = storageError
-    ? "Carnet à vérifier"
-    : !fix
-      ? "Activer le GPS"
-      : !fresh
-        ? "GPS à actualiser"
-        : !goodGPS
-          ? "GPS imprécis"
-          : following
-            ? "Exploration · suivi actif"
-            : "Exploration libre";
+  const status = location.enabled
+    ? "Test · aucune récompense réelle"
+    : storageError
+      ? "Carnet à vérifier"
+      : !fix
+        ? "Activer le GPS"
+        : !fresh
+          ? "GPS à actualiser"
+          : !goodGPS
+            ? "GPS imprécis"
+            : following
+              ? "Exploration · suivi actif"
+              : "Exploration libre";
   return (
     <View style={styles.root}>
       {focused && <StatusBar style="light" />}
@@ -441,6 +480,7 @@ export default function Explorer() {
               borderRadius: 24,
             }}
           >
+            <SimulationNotice />
             <Text
               style={{
                 color: colors.ink,
@@ -494,6 +534,29 @@ export default function Explorer() {
         rotateEnabled
         moveOnMarkerPress={false}
         onMapReady={() => setMapReady(true)}
+        onLongPress={(event) => {
+          if (!__DEV__ || !location.controller.isEnabled()) return;
+          const point = event.nativeEvent.coordinate;
+          Alert.alert(
+            "Téléporter Catia ici ?",
+            "Mode test uniquement. Aucun XP ni visite sauvegardée.",
+            [
+              { text: "Annuler", style: "cancel" },
+              {
+                text: "Téléporter",
+                onPress: () => {
+                  if (!location.controller.teleportTo(point)) return;
+                  followingRef.current = true;
+                  initialFollow.current = false;
+                  setFollowing(true);
+                  setSelection(null);
+                  setSheetOpen(false);
+                  moveCamera({ center: point });
+                },
+              },
+            ],
+          );
+        }}
         onPanDrag={stopFollowing}
         onRegionChange={() => readCameraHeading()}
         onRegionChangeComplete={(next) => {
@@ -616,7 +679,13 @@ export default function Explorer() {
               )}
             {!previewVisible && (
               <PlayerMarker
-                character={mapPlayer.choice}
+                key={
+                  location.enabled
+                    ? `preview:${location.epoch}:${location.teleport}`
+                    : "device"
+                }
+                simulated={location.enabled}
+                character={location.enabled ? "catia" : mapPlayer.choice}
                 animate={catiaAnimating}
                 fix={fix}
                 direction={direction}
@@ -658,7 +727,7 @@ export default function Explorer() {
         style={[
           styles.top,
           {
-            top: insets.top + 10,
+            top: insets.top + (location.enabled ? 50 : 10),
             left: Math.max(insets.left, 14),
             right: Math.max(insets.right, 14),
           },
@@ -693,7 +762,7 @@ export default function Explorer() {
           pointerEvents="box-none"
           style={{
             position: "absolute",
-            top: insets.top + 10,
+            top: insets.top + (location.enabled ? 50 : 10),
             left: 14,
             right: 14,
           }}
@@ -716,7 +785,7 @@ export default function Explorer() {
           style={[
             styles.filterHint,
             {
-              top: insets.top + 78,
+              top: insets.top + (location.enabled ? 118 : 78),
               left: 14,
               alignSelf: "flex-start",
               minHeight: 44,
@@ -734,7 +803,7 @@ export default function Explorer() {
           style={[
             styles.filterHint,
             {
-              top: insets.top + 128,
+              top: insets.top + (location.enabled ? 168 : 128),
               left: 14,
               minHeight: 44,
               justifyContent: "center",
@@ -752,7 +821,10 @@ export default function Explorer() {
       {visibleMonuments.length === 0 && (
         <View
           pointerEvents="none"
-          style={[styles.filterHint, { top: insets.top + 182 }]}
+          style={[
+            styles.filterHint,
+            { top: insets.top + (location.enabled ? 222 : 182) },
+          ]}
         >
           <Text style={styles.hintText}>
             Aucun lieu ne correspond · modifiez les filtres
@@ -850,7 +922,12 @@ export default function Explorer() {
                 {fresh
                   ? formatDistance(distance(fix, selected))
                   : "Position indisponible"}{" "}
-                · {journal[selected.id] ? "Découvert ✓" : `+${selected.xp} XP`}
+                ·{" "}
+                {location.enabled
+                  ? "Test · aucun XP"
+                  : journal[selected.id]
+                    ? "Découvert ✓"
+                    : `+${selected.xp} XP`}
               </Text>
               <Text style={styles.read}>Consulter l’histoire →</Text>
             </View>
@@ -882,7 +959,70 @@ export default function Explorer() {
           ) : undefined
         }
       />
+      {__DEV__ && (
+        <>
+          {!selected && (
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel="Ouvrir le mode développeur de localisation"
+              onPress={() => setDeveloperOpen(true)}
+              style={{
+                position: "absolute",
+                bottom:
+                  bottom +
+                  (selected ? 220 : 10) +
+                  (location.enabled ? 175 : 50),
+                left: 16,
+                borderRadius: 12,
+                padding: 12,
+                backgroundColor: "#14253F",
+                borderWidth: 1,
+                borderColor: "#D8BE80",
+              }}
+            >
+              <Text style={{ color: "#F2D99E", fontSize: 12 }}>
+                Développeur
+              </Text>
+            </Pressable>
+          )}
+          <DeveloperControls
+            open={developerOpen}
+            close={() => setDeveloperOpen(false)}
+            active={
+              focused &&
+              !sheetOpen &&
+              !selected &&
+              panel === null &&
+              !clusterChoices.length
+            }
+            mapHeading={mapHeading}
+            bottom={bottom + (selected ? 220 : 10) + 55}
+            onTeleport={(point) => {
+              followingRef.current = true;
+              initialFollow.current = false;
+              setFollowing(true);
+              setSelection(null);
+              setSheetOpen(false);
+              moveCamera({
+                ...explorationCamera(point, immersive),
+                heading: 0,
+              });
+            }}
+            onReturnGPS={() => {
+              followingRef.current = true;
+              initialFollow.current = false;
+              cameraFix.current = null;
+              setFollowing(true);
+              void requestGPS();
+            }}
+          />
+        </>
+      )}
       <MapOptions
+        onDeveloper={() => {
+          setPanel(null);
+          setDeveloperOpen(true);
+        }}
         atlasEnabled={atlasEnabled}
         setAtlasEnabled={setAtlasEnabled}
         atlasStatus={atlas.status}

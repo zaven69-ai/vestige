@@ -1,4 +1,9 @@
-import { guidedTours, guidedTour } from "../../data/live/tours";
+import {
+  useSimulationController,
+  useSimulationMode,
+} from "../developer/DeveloperLocation";
+import { canUseLiveScope, canPersistLiveScope } from "./scope";
+import { navigationTours, guidedTour } from "../../data/live/tours";
 import {
   LIVE_CHECKPOINTS_KEY,
   emptyCheckpoints,
@@ -39,11 +44,25 @@ type Playback = {
   intent: "play" | "pause";
   status: "loading" | "playing" | "paused";
 };
-function useLiveState() {
+function useLiveState(
+  preview: boolean,
+  simulationEnabled: boolean,
+  simulationEpoch: number,
+  initialTourId?: string,
+) {
+  const simulation = useSimulationController();
+  const scopeAllowed = useCallback(
+    () => canUseLiveScope(preview, simulation.isEnabled()),
+    [preview, simulation],
+  );
+  const [previewEpoch, setPreviewEpoch] = useState(-1);
   const { fix } = useGame();
   const [session, setSession] = useState<VisitSession | null>(null),
-    [ready, setReady] = useState(false),
+    [loaded, setReady] = useState(false),
     [storageError, setStorageError] = useState<string | null>(null);
+  const ready = preview
+    ? simulationEnabled && previewEpoch === simulationEpoch
+    : loaded;
   const tour = guidedTour(session?.tourId ?? vienneAntique.id) ?? vienneAntique;
   const checkpoints = useRef(emptyCheckpoints());
   const [savedVisits, setSavedVisits] = useState(emptyCheckpoints);
@@ -76,6 +95,10 @@ function useLiveState() {
   }, [updatePlayback]);
   useEffect(() => {
     mounted.current = true;
+    if (preview)
+      return () => {
+        mounted.current = false;
+      };
     void Promise.all([
       AsyncStorage.getItem(LIVE_SESSION_KEY),
       AsyncStorage.getItem(LIVE_PREFS_KEY),
@@ -85,7 +108,7 @@ function useLiveState() {
         const { store, session: restored } = restoreTourState(
           saved,
           s,
-          guidedTours,
+          navigationTours,
         );
         checkpoints.current = store;
         const preferences = restorePreferences(p);
@@ -102,15 +125,49 @@ function useLiveState() {
     return () => {
       mounted.current = false;
     };
-  }, []);
+  }, [preview]);
   useEffect(() => {
-    if (!ready || writeFailed.current) return;
+    if (!preview) return;
+    const timer = setTimeout(() => {
+      checkpoints.current = emptyCheckpoints();
+      setSavedVisits(emptyCheckpoints());
+      setSession(
+        simulationEnabled
+          ? startVisit(
+              guidedTour(initialTourId ?? vienneAntique.id) ?? vienneAntique,
+              Date.now(),
+            )
+          : null,
+      );
+      setModeValue("manual");
+      setPrefs({ preferredMode: "manual", volume: 1 });
+      stopAudio();
+      setAudioError(null);
+      fence.current = emptyFence();
+      setPreviewEpoch(simulationEpoch);
+    }, 0);
+    return () => clearTimeout(timer);
+    // The real tour is captured only when entering a fresh simulation, not when selecting demo steps.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [preview, simulationEnabled, simulationEpoch, stopAudio]);
+  useEffect(() => {
+    if (!ready || writeFailed.current || !scopeAllowed()) return;
+    if (preview) {
+      if (session)
+        checkpoints.current = checkpoint(checkpoints.current, session);
+      setSavedVisits(checkpoints.current);
+      return;
+    }
     if (session) checkpoints.current = checkpoint(checkpoints.current, session);
     const savedSnapshot = checkpoints.current;
     const savedCheckpoints = JSON.stringify(savedSnapshot);
     queue.current = queue.current
       .then(async () => {
-        if (writeFailed.current) return;
+        if (
+          writeFailed.current ||
+          !canPersistLiveScope(preview, simulation.isEnabled())
+        )
+          return;
         await AsyncStorage.setItem(LIVE_CHECKPOINTS_KEY, savedCheckpoints);
         if (session)
           await AsyncStorage.setItem(LIVE_SESSION_KEY, JSON.stringify(session));
@@ -127,7 +184,21 @@ function useLiveState() {
             `Sauvegarde Live impossible : ${String(e)}. Votre journal XP reste intact.`,
           );
       });
-  }, [ready, session, prefs]);
+  }, [
+    ready,
+    session,
+    prefs,
+    preview,
+    scopeAllowed,
+    simulation,
+    simulationEnabled,
+  ]);
+  useEffect(() => {
+    // Invalidate audio callbacks and dwell state across source changes, even if Explorer is unfocused.
+    fence.current = emptyFence();
+    fenceStory.current = "";
+    if (!scopeAllowed()) stopAudio();
+  }, [simulationEnabled, scopeAllowed, stopAudio]);
   useEffect(() => {
     const sub = AppState.addEventListener("change", (state) => {
       setForeground(state === "active");
@@ -140,26 +211,28 @@ function useLiveState() {
   }, [pauseAudio]);
   const setVisible = useCallback(
     (value: boolean) => {
+      if (value && !scopeAllowed()) return;
       setVisibleValue(value);
       if (!value) {
         fence.current = emptyFence();
         pauseAudio();
       }
     },
-    [pauseAudio],
+    [pauseAudio, scopeAllowed],
   );
   const setMode = useCallback(
     (value: LiveMode) => {
+      if (!scopeAllowed()) return;
       pauseAudio();
       fence.current = emptyFence();
       setModeValue(value);
       setPrefs((p) => ({ ...p, preferredMode: value }));
     },
-    [pauseAudio],
+    [pauseAudio, scopeAllowed],
   );
   const begin = useCallback(
     (tourId: string = vienneAntique.id) => {
-      if (!ready || storageError) return;
+      if (!ready || storageError || !scopeAllowed()) return;
       stopAudio();
       fence.current = emptyFence();
       setModeValue("manual");
@@ -175,39 +248,43 @@ function useLiveState() {
       );
       setAudioError(null);
     },
-    [ready, storageError, stopAudio],
+    [ready, storageError, stopAudio, scopeAllowed],
   );
   const advance = useCallback(
     (outcome: "consulted" | "skipped" | "listened") => {
-      if (!ready || storageError) return;
+      if (!ready || storageError || !scopeAllowed()) return;
       stopAudio();
       fence.current = emptyFence();
       setSession((s) =>
         s ? advanceVisit(s, guidedTour(s.tourId)!, outcome, Date.now()) : s,
       );
     },
-    [ready, storageError, stopAudio],
+    [ready, storageError, stopAudio, scopeAllowed],
   );
   const leave = useCallback(() => {
+    if (!scopeAllowed()) return;
     stopAudio();
     setModeValue("manual");
     fence.current = emptyFence();
     if (session) checkpoints.current = checkpoint(checkpoints.current, session);
     checkpoints.current = { ...checkpoints.current, activeTourId: null };
     setSession(null);
-  }, [session, stopAudio]);
+  }, [session, stopAudio, scopeAllowed]);
   const finish = useCallback(() => {
+    if (!scopeAllowed()) return;
     stopAudio();
     setModeValue("manual");
     setSession((s) => (s ? { ...s, endedAt: Date.now(), paused: false } : s));
-  }, [stopAudio]);
+  }, [stopAudio, scopeAllowed]);
   const togglePause = useCallback(() => {
+    if (!scopeAllowed()) return;
     pauseAudio();
     fence.current = emptyFence();
     setSession((s) => (s ? { ...s, paused: !s.paused } : s));
-  }, [pauseAudio]);
+  }, [pauseAudio, scopeAllowed]);
   const requestPlay = useCallback(
     (story: LiveStory, automatic = false) => {
+      if (!scopeAllowed()) return false;
       const admission = playbackAdmission({
         active: !!session && session.endedAt === null,
         paused: session?.paused ?? true,
@@ -246,7 +323,7 @@ function useLiveState() {
       });
       return true;
     },
-    [session, foreground, visible, mode, updatePlayback],
+    [session, foreground, visible, mode, updatePlayback, scopeAllowed],
   );
   const replay = useCallback(() => {
     const stop = tour.stops[session?.index ?? 0];
@@ -256,6 +333,7 @@ function useLiveState() {
     requestPlay(story);
   }, [session, tour, stopAudio, requestPlay]);
   const play = useCallback(() => {
+    if (!scopeAllowed()) return;
     const current = playbackRef.current;
     if (current) {
       updatePlayback({ ...current, intent: "play" });
@@ -264,9 +342,11 @@ function useLiveState() {
     const stop = tour.stops[session?.index ?? 0];
     const story = liveStories.find((s) => s.id === stop?.storyId);
     if (story) requestPlay(story);
-  }, [session, tour, requestPlay, updatePlayback]);
+  }, [session, tour, requestPlay, updatePlayback, scopeAllowed]);
   useEffect(() => {
+    if (!scopeAllowed()) return;
     const tick = () => {
+      if (!scopeAllowed()) return;
       const stop = tour.stops[session?.index ?? 0],
         story = liveStories.find((s) => s.id === stop?.storyId);
       if (!stop || !story) return;
@@ -276,7 +356,7 @@ function useLiveState() {
         fenceStory.current = key;
       }
       const next = tickFence(fence.current, {
-        fix,
+        fix: preview ? simulation.getSnapshot().fix : fix,
         target: stop.approach,
         now: Date.now(),
         active:
@@ -306,6 +386,10 @@ function useLiveState() {
     ready,
     storageError,
     requestPlay,
+    preview,
+    simulation,
+    scopeAllowed,
+    simulationEnabled,
   ]);
   const onEnd = useCallback(
     (token: number) => {
@@ -336,9 +420,10 @@ function useLiveState() {
     [pauseAudio],
   );
   return {
+    preview,
     tour,
     savedVisit: (id: string) => savedVisits.sessions[id] ?? null,
-    session,
+    session: preview && !ready ? null : session,
     ready,
     storageError,
     mode,
@@ -361,9 +446,13 @@ function useLiveState() {
     onError,
     onStatus,
     onInterrupted,
-    setVolume: (volume: number) =>
-      setPrefs((p) => ({ ...p, volume: Math.max(0, Math.min(1, volume)) })),
+    setVolume: (volume: number) => {
+      if (scopeAllowed())
+        setPrefs((p) => ({ ...p, volume: Math.max(0, Math.min(1, volume)) }));
+    },
     effectivePlaying:
+      scopeAllowed() &&
+      ready &&
       !!session &&
       !session.paused &&
       session.endedAt === null &&
@@ -375,7 +464,15 @@ function useLiveState() {
 type LiveState = ReturnType<typeof useLiveState>;
 const Context = createContext<LiveState | null>(null);
 export function LiveProvider({ children }: { children: React.ReactNode }) {
-  const value = useLiveState();
+  const simulation = useSimulationMode();
+  const real = useLiveState(false, simulation.enabled, simulation.epoch);
+  const demo = useLiveState(
+    true,
+    simulation.enabled,
+    simulation.epoch,
+    real.session?.tourId,
+  );
+  const value = simulation.enabled ? demo : real;
   const story = liveStories.find((s) => s.id === value.playback?.storyId);
   const asset = story ? playableAsset(story, liveAssets) : null;
   return (
@@ -383,7 +480,7 @@ export function LiveProvider({ children }: { children: React.ReactNode }) {
       {children}
       {value.playback && asset && (
         <NativeNarration
-          key={value.playback.token}
+          key={`${value.preview ? "preview" : "real"}:${simulation.epoch}:${value.playback.token}`}
           asset={asset}
           token={value.playback.token}
           playing={value.effectivePlaying}

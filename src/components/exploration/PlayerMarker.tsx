@@ -20,6 +20,7 @@ export function PlayerMarker({
   active,
   character = "catia",
   animate = true,
+  simulated = false,
 }: {
   fix: Fix;
   direction: number | null;
@@ -28,6 +29,7 @@ export function PlayerMarker({
   active: boolean;
   character?: MapPlayerChoice;
   animate?: boolean;
+  simulated?: boolean;
 }) {
   const catiaPhase = useCatiaMovement(
     fix,
@@ -63,11 +65,20 @@ export function PlayerMarker({
       : { phase: "idle" as const, frame: 0 };
   const image = pack.sprites[facing][pose.phase][pose.frame];
   useEffect(() => {
-    const motion = avatarMotion(previous.current, fix, reducedMotion);
+    const motion = simulated
+      ? fix.timestamp <= previous.current.timestamp
+        ? "hold"
+        : reducedMotion ||
+            Math.abs(fix.latitude - previous.current.latitude) > 0.001 ||
+            Math.abs(fix.longitude - previous.current.longitude) > 0.001
+          ? "snap"
+          : "animate"
+      : avatarMotion(previous.current, fix, reducedMotion);
     if (motion === "hold") return;
     previous.current = fix;
     const point = { latitude: fix.latitude, longitude: fix.longitude };
-    const duration = motion === "snap" || !active ? 0 : theme.motion.travel;
+    const duration =
+      motion === "snap" || !active ? 0 : simulated ? 250 : theme.motion.travel;
     if (Platform.OS === "android")
       marker.current?.animateMarkerToCoordinate(point, duration);
     else {
@@ -89,7 +100,7 @@ export function PlayerMarker({
       animation.start();
       return () => animation.stop();
     }
-  }, [coordinate, fix, reducedMotion, active]);
+  }, [coordinate, fix, reducedMotion, active, simulated]);
   const isCatia = character === "catia";
   const spec = isCatia ? catiaMapSpec : avatarSpec;
   // Catia is a single animated PNG view; no GL context is mounted on the map.
@@ -108,14 +119,18 @@ export function PlayerMarker({
     tracksViewChanges: isCatia && active && animate && !reducedMotion,
     tappable: false,
     identifier: "vestige-player",
-    accessibilityLabel: isCatia
-      ? "Catia, position GPS réelle du joueur"
-      : "Votre explorateur VESTIGE, position GPS réelle",
+    accessibilityLabel: simulated
+      ? "Catia, position simulée de démonstration, aucun XP"
+      : isCatia
+        ? "Catia, position GPS réelle du joueur"
+        : "Votre explorateur VESTIGE, position GPS réelle",
   };
   const sprite = isCatia ? (
     <CatiaSprite
       facing={facing}
-      phase={catiaPhase}
+      phase={
+        simulated ? ((fix.speed ?? 0) >= 0.6 ? "walk" : "idle") : catiaPhase
+      }
       active={active && animate}
       reducedMotion={reducedMotion}
       onLoad={() => marker.current?.redraw()}

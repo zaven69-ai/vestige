@@ -1,3 +1,4 @@
+import { SimulationNotice } from "../developer/SimulationBanner";
 import React, { useMemo } from "react";
 import {
   Modal,
@@ -56,6 +57,7 @@ export function MonumentBottomSheet({
             { marginTop: insets.top + 32, paddingBottom: insets.bottom },
           ]}
         >
+          <SimulationNotice />
           <View {...gesture.panHandlers} style={styles.header}>
             <View style={styles.handle} />
             <View style={styles.titleLine}>
