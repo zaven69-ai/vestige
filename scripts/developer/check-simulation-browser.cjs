@@ -10,7 +10,14 @@ const { chromium } = require("playwright");
 const root = path.resolve(__dirname, "../..");
 const source = (file) => fs.readFileSync(path.join(root, file), "utf8");
 const points = JSON.parse(source("src/data/monuments.json")).filter((m) =>
-  ["auguste", "cybele", "theatre-vienne"].includes(m.id),
+  [
+    "auguste",
+    "cybele",
+    "theatre-vienne",
+    "fourviere",
+    "theatre-lyon",
+    "saint-jean",
+  ].includes(m.id),
 );
 const checkAudio = process.env.VESTIGE_AUDIO_TEST === "1";
 const mocks = new Map();
@@ -57,7 +64,7 @@ mock(
 );
 mock(
   path.join(root, "src/data/monuments.ts"),
-  `exports.monuments=${JSON.stringify(points)};exports.trails=[];exports.cities={Vienne:{latitude:45.525698,longitude:4.874218}};`,
+  `exports.monuments=${JSON.stringify(points)};exports.trails=[];exports.cities={Lyon:{latitude:45.7602,longitude:4.826},Vienne:{latitude:45.525698,longitude:4.874218}};`,
 );
 mock(
   path.join(root, "src/components/live/NativeNarration.tsx"),
@@ -339,7 +346,7 @@ const bundle = `const process={env:{NODE_ENV:'development'}};const __DEV__=true;
     });
     await page.waitForFunction(() => window.harness.game.fix);
     await page
-      .getByRole("button", { name: "Activer le mode test à Vienne" })
+      .getByRole("button", { name: "Activer le mode test à Lyon" })
       .click();
     await page.evaluate(() =>
       window.confirmation.buttons.find((b) => b.text === "Activer").onPress(),
@@ -350,6 +357,12 @@ const bundle = `const process={env:{NODE_ENV:'development'}};const __DEV__=true;
         window.harness.live.ready &&
         window.harness.guide.active,
     );
+    await page.evaluate(() => window.harness.open());
+    await page
+      .getByRole("button", {
+        name: "Téléporter · Temple d’Auguste et de Livie",
+      })
+      .click();
     const before = await page.evaluate(() => window.harness.snapshot());
     const result = await page.evaluate(async () => {
       window.savedAdvance("consulted");

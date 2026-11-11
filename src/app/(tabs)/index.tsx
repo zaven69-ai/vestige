@@ -1,3 +1,4 @@
+import { useMapCityPreference } from "../../hooks/useMapCityPreference";
 import { miniaturePoiIds } from "../../lib/miniatures/assets";
 import { MonumentMiniatureMarker } from "../../components/exploration/MonumentMiniatureMarker";
 import { miniaturePlan } from "../../lib/miniatures/policy";
@@ -111,7 +112,7 @@ const mapStyle = [
 ];
 const noMiniature = { enabled: false, size: 64 };
 const initialCamera = {
-  ...explorationCamera(cities.Vienne, true),
+  ...explorationCamera(cities.Lyon, true),
   altitude: 1400,
   zoom: 16,
 };
@@ -120,6 +121,8 @@ export default function Explorer() {
   const location = useExplorationLocation();
   const { fix, gps } = location;
   const [developerOpen, setDeveloperOpen] = useState(false);
+  const cityPreference = useMapCityPreference();
+  const restoredCity = useRef(false);
   const insets = useSafeAreaInsets();
   const focused = useIsFocused();
   const guidance = useExplorerGuidance(focused, location.position);
@@ -156,7 +159,7 @@ export default function Explorer() {
   const [atlasEnabled, setAtlasEnabled] = useState(false);
   const atlas = useLocalAtlas(atlasEnabled);
   const [region, setRegion] = useState<Region>({
-    ...cities.Vienne,
+    ...cities.Lyon,
     latitudeDelta: 0.025,
     longitudeDelta: 0.025,
   });
@@ -331,6 +334,16 @@ export default function Explorer() {
     direction,
     location.enabled,
   ]);
+  useEffect(() => {
+    if (!mapReady || !cityPreference.ready || restoredCity.current) return;
+    restoredCity.current = true;
+    if (!fresh)
+      moveCamera({
+        ...explorationCamera(cities[cityPreference.city], true),
+        altitude: 1400,
+        zoom: 16,
+      });
+  }, [mapReady, cityPreference.ready, cityPreference.city, fresh, moveCamera]);
   const recenter = () => {
     followingRef.current = true;
     setFollowing(true);
@@ -460,6 +473,7 @@ export default function Explorer() {
     [stopFollowing, reducedMotion],
   );
   const browse = (city: City) => {
+    cityPreference.save(city);
     stopFollowing();
     setSelection(null);
     moveCamera({

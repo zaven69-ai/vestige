@@ -968,6 +968,246 @@
     "sha256": "7556b33dc3b521b6f4516692e8a73b706fa6b31f96b68c00217ca2ee714b74b0"
   },
   {
+    "path": "assets/monuments/miniatures/fourviere/LICENSE.txt",
+    "sha256": "da56f592196d9622d1a7cba587d37a11fcebfb9e61ec2615a0d041e9b7fb7b90"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/README.md",
+    "sha256": "ac9a8d061edbf45ac9bc694095e4594b5946b249581d32b48055f90dadaa69a3"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/build-info.json",
+    "sha256": "b15e16520fe71764b64e2897bf45d8b90b46872f3cd7e29210264ee864dca4f7"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/miniature-source.blend",
+    "sha256": "42e14c498ab4b1dcfd0c4e4daec75b67b8d6c3ebbb90b03f4cff9100e49735a7"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/miniature-source.glb",
+    "sha256": "11e2be5d2e463d89822ca7dbe0461f9f5a6937351372c33ad9f24e5bd804261e"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/preview.png",
+    "sha256": "172ab872ac2e7f3b0f9711cbdb07bb6844a450896cdb2c82723f45fd778934d4"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-0.png",
+    "sha256": "5c73065f69114d5aae6c435a02f659f63db02580976d4904d4a14f91788e1b21"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-0@2x.png",
+    "sha256": "34cf52145daed3f16777ddf0ffc2211dccc0ea8f38c7e967e3314b4330e6f106"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-0@3x.png",
+    "sha256": "e32fc5b4f8e005fe96b326947faa1e145d703d2d9d55f119f7634a2089863961"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-1.png",
+    "sha256": "6e5f5052697c25925c59320e7b6f08a4291da6f21daefbdb571e8bd991810105"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-1@2x.png",
+    "sha256": "fae3076a48112b263604f8f006174016b302b0fe738b7af4ea8ef7a347d7a33b"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-1@3x.png",
+    "sha256": "eb6e3430fa75bb9ad8dd908a621907144851d94e806c09cd98f2973029c8eb40"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-2.png",
+    "sha256": "5b65a02816b996d33a87fa9bd1a66c72418d70f49d095635287196021f5b977f"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-2@2x.png",
+    "sha256": "85b53af655ac5a9a5ae8d5ae52eb47632428909911ee9c5dc7d34fbc074d58f2"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-2@3x.png",
+    "sha256": "df89b7fd515b2cf8dba82c88836261176fd0f7a95b1fc204199743bfc1afc94f"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-3.png",
+    "sha256": "f9472213adc66d7e170f4605fd9dddfedd5bd0f5533ead9bc136dc35dffa302c"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-3@2x.png",
+    "sha256": "fdd6ac8c5902b33d9099d9b2c9e8440d6f233ef46eceb7958c9f0ac868c63895"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-3@3x.png",
+    "sha256": "95891db2d5c7e56e9b721d2f572450b9b587f9db45928557a8fbda446fee0599"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-4.png",
+    "sha256": "1c42edf8f763e26fbb965a8f8baeebbfafe9ad12abc5182cc3da63d8c7c5b61e"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-4@2x.png",
+    "sha256": "791d635a55d15d85f2e017b7ce78df9d558edcec16afc28b63c23f24edc6b62a"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-4@3x.png",
+    "sha256": "70628f4077ec702c705419f7e34dec7f8b38b961a35c049f5f2b1c53159014f8"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-5.png",
+    "sha256": "daf69560263da1a1cf7bfecee20486cfbc1f302a6f8f262b62d6551983ba69df"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-5@2x.png",
+    "sha256": "8dfc25dc5d9444071388c325885796ac0185873d5f325318f6d2295b352f1142"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-5@3x.png",
+    "sha256": "a1e28ac1d697fa4d5566903e189a3c3dd946f83a4aaf74c74b6ba1f2cdc977c7"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-6.png",
+    "sha256": "95a0fe7e157232d9f85df75851394f48840b66f2c84f0d07643d4cd1f83fecd2"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-6@2x.png",
+    "sha256": "2979b02027e58ea1803e87b4c2b5d0e5c6e55e2b0c7fd3ec524d676ca55d1aae"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-6@3x.png",
+    "sha256": "02d0e176c2776ae5acb6feeb252219bd04de4bb6bf7a1ac659bbcb528a92e0f0"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-7.png",
+    "sha256": "be117c937ab4f26f9a083394f4956446ea92a5837ce1b930b5686a80d3b7f08d"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-7@2x.png",
+    "sha256": "41aab82f04c07984d02e4adc953bbf569a4b1f854cf7a09f9a65e5dcb5cfbd3b"
+  },
+  {
+    "path": "assets/monuments/miniatures/fourviere/view-7@3x.png",
+    "sha256": "960612aeeb1fe0ba14f660d72a85ad9ae5a0f20d704aa742e49ea74bf79c7365"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/LICENSE.txt",
+    "sha256": "da56f592196d9622d1a7cba587d37a11fcebfb9e61ec2615a0d041e9b7fb7b90"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/README.md",
+    "sha256": "57d880134603dd32b1400a86f3b4da31d0be46afa6edae56d40c8597b7199b27"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/build-info.json",
+    "sha256": "577b043d00d4d4201ef10e4f72d96451b02b62f77d38fd6103b371f2e61fa6cc"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/miniature-source.blend",
+    "sha256": "cff45b854607398fd9cb3eb68cc3b6d34f709cf810f71d06de758ba41bebda14"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/miniature-source.glb",
+    "sha256": "e8205cd38c25545a1a48b5f087c05682411d12f8207967b028b6ae1e11343f5a"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/preview.png",
+    "sha256": "e85b2892def41e00f3d74a668f032a8b134fa41ace805efd73c81a6a740eef41"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-0.png",
+    "sha256": "64a6729d51ebea4b730141b612edf5147a3ecc00ac3e732a33d9546416188d39"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-0@2x.png",
+    "sha256": "731d7055f2df5a79c2afcfc0ea67ef13618e23bb55315c51948267ce06259ba6"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-0@3x.png",
+    "sha256": "ace777bf83342dcfc8676c64a83d171027ce9b12f2019a9ab8c8a1be66e3d88e"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-1.png",
+    "sha256": "ede28e0048b23fc9e40dbf38ff96d74f8044c147ec8fc1734ea0e3bec0b7b4f1"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-1@2x.png",
+    "sha256": "fac719ef40aee6ea9ca0fb3ae4216df744e378684cbf74718d246f4eb73d2e6e"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-1@3x.png",
+    "sha256": "40d3788d97a615b02f3132a4afe4e9c9f3928e37ffb7b97ee2fe311788bed0d0"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-2.png",
+    "sha256": "639eff19b26bc25d170e0502f480aa15cfd5fcc2668e017d95d60fde3fe9a9fb"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-2@2x.png",
+    "sha256": "8c2f49ec929d7e7a4dd72f17701a3106c39e59799c31304ffc5f80b3d51bf8ae"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-2@3x.png",
+    "sha256": "59fb935e445dd0737305bf44bd8a19cd674c2529df473d20c5877d0095b10124"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-3.png",
+    "sha256": "74a17243d225aac633b04ae3c8a83f9dcfd2175f5e8ab06166127b93eaca1c51"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-3@2x.png",
+    "sha256": "4d142e69b263268d28c14e892040c500c5ab79383e319878530d1f3c45eb262c"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-3@3x.png",
+    "sha256": "d1558482dcd0972f5b82b253618fcbb05f16f63a5655144823c6e1c2c597c300"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-4.png",
+    "sha256": "03f07e9e6d2f59052f7fdbcb2941065ae82e9f85aab69fb8b41c8cc05219be70"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-4@2x.png",
+    "sha256": "bdc70f30998ad562b8b7acde187431bccd7f110ef772eea6cf4ce7e07c632c41"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-4@3x.png",
+    "sha256": "efdc4eed6854c8d998882d7fce1685d1437b904467d51cf07b8cad55ff752755"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-5.png",
+    "sha256": "0439ff7b85e18c9835889eccf9d2f8c829260555f8c3bd3e6f5aebb9c4661e6d"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-5@2x.png",
+    "sha256": "66640d50623ae95775ff2dc33a89273df9718edda5421d70d7e5519bfcc0c534"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-5@3x.png",
+    "sha256": "07514a0d13ac10cde311ed7d89f12056b6b56a007d3c42f89c04bda4d0c9f02f"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-6.png",
+    "sha256": "bc841835b19810cba3cc8ce5f126593c33bf7f10de0e5d066b76e0084efd337e"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-6@2x.png",
+    "sha256": "723c6ef883084cf6ecc71c7a33acd711d773bfe09b8f97df25f1a67d01072379"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-6@3x.png",
+    "sha256": "876e84eeb13f449a2564a58a56fd8825f86c5ee941d4feaff84de2a60717cfd7"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-7.png",
+    "sha256": "e9749f515110487bbddfadc128ac1a10eb2400d520c93e757815341a509dc57f"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-7@2x.png",
+    "sha256": "d86c5ffa135a76aacba64cf88b020a4f47b16537bc696bafecdcfd90288af734"
+  },
+  {
+    "path": "assets/monuments/miniatures/theatre-lyon/view-7@3x.png",
+    "sha256": "eaf8f921482e0a01d33b4690920c510a49898ca3d1d78c15f33f8ffa5063b5cb"
+  },
+  {
     "path": "assets/poi/castle-community_pending.png",
     "sha256": "5ac488f55c6065a2f241ef5fad8e799c1ce3b919c660bd0b6ded9441565c6a59"
   },
@@ -4324,6 +4564,10 @@
     "sha256": "9eb8477d50ac028b007ecebff64b0a16531e2206acb80787bccedb9abda97577"
   },
   {
+    "path": "docs/design/LYON-DEMO-V1.md",
+    "sha256": "bfa4a3693caa0314fb825f2ffb93da7e056bde3c751486fa9d475e4741685d5e"
+  },
+  {
     "path": "docs/design/POI-CLUSTERING-V23.md",
     "sha256": "44888bffb09b12021411577923bf117346e76227ecd212967ceeef7543c3190a"
   },
@@ -4457,7 +4701,7 @@
   },
   {
     "path": "scripts/developer/check-simulation-browser.cjs",
-    "sha256": "581df20d5e9b9b3cc148f2d48092d8ad87e08a14a74cff263fe9c56587ba59a5"
+    "sha256": "ac0d9e7dd58eb82e4f850ff7c4ff860afc81de3e4544385e8e393a4cbffd8a7d"
   },
   {
     "path": "scripts/live/import-george-private.cjs",
@@ -4472,8 +4716,12 @@
     "sha256": "93b276e0ddcb88e18d42e7dbf00849decec58d7405af102f732a3090296dbcb7"
   },
   {
+    "path": "scripts/monuments/build-lyon.py",
+    "sha256": "59c3c5f4a8486f147c2c35c84cbbff75b4f2fcf1d8e0dce8ff7703bf5d3f77e7"
+  },
+  {
     "path": "scripts/monuments/check-miniature-browser.cjs",
-    "sha256": "912455aea8dde403dfdd073c425ca0ff1556e6e2ea0c5ac1d1358626931f6980"
+    "sha256": "8c2010936c51473a762aa7e906be0b4494174830f9652043d0e711af48d221e2"
   },
   {
     "path": "scripts/navigation/probe-valhalla.mjs",
@@ -4521,15 +4769,15 @@
   },
   {
     "path": "scripts/windows/update-social-v2.ps1",
-    "sha256": "9b651b9b9659b657db37b1750fb44cdc908645890e314f3e16c08147f1c7c877"
+    "sha256": "aae669c4b242985bf60206e36a3b17084426f1387a555d32b5c500ae5b84b490"
   },
   {
     "path": "src/app/(tabs)/index.tsx",
-    "sha256": "b57d3962e44d9fa873f6746662503337c7e28031b79b01418ba4c8f627233970"
+    "sha256": "d6326411d7f69f883af45cbbe14f8c2848feb9da96a1487242fdc315da45cce4"
   },
   {
     "path": "src/app/(tabs)/parcours.tsx",
-    "sha256": "bcd27a315ac0957dd29713dff60eab46e5e41e05e9cff0aa6c3c447ea9097314"
+    "sha256": "ca3cb4bdf3f771fbfba9e8f7652084db88c4ef6ee4f7a08a5cca3d3f61d94aa3"
   },
   {
     "path": "src/app/(tabs)/profil.tsx",
@@ -4569,7 +4817,7 @@
   },
   {
     "path": "src/components/developer/DeveloperControls.tsx",
-    "sha256": "ef914625187a7bc387fa96369fb1da37262ba2ec4b6a56befe59113036da75f6"
+    "sha256": "fe3c2369b82a52b100295489c5addeff4110508e9208bb087639338ba1d8903a"
   },
   {
     "path": "src/components/developer/SimulationBanner.tsx",
@@ -4593,11 +4841,11 @@
   },
   {
     "path": "src/components/exploration/MapOptions.tsx",
-    "sha256": "bab98f73dc6cb15a2a0e3275a4fabb0036ba1fd5fe02d672cdf3d02b63a707b2"
+    "sha256": "f13ee1feb554728b6efb96caf1729d2ef7ba0addec18269b9a9cf9d34775190c"
   },
   {
     "path": "src/components/exploration/MonumentMiniatureMarker.tsx",
-    "sha256": "6f39cbc677b656d924563c3f2d3e21f7e9774a95d3831acce84d39430ba88091"
+    "sha256": "a50efe33ab5bfa38e253ee95ad2cbc2cf407ebc333ce7852e96d237f39bcbd66"
   },
   {
     "path": "src/components/exploration/PlayerMarker.tsx",
@@ -4637,7 +4885,7 @@
   },
   {
     "path": "src/components/monuments/MonumentDetails.tsx",
-    "sha256": "4e3de1b8e60cf8de7f208b05253ac2202d9774e3736d67cc67de1eabf8e25ca4"
+    "sha256": "c516caeb2cd258830a760978654c917c3fbff19f7eecb12bc544431c7284f558"
   },
   {
     "path": "src/components/navigation/ExplorerGuideHUD.tsx",
@@ -4693,7 +4941,7 @@
   },
   {
     "path": "src/data/live/georgeDemo.ts",
-    "sha256": "b5fba0a86736fac7f08a2d4bd19bcec332de90c513ea83568878ed0822909a3b"
+    "sha256": "206b7c058986e4ae648e6980fe87006d72c9022b27b174d3bc37ba1fa7fadbc0"
   },
   {
     "path": "src/data/live/georgePrivateAsset.ts",
@@ -4716,6 +4964,10 @@
     "sha256": "d8b6e13d71479ccf875d32ee43f7d33aaed6c75d554de022de706b18b9fbfa2c"
   },
   {
+    "path": "src/data/lyonDemo.ts",
+    "sha256": "59fe33796b1a12fd47ee8241ff39d6378c0252cfa1a34e3222a0087404943024"
+  },
+  {
     "path": "src/data/monuments.ts",
     "sha256": "ee4f7f6a570056365096561cab2e56070fcd291648cf9b6a640f30f0c7245bca"
   },
@@ -4726,6 +4978,10 @@
   {
     "path": "src/hooks/useExplorerGuidance.ts",
     "sha256": "74b7b9e33a5569a14e33c4a3fce6291fba2071924be1c2e23c8f6f4a6a2ba3e7"
+  },
+  {
+    "path": "src/hooks/useMapCityPreference.ts",
+    "sha256": "4acf52072422fc05db0d686b7a4a56477b7a576ebfd230a445f4d515eb71ca47"
   },
   {
     "path": "src/hooks/useMapPlayer.ts",
@@ -4769,7 +5025,7 @@
   },
   {
     "path": "src/lib/live/LiveProvider.tsx",
-    "sha256": "fb75b2af5d87116dd04960a1ec347eadfa47be62d5c1093dae5bdab06fe02784"
+    "sha256": "18a8a5624a0c47c3f13adf18b261d348170ce35833d6a36e7252d5834fc393b5"
   },
   {
     "path": "src/lib/live/audioPlayback.ts",
@@ -4809,7 +5065,7 @@
   },
   {
     "path": "src/lib/miniatures/assets.ts",
-    "sha256": "9e017e1742fa6f0902926dcabe47d06d147066d967b97c899f7e5f0e9909f539"
+    "sha256": "019d397d2c54c73ea5a1609e76120f7f500464061f585eac65462692d218df5c"
   },
   {
     "path": "src/lib/miniatures/policy.ts",
@@ -4890,6 +5146,10 @@
   {
     "path": "tests/live.test.ts",
     "sha256": "f0bf248a61cc30462643674ccccbc89aeb4db6a9e3a1d6b63ed0ea8861fcac1f"
+  },
+  {
+    "path": "tests/lyon-demo.test.ts",
+    "sha256": "12f0ceca3162176b9a820181fdc5695e840376686bb8570713a87bccbe18dec2"
   },
   {
     "path": "tests/monument-miniature.test.ts",

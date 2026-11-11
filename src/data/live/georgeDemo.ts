@@ -18,7 +18,7 @@ export const georgeDemo = {
   sources: [
     {
       title: "Rue Mercière — référence à contrôler, non validation du script",
-      url: "https://fr.wikipedia.org/wiki/Rue_Merci%C3%A8re",
+      url: "https://fr.wikipedia.org/wiki/Rue_Merci%C3%A8re_(Lyon)",
     },
   ],
 };

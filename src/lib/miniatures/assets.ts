@@ -1,6 +1,7 @@
 import type { ImageRequireSource } from "react-native";
 export type MonumentMiniature = {
   poiId: string;
+  label?: string;
   kind: "pre-rendered-2.5d";
   views: readonly ImageRequireSource[];
   preview: ImageRequireSource;
@@ -39,8 +40,59 @@ const auguste: MonumentMiniature = {
     },
   ],
 };
+const fourviere: MonumentMiniature = {
+  poiId: "fourviere",
+  label: "Fourvière",
+  kind: "pre-rendered-2.5d",
+  views: [
+    require("../../../assets/monuments/miniatures/fourviere/view-0.png"),
+    require("../../../assets/monuments/miniatures/fourviere/view-1.png"),
+    require("../../../assets/monuments/miniatures/fourviere/view-2.png"),
+    require("../../../assets/monuments/miniatures/fourviere/view-3.png"),
+    require("../../../assets/monuments/miniatures/fourviere/view-4.png"),
+    require("../../../assets/monuments/miniatures/fourviere/view-5.png"),
+    require("../../../assets/monuments/miniatures/fourviere/view-6.png"),
+    require("../../../assets/monuments/miniatures/fourviere/view-7.png"),
+  ],
+  preview: require("../../../assets/monuments/miniatures/fourviere/preview.png"),
+  description:
+    "État actuel stylisé : quatre tours octogonales, galerie de façade, nef et toiture verte. Les sculptures et proportions sont simplifiées ; pas un relevé scientifique.",
+  sources: [
+    {
+      title: "Basilique de Fourvière — documentation et images de référence",
+      url: "https://fr.wikipedia.org/wiki/Basilique_Notre-Dame_de_Fourvi%C3%A8re",
+    },
+  ],
+};
+const theatre_lyon: MonumentMiniature = {
+  poiId: "theatre-lyon",
+  label: "Théâtres",
+  kind: "pre-rendered-2.5d",
+  views: [
+    require("../../../assets/monuments/miniatures/theatre-lyon/view-0.png"),
+    require("../../../assets/monuments/miniatures/theatre-lyon/view-1.png"),
+    require("../../../assets/monuments/miniatures/theatre-lyon/view-2.png"),
+    require("../../../assets/monuments/miniatures/theatre-lyon/view-3.png"),
+    require("../../../assets/monuments/miniatures/theatre-lyon/view-4.png"),
+    require("../../../assets/monuments/miniatures/theatre-lyon/view-5.png"),
+    require("../../../assets/monuments/miniatures/theatre-lyon/view-6.png"),
+    require("../../../assets/monuments/miniatures/theatre-lyon/view-7.png"),
+  ],
+  preview: require("../../../assets/monuments/miniatures/theatre-lyon/preview.png"),
+  description:
+    "État archéologique actuel simplifié : cavea ouverte du grand théâtre, orchestra et petit odéon voisin. Aucune scène monumentale ni toiture antique restituée.",
+  sources: [
+    {
+      title:
+        "Théâtres romains de Fourvière — documentation et images de référence",
+      url: "https://fr.wikipedia.org/wiki/Th%C3%A9%C3%A2tre_antique_de_Lyon",
+    },
+  ],
+};
 export const monumentMiniatures: Readonly<Record<string, MonumentMiniature>> = {
   auguste,
+  fourviere,
+  "theatre-lyon": theatre_lyon,
 };
 export const miniatureFor = (poiId: string): MonumentMiniature | undefined =>
   monumentMiniatures[poiId];

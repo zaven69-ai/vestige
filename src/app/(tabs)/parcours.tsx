@@ -10,9 +10,14 @@ export default function Parcours() {
         Choisissez un parcours. Toute l’exploration et le guidage se déroulent
         ensuite dans Explorer.
       </Text>
-      {guidedTours.map((tour) => (
-        <TourCard key={tour.id} tour={tour} />
-      ))}
+      {[...guidedTours]
+        .sort(
+          (a, b) =>
+            Number(b.id === "trail-lyon") - Number(a.id === "trail-lyon"),
+        )
+        .map((tour) => (
+          <TourCard key={tour.id} tour={tour} />
+        ))}
     </Page>
   );
 }

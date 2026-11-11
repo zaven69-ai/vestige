@@ -229,12 +229,12 @@ export function MonumentDetails({
             <>
               {miniature && (
                 <Card>
-                  <Text style={s.heading}>Le temple en miniature</Text>
+                  <Text style={s.heading}>Le monument en miniature</Text>
                   <Image
                     source={miniature.preview}
                     style={{ width: "100%", height: 220 }}
                     resizeMode="contain"
-                    accessibilityLabel="Illustration 2.5D du temple actuel restauré"
+                    accessibilityLabel={`Illustration 2.5D : ${monument.name}`}
                   />
                   <Text style={s.caption}>{miniature.description}</Text>
                   {miniature.sources.map((source) => (

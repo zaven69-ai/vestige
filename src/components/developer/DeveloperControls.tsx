@@ -1,3 +1,4 @@
+import { lyonDemoPresets } from "../../data/lyonDemo";
 import React, { useEffect, useMemo, useState } from "react";
 import {
   Animated,
@@ -121,14 +122,14 @@ export function DeveloperControls({
   function enable() {
     Alert.alert(
       "Activer le GPS simulé ?",
-      "Position de démonstration à Vienne, sans découverte, XP ni visite sauvegardée. Le GPS réel reste séparé.",
+      "Position de démonstration à Lyon, sans découverte, XP ni visite sauvegardée. Le GPS réel reste séparé.",
       [
         { text: "Annuler", style: "cancel" },
         {
           text: "Activer",
           onPress: () => {
-            simulation.controller.enable(cities.Vienne);
-            onTeleport(cities.Vienne);
+            simulation.controller.enable(cities.Lyon);
+            onTeleport(cities.Lyon);
             close();
           },
         },
@@ -136,6 +137,7 @@ export function DeveloperControls({
     );
   }
   const presets = [
+    ...lyonDemoPresets,
     { title: "Centre de Vienne", point: cities.Vienne },
     ...vienneAntique.stops.map((stop, index) => ({
       title: [
@@ -209,12 +211,17 @@ export function DeveloperControls({
                 }
               />
               {!simulation.enabled ? (
-                <Button
-                  title="Activer le mode test à Vienne"
-                  onPress={enable}
-                />
+                <Button title="Activer le mode test à Lyon" onPress={enable} />
               ) : (
                 <>
+                  <Button
+                    title="Tester le parcours Lyon"
+                    disabled={!live.ready}
+                    onPress={() => {
+                      live.begin("trail-lyon");
+                      close();
+                    }}
+                  />
                   <Button
                     title="Tester Vienne antique"
                     disabled={!live.ready}

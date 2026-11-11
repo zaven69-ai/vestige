@@ -166,7 +166,7 @@ function MiniatureBitmap(props: Props) {
               textAlign: "center",
             }}
           >
-            Temple · 2.5D{state === "discovered" ? " ✓" : ""}
+            {pack.label ?? "Temple"} · 2.5D{state === "discovered" ? " ✓" : ""}
           </Text>
           <Text
             numberOfLines={1}

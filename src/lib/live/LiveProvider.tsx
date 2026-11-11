@@ -139,7 +139,7 @@ function useLiveState(
       setSession(
         simulationEnabled
           ? startVisit(
-              guidedTour(initialTourId ?? vienneAntique.id) ?? vienneAntique,
+              guidedTour(initialTourId ?? "trail-lyon") ?? vienneAntique,
               Date.now(),
             )
           : null,

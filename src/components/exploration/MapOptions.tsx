@@ -148,8 +148,8 @@ export function MapOptions({
                 <View style={{ flex: 1 }}>
                   <Text style={s.body}>Monuments miniatures 2.5D</Text>
                   <Text style={s.caption}>
-                    Pilote : temple d’Auguste et de Livie, en vue rapprochée.
-                    Rendus Blender, sans mesh 3D dans la carte.
+                    Lyon : Fourvière et théâtres romains ; Vienne : temple, en
+                    vue rapprochée. Rendus Blender, sans mesh 3D dans la carte.
                   </Text>
                 </View>
                 <Switch

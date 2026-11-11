@@ -1,0 +1,12 @@
+{
+  "poiId": "fourviere",
+  "views": 8,
+  "densities": [
+    128,
+    256,
+    384
+  ],
+  "kind": "original present-state stylized illustration",
+  "license": "MIT",
+  "renderer": "Blender Cycles CPU 32 samples"
+}

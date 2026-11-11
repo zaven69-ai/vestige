@@ -9,6 +9,10 @@ const ts = require("typescript"),
 const root = path.resolve(__dirname, "../.."),
   mocks = new Map(),
   modules = new Map();
+const testPoi = process.env.VESTIGE_MINIATURE_POI || "auguste";
+const testMonument = JSON.parse(
+  fs.readFileSync(path.join(root, "src/data/monuments.json"), "utf8"),
+).find((m) => m.id === testPoi);
 const mock = (id, s) => mocks.set(id, s);
 mock(
   "react-native",
@@ -26,7 +30,7 @@ const entry = "/miniature-test.js";
 mock(
   entry,
   `const React=require('react'),{createRoot}=require('react-dom/client');const {MonumentMiniatureMarker}=require('${root}/src/components/exploration/MonumentMiniatureMarker.tsx');window.redraws=0;window.animations=[];
-function App(){const [heading,setHeading]=React.useState(0),[enabled,setEnabled]=React.useState(true),[reduced,setReduced]=React.useState(false),[key,setKey]=React.useState(0),[selected,setSelected]=React.useState(false);window.test={heading:setHeading,enabled:setEnabled,reduced:v=>{setReduced(v);setKey(x=>x+1)},reset:()=>{setHeading(0);setKey(x=>x+1)}};return React.createElement('main',null,React.createElement('h1',null,'Contrôle React — miniature 2.5D'),React.createElement('p',null,'Substituts DOM : ce contrôle ne valide ni MapKit ni un rendu physique iPhone.'),React.createElement('section',{style:{minHeight:350,display:'flex',alignItems:'center',justifyContent:'center',borderRadius:20,background:'repeating-linear-gradient(28deg,#14283d 0px,#14283d 40px,#243e51 42px,#14283d 47px)'}},React.createElement(MonumentMiniatureMarker,{key,monument:{id:'auguste',name:'Temple d’Auguste et de Livie',latitude:45.5255,longitude:4.8742,origin:'editorial',reviewStatus:'unreviewed'},selected,state:'undiscovered',mapHeading:heading,plan:{enabled,size:128},reducedMotion:reduced,onSelect:()=>setSelected(true),onOpenMiniature:m=>{window.opened=m;setSelected(true)}})),selected?React.createElement('p',null,'Fiche existante sélectionnée · auguste'):null)}createRoot(document.getElementById('root')).render(React.createElement(App));`,
+function App(){const [heading,setHeading]=React.useState(0),[enabled,setEnabled]=React.useState(true),[reduced,setReduced]=React.useState(false),[key,setKey]=React.useState(0),[selected,setSelected]=React.useState(false);window.test={heading:setHeading,enabled:setEnabled,reduced:v=>{setReduced(v);setKey(x=>x+1)},reset:()=>{setHeading(0);setKey(x=>x+1)}};return React.createElement('main',null,React.createElement('h1',null,'Contrôle React — miniature 2.5D'),React.createElement('p',null,'Substituts DOM : ce contrôle ne valide ni MapKit ni un rendu physique iPhone.'),React.createElement('section',{style:{minHeight:350,display:'flex',alignItems:'center',justifyContent:'center',borderRadius:20,background:'repeating-linear-gradient(28deg,#14283d 0px,#14283d 40px,#243e51 42px,#14283d 47px)'}},React.createElement(MonumentMiniatureMarker,{key,monument:{...${JSON.stringify(testMonument)},origin:'editorial',reviewStatus:'unreviewed'},selected,state:'undiscovered',mapHeading:heading,plan:{enabled,size:128},reducedMotion:reduced,onSelect:()=>setSelected(true),onOpenMiniature:m=>{window.opened=m;setSelected(true)}})),selected?React.createElement('p',null,'Fiche existante sélectionnée · ${testPoi}'):null)}createRoot(document.getElementById('root')).render(React.createElement(App));`,
 );
 function resolve(id, from) {
   if (mocks.has(id)) return id;
@@ -105,14 +109,19 @@ const bundle = `const process={env:{NODE_ENV:'development'}},__DEV__=true;const 
       errors = [];
     page.on("pageerror", (e) => errors.push(String(e)));
     await page.goto(`http://127.0.0.1:${server.address().port}`);
-    const marker = page.getByRole("button", { name: /Temple d’Auguste/ });
+    const marker = page.getByRole("button", {
+      name: new RegExp(testMonument.name),
+    });
     await page.waitForFunction(() =>
       document.querySelector('[data-tracking="false"]'),
     );
-    if ((await marker.getAttribute("data-latitude")) !== "45.5255")
+    if (
+      (await marker.getAttribute("data-latitude")) !==
+      String(testMonument.latitude)
+    )
       throw Error("Canonical latitude changed");
     await marker.click();
-    await page.getByText("Fiche existante sélectionnée · auguste").waitFor();
+    await page.getByText("Fiche existante sélectionnée · " + testPoi).waitFor();
     await page.evaluate(() => window.test.heading(45));
     await page.waitForFunction(
       () =>
@@ -134,7 +143,10 @@ const bundle = `const process={env:{NODE_ENV:'development'}},__DEV__=true;const 
       )
         throw Error("Horizontal overflow");
       await page.screenshot({
-        path: path.join(os.tmpdir(), "vestige-temple-" + width + ".png"),
+        path: path.join(
+          os.tmpdir(),
+          "vestige-" + testPoi + "-" + width + ".png",
+        ),
       });
     }
     await page.evaluate(() => window.test.enabled(false));
