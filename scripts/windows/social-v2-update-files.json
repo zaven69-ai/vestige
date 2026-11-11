@@ -4325,7 +4325,7 @@
   },
   {
     "path": "scripts/developer/check-simulation-browser.cjs",
-    "sha256": "18ec2501cc68f1a12920e261e74affcd2475bc530c0779a1887e2a0ef191f569"
+    "sha256": "5ca3e5e54ec1fd2111d55b684f69c3c27d0b5ca1ecbd371d39c5e790e78888d5"
   },
   {
     "path": "scripts/live/register-audio.cjs",
@@ -4605,7 +4605,7 @@
   },
   {
     "path": "src/lib/live/LiveProvider.tsx",
-    "sha256": "7176f87d139127d1debc754da645e087caf7ad6e29ea7834166109a808b1dfeb"
+    "sha256": "06a3543c120de0e5d9210ff09f5a55f706509ab7c7743e1f5ff2c0bead988547"
   },
   {
     "path": "src/lib/live/checkpoints.ts",
@@ -4685,7 +4685,7 @@
   },
   {
     "path": "tests/developer-location.test.ts",
-    "sha256": "d63a7cc767317254e48a0fbb8a9f620b8a297ab1c72df8767fc115f2060e706b"
+    "sha256": "cd8ff0ba65a93d587fdc4707b5bc3d48d4bf5275e90a34808e4cc7d483ebbac9"
   },
   {
     "path": "tests/explorer-guidance.test.ts",

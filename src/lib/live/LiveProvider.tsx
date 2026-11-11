@@ -194,11 +194,17 @@ function useLiveState(
     simulationEnabled,
   ]);
   useEffect(() => {
-    // Invalidate audio callbacks and dwell state across source changes, even if Explorer is unfocused.
-    fence.current = emptyFence();
-    fenceStory.current = "";
-    if (!scopeAllowed()) stopAudio();
-  }, [simulationEnabled, scopeAllowed, stopAudio]);
+    // Source changes are external events: invalidate callbacks before consumers can use the new scope.
+    let epoch = simulation.getSnapshot().epoch;
+    return simulation.subscribe(() => {
+      const next = simulation.getSnapshot().epoch;
+      if (next === epoch) return;
+      epoch = next;
+      fence.current = emptyFence();
+      fenceStory.current = "";
+      if (!scopeAllowed()) stopAudio();
+    });
+  }, [simulation, scopeAllowed, stopAudio]);
   useEffect(() => {
     const sub = AppState.addEventListener("change", (state) => {
       setForeground(state === "active");

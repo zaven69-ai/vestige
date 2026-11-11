@@ -4,7 +4,6 @@ import { readFileSync } from "node:fs";
 import {
   LocationSimulation,
   stickVector,
-  simulatedStep,
 } from "../src/lib/developer/simulation.ts";
 import {
   routingPositionFix,

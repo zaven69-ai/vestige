@@ -1,3 +1,4 @@
+/* global __dirname, process */
 /* Integration harness: real React/providers/hooks, DOM substitutes for native services.
    Requires Playwright in the maintainer environment; never used by the mobile app. */
 const fs = require("node:fs"),
