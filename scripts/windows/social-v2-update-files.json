@@ -4,6 +4,842 @@
     "sha256": "104eb31671d46f8cb6c906044895934ce3ea0fff9359d358834587f17454517a"
   },
   {
+    "path": "assets/avatars/catia/map-sprites/e-idle-0.png",
+    "sha256": "5a3a95367cde0c0f6d91eae1d9ca0127360dbcaecc59faf4b4e261e6b25a8e8f"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-idle-1.png",
+    "sha256": "bb52f45c931d68be1d94c73911cf2c4b0a58fae81d64196bca0d84e19f86ec93"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-idle-2.png",
+    "sha256": "cbc8ee6571baef8dc9c4726fbdc2f78c3b650c05ffe9bc59eb9153275913b2ec"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-idle-3.png",
+    "sha256": "fba11b43f863a58615ec687b684194a3686d43a1cccfdd6a0bcb305972da43b0"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-idle-4.png",
+    "sha256": "94d76f92b44e4447075d2c5c9996c26f114905ab448ddb7dd3b1c82f3b5f29d4"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-idle-5.png",
+    "sha256": "008c0cd43aeffc569bb0de2d687eba6f12929e5b4dfeef95d80333aa0da2c06c"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-run-0.png",
+    "sha256": "4d2e69b4ddbe3047383415d4b08aeb3a8c122fe0e2af0c81376d2d68ff3117d4"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-run-1.png",
+    "sha256": "632428471a9d52fefaf19e8f4378287e8295d98cc01b3285b787506c2971ae06"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-run-2.png",
+    "sha256": "d4438a8fc20c4aeb4838f3712765b575cc42109d4023cbecf4b7da3c0fd70029"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-run-3.png",
+    "sha256": "c9837c89ad4ca6080f9dbc78c519fd70c73acd8c617137514f3c8dd59d61f764"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-run-4.png",
+    "sha256": "34ed97fffa15b0b1d0fe182be38aab1820300c8331c1e5e3c8202c509f2e3874"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-run-5.png",
+    "sha256": "78f7cb7e092aeb7ffb08af1f40ef38caba9b07786b13c5eb28621ae3c31ba666"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-run-6.png",
+    "sha256": "567827f5f939e6e9cf6f9e16d7f6efbcad033141efd15e86e6f52e43e3f3c7d1"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-run-7.png",
+    "sha256": "cdb95ea0a4b4e2029579f5cc7b2e2d7101a3338afb4236c237b7c048edd76759"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-walk-0.png",
+    "sha256": "01c5926e5d0768f125ced8c30e1cf154b429a2d01d1e4b00d91501b0f282f1dc"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-walk-1.png",
+    "sha256": "6be5f821785fdd82a04140a7addfeb81a8df699a25df6815f73d48e5488decae"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-walk-10.png",
+    "sha256": "0aad2de49c960c32ddbfd6bdd9ba0083386a1f458031a0238675f2d6f69c42cb"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-walk-11.png",
+    "sha256": "f8c82f43e94c3253391a42a6465b88ebbd93458ea6d8fe6a858ea6a153c194aa"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-walk-2.png",
+    "sha256": "e4fa5f2cc3dbb170b8ef75e89e7f2c3af2ea1ee1ef0799dfe941d87f796fad89"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-walk-3.png",
+    "sha256": "996461010b94d561a7e7c061206494811a957edf5fa60342f816c9e1e2692f4d"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-walk-4.png",
+    "sha256": "e78c7f3ec92eca8ca97723519dd7e4f2e65027b172ac4a788d0283b065689e41"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-walk-5.png",
+    "sha256": "61f9dde1ee48e56364ac69dfa5e3462dfb41de56cf9ed6c75ff7f461a7830d4c"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-walk-6.png",
+    "sha256": "f84f2f7c6510d710be1a39114debcc175b72b07dab76b28664524d30d7f91f61"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-walk-7.png",
+    "sha256": "b03f8777cb508118c8c69c99ab89bf1947db5fca8e5a70048fdaba1e739be3b4"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-walk-8.png",
+    "sha256": "69d14fe3866523c2a72cb5a9c94789f4c4d7d9689f19eb265289453c403f45d4"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/e-walk-9.png",
+    "sha256": "ab47f25d24f925b72b33a137a6e7ae519ec9093b3c9260f434e7af8cf4150d67"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-idle-0.png",
+    "sha256": "4e17b9305c2a535a9166458083517fa7c8cf2b45433f815398a6bdf353e499ba"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-idle-1.png",
+    "sha256": "586eae892aa95537f8f1f7be4914cf642221f619684e5cad9bc999cc7e004907"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-idle-2.png",
+    "sha256": "31ae74825f2382d8ac6d0c3f5741c9c4f61dc522f4e9d6586349b87c89bc0fc7"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-idle-3.png",
+    "sha256": "2f8fc9badd2d1ac41c274813d01a7f366fc39685ba28f4876e54775cd5c7d2c2"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-idle-4.png",
+    "sha256": "c9cceda420c8e8039354f72365357cc11fec393a63439cc78f33a16fc29593ea"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-idle-5.png",
+    "sha256": "e22cabae40a2dad009bc110899a00308f30fdf634d7d057541578615da7d7ee4"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-run-0.png",
+    "sha256": "b16ff475885e97fdd495ccfb2b238d6239f979f34f5287015e4e2d353ad54f5d"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-run-1.png",
+    "sha256": "e873262ec4595fa4375c5f8731fc4b4af4d8934951b4726ce4064c7be31daa9d"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-run-2.png",
+    "sha256": "fa798297a1e805c7087e05ac94926d4d2f134994510cb76fcd0b12bf899a81ed"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-run-3.png",
+    "sha256": "3d7bcf326a825b58d9f819bb153d92511781441389c554670b63e1b7ec6a0c45"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-run-4.png",
+    "sha256": "a243163cc3c87a592b74f178bc4f4a404f1d6aa48d7e299a1b0d77d37c9c08b4"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-run-5.png",
+    "sha256": "f07f47469efe9a49965bc54bd7abae07047f9ecd74356111e432f3c2245b18a5"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-run-6.png",
+    "sha256": "8877ff482d7320c131fa0a2d453d6429068a12da549a1d22ff74c1cd8e625dd3"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-run-7.png",
+    "sha256": "7ce8b3ab0dd11117cefa8a31ef178b68d1d32107d02d307f8b87e48a3c61ccc0"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-walk-0.png",
+    "sha256": "d6171be93530e023fc5a15e6f0baa00b8b4ecaa4f5bf32eb5062f110baddc712"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-walk-1.png",
+    "sha256": "9abb8cb7e5e56b5ee397d46ebae017b8db9b76b91b224ded7de996b59e973d19"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-walk-10.png",
+    "sha256": "af30bd607f4ffbac4f23ffe282b67b48e19b3fe0e9840c2bc1c300d7eecfd86f"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-walk-11.png",
+    "sha256": "84b16ea8d3137568ce29f6001230d402c4b34c94cc830d77c4baf5945a8740e0"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-walk-2.png",
+    "sha256": "01d2cc6abaad97a8ab004c558010fb471feb01e3af51b0e985447aee2754ae83"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-walk-3.png",
+    "sha256": "ee9f46265b514ffbe8881fb593aab3873cf9138a0cdabf0616bee7b5af96fc3a"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-walk-4.png",
+    "sha256": "ac1638e5eb012860452f388dfe6c440d12698c888ff15c64634dd0247317dc99"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-walk-5.png",
+    "sha256": "0f71e71601f893b2a98a4dbb99ee261df9790f87db67dbfd3f4799a90f2dd4da"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-walk-6.png",
+    "sha256": "8b8763a3cb948508edaf9f6b37363319fbc1c085630762d3cdd994ce7fb97f71"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-walk-7.png",
+    "sha256": "3e07ca2e41a1db48cfac43aebe2b7c340065a77e641ee8ead4ca8c96ed9bc3ba"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-walk-8.png",
+    "sha256": "dc30c259df457e450d95d98d5c4c2210d0cca3c8fcc7fa7b9b164915504adf82"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/n-walk-9.png",
+    "sha256": "a5a393eddf240298aa7a50090b0422030ac72eed8e37a4183e4f160fe0b0c979"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-idle-0.png",
+    "sha256": "4f06fc7fff62e539a1f38e5109f2250d6efbea8160ad5a511ff70b3af6af89b9"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-idle-1.png",
+    "sha256": "d842e9d5b3c78b745f683ed2aa25ff0253ae8d9a7068aa88a6ab8931dd38bbe9"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-idle-2.png",
+    "sha256": "83db0f7f6ee26057b0f87c0d42989d1baad300a509581c96fb8dbb56e91f63e8"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-idle-3.png",
+    "sha256": "54e09b4c6a3369b7a42351096ea428675145d17bca57819b588a96c5d764050b"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-idle-4.png",
+    "sha256": "59d9f88c4fc0d33c2287d7c5d324e3ea04f35ba19c27a36d2718d4160db973dc"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-idle-5.png",
+    "sha256": "ffbbcb7d4a014425fda27fd56b51b7ed6151dfc6963c5c463d0a6f6580878c14"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-run-0.png",
+    "sha256": "811b2f37fd89b193143dc80fc07d15aeec65247cc6110934ce3b8bd814384e2c"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-run-1.png",
+    "sha256": "921dfe6febfe0a1e963c71ac7999e47fe797666acbe30cd01556445912803a18"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-run-2.png",
+    "sha256": "e1d7068f0200f57e906a61bb9174a3da56798057f1f92531fcca56eb7c208b50"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-run-3.png",
+    "sha256": "018955ee1a13af2237ed27354829646ab72489600f93ced1fded25a536cbb674"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-run-4.png",
+    "sha256": "31430dd95443fa55f7720ed225743194e4c84326dfee49bc92cd550712dc0a08"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-run-5.png",
+    "sha256": "476cc7da3cb358bd09754a6079f1e2114f1ed3d1ad1af625b071a5534f556187"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-run-6.png",
+    "sha256": "b2a0f3b2081b43fecc01757e442dcc1ffddc3de633271b64330b1f05d5548d4d"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-run-7.png",
+    "sha256": "c59c05a0cc4e61b22f2bc5969fbdc11ff5787cf34960af19f34a61448dd864d0"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-walk-0.png",
+    "sha256": "a2619fc68900222336b5d74b6883273ab55fb79ace0c765064421790eb5cd6e6"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-walk-1.png",
+    "sha256": "b1f776d78b497fab3c8e88c32defccecd7237621505fcb5268616fe797c891b1"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-walk-10.png",
+    "sha256": "5813bfd9ff52efba4bc2478d335bcd64aed05b7013e8fd8e0621be85b780d9c4"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-walk-11.png",
+    "sha256": "e37b4f379c5dab505a6cac9203d02603d0e4a63c7df3fbefea570891cad1f1c7"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-walk-2.png",
+    "sha256": "93e4fbc040d1e72548f26c1cfa8d3428a1c6563afc229278e0f895c50d5e2048"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-walk-3.png",
+    "sha256": "35c4451bc79284f4ac8d78d561af63eb188f49e894062e7efecb3157b5a1b6bb"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-walk-4.png",
+    "sha256": "4aab1fb99e7e0e810b7db140799f28f6c54703c9f9ca8c73d5d2e0e9bc4caac6"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-walk-5.png",
+    "sha256": "61ddb43ae46190748bb095ed980cbde73ec8be155de4d1789132da80f6f55bb0"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-walk-6.png",
+    "sha256": "28a83621f20233687aeab3086bfb2d4e644a8671ca0a61c6b2ff802475b90990"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-walk-7.png",
+    "sha256": "55b4b1c3886b16d69a0f9cc5a744b3cb4b04f9d1fb4090565deb13bd4a32fd24"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-walk-8.png",
+    "sha256": "2cd524c35d4062c9aa2a50d5e9f837e69bd36db7698023a7ad1cf4a7c409d5b6"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/ne-walk-9.png",
+    "sha256": "0643679ae4a2482e10ae4e4c848f72adc6d86867f64b7c25ff15ce8ce2bf50f4"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-idle-0.png",
+    "sha256": "b6ce1ae9c8ddc1ef79a72ebbeccec00533ccb43b4feb5330a41ce55b60be8312"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-idle-1.png",
+    "sha256": "250c5ff2258deb71b06363e423f72893a7c2301bb745e5c68de9aff4321eea91"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-idle-2.png",
+    "sha256": "cebb2380b868ada5d19d25fa6c1d72f683ed30152751cc2068b2129031456a70"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-idle-3.png",
+    "sha256": "0f13a2bc8826c1103c979a9ad5a31b86ea3df36f9ede36cf5237d87638703e5c"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-idle-4.png",
+    "sha256": "b2d864e3141c440c39ff048246ea8e8df0200d9e7da2f96254bbf8e288f2b096"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-idle-5.png",
+    "sha256": "82ef64c90ae9276eaabbb117031a973dd227ca26b532b7fe8e4d922299839bea"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-run-0.png",
+    "sha256": "1434335f0e4553902c780d983abfaffbfa5262a1051863b3ae9a95792e3c8580"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-run-1.png",
+    "sha256": "81f4bc41a5def92a5e74aa55545ae33b1870828d931b6a600a1b4f544c1bb0d9"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-run-2.png",
+    "sha256": "673798ff9d55b10714d8f4d75186cbb44fc756c763c79dd80df90dca7a7e6b76"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-run-3.png",
+    "sha256": "42888e7c3b01ddbc4c321f0109fc02cbf9e3ab81b91373e7a905d88b4213c51d"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-run-4.png",
+    "sha256": "3cd50ea21bc1bb4541b1e8c7d3190391bc91d44b00172606f81f80013353e255"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-run-5.png",
+    "sha256": "0642b976c274ba5ee5727faf35a9c4255902d28e673f4069ce04275ae5984608"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-run-6.png",
+    "sha256": "44d40aa49bb71a594382796a0c2d5a87638e0536f21307d017a5c2d924f9daf1"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-run-7.png",
+    "sha256": "4356b195bf317b05f34d85ce554696f52c06fda69795a59c649bcc712069fb35"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-walk-0.png",
+    "sha256": "b45eb7a5faa6f2b5cc06052a1bbed80f65de93488169f2cac0396d629e47a95c"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-walk-1.png",
+    "sha256": "01c203102d1b091b823342fa0ae31d5cd0c497c05f966c2b167ce06b54d66f30"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-walk-10.png",
+    "sha256": "3d7c1c7b34ed9979c1ae3d5d5154c838f85b8df36e81ad994738f2fd49e66d97"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-walk-11.png",
+    "sha256": "929585e395f8670e413d3e1ff7b6d01300d43db90178788d918af25de9fb1722"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-walk-2.png",
+    "sha256": "43840d5d4a69f856b2056c708d1e0d8fc8850b5cc9ffd4a303dd7ea370ce3c0e"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-walk-3.png",
+    "sha256": "305f420468051d0422dba1d6d81f6d7c6a594b2d5c08d35fe207899bccd4ecc4"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-walk-4.png",
+    "sha256": "80674dfd0f8cc325d38dd3a567030f0ea7d86d372fd2c371ee2299ac71b670eb"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-walk-5.png",
+    "sha256": "6d8c370c8d0261fe01fe902055066bd26a203756bfc9ce9b8e0680523675c424"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-walk-6.png",
+    "sha256": "595b9769b803de1976ac686f7f5c8e0ad5a70b5a62b87e511371eba6d6bcf06f"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-walk-7.png",
+    "sha256": "027b10be4a5d60950e1e3de0685e9dba93dfa9f90387d235b61b21ff6e4700c0"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-walk-8.png",
+    "sha256": "04ba40628f985c80e6fae14587a9b7d42fe246f29f51112a6c6253c56751381f"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/nw-walk-9.png",
+    "sha256": "92614a05e45c735b53f4ef33b467d464a253a0c1eeb35cbd5129b47756a9cec7"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/render-report.json",
+    "sha256": "ef8cb38e1da52fb56038eb1a98489d37034a60f275e3ce92399249048df64931"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-idle-0.png",
+    "sha256": "4d5b0676304238a7aca068a9d9b7fda50ac467a2e529e0a34380f378a9f62a0c"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-idle-1.png",
+    "sha256": "e3fdfd9229bfeedebb079213ba511b72c1d6f0e4d062304665092aa56aaf6c33"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-idle-2.png",
+    "sha256": "83f75e46396895d1ae453ef4f69060dd01673279ed91ed0775e0679fb822ac46"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-idle-3.png",
+    "sha256": "cc1a69fed751ad4ebaed83b052ae5fc1d75483c6a928b68f33007cda5449fa0a"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-idle-4.png",
+    "sha256": "feafe347fc956c94167737cbed49eec67fe89a206a891d6a89c693eeea94f4dd"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-idle-5.png",
+    "sha256": "3d166872a4c737caf9515799ae1f9a93b062622a26a975df51c2f2c64876ff50"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-run-0.png",
+    "sha256": "845c7b9d96a30f7ddf592e4f35e767ebb63109de48e9fd23202490af87f7a830"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-run-1.png",
+    "sha256": "d2ba4788c1ad49c8faeaa122983607d596e98f68516d5e8cec83641916644cbf"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-run-2.png",
+    "sha256": "65be2f07fedbc9411361540bed554670bc4a37f1e7db981506afbb7a0f331f81"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-run-3.png",
+    "sha256": "aa248d489d71440da67f36048991d6eea1f0f3d737e684adc309fe964e403ad2"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-run-4.png",
+    "sha256": "90b1442a0d3b944a4f284f5ef8ed97f655782630e2b19edd06a13323957e8a2d"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-run-5.png",
+    "sha256": "58fecd08baff9f550a8f278d18446b43f8e6eace4beda9011e0fc6b3383bcbfa"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-run-6.png",
+    "sha256": "ab73b67267c62969f5e1d4cf419fdcd7fa6a81cee00a6f58e96ea67e378da24b"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-run-7.png",
+    "sha256": "0dc2d020678087dc98aa84a09bcccddbc6cb43b07de9c60c29a1f051dae6648c"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-walk-0.png",
+    "sha256": "75e990604875884c369253d4d8bc9a6fc2f3b8324c8f5fe2b3c790cc8fa2de64"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-walk-1.png",
+    "sha256": "de68d84d824e6f8899d9d398bb355b0d6580111e9c373a6fba01fa158b611357"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-walk-10.png",
+    "sha256": "c28fca19d0987b7247fd6502c02326167726da953a0e0ec50a914f23921e518f"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-walk-11.png",
+    "sha256": "09741d2e1a9688c63d5f35706a8e590dfa58614cf650d8cf49a7b676f1f73463"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-walk-2.png",
+    "sha256": "87ad841c9cd79d5e95a42745f6af5f5aa84de17aab7435a6dcfa5ea1b702ff6f"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-walk-3.png",
+    "sha256": "e72086e1d83bf635bc44807b8285d664e42600ab85f11a4a74ba9a4f9f09f8bd"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-walk-4.png",
+    "sha256": "4464c410495096bf33262342ee90ea2c5fc189cc0db747e198f7bd831a653488"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-walk-5.png",
+    "sha256": "53a9fffa052662f84fc008eb47d278fe8ff8358cc5d27b295d0a506c1d90abc1"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-walk-6.png",
+    "sha256": "027e4dff72f42e1792bbb147e7a6085012e7cee8bf556ccb614def640dadd7bc"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-walk-7.png",
+    "sha256": "1ba55407e846a194d73b94fa4d53e13443b3db3d22117a6167f0b2d7244cd9c3"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-walk-8.png",
+    "sha256": "c7bdcec45255527faa6c4bcaf5ebb7d3ab87cf43d079b7adb365924f5829ab96"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/s-walk-9.png",
+    "sha256": "4465b0301bc403c8a634466da79c9e0ade80b79cb9019ed9d7b8f9166200cc5b"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-idle-0.png",
+    "sha256": "0661b4c99fcf766325def56bc235f35b9892e36c1eedbbba50cb18288d5debb8"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-idle-1.png",
+    "sha256": "641683a6699b7720e0f9e2d7a39f4a10fd1dfbb033b53ddfea16f9f7d6c9d006"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-idle-2.png",
+    "sha256": "94b1a4b891e7020f9a6d192398ccbe31f446eedb4f7915062e23d8776d95ca29"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-idle-3.png",
+    "sha256": "cdf5382b75cc41078acc6ecdcc0991315080159fb71c743d970a74e194fb9983"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-idle-4.png",
+    "sha256": "cfcf015c1e8fb75c165a20626bd90a7c802671217cdb5ca3c309ac597ed6cbaa"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-idle-5.png",
+    "sha256": "6f80b8422f919508a2ae5385c9f927e47e8763e90ce2f90b74d26823905f458b"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-run-0.png",
+    "sha256": "466ecc165525ad95f4b1b5127e9aad91a31719f09a50b5cb6edd73408c6a448e"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-run-1.png",
+    "sha256": "730a97b3e25781c4612f6202eb25e8d2521a5fdee0fcaf0f1bbbdf9b4872c01c"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-run-2.png",
+    "sha256": "3b192fe0c736996a66e31603fc0a2578fbb6f82c055ed502c2e3d298a7f74e78"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-run-3.png",
+    "sha256": "72adcb503efaee23850e5670fa7b267a5d2e571ab46a20dc7f1fa29cab205fab"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-run-4.png",
+    "sha256": "56cab50daa3f03952aff1cdb7e0b686f776507bbee050ee3ad2803f3e805e850"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-run-5.png",
+    "sha256": "41e4c771a58ba6ea554c3a97710c7f02486aff203ba73f48717c7ec36b761023"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-run-6.png",
+    "sha256": "bc1f25dde30b355c1928b05203b6ecafef4f4058a75f369421b234e577882988"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-run-7.png",
+    "sha256": "138fbcc874aab4ee6c260dc8265256eb65458a7b46f87c8cbe58dcf672c74a6d"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-walk-0.png",
+    "sha256": "d0e1d230b8f4372a3862a05c2376447564175497b474f14285cd84bc157f7f6b"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-walk-1.png",
+    "sha256": "c4f271c8614d8eaa78ba87843a05499e9ddc77c5457625e0c22e5bbe7beacc87"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-walk-10.png",
+    "sha256": "fde246255dbd17afd5d9912e3926d7181ad5c4a46b6cfba9cedfe33e4bfe84bc"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-walk-11.png",
+    "sha256": "405727d4ab7885d5521b2a704f44c9648a0a81d281752ec633beecad3a4dae69"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-walk-2.png",
+    "sha256": "c0d108c1a296bb748dd0d55a199ba2e2fcfaff738c3325266023176e0f056124"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-walk-3.png",
+    "sha256": "37316c0bb0b0ae0641f08bd1c30e29dd2ea328b937edcc38c0b7a9825a232f0a"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-walk-4.png",
+    "sha256": "193f607d8e9fe56c8c22ff60f882e9fd086fb0de3bc51d65402bd60bd5df7710"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-walk-5.png",
+    "sha256": "e2dd03acede9316cbc1a2db0db86a4d7f3c6fbb710de79fe2c2d31e3f33b45b4"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-walk-6.png",
+    "sha256": "fe0313616c77cb3021924fbceffa046d0625129eccefa3bc3218dd9d8015e4ba"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-walk-7.png",
+    "sha256": "3ed49d6fe674a8a1677d01f178f50966e69a802de5a8c0adf0707173b4b7fa62"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-walk-8.png",
+    "sha256": "a34aac9381769f8c66ea82856bab1b3901c20d56101f9a2fff7e7a8d42d79def"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/se-walk-9.png",
+    "sha256": "9b12656a8ecf3ea272d5f08ecaa04d69dc2709e47ca40bf65e356e3804450e60"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-idle-0.png",
+    "sha256": "7aa91df225d244ca87e36525429da4a675e60fde0a3a11eb0ec2d10560b35370"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-idle-1.png",
+    "sha256": "ca250867039954ff589b8b0a3c62ca71d8a70390adcfc1afb4dca3de5260cdbb"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-idle-2.png",
+    "sha256": "f27280d038e43dd32c74ed47203405e17fd6753837af682988281c520fab34a4"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-idle-3.png",
+    "sha256": "018f6449610054027329bff57fc858c8e664fdfaa5f3022c007dfcb86d917644"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-idle-4.png",
+    "sha256": "5ac50755ff66d9883569874b8f60d0b5d297abefb830eed366b4acd985d38759"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-idle-5.png",
+    "sha256": "44b92d52c13383f1473b4215f9f6e057edd6a56ef4adb775ce3e1eda241cb05f"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-run-0.png",
+    "sha256": "798baa7afe68ca3659e6e2c10b91f8d40f6af7c77496493f1187cd54ebf8b86a"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-run-1.png",
+    "sha256": "883f0a7845b71517345d1029c771f0d4d1d456d0b50f96cd09746cbbefcfa7c5"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-run-2.png",
+    "sha256": "1081c7977b93cf2638927227c7df92afde323a577f28fb0a50b1a38ea34cf926"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-run-3.png",
+    "sha256": "3f9351b7cfcb7bafa230d6967a2df908bfdc82c18654a0d7424af8983b494016"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-run-4.png",
+    "sha256": "c6788b03b20749c1851527dafb5ae9f1fe34ecdac5eb906464fbec66a1b5ddf4"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-run-5.png",
+    "sha256": "570f4d6e934dae5a90797015756075927360fdc49dfc50ef0b5d7633719017fa"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-run-6.png",
+    "sha256": "3db1c9935c5b99dd2f6bf3bf4748eff736ce95f03b6d6266ac8841e336b19720"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-run-7.png",
+    "sha256": "951e04c27d11b6f5f910329ffdef7069f0c69ae6d470cc9f3b8d0c50bca33111"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-walk-0.png",
+    "sha256": "2c5d7cf1b20f1dc36e596f7da0d325e952ade6bbb15d7f7b780dd987b474e52e"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-walk-1.png",
+    "sha256": "53ded9343fb23e13ce5db68f0224e11baab0e24848bfa801fb2e6527a3f3e9c1"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-walk-10.png",
+    "sha256": "595b574e9516cae2e3a844c93a52655fb9b315a8911ae2155e9e06dee75d0b5b"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-walk-11.png",
+    "sha256": "5c9795529d797d220dc9438df661b8ea3700cc9e42ef0422bf7ede2998c237a6"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-walk-2.png",
+    "sha256": "9faab1dedff47b217dcfec9139b180767b00cb6577ee0668d06629bfeff8bc43"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-walk-3.png",
+    "sha256": "1740ee1c6eafaf47e88a778e4f8814ca4d60ccf8df294d85716ee6283c66f85d"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-walk-4.png",
+    "sha256": "c83c9580948b01db39ca44d31c31399483355350b6d79236a91c1f90dee3c90e"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-walk-5.png",
+    "sha256": "ec83ae5eed71c19d14cebd0a12a9fee3a22581d1aca8ea2659ad8562422bc7d6"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-walk-6.png",
+    "sha256": "0ef535fdf98bff04ca6fc2c83577b27781c9ac1576deb0a115d5dc5344597059"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-walk-7.png",
+    "sha256": "fde071b2ff107c08ab427c8b0f811e327c98b9b58bacb62ef8eb9e7027f62d07"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-walk-8.png",
+    "sha256": "83832345de7cd102b8618acf2ebda37a278e08d437b7c33e4c096f5add8c7dbc"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/sw-walk-9.png",
+    "sha256": "daa0c89322b27fc2ea427145c61c4bb0fd8f1f38c2dcb9048914051ebb17d05e"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-idle-0.png",
+    "sha256": "056f2fd6da9ea125cbb20aa234f099b0dc4f94067c99bf7bd40066a5d4b57d00"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-idle-1.png",
+    "sha256": "11b1281aa78863659dde4e5eea34f887e2cb3c87cb61b4454a8bb40eca2d8ac4"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-idle-2.png",
+    "sha256": "7e1d40aafa3e28e7ad662632e24c82f0764df024de9b2c2308ffd9503c417e42"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-idle-3.png",
+    "sha256": "1a3f276a7317fbd9a8c8cd0652fc0848be56bfd45247b5044ccf296472b29880"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-idle-4.png",
+    "sha256": "b865b10070069a73cea5c4acca163808dcdb83ca6c22f245a61fa906f84dbedf"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-idle-5.png",
+    "sha256": "f00e343434b7e9a6455e920570a3ddfb938366ed323e356359915342da9d7b08"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-run-0.png",
+    "sha256": "561a13632bfee911afff712536bc3a63feffed3a5ae522e95b27668726d6ebf0"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-run-1.png",
+    "sha256": "fe65485b80cb1a1d040af0df5f658ced0fc64b6d3c2c3fe423dcc044c1881887"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-run-2.png",
+    "sha256": "29a2660774ae4e8cc61af0b4e4aa15d737471bcd5c2b00e36061d057f1310d4d"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-run-3.png",
+    "sha256": "7736cf1697e072e0c44c42ebd19fcda0a927d33d6130ed6efaf42c269fd97ba5"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-run-4.png",
+    "sha256": "49ce34ec1eb0642666a5cb8ea235645279130b9b6068852b6d63099c44d15257"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-run-5.png",
+    "sha256": "076ea14284182f357c786b523f044a3f0acab75493e74d16a8e2b6afcc5c465a"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-run-6.png",
+    "sha256": "828b03ad42035e9d5f7cfa03e0b03b6ee8c26ac46ad5d52bd2a11817db00ebdf"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-run-7.png",
+    "sha256": "ad3a178c4b53df82182227b146eeaff8c37b98fcaf6010c680f495d3200b69be"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-walk-0.png",
+    "sha256": "1198f8ce8cd0c769e643460980893e9fd394005a72d28625eec97c96feb322c8"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-walk-1.png",
+    "sha256": "33829298072d0202b0dc3bacf710e7e5e67b9bae2702077b9449dcac56c3d251"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-walk-10.png",
+    "sha256": "8f25686d6b650117048acbb153122e392505e316c40bbf9e72fd9605ce45109e"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-walk-11.png",
+    "sha256": "a0d0df6af31ee557971edea9b4c90ac30091ff8c7adc46d170414157d6044e8a"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-walk-2.png",
+    "sha256": "c21daec43b9308d18d847e358003f1bfb6e8eb813aba4168a50eb6646d8d2e87"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-walk-3.png",
+    "sha256": "49a5c676fd8392f330a734f55a4ca433405df074a0e118a540a6afd4246fc503"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-walk-4.png",
+    "sha256": "9e60b19a9d0f326c4801921467482f699ff714eef4560e60384621db2061926c"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-walk-5.png",
+    "sha256": "9973440de3d8b575d355882f21263299ed5686fc289d5cf5ca63e13c267d3eb4"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-walk-6.png",
+    "sha256": "a2232022e92f3feb6702038a0ef9aff8524b505253ed04df63e5f862178c13a9"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-walk-7.png",
+    "sha256": "233e6f16a9010028c19b855cb398511ad3cc9149b5b4239fbd40c64b5f0945f7"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-walk-8.png",
+    "sha256": "448839172648e8b6e060bedbbc36c4402e038cba8f194858f10712c13e8ab877"
+  },
+  {
+    "path": "assets/avatars/catia/map-sprites/w-walk-9.png",
+    "sha256": "2ead981682d596eb5056e6b89b429ce7f96213e04175ba8bb9387c17c0a746d4"
+  },
+  {
     "path": "assets/poi/castle-community_pending.png",
     "sha256": "5ac488f55c6065a2f241ef5fad8e799c1ce3b919c660bd0b6ded9441565c6a59"
   },
@@ -3348,6 +4184,14 @@
     "sha256": "0dd4daba8df84773565b126bf4977bf7394dd4007376f3292a0a00fff29ca364"
   },
   {
+    "path": "docs/avatars/catia/CATIA-MAP-V1.md",
+    "sha256": "75874c931f2714ec4e2ff97bdd75e08e56d1f00134d5a298d4778bf0f581d1e8"
+  },
+  {
+    "path": "docs/avatars/catia/map-sprites-preview.html",
+    "sha256": "3be94fee3a34678ef7f0159fc796814fe801c776e5fdfd2ea08ead09a8471bc8"
+  },
+  {
     "path": "docs/community/BACKEND-CONTRACT.md",
     "sha256": "9eb8477d50ac028b007ecebff64b0a16531e2206acb80787bccedb9abda97577"
   },
@@ -3440,6 +4284,10 @@
     "sha256": "ef4109a74c8d3bf0fa3053258219eef54546409f407de4a6636648a2cabf9bc9"
   },
   {
+    "path": "scripts/avatars/catia/render_map_sprites.py",
+    "sha256": "eaac316f50444c4ecf99396db7eae444621bb35b852fdbf050f6051c39e9e41f"
+  },
+  {
     "path": "scripts/poi/build-landmarks.cjs",
     "sha256": "4a351bb49c848e829d1f0ce7d6b0a91506fcea0fc77ddf8da9e07999ee2c5c7e"
   },
@@ -3481,15 +4329,23 @@
   },
   {
     "path": "scripts/windows/update-social-v2.ps1",
-    "sha256": "35da9cecc8c695ba334dd0ed091181fa892692f94dc286fc8d85997d403f6360"
+    "sha256": "cf8c21f879074d86339b474f3ed3c4f933ff6bf338195cd8b95b8446b2b08da4"
   },
   {
     "path": "src/app/(tabs)/index.tsx",
-    "sha256": "cafadf3788b03b996ff9a1c2e52643620bd133ee5a12161b53d857dc42f8fd1d"
+    "sha256": "1963b3874ce6803db4e1b255771a8f6a483c5fcc43cce4d3a0e05fec69b43d70"
   },
   {
     "path": "src/app/(tabs)/profil.tsx",
     "sha256": "ccea0f98273e261b335757b19967703174d9ffd63a21a4097c557262c07be28a"
+  },
+  {
+    "path": "src/app/avatars.tsx",
+    "sha256": "a759312cc6eadc2fd14d1d221e144a409ed7dc2d50208615ad85876eb73860d5"
+  },
+  {
+    "path": "src/app/catia.tsx",
+    "sha256": "ffc8f8d9576d16ed6f399cc8a73f85d494de04e0cb4be85aed21eafcc2b1c01a"
   },
   {
     "path": "src/app/contribuer.tsx",
@@ -3508,6 +4364,14 @@
     "sha256": "d148ba11e2b641e6783f3507784da891ea67ed2a5efd36fc4c254fa50ef74227"
   },
   {
+    "path": "src/components/exploration/CatiaMapPreview.tsx",
+    "sha256": "64a5fcdd0c3a2a619fb055dcb6a430a3ff449cf2a441b084cd5ad6b1f816d23d"
+  },
+  {
+    "path": "src/components/exploration/CatiaSprite.tsx",
+    "sha256": "79c8c8959492ac55166e9eab6852ea67ae4d37e97e625a98312e84c1d2875902"
+  },
+  {
     "path": "src/components/exploration/HistoricalMarker.tsx",
     "sha256": "8b4930b3c71d2f831b7b77aef436177d6c20ada173e9bd0129db009239d93b1a"
   },
@@ -3517,11 +4381,23 @@
   },
   {
     "path": "src/components/exploration/MapOptions.tsx",
-    "sha256": "6c157578b2807a25a907c528fd13c58ba2162450e6b9d73378760a162e1e6bcb"
+    "sha256": "631f9379cf658de0631924f024c3c38739d9f26926b05b5fc81cad4e45fc1baf"
+  },
+  {
+    "path": "src/components/exploration/PlayerMarker.tsx",
+    "sha256": "af6145b2544f32a7789f74798704e4b743226afb840867b052427e7df91bc730"
   },
   {
     "path": "src/components/exploration/PoiClusterMarker.tsx",
     "sha256": "7d8a970bb2f5a9c2092ee51284ec8bf75bf888756e860c03c378a86a6c99763d"
+  },
+  {
+    "path": "src/components/exploration/avatar/catiaSprites.ts",
+    "sha256": "10feb8bd1049d8fe4e3add54ca975bff3908ef48ed5a1f8737d8731a598401f0"
+  },
+  {
+    "path": "src/components/exploration/avatar/useCatiaFrame.ts",
+    "sha256": "99968657e3fd416289ab15dbdf1f55e7aced316fc2cd8f428f9bf02f9166ec76"
   },
   {
     "path": "src/components/monuments/MonumentBottomSheet.tsx",
@@ -3568,6 +4444,14 @@
     "sha256": "ee4f7f6a570056365096561cab2e56070fcd291648cf9b6a640f30f0c7245bca"
   },
   {
+    "path": "src/hooks/useMapPlayer.ts",
+    "sha256": "5b3baeb6fa079259d8169de44a673cacd529bc2c13e70f03e44bdf990f06e01b"
+  },
+  {
+    "path": "src/lib/avatars/catiaMap.ts",
+    "sha256": "423cd26e8cbfccce1d872ede4a93d82eed993526d41c172224eb7c8f2c450686"
+  },
+  {
     "path": "src/lib/contributions/model.ts",
     "sha256": "056b768fbb20413d077d8fc42a66acfb1fb6b82ac751a8bf6bc04321645ef375"
   },
@@ -3602,6 +4486,14 @@
   {
     "path": "src/theme/index.ts",
     "sha256": "6518b97995667b2e797795c817ee07fa634ed67d7765ef5182440ffa423c0c0c"
+  },
+  {
+    "path": "tests/catia-map.test.ts",
+    "sha256": "94277789079d8d2802e6e53c8a1e36c04ca81d17d7d28a82e6ae8c2f6f12af9f"
+  },
+  {
+    "path": "tests/catia.test.ts",
+    "sha256": "aebd514602c978c5b30a4cfc1011f05e058b9cccb179e4ecedd15bd1291cf6dd"
   },
   {
     "path": "tests/contributions.test.ts",

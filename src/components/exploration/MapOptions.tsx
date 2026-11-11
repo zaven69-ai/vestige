@@ -1,3 +1,4 @@
+import type { MapPlayerChoice } from "../../lib/avatars/catiaMap";
 import type { PoiGroupingMode } from "../../lib/mapViewport";
 import { POI_MAP_RENDERER } from "../../lib/poiMapRendering";
 import { PoiFilterPanel, PoiLegend } from "../poi/PoiControls";
@@ -24,6 +25,15 @@ import {
 } from "../../lib/exploration";
 import { cities, type City } from "../../data/monuments";
 type Props = {
+  mapPlayer: MapPlayerChoice;
+  mapPlayerReady: boolean;
+  mapPlayerError: string | null;
+  setMapPlayer: (choice: MapPlayerChoice) => Promise<void>;
+  catiaAnimating: boolean;
+  setCatiaAnimating: (value: boolean) => void;
+  catiaPreview: boolean;
+  setCatiaPreview: (value: boolean) => void;
+  hasFreshGPS: boolean;
   atlasEnabled: boolean;
   setAtlasEnabled: (value: boolean) => void;
   atlasStatus: string;
@@ -49,6 +59,15 @@ type Props = {
   storageError: string | null;
 };
 export function MapOptions({
+  mapPlayer,
+  mapPlayerReady,
+  mapPlayerError,
+  setMapPlayer,
+  catiaAnimating,
+  setCatiaAnimating,
+  catiaPreview,
+  setCatiaPreview,
+  hasFreshGPS,
   atlasEnabled,
   setAtlasEnabled,
   atlasStatus,
@@ -160,6 +179,66 @@ export function MapOptions({
               </>
             ) : (
               <>
+                <View style={s.card}>
+                  <Text style={s.eyebrow}>Personnage de la carte</Text>
+                  <Text style={s.body}>
+                    Catia carte V1 · sprites du GLB corrigé
+                  </Text>
+                  <Text style={s.caption}>
+                    Personnage entier, huit orientations. Rendu 2,5D
+                    expérimental ; essais iPhone à confirmer.
+                  </Text>
+                  <View style={styles.row}>
+                    <Text style={[styles.option, { flex: 1 }]}>
+                      Jouer avec Catia
+                    </Text>
+                    <Switch
+                      accessibilityLabel="Utiliser Catia sur la carte"
+                      disabled={!mapPlayerReady}
+                      value={mapPlayer === "catia"}
+                      onValueChange={(value) =>
+                        void setMapPlayer(value ? "catia" : "saved")
+                      }
+                    />
+                  </View>
+                  <Text style={s.caption}>
+                    Désactiver pour retrouver l’avatar précédemment choisi, sans
+                    effacer sa préférence.
+                  </Text>
+                  <View style={styles.row}>
+                    <Text style={[styles.option, { flex: 1 }]}>
+                      Animations de Catia
+                    </Text>
+                    <Switch
+                      accessibilityLabel="Animer Catia"
+                      value={catiaAnimating}
+                      onValueChange={setCatiaAnimating}
+                    />
+                  </View>
+                  <View style={styles.row}>
+                    <Text style={[styles.option, { flex: 1 }]}>
+                      Aperçu sans déplacement GPS
+                    </Text>
+                    <Switch
+                      accessibilityLabel="Afficher l’aperçu de Catia sur la carte"
+                      value={
+                        catiaPreview || (mapPlayer === "catia" && !hasFreshGPS)
+                      }
+                      disabled={mapPlayer !== "catia" || !hasFreshGPS}
+                      onValueChange={setCatiaPreview}
+                    />
+                  </View>
+                  <Text style={s.caption}>
+                    Sans GPS récent, l’aperçu est automatique et n’attribue ni
+                    position réelle ni XP. Avec GPS, il peut être activé pour
+                    tester Repos, Marche, Course et Tourner.
+                  </Text>
+                  {mapPlayerError && (
+                    <Text style={{ color: colors.coral }}>
+                      {mapPlayerError}
+                    </Text>
+                  )}
+                </View>
                 <View style={styles.row}>
                   <View style={{ flex: 1 }}>
                     <Text style={styles.option}>Perspective immersive</Text>

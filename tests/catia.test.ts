@@ -63,7 +63,7 @@ test("the experimental rig weights every vertex and synchronizes seams without c
     assert.equal(status.qualityIssues.length, failures.length);
   }
 });
-test("Catia is blocked from map selection while review and device tests are incomplete", () => {
+test("Catia real-time GLB pack stays unapproved while its separate sprite map mode is tested", () => {
   assert.equal(status.mapEnabled, false);
   assert.ok(catiaBlockers(status).length > 0);
   assert.throws(() =>

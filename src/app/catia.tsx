@@ -37,12 +37,13 @@ export default function CatiaPreview() {
       <Stack.Screen options={{ title: "Préparation de Catia" }} />
       <Page eyebrow="Atelier Vestige" title="Catia en 3D">
         <Card>
-          <Badge tone="coral">Non activée sur la carte</Badge>
+          <Badge tone="coral">Disponible sur la carte · rendu 2,5D</Badge>
           <Text style={s.body}>
             Son modèle a été optimisé en conservant la texture et la tenue
             d’origine. Les mouvements corrigés ont passé les contrôles hors
-            ligne et restent à tester sur votre iPhone. Votre explorateur actuel
-            et votre progression sont conservés.
+            ligne et restent à tester sur votre iPhone. La carte utilise des
+            sprites transparents issus de ce GLB ; votre progression est
+            conservée.
           </Text>
         </Card>
         <View style={{ flexDirection: "row", gap: 8 }}>
@@ -150,12 +151,12 @@ export default function CatiaPreview() {
             conserve les mains près des poches.
           </Text>
           <Text style={s.caption}>
-            Ces fichiers ne sont pas chargés sur la carte. L’aperçu reste léger
-            et compatible avec Expo Go.
+            Le GLB reste dans ce visualiseur. Sur la carte, Catia utilise ses
+            sprites transparents animés pour conserver une charge légère.
           </Text>
         </Card>
         <Card>
-          <Text style={s.heading}>Avant l’activation</Text>
+          <Text style={s.heading}>Avant une activation 3D temps réel</Text>
           {catiaBlockers(status).map((reason) => (
             <Text key={reason} style={s.body}>
               • {reason}

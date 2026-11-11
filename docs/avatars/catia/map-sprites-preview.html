@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Catia — sprites du GLB</title
+  ><style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #061329;
+      color: #e5eef9;
+      font: 16px system-ui;
+    }
+    h1 {
+      color: #e8cd8e;
+      font-size: 24px;
+    }
+    p {
+      line-height: 1.5;
+    }
+    button {
+      padding: 12px;
+      margin: 4px;
+      background: #123c51;
+      color: white;
+      border: 1px solid #32bcc0;
+      border-radius: 12px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #10233d;
+      border: 1px solid #31485f;
+      border-radius: 18px;
+      padding: 12px;
+    }
+    .card img {
+      width: 96px;
+      height: 136px;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 3px #0008);
+    }
+    small {
+      color: #b2c4d8;
+    }
+  </style>
+  <h1>Catia · corps entier · huit orientations</h1>
+  <p>
+    Sprites calculés depuis <code>catia-corrected.glb</code>. Planche de
+    contrôle des fichiers livrés, pas une capture iPhone. Aucun GPS simulé.
+  </p>
+  <div id="controls">
+    <button data-phase="idle">Repos</button
+    ><button data-phase="walk">Marche</button
+    ><button data-phase="run">Course</button><button id="pause">Pause</button>
+  </div>
+  <p id="status">Repos</p>
+  <div class="grid">
+    <div class="card">
+      <img
+        data-angle="s"
+        src="../../../assets/avatars/catia/map-sprites/s-idle-0.png"
+        alt="Catia — Face / sud"
+      /><small>Face / sud</small>
+    </div>
+    <div class="card">
+      <img
+        data-angle="sw"
+        src="../../../assets/avatars/catia/map-sprites/sw-idle-0.png"
+        alt="Catia — Sud-ouest"
+      /><small>Sud-ouest</small>
+    </div>
+    <div class="card">
+      <img
+        data-angle="w"
+        src="../../../assets/avatars/catia/map-sprites/w-idle-0.png"
+        alt="Catia — Ouest"
+      /><small>Ouest</small>
+    </div>
+    <div class="card">
+      <img
+        data-angle="nw"
+        src="../../../assets/avatars/catia/map-sprites/nw-idle-0.png"
+        alt="Catia — Nord-ouest"
+      /><small>Nord-ouest</small>
+    </div>
+    <div class="card">
+      <img
+        data-angle="n"
+        src="../../../assets/avatars/catia/map-sprites/n-idle-0.png"
+        alt="Catia — Dos / nord"
+      /><small>Dos / nord</small>
+    </div>
+    <div class="card">
+      <img
+        data-angle="ne"
+        src="../../../assets/avatars/catia/map-sprites/ne-idle-0.png"
+        alt="Catia — Nord-est"
+      /><small>Nord-est</small>
+    </div>
+    <div class="card">
+      <img
+        data-angle="e"
+        src="../../../assets/avatars/catia/map-sprites/e-idle-0.png"
+        alt="Catia — Est"
+      /><small>Est</small>
+    </div>
+    <div class="card">
+      <img
+        data-angle="se"
+        src="../../../assets/avatars/catia/map-sprites/se-idle-0.png"
+        alt="Catia — Sud-est"
+      /><small>Sud-est</small>
+    </div>
+  </div>
+  <p>
+    <small
+      >6 images au repos, 12 à la marche, 8 à la course ; animations issues du
+      modèle existant. Rendu mobile 2,5D, sans moteur 3D sur la carte.</small
+    >
+  </p>
+  <script>
+    let phase = "idle",
+      frame = 0,
+      playing = true,
+      last = performance.now();
+    const counts = { idle: 6, walk: 12, run: 8 },
+      ms = { idle: 500, walk: 100, run: 100 };
+    function draw() {
+      document
+        .querySelectorAll("img")
+        .forEach(
+          (i) =>
+            (i.src = `../../../assets/avatars/catia/map-sprites/${i.dataset.angle}-${phase}-${frame}.png`),
+        );
+    }
+    document.querySelectorAll("[data-phase]").forEach(
+      (b) =>
+        (b.onclick = () => {
+          phase = b.dataset.phase;
+          frame = 0;
+          last = performance.now();
+          document.querySelector("#status").textContent = b.textContent;
+          draw();
+        }),
+    );
+    document.querySelector("#pause").onclick = () => {
+      playing = !playing;
+      document.querySelector("#pause").textContent = playing
+        ? "Pause"
+        : "Animer";
+    };
+    setInterval(() => {
+      if (playing && performance.now() - last >= ms[phase]) {
+        last = performance.now();
+        frame = (frame + 1) % counts[phase];
+        draw();
+      }
+    }, 50);
+  </script>
+</html>

@@ -1,3 +1,5 @@
+import { useMapPlayer } from "../../hooks/useMapPlayer";
+import { CatiaMapPreview } from "../../components/exploration/CatiaMapPreview";
 import {
   PoiClusterMarker,
   type PoiGroup,
@@ -99,6 +101,11 @@ export default function Explorer() {
   const focused = useIsFocused();
   const now = useExplorationClock();
   const fresh = isFreshFix(fix, now);
+  const mapPlayer = useMapPlayer();
+  const [catiaAnimating, setCatiaAnimating] = useState(true);
+  const [catiaPreview, setCatiaPreview] = useState(false);
+  const previewVisible =
+    mapPlayer.choice === "catia" && (!fresh || catiaPreview);
   const heading = useExplorerHeading(focused && fresh);
   const reducedMotion = useReducedMotion();
   const direction = playerDirection(heading, fix, now);
@@ -463,16 +470,26 @@ export default function Explorer() {
                   strokeWidth={1}
                 />
               )}
-            <PlayerMarker
-              fix={fix}
-              direction={direction}
-              mapHeading={mapHeading}
-              active={focused && !sheetOpen && panel === null}
-              reducedMotion={reducedMotion}
-            />
+            {!previewVisible && (
+              <PlayerMarker
+                character={mapPlayer.choice}
+                animate={catiaAnimating}
+                fix={fix}
+                direction={direction}
+                mapHeading={mapHeading}
+                active={focused && !sheetOpen && panel === null}
+                reducedMotion={reducedMotion}
+              />
+            )}
           </>
         )}
       </MapView>
+      {previewVisible && (
+        <CatiaMapPreview
+          active={focused && !sheetOpen && panel === null && catiaAnimating}
+          reducedMotion={reducedMotion}
+        />
+      )}
       <Pressable
         onPress={() => {
           void Linking.openURL("https://www.openstreetmap.org/copyright").catch(
@@ -685,6 +702,15 @@ export default function Explorer() {
         poiFilters={poiFilters}
         setPoiFilters={setPoiFilters}
         visibleCount={visibleMonuments.length}
+        mapPlayer={mapPlayer.choice}
+        mapPlayerReady={mapPlayer.ready}
+        mapPlayerError={mapPlayer.error}
+        setMapPlayer={mapPlayer.save}
+        catiaAnimating={catiaAnimating}
+        setCatiaAnimating={setCatiaAnimating}
+        catiaPreview={catiaPreview}
+        setCatiaPreview={setCatiaPreview}
+        hasFreshGPS={fresh}
         poiGrouping={poiGrouping}
         setPoiGrouping={setPoiGrouping}
         individualCount={

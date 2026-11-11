@@ -19,11 +19,11 @@ Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/zaven
 $files = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
 # Refuse an old differential package that cannot repair a missing V1 dependency.
 $paths = @($files | ForEach-Object { [string]$_.path })
-foreach ($required in @('src/components/exploration/PoiClusterMarker.tsx', 'src/components/poi/assets.ts', 'src/lib/mapViewport.ts', 'src/lib/poi.ts', 'src/components/exploration/IllustratedPoiMarker.tsx', 'src/components/poi/nativeMapAssets.ts', 'src/components/poi/illustrated.ts', 'assets/poi/illustrated/temple.png', 'assets/poi/illustrated/castle.png', 'assets/poi/illustrated/religious.png', 'assets/poi/illustrated/museum.png', 'assets/poi/illustrated/industrial.png', 'assets/poi/illustrated/nature.png', 'assets/poi/illustrated/other.png')) {
+foreach ($required in @('src/components/exploration/PlayerMarker.tsx', 'src/components/exploration/CatiaSprite.tsx', 'src/components/exploration/avatar/catiaSprites.ts', 'src/components/exploration/PoiClusterMarker.tsx', 'src/components/poi/assets.ts', 'src/lib/mapViewport.ts', 'src/lib/poi.ts', 'src/components/exploration/IllustratedPoiMarker.tsx', 'src/components/poi/nativeMapAssets.ts', 'src/components/poi/illustrated.ts', 'assets/poi/illustrated/temple.png', 'assets/poi/illustrated/castle.png', 'assets/poi/illustrated/religious.png', 'assets/poi/illustrated/museum.png', 'assets/poi/illustrated/industrial.png', 'assets/poi/illustrated/nature.png', 'assets/poi/illustrated/other.png')) {
     if ($paths -notcontains $required) { throw "Paquet incomplet : $required. Utilisez la revision du correctif cumulatif." }
 }
 Write-Host "Installation dans : $root"
-Write-Host "Reception de $($files.Count) fichiers de la V2.4 - POI individuels..."
+Write-Host "Reception de $($files.Count) fichiers de la Catia carte V1..."
 # Bounded parallel downloads work with Windows PowerShell 5.1 (no extra module).
 # All network reads and checks finish before modifying any project file.
 Add-Type -AssemblyName System.Net.Http
@@ -46,9 +46,9 @@ try {
             [IO.File]::WriteAllBytes($job.Path, $bytes)
             if ((Get-FileHash -LiteralPath $job.Path -Algorithm SHA256).Hash.ToLowerInvariant() -ne $job.Entry.sha256) { throw "SHA256 incorrect : $($job.Entry.path). Aucun fichier du projet n'a ete modifie." }
         }
-        Write-Progress -Activity 'Vestige V2.4 - telechargement verifie' -Status "$last / $($files.Count)" -PercentComplete ([int](100 * $last / $files.Count))
+        Write-Progress -Activity 'Vestige Catia carte - telechargement verifie' -Status "$last / $($files.Count)" -PercentComplete ([int](100 * $last / $files.Count))
     }
-    Write-Progress -Activity 'Vestige V2.4 - telechargement verifie' -Completed
+    Write-Progress -Activity 'Vestige Catia carte - telechargement verifie' -Completed
 } finally { $client.Dispose() }
 Write-Host "Verification terminee. Sauvegarde des fichiers existants..."
 foreach ($entry in $files) {
@@ -67,7 +67,7 @@ if (Test-Path -LiteralPath $oldManifest) {
 }
 # An old emitted JS or platform-specific file can override the updated TSX.
 # Quarantine only competing renderers not supplied by this version, with backup.
-$renderers = @('src/app/(tabs)/index', 'src/components/exploration/IllustratedPoiMarker', 'src/components/exploration/HistoricalMarker', 'src/components/exploration/PoiClusterMarker', 'src/components/poi/nativeMapAssets', 'src/components/exploration/MapOptions')
+$renderers = @('src/components/exploration/PlayerMarker', 'src/components/exploration/CatiaSprite', 'src/components/exploration/CatiaMapPreview', 'src/components/exploration/avatar/catiaSprites', 'src/app/(tabs)/index', 'src/components/exploration/IllustratedPoiMarker', 'src/components/exploration/HistoricalMarker', 'src/components/exploration/PoiClusterMarker', 'src/components/poi/nativeMapAssets', 'src/components/exploration/MapOptions')
 foreach ($base in $renderers) {
     foreach ($extension in @('.ts', '.tsx', '.ios.ts', '.ios.tsx', '.native.ts', '.native.tsx', '.js', '.jsx', '.ios.js', '.ios.jsx', '.native.js', '.native.jsx')) {
         $relative = $base + $extension
@@ -93,5 +93,5 @@ foreach ($entry in $files) {
         throw "Copie incomplete : $($entry.path). Sauvegarde disponible : $backup"
     }
 }
-Write-Host "Vestige V2.4 - POI individuels installe. Sauvegarde : $backup"
+Write-Host "Vestige Catia carte V1 installe. Sauvegarde : $backup"
 Write-Host 'Verifiez les dependances : npm.cmd install ; puis npx.cmd expo start --tunnel --clear --port 8088'

@@ -38,9 +38,10 @@ export default function AvatarWorkshop() {
           </Text>
         </Card>
         <Card>
-          <Badge tone="blue">Catia · en préparation</Badge>
+          <Badge tone="blue">Catia · disponible sur la carte</Badge>
           <Text style={s.body}>
-            Modèle optimisé et essais de mouvements, sans activation sur la
+            Sprites animés issus du modèle corrigé, activés sur la carte. Le
+            choix Catia / avatar précédent se trouve dans les réglages de la
             carte.
           </Text>
           <Button

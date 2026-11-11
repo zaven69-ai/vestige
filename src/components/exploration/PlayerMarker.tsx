@@ -4,6 +4,9 @@ import { Marker, type MapMarker } from "react-native-maps";
 import type { Fix } from "../../lib/game";
 import { avatarMotion } from "../../lib/exploration";
 import { avatarFacing, avatarSpec } from "../../lib/avatar";
+import { CatiaSprite } from "./CatiaSprite";
+import { useCatiaMovement } from "./avatar/useCatiaFrame";
+import { catiaMapSpec, type MapPlayerChoice } from "../../lib/avatars/catiaMap";
 import { theme } from "../../theme";
 import { useAvatarPreferences } from "../../lib/avatars/preferences";
 import { useAvatarFrame } from "./avatar/useAvatarFrame";
@@ -15,13 +18,21 @@ export function PlayerMarker({
   reducedMotion,
   mapHeading,
   active,
+  character = "catia",
+  animate = true,
 }: {
   fix: Fix;
   direction: number | null;
   reducedMotion: boolean;
   mapHeading: number;
   active: boolean;
+  character?: MapPlayerChoice;
+  animate?: boolean;
 }) {
+  const catiaPhase = useCatiaMovement(
+    fix,
+    active && animate && character === "catia",
+  );
   const { pack, activeChoice, packVersion } = useAvatarPreferences();
   const [initialPoint] = useState(() => ({
     latitude: fix.latitude,
@@ -36,11 +47,16 @@ export function PlayerMarker({
   const facing = avatarFacing(direction, mapHeading);
   const ready = useAvatarAssets(
     facing,
-    active && !reducedMotion,
+    active && !reducedMotion && character !== "catia",
     pack.sprites,
     `${activeChoice}:${packVersion}`,
   );
-  const frame = useAvatarFrame(fix, active, reducedMotion, ready);
+  const frame = useAvatarFrame(
+    fix,
+    active && character !== "catia",
+    reducedMotion,
+    ready,
+  );
   const pose =
     active && !reducedMotion && ready
       ? frame
@@ -74,26 +90,44 @@ export function PlayerMarker({
       return () => animation.stop();
     }
   }, [coordinate, fix, reducedMotion, active]);
-  // Native image swaps work with tracksViewChanges=false. No animated custom-view bitmap snapshots.
+  const isCatia = character === "catia";
+  const spec = isCatia ? catiaMapSpec : avatarSpec;
+  // Catia is a single animated PNG view; no GL context is mounted on the map.
+  // The previous avatar keeps its existing native-image path.
   const props = {
     ref: marker,
-    image,
-    anchor: avatarSpec.anchor,
+    image: isCatia ? undefined : image,
+    anchor: spec.anchor,
     centerOffset: {
       x: 0,
-      y: -(avatarSpec.height * (avatarSpec.anchor.y - 0.5)),
+      y: -(spec.height * (spec.anchor.y - 0.5)),
     },
     zIndex: 100,
     rotation: 0,
     flat: false,
-    tracksViewChanges: false,
+    tracksViewChanges: isCatia && active && animate && !reducedMotion,
     tappable: false,
     identifier: "vestige-player",
-    accessibilityLabel: "Votre explorateur VESTIGE, position GPS réelle",
+    accessibilityLabel: isCatia
+      ? "Catia, position GPS réelle du joueur"
+      : "Votre explorateur VESTIGE, position GPS réelle",
   };
+  const sprite = isCatia ? (
+    <CatiaSprite
+      facing={facing}
+      phase={catiaPhase}
+      active={active && animate}
+      reducedMotion={reducedMotion}
+      onLoad={() => marker.current?.redraw()}
+    />
+  ) : null;
   return Platform.OS === "android" ? (
-    <Marker {...props} coordinate={initialPoint} />
+    <Marker {...props} coordinate={initialPoint}>
+      {sprite}
+    </Marker>
   ) : (
-    <AnimatedMarker {...props} coordinate={coordinate} />
+    <AnimatedMarker {...props} coordinate={coordinate}>
+      {sprite}
+    </AnimatedMarker>
   );
 }
