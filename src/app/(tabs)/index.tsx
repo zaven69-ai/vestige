@@ -1,3 +1,10 @@
+import {
+  partitionGuidedPois,
+  canPresentArrival,
+} from "../../lib/navigation/explorer";
+import { useExplorerGuidance } from "../../hooks/useExplorerGuidance";
+import { ExplorerGuideHUD } from "../../components/navigation/ExplorerGuideHUD";
+import { GuidedVisitFooter } from "../../components/navigation/GuidedVisitFooter";
 import { useMapPlayer } from "../../hooks/useMapPlayer";
 import { CatiaMapPreview } from "../../components/exploration/CatiaMapPreview";
 import {
@@ -36,7 +43,12 @@ import {
   ScrollView,
   useWindowDimensions,
 } from "react-native";
-import MapView, { Circle, LocalTile, type Region } from "react-native-maps";
+import MapView, {
+  Circle,
+  LocalTile,
+  Polyline,
+  type Region,
+} from "react-native-maps";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { router, useIsFocused } from "expo-router";
@@ -99,6 +111,21 @@ export default function Explorer() {
   const { fix, gps, requestGPS, xp, journal, storageError } = useGame();
   const insets = useSafeAreaInsets();
   const focused = useIsFocused();
+  const guidance = useExplorerGuidance(focused);
+  const guideActive = guidance.active;
+  const routeMonuments = useMemo(
+    () =>
+      guideActive
+        ? guidance.tour.stops
+            .map((stop) => monuments.find((m) => m.id === stop.poiId)!)
+            .filter(Boolean)
+        : [],
+    [guideActive, guidance.tour],
+  );
+  const routeIds = useMemo(
+    () => new Set(routeMonuments.map((m) => m.id)),
+    [routeMonuments],
+  );
   const now = useExplorationClock();
   const fresh = isFreshFix(fix, now);
   const mapPlayer = useMapPlayer();
@@ -178,18 +205,26 @@ export default function Explorer() {
   const cameraFix = useRef<typeof fix>(null);
   const touchOrigin = useRef<{ x: number; y: number } | null>(null);
   const bottom = insets.bottom + 86;
-  const visibleMonuments = useMemo(
+  const poiPartition = useMemo(
     () =>
-      monuments.filter(
+      partitionGuidedPois(
+        monuments,
+        routeIds,
         (m) =>
           periods.includes(historicalPeriod(m.era)) &&
           matchesPoi(m, !!journal[m.id], poiFilters),
       ),
-    [periods, journal, poiFilters],
+    [periods, journal, poiFilters, routeIds],
   );
+  const visibleMonuments = poiPartition.visible;
   const groups = useMemo(
-    () => viewportGroups(visibleMonuments, region, width, height, poiGrouping),
-    [visibleMonuments, region, width, height, poiGrouping],
+    () =>
+      viewportGroups(poiPartition.ordinary, region, width, height, poiGrouping),
+    [poiPartition.ordinary, region, width, height, poiGrouping],
+  );
+  const routePins = useMemo(
+    () => viewportGroups(routeMonuments, region, width, height, "individual"),
+    [routeMonuments, region, width, height],
   );
   const selected =
     selection && visibleMonuments.some((m) => m.id === selection.id)
@@ -221,6 +256,7 @@ export default function Explorer() {
     )
       return;
     if (
+      !guideActive &&
       cameraFix.current &&
       initialFollow.current &&
       avatarMotion(cameraFix.current, fix, reducedMotion) === "hold"
@@ -230,10 +266,16 @@ export default function Explorer() {
     if (!initialFollow.current) {
       initialFollow.current = true;
       cameraFix.current = fix;
-      moveCamera(explorationCamera(fix, immersive));
+      moveCamera({
+        ...explorationCamera(fix, immersive),
+        ...(guideActive
+          ? { altitude: 400, zoom: 18, heading: direction ?? 0 }
+          : {}),
+      });
     } else
       moveCamera({
         center: { latitude: fix.latitude, longitude: fix.longitude },
+        ...(guideActive && direction !== null ? { heading: direction } : {}),
       });
   }, [
     fix,
@@ -244,6 +286,8 @@ export default function Explorer() {
     immersive,
     moveCamera,
     reducedMotion,
+    guideActive,
+    direction,
   ]);
   const recenter = () => {
     followingRef.current = true;
@@ -253,8 +297,74 @@ export default function Explorer() {
     if (fresh && goodGPS) {
       initialFollow.current = true;
       cameraFix.current = fix;
-      moveCamera(explorationCamera(fix, immersive));
+      moveCamera({
+        ...explorationCamera(fix, immersive),
+        ...(guideActive
+          ? { altitude: 400, zoom: 18, heading: direction ?? 0 }
+          : {}),
+      });
     } else void requestGPS();
+  };
+  const guidedSheetKey = useRef<string | null>(null);
+  const arrivalsSeen = useRef(new Set<string>());
+  const openGuidedStage = useCallback(() => {
+    guidedSheetKey.current = guidance.stageKey;
+    setSelection(guidance.monument);
+    setSheetOpen(true);
+  }, [guidance.stageKey, guidance.monument]);
+  useEffect(() => {
+    if (
+      !canPresentArrival({
+        stageKey: guidance.stageKey,
+        seen: arrivalsSeen.current,
+        active: guideActive,
+        focused,
+        arrived: guidance.navigation.arrived,
+        blocked: sheetOpen || panel !== null,
+      })
+    )
+      return;
+    const timer = setTimeout(() => {
+      arrivalsSeen.current.add(guidance.stageKey);
+      openGuidedStage();
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [
+    guideActive,
+    focused,
+    guidance.navigation.arrived,
+    guidance.stageKey,
+    sheetOpen,
+    panel,
+    openGuidedStage,
+  ]);
+  useEffect(() => {
+    if (!guidedSheetKey.current || guidedSheetKey.current === guidance.stageKey)
+      return;
+    guidedSheetKey.current = null;
+    const timer = setTimeout(() => {
+      setSheetOpen(false);
+      setSelection(null);
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [guidance.stageKey]);
+  useEffect(() => {
+    if (!guideActive || !guidance.navigation.enabled) return;
+    const timer = setTimeout(() => {
+      followingRef.current = true;
+      setFollowing(true);
+      initialFollow.current = false;
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [guideActive, guidance.navigation.enabled]);
+  const overviewRoute = () => {
+    const points = guidance.navigation.route?.coordinates ?? routeMonuments;
+    stopFollowing();
+    if (points.length)
+      map.current?.fitToCoordinates(points, {
+        edgePadding: { top: 180, bottom: 140, left: 40, right: 40 },
+        animated: !reducedMotion,
+      });
   };
   const selectMonument = useCallback(
     (monument: Monument) => {
@@ -423,6 +533,40 @@ export default function Explorer() {
         {atlasActive && atlas.path && (
           <LocalTile pathTemplate={atlas.path} tileSize={256} zIndex={0} />
         )}
+        {guideActive && guidance.navigation.route && (
+          <>
+            <Polyline
+              coordinates={guidance.navigation.route.coordinates}
+              strokeColor="#07152C"
+              strokeWidth={10}
+              zIndex={1}
+            />
+            <Polyline
+              coordinates={guidance.navigation.route.coordinates}
+              strokeColor="#E8CD8E"
+              strokeWidth={5}
+              zIndex={2}
+            />
+          </>
+        )}
+        {routePins.map((group) => (
+          <IllustratedPoiMarker
+            key={`route-${group.key}`}
+            monument={group.members[0]}
+            state={monumentState(
+              group.members[0],
+              !!journal[group.members[0].id],
+              fix,
+              now,
+            )}
+            selected={
+              selected?.id === group.members[0].id ||
+              guidance.stop.poiId === group.members[0].id
+            }
+            onSelect={selectMapMonument}
+            reducedMotion={reducedMotion}
+          />
+        ))}
         {groups.map((group) =>
           group.members.length === 1 ? (
             <IllustratedPoiMarker
@@ -520,62 +664,91 @@ export default function Explorer() {
           },
         ]}
       >
-        <ExplorerProfile xp={xp} count={Object.keys(journal).length} />
-        <View style={styles.tools}>
-          <MapButton
-            label="Filtrer les lieux : époque, catégorie, contrôle et visites"
-            icon="layers-outline"
-            active={
-              periods.length !== historicalPeriods.length ||
-              poiFilters.categories.length !== poiCategories.length ||
-              poiFilters.statuses.length !== poiStatuses.length ||
-              poiFilters.visits !== "all"
-            }
-            onPress={() => setPanel("filters")}
-          />
-          <MapButton
-            label="Options de la carte et localisation"
-            icon="options-outline"
-            onPress={() => setPanel("settings")}
+        {!guideActive && (
+          <ExplorerProfile xp={xp} count={Object.keys(journal).length} />
+        )}
+        {!guideActive && (
+          <View style={styles.tools}>
+            <MapButton
+              label="Filtrer les lieux : époque, catégorie, contrôle et visites"
+              icon="layers-outline"
+              active={
+                periods.length !== historicalPeriods.length ||
+                poiFilters.categories.length !== poiCategories.length ||
+                poiFilters.statuses.length !== poiStatuses.length ||
+                poiFilters.visits !== "all"
+              }
+              onPress={() => setPanel("filters")}
+            />
+            <MapButton
+              label="Options de la carte et localisation"
+              icon="options-outline"
+              onPress={() => setPanel("settings")}
+            />
+          </View>
+        )}
+      </View>
+      {guideActive && (
+        <View
+          pointerEvents="box-none"
+          style={{
+            position: "absolute",
+            top: insets.top + 10,
+            left: 14,
+            right: 14,
+          }}
+        >
+          <ExplorerGuideHUD
+            guide={guidance}
+            onOpenStage={openGuidedStage}
+            onOverview={overviewRoute}
+            onMapOptions={() => setPanel("settings")}
+            onFilters={() => setPanel("filters")}
+            onContribute={() => router.push("/contribuer")}
+            onLegend={() => setPanel("legend")}
           />
         </View>
-      </View>
-      <Pressable
-        accessibilityRole="button"
-        onPress={() => setPanel("legend")}
-        style={[
-          styles.filterHint,
-          {
-            top: insets.top + 78,
-            left: 14,
-            alignSelf: "flex-start",
-            minHeight: 44,
-            justifyContent: "center",
-          },
-        ]}
-      >
-        <Text style={styles.hintText}>ⓘ Comprendre les marqueurs</Text>
-      </Pressable>
-      <Pressable
-        accessibilityRole="button"
-        onPress={() => router.push("/contribuer")}
-        style={[
-          styles.filterHint,
-          {
-            top: insets.top + 128,
-            left: 14,
-            minHeight: 44,
-            justifyContent: "center",
-            borderWidth: 1,
-            borderColor: "#D8BE80",
-            paddingHorizontal: 18,
-          },
-        ]}
-      >
-        <Text style={{ color: "#F0DCAB", fontWeight: "700" }}>
-          + Contribuer
-        </Text>
-      </Pressable>
+      )}
+      {!guideActive && (
+        <Pressable
+          accessibilityRole="button"
+          onPress={() => setPanel("legend")}
+          style={[
+            styles.filterHint,
+            {
+              top: insets.top + 78,
+              left: 14,
+              alignSelf: "flex-start",
+              minHeight: 44,
+              justifyContent: "center",
+            },
+          ]}
+        >
+          <Text style={styles.hintText}>ⓘ Comprendre les marqueurs</Text>
+        </Pressable>
+      )}
+      {!guideActive && (
+        <Pressable
+          accessibilityRole="button"
+          onPress={() => router.push("/contribuer")}
+          style={[
+            styles.filterHint,
+            {
+              top: insets.top + 128,
+              left: 14,
+              minHeight: 44,
+              justifyContent: "center",
+              borderWidth: 1,
+              borderColor: "#D8BE80",
+              paddingHorizontal: 18,
+            },
+          ]}
+        >
+          <Text style={{ color: "#F0DCAB", fontWeight: "700" }}>
+            + Contribuer
+          </Text>
+        </Pressable>
+      )}
       {visibleMonuments.length === 0 && (
         <View
           pointerEvents="none"
@@ -615,36 +788,38 @@ export default function Explorer() {
           onPress={recenter}
         />
       </View>
-      <Pressable
-        accessibilityRole="button"
-        accessibilityLabel={`${gps}. ${status}. Toucher pour ${!fix || !fresh ? "actualiser la localisation" : "voir les options"}.`}
-        onPress={() => {
-          if (storageError || (fix && fresh)) setPanel("settings");
-          else recenter();
-        }}
-        style={[
-          styles.status,
-          {
-            left: Math.max(insets.left, 14),
-            bottom: bottom + (selected ? 220 : 10),
-            maxWidth: "70%",
-          },
-        ]}
-      >
-        <View
+      {!guideActive && (
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={`${gps}. ${status}. Toucher pour ${!fix || !fresh ? "actualiser la localisation" : "voir les options"}.`}
+          onPress={() => {
+            if (storageError || (fix && fresh)) setPanel("settings");
+            else recenter();
+          }}
           style={[
-            styles.dot,
+            styles.status,
             {
-              backgroundColor:
-                storageError || !goodGPS ? colors.violet : colors.turquoise,
+              left: Math.max(insets.left, 14),
+              bottom: bottom + (selected ? 220 : 10),
+              maxWidth: "70%",
             },
           ]}
-        />
-        <Text numberOfLines={1} style={styles.statusText}>
-          {status}
-        </Text>
-        {(!fix || !fresh) && <Icon name="chevron-forward" size={12} />}
-      </Pressable>
+        >
+          <View
+            style={[
+              styles.dot,
+              {
+                backgroundColor:
+                  storageError || !goodGPS ? colors.violet : colors.turquoise,
+              },
+            ]}
+          />
+          <Text numberOfLines={1} style={styles.statusText}>
+            {status}
+          </Text>
+          {(!fix || !fresh) && <Icon name="chevron-forward" size={12} />}
+        </Pressable>
+      )}
       {selected && (
         <View
           style={[
@@ -693,6 +868,19 @@ export default function Explorer() {
       <MonumentBottomSheet
         monument={sheetOpen ? selected : null}
         close={closeSheet}
+        footer={
+          guideActive && selected?.id === guidance.stop.poiId ? (
+            <GuidedVisitFooter
+              key={guidance.stageKey}
+              guide={guidance}
+              onNext={() => {
+                closeSheet();
+                setSelection(null);
+                guidance.live.advance("consulted");
+              }}
+            />
+          ) : undefined
+        }
       />
       <MapOptions
         atlasEnabled={atlasEnabled}
@@ -714,7 +902,8 @@ export default function Explorer() {
         poiGrouping={poiGrouping}
         setPoiGrouping={setPoiGrouping}
         individualCount={
-          groups.filter((group) => group.members.length === 1).length
+          groups.filter((group) => group.members.length === 1).length +
+          routePins.length
         }
         clusterCount={groups.filter((group) => group.members.length > 1).length}
         close={() => setPanel(null)}

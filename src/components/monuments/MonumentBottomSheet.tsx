@@ -16,9 +16,11 @@ import { useReducedMotion } from "../../hooks/useExplorerSensors";
 export function MonumentBottomSheet({
   monument,
   close,
+  footer,
 }: {
   monument: Monument | null;
   close: () => void;
+  footer?: React.ReactNode;
 }) {
   const insets = useSafeAreaInsets();
   const reduced = useReducedMotion();
@@ -75,6 +77,7 @@ export function MonumentBottomSheet({
               onNavigate={close}
             />
           )}
+          {footer}
         </View>
       </View>
     </Modal>

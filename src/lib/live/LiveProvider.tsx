@@ -1,3 +1,10 @@
+import { guidedTours, guidedTour } from "../../data/live/tours";
+import {
+  LIVE_CHECKPOINTS_KEY,
+  emptyCheckpoints,
+  restoreTourState,
+  checkpoint,
+} from "./checkpoints";
 import { playbackAdmission, currentPlayback } from "./playback";
 import React, {
   createContext,
@@ -21,7 +28,6 @@ import { emptyFence, tickFence } from "./geofence";
 import {
   startVisit,
   advanceVisit,
-  restoreVisit,
   restorePreferences,
   LIVE_PREFS_KEY,
   LIVE_SESSION_KEY,
@@ -38,6 +44,9 @@ function useLiveState() {
   const [session, setSession] = useState<VisitSession | null>(null),
     [ready, setReady] = useState(false),
     [storageError, setStorageError] = useState<string | null>(null);
+  const tour = guidedTour(session?.tourId ?? vienneAntique.id) ?? vienneAntique;
+  const checkpoints = useRef(emptyCheckpoints());
+  const [savedVisits, setSavedVisits] = useState(emptyCheckpoints);
   const [mode, setModeValue] = useState<LiveMode>("manual");
   const [prefs, setPrefs] = useState({
     preferredMode: "manual" as LiveMode,
@@ -70,11 +79,18 @@ function useLiveState() {
     void Promise.all([
       AsyncStorage.getItem(LIVE_SESSION_KEY),
       AsyncStorage.getItem(LIVE_PREFS_KEY),
+      AsyncStorage.getItem(LIVE_CHECKPOINTS_KEY),
     ])
-      .then(([s, p]) => {
-        const restored = restoreVisit(s, vienneAntique),
-          preferences = restorePreferences(p);
+      .then(([s, p, saved]) => {
+        const { store, session: restored } = restoreTourState(
+          saved,
+          s,
+          guidedTours,
+        );
+        checkpoints.current = store;
+        const preferences = restorePreferences(p);
         if (mounted.current) {
+          setSavedVisits(checkpoints.current);
           setSession(restored);
           setPrefs(preferences);
           setReady(true);
@@ -89,15 +105,20 @@ function useLiveState() {
   }, []);
   useEffect(() => {
     if (!ready || writeFailed.current) return;
+    if (session) checkpoints.current = checkpoint(checkpoints.current, session);
+    const savedSnapshot = checkpoints.current;
+    const savedCheckpoints = JSON.stringify(savedSnapshot);
     queue.current = queue.current
       .then(async () => {
         if (writeFailed.current) return;
+        await AsyncStorage.setItem(LIVE_CHECKPOINTS_KEY, savedCheckpoints);
         if (session)
           await AsyncStorage.setItem(LIVE_SESSION_KEY, JSON.stringify(session));
         await AsyncStorage.setItem(
           LIVE_PREFS_KEY,
           JSON.stringify({ version: 1, ...prefs }),
         );
+        if (mounted.current) setSavedVisits(savedSnapshot);
       })
       .catch((e) => {
         writeFailed.current = true;
@@ -136,25 +157,45 @@ function useLiveState() {
     },
     [pauseAudio],
   );
-  const begin = useCallback(() => {
-    if (!ready || storageError) return;
-    stopAudio();
-    fence.current = emptyFence();
-    setModeValue("manual");
-    setSession(startVisit(vienneAntique, Date.now()));
-    setAudioError(null);
-  }, [ready, storageError, stopAudio]);
+  const begin = useCallback(
+    (tourId: string = vienneAntique.id) => {
+      if (!ready || storageError) return;
+      stopAudio();
+      fence.current = emptyFence();
+      setModeValue("manual");
+      const chosen = guidedTour(
+        typeof tourId === "string" ? tourId : vienneAntique.id,
+      );
+      if (!chosen) return;
+      const prior = checkpoints.current.sessions[chosen.id];
+      setSession(
+        prior && prior.endedAt === null
+          ? { ...prior, paused: false }
+          : startVisit(chosen, Date.now()),
+      );
+      setAudioError(null);
+    },
+    [ready, storageError, stopAudio],
+  );
   const advance = useCallback(
     (outcome: "consulted" | "skipped" | "listened") => {
       if (!ready || storageError) return;
       stopAudio();
       fence.current = emptyFence();
       setSession((s) =>
-        s ? advanceVisit(s, vienneAntique, outcome, Date.now()) : s,
+        s ? advanceVisit(s, guidedTour(s.tourId)!, outcome, Date.now()) : s,
       );
     },
     [ready, storageError, stopAudio],
   );
+  const leave = useCallback(() => {
+    stopAudio();
+    setModeValue("manual");
+    fence.current = emptyFence();
+    if (session) checkpoints.current = checkpoint(checkpoints.current, session);
+    checkpoints.current = { ...checkpoints.current, activeTourId: null };
+    setSession(null);
+  }, [session, stopAudio]);
   const finish = useCallback(() => {
     stopAudio();
     setModeValue("manual");
@@ -208,25 +249,25 @@ function useLiveState() {
     [session, foreground, visible, mode, updatePlayback],
   );
   const replay = useCallback(() => {
-    const stop = vienneAntique.stops[session?.index ?? 0];
+    const stop = tour.stops[session?.index ?? 0];
     const story = liveStories.find((s) => s.id === stop?.storyId);
     if (!story) return;
     stopAudio();
     requestPlay(story);
-  }, [session, stopAudio, requestPlay]);
+  }, [session, tour, stopAudio, requestPlay]);
   const play = useCallback(() => {
     const current = playbackRef.current;
     if (current) {
       updatePlayback({ ...current, intent: "play" });
       return;
     }
-    const stop = vienneAntique.stops[session?.index ?? 0];
+    const stop = tour.stops[session?.index ?? 0];
     const story = liveStories.find((s) => s.id === stop?.storyId);
     if (story) requestPlay(story);
-  }, [session, requestPlay, updatePlayback]);
+  }, [session, tour, requestPlay, updatePlayback]);
   useEffect(() => {
     const tick = () => {
-      const stop = vienneAntique.stops[session?.index ?? 0],
+      const stop = tour.stops[session?.index ?? 0],
         story = liveStories.find((s) => s.id === stop?.storyId);
       if (!stop || !story) return;
       const key = storyKey(story);
@@ -257,6 +298,7 @@ function useLiveState() {
     return () => clearInterval(timer);
   }, [
     session,
+    tour,
     fix,
     mode,
     foreground,
@@ -294,6 +336,8 @@ function useLiveState() {
     [pauseAudio],
   );
   return {
+    tour,
+    savedVisit: (id: string) => savedVisits.sessions[id] ?? null,
     session,
     ready,
     storageError,
@@ -308,6 +352,7 @@ function useLiveState() {
     begin,
     advance,
     finish,
+    leave,
     togglePause,
     play,
     pauseAudio,

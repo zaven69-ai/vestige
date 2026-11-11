@@ -1,3 +1,7 @@
+import {
+  authoritativeNavigationFix,
+  type NavigationPosition,
+} from "../lib/navigation/position";
 import { RouteRequestGate } from "../lib/navigation/requests";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AppState } from "react-native";
@@ -24,9 +28,14 @@ export function useWalkingNavigation(
   target: Point,
   targetId: string,
   active: boolean,
+  position?: NavigationPosition,
 ) {
-  const { fix, requestGPS } = useGame(),
+  const { fix: deviceFix, requestGPS } = useGame(),
     now = useExplorationClock();
+  const source = position?.source ?? "device";
+  const fix = authoritativeNavigationFix(
+    position ?? { source: "device", fix: deviceFix },
+  );
   const [enabled, setEnabled] = useState(false),
     [snapshot, setSnapshot] = useState<Snapshot>({
       key: "",
@@ -38,7 +47,7 @@ export function useWalkingNavigation(
       AppState.currentState === "active",
     ),
     [arrivalStatus, setArrivalStatus] = useState({ key: "", value: false });
-  const key = `${targetId}:${target.latitude}:${target.longitude}`;
+  const key = `${source}:${targetId}:${target.latitude}:${target.longitude}`;
   const valid = validNavigationFix(fix, now),
     running = enabled && active && foreground;
   const gate = useRef(new RouteRequestGate()),
@@ -209,8 +218,9 @@ export function useWalkingNavigation(
   const start = useCallback(() => {
     setEnabled(true);
     setSnapshot((old) => ({ ...old, key: "", error: null, status: "idle" }));
-    if (!validNavigationFix(fix, Date.now())) void requestGPS();
-  }, [fix, requestGPS]);
+    if (source === "device" && !validNavigationFix(fix, Date.now()))
+      void requestGPS();
+  }, [fix, requestGPS, source]);
   const stop = useCallback(() => {
     cancel();
     setEnabled(false);

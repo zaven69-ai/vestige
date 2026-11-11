@@ -4292,8 +4292,16 @@
     "sha256": "8681611ffc5f983b5855ec1177f0b14185e1d8bb0881a70864583be64a32139a"
   },
   {
+    "path": "docs/navigation/EXPLORER-GUIDANCE-V2.md",
+    "sha256": "2c58c1a4c5c13d2a1773704dd0122e750e91c28f83a3d3948b89fad4eb0fad28"
+  },
+  {
     "path": "docs/navigation/VIENNE-GPS-NAVIGATION-V1.md",
     "sha256": "f288e5063bda99502b81af525ca5df7ddc7fc725f85df87b6a6ce464ab1323aa"
+  },
+  {
+    "path": "docs/navigation/explorer-hud-check.html",
+    "sha256": "6ee2970a7eb58459394846649f32719d0e8dbda36eca3ea62af1ec9a8f624953"
   },
   {
     "path": "docs/navigation/valhalla-live-check.json",
@@ -4361,15 +4369,15 @@
   },
   {
     "path": "scripts/windows/update-social-v2.ps1",
-    "sha256": "03cfc7dc284d28f1ccf8af5ffadad1061bd52f1a4b9e5c759b7d5598db69a06f"
+    "sha256": "f0547a62b203cfc81cdf9af47344fd663e0ca048c58e20d89939497f91a28e0f"
   },
   {
     "path": "src/app/(tabs)/index.tsx",
-    "sha256": "1963b3874ce6803db4e1b255771a8f6a483c5fcc43cce4d3a0e05fec69b43d70"
+    "sha256": "e8d5d84039f4464129c59fb93ed5087f6fb53a2d231543727a6c524511a55386"
   },
   {
     "path": "src/app/(tabs)/parcours.tsx",
-    "sha256": "7b6cb5ca32eacc3bdd7299d4057b9ac3acbbc60578618e0725d527a81a670a38"
+    "sha256": "bcd27a315ac0957dd29713dff60eab46e5e41e05e9cff0aa6c3c447ea9097314"
   },
   {
     "path": "src/app/(tabs)/profil.tsx",
@@ -4401,7 +4409,7 @@
   },
   {
     "path": "src/app/visite-vienne.tsx",
-    "sha256": "8ec9a23d330144e53005400668438b3f6263f88cf7c2ad9ecdb7e697022b0ce6"
+    "sha256": "3367d80c8e66c00aacf3e3c7a314e51762b20d1f43b335562bdd642a82430363"
   },
   {
     "path": "src/components/contributions/MonumentActions.tsx",
@@ -4449,19 +4457,27 @@
   },
   {
     "path": "src/components/live/TourCard.tsx",
-    "sha256": "870bf90e48dee4bb94e4bfdee7e9e9bf7a1789969ee8f70a74dc332b975e8569"
+    "sha256": "49d62675800e223c2495519f470ea1d2a68f3f301963a7f42dd8823b4a22ddf8"
   },
   {
     "path": "src/components/live/VisitMap.tsx",
-    "sha256": "533c30d7e3577078465575b02de27459b965c0fcf9e76287b97ef581e2d8e427"
+    "sha256": "3df90d76d8456eaccd3ba1af99978faec9d856dda0ff0679435c476a256348a1"
   },
   {
     "path": "src/components/monuments/MonumentBottomSheet.tsx",
-    "sha256": "4034b6b067054b49b130ae0d0374d5b9e1eeebbd8fd18f2da1ccd10437883f33"
+    "sha256": "593766ba491981d1ea52c40dda47d7dba7b9d01e06327854283be15d23505acd"
   },
   {
     "path": "src/components/monuments/MonumentDetails.tsx",
     "sha256": "93b4e0288f915605ef0edc404f24e2ec526baeabf3c5b87c00e3c53f438a61db"
+  },
+  {
+    "path": "src/components/navigation/ExplorerGuideHUD.tsx",
+    "sha256": "5946bf12e3bfd4f9fbe63705370bcc578de7856b81c1427a4137bdeb85dc49a5"
+  },
+  {
+    "path": "src/components/navigation/GuidedVisitFooter.tsx",
+    "sha256": "b2a57347e4413f1ddb689da805c151b6ded67283c59d8063ca173d1bc0c9da64"
   },
   {
     "path": "src/components/navigation/WalkingNavigationPanel.tsx",
@@ -4512,6 +4528,10 @@
     "sha256": "5479f296c32776e78ca4726be6f8c5e6cc1c49b482d1f4bfcadbf3b6ed8e2baa"
   },
   {
+    "path": "src/data/live/tours.ts",
+    "sha256": "f23c16443bb5ae825cc8f14d22367a6ac797e25a2f1368b05dc1389271c4391e"
+  },
+  {
     "path": "src/data/live/vienneAntique.ts",
     "sha256": "d8b6e13d71479ccf875d32ee43f7d33aaed6c75d554de022de706b18b9fbfa2c"
   },
@@ -4520,12 +4540,16 @@
     "sha256": "ee4f7f6a570056365096561cab2e56070fcd291648cf9b6a640f30f0c7245bca"
   },
   {
+    "path": "src/hooks/useExplorerGuidance.ts",
+    "sha256": "51c7d7d70b05be222d0adb03ec24c534a91d3190a29ffd8d565726192ae49faa"
+  },
+  {
     "path": "src/hooks/useMapPlayer.ts",
     "sha256": "5b3baeb6fa079259d8169de44a673cacd529bc2c13e70f03e44bdf990f06e01b"
   },
   {
     "path": "src/hooks/useWalkingNavigation.ts",
-    "sha256": "65aa8a1aea84824d2fd082c3f60f91d19f942465cfa3404fbe3a90ce1dd862dc"
+    "sha256": "8bf8e7ea083205976d55c39ecbb2c76527c21d91038e29ee6d0589f74922e8f0"
   },
   {
     "path": "src/lib/avatars/catiaMap.ts",
@@ -4553,7 +4577,11 @@
   },
   {
     "path": "src/lib/live/LiveProvider.tsx",
-    "sha256": "7bc0bb4767cbb1ca7c85527724b32b646e15649b234e55f08bd14b85222c2b43"
+    "sha256": "35b2fbd5fa7aa8f09f4c23173356840d847f5cec4b7bf540241b0973df1c266f"
+  },
+  {
+    "path": "src/lib/live/checkpoints.ts",
+    "sha256": "09df18b24454ef8f09cad47dfeaac5a35df64a8a008620f98fa6747a746bc2b5"
   },
   {
     "path": "src/lib/live/eligibility.ts",
@@ -4578,6 +4606,14 @@
   {
     "path": "src/lib/mapViewport.ts",
     "sha256": "f3db8573489d0aa9c6244dcdf04d4c038ea757e3d77ff7101017e693b4dab160"
+  },
+  {
+    "path": "src/lib/navigation/explorer.ts",
+    "sha256": "bc82b07becd2c39b89f4959f64306b2924a1788093aed598558d5f05874f2ed3"
+  },
+  {
+    "path": "src/lib/navigation/position.ts",
+    "sha256": "8016bcba9e626ba6e84aa6c45f81ab7aa7e1d3a962b3c3fc659d111b57ba50d8"
   },
   {
     "path": "src/lib/navigation/requests.ts",
@@ -4610,6 +4646,10 @@
   {
     "path": "tests/contributions.test.ts",
     "sha256": "8b87f76bcba493f8f6b1d089da1ccc919f574f6f90fa9fa141fdecb0c4658af1"
+  },
+  {
+    "path": "tests/explorer-guidance.test.ts",
+    "sha256": "9eabebc76ea99cb813d2fcd61af9f883cfeb68c30a00f4e87afa27be34891cf7"
   },
   {
     "path": "tests/fixtures/navigation/cybele-theatre.json",
