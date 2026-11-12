@@ -1,3 +1,4 @@
+import { GeorgesDemo } from "../../components/live/GeorgesDemo";
 import { RouteCompletionShare } from "../../components/community/RouteCompletionShare";
 import { useMapCityPreference } from "../../hooks/useMapCityPreference";
 import { miniaturePoiIds } from "../../lib/miniatures/assets";
@@ -126,7 +127,9 @@ export default function Explorer() {
   const restoredCity = useRef(false);
   const insets = useSafeAreaInsets();
   const focused = useIsFocused();
-  const guidance = useExplorerGuidance(focused, location.position);
+  const [georgesDemoActive, setGeorgesDemoActive] = useState(false);
+  const georgesDemo = georgesDemoActive && location.enabled;
+  const guidance = useExplorerGuidance(focused, location.position, georgesDemo);
   const guideActive = guidance.active;
   const routeMonuments = useMemo(
     () =>
@@ -784,10 +787,10 @@ export default function Explorer() {
           },
         ]}
       >
-        {!guideActive && (
+        {!guideActive && !georgesDemo && (
           <ExplorerProfile xp={xp} count={Object.keys(journal).length} />
         )}
-        {!guideActive && (
+        {!guideActive && !georgesDemo && (
           <View style={styles.tools}>
             <MapButton
               label="Filtrer les lieux : époque, catégorie, contrôle et visites"
@@ -1014,7 +1017,7 @@ export default function Explorer() {
           ) : undefined
         }
       />
-      {__DEV__ && (
+      {__DEV__ && !georgesDemo && (
         <>
           {!selected && (
             <Pressable
@@ -1073,7 +1076,33 @@ export default function Explorer() {
           />
         </>
       )}
-      {!guideActive && !selected && <RouteCompletionShare bottom={bottom + 56} />}
+      {!guideActive && !selected && (
+        <RouteCompletionShare bottom={bottom + 56} />
+      )}
+      {__DEV__ && (
+        <GeorgesDemo
+          active={georgesDemo}
+          focused={focused}
+          canStart={
+            !guideActive && !selected && panel === null && !developerOpen
+          }
+          fix={location.enabled ? fix : null}
+          onActive={setGeorgesDemoActive}
+          onArrival={(point) => {
+            followingRef.current = true;
+            initialFollow.current = false;
+            setFollowing(true);
+            setSelection(null);
+            setSheetOpen(false);
+            moveCamera({
+              ...explorationCamera(point, immersive),
+              altitude: 450,
+              zoom: 17,
+              heading: 0,
+            });
+          }}
+        />
+      )}
       <ExplorerAudioPlayer />
       <MapOptions
         miniaturesEnabled={miniaturesEnabled}

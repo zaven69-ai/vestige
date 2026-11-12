@@ -1,6 +1,6 @@
 export type AudioPlayback = {
   storyId: string;
-  kind: "approved" | "private-demo";
+  kind: "approved" | "private-demo" | "georges-demo";
   token: number;
   intent: "play" | "pause";
   status: "loading" | "playing" | "paused";

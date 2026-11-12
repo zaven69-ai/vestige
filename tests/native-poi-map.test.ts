@@ -36,22 +36,21 @@ test("native renderer selects independent discovery/selection modes without chan
 test("every native sprite has 1x, 2x and 3x local image assets at a bounded display size", () => {
   let families = 0;
   for (const category of poi.poiCategories)
-    for (const status of poi.poiStatuses)
-      for (const mode of nativePoiModes) {
-        for (const scale of [1, 2, 3]) {
-          const suffix = scale === 1 ? "" : `@${scale}x`,
-            file = new URL(
-              `assets/poi/map-native/${category}-${status}-${mode}${suffix}.png`,
-              root,
-            );
-          assert.ok(existsSync(file), String(file));
-          const data = readFileSync(file);
-          assert.equal(data.readUInt32BE(16), POI_MARKER_SIZE.width * scale);
-          assert.equal(data.readUInt32BE(20), POI_MARKER_SIZE.height * scale);
-        }
-        families++;
+    for (const mode of nativePoiModes) {
+      for (const scale of [1, 2, 3]) {
+        const suffix = scale === 1 ? "" : `@${scale}x`,
+          file = new URL(
+            `assets/poi/map-pins/${category}-${mode}${suffix}.png`,
+            root,
+          );
+        assert.ok(existsSync(file), String(file));
+        const data = readFileSync(file);
+        assert.equal(data.readUInt32BE(16), POI_MARKER_SIZE.width * scale);
+        assert.equal(data.readUInt32BE(20), POI_MARKER_SIZE.height * scale);
       }
-  assert.equal(families, 210);
+      families++;
+    }
+  assert.equal(families, 35);
 });
 for (const platform of ["ios", "android"])
   test(`actual ${platform} marker loads its PNG and dispatches the monument press`, () => {
@@ -109,10 +108,7 @@ for (const platform of ["ios", "android"])
     );
     if (platform === "ios") {
       assert.equal(captured.image, undefined);
-      assert.match(
-        loadedImage.source,
-        /temple-imported_unreviewed-discovered-selected\.png$/,
-      );
+      assert.match(loadedImage.source, /temple-discovered-selected\.png$/);
       assert.equal(loadedImage.style.width, 64);
       assert.equal(loadedImage.style.height, 72);
       assert.equal(typeof loadedImage.onLoad, "function");
@@ -123,10 +119,7 @@ for (const platform of ["ios", "android"])
       );
       assert.equal(loadedImage.pointerEvents, "none");
     } else {
-      assert.match(
-        captured.image,
-        /temple-imported_unreviewed-discovered-selected\.png$/,
-      );
+      assert.match(captured.image, /temple-discovered-selected\.png$/);
       assert.equal(captured.children, null);
       assert.equal(captured.tracksViewChanges, false);
     }

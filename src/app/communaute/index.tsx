@@ -31,6 +31,10 @@ export default function CommunityFeed() {
     .sort((a, b) => b.updatedAt - a.updatedAt);
   return (
     <Page eyebrow="Les passeurs de mémoire" title="Communauté">
+      <Button
+        title="Communauté en ligne"
+        onPress={() => router.push("/communaute/en-ligne")}
+      />
       <LocalNotice />
       <ErrorNotice message={c.error} />
       <Button

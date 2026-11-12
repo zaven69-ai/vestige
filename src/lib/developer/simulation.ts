@@ -67,6 +67,7 @@ export class LocationSimulation {
     epoch: 0,
     teleport: 0,
   };
+  private demoMoving = false;
   private vector: StickVector = { east: 0, north: 0 };
   private listeners = new Set<() => void>();
   private readonly development: boolean;
@@ -88,7 +89,7 @@ export class LocationSimulation {
   }
   enable = (point: Point, now = Date.now()) => {
     if (!this.development || !validPoint(point)) return false;
-    this.vector = { east: 0, north: 0 };
+    this.stop();
     this.publish({
       enabled: true,
       epoch: this.snapshot.epoch + 1,
@@ -98,7 +99,7 @@ export class LocationSimulation {
     return true;
   };
   disable = () => {
-    this.vector = { east: 0, north: 0 };
+    this.stop();
     this.publish({
       enabled: false,
       fix: null,
@@ -112,6 +113,7 @@ export class LocationSimulation {
       : { east: 0, north: 0 };
   };
   stop = () => {
+    this.demoMoving = false;
     this.vector = { east: 0, north: 0 };
   };
   teleportTo = (point: Point, now = Date.now()) => {
@@ -130,8 +132,30 @@ export class LocationSimulation {
     });
     return true;
   };
+  moveAlongDemo = (point: Point, speed: number, now = Date.now()) => {
+    const fix = this.snapshot.fix;
+    if (!this.isEnabled() || !fix || !validPoint(point)) return;
+    this.demoMoving = speed > 0;
+    const east =
+      (point.longitude - fix.longitude) *
+      Math.cos((fix.latitude * Math.PI) / 180);
+    const north = point.latitude - fix.latitude;
+    this.publish({
+      ...this.snapshot,
+      fix: {
+        ...fix,
+        ...point,
+        timestamp: Math.max(now, fix.timestamp + 1),
+        heading:
+          east || north
+            ? ((Math.atan2(east, north) * 180) / Math.PI + 360) % 360
+            : fix.heading,
+        speed,
+      },
+    });
+  };
   tick = (seconds: number, now = Date.now()) => {
-    if (!this.isEnabled() || !this.snapshot.fix) return;
+    if (!this.isEnabled() || !this.snapshot.fix || this.demoMoving) return;
     this.publish({
       ...this.snapshot,
       fix: simulatedStep(this.snapshot.fix, this.vector, seconds, now),

@@ -22,8 +22,11 @@ export function ExplorerAudioPlayer() {
     story = live.audioStory;
   if (!p || !story) return null;
   const demo = "transcript" in story;
+  const capsule = p.kind === "georges-demo";
   const text = demo
-    ? (georgePrivateTranscript ?? story.transcript)
+    ? capsule
+      ? story.transcript
+      : (georgePrivateTranscript ?? story.transcript)
     : story.script;
   const progress = p.duration > 0 ? Math.min(1, p.position / p.duration) : 0;
   const open = (url: string) =>
@@ -58,9 +61,11 @@ export function ExplorerAudioPlayer() {
               {story.title}
             </Text>
             <Text style={{ color: "#B6C5D8", fontSize: 11 }}>
-              {demo
-                ? "George · Démonstration non approuvée"
-                : "Narration approuvée"}
+              {capsule
+                ? "Georges · Démo d’arrivée"
+                : demo
+                  ? "George · Démonstration non approuvée"
+                  : "Narration approuvée"}
             </Text>
           </Pressable>
           <Pressable
@@ -175,7 +180,7 @@ export function ExplorerAudioPlayer() {
                 {text ||
                   "Transcription non fournie. Importez le texte exact du MP3 pour pouvoir le consulter ici ; aucun texte n’est inventé."}
               </Text>
-              {demo && (
+              {demo && !capsule && (
                 <Text style={s.caption}>
                   Transcription{" "}
                   {story.transcriptStatus === "automatic_unreviewed"

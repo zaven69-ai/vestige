@@ -34,7 +34,7 @@ export const IllustratedPoiMarker = memo(function IllustratedPoiMarker({
 }) {
   const category = poiCategory(monument),
     status = poiStatus(monument);
-  const source = nativePoiImage(category, status, state, selected);
+  const source = nativePoiImage(category, state, selected);
   const marker = useRef<MapMarker>(null);
   const [loadedSource, setLoadedSource] = useState<typeof source | null>(null);
   const [snapshotSource, setSnapshotSource] = useState<typeof source | null>(

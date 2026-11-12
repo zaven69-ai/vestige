@@ -21,7 +21,7 @@ const fs = require("node:fs"),
       fs.readFileSync(
         path.resolve(
           __dirname,
-          "../../supabase/migrations/202611110001_community.sql",
+          "../../supabase/drafts/202611110001_community.sql",
         ),
         "utf8",
       ),

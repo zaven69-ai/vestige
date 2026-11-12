@@ -36,20 +36,19 @@ export const PoiClusterMarker = memo(function PoiClusterMarker({
         collapsable={false}
         onLayout={() => marker.current?.redraw()}
         style={{
-          width: 60,
-          height: 60,
-          borderRadius: 30,
-          backgroundColor: "#102C48",
-          borderWidth: 2,
-          borderColor: "#CDB67C",
+          width: 42,
+          height: 42,
+          borderRadius: 21,
+          backgroundColor: "#162639",
+          borderWidth: 1.5,
+          borderColor: "#DECBA4",
           alignItems: "center",
           justifyContent: "center",
         }}
       >
-        <Text style={{ color: "#FFFFFF", fontWeight: "800", fontSize: 16 }}>
+        <Text style={{ color: "#FFF1D6", fontWeight: "800", fontSize: 16 }}>
           {group.members.length}
         </Text>
-        <Text style={{ color: "#E8CD8E", fontSize: 9 }}>lieux</Text>
       </View>
     </Marker>
   );

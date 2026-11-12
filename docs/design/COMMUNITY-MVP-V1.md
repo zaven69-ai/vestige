@@ -24,7 +24,7 @@ Pas de carte récapitulative exportée en image pour ce MVP. Pas de DMs, likes o
 
 ## Phase B : schéma de préparation, aucun backend activé
 
-Aucun client Supabase, URL de projet ou secret n'est ajouté. La migration `supabase/migrations/202611110001_community.sql` est **non appliquée** et doit passer par un projet staging Supabase.
+Aucun client Supabase, URL de projet ou secret n'est ajouté. La migration `supabase/drafts/202611110001_community.sql` est **non appliquée** et doit passer par un projet staging Supabase.
 
 Tables : profils, catalogue d'identifiants POI, contenus versionnés, enregistrements privés, signalements privés et métadonnées photo. RLS : brouillons seulement pour l'auteur ; lecture publique uniquement des contenus publics acceptés par la modération ; édition/suppression par auteur ; signalements/enregistrements isolés. Tout changement client remet le contenu en `pending`/`community_published_unverified` ; aucun client ne s'auto-approuve. La revue requiert le service de confiance. Limites transactionnelles : 20 créations/jour, 10 signalements/heure, contraintes de taille et d'étapes. Les identifiants canoniques du catalogue doivent être chargés par le service avant toute insertion ; les lieux inconnus/dupliqués sont refusés.
 
